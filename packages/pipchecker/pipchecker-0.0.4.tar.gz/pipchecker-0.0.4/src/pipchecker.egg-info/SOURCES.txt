@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/pipchecker/__init__.py
+src/pipchecker/pipcheck.py
+src/pipchecker.egg-info/PKG-INFO
+src/pipchecker.egg-info/SOURCES.txt
+src/pipchecker.egg-info/dependency_links.txt
+src/pipchecker.egg-info/top_level.txt
