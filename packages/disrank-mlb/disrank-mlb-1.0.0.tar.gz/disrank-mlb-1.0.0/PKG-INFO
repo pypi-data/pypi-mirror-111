@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: disrank-mlb
+Version: 1.0.0
+Summary: A modified version of disrank that has Miraculous Ladybug images.  Used for a personal bot but can be used by anyone.
+Home-page: https://pypi.org/project/disrank/
+Author: minecraftpr03
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

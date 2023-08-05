@@ -1,0 +1,9 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+disrank/generator.py
+disrank/disrank_mlb.egg-info/PKG-INFO
+disrank/disrank_mlb.egg-info/SOURCES.txt
+disrank/disrank_mlb.egg-info/dependency_links.txt
+disrank/disrank_mlb.egg-info/top_level.txt
