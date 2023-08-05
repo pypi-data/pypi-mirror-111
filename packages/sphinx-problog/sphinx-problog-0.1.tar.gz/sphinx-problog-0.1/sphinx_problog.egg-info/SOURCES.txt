@@ -1,0 +1,15 @@
+LICENCE
+MANIFEST.in
+README.md
+setup.py
+sphinx_problog/__init__.py
+sphinx_problog/problog.py
+sphinx_problog.egg-info/PKG-INFO
+sphinx_problog.egg-info/SOURCES.txt
+sphinx_problog.egg-info/dependency_links.txt
+sphinx_problog.egg-info/not-zip-safe
+sphinx_problog.egg-info/requires.txt
+sphinx_problog.egg-info/top_level.txt
+sphinx_problog/_static/README.md
+sphinx_problog/_static/mode-problog.js
+sphinx_problog/_static/problog_editor_advanced.js

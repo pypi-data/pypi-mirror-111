@@ -1,0 +1,6 @@
+include README.md
+include LICENCE
+include sphinx_problog/_static/README.md
+include sphinx_problog/_static/sphinx-prolog.css
+include sphinx_problog/_static/mode-problog.js
+include sphinx_problog/_static/problog_editor_advanced.js
