@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "reploncli"
+version = "0.9.2"
+description = "REPL extension to CLI apps"
+authors = ["silkyanteater <cyclopesrufus@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/silkyanteater/reploncli"
+keywords = ["repl", "cli", "command line"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+pdbpp = "^0.10.2"
+black = "^20.8b1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
