@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        pyGinit= src.main:pyGinit
+    
