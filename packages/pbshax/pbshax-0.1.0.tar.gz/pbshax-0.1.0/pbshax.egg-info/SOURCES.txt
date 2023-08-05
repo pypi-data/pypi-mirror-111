@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+pbshax/__init__.py
+pbshax/_version.py
+pbshax/main.py
+pbshax/parallel.py
+pbshax/regions.py
+pbshax.egg-info/PKG-INFO
+pbshax.egg-info/SOURCES.txt
+pbshax.egg-info/dependency_links.txt
+pbshax.egg-info/entry_points.txt
+pbshax.egg-info/top_level.txt
