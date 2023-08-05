@@ -1,0 +1,17 @@
+genanki/__init__.py,sha256=vrXo8UDSGrVKAcVM1yxaSrAd6TGz_FB8BVn8yYSht7s,479
+genanki/apkg_col.py,sha256=wVPwX56BnHbsvwA5wgpIuU-G30FkQJ2Zx6Oh3dfUkXQ,2290
+genanki/apkg_schema.py,sha256=mG8E1B9EzBHRstBlziWLZEoYs10G9l0WGSC0_QhIq2g,2882
+genanki/builtin_models.py,sha256=vbwLxrlIRdXRnzz_vLudDccvEj5kv6R8BXATeSeiWPY,3660
+genanki/card.py,sha256=VPN4HVvxZRNIwvCiupPcOSoMphLeX_pjdMp_50BvkD0,909
+genanki/deck.py,sha256=7wpP9s-jROZ6dKAmhj8a5Ak13MbcgLGV54Wh8qjabFc,3046
+genanki/deck_conf.py,sha256=dIQB8apGTFhGRxhYMJcxQ4j6_73RckwwvUpadpoS_WI,1402
+genanki/model.py,sha256=UfvtIuJbSwY9-28ck8N_duBKTAK4TozViTqy-Y2caw8,4623
+genanki/note.py,sha256=WrBNBrIYAR0LEItbtVLQ5FcnjAgGWaN6Z2Qmq0cHxEo,6214
+genanki/package.py,sha256=z_OvuOKe0z9x5Be_22D32uXxLracjbV2byZ1f8p1iWs,2703
+genanki/util.py,sha256=8ryaw2YJMjkJyyOwOhtcMilPbGRS88nGn8Ehmy-Uj4k,1041
+genanki/version.py,sha256=UHGsGhGjMtfvoaFMaJdv4diSXG2uXo8Y2yCo7kiUOdk,23
+genanki_mnemocards-0.11.0.dist-info/LICENSE.txt,sha256=zXg1BI5UuQoipnWH9FmNYK8LHIrx5G3TfUdmD8VF3_Q,1075
+genanki_mnemocards-0.11.0.dist-info/METADATA,sha256=cZQx2S9lZoBPz6_4OB79rtAWHnBxx4Ln7PRoCzqweHU,424
+genanki_mnemocards-0.11.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+genanki_mnemocards-0.11.0.dist-info/top_level.txt,sha256=FEeF6FK374USsaxMHclCUAaXbqw3VQke1XwDN3PtBX8,8
+genanki_mnemocards-0.11.0.dist-info/RECORD,,
