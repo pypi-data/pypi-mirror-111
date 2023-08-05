@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: piaf
+Version: 0.1a3
+Summary: A FIPA-compliant Agent Platform written in python.
+Home-page: https://gitlab.com/ornythorinque/piaf
+License: MIT
+Keywords: Python Agent Framework,multi-agent,asyncio
+Author: Pierre DUBAILLAY
+Author-email: pierredubaillay@outlook.fr
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Repository, https://gitlab.com/ornythorinque/piaf
+Description-Content-Type: text/markdown
+
+# Python Intelligent Agent Framework (piaf)
+
+![pipeline status](https://gitlab.com/ornythorinque/piaf/badges/master/pipeline.svg)
+![coverage report](https://gitlab.com/ornythorinque/piaf/badges/master/coverage.svg?job=test)
+
+
+The aim of piaf is to provide a FIPA-compliant agent framework using Python. It uses **asyncio** to power agents.
+
+**For now, this work is experimental and subject to changes.**
+
+## Documentation
+The full documentation (both user and API) is available here: https://ornythorinque.gitlab.io/piaf
+It will teach you how to install and run your own agents.
+
+## Author(s)
+* ornythorinque (pierredubaillay@outlook.fr)
+
