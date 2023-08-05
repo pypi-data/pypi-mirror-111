@@ -1,0 +1,13 @@
+dataintegrityfingerprint/__init__.py,sha256=6cCNSXCT3LXPRlSQj7Ldoa_vBoAYA2bi3jKFjps-DXY,357
+dataintegrityfingerprint/__main__.py,sha256=BrzJqwewYBwtq_D9wS7WOzTxNS7OSuQEveVrPobHBTE,80
+dataintegrityfingerprint/cli.py,sha256=xu7vDruHfQdkDzEacMJ7d_-KuHs7W3hrzcrGQ-c5wVU,5633
+dataintegrityfingerprint/dif.py,sha256=FvqX3o3nOHBSR58TQYubGZlVr2uYVZZAVZqEd4_gee4,8494
+dataintegrityfingerprint/gui.py,sha256=CcST0ji_NYYOH1TIJg_oDJNQniKOEEgrgM5Aumcgfak,19389
+dataintegrityfingerprint/openssl_hash_algorithm.py,sha256=o3U2jhl428uPpmNSp1Y4oy_QbjdeDUIRkfzIWQw6dwY,2548
+dataintegrityfingerprint/zlib_hash_algorithm.py,sha256=Wj4wPBe7KNDT1SSApznHYocSkhStjZfwfoXwAI7jhQE,1508
+dataintegrityfingerprint-0.6.1.dist-info/LICENSE,sha256=-twVEIc8AygUnZbWTY4aRa8pmdxQ9UCvjG2M1SjVJt8,1067
+dataintegrityfingerprint-0.6.1.dist-info/METADATA,sha256=890AZ3GuCYAZUTErwgcUzTK5CW_ZxeX29XYYjegyfVQ,1590
+dataintegrityfingerprint-0.6.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dataintegrityfingerprint-0.6.1.dist-info/entry_points.txt,sha256=ANegdXLX2KBujJLP9Udr7uVd8uka2-MArD_nRtyfW0g,84
+dataintegrityfingerprint-0.6.1.dist-info/top_level.txt,sha256=IekMcbpyETnskJpqPjtmjfSSH4jbMoBq8qDJWoDCtSw,25
+dataintegrityfingerprint-0.6.1.dist-info/RECORD,,
