@@ -1,0 +1,9 @@
+pip
+packaging
+torch>=1.7.1
+fastai>=2.2.2
+fastcore
+transformers
+datasets
+
+[dev]
