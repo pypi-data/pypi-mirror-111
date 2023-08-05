@@ -1,0 +1,11 @@
+botfinder/__init__.py,sha256=8zLGg-DfQhnDl2Ky0n-zXpN-8e-g7iR0AcaI4l4Vvpk,32
+botfinder/bot_classifier.py,sha256=lebOYJumWlJ-fmNkkVDlLXi5XP6Z8YrH0W9bZDt-76U,3407
+botfinder/cli.py,sha256=KpZBgxCvni_tI0OmmvUQauya2PP3JNnzVuH9ZLS_XjM,1112
+botfinder/random_forest.joblib,sha256=tRlOS9h59RvgenbWXbujCE1kKWn4dPOUBU839qEB0Ss,2586505
+botfinder/version.py,sha256=L6zbQIZKsAP-Knhm6fBcQFPoVdIDuejxze60qX23jiw,21
+social_networks_bot_finder-0.1.0.dist-info/METADATA,sha256=uHJr4RePsmndHJlccTDQCvXTH60Du2zzxlhEA15MR9I,705
+social_networks_bot_finder-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+social_networks_bot_finder-0.1.0.dist-info/dependency_links.txt,sha256=eiHeuNlpzFxy8ke0zTZLWraoAQFLLgzJMvgpm1y-ubs,57
+social_networks_bot_finder-0.1.0.dist-info/entry_points.txt,sha256=QKNpk2MSxgxvLNGvNwE6NYOwH-KgjTDJnEsUqthNxVQ,50
+social_networks_bot_finder-0.1.0.dist-info/top_level.txt,sha256=tpmYMbZQH6NfEW9MHBYvfeJUjxnfrnQ_7aprAdMRObI,10
+social_networks_bot_finder-0.1.0.dist-info/RECORD,,
