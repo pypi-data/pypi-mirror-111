@@ -1,0 +1,6 @@
+admin_edit_lock/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+admin_edit_lock/admin.py,sha256=cR4kp8K9CQFfddXJaUo4rmy-XS-bPyuWUMkiL3ffxpQ,3311
+admin_edit_lock/static/admin_edit_lock/update_lock.js,sha256=7Bs0gJbVw6E0W7ygzCfcfFqTpXqIMFb_hnGNalxBi6Y,776
+django_admin_edit_lock-0.2.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+django_admin_edit_lock-0.2.0.dist-info/METADATA,sha256=KsXQ_Tc7dtz8I1zcmnXyQae5Uq0urtbyQrwi4_kxthU,1922
+django_admin_edit_lock-0.2.0.dist-info/RECORD,,
