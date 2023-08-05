@@ -1,0 +1,12 @@
+{plugin_class}
+==============
+
+Template readme
+
+Installation
+============
+
+```
+pip install pmakeup
+pip install {plugin_name}
+```
