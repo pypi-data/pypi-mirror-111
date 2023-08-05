@@ -1,0 +1,7 @@
+README.md
+multivectors.py
+setup.py
+multivectors.egg-info/PKG-INFO
+multivectors.egg-info/SOURCES.txt
+multivectors.egg-info/dependency_links.txt
+multivectors.egg-info/top_level.txt
