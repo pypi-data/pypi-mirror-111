@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: aiopexels
+Version: 0.0.1a0
+Summary: An Asynchronous API wrapper for the Pexels API
+Home-page: https://github.com/scrazzz/aiopexels
+Author: scrazzz
+License: MIT
+Project-URL: Documentation, https://github.com/scrazzz/aiopexels
+Project-URL: Issue tracker, https://github.com/scrazzz/aiopexels/issues
+Platform: UNKNOWN
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+
+# aiopexels
+An asynchronous API wrapper for the Pexels API
+
+# Note:
+This library is still in development. There may be bugs and some things may not work as expected. Please be patient.
+
