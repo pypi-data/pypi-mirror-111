@@ -1,0 +1,16 @@
+flask_logify/__init__.py,sha256=F1UITIvQB_9uPOiPfa8cFTb3N0yzt4b7aIVBnePUL_o,59
+flask_logify/filters.py,sha256=sNlgRYAZ_Rn6VudUsI1C_Uq1C7ZMMBqLyzQjACS0TiA,1411
+flask_logify/formatters.py,sha256=PxZNL989VF9wi6mtsvWUEzodm7k0L6dQOAuYixXoZ1U,1366
+flask_logify/handlers.py,sha256=hDQxhpz7nnlHyvl-LBH7y_AVNwI-bphDGD_O2gqMpaE,2954
+flask_logify/hooks.py,sha256=vwX8044SCFvKYAtfLpstWT7rxbyI9u4peeVo89nohlU,1250
+flask_logify/logging.py,sha256=W6yHN1abktpHgSeDV8lmKVSBxLfgWLQCv_dwnCpwfGA,4877
+flask_logify/version.py,sha256=JuuW4w-tk3s9if_tBh8ZfUV8IWFKlAcgQE_En3O9qV0,272
+flask_logify/builders/__init__.py,sha256=Bnol1uYhYrqvp9VGaBVLf_8RK-tgRB9QHtnUp54JSUM,234
+flask_logify/builders/base.py,sha256=-EkfMcCqlcQX_LaZ80eUaYibzoWTKPIh3Od7DcZyVa8,1632
+flask_logify/builders/json.py,sha256=pPRCQ5Bu3XVFfdfvqQHK1WA13AXMuadJTgB52PsMfZ8,2947
+flask_logify/builders/text.py,sha256=GRvMX0n5Rxry5JQRcRRzNb2y3hvpvK9P7-dpRqlkU6w,2977
+Flask_Logify-2.4.2.dist-info/LICENSE,sha256=GSAKapQH5ZIGWlpQTA7v5YrfECyaxaohUb1vJX-qepw,1090
+Flask_Logify-2.4.2.dist-info/METADATA,sha256=2PVFQn6Dfu52CjqM2TF_j0v3DSLp2IEtq43b6_rKI9E,3741
+Flask_Logify-2.4.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+Flask_Logify-2.4.2.dist-info/top_level.txt,sha256=QN5ZsrbYgfSyo3L-OnPSgwtuTT6gl6tfZSJD1Vqffww,13
+Flask_Logify-2.4.2.dist-info/RECORD,,
