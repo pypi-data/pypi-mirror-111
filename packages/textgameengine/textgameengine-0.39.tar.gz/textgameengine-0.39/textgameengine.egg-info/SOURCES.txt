@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+engine/GameObject.py
+engine/Stage.py
+engine/TextAsset.py
+engine/__init__.py
+textgameengine.egg-info/PKG-INFO
+textgameengine.egg-info/SOURCES.txt
+textgameengine.egg-info/dependency_links.txt
+textgameengine.egg-info/top_level.txt
