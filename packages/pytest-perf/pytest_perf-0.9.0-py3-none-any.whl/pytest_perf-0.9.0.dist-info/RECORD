@@ -1,0 +1,9 @@
+pytest_perf/deco.py,sha256=0XrAK_jCYrGNJFy_dreJrFftyBA_kjhSCmSKfzJKDlE,356
+pytest_perf/plugin.py,sha256=npSs_mvOjTGdFaH95QsAu6Dcl_owrgu6LbjNLbMqv_0,2677
+pytest_perf/runner.py,sha256=t824ckpAWKdF_mVoM9zMOX8aM_MVecebfcQEMY7K6rc,2812
+pytest_perf-0.9.0.dist-info/LICENSE,sha256=2z8CRrH5J48VhFuZ_sR4uLUG63ZIeZNyL4xuJUKF-vg,1050
+pytest_perf-0.9.0.dist-info/METADATA,sha256=iVtg4nJFbu_u2DGzuP7fzkOe4VCftJ62DnTKOMYEw7Y,2173
+pytest_perf-0.9.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pytest_perf-0.9.0.dist-info/entry_points.txt,sha256=cPM-gXWpKspNlcheaPXdK_LDBNxBFmtmuptC_flf17E,38
+pytest_perf-0.9.0.dist-info/top_level.txt,sha256=Z5ELQ-NcKmPRTy6jpsPHkqaSf0EHX93K-Qj0Br0Wpuk,12
+pytest_perf-0.9.0.dist-info/RECORD,,
