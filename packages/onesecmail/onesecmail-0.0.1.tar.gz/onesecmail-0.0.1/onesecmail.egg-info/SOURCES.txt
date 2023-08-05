@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+onesecmail/__init__.py
+onesecmail/__version__.py
+onesecmail/mail.py
+onesecmail/message.py
+onesecmail/utils.py
+onesecmail/validators.py
+onesecmail.egg-info/PKG-INFO
+onesecmail.egg-info/SOURCES.txt
+onesecmail.egg-info/dependency_links.txt
+onesecmail.egg-info/requires.txt
+onesecmail.egg-info/top_level.txt
