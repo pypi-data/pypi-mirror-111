@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+config.ini
+setup.py
+screenagent/__init__.py
+screenagent/screenagent.py
+test/test_agent.py
+test/test_vdr.py
+vdr/__init__.py
+vdr/sentences.py
+vdr/tools.py
+vdr/vdr.py
+vdr.egg-info/PKG-INFO
+vdr.egg-info/SOURCES.txt
+vdr.egg-info/dependency_links.txt
+vdr.egg-info/requires.txt
+vdr.egg-info/top_level.txt
