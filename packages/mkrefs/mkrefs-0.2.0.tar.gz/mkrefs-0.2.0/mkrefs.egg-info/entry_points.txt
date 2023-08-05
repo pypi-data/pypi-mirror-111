@@ -1,0 +1,6 @@
+[console_scripts]
+mkrefs = mkrefs.cli:cli
+
+[mkdocs.plugins]
+mkrefs = mkrefs.plugin:MkRefsPlugin
+
