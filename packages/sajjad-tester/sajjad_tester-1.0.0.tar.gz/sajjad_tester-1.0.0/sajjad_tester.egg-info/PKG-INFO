@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: sajjad-tester
+Version: 1.0.0
+Summary: test description
+Home-page: UNKNOWN
+Author: MSK
+License: MIT
+Keywords: sajjad testing something
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: ~=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# SajjadDroid
+Testing setup.py
+
+## Installation
+HI there!
+
