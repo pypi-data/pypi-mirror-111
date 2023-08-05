@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: varius
+Version: 0.1.1
+Summary: Perform calculation with various versions of variables
+Home-page: UNKNOWN
+Author: Chenchao Zhao
+Author-email: chenchao.zhao@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: sympy
+Requires-Dist: dataclasses
+
+# Varius
+[![test](https://github.com/ChenchaoZhao/varius/actions/workflows/lint-test.yaml/badge.svg)](https://github.com/ChenchaoZhao/varius/actions/workflows/lint-test.yaml)
+
+Perform computations using various versions of variables
+
+
