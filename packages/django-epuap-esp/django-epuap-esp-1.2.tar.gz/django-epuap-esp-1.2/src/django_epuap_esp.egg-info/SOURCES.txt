@@ -1,0 +1,17 @@
+.gitignore
+LICENSE
+MANIFEST.in
+README.md
+pylintrc
+setup.cfg
+setup.py
+src/django_epuap_esp.egg-info/PKG-INFO
+src/django_epuap_esp.egg-info/SOURCES.txt
+src/django_epuap_esp.egg-info/dependency_links.txt
+src/django_epuap_esp.egg-info/requires.txt
+src/django_epuap_esp.egg-info/top_level.txt
+src/epuapesp/__init__.py
+src/epuapesp/app.py
+src/epuapesp/envelope.py
+src/epuapesp/epuap.py
+src/epuapesp/exceptions.py
