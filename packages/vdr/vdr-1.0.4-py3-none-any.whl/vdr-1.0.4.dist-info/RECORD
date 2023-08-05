@@ -1,0 +1,12 @@
+screenagent/__init__.py,sha256=C8CaaRfl61B2Y2KA115n49wn6UVZ2olEgh_4Rjp6ZJ4,27
+screenagent/config.ini,sha256=Eh42bqgSWuB4gQ9McYU3W_zIgVcjbALgnOkH-V78vPA,19
+screenagent/screenagent.py,sha256=fxyIZUjt6S1PSKitdLdZPXgMXnNs-OH6fKLNdStZqk0,1293
+vdr/__init__.py,sha256=5Hfql1Rzs4UXWFX04U0bVd9ehZFWwEivz0RCdmviAwI,18
+vdr/config.ini,sha256=66NshY9WwNdBW3-J20-Dyt9nByHKUyy3jxkF8EZA7cw,17
+vdr/sentences.py,sha256=pSt8DIP4q2N2eJAS6pnDsRfrss478Lxd5m1GC-WVTQQ,1365
+vdr/tools.py,sha256=AOHrpkxtGoDndKo4H-dElz5HRoYN1rBK3fjfQUIv3bw,980
+vdr/vdr.py,sha256=GMDl6fF-_mhBSBASqW11yXUHVJxr0HtIQm7EB8n0L_8,3460
+vdr-1.0.4.dist-info/METADATA,sha256=HbNPzjHrHJ7pxy8NbEUrc1_aFu-SobtrWcrgRA9OYF4,2199
+vdr-1.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+vdr-1.0.4.dist-info/top_level.txt,sha256=MvA0Xs7Y1rHCHmz8s0s6iWzbKuDzuCZVaiC8bSYU1MQ,16
+vdr-1.0.4.dist-info/RECORD,,
