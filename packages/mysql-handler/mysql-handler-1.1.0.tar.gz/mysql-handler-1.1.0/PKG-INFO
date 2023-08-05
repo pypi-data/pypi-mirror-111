@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: mysql-handler
+Version: 1.1.0
+Summary: 
+Author: Amit Agrawal
+Author-email: amitagrawalcs@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: mysql-connector-python (>=8.0.25,<9.0.0)
