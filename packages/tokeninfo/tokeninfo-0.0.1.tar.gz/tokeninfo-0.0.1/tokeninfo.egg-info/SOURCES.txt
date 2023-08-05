@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.py
+token-info/__init__.py
+tokeninfo.egg-info/PKG-INFO
+tokeninfo.egg-info/SOURCES.txt
+tokeninfo.egg-info/dependency_links.txt
+tokeninfo.egg-info/requires.txt
+tokeninfo.egg-info/top_level.txt
