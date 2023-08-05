@@ -1,0 +1,8 @@
+README.md
+setup.py
+pacoteexemplo1/hello.py
+pacoteexemplo1.egg-info/PKG-INFO
+pacoteexemplo1.egg-info/SOURCES.txt
+pacoteexemplo1.egg-info/dependency_links.txt
+pacoteexemplo1.egg-info/requires.txt
+pacoteexemplo1.egg-info/top_level.txt
