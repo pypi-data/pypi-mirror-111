@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: yaghm
+Version: 0.1.0
+Summary: Minimal git hook manager for the command line.
+Home-page: https://www.github.com/metov/yaghm
+Author: Azat Akhmetov
+Author-email: azatinfo@yandex.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: coloredlogs
+Requires-Dist: docopt
+Requires-Dist: GitPython
+Requires-Dist: Jinja2
+Requires-Dist: PyYAML
+Requires-Dist: questionary
+
+UNKNOWN
+
