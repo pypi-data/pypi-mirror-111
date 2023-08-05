@@ -1,0 +1,3 @@
+[console_scripts]
+dataintegrityfingerprint = dataintegrityfingerprint.__main__:run
+

@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+dataintegrityfingerprint/__init__.py
+dataintegrityfingerprint/__main__.py
+dataintegrityfingerprint/cli.py
+dataintegrityfingerprint/dif.py
+dataintegrityfingerprint/gui.py
+dataintegrityfingerprint/openssl_hash_algorithm.py
+dataintegrityfingerprint/zlib_hash_algorithm.py
+dataintegrityfingerprint.egg-info/PKG-INFO
+dataintegrityfingerprint.egg-info/SOURCES.txt
+dataintegrityfingerprint.egg-info/dependency_links.txt
+dataintegrityfingerprint.egg-info/entry_points.txt
+dataintegrityfingerprint.egg-info/top_level.txt

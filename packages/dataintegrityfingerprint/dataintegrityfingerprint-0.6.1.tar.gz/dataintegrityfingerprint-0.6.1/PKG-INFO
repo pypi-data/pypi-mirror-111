@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: dataintegrityfingerprint
+Version: 0.6.1
+Summary: Create a Data Integrity Fingerprint
+Home-page: https://github.com/expyriment/dataintegrityfingerprint-python
+Author: Oliver Lindemann, Florian Krause
+Author-email: oliver@expyriment.org, florian@expyriment.org
+License: MIT Licence
+Description: Data Integrity Fingerprint (Python implementation)
+        ===================================================
+        
+        *Released under the MIT License*
+        
+        Oliver Lindemann (oliver@expyriment.org) & Florian Krause (florian@expyriment.org)
+        
+        ---
+        
+        Documentation Data Integrity Fingerprint: http://expyriment.github.io/DIF
+        
+        ---
+        
+        
+        Install
+        -------
+        
+        ```
+        python -m pip install dataintegrityfingerprint
+        ```
+        
+        
+        Run DIF GUI
+        -----------
+        
+        ```
+        python -m dataintegrityfingerprint -G
+        ```
+        
+        or if installed via pip:
+        
+        ```
+        dataintegrityfingerprint -G
+        ```
+        
+        
+        DIF Command line interface
+        --------------------------
+        
+        ```
+        python -m dataintegrityfingerprint
+        ```
+        
+        or if installed via pip:
+        
+        ```
+        dataintegrityfingerprint
+        ```
+        
+        DIF Python library
+        -------------------
+        
+        ```
+        from dataintegrityfingerprint import DataIntegrityFingerprint
+        dif = DataIntegrityFingerprint("/home/me/Downloads")
+        print(dif)
+        print(dif.checksums)
+        print(dif.master_hash)
+        ```
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
