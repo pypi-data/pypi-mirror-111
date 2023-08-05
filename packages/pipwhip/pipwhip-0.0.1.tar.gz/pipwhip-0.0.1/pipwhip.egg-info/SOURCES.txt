@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+pipwhip.egg-info/PKG-INFO
+pipwhip.egg-info/SOURCES.txt
+pipwhip.egg-info/dependency_links.txt
+pipwhip.egg-info/entry_points.txt
+pipwhip.egg-info/requires.txt
+pipwhip.egg-info/top_level.txt

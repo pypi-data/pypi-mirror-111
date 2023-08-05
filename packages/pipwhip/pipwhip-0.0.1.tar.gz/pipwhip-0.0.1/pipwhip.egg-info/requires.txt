@@ -1,0 +1,10 @@
+click==8.0.1
+httpx==0.18.1
+
+[DEV]
+pytest==6.2.4
+pytest-cov==2.12.1
+pytest-mock==3.6.1
+mypy==0.910
+pre-commit==2.13.0
+types-pkg-resources==0.1.3
