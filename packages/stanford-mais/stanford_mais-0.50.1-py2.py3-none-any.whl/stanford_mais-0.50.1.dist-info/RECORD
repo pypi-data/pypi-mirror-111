@@ -1,0 +1,11 @@
+stanford/mais/account/__init__.py,sha256=FqHnUeRU0ckyOUciiViuIomBaiIlA74kojrD3By_hVU,12411
+stanford/mais/account/account.py,sha256=QS8MpKb1yBSJGe9q9qbQLGJCtPZEfg19MvycrS86qIk,12369
+stanford/mais/account/service.py,sha256=F6owysNwH-1sSxJ813gE2MU1CTv4sM526E7r2Fhg1T4,19104
+stanford/mais/account/validate.py,sha256=1giekQ82cNtwyPVh4BFmM65ACT56A2XT3-qQQqppmTs,7046
+stanford/mais/client/__init__.py,sha256=C-NU8k8ffdlma-iHA3pRqqvYLeSvq3E0ZdP8u3bYI4A,7783
+stanford_mais-0.50.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+stanford_mais-0.50.1.dist-info/METADATA,sha256=RrCPSbxPEcsMtsI5tD--lAqhZFHjFmFVa12Nuu65j0k,7179
+stanford_mais-0.50.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+stanford_mais-0.50.1.dist-info/top_level.txt,sha256=PyyVwzBGpDOq5xTxY3ATe3i5WT8eagwb3j2IrMeU1lY,9
+stanford_mais-0.50.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+stanford_mais-0.50.1.dist-info/RECORD,,
