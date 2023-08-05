@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+aiopexels.egg-info/PKG-INFO
+aiopexels.egg-info/SOURCES.txt
+aiopexels.egg-info/dependency_links.txt
+aiopexels.egg-info/requires.txt
+aiopexels.egg-info/top_level.txt
