@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: simpcalci
+Version: 0.0.2
+Summary: A python lib that uses math.js api to carry out calculations
+Home-page: https://github.com/Harukomaze/simpcalc
+Author: Harukomaze
+Author-email: sdpqwer0@gmail.com
+License: MIT
+Keywords: discord discord-calc calculator easy-calc simple-calculator discord.py simp
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp
+Requires-Dist: urllib3
+
+# simpcalc
+A pip package which uses math.js api for calculations
+
+# Usage
+```py
+from simpcalc import simpcalc
+
+calculator = simpcalc.Calculate()
+
+
+print(calculator.calculate('1 + 2 * 2 / 2 ** 2 ^ 2 + sqrt(3) + (7*56)'))
+
+...
+>>> 394.9820508075689
+```
+
+
