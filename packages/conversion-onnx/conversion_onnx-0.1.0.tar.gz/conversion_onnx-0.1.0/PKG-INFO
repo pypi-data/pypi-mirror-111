@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: conversion_onnx
+Version: 0.1.0
+Summary: library 
+Home-page: UNKNOWN
+Author: wangyp
+Author-email: 562584614@qq.com
+License: MIT Licence
+Description: library 
+Keywords: pytorch onnx util
+Platform: any
+Requires-Python: >=3.6.*
