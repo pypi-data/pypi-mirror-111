@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: gita-api
+Version: 0.0.1
+Summary: Bhagavad Gita API allows any developer to use content from Bhagavad Gita in their applications.
+License: MIT
+Author: The Gita Initiative
+Author-email: contact@bhagavadgita.io
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: SQLAlchemy (>=1.4.19,<2.0.0)
+Requires-Dist: fastapi (>=0.65.2,<0.66.0)
+Requires-Dist: graphene-elastic (>=0.7,<0.8)
+Requires-Dist: graphene-sqlalchemy (>=2.3.0,<3.0.0)
+Requires-Dist: graphene-sqlalchemy-filter (>=1.12.2,<2.0.0)
+Requires-Dist: psycopg2-pgevents (>=0.2.2,<0.3.0)
+Requires-Dist: python-dotenv (>=0.18.0,<0.19.0)
+Requires-Dist: pytz (>=2021.1,<2022.0)
+Requires-Dist: uvicorn (>=0.14.0,<0.15.0)
