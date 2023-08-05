@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+octanegg/__init__.py
+octanegg/api.py
+octanegg.egg-info/PKG-INFO
+octanegg.egg-info/SOURCES.txt
+octanegg.egg-info/dependency_links.txt
+octanegg.egg-info/requires.txt
+octanegg.egg-info/top_level.txt
