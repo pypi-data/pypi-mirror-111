@@ -1,0 +1,9 @@
+README.rst
+setup.cfg
+setup.py
+src/feigenbaum/__init__.py
+src/feigenbaum/generation.py
+src/feigenbaum.egg-info/PKG-INFO
+src/feigenbaum.egg-info/SOURCES.txt
+src/feigenbaum.egg-info/dependency_links.txt
+src/feigenbaum.egg-info/top_level.txt

@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: feigenbaum
+Version: 0.1.0
+Summary: Feigenbaum chart generator
+Home-page: UNKNOWN
+Author: Max Simmons
+Author-email: max@mxsmns.net
+License: UNKNOWN
+Platform: UNKNOWN
+
+Bifurcation Diagram Generator
+=============================
+
+.. image:: https://codecov.io/gh/mxsmns/feigenbaum/branch/main/graph/badge.svg?token=0U5PJQC3LG
+      :target: https://codecov.io/gh/mxsmns/feigenbaum
+
+Generates bifurcation diagrams illustrating Feigenbaum's constant.
+
+
