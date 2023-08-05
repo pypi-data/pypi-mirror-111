@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: pyenv.sh
+Version: 0.0.3
+Summary: Handles creation of virtual environment
+Home-page: https://github.com/aiscenblue/pyenv
+Author: Jeffrey Marvin Forones
+Author-email: aiscenblue@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/aiscenblue/pyenv/issues
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
