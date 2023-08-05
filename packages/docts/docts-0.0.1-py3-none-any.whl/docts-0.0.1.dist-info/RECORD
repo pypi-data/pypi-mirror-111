@@ -1,0 +1,10 @@
+docts/__init__.py,sha256=61NyGQcIpFp8uFgt0Y5Z9UUOafIb5TvAbJoThSI5ZKs,342
+docts/parser/XLSParser.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+docts/parser/XMLParser.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+docts/parser/__init__.py,sha256=ZP2pAqc7tggGXi4mUWtHMStyFSs6gAMGeBGQYmBbV6M,35
+docts/writer/XLSWriter.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+docts/writer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+docts-0.0.1.dist-info/METADATA,sha256=HvDevP-AdNT4WnJr3fWypJj_Eofg30QprkR8nTDEHpg,829
+docts-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+docts-0.0.1.dist-info/top_level.txt,sha256=ksS1gGhU7joUaQuzOE7wTvEzjPZZdNTDFPJj5HjgqYw,6
+docts-0.0.1.dist-info/RECORD,,

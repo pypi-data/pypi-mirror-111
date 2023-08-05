@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: docts
+Version: 0.0.1
+Summary: Translate Document, read & translate & write
+Home-page: https://example.org/
+Author: foyou
+Author-email: yimi.0822@qq.com
+License: GPL-3.0
+Project-URL: Documentation, https://example.org/
+Project-URL: Source, https://example.org/
+Project-URL: Bug Tracker, https://example.org/
+Keywords: document translate tool
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Python: >=3.7.*
+Description-Content-Type: text/markdown
+
+UNKNOWN
+
