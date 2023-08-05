@@ -1,0 +1,11 @@
+sphinx_problog/__init__.py,sha256=LPE3pj9-PveuykqdwKh_EcfT9oTQC8pouHoAjbohjew,2987
+sphinx_problog/problog.py,sha256=qJUm959DL5AlSjX70f8DmoUmoOykZTXAJMiN8U_wosk,14230
+sphinx_problog/_static/README.md,sha256=LDsgPHVeWq3q7P2IIv4Dw3rHNmN86gqS1c2sATics6I,1545
+sphinx_problog/_static/mode-problog.js,sha256=UwFFCTCbhdJFk-DZmVXiNFaJjNjyMNKrunx85q2BSUY,4869
+sphinx_problog/_static/problog_editor_advanced.js,sha256=9pzEfL_KqNuVyRN-XIK2IiJ6TkGTSnSLCF3i6gW1o7Q,41528
+sphinx_problog/_static/sphinx-problog.css,sha256=zq6ziYtIytqEcyko-EYHn0cs56BelfzB7N8Vq_3uJ90,203
+sphinx_problog-0.1.post1.dist-info/LICENCE,sha256=eBEqMlmmhNH7MD8HPDRLg_y2DJzNs5LwzMJ8IWJ4mHI,1512
+sphinx_problog-0.1.post1.dist-info/METADATA,sha256=u5dm-jDmEgg5ZSlThuebzwx_-hR-Pz8mG-A2gfpWx8M,5704
+sphinx_problog-0.1.post1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sphinx_problog-0.1.post1.dist-info/top_level.txt,sha256=6wi2oFB7O2zkRMIoRlji-3xBrotCX01r5aN2F-4AMr0,15
+sphinx_problog-0.1.post1.dist-info/RECORD,,
