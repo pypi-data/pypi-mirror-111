@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: image-download
+Version: 1.0.0
+Summary: 구글 이미지 다운로드
+Home-page: UNKNOWN
+Author: ['Jung Ji-Hyo', 'Joungwoo']
+Author-email: cord0318@gmail.com
+License: GPL-V3
+Keywords: korea,image,image-search,search,google
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: urllib
+Requires-Dist: requests
+
+# image-search📱
+
+[![Send mail](https://img.shields.io/badge/-cord0318@gmail.com-63d863?style=flat-square&logo=gmail&logoColor=white&link=mailto:cord0318@gmail.com)](mailto:cord0318@gmail.com) <br>
+
+이 모듈은 쉽게 이미지를 다운로드할수있게 하기위해서 개발된 라이브러리입니다.
+
+
+## 📥 Download
+
+윈도우나 리눅스의 터미널에서 다음과 같이 입력합니다.
+
+```shell
+pip install image-search
+```
+
+오류가 나는 경우, `python -m pip install --upgrade pip` 로 pip를 업데이트 해주세요.
+
+
+## How to use?
+
+```python
+import search
+
+response = search.search
+response().download(str("< 검색하고 싶은 것 >"), int(< max download limit >)) # 이미지 다운로드
+print(response().urls("< 검색하고 싶은 것 >", int(< max download limit >))) # 이미지 url 검색
+```
+
