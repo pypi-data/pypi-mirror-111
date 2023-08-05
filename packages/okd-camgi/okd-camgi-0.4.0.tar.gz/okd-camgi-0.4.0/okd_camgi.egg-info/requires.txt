@@ -1,0 +1,6 @@
+bottle
+jinja2
+kubernetes
+python-dateutil
+pygments
+pyyaml
