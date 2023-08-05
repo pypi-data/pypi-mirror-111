@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: poliastro
+Version: 0.15.2
+Summary: Utilities and Python wrappers for Orbital Mechanics
+Home-page: https://www.poliastro.space
+Author: Juan Luis Cano Rodríguez
+Author-email: hello@juanlu.space
