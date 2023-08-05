@@ -1,0 +1,13 @@
+Metadata-Version: 1.0
+Name: cp-tcgen
+Version: 0.1.0
+Summary: Test case generator. Quickly design and generate test cases without all the bulk
+Home-page: https://github.com/JoshuaTianYangLiu/tcgen
+Author: Joshua Liu
+Author-email: joshualiu@youarefantastic.com
+License: MIT
+Description: # tcgen
+        Yet another test case generator (But hopefully better)
+        
+Keywords: program competitive programming codeforces
+Platform: UNKNOWN
