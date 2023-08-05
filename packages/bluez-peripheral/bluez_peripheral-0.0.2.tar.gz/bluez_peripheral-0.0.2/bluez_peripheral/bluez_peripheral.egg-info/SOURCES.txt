@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+bluez_peripheral/bluez_peripheral.egg-info/PKG-INFO
+bluez_peripheral/bluez_peripheral.egg-info/SOURCES.txt
+bluez_peripheral/bluez_peripheral.egg-info/dependency_links.txt
+bluez_peripheral/bluez_peripheral.egg-info/top_level.txt
+bluez_peripheral/gatt/__init__.py
+bluez_peripheral/gatt/characteristic.py
+bluez_peripheral/gatt/descriptor.py
+bluez_peripheral/gatt/service.py
