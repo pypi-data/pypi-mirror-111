@@ -1,0 +1,1 @@
+include aws_region_proximity/*.json

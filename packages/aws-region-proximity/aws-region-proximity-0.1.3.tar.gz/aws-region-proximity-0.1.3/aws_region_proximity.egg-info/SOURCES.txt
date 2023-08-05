@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+aws_region_proximity/__init__.py
+aws_region_proximity/__version__.py
+aws_region_proximity/aws-regions.json
+aws_region_proximity/aws_objects.py
+aws_region_proximity/command_line.py
+aws_region_proximity.egg-info/PKG-INFO
+aws_region_proximity.egg-info/SOURCES.txt
+aws_region_proximity.egg-info/dependency_links.txt
+aws_region_proximity.egg-info/entry_points.txt
+aws_region_proximity.egg-info/requires.txt
+aws_region_proximity.egg-info/top_level.txt
+aws_region_proximity.egg-info/zip-safe
