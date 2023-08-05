@@ -1,0 +1,3 @@
+[console_scripts]
+taorunner = taorunner.main:main
+

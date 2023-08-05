@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: taorunner
+Version: 1.0b1
+Summary: A script tool to run a batch of task consecutively.
+Home-page: UNKNOWN
+Author: Botao Yu
+Author-email: btyu@foxmail.com
+License: UNKNOWN
+Description: # TaoRunner
+        
+        A script tool to run a batch of task consecutively.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
