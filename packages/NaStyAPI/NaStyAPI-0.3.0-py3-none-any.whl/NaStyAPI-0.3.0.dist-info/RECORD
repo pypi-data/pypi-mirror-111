@@ -1,0 +1,13 @@
+NaStyAPI/APICall.py,sha256=tzi3CCIQBOPLjygy9J3Tdqms78u89H9Zm2Gp2vVAstI,684
+NaStyAPI/Nation.py,sha256=OtXREltRNxJ-7RHu0cwc6DogiEoUuMVgev-n8uP0x50,17410
+NaStyAPI/Region.py,sha256=cIilza8O5Hh7QYSaoxhf_yZ75Eej76UuI_5RRMevsBU,667
+NaStyAPI/Telegrams.py,sha256=ifkmP-Lvk-ETEx7h5_z3muHIX3gvk7q9ENweNtgb954,2368
+NaStyAPI/TradingCards.py,sha256=umeR8r9T0Mrv31vRkhPXaJ1bDoKSYqc9fifmDFfJ3nw,1283
+NaStyAPI/World.py,sha256=2xyVOvDmmAiLuVhhiJS1OXA5Ya8W_qW3gizcJbcAOM8,297
+NaStyAPI/WorldAssembly.py,sha256=OZZsti023YWY897X6giIwaAhul5mGO75LJXg1fex5NU,717
+NaStyAPI/__init__.py,sha256=-h4Myg5SpkFbxZ9jUmvawHP6ba8akGmjIZvbUObn2U4,97
+NaStyAPI-0.3.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+NaStyAPI-0.3.0.dist-info/METADATA,sha256=XPduMDMmXGVRvWwVd5fPPkp_GGp_ZT9eqyijkO2bqOk,3866
+NaStyAPI-0.3.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+NaStyAPI-0.3.0.dist-info/top_level.txt,sha256=1Kcqi19jLFAJIpTkbvZHauRpUpghF8zR17ZbztJW8E8,9
+NaStyAPI-0.3.0.dist-info/RECORD,,
