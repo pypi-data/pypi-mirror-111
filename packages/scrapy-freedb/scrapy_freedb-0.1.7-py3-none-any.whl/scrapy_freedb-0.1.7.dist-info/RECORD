@@ -1,0 +1,13 @@
+scrapy_freedb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scrapy_freedb/base.py,sha256=8Ex2pcSsuYrUyIlcguOYJvOOVFDngUrUIN_6HMZ5eMA,2322
+scrapy_freedb/plugin.py,sha256=ZVUycZ16hcfv2kx7Dssl0QJgK0KAmV0iAzr5D3zIUnY,2098
+scrapy_freedb/middleware/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scrapy_freedb/middleware/dupefilter.py,sha256=rainmv8kktLzhzTRgChU0cDxlQ_Ibctq1XVUYSluvs8,5226
+scrapy_freedb/middleware/freedb.py,sha256=-r6pMqYT1h9udCxU2u7B-XpHC5ivsFCiCYeIDasBUX0,4693
+scrapy_freedb/middleware/mapper.py,sha256=Z6yDj4gbV3a67mXoQT8dqniFF9nB_pzdsD0e-1RnH3I,339
+scrapy_freedb/middleware/pipeline.py,sha256=mGAfiP1mJ0I1RMW_7OtoQNKVQWT4kLQU7leORQBYZqI,1453
+scrapy_freedb-0.1.7.dist-info/METADATA,sha256=MSkMahS_7jCA-ML6o7cY0x8sx2RlnJPOr_sm7U3seX8,214
+scrapy_freedb-0.1.7.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+scrapy_freedb-0.1.7.dist-info/entry_points.txt,sha256=XYw0GZKVAqp8MR38oy2gbjX2682QSuwvQsy2A508Kak,61
+scrapy_freedb-0.1.7.dist-info/top_level.txt,sha256=TPZtF8EMSZqszpD2HETxcQApzNxEcl8QImDXjNEwVo4,14
+scrapy_freedb-0.1.7.dist-info/RECORD,,
