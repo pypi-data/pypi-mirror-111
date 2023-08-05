@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: udarpc
+Version: 0.0.1
+Summary: uda rpc python client lib
+Home-page: https://packaging.python.org/
+Author: memory shen
+Author-email: zhengyang.shen@ipp.ac.cn
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3.6

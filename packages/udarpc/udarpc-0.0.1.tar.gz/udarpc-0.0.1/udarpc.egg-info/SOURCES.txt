@@ -1,0 +1,10 @@
+setup.py
+udarpc/__init__.py
+udarpc/uda.py
+udarpc/uda_pb2.py
+udarpc/uda_pb2_grpc.py
+udarpc.egg-info/PKG-INFO
+udarpc.egg-info/SOURCES.txt
+udarpc.egg-info/dependency_links.txt
+udarpc.egg-info/requires.txt
+udarpc.egg-info/top_level.txt
