@@ -1,0 +1,318 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Milo Ivir <mail@milotype.de>, 2020.
+# Danial Behzadi <dani.behzi@ubuntu.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-23 05:31+0330\n"
+"PO-Revision-Date: 2020-12-30 00:29+0000\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/carburetor/"
+"translations/hr/>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.4.1-dev\n"
+
+#: carburetor/actions.py:66
+msgid "Disconnecting…"
+msgstr "Odspajanje …"
+
+#: carburetor/actions.py:70
+msgid "Connecting…"
+msgstr "Povezivanje …"
+
+#: carburetor/actions.py:81
+msgid "You have a new identity!"
+msgstr "Imaš novi identitet!"
+
+#: carburetor/actions.py:83
+msgid "Tractor is not running!"
+msgstr "Tractor nije pokrenut!"
+
+#: carburetor/config.py:20 carburetor/main.ui:177
+msgid "Carburetor"
+msgstr "Carburetor"
+
+#: carburetor/config.py:21 carburetor/about.ui:38 carburetor/main.ui:178
+msgid "Settings for Tractor"
+msgstr "Postavke za Tractor"
+
+#: carburetor/functions.py:57 carburetor/main.ui:121
+msgid "Stopped"
+msgstr "Prekinuto"
+
+#: carburetor/functions.py:59 carburetor/main.ui:187
+msgid "_Connect"
+msgstr "_Poveži"
+
+#: carburetor/functions.py:64
+msgid "Tractor is stopped"
+msgstr "Tractor je prekinut"
+
+#: carburetor/functions.py:71
+msgid "Running"
+msgstr "Pokrenuto"
+
+#: carburetor/functions.py:73
+msgid "_Disconnect"
+msgstr "_Odspojeno"
+
+#: carburetor/functions.py:78
+msgid "Tractor is running"
+msgstr "Tractor je pokrenut"
+
+#: carburetor/handler.py:28
+msgid "Austria"
+msgstr "Austrija"
+
+#: carburetor/handler.py:29
+msgid "Bulgaria"
+msgstr "Bugarska"
+
+#: carburetor/handler.py:30
+msgid "Canada"
+msgstr "Kanada"
+
+#: carburetor/handler.py:31
+msgid "Czech"
+msgstr "Češka"
+
+#: carburetor/handler.py:32
+msgid "Finland"
+msgstr "Finska"
+
+#: carburetor/handler.py:33
+msgid "France"
+msgstr "Francuska"
+
+#: carburetor/handler.py:34
+msgid "Germany"
+msgstr "Njemačka"
+
+#: carburetor/handler.py:35
+msgid "Ireland"
+msgstr "Irska"
+
+#: carburetor/handler.py:36
+msgid "Moldova"
+msgstr "Moldavija"
+
+#: carburetor/handler.py:37
+msgid "Netherlands"
+msgstr "Nizozemska"
+
+#: carburetor/handler.py:38
+msgid "Norway"
+msgstr "Norveška"
+
+#: carburetor/handler.py:39
+msgid "Poland"
+msgstr "Poljska"
+
+#: carburetor/handler.py:40
+msgid "Romania"
+msgstr "Rumunjska"
+
+#: carburetor/handler.py:41
+msgid "Russia"
+msgstr "Rusija"
+
+#: carburetor/handler.py:42
+msgid "Seychelles"
+msgstr "Sejšeli"
+
+#: carburetor/handler.py:43
+msgid "Singapore"
+msgstr "Singapur"
+
+#: carburetor/handler.py:44
+msgid "Spain"
+msgstr "Španjolska"
+
+#: carburetor/handler.py:45
+msgid "Sweden"
+msgstr "Švedska"
+
+#: carburetor/handler.py:46
+msgid "Switzerland"
+msgstr "Švicarska"
+
+#: carburetor/handler.py:47
+msgid "Ukraine"
+msgstr "Ukrajina"
+
+#: carburetor/handler.py:48
+msgid "United Kingdom"
+msgstr "Ujedinjeno Kraljevstvo"
+
+#: carburetor/handler.py:49
+msgid "United States"
+msgstr "Sjedinjene Države"
+
+#: carburetor/handler.py:50
+msgid "Auto (Best)"
+msgstr "Automatski (najbolje)"
+
+#: carburetor/handler.py:105
+msgid "translator-credits"
+msgstr "Milo Ivir <mail@milotype.de>"
+
+#: carburetor/about.ui:37
+msgid "Copyright © 2019-2020, Tractor Team"
+msgstr "Autorsko pravo © 2019. – 2020., Tractor ekipa"
+
+#: carburetor/about.ui:40
+msgid "Source Code"
+msgstr "Izvorni kod"
+
+#: carburetor/main.ui:40
+msgid "_New ID"
+msgstr "_Novi ID"
+
+#: carburetor/main.ui:49
+msgid "_Set proxy on system"
+msgstr "_Postavi poslužitelja na sustav"
+
+#: carburetor/main.ui:57
+msgid "_Check connection"
+msgstr "_Provjeri vezu"
+
+#: carburetor/main.ui:257
+msgid "Preferences"
+msgstr "Postavke"
+
+#: carburetor/main.ui:272
+msgid "About Carburetor"
+msgstr "Carburetor podaci"
+
+#: carburetor/main.ui:287
+msgid "Quit"
+msgstr "Zatvori program"
+
+#: carburetor/preferences.ui:40
+msgid "General"
+msgstr "Opće"
+
+#: carburetor/preferences.ui:45
+msgid "Exit Node"
+msgstr "Čvor izlaza"
+
+#: carburetor/preferences.ui:64
+msgid "Exit Country"
+msgstr "Zemlja izlaza"
+
+#: carburetor/preferences.ui:78
+msgid "The country you want to connect from"
+msgstr "Zemlja iz koje se želiš povezati"
+
+#: carburetor/preferences.ui:123
+msgid "Accept Connections"
+msgstr "Prihvati veze"
+
+#: carburetor/preferences.ui:137
+msgid "Allow external devices to use this network"
+msgstr "Dopusti vanjskim uređajima koristiti ovu mrežu"
+
+#: carburetor/preferences.ui:174
+msgid "Ports"
+msgstr "Priključci"
+
+#: carburetor/preferences.ui:179
+msgid "Socks Port"
+msgstr "Priključak za Socks"
+
+#: carburetor/preferences.ui:193
+msgid "Local port on which Tractor would be listen"
+msgstr "Lokalni priključak na kojem se Tractor prisluškuje"
+
+#: carburetor/preferences.ui:227
+msgid "DNS Port"
+msgstr "Priključak za DNS"
+
+#: carburetor/preferences.ui:241
+msgid "Local port on which you would have an anonymous name server"
+msgstr "Lokalni priključak na kojem se može nalaziti anonimni poslužitelj"
+
+#: carburetor/preferences.ui:275
+msgid "HTTP Tunnel Port"
+msgstr "Priključak za HTTP tunel"
+
+#: carburetor/preferences.ui:289
+msgid "Local port on which a HTTP tunnel would be listen"
+msgstr "Lokalni priključak na kojem se HTTP tunel prisluškuje"
+
+#: carburetor/preferences.ui:326 carburetor/preferences.ui:379
+msgid "Bridges"
+msgstr "Mostovi"
+
+#: carburetor/preferences.ui:331
+msgid "Type of bridge"
+msgstr "Vrsta mosta"
+
+#: carburetor/preferences.ui:345
+msgid "Use obfs4proxy"
+msgstr "Koristi obfs4proxy"
+
+#: carburetor/preferences.ui:415
+msgid "Save"
+msgstr "Spremi"
+
+#: carburetor/preferences.ui:419
+msgid "Save Bridges as a file in your local configs"
+msgstr "Spremi mostove kao datoteku u lokalnim konfiguracijama"
+
+#: carburetor/preferences.ui:438
+msgid "Client Transport Plugin"
+msgstr "Dodatak klijentskog transporta"
+
+#: carburetor/preferences.ui:452
+msgid "Please specify the plugin executable file"
+msgstr "Odredi izvršnu datoteku dodatka"
+
+#: carburetor/preferences.ui:491
+msgid "Can not save the bridges"
+msgstr "Nije moguće spremiti mostove"
+
+#: carburetor/preferences.ui:492
+msgid "Please check the syntax of bridges"
+msgstr "Provjeri sintaksu mostova"
+
+#~ msgid "Start"
+#~ msgstr "Pokreni"
+
+#~ msgid "Stop"
+#~ msgstr "Prekini"
+
+#~ msgid "stopping…"
+#~ msgstr "prekidanje …"
+
+#~ msgid "starting…"
+#~ msgstr "pokretanje …"
+
+#~ msgid "Unset Proxy"
+#~ msgstr "Poništi proxy"
+
+#~ msgid "Set Proxy"
+#~ msgstr "Postavi proxy"
+
+#~ msgid "<b>Use bridges</b>"
+#~ msgstr "<b>Koristi mostove</b>"
+
+#~ msgid "<small>Bridges help you to bypass tor sensorship</small>"
+#~ msgstr "<small>Mostovi pomažu zaobići cenzuru</small>"
+
+#~ msgid "Bridges:"
+#~ msgstr "Mostovi:"
+
+#~ msgid "<b>obfs4proxy executable</b>"
+#~ msgstr "<b>Izvršna datoteka obfs4proxy</b>"
+
+#~ msgid "<small>You should specify where is obfs4proxy file</small>"
+#~ msgstr "<small>Odredi mjesto datoteke obfs4proxy</small>"

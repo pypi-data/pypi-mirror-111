@@ -1,0 +1,327 @@
+# Carburetor Translation Project
+# Copyright (C) 2018 Tractor Team
+# Danial Behzadi <dani.behzi@ubuntu.com>, 2018, 2020.
+# Allan Nordhøy <epost@anotheragency.no>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: dani.behzi@ubuntu.com\n"
+"POT-Creation-Date: 2020-12-23 05:31+0330\n"
+"PO-Revision-Date: 2021-01-23 19:32+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
+"carburetor/translations/nb_NO/>\n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.5-dev\n"
+"Generated-By: pygettext.py 1.5\n"
+
+#: carburetor/actions.py:66
+msgid "Disconnecting…"
+msgstr "Kobler fra …"
+
+#: carburetor/actions.py:70
+msgid "Connecting…"
+msgstr "Kobler til …"
+
+#: carburetor/actions.py:81
+msgid "You have a new identity!"
+msgstr "Du har en ny identitet!"
+
+#: carburetor/actions.py:83
+msgid "Tractor is not running!"
+msgstr "Tractor kjører ikke!"
+
+#: carburetor/config.py:20 carburetor/main.ui:177
+msgid "Carburetor"
+msgstr "Carburetor"
+
+#: carburetor/config.py:21 carburetor/about.ui:38 carburetor/main.ui:178
+msgid "Settings for Tractor"
+msgstr "Innstillinger for Tractor"
+
+#: carburetor/functions.py:57 carburetor/main.ui:121
+#, fuzzy
+msgid "Stopped"
+msgstr "Stopp"
+
+#: carburetor/functions.py:59 carburetor/main.ui:187
+msgid "_Connect"
+msgstr "_Koble til"
+
+#: carburetor/functions.py:64
+#, fuzzy
+msgid "Tractor is stopped"
+msgstr "Tractor stoppet"
+
+#: carburetor/functions.py:71
+msgid "Running"
+msgstr "Kjører"
+
+#: carburetor/functions.py:73
+msgid "_Disconnect"
+msgstr "_Koble fra"
+
+#: carburetor/functions.py:78
+#, fuzzy
+msgid "Tractor is running"
+msgstr "Tractor kjører"
+
+#: carburetor/handler.py:28
+msgid "Austria"
+msgstr "Østerrike"
+
+#: carburetor/handler.py:29
+msgid "Bulgaria"
+msgstr "Bulgaria"
+
+#: carburetor/handler.py:30
+msgid "Canada"
+msgstr "Canada"
+
+#: carburetor/handler.py:31
+msgid "Czech"
+msgstr "Tsjekkia"
+
+#: carburetor/handler.py:32
+msgid "Finland"
+msgstr "Finland"
+
+#: carburetor/handler.py:33
+msgid "France"
+msgstr "Frankrike"
+
+#: carburetor/handler.py:34
+msgid "Germany"
+msgstr "Tyskland"
+
+#: carburetor/handler.py:35
+msgid "Ireland"
+msgstr "Irland"
+
+#: carburetor/handler.py:36
+msgid "Moldova"
+msgstr "Moldova"
+
+#: carburetor/handler.py:37
+msgid "Netherlands"
+msgstr "Nederland"
+
+#: carburetor/handler.py:38
+msgid "Norway"
+msgstr "Norge"
+
+#: carburetor/handler.py:39
+msgid "Poland"
+msgstr "Polen"
+
+#: carburetor/handler.py:40
+msgid "Romania"
+msgstr "Romania"
+
+#: carburetor/handler.py:41
+msgid "Russia"
+msgstr "Russland"
+
+#: carburetor/handler.py:42
+msgid "Seychelles"
+msgstr "Seychellene"
+
+#: carburetor/handler.py:43
+msgid "Singapore"
+msgstr "Singapore"
+
+#: carburetor/handler.py:44
+msgid "Spain"
+msgstr "Spania"
+
+#: carburetor/handler.py:45
+msgid "Sweden"
+msgstr "Sverige"
+
+#: carburetor/handler.py:46
+msgid "Switzerland"
+msgstr "Sveits"
+
+#: carburetor/handler.py:47
+msgid "Ukraine"
+msgstr "Ukraina"
+
+#: carburetor/handler.py:48
+msgid "United Kingdom"
+msgstr "Storbritannia"
+
+#: carburetor/handler.py:49
+msgid "United States"
+msgstr "Amerikas forente stater"
+
+#: carburetor/handler.py:50
+msgid "Auto (Best)"
+msgstr "Auto (best)"
+
+#: carburetor/handler.py:105
+msgid "translator-credits"
+msgstr "Allan Nordhøy, <epost@anotheragency.no>"
+
+#: carburetor/about.ui:37
+msgid "Copyright © 2019-2020, Tractor Team"
+msgstr "Opphavsrett © 2019–2020, Tractor-laget"
+
+#: carburetor/about.ui:40
+msgid "Source Code"
+msgstr "Kildekode"
+
+#: carburetor/main.ui:40
+msgid "_New ID"
+msgstr "_Ny ID"
+
+#: carburetor/main.ui:49
+#, fuzzy
+msgid "_Set proxy on system"
+msgstr "_Sett mellomtjener på systemet"
+
+#: carburetor/main.ui:57
+#, fuzzy
+msgid "_Check connection"
+msgstr "Godta tilkobling"
+
+#: carburetor/main.ui:257
+msgid "Preferences"
+msgstr "Innstillinger"
+
+#: carburetor/main.ui:272
+#, fuzzy
+msgid "About Carburetor"
+msgstr "Carburetor"
+
+#: carburetor/main.ui:287
+msgid "Quit"
+msgstr "Avslutt"
+
+#: carburetor/preferences.ui:40
+msgid "General"
+msgstr "Generelt"
+
+#: carburetor/preferences.ui:45
+msgid "Exit Node"
+msgstr "Utgangsnode"
+
+#: carburetor/preferences.ui:64
+msgid "Exit Country"
+msgstr "Avslutt land"
+
+#: carburetor/preferences.ui:78
+msgid "The country you want to connect from"
+msgstr "Landet du ønsker å koble til fra"
+
+#: carburetor/preferences.ui:123
+msgid "Accept Connections"
+msgstr "Godta tilkobling"
+
+#: carburetor/preferences.ui:137
+msgid "Allow external devices to use this network"
+msgstr "Hvorvidt eksterne enheter skal tillates å bruke dette nettverket"
+
+#: carburetor/preferences.ui:174
+msgid "Ports"
+msgstr "Porter"
+
+#: carburetor/preferences.ui:179
+msgid "Socks Port"
+msgstr "SOCKS-port"
+
+#: carburetor/preferences.ui:193
+msgid "Local port on which Tractor would be listen"
+msgstr "Lokal port Tractor skal lytte til"
+
+#: carburetor/preferences.ui:227
+msgid "DNS Port"
+msgstr "DNS-port"
+
+#: carburetor/preferences.ui:241
+msgid "Local port on which you would have an anonymous name server"
+msgstr "Lokal port du har en anonym navnetjener på"
+
+#: carburetor/preferences.ui:275
+msgid "HTTP Tunnel Port"
+msgstr "DNS-port"
+
+#: carburetor/preferences.ui:289
+msgid "Local port on which a HTTP tunnel would be listen"
+msgstr "Lokal port Tractor skal lytte til"
+
+#: carburetor/preferences.ui:326 carburetor/preferences.ui:379
+msgid "Bridges"
+msgstr "Broer"
+
+#: carburetor/preferences.ui:331
+msgid "Type of bridge"
+msgstr "Brotype"
+
+#: carburetor/preferences.ui:345
+#, fuzzy
+msgid "Use obfs4proxy"
+msgstr "Angre setting av mellomtjener"
+
+#: carburetor/preferences.ui:415
+msgid "Save"
+msgstr "Lagre"
+
+#: carburetor/preferences.ui:419
+msgid "Save Bridges as a file in your local configs"
+msgstr "Lagre broer i en fil i ditt lokaloppsett"
+
+#: carburetor/preferences.ui:438
+msgid "Client Transport Plugin"
+msgstr "Klienttransport-programtillegg"
+
+#: carburetor/preferences.ui:452
+msgid "Please specify the plugin executable file"
+msgstr "Angi kjørbar fil for programtillegg"
+
+#: carburetor/preferences.ui:491
+msgid "Can not save the bridges"
+msgstr "Kan ikke lagre broene"
+
+#: carburetor/preferences.ui:492
+msgid "Please check the syntax of bridges"
+msgstr "Sjekk syntaksen for broene"
+
+#~ msgid "Start"
+#~ msgstr "Start"
+
+#~ msgid "Stop"
+#~ msgstr "Stopp"
+
+#~ msgid "stopping…"
+#~ msgstr "stopper…"
+
+#~ msgid "starting…"
+#~ msgstr "starter…"
+
+#~ msgid "Unset Proxy"
+#~ msgstr "Angre setting av mellomtjener"
+
+#~ msgid "Set Proxy"
+#~ msgstr "Sett mellomtjener"
+
+#~ msgid "<b>Use bridges</b>"
+#~ msgstr "<b>Benytt broer</b>"
+
+#, fuzzy
+#~ msgid "<small>Bridges help you to bypass tor sensorship</small>"
+#~ msgstr "<small>Broer hjelper deg å omgå sensur av Tor</small>"
+
+#~ msgid "Bridges:"
+#~ msgstr "Broer:"
+
+#, fuzzy
+#~ msgid "<b>obfs4proxy executable</b>"
+#~ msgstr "<b>Kjørbar obfs4proxy-fil</b>"
+
+#, fuzzy
+#~ msgid "<small>You should specify where is obfs4proxy file</small>"
+#~ msgstr "<small>Angi hvor obfs4proxy-filen er</small>"
