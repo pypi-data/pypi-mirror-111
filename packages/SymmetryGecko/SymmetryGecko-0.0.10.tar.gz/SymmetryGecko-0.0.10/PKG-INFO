@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: SymmetryGecko
+Version: 0.0.10
+Summary: CoinGecko API for Symmetry Finance
+Home-page: https://github.com/symmetry-protocol/coingeckoAPI.git
+Author: Mr. Bluesky
+Author-email: solana.bluesky@gmail.com
+License: MIT
+Download-URL: https://github.com/symmetry-protocol/coingeckoAPI.git
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
