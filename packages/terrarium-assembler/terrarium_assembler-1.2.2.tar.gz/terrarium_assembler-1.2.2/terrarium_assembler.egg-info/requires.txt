@@ -1,0 +1,7 @@
+easydict
+pytictoc
+file-magic
+jinja2
+pyyaml
+pipenv
+wheel_filename
