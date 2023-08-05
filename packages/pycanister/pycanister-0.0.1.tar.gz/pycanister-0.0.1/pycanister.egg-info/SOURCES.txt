@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+pycanister/__init__.py
+pycanister/pycanister.py
+pycanister.egg-info/PKG-INFO
+pycanister.egg-info/SOURCES.txt
+pycanister.egg-info/dependency_links.txt
+pycanister.egg-info/requires.txt
+pycanister.egg-info/top_level.txt
