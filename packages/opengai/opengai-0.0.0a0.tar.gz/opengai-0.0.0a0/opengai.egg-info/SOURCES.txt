@@ -1,0 +1,7 @@
+README.md
+setup.py
+opengai/__init__.py
+opengai.egg-info/PKG-INFO
+opengai.egg-info/SOURCES.txt
+opengai.egg-info/dependency_links.txt
+opengai.egg-info/top_level.txt
