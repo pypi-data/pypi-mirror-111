@@ -1,0 +1,22 @@
+
+
+Examples using ``powspec.power_spectral_density``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Basic Usage of powspec">
+
+.. only:: html
+
+ .. figure:: /auto_examples/images/thumb/sphx_glr_plot_basic_thumb.png
+
+     :ref:`sphx_glr_auto_examples_plot_basic.py`
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_plot_basic.py`

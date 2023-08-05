@@ -1,0 +1,17 @@
+image: python
+
+stages:
+- test
+- lint
+
+tests:
+  stage: test
+  script:
+    - pip install tox
+    - tox -e test
+
+lint:
+  stage: test
+  script: 
+    - pip install tox
+    - tox -e codestyle
