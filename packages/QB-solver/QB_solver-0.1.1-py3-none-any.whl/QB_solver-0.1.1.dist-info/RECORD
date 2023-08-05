@@ -1,0 +1,14 @@
+cubesolver.py,sha256=gCzIVpGU053KFIeYnVnHmlHZWxOzayx5c81aAzfgfCc,5865
+main.py,sha256=tgIj7tbeiWLwyZ-MFQbNEWPaS0moFK676W1LTQF11C8,19132
+virtualcube.py,sha256=C785cjNhu0_hwMy23uTgBl3NZme9YDCzQl4MQad9uZM,5680
+visCube.py,sha256=PLgRYpL51PbkEmuIE2QssUS7o2fKy9cwL6ucjS84yLI,30919
+visHints.py,sha256=-ppYN9nAqjcHffXdqrwqfpPOcSSKe1ONTlRiqyyqAvE,11455
+src/cubesolver.py,sha256=gCzIVpGU053KFIeYnVnHmlHZWxOzayx5c81aAzfgfCc,5865
+src/main.py,sha256=tgIj7tbeiWLwyZ-MFQbNEWPaS0moFK676W1LTQF11C8,19132
+src/virtualcube.py,sha256=C785cjNhu0_hwMy23uTgBl3NZme9YDCzQl4MQad9uZM,5680
+src/visCube.py,sha256=PLgRYpL51PbkEmuIE2QssUS7o2fKy9cwL6ucjS84yLI,30919
+QB_solver-0.1.1.dist-info/METADATA,sha256=PZAqxJhICVa7fSANoMQIB2HWehu9aGQmyqGwO0EPSIs,340
+QB_solver-0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+QB_solver-0.1.1.dist-info/entry_points.txt,sha256=f0-EnHhnlhzP5H_NCTUAWZCmERyMY6ZZMBECNIop8ag,45
+QB_solver-0.1.1.dist-info/top_level.txt,sha256=74rtVfumQlgAPzR5_2CgYN24MB0XARCg0t-gzk6gTrM,4
+QB_solver-0.1.1.dist-info/RECORD,,
