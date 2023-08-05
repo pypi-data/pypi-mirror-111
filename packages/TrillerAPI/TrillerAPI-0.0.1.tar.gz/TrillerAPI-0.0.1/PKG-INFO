@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: TrillerAPI
+Version: 0.0.1
+Summary: The Unofficial Triller API Wrapper in Python 3.
+Home-page: https://github.com/davidteather/triller-api
+Author: David Teather
+Author-email: contact.davidteather@gmail.com
+License: MIT
+Download-URL: https://github.com/davidteather/triller-api/tarball/main
+Description: # triller-api
+         The Unofficial Triller API Wrapper In Python
+        
+         [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&style=flat-square)](https://www.linkedin.com/in/davidteather/) [![Sponsor Me](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub)](https://github.com/sponsors/davidteather)  [![GitHub release (latest by date)](https://img.shields.io/github/v/release/davidteather/triller-api)](https://github.com/davidteather/triller-api/releases) [![Build Status](https://travis-ci.com/davidteather/triller-api.svg?branch=main)](https://travis-ci.com/davidteather/triller-api) [![GitHub](https://img.shields.io/github/license/davidteather/triller-api)](https://github.com/davidteather/triller-api/blob/main/LICENSE) [![Downloads](https://pepy.tech/badge/trillerapi)](https://pypi.org/project/trillerapi/) ![](https://visitor-badge.laobi.icu/badge?page_id=davidteather.triller-api) [![Support Server](https://img.shields.io/discord/783108952111579166.svg?color=7289da&logo=discord&style=flat-square)](https://discord.gg/yyPhbfma6f)
+        
+        ## Getting Started
+        
+        Run the following command to install it from PyPi
+        ```sh
+        pip install TrillerAPI
+        ```
+        
+        Basic Quick Start Script
+        ```py
+        import TrillerAPI
+        user = TrillerAPI.login("YOUR_TRILLER_USERNAME", "YOUR_TRILLER_PASSWORD")
+        trending = user.get_trending()
+        ```
+        
+        [Full Documentation](https://davidteather.github.io/triller-api/docs) (as of now you only have to read the TrillerAPI.user User class)
+Keywords: triller,api,triller-api,unofficial
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
