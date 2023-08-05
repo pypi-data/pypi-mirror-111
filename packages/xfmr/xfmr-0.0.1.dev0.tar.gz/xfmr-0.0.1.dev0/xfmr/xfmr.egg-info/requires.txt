@@ -1,0 +1,4 @@
+scikit-learn>=0.21.0
+
+[all]
+vaex>=4.0.0

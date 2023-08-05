@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+xfmr/xfmr.egg-info/PKG-INFO
+xfmr/xfmr.egg-info/SOURCES.txt
+xfmr/xfmr.egg-info/dependency_links.txt
+xfmr/xfmr.egg-info/not-zip-safe
+xfmr/xfmr.egg-info/requires.txt
+xfmr/xfmr.egg-info/top_level.txt
