@@ -1,0 +1,3 @@
+include ./face-mask-classifier/models/*.sav
+include ./README.md
+include ./LICENCE.rst
