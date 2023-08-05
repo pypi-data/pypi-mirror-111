@@ -1,0 +1,8 @@
+README.md
+setup.py
+landmark/__init__.py
+landmark_detection.egg-info/PKG-INFO
+landmark_detection.egg-info/SOURCES.txt
+landmark_detection.egg-info/dependency_links.txt
+landmark_detection.egg-info/requires.txt
+landmark_detection.egg-info/top_level.txt
