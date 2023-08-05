@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pyensys
+Version: 0.0.3
+Summary: python energy systems simulator - pyensys.
+Home-page: https://github.com/jnmelchorg/pyensys
+Author: Dr. Eduardo Alejandro Martínez Ceseña,             Dr. Jose Nicolas Melchor Gutierrez
+Author-email: Eduardo.MartinezCesena@manchester.ac.uk,             jose.melchorgutierrez@manchester.ac.uk
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: C++
+Classifier: License :: OSI Approved :: Eclipse Public License 2.0 (EPL-2.0)
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Provides-Extra: test
