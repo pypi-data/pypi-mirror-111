@@ -1,0 +1,10 @@
+*.egg-info
+*.so
+*.swp
+*.o
+*.pyc
+*.pdf
+*.bin
+.ipynb_checkpoints
+dist/
+build/
