@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+turque/__init__.py
+turque.egg-info/PKG-INFO
+turque.egg-info/SOURCES.txt
+turque.egg-info/dependency_links.txt
+turque.egg-info/requires.txt
+turque.egg-info/top_level.txt
