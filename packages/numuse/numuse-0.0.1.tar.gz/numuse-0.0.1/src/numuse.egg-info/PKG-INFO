@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: numuse
+Version: 0.0.1
+Summary: Music experimentation library
+Home-page: https://gitlab.com/cuppajoeman/numuse
+Author: ccn
+Author-email: ccn@cuppajoeman.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Numuse
+
+This package is a set of tools designed for the analysis of music, it uses notation that connects with the code and fundamental building blocks of music.
+
+To get started visit the [documentation](https://numuse.readthedocs.io/en/latest/).
+
+If you're able to find use in this project, then please consider [contributing](https://www.patreon.com/cuppajoeman).
+
+
