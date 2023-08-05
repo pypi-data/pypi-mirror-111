@@ -1,0 +1,9 @@
+README.md
+setup.py
+oscar_test0629/__init__.py
+oscar_test0629/data.py
+oscar_test0629.egg-info/PKG-INFO
+oscar_test0629.egg-info/SOURCES.txt
+oscar_test0629.egg-info/dependency_links.txt
+oscar_test0629.egg-info/requires.txt
+oscar_test0629.egg-info/top_level.txt
