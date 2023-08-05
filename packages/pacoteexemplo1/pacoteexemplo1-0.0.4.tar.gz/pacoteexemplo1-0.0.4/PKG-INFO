@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: pacoteexemplo1
+Version: 0.0.4
+Summary: Exemplo de pacote PyPI
+Home-page: UNKNOWN
+Author: Fábio Minutti teixeira
+Author-email: fabiomt92@hotmail.com
+License: MIT License
+Description: Pacote com funÃ§Ãµes para calculos de risco de mercado
+Keywords: Pacote
+Platform: UNKNOWN
