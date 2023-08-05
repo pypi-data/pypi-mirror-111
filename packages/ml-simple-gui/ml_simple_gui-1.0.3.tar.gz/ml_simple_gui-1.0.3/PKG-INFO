@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: ml_simple_gui
+Version: 1.0.3
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Description: # ml_simple_gui
+        
+        РџСЂРѕСЃС‚РѕР№ РіСЂР°С„РёС‡РµСЃРєРёР№ РёРЅС‚РµСЂС„РµР№СЃ РґР»СЏ Р·Р°РґР°С‡ РјР°С€РёРЅРЅРѕРіРѕ РѕР±СѓС‡РµРЅРёСЏ.
+        
+        ## РЈСЃС‚Р°РЅРѕРІРєР°
+        ```
+        # pip install ml_simple_gui
+        ```
+        
+        ## РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ:
+        ```
+        from ml_simple_gui import Application
+        import os
+        from sklearn.svm import SVC
+        
+        
+        def model(**args):
+            return SVC(**args)
+        
+        
+        app = Application(
+            model=model,
+            upload_path=os.path.join('upload'),
+            csv_delimiter=',',
+            model_params=[
+                {
+                    'code': 'gamma',
+                    'name': 'gamma',
+                    'defaultValue': 'scale',
+                }
+            ],
+            server_port=5000
+        )
+        
+        app.run()
+        ```
+        
+        РђСЂРіСѓРјРµРЅС‚ `model_params` РїСЂРёРЅРёРјР°РµС‚ СЃРїРёСЃРѕРє РїР°СЂР°РјРµС‚СЂРѕРІ, РєРѕС‚РѕСЂС‹Рµ Р±СѓРґСѓС‚ РѕС‚РѕР±СЂР°Р¶Р°С‚СЊСЃСЏ РІ РёРЅС‚РµСЂС„РµР№СЃРµ Рё РїСЂРѕР±СЂР°СЃС‹РІР°С‚СЊСЃСЏ РІ РјРѕРґРµР»СЊ.
+        
+        РђСЂРіСѓРјРµРЅС‚ `upload_path` РїСЂРёРЅРёРјР°РµС‚ РїСѓС‚СЊ РґРѕ РїР°РїРєРё, РіРґРµ Р±СѓРґСѓС‚ С…СЂР°РЅРёС‚СЃСЏ Р·Р°РіСЂСѓР¶РµРЅРЅС‹Рµ С„Р°Р№Р»С‹. РџРѕРґРґРµСЂР¶РёРІР°СЋС‚СЃСЏ С‚РѕР»СЊРѕ CSV-С„Р°Р№Р»С‹.
+        
+        РџРѕСЃР»Рµ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РїСЂРёР»РѕР¶РµРЅРёСЏ, РѕРЅРѕ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РїРѕ Р°РґСЂРµСЃСѓ http://127.0.0.1:5000
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
