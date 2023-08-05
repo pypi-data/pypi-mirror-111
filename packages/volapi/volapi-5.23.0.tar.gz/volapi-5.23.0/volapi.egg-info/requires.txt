@@ -1,0 +1,5 @@
+autobahn<21,>=20
+requests
+
+[FAST_JSON]
+orjson<4,>=3

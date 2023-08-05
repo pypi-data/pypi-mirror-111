@@ -1,0 +1,2 @@
+autobahn>=20,<21
+requests
