@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: treasureisland
+Version: 0.2b1
+Summary: Prediction of Genomic Islands
+Home-page: UNKNOWN
+Author: Priyanka Banerjee
+Author-email: banerjee.p1104@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: gensim (>=4.0.1)
+Requires-Dist: biopython (>=1.79)
+Requires-Dist: scikit-learn (>=0.24.2)
+Requires-Dist: pandas
+
+UNKNOWN
+

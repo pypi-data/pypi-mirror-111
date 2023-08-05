@@ -1,0 +1,4 @@
+Bio
+gensim==3.8.3
+scikit_learn==0.22.2.post1
+openpyxl
