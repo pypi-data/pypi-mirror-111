@@ -1,0 +1,9 @@
+fasttext_serving_protos/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fasttext_serving_protos/model_pb2.py,sha256=xG5Mw8IbMgSGlAryg4IQFgmvtlOqqg5ucp8p_rw7HdY,8641
+fasttext_serving_protos/model_pb2_grpc.py,sha256=1oboBPFxaTEXt9Aw7EAj8gXHDCNMhZD2VXqocC9l_gk,159
+fasttext_serving_protos/service_pb2.py,sha256=9XoFtai332xZYVTOUsGwylvjGxgsLf7B_8Fwq2_rWSE,20896
+fasttext_serving_protos/service_pb2_grpc.py,sha256=cRH7TB2a0qiahoQ8PqA8EsMb6UpXmAKBObylG-3i8PY,9903
+fasttext_serving_protos-0.0.9.dist-info/METADATA,sha256=u7cjDfu9KxxZRxfR4P8Z3kVR5aCcN9RiFz-KFA0g7vA,452
+fasttext_serving_protos-0.0.9.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+fasttext_serving_protos-0.0.9.dist-info/top_level.txt,sha256=DkHvlKNh6LjxOKJeN2m2T0p_LjgiHtzROV3UgBePOhE,24
+fasttext_serving_protos-0.0.9.dist-info/RECORD,,
