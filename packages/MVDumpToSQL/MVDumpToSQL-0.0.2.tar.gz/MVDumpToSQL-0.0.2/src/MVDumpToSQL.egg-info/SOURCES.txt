@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/MVDumpToSQL/__init__.py
+src/MVDumpToSQL/example.py
+src/MVDumpToSQL.egg-info/PKG-INFO
+src/MVDumpToSQL.egg-info/SOURCES.txt
+src/MVDumpToSQL.egg-info/dependency_links.txt
+src/MVDumpToSQL.egg-info/top_level.txt
