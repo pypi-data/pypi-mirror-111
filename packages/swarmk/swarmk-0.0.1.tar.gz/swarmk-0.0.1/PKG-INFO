@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: swarmk
+Version: 0.0.1
+Summary: a pip install swarmk
+Home-page: UNKNOWN
+Author: mlib_4_you
+Author-email: Atlantes0land@gmail.com
+License: MIT
+Keywords: swarm,swarmk,swarm lib,pos,swarm clustering,particle-swarm-optimized-clustering
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# The original code for the library is here
+(dandynaufaldi/particle-swarm-optimized-clustering)[https://github.com/dandynaufaldi/particle-swarm-optimized-clustering=
+
+#use
+```python
+import swarmk as sw
+```
+
+or
+
+```python
+from swarmk.pso import ParticleSwarmOptimizedClustering
+from swarmk.particle import quantization_error, calc_sse
+from swarmk.utils import normalize
+from swarmk.kmeans import KMeans
+```
+
+

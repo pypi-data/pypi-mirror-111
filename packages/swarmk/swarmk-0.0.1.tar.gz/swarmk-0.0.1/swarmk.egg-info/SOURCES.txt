@@ -1,0 +1,14 @@
+.gitignore
+README.md
+README.rst
+setup.py
+swarmk/kmeans.py
+swarmk/main.py
+swarmk/particle.py
+swarmk/pso.py
+swarmk/utils.py
+swarmk.egg-info/PKG-INFO
+swarmk.egg-info/SOURCES.txt
+swarmk.egg-info/dependency_links.txt
+swarmk.egg-info/requires.txt
+swarmk.egg-info/top_level.txt
