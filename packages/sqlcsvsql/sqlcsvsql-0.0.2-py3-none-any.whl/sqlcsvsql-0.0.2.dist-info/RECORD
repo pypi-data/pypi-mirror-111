@@ -1,0 +1,14 @@
+sqlcsvsql/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sqlcsvsql/__main__.py,sha256=14OQ0lp9g2AOEtgXFuOFHZeUjq9ktGc9RCZbfh-YqHo,1815
+sqlcsvsql/converters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sqlcsvsql/converters/csv_to_sql.py,sha256=U-uHJPS1dUEHsXGT--eln7JXFn8Cw2vQC0Xwq45C_UQ,3598
+sqlcsvsql/converters/sql_to_csv.py,sha256=-knuL_VBJ3SQLFy5Ei1cKxgO6FipJ7_ZagxY6QBKvRs,285
+sqlcsvsql/sqlparsers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sqlcsvsql/sqlparsers/parsers.py,sha256=9HbHMuHATvBlIMMiOP5wVur8Xmj_SE4Yffm6Eh7BCL4,4860
+sqlcsvsql/sqlparsers/reg_exp.py,sha256=KKbTEcgT5RK4ipcwj391dMVFyKUJRYog9NbGMRj4nuI,412
+sqlcsvsql-0.0.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+sqlcsvsql-0.0.2.dist-info/METADATA,sha256=zLTr5zoTLlt4LrnlJIl43yD73R0Rvtn8e_H0jyrqSIc,1909
+sqlcsvsql-0.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sqlcsvsql-0.0.2.dist-info/entry_points.txt,sha256=se_LG0dXbk23xOCfolEDYaKsyNMUp7W_V5CZzBVtgGk,55
+sqlcsvsql-0.0.2.dist-info/top_level.txt,sha256=JdU7lD1aC2_-r8U8socJZDfUBH8pamsIqdrIGaq8KoY,10
+sqlcsvsql-0.0.2.dist-info/RECORD,,
