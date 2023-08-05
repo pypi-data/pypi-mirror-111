@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: minecraft-auto-fisher
+Version: 1.0.0
+Summary: A python module to automaticaly fish in Minecraft
+Home-page: https://github.com/elias123tre/minecraft-auto-fisher
+Author: elias123tre
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Minecraft Auto Fisher
+Automatically fish in Minecraft
+
+

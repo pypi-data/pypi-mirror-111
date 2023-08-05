@@ -1,0 +1,10 @@
+README.md
+fishing.py
+pyproject.toml
+setup.py
+minecraft_auto_fisher.egg-info/PKG-INFO
+minecraft_auto_fisher.egg-info/SOURCES.txt
+minecraft_auto_fisher.egg-info/dependency_links.txt
+minecraft_auto_fisher.egg-info/entry_points.txt
+minecraft_auto_fisher.egg-info/requires.txt
+minecraft_auto_fisher.egg-info/top_level.txt
