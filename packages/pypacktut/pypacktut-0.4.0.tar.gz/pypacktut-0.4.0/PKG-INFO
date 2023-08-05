@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: pypacktut
+Version: 0.4.0
+Summary: Python package tutorial
+Home-page: UNKNOWN
+Author: Nitin Singh
+Author-email: singh.nitin512@gmail.com
+License: UNKNOWN
+Description: Package package tutorial with a slightly longer description
+Keywords: python,package tutorial
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
