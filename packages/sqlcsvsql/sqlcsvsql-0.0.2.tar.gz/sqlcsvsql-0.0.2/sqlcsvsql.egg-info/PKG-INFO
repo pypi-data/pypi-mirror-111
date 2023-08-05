@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: sqlcsvsql
+Version: 0.0.2
+Summary: a lightweight package to convert files between sql and csv
+Home-page: https://github.com/riyadhrazzaq/sqlcsvsql
+Author: Md. Abdur Razzaq Riyadh
+Author-email: riyadh.razzaq@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/riyadhrazzaq/sqlcsvsql/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# sql-to-csv-to-sql
+
+A Simple Command Line Utility for converting SQL statements to CSV and vice versa.
+
+# Installation
+
+`pip install sqlcsvsql`
+
+# Usage
+
+```
+usage: __main__.py [-h] [-f FILEPATH] [-t TABLE_NAME] [-o OUTPUT] [-m {single,multi}] [-s {y,n}]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f FILEPATH, --filepath FILEPATH
+                        SQL or CSV file path
+  -t TABLE_NAME, --table-name TABLE_NAME
+                        Table name for csv file
+  -o OUTPUT, --output OUTPUT
+                        Output filepath. Must end with extension
+  -m {single,multi}, --statement_mode {single,multi}
+                        single or multiline DML to generate
+  -s {y,n}, --surround {y,n}
+                        surround values with single quote. For a CSV with columns A,B,C if only B column's values should be surrounded with quotes, then use ```--surround n,y,n```. By default, all values are
+                        surrounded.
+```
+
+## Convert `SQL` to `CSV`
+
+```
+python -m sqlcsvsql -f file.sql
+```
+
+the converted file will be saved in the same directory with file name `file.sql.csv`
+
+## Convert `CSV` to `SQL`
+
+```
+python -m sqlcsvsql -f file.csv -t example_table -m single
+```
+
+the converted file will be saved in the same directory with file name `file.csv.sql`
+
+

@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+./sqlcsvsql/__init__.py
+./sqlcsvsql/__main__.py
+./sqlcsvsql/converters/__init__.py
+./sqlcsvsql/converters/csv_to_sql.py
+./sqlcsvsql/converters/sql_to_csv.py
+./sqlcsvsql/sqlparsers/__init__.py
+./sqlcsvsql/sqlparsers/parsers.py
+./sqlcsvsql/sqlparsers/reg_exp.py
+sqlcsvsql.egg-info/PKG-INFO
+sqlcsvsql.egg-info/SOURCES.txt
+sqlcsvsql.egg-info/dependency_links.txt
+sqlcsvsql.egg-info/entry_points.txt
+sqlcsvsql.egg-info/top_level.txt
