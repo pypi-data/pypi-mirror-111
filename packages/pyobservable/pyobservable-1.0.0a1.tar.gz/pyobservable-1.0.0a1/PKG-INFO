@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: pyobservable
+Version: 1.0.0a1
+Summary: Simple event system for Python with weak reference support
+Home-page: https://github.com/Crimson-Crow/pyobservable
+Author: Crimson-Crow
+Author-email: github@crimsoncrow.dev
+License: MIT
+Project-URL: Bug Reports, https://github.com/Crimson-Crow/pyobservable/issues
+Project-URL: Source, https://github.com/Crimson-Crow/pyobservable
+Keywords: observer observable event handler dispatcher weakref
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Typing :: Typed
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: test
+License-File: LICENSE.txt
+
+pyobservable
+==========
+
+[![GitHub](https://img.shields.io/github/license/Crimson-Crow/pyobservable)]((https://github.com/Crimson-Crow/pyobservable/blob/main/LICENSE.txt))
+
+Description
+-----------
+
+WIP
+
+Installation
+------------
+
+WIP
+
+Usage
+-----
+
+WIP
+
+Tests
+-----
+
+The simplest way to run tests:
+
+    $ python tests.py
+
+As a more robust alternative, you can install [`tox`](https://tox.readthedocs.io/en/latest/install.html) (or [`tox-conda`](https://github.com/tox-dev/tox-conda) if you use [`conda`](https://docs.conda.io/en/latest/)) to automatically support testing across the supported python versions, then run:
+
+    $ tox
+
+Issue tracker
+-------------
+
+Please report any bugs and enhancement ideas using the [issue tracker](https://github.com/Crimson-Crow/pyobservable/issues).
+
+License
+-------
+
+`pyobservable` is licensed under the terms of the [MIT License](https://opensource.org/licenses/MIT) (see [LICENSE.txt](https://github.com/Crimson-Crow/pyobservable/blob/main/LICENSE.txt) for more information).
+

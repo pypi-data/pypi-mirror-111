@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyobservable.py
+pyproject.toml
+setup.cfg
+setup.py
+pyobservable.egg-info/PKG-INFO
+pyobservable.egg-info/SOURCES.txt
+pyobservable.egg-info/dependency_links.txt
+pyobservable.egg-info/requires.txt
+pyobservable.egg-info/top_level.txt
