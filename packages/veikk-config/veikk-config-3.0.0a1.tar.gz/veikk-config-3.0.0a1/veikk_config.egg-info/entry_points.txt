@@ -1,0 +1,3 @@
+[console_scripts]
+veikk = veikk.__init__:main
+

@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+veikk/__init__.py
+veikk/evdev_manager.py
+veikk/udev_manager.py
+veikk/veikk_config_manager.py
+veikk/veikk_daemon.py
+veikk/veikk_device.py
+veikk_config.egg-info/PKG-INFO
+veikk_config.egg-info/SOURCES.txt
+veikk_config.egg-info/dependency_links.txt
+veikk_config.egg-info/entry_points.txt
+veikk_config.egg-info/not-zip-safe
+veikk_config.egg-info/requires.txt
+veikk_config.egg-info/top_level.txt
+veikkctl/__init__.py
