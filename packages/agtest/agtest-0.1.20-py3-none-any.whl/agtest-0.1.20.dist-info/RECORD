@@ -1,0 +1,10 @@
+agtest/__init__.py,sha256=ryAfvAaW7VM8g1gnCrFCPrXmcbbm99Xw44aLkwGZzaI,23
+agtest/cli.py,sha256=osYCPhInjXVBI5btomLvVymdUI940glhGaNZomptTcc,68856
+agtest/data/latest_mm.csv,sha256=q7zfveUmUrhu8ofHyJ24dtRRF0hJNkBumF5W7XAVRcE,7924155
+agtest/errors_enum.py,sha256=oCNfclh4SCJGp0kv7NR4cOrcHHG23o40XqoW7OtKG2w,1919
+agtest/ftcompare.py,sha256=-mjoJTDcVNMJCRwhAXsvAskNq1q9eB9ErdPS0pn9a_I,12972
+agtest/test.csv,sha256=RW0_6lQtg9p14cFsr_BKSFRSD2iEWjEkAsSwuS8DQIs,2952
+agtest-0.1.20.dist-info/entry_points.txt,sha256=5PtvNlw5D8bxp7KsTPiv8atCaKlOkaAnQB-wvwk_hSg,42
+agtest-0.1.20.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+agtest-0.1.20.dist-info/METADATA,sha256=_rWtCwy6mqKcJwEULgGDumCk8xDDNRfeVoUFb-GqLhI,820
+agtest-0.1.20.dist-info/RECORD,,
