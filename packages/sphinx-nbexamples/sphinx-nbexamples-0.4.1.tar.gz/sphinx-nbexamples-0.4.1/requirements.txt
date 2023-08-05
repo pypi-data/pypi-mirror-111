@@ -1,0 +1,4 @@
+matplotlib
+bokeh
+seaborn
+bash_kernel

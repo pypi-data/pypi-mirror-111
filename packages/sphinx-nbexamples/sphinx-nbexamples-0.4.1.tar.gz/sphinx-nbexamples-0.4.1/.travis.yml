@@ -1,0 +1,60 @@
+language: python
+
+# necessary for python 3.7, see https://github.com/travis-ci/travis-ci/issues/9815
+dist: xenial
+
+jobs:
+  include:
+    - python: "3.8"
+      env: SPHINX_VERSION=2.4.*
+    - python: "3.8"
+      env: SPHINX_VERSION=3.0.*
+    - python: "3.8"
+      env: SPHINX_VERSION=""
+    - python: "3.7"
+      env: SPHINX_VERSION=1.7.*
+    - python: "3.7"
+      env: SPHINX_VERSION=1.8.*
+    - python: "3.7"
+      env: SPHINX_VERSION=2.0.*
+    - python: "3.7"
+      env: SPHINX_VERSION=2.1.*
+    - python: "3.7"
+      env: SPHINX_VERSION=2.2.*
+    - python: "3.7"
+      env: SPHINX_VERSION=2.3.*
+    - python: "3.7"
+      env: SPHINX_VERSION=2.4.*
+    - python: "3.7"
+      env: SPHINX_VERSION=3.0.*
+    - python: "3.7"
+      env: SPHINX_VERSION=""
+    - python: "2.7"
+      env: SPHINX_VERSION=1.5.*
+    - python: "2.7"
+      env: SPHINX_VERSION=1.6.*
+    - python: "2.7"
+      env: SPHINX_VERSION=1.7.*
+    - python: "2.7"
+      env: SPHINX_VERSION=1.8.*
+    - python: "2.7"
+      env: SPHINX_VERSION=""
+addons:
+  apt:
+    packages:
+      - pandoc
+install:
+  - PACKAGES="matplotlib pillow jupyter coveralls bash_kernel sphinx"
+  - if [[ $SPHINX_VERSION != "" ]]; then PACKAGES="$PACKAGES==$SPHINX_VERSION"; fi
+  - if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]]; then PACKAGES="$PACKAGES pathlib"; fi
+  - echo $PACKAGES
+  - pip install $PACKAGES
+  - python -m bash_kernel.install  # install bash kernel
+  - python -m pip install . --no-deps --ignore-installed -vvv
+  - pip freeze  # show installed packages
+
+script:
+  - coverage run --source=sphinx_nbexamples setup.py pytest
+
+after_success:
+  coveralls
