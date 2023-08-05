@@ -1,0 +1,8 @@
+area
+bs4
+psutil
+requests
+selenium
+tweepy
+pandas
+shapely
