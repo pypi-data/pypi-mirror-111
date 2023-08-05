@@ -1,0 +1,24 @@
+Change Log
+==========
+
+1.0.1 (06/25/2021)
+------------------
+- First Release
+
+1.0.2 (06/25/2021)
+------------------
+- Fixed soma_hist() issue
+
+1.0.3 (06/26/2021)
+------------------
+- Added documentation
+- Updated Readme
+
+1.0.4 (06/29/2021)
+------------------
+- Added FRED API
+
+1.0.4 (06/29/2021)
+------------------
+- Fixed FRED API errors
+- Updated documentation
