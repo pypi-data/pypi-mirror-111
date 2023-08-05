@@ -1,0 +1,11 @@
+_klimits.cpython-39-darwin.so,sha256=HsmhmUDV7j4Y0U4Uwaz1HcNqV8aeYkvxMN8gIDYR8wM,789360
+klimits/__init__.py,sha256=H7XuYID3Qgg0P1OhO5elE5T_pYoEqvxItVWNHx8iqMw,1572
+klimits/joint_limit_equations.py,sha256=rBSVlgu4567mx9qSptIvFrVkFrP6sNkGAnT6oSUEpW8,15982
+klimits/limit_calculation.py,sha256=TXRn3jbgmz9NLLQVRpEOmOf3VTE3Iq5qHgNgi8O3wOY,27211
+klimits/test_trajectory_generation.py,sha256=pDC2b5m3mkSdAfiJvA58NjbRYSW9YJcsK-jEhTCebdU,12240
+klimits/trajectory_plotter.py,sha256=yReYfkkVwRuG6Ap_MHc_7iWg90TkNqMZId3FXmjsvTg,11863
+klimits-1.0.7.dist-info/LICENSE,sha256=-UPFAkK50BYtSmNdKyULCBKXAV9kj-khSfMOPHPrSLQ,1072
+klimits-1.0.7.dist-info/METADATA,sha256=d1IG8sg8-WlCpMg1OowbisArs3dp4TdfS_Hj8rQUTt8,3989
+klimits-1.0.7.dist-info/WHEEL,sha256=bRe_g_g-vZInZP5wOdewl-4AeWx8E2_UC3Ffr2csPyk,109
+klimits-1.0.7.dist-info/top_level.txt,sha256=zcNnwYtfC2fb1V09GLe74lkKrFNVVsrnEIMt_6lwkM0,17
+klimits-1.0.7.dist-info/RECORD,,
