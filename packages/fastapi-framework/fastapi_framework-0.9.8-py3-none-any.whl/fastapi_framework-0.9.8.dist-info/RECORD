@@ -1,0 +1,11 @@
+fastapi_framework/__init__.py,sha256=4p9PbTzDVp2sgm3XsRyXSko8lv0VUBq1roWhEu4usd0,480
+fastapi_framework/database.py,sha256=2bqvY1eWLaX0CC1HSq6ZSYbcHi9riK9BfiFiromPr_8,4677
+fastapi_framework/jwt_auth.py,sha256=udNoc7dszM3TDjbW4j2dSeC8LwBjxVai3icPanXVePI,3124
+fastapi_framework/logger.py,sha256=ejGneiJPOmUkA72h5C9IKtpzH30E422KzAG7-uhomXI,558
+fastapi_framework/rate_limit.py,sha256=SB3vP1XAf_Olp3kOWnUWJt_-JCSX897ilZzyRhCeW68,4309
+fastapi_framework/redis.py,sha256=itECdIFieKJUYe4tV_qMTYTavcCBR5AqqQfO9A4cdt4,725
+fastapi_framework-0.9.8.dist-info/LICENSE,sha256=IPgl4DzkZ6_aldd0zn9qWHw6PolEayv-sEAAEoyLvOc,1055
+fastapi_framework-0.9.8.dist-info/METADATA,sha256=0ZJ9y2JDplWgUgr1xeXF57pgc8QE7AreMYCiU8vGZEY,983
+fastapi_framework-0.9.8.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+fastapi_framework-0.9.8.dist-info/top_level.txt,sha256=949LiMx44ULJKALmX_BQ4nxavohI5sM990VfMXRsEPU,18
+fastapi_framework-0.9.8.dist-info/RECORD,,
