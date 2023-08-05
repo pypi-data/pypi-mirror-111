@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/nastja/__init__.py
+src/nastja/nastja.py
+src/nastja.egg-info/PKG-INFO
+src/nastja.egg-info/SOURCES.txt
+src/nastja.egg-info/dependency_links.txt
+src/nastja.egg-info/top_level.txt
