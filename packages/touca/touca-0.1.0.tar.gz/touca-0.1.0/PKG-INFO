@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: touca
+Version: 0.1.0
+Summary: Touca SDK for Python
+Home-page: https://github.com/trytouca/touca-python
+Author: Touca, Inc.
+Author-email: support@touca.io
+License: Apache-2.0
+Download-URL: https://github.com/trytouca/touca-python/archive/0.1.0.tar.gz
+Project-URL: Source, https://github.com/trytouca/touca-python
+Project-URL: Changelog, https://github.com/trytouca/touca-python/blob/master/CHANGELOG.rst
+Project-URL: Documentation, https://trytouca.readthedocs.io/en/stable/index.html
+Keywords: touca,snapshot testing,regression testing
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Topic :: Software Development :: Testing :: Acceptance
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+Provides-Extra: dev
+License-File: LICENSE
+
+Touca SDK For Python
+####################
+
+`Get Started <https://app.touca.io>`__
+`Documentation <https://docs.touca.io/api/python-sdk>`__
+`License <https://github.com/trytouca/touca-python/blob/main/LICENSE>`__
+
+Touca helps engineering teams understand the true impact of their code changes
+on the behavior and performance of their software. Test your most complex
+software workflows with any number of real-world inputs to significantly
+reduce the risks of changing code in mission-critical systems.
+
+
