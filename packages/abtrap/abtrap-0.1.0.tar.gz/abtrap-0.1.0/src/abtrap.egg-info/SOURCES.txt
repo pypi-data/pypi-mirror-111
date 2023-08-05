@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+src/abtrap/__init__.py
+src/abtrap.egg-info/PKG-INFO
+src/abtrap.egg-info/SOURCES.txt
+src/abtrap.egg-info/dependency_links.txt
+src/abtrap.egg-info/requires.txt
+src/abtrap.egg-info/top_level.txt
