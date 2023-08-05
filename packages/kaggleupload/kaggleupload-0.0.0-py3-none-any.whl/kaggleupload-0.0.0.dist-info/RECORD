@@ -1,0 +1,9 @@
+kaggleupload/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kaggleupload/cli.py,sha256=iMPrQUBfBKg5uvd0vfsZtQncrQPKRT_LisPXnWZOUp4,1010
+kaggleupload/code.py,sha256=5XDADflUF0ytTqdOZFic1abZuvLhR1v3GHZkftAleis,664
+kaggleupload-0.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+kaggleupload-0.0.0.dist-info/METADATA,sha256=Ph89rvRGidtDRqzLafe9hlfrd9Ph0FLJcmK1B9jxF4E,1645
+kaggleupload-0.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+kaggleupload-0.0.0.dist-info/entry_points.txt,sha256=un1MfCAvoPcoLz2uzk52JUGpyFBqkz3aBsmFNRBlrRc,56
+kaggleupload-0.0.0.dist-info/top_level.txt,sha256=L0jomR7wXCuagYUxGH5-WAn052uRah3I5bwA8-ZM0-4,13
+kaggleupload-0.0.0.dist-info/RECORD,,
