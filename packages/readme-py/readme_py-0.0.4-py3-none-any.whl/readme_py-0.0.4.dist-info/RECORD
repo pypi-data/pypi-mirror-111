@@ -1,0 +1,14 @@
+readme_py/__init__.py,sha256=2qLOHfO9QjOJY6xRBL_Zn_VwV_uOFeENpPqd-8abAds,73
+readme_py/elements/__init__.py,sha256=5EBdgioaihO77VJDI9XPKThuERoVoM-kB1jvqEZMABQ,214
+readme_py/elements/elements.py,sha256=e3JBFuU43CEHARDj98hcs9UOxmgru12az5HhKvF6Xm0,3673
+readme_py/elements/styles.py,sha256=2P-OEwpdwvfLqAV28HEpz_3bHXD5jvvo_jF_ovXOJ8Y,159
+readme_py/elements/utils.py,sha256=BpLKzXJconsvDBI3_WHibk9ItsfQP_-tC4lpcLVcgpw,62
+readme_py/generator/__init__.py,sha256=fNbAKM4uL32giL2jkXF6GaNVU7ADe0mkRoNq2L2fFj4,47
+readme_py/generator/generator.py,sha256=t2vE-Yu-3AteTs_KzqwJ-eyMykTbUgE2trkWE-vtNLo,410
+readme_py/structure/__init__.py,sha256=hSu0CGh0vgFuB93NoYmm1i34gQwXRG0OJOYCV9SQMF4,70
+readme_py/structure/structure.py,sha256=44kxPTJUr0tCTDQJbaXn3NYMzuQgohOp2pVOw7ziJTk,1477
+readme_py-0.0.4.dist-info/LICENSE,sha256=unyfjFpCjN98QslrxQrh_-TKxh3tZxxckjq4dv1BzKI,1089
+readme_py-0.0.4.dist-info/METADATA,sha256=o2sZNfsyErLqTUc_4uOA5hUdCqHA6PtVkFQ8mtnbVbg,568
+readme_py-0.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+readme_py-0.0.4.dist-info/top_level.txt,sha256=JZb8YIuVJw9aT5-pLHLtp6xhUa1LlFbGUO3H_bcce1M,10
+readme_py-0.0.4.dist-info/RECORD,,
