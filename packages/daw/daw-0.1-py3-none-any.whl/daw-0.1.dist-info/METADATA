@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: daw
+Version: 0.1
+Summary: Discord API wrapper
+Home-page: https://github.com/Peti1/daw
+Author: Peti
+Author-email: support@radonbot.hu
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/Peti1/daw/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: asyncio
+
+An Asynchronous Discord API Wrapper for Python
+
+Installation:
+**Linux:** `pip3 install -U discord-api-wrapper`
+**Windows:** `pip install -U discord-api-wrapper`
+
+Requirements:
+- `Python 3.x`
+
