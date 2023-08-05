@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+Christmas_Gifts.egg-info/PKG-INFO
+Christmas_Gifts.egg-info/SOURCES.txt
+Christmas_Gifts.egg-info/dependency_links.txt
+Christmas_Gifts.egg-info/top_level.txt
+Sack/__init__.py
