@@ -1,0 +1,4 @@
+Click
+PyInquirer
+pyGithub
+Colorama
