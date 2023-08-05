@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+QConnectionQuery.egg-info/PKG-INFO
+QConnectionQuery.egg-info/SOURCES.txt
+QConnectionQuery.egg-info/dependency_links.txt
+QConnectionQuery.egg-info/requires.txt
+QConnectionQuery.egg-info/top_level.txt

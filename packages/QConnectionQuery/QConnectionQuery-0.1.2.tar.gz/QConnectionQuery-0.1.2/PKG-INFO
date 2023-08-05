@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: QConnectionQuery
+Version: 0.1.2
+Summary: 内部使用
+Home-page: https://gitee.com/lwtyhm/qconnection-query.git
+Author: lwt
+Author-email: 1447914988@qq.com
+Maintainer: lwt
+Maintainer-email: 1447914988@qq.com
+License: MIT License
+Platform: all
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+内部使用
+
