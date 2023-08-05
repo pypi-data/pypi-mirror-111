@@ -1,0 +1,30 @@
+%YAML 1.1
+---
+$schema: asdf://stsci.edu/datamodels/roman/schemas/rad_schema-1.0.0
+id: asdf://stsci.edu/datamodels/roman/schemas/reference_files/ref_common-1.0.0
+
+title: Common reference metadata properties
+
+allOf:
+- $ref: ../basic-1.0.0
+- type: object
+  properties:
+    reftype:
+      title: Reference file type
+      type: string
+      enum: [AREA, DARK, FLAT, GAIN, LINEARITY, MASK, PERSAT, PHOTOM, READNOISE, REFPIX,
+             SATURATION, SUPERBIAS, TRAPDENSITY, TRAPPARS]
+    pedigree:
+      title: The pedigree of the reference file
+      type: string
+    description:
+      title: Description of the reference file
+      type: string
+    author:
+      title: Author of the reference file
+      type: string
+    useafter:
+      title: Use after date of the reference file
+      tag: tag:stsci.edu:asdf/time/time-1.1.0
+  required: [author, description, pedigree, useafter, reftype]
+...
