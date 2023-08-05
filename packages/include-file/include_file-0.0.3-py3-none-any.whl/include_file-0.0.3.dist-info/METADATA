@@ -1,0 +1,270 @@
+Metadata-Version: 2.1
+Name: include-file
+Version: 0.0.3
+Summary: Replace {% include 'file.txt' %} with actual file contents
+Home-page: https://github.com/seanhwangg/incluce_file
+Author: Sean Hwang
+Author-email: rbtmd1010@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: beautifulsoup4 (>=4.9markdown>=3.3)
+Requires-Dist: panflute (>=2.1)
+
+# Include File
+
+Managing documentation is always challenging.
+
+1. Some information ([ex] setting up git command) might come up in multiple documentation
+    * see [Include](#include), [path](#path)
+1. Directly link to github url because contents are huge ([ex] jupyter, data files)
+    * see [Link](#link)
+1. Need entire file structure or support multi-language ([ex] python, java)
+    * see [Repo](#repo) ([Note] in [Gitbook](https://gitbook.com/) syntax)
+
+## Usage
+
+* pip install include_file
+
+* [Fix images](#home)
+  * python3 -m include_file -u seanhwangg -p ~/github/home -t README.md -y SUMMARY.md --home
+
+### Github CI
+
+```yml
+# .github/workflows/deploy.yml
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install include_file
+      - name: Include File
+        run: |
+          # 1. Regular Files
+          python -m include_file -u $GITHUB_ACTOR -g *.md
+          # 2. Gitbook Files
+          python -m include_file -u $GITHUB_ACTOR -y SUMMARY.md -d deploy -t README.md --stem
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: deploy
+          force: true
+```
+
+## Flags
+
+### glob
+
+Which glob files to embed
+Default: ["\*\*/\*.md", "\*\*/\*.st", "\*\*/\*.html"]
+
+### path
+
+Where to look for embed file
+Default: ./.include-file/
+
+### stem
+
+Use stem of markdown to overwrite path
+Default: False
+
+* Example: embeds for `REAMD.md` are stored in `README/embed.txt`
+
+### validate
+
+Whether to fail CI in case of embed error
+Default: True
+
+## Gitbook Flags
+
+> Note: These are completely optional for [Gitbook](https://gitbook.com/) users
+
+### deploy_branch
+
+Change deploy_branch of gitbook
+Default: "deploy"
+
+### url_path
+
+Change url of embeds
+
+> Input
+
+* -url / --url_path: <https://seanhwangg.gitbook.io/> [default]
+
+### toc
+
+Create table of contents with URL
+Default: "", None
+
+> Input
+
+* -t / --toc
+
+```md
+<!-- myrepo/SUMMARY.md -->
+* [A]()
+  * [B](A/B.md)
+  * [C](A/C.md)
+
+<!-- myrepo/A/B.md -->
+# 1
+
+## 2
+
+<!-- myrepo/A/C.md -->
+# 3
+
+## 4
+
+### 5
+```
+
+> Output
+
+```md
+# Table of Contents
+
+## A
+
+### B.md
+
+* [1](https://seanhwangg.gitbook.io/myrepo/A/B#1)
+  * [2](https://seanhwangg.gitbook.io/myrepo/A/B#2)
+
+### C.md
+
+* [3](https://seanhwangg.gitbook.io/myrepo/A/C#3)
+  * [4](https://seanhwangg.gitbook.io/myrepo/A/C#4)
+    * [5](https://seanhwangg.gitbook.io/myrepo/A/C#5)
+```
+
+### Home
+
+> Note: This is beta feature
+
+Fix images
+Default: None
+
+```txt
+# File structure should be like this
+.
+├── private
+│   └── repo1
+│       └── SUMMARY.md
+└── public
+    └── repo2
+        └── SUMMARY.md
+```
+
+## Custom Flags
+
+### include
+
+Overwrite default `include`
+Default: include
+
+> Input
+
+```md
+<!-- README.md  -->
+
+* List before embed
+{% include 'embed.txt' %}
+* List after embed
+
+<!-- embed.txt  -->
+* I am in embed
+```
+
+> Result
+
+```md
+<!-- README.md -->
+* List before embed
+* I am in embed
+* List after embed
+```
+
+### link
+
+Overwrite default `link`
+Default: link
+
+> Input
+
+```md
+<!-- README.md -->
+* List before embed
+{% link 'embed.txt' %}
+* List after embed
+
+<!-- embed.txt  -->
+* I am in embed
+```
+
+> Result
+
+```md
+<!-- REAMD.md -->
+* List before embed
+[embed.txt](https://github.com/[user]/[repository]/blob/[deploy_branch]/local.yml)
+* List after embed
+```
+
+### repo
+
+Overwrite default `repo`
+Default: repo
+
+> Input
+
+```md
+<!-- README.md  -->
+* List before embed
+{% repo 'embed' %}
+* List after embed
+
+<!-- embed/embed1.md  -->
+* I am in embed1
+
+<!-- embed/nested/embed2.md  -->
+* I am in embed2
+```
+
+> Result
+
+![Result on gitbook web](images/20210626_114700.png)
+
+```md
+<!-- README.md -->
+* List before embed
+
+{% tabs %}
+{% tab title='embed1.md' %}
+
+* I am in embed1
+
+{% endtab %}
+{% tab title='nested/embed2.md' %}
+
+* I am in embed2
+
+{% endtab %}
+{% endtabs %}
+
+* List after embed
+```
+
+
