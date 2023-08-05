@@ -1,0 +1,5 @@
+Mathics3>=3.0.0
+mathicsscript>=3.2.1
+Mathics-Django>=3.0.0
+pymathics-natlang
+pymathics-graph>=2.3.0
