@@ -1,0 +1,9 @@
+setup.py
+distributions_chitts/GaussianDistribution.py
+distributions_chitts/GeneralDistribution.py
+distributions_chitts/__init__.py
+distributions_chitts.egg-info/PKG-INFO
+distributions_chitts.egg-info/SOURCES.txt
+distributions_chitts.egg-info/dependency_links.txt
+distributions_chitts.egg-info/not-zip-safe
+distributions_chitts.egg-info/top_level.txt
