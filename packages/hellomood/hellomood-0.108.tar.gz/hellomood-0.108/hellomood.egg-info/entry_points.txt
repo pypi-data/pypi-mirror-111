@@ -1,0 +1,3 @@
+[console_scripts]
+hellomood = Moodipy.main:main
+
