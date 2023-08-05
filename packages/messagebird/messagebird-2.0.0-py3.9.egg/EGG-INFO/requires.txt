@@ -1,0 +1,9 @@
+requests>=2.4.1
+python-dateutil>=2.6.0
+
+[dev]
+pytest
+pytest-cov
+mock>=2.0
+codecov
+pycodestyle
