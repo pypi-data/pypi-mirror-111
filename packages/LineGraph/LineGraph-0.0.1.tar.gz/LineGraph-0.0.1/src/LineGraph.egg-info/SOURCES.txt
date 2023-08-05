@@ -1,0 +1,13 @@
+LICENCE
+README.md
+pyproject.toml
+setup.cfg
+src/LineGraph.egg-info/PKG-INFO
+src/LineGraph.egg-info/SOURCES.txt
+src/LineGraph.egg-info/dependency_links.txt
+src/LineGraph.egg-info/top_level.txt
+src/graph/__init__.py
+src/graph/bar diagram.py
+src/graph/circle.py
+src/graph/line draw.py
+src/graph/point plot.py

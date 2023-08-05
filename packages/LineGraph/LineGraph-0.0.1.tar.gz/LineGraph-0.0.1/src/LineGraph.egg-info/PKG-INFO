@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: LineGraph
+Version: 0.0.1
+Summary: Some of the graphing practice with python
+Home-page: https://github.com/Malay1998/GRAPH
+Author: MALAY JYOTI DEBNATH
+Author-email: malayjyotidebnath1@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/Malay1998/GRAPH/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+# This some of the graph plotting with python in version 3.9.5
+You can search any appropriate web pages or see any video for better understanding. The import libraries are matplotlib and turtle. You have to install it to run the program.
+

@@ -1,0 +1,2 @@
+# This some of the graph plotting with python in version 3.9.5
+You can search any appropriate web pages or see any video for better understanding. The import libraries are matplotlib and turtle. You have to install it to run the program.
