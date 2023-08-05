@@ -1,0 +1,8 @@
+README.md
+setup.py
+pyreckless/__init__.py
+pyreckless.egg-info/PKG-INFO
+pyreckless.egg-info/SOURCES.txt
+pyreckless.egg-info/dependency_links.txt
+pyreckless.egg-info/requires.txt
+pyreckless.egg-info/top_level.txt
