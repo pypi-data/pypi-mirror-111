@@ -1,0 +1,7 @@
+setup.py
+PyPiTest/PyPiTest.py
+PyPiTest/__init__.py
+botways_pypi_helloworld_test.egg-info/PKG-INFO
+botways_pypi_helloworld_test.egg-info/SOURCES.txt
+botways_pypi_helloworld_test.egg-info/dependency_links.txt
+botways_pypi_helloworld_test.egg-info/top_level.txt
