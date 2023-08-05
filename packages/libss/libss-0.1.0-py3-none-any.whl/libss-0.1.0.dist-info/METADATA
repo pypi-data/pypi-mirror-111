@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: libss
+Version: 0.1.0
+Summary: Independent-component-analysis-based Blind audio source separation library.
+Home-page: https://github.com/taishi-n/bliss
+License: MIT
+Author: Taishi Nakashima
+Author-email: taishi@ieee.org
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: matplotlib (>=3.4.2,<4.0.0)
+Requires-Dist: museval (>=0.4.0,<0.5.0)
+Requires-Dist: numpy (>=1.20.3,<2.0.0)
+Requires-Dist: pytest (>=6.2.4,<7.0.0)
+Project-URL: Repository, https://github.com/taishi-n/bliss
+Description-Content-Type: text/markdown
+
+# libss
+Independent-component-analysis-based blind audio source separation library.
+
+## Installation
+```
+pip install libss
+```
+
+## Available algorithms
+- [Auxiliary-function-based independent vector analysis (AuxIVA)](https://doi.org/10.1109/ASPAA.2011.6082320)
+
+### Coming soon...
+- [Online AuxIVA](https://doi.org/10.1109/HSCMA.2014.6843261)
+- [Independent low-rank matrix analysis (ILRMA)](https://doi.org/10.1109/TASLP.2016.2577880)
+- [Fast multichannel nonnegative matrix factorization (FastMNMF)](https://doi.org/10.23919/EUSIPCO.2019.8902557)
+
+## Example
+- [AuxIVA](examples/auxiva.py)
+
