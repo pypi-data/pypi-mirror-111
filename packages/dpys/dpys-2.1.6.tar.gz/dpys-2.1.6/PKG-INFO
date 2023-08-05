@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: dpys
+Version: 2.1.6
+Summary: Docs: https://sites.google.com/view/dpys
+Home-page: https://sites.google.com/view/dpys
+Author: George Luca
+Author-email: fixingg@gmail.com
+License: MIT
+Description: The goal of DPYS is to make basic functionalities that every good bot needs easy to implement for beginners.
+Keywords: discord
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
