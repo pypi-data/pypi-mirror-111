@@ -1,0 +1,1 @@
+The Angrammar Module Takes Some Characters And Return A List Of All Possible Combinations

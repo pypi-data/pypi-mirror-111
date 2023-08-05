@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: Anagrammar
+Version: 1.0
+Summary: Takes Some Characters And Return A List Of All Possible Combinations
+Home-page: UNKNOWN
+Author: Ilay Furst
+Author-email: furstilay11@gmail.com
+License: MIT
+Description: The Angrammar Module Takes Some Characters And Return A List Of All Possible Combinations
+        
+        Change Log
+        ==========
+        
+        1.0 (27/06/2021)
+        ----------------
+        - First Release
+Keywords: Anagram
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

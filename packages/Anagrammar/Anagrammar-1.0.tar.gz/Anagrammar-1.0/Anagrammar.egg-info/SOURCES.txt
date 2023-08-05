@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+Anagrammar/__init__.py
+Anagrammar.egg-info/PKG-INFO
+Anagrammar.egg-info/SOURCES.txt
+Anagrammar.egg-info/dependency_links.txt
+Anagrammar.egg-info/top_level.txt
