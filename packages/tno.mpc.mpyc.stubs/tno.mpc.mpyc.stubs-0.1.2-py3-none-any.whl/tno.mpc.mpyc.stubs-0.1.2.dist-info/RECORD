@@ -1,0 +1,11 @@
+mpyc-stubs/__init__.py,sha256=kBvPZ-bvmIZcCUXhY8ljRqnLH6i6Sscx8nyXYqHwjGY,62
+mpyc-stubs/__init__.pyi,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mpyc-stubs/asyncoro.pyi,sha256=6yrChZZTJ1-Y4bK113xsFUF6Ze8MYL0TUP823PFfNBc,953
+mpyc-stubs/py.typed,sha256=la67KBlbjXN-_-DfGNcdOcjYumVpKG_Tkw-8n5dnGB4,8
+mpyc-stubs/runtime.pyi,sha256=PoyxErbn64Vr9Xr-xsdRWDjoARbZsiNN2S5K3l1fr4E,4969
+mpyc-stubs/sectypes.pyi,sha256=aZqOobDkJ4Z1ODi1CEdFfak28-ykgrMDS-6iB3qBw2U,4085
+tno.mpc.mpyc.stubs-0.1.2.dist-info/LICENSE,sha256=z5Wve6x_v4PZT6ZnqeIaTbrsHk70BBV_lLaVRAtPU0Q,11396
+tno.mpc.mpyc.stubs-0.1.2.dist-info/METADATA,sha256=WPQPn3TtD7iezxwGtSyGqcYjQVGcf1Z0sLcS74H-O90,1642
+tno.mpc.mpyc.stubs-0.1.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+tno.mpc.mpyc.stubs-0.1.2.dist-info/top_level.txt,sha256=4DgHQUAht-p7utEpLLWY7u1ylHh_pjZvcMlAtDFnmUA,11
+tno.mpc.mpyc.stubs-0.1.2.dist-info/RECORD,,
