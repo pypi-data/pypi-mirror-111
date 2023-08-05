@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+./docts/__init__.py
+./docts/parser/XLSParser.py
+./docts/parser/XMLParser.py
+./docts/parser/__init__.py
+./docts/writer/XLSWriter.py
+./docts/writer/__init__.py
+docts.egg-info/PKG-INFO
+docts.egg-info/SOURCES.txt
+docts.egg-info/dependency_links.txt
+docts.egg-info/top_level.txt
