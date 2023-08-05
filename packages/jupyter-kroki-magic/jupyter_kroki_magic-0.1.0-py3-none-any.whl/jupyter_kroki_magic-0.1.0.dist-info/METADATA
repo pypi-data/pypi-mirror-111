@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: jupyter-kroki-magic
+Version: 0.1.0
+Summary: A Jupyter Notebook %%magic for drawing diagram using kroki.io
+Home-page: https://github.com/sunhwan/jupyter-kroki-magic
+Author: Sunhwan Jo
+Author-email: sunhwanj@gmail.com
+License: MIT
+Keywords: ipython,jupyter
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Description-Content-Type: text/markdown
+Requires-Dist: jupyter
+Requires-Dist: ipywidgets
+
+# Jupyter Kroki Magic
+
+A Jupyter Notebook %%magic for drawing diagrams using kroki.io
+
+Usage
+------
+
+Load extension inside a Jupyter notebook:
+
+```
+%load_ext krokimagic
+```
+
+Add code with Cell magic:
+
+```
+%%kroki [diagram-type]
+
+# diagram syntax
+```
+
+
+Examples
+--------
+
+```
+%%kroki plantuml
+
+skinparam monochrome true
+skinparam ranksep 20
+skinparam dpi 150
+skinparam arrowThickness 0.7
+skinparam packageTitleAlignment left
+skinparam usecaseBorderThickness 0.4
+skinparam defaultFontSize 12
+skinparam rectangleBorderThickness 1
+
+rectangle "Main" {
+  (main.view)
+  (singleton)
+}
+rectangle "Base" {
+  (base.component)
+  (component)
+  (model)
+}
+rectangle "<b>main.ts</b>" as main_ts
+
+(component) ..> (base.component)
+main_ts ==> (main.view)
+(main.view) --> (component)
+(main.view) ...> (singleton)
+(singleton) ---> (model)
+```
+
+Installation
+------------
+
+    $ pip install jupyter-kroki-magic
+
