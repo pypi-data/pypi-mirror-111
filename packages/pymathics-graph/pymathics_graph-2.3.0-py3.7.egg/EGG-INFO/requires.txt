@@ -1,0 +1,4 @@
+Mathics3>=3.0.0
+networkx
+pydot
+matplotlib
