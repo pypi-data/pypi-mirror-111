@@ -1,0 +1,107 @@
+Metadata-Version: 2.1
+Name: snowconvert-deploy-tool
+Version: 0.0.1a1
+Summary: Mobilize.Net Database Deploy tool for Snowflake
+Home-page: https://github.com/MobilizeNet/SnowConvert_Support_Library/tools/snowconvert-deploy
+Author: Andras Feher, Mauricio Rojas
+Author-email: mauricio.rojas@mobilize.net
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/MobilizeNet/SnowConvert_Support_Library/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+
+sc-deploy-db
+===============
+
+sc-deploy-db is a multi-platform command line tool for deploying scripts to Snowflake
+
+Installation
+------------
+
+.. code:: bash
+
+    $ pip install snowconvert-deploy
+
+
+Usage
+-----
+
+.. code:: bash
+
+    $ sc-deploy-db -h
+
+
+For general help content, pass in the ``-h`` parameter:
+
+.. code:: bash
+
+    SnowConvertStudio Deployment Script
+    ===================================
+    usage: sc-deploy-db [-h] User Password Workspace InPath LogPath [Split] [SplitPattern] [ObjectType]
+    positional arguments:
+    User          User
+    Password      Password
+    Workspace     Path for workspace root
+    InPath        Path for SQL scripts
+    LogPath       Path for process logs
+    Split         Allow splitting file contents when several statements are detected
+    SplitPattern  Regex Pattern to use to split scripts. Use capture groups to keep separator
+    ObjectType    Object Type to deploy table,view,procedure,function,macro
+
+optional arguments:
+  -h, --help    show this help message and exit
+
+This tool assumes :
+
+- that you have a collection of `.sql` files under a directory. It will then execute all those `.sql` files connecting to the specified database.
+- that each file contains **only** one statement. 
+
+.. note::  If your files contains several statements you can use the Split and SplitPattern arguments, so the tool will try to split the statements prior to execution.
+
+Examples
+--------
+
+If you have a folder structure like:
+
+::
+
+    + code
+       + procs
+         proc1.sql
+       + tables
+         table1.sql
+         + folder1
+             table2.sql
+
+You can deploy then by running:
+
+::
+
+    sc-deploy-db -A my_sf_account -WH my_wh -U user -P password -I code
+
+
+Reporting issues and feedback
+-----------------------------
+
+If you encounter any bugs with the tool please file an issue in the
+`Issues`_ section of our GitHub repo.
+
+
+License
+-------
+
+sc-deploy-db is licensed under the `MIT license`_.
+
+
+.. _Issues: https://github.com/MobilizeNet/SnowConvert_Support_Library/issues
+.. _MIT license: https://github.com/MobilizeNet/SnowConvert_Support_Library/tools/snowconvert-deploy/LICENSE.txt
+
