@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+__init__.py
+setup.py
+akscalc.egg-info/PKG-INFO
+akscalc.egg-info/SOURCES.txt
+akscalc.egg-info/dependency_links.txt
+akscalc.egg-info/top_level.txt
