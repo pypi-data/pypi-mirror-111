@@ -1,0 +1,5 @@
+click==8.0.1
+joblib==1.0.1
+pandas==1.2.5
+shap==0.39.0
+-e git+https://github.com/JustAnotherArchivist/snscrape.git@5e6bc4ec50fe7e705e04e03f00f75c5d6068ab9b
