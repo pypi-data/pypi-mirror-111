@@ -1,0 +1,12 @@
+gradian/__init__.py,sha256=VamPMOSXycS3JxhHnhsC4aKx3RZFX4u8HVnMMiDoj1k,78
+gradian/compare_tree_counts.py,sha256=ZAOl2v2xg7WB04bf5TcsbyPzAPeUC6_MMLSaKh-p6mY,3240
+gradian/count_trees.py,sha256=ra_mBy3Xk-vnVvFV-_XzG6ae4XcFE5XvYF-9B-8udM0,4002
+gradian/sent_tree.py,sha256=L-ZMmh4TeiJE7aykSkr-ZK36y-8P1kse9ahtiZj3H6k,3665
+gradian/super_glue_datasets_analyser.py,sha256=nuVcLwwBF-qpME2rlWQPmvzGskHelEC9DULR-Umrjmw,3720
+gradian/syntactic_dependency_counter.py,sha256=_ANNbbKAHbx6u4eYedHLFJwh9F2_WFNKahmLQeprFNs,1747
+gradian/utils.py,sha256=blAfV7B2eOcrF6ZssdhFW79eSHahKvXR5XlGJrJMK0s,370
+GraDiAn-0.0.0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+GraDiAn-0.0.0.1.dist-info/METADATA,sha256=bRS79Q_Cyzk8vPMPmsdjPJdxOVTCMFDLqpPuEi99PRk,3267
+GraDiAn-0.0.0.1.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+GraDiAn-0.0.0.1.dist-info/top_level.txt,sha256=pjX-BPNDZUTdUxR_beaXrC1seKcPEfMyumWnib2u3oo,8
+GraDiAn-0.0.0.1.dist-info/RECORD,,
