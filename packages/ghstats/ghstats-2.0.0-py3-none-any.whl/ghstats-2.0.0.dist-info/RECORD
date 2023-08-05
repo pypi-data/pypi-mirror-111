@@ -1,0 +1,9 @@
+ghstats/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ghstats/__main__.py,sha256=ylOkFnlgR9-yklZGVT-22LFByHaVZ93rTrREHH9I2cs,85
+ghstats/ghstats.py,sha256=SDAmNPHaeiS7ZW0QhMA0WQfZIsbdFwc8cuZ5MIPKbIU,12687
+ghstats-2.0.0.dist-info/LICENSE,sha256=uiP9QQU9fur7ibQbPyosSzIW8yGMYR62LlDkzlFOqx8,1087
+ghstats-2.0.0.dist-info/METADATA,sha256=Kf7lLqCiHU8x108zlsM44mZP4VZNfrC6vM7NMLzvhJM,5917
+ghstats-2.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ghstats-2.0.0.dist-info/entry_points.txt,sha256=5oMbbgSJU1-NaotaYBkC80MukbQE8b8clI008ZgK4Ow,54
+ghstats-2.0.0.dist-info/top_level.txt,sha256=joSHewdz2vUKq59qxUtFrvWpvOgHfCvtalDlpET0aPA,8
+ghstats-2.0.0.dist-info/RECORD,,
