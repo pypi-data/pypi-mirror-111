@@ -1,0 +1,6 @@
+
+            [console_scripts]
+            rt_keys = rocket_token.cli:generate_keys
+            rt_encrypt = rocket_token.cli:encrypt_dictionary_script
+            rt_token = rocket_token.cli:generate_token_script
+            

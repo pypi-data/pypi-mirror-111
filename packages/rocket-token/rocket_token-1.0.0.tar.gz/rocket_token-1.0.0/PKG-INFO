@@ -1,0 +1,157 @@
+Metadata-Version: 2.1
+Name: rocket_token
+Version: 1.0.0
+Summary: Generate tokens for use in the Adzooma platform.
+Home-page: UNKNOWN
+Author: Kieran Lavelle <kieran@clicktech.com>, Michael Brown <michael.b@clicktech.com>
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# rocket_token
+
+rocket_token is a simple Python package that allows a user to encrypt a dictionary
+or generate an encrypted API token using an RSA public-key algorithm.
+
+1. Encrypting/Decrypt a dictionary.
+1. Generating an encrypted token to be sent to the Adzooma API.
+
+
+# Installing rocket_token And Supported Versions
+rocket_token is available on PyPI:
+```console
+$ pip install rocket_token
+```
+
+rocket_token officially supports Python 3.8+.
+
+# Encrypting/Decrypting A Dictionary
+Encrypting a dictionary is accomplished using the `encrypt_dictionary` method of RocketToken.
+```python
+import os
+
+from rocket_token import RocketToken
+
+my_dictionary = {"one": 1, "two": [], "three": {"sub1": 1, "sub2": 2}}
+
+# Generate Private and Public key files in a directory called 'keys'
+RocketToken.generate_key_pair(path="keys")
+
+# Instantiate RocketToken object with private and public keys loaded
+rocket = RocketToken.load_from_path(private_path=os.path.join("keys", "id_rsa"),
+                                    public_path=os.path.join("keys", "id_rsa.pub"))
+
+# Generate an encrypted token
+token = rocket.encrypt_dictionary(my_dictionary)
+
+# Decode token
+token_dict = rocket.decode_token(token)
+
+print(token)
+"Bearer kgYEkR9t57Jx/xcWwkTP03Y...7Wy3jzkdmVUea7dVO/fC5="
+print(token_dict)
+{'one': 1, 'two': [], 'three': {'sub1': 1, 'sub2': 2}}
+```
+
+# Generating An API Token
+Encrypting a dictionary is accomplished using the `new_token` method of RocketToken.
+
+Required keyword arguments are:
+
+    1. path: (str) Path to the requested resource.
+    2. exp: (int) Expiry time of request in minutes.
+    3. method: (str) A valid HTTP request method.
+
+Followed by an arbitrary number of keyword arguments.
+
+```python
+import os
+
+from rocket_token import RocketToken
+
+# Generate Private and Public key files in a directory called 'keys'
+RocketToken.generate_key_pair(path="keys")
+
+# Instantiate RocketToken object with private and public keys loaded
+rocket = RocketToken.load_from_path(private_path=os.path.join("keys", "id_rsa"),
+                                    public_path=os.path.join("keys", "id_rsa.pub"))
+
+# Generate an encrypted token
+token = rocket.new_token(path="/reports/campaign",
+                         exp=10, 
+                         method="GET", 
+                         customer_id=3)
+
+# Decode token
+token_dict = rocket.decode_token(token)
+
+print(token)
+"Bearer kgYEkR9t57Jx/xcWwkTP03Y...7Wy3jzkdmVUea7dVO/fC5="
+print(token_dict)
+{'path': '/reports/campaign', 'expiry': 10, 'expiry_date': '2021-06-25T10:02:36.556318', 'method': 'GET', 'customer_id': 3}
+```
+
+# Command Line Interface
+The above functionality can also be accessed through a command line interface.
+
+## CLI: Generate Public And Private Key Files
+```console
+>>> rt_keys -h
+usage: rt_keys dir
+
+Generate Public and Private key files.
+
+optional arguments:
+  -h, --help  show this help message and exit
+  -d dir      Location to save private/public key files
+```
+
+A Simple Example
+```console
+>>> rt_keys -d keys
+Public and Private key pair saved to: keys
+```
+
+## CLI: Encrypt A Dictionary
+```console
+>>> rt_encrypt -h
+usage: rt_encrypt -f <path>/id_rsa.pub -o parameter=value
+
+Encrypt a dictionary.
+
+optional arguments:
+  -h, --help  show this help message and exit
+  -f --file   Filepath to the public key file.
+  -o ...      Arbitrary number of keyword arguments <keyword>=<value>
+```
+A Simple Example
+```console
+>>> rt_encrypt -f keys/id_rsa.pub -o key1=value1 key2=value2
+Token: Bearer Eb1L8xc5cUMXV52PCXX7woFRtSZXORHSp2ncd1M...7Usx0Q1m3RijNa7k=
+```
+
+## CLI: Generate A Token
+```console
+>>> rt_token -h
+usage: rt_token -f -p -e -m -o parameter=value
+
+Generate a new token.
+
+optional arguments:
+  -h, --help   show this help message and exit
+  -f --file    Filepath to the public key file.
+  -p --path    Path to the requested resource e.g. /google-
+               reporting/report/campaign
+  -e --exp     Expiry time in minutes.
+  -m --method  Method used in the request must be in [GET, POST].
+  -o ...       Arbitrary number of keyword arguments <keyword>=<value>
+```
+A Simple Example
+```console
+>>> rt_token -f keys/id_rsa.pub -p report/campaign -e 5 -m GET -o key1=value1 key2=value2
+Token: Bearer Eb1L8xc5cUMXV52PCXX7woFRtSZXORHSp2ncd1M...7Usx0Q1m3RijNa7k=
+```
+
+
+
