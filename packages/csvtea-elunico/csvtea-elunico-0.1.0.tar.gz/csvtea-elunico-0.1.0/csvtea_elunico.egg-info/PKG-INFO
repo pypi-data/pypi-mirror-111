@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: csvtea-elunico
+Version: 0.1.0
+Summary: A flexible, extensible, pluggable, slightly-out-of-spec CSV parser
+Home-page: https://github.com/elunico/CSVTea
+Author: Thomas Povinelli
+Author-email: author@example.com
+License: UNKNOWN
+Description: # CSV Tea
+        
+        This is a Python package created to parse CSV files that contain new lines in its cells. 
+        More broadly, the goal is to be able to parse CSV files with more pluggability, extensibility, and flexibility, than is normally allowed by the CSV format. 
+        
+        Contributions & Suggestions welcome.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
