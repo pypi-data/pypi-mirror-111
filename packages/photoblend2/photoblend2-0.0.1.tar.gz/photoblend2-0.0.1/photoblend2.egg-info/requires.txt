@@ -1,0 +1,4 @@
+Pillow
+PySide2
+numpy
+wsl
