@@ -1,0 +1,34 @@
+.gitignore
+LICENSE.txt
+README.md
+requirements.txt
+setup.py
+ppe_match/README.md
+ppe_match/__init__.py
+ppe_match/simulation.py
+ppe_match/strategies.py
+ppe_match.egg-info/PKG-INFO
+ppe_match.egg-info/SOURCES.txt
+ppe_match.egg-info/dependency_links.txt
+ppe_match.egg-info/requires.txt
+ppe_match.egg-info/top_level.txt
+ppe_match/data/README.md
+ppe_match/data/anon_distance_matrix.csv
+ppe_match/data/anon_donors.csv
+ppe_match/data/anon_recipients.csv
+results/README.md
+results/test1_metrics.csv
+scripts/README.md
+scripts/__init__.py
+scripts/test1.py
+scripts/test2.py
+scripts/tests solved manually - old.xlsx
+scripts/tests solved manually.xlsx
+scripts/test_data/test1/Table1.csv
+scripts/test_data/test1/Table2.csv
+scripts/test_data/test1/Table3.csv
+scripts/test_data/test1/Table4.csv
+scripts/test_data/test2/test_decisions.csv
+scripts/test_data/test2/test_distance.csv
+scripts/test_data/test2/test_donors.csv
+scripts/test_data/test2/test_recipients.csv
