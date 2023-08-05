@@ -1,0 +1,9 @@
+README.md
+setup.py
+modelhub/conversion/__init__.py
+modelhub/conversion/pth2onnx.py
+modelhub/conversionwangyp.egg-info/PKG-INFO
+modelhub/conversionwangyp.egg-info/SOURCES.txt
+modelhub/conversionwangyp.egg-info/dependency_links.txt
+modelhub/conversionwangyp.egg-info/requires.txt
+modelhub/conversionwangyp.egg-info/top_level.txt
