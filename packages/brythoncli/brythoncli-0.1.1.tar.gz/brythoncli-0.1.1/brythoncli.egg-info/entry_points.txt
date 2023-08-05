@@ -1,0 +1,3 @@
+[console_scripts]
+brython = brythoncli:Brython.quickstart
+
