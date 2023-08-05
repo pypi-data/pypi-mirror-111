@@ -1,0 +1,3 @@
+[console_scripts]
+ecashconvert = ecashaddress.__main__:main
+
