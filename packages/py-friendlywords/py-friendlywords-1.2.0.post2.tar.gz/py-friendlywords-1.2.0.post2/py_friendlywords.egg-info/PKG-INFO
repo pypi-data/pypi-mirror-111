@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: py-friendlywords
+Version: 1.2.0.post2
+Summary: Curated lists of friendly words, as used in project names and elsewhere on glitch.com
+Home-page: https://github.com/betatim/python-friendlywords
+Author: Tim Head
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+
+# Friendly Words
+
+This package returns curated lists of friendly words, as used in project names and elsewhere on glitch.com
+
+> This is a Python port of Glitch's original JavaScript package [friendlyWords](https://github.com/glitchdotcom/friendly-words/#friendly-words)
+
+## Usage
+
+```python
+import friendlywords
+
+friendlywords.collections
+# ['accrual', 'aggregation', 'album', 'analects', ...]
+friendlywords.objects
+# ['gargoyleosaurus', 'hydrangea', 'columnist', ...]
+friendlywords.predicates
+# ["warp", "windy", "paper", "shrouded", ...]
+friendlywords.teams
+# ['aerie', 'alliance', 'assembly', 'bale', ...]
+```
+
+
