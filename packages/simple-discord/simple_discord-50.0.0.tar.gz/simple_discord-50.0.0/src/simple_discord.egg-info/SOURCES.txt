@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/simple_discord/__init__.py
+src/simple_discord/simple_discord.py
+src/simple_discord.egg-info/PKG-INFO
+src/simple_discord.egg-info/SOURCES.txt
+src/simple_discord.egg-info/dependency_links.txt
+src/simple_discord.egg-info/top_level.txt
