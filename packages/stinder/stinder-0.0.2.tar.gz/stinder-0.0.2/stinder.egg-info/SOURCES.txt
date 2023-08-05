@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+stinder.egg-info/PKG-INFO
+stinder.egg-info/SOURCES.txt
+stinder.egg-info/dependency_links.txt
+stinder.egg-info/top_level.txt
