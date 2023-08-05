@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: gmxapi
+Version: 0.2.1
+Summary: gmxapi Python interface for GROMACS
+Home-page: http://gmxapi.org/
+Author: M. Eric Irrgang
+Author-email: info@gmxapi.org
+License: LGPL
+Platform: UNKNOWN
+Requires-Python: >=3.6
+
+UNKNOWN
+
