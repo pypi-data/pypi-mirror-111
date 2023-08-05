@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: justinm.cdk-accounts
+Version: 0.1.1
+Summary: @justinm/cdk-accounts
+Home-page: https://github.com/justinm/cdk-constructs.git
+Author: Justin McCormick<me@justinmccormick.com>
+License: MIT
+Project-URL: Source, https://github.com/justinm/cdk-constructs.git
+Description: # justinm/cdk-accounts
+        
+        ... a collection of CDK constructs for managing AWS infrastructure.
+        
+        ![Build Status](https://github.com/justinm/cdk-constructs/actions/workflows/build.yml/badge.svg)
+        ![License](https://img.shields.io/github/license/justinm/cdk-constructs)
+        ![Node](https://img.shields.io/node/v/@justinm/cdk-accounts/latest)
+        ![Python](https://img.shields.io/pypi/pyversions/justinm.cdk-accounts)
+        
+        ## Installing
+        
+        NodeJS
+        
+        ```shell
+        yarn add @justinm/cdk-accounts
+        
+        npm install @justinm/cdk-accounts
+        ```
+        
+        Python
+        
+        ```shell
+        pip3 install justinm.cdk-accounts
+        ```
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: JavaScript
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Typing :: Typed
+Classifier: License :: OSI Approved
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
