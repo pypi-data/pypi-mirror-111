@@ -1,0 +1,47 @@
+```
+  oooooooo8             o888  o888  o88
+o888     88   ooooooo    888   888  oooo   ooooooo  ooooooooo    ooooooooo8
+888           ooooo888   888   888   888 888     888 888    888 888oooooo8
+888o     oo 888    888   888   888   888 888     888 888    888 888
+ 888oooo88   88ooo88 8o o888o o888o o888o  88ooo88   888ooo88     88oooo888
+                                                    o888
+```
+
+Calliope is a toolkit for working with playlists of music.
+
+The goal is to enable research and experimentation in open source music
+recommendation, by providing a set of standard interfaces and operations
+to online and local music services.
+
+In order words, a way to mash up data from Spotify, Musicbrainz, Last.fm
+and your local music collection!
+
+For more information, see the manual:
+<https://calliope-music.readthedocs.io/en/latest/>
+
+# Installing Calliope
+
+The project is installed from the source tree using
+[Meson](https://mesonbuild.com/).
+
+The recommended way is to install into your home directory, like this:
+
+    $ git clone --recursive https://gitlab.com/samthursfield/calliope/
+    $ mkdir calliope/build
+    $ cd calliope/build
+    $ meson .. --prefix=$HOME/.local -Ddocs=false -Dtestsuite=false
+    $ ninja install
+
+You will likely see some missing dependency errors the first time you run
+`meson`. Fix these either by installing the revelant packages, or by disabling
+the feature in question.  See
+[`meson_options.txt`](https://gitlab.com/samthursfield/calliope/-/blob/master/meson_options.txt)
+for a list of available options.
+
+Once this succeeds, the `cpe` binary will be in `$HOME/.local/bin` and should
+be available in your `PATH`.
+
+You can later enable documentation and/or the testsuite from inside the same
+`build` directory:
+
+    $ meson configure -Ddocs=true -Dtestsuite=true
