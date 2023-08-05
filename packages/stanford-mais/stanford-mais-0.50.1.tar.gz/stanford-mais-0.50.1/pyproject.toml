@@ -1,0 +1,25 @@
+# vim: ts=4 sw=4 et
+# -*- coding: utf-8 -*-
+
+# Build using setuptools & wheel.
+[build-system]
+requires = [
+    "setuptools >= 50.0.2",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.mypy]
+namespace_packages = true
+pretty = true
+no_color_output = true
+mypy_path = [
+    "src"
+]
+# There is no support for putting `-p` / `-package` in the MyPy config file.
+# Feature requested: https://github.com/python/mypy/issues/10728
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
