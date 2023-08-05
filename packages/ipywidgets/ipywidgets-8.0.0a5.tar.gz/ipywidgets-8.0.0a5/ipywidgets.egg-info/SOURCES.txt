@@ -1,0 +1,158 @@
+CONTRIBUTING.md
+LICENSE
+MANIFEST.in
+README.md
+package.json
+pyproject.toml
+setup.cfg
+setup.py
+docs/Makefile
+docs/make.bat
+docs/requirements.txt
+docs/source/changelog.md
+docs/source/conf.py
+docs/source/contributing.md
+docs/source/dev_docs.md
+docs/source/dev_install.md
+docs/source/dev_release.md
+docs/source/dev_testing.md
+docs/source/developer_docs.rst
+docs/source/embedding.md
+docs/source/examples.md
+docs/source/index.rst
+docs/source/migration_guides.md
+docs/source/user_install.md
+docs/source/examples/Beat Frequencies.ipynb
+docs/source/examples/Controller.ipynb
+docs/source/examples/Exploring Graphs.ipynb
+docs/source/examples/Export As (nbconvert).ipynb
+docs/source/examples/Factoring.ipynb
+docs/source/examples/Image Browser.ipynb
+docs/source/examples/Image Processing.ipynb
+docs/source/examples/Index.ipynb
+docs/source/examples/Layout Example.ipynb
+docs/source/examples/Layout Templates.ipynb
+docs/source/examples/Lorenz Differential Equations.ipynb
+docs/source/examples/Media widgets.ipynb
+docs/source/examples/Output Widget.ipynb
+docs/source/examples/Using Interact.ipynb
+docs/source/examples/Variable Inspector.ipynb
+docs/source/examples/Widget Alignment.ipynb
+docs/source/examples/Widget Asynchronous.ipynb
+docs/source/examples/Widget Basics.ipynb
+docs/source/examples/Widget Custom.ipynb
+docs/source/examples/Widget Events.ipynb
+docs/source/examples/Widget List.ipynb
+docs/source/examples/Widget Low Level.ipynb
+docs/source/examples/Widget Styling.ipynb
+docs/source/examples/Widget TagsInput.ipynb
+docs/source/examples/images/Big.Buck.Bunny.mp3
+docs/source/examples/images/Big.Buck.Bunny.mp4
+docs/source/examples/images/MultilanguageKernels.graffle
+docs/source/examples/images/MultilanguageKernels.png
+docs/source/examples/images/ParallelKernels.graffle
+docs/source/examples/images/ParallelKernels.png
+docs/source/examples/images/VizInteractCompute.graffle
+docs/source/examples/images/VizInteractCompute.png
+docs/source/examples/images/WidgetArch.graffle
+docs/source/examples/images/WidgetArch.png
+docs/source/examples/images/WidgetModelView.graffle
+docs/source/examples/images/WidgetModelView.png
+docs/source/examples/images/align-content.svg
+docs/source/examples/images/align-items.svg
+docs/source/examples/images/align-self.svg
+docs/source/examples/images/applayout-weather.png
+docs/source/examples/images/assoc.svg
+docs/source/examples/images/busy.svg
+docs/source/examples/images/custom-widget-hello.png
+docs/source/examples/images/custom-widget-result.png
+docs/source/examples/images/display.svg
+docs/source/examples/images/execute.svg
+docs/source/examples/images/flex-container.svg
+docs/source/examples/images/flex-direction1.svg
+docs/source/examples/images/flex-grow.svg
+docs/source/examples/images/flex-items.svg
+docs/source/examples/images/flex-wrap.svg
+docs/source/examples/images/flexbox.png
+docs/source/examples/images/gaussian_with_grid.png
+docs/source/examples/images/gaussian_with_grid_tiny.png
+docs/source/examples/images/grid-area.png
+docs/source/examples/images/grid-cell.png
+docs/source/examples/images/grid-justify-self-center.png
+docs/source/examples/images/grid-justify-self-end.png
+docs/source/examples/images/grid-justify-self-start.png
+docs/source/examples/images/grid-justify-self-stretch.png
+docs/source/examples/images/grid-line.png
+docs/source/examples/images/grid-start-end-a.png
+docs/source/examples/images/grid-start-end-b.png
+docs/source/examples/images/grid-start-end-d.png
+docs/source/examples/images/grid-track.png
+docs/source/examples/images/inputoutput.PNG
+docs/source/examples/images/justify-content.svg
+docs/source/examples/images/order-2.svg
+docs/source/examples/images/state.svg
+docs/source/examples/images/state_sync.svg
+docs/source/examples/images/transport.svg
+docs/source/examples/images/widgetcomm.svg
+docs/source/examples/images/widgetcomm2.svg
+docs/source/examples/images/widgets.PNG
+ipywidgets/__init__.py
+ipywidgets/_version.py
+ipywidgets/embed.py
+ipywidgets/state.schema.json
+ipywidgets/view.schema.json
+ipywidgets.egg-info/PKG-INFO
+ipywidgets.egg-info/SOURCES.txt
+ipywidgets.egg-info/dependency_links.txt
+ipywidgets.egg-info/not-zip-safe
+ipywidgets.egg-info/requires.txt
+ipywidgets.egg-info/top_level.txt
+ipywidgets/tests/__init__.py
+ipywidgets/tests/test_embed.py
+ipywidgets/widgets/__init__.py
+ipywidgets/widgets/docutils.py
+ipywidgets/widgets/domwidget.py
+ipywidgets/widgets/interaction.py
+ipywidgets/widgets/trait_types.py
+ipywidgets/widgets/valuewidget.py
+ipywidgets/widgets/widget.py
+ipywidgets/widgets/widget_bool.py
+ipywidgets/widgets/widget_box.py
+ipywidgets/widgets/widget_button.py
+ipywidgets/widgets/widget_color.py
+ipywidgets/widgets/widget_controller.py
+ipywidgets/widgets/widget_core.py
+ipywidgets/widgets/widget_date.py
+ipywidgets/widgets/widget_description.py
+ipywidgets/widgets/widget_float.py
+ipywidgets/widgets/widget_int.py
+ipywidgets/widgets/widget_layout.py
+ipywidgets/widgets/widget_link.py
+ipywidgets/widgets/widget_media.py
+ipywidgets/widgets/widget_output.py
+ipywidgets/widgets/widget_selection.py
+ipywidgets/widgets/widget_selectioncontainer.py
+ipywidgets/widgets/widget_string.py
+ipywidgets/widgets/widget_style.py
+ipywidgets/widgets/widget_tagsinput.py
+ipywidgets/widgets/widget_templates.py
+ipywidgets/widgets/widget_upload.py
+ipywidgets/widgets/tests/__init__.py
+ipywidgets/widgets/tests/test_docutils.py
+ipywidgets/widgets/tests/test_interaction.py
+ipywidgets/widgets/tests/test_link.py
+ipywidgets/widgets/tests/test_selectioncontainer.py
+ipywidgets/widgets/tests/test_send_state.py
+ipywidgets/widgets/tests/test_set_state.py
+ipywidgets/widgets/tests/test_traits.py
+ipywidgets/widgets/tests/test_widget.py
+ipywidgets/widgets/tests/test_widget_box.py
+ipywidgets/widgets/tests/test_widget_float.py
+ipywidgets/widgets/tests/test_widget_image.py
+ipywidgets/widgets/tests/test_widget_output.py
+ipywidgets/widgets/tests/test_widget_selection.py
+ipywidgets/widgets/tests/test_widget_string.py
+ipywidgets/widgets/tests/test_widget_templates.py
+ipywidgets/widgets/tests/test_widget_upload.py
+ipywidgets/widgets/tests/utils.py
+ipywidgets/widgets/tests/data/jupyter-logo-transparent.png

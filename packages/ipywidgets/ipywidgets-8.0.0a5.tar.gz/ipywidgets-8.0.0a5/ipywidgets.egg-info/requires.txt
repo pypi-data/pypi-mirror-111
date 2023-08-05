@@ -1,0 +1,10 @@
+ipykernel>=4.5.1
+ipython>=6.1.0
+traitlets>=4.3.1
+nbformat>=4.2.0
+widgetsnbextension~=4.0a0
+jupyterlab_widgets~=2.0a0
+
+[test]
+pytest>=3.6.0
+pytest-cov
