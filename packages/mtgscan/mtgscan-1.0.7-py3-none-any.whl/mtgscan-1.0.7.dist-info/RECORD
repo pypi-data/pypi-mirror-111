@@ -1,0 +1,9 @@
+mtgscan/box_text.py,sha256=bT6pFfjRYl_RlFpAXv1DU5AnotYWlhhfPbVGTb4g1yU,2858
+mtgscan/deck.py,sha256=IMKrg0grtVDjX5eq6fj3mW2SyiWDmv20WaSr3NWA3P4,3531
+mtgscan/ocr/azure.py,sha256=4cznryDRDzNjjAnf0tQrTijbC80UjTE0BGgy7H5t21w,1936
+mtgscan/ocr/ocr.py,sha256=RTpf1RFnHo5V4yxO_oO7BLkWDuVxOa-rSiC38pTmjtM,417
+mtgscan/text.py,sha256=c8wTLUjiHIXLFDX_xzvoYUTKnGH1Hc53hFqqto_PQ2A,8874
+mtgscan-1.0.7.dist-info/LICENSE,sha256=dYv3KLNcHjwM96gJRAyyXQ1flZL1rwecoQ93Ur-Mr1Y,1072
+mtgscan-1.0.7.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+mtgscan-1.0.7.dist-info/METADATA,sha256=qSwRtBI0p1oj9_u2zI_mKCv4_ALx_oxacwknIgE6iSk,4400
+mtgscan-1.0.7.dist-info/RECORD,,
