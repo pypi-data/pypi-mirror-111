@@ -1,0 +1,10 @@
+pytest_embedded_jtag/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_embedded_jtag/dut.py,sha256=13piNhZ0sFxFUWVEfYWkKWcxlMxwV2B1zXrW3Qp3jrs,1610
+pytest_embedded_jtag/gdb.py,sha256=ca2utOX2ltuJltCzrMxe_qMthEfOQjP3woaX3EUs7f8,1505
+pytest_embedded_jtag/openocd.py,sha256=iSDcw0RIhioVJ21D46hvOBSPS6WfTU1AtNte6U59oGU,937
+pytest_embedded_jtag/plugin.py,sha256=z8zh1dmdEP-37ppMTnuRNr7rUg_cnMyBxGb_6QNMhaU,2992
+pytest_embedded_jtag-0.2.0.dist-info/METADATA,sha256=KNjo1jMccNq9_k2bAiw9N9wzsPp3V703qozPBw-a1bU,1100
+pytest_embedded_jtag-0.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pytest_embedded_jtag-0.2.0.dist-info/entry_points.txt,sha256=e_d7USpRdH8DqN-4fnNWiGs01Aqs7x6F_4bmrY8YBXA,63
+pytest_embedded_jtag-0.2.0.dist-info/top_level.txt,sha256=bfCOL_UD0Uamsu9Sdt6f-plAfoJMpVRguKR4dhjOk2Y,21
+pytest_embedded_jtag-0.2.0.dist-info/RECORD,,
