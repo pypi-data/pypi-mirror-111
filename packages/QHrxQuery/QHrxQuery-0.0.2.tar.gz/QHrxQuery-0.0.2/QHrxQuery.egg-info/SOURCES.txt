@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+QHrxQuery.egg-info/PKG-INFO
+QHrxQuery.egg-info/SOURCES.txt
+QHrxQuery.egg-info/dependency_links.txt
+QHrxQuery.egg-info/top_level.txt
+QQuery/QConnectionQuery.py
+QQuery/__init__.py
