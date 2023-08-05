@@ -1,0 +1,9 @@
+dqdata/__init__.py,sha256=s2NZaZ_mzftQM6NuKTaArzNZOlAbcLhSsUmuloRgsj8,116
+dqdata/api_client.py,sha256=wx3kFTnS8G9KoiBKFwSz6OjGnZQtGwDaZiAe-w6hG2I,8004
+dqdata/db_client.py,sha256=L1ib0oblVaSuTGN5umu2o6pimZ3FeiPXbvEeRlNqDbU,4285
+dqdata/utils.py,sha256=_rreuNXy1lBGN8yhqTiuPFM8XtmuLB3KPX1KGgt7vAQ,6165
+dqdata-0.1.9.dist-info/LICENSE,sha256=BfUGll3KLFgnM2yTxj5Yb-3Kv8UUM5tpOydblq2vAzE,1064
+dqdata-0.1.9.dist-info/METADATA,sha256=V8MVAUVkjfhnPpc9p48krWexp3wqlnS7FgJZZp4Xotc,6870
+dqdata-0.1.9.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dqdata-0.1.9.dist-info/top_level.txt,sha256=_VfH0wZK4IrCYBI6BTbsFdchYbxlv-dXmviUsEqgrk0,7
+dqdata-0.1.9.dist-info/RECORD,,
