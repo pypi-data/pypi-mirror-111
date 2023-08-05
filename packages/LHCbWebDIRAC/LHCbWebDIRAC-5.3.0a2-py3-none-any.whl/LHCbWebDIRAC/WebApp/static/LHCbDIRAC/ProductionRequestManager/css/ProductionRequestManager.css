@@ -1,0 +1,6 @@
+.x-grid-cell-inner-row-expander1 {padding:6px 7px 5px 7px}
+.x-grid-cell-inner-row-expander1{padding-top:5px;padding-bottom:4px}
+.x-grid-row-expander1{width:16px;height:16px;cursor:pointer;background-image:url(../images/minus.png)}
+.x-grid-row-collapsed1 .x-grid-row-expander1{background-image:url(../images/plus.png)}
+.x-grid-row-body-hidden1{display:none}td.x-grid-rowwrap 
+.x-tree-icon { display: none !important; }

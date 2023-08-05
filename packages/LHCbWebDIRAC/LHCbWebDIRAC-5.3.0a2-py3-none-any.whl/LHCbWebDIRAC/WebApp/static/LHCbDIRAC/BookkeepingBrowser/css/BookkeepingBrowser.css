@@ -1,0 +1,17 @@
+.bk-icon-go {
+  background-image: url(../images/go.gif) !important;
+  background-color: transparent;
+}
+.bk-icon-next {
+  background-image: url(../images/next.png) !important;
+  background-color: transparent;
+}
+.bk-icon-back {
+  background-image: url(../images/back.png) !important;
+  background-color: transparent;
+}
+.bk-icon-close {
+  background-image: url(../images/close.png) !important;
+  background-color: transparent;
+}
+
