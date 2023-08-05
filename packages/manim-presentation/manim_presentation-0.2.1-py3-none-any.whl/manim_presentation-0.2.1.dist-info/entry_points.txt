@@ -1,0 +1,5 @@
+[console_scripts]
+manim-presentation = manim_presentation.present:main
+manim-presentation-wizard = manim_presentation.wizard:main
+manim_presentation = manim_presentation.present:main
+
