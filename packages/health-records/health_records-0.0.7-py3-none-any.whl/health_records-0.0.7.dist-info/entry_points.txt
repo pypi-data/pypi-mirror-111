@@ -1,0 +1,3 @@
+[console_scripts]
+phr = health_records.phr:cli
+
