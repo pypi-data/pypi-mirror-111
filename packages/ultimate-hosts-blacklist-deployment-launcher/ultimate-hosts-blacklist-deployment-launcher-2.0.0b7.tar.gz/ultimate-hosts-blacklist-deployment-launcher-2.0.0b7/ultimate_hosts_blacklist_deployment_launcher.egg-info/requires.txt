@@ -1,0 +1,4 @@
+PyGithub
+ultimate-hosts-blacklist-whitelist-dev
+colorama
+PyFunceble-dev>=4.0.0a1
