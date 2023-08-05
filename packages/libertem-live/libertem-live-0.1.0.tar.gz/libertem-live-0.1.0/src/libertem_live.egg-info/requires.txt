@@ -1,0 +1,11 @@
+libertem>=0.7.0
+numpy
+click
+tqdm
+numba
+
+[pymemfd]
+pymemfd
+
+[pytango]
+pytango

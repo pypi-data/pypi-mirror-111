@@ -1,0 +1,3 @@
+[console_scripts]
+libertem-live-mib-sim = libertem_live.detectors.merlin.sim:main
+
