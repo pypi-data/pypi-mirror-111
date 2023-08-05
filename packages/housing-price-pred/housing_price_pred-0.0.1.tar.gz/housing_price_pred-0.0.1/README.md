@@ -1,0 +1,66 @@
+Welcome to housing_price_pred's documentation!
+==============================================
+The housing data can be downloaded from https://raw.githubusercontent.com/ageron/handson-ml/master/. The script has codes to download the data. We have modelled the median house value on given housing data. 
+
+The following techniques have been used: 
+
+ - Linear regression
+ - Decision Tree
+ - Random Forest - Both Randomized Search and Grid Search has been done for Hyperparameter Tuning.
+
+The trained models are saved in a specified directory from where they can be used to check the performance on the test set. 
+
+Steps performed
+================
+ - We prepare and clean the data. We check and impute for missing values.
+ - Features are generated and the variables are checked for correlation.
+ - Multiple sampling techinuqies are evaluated. The data set is split into train and test.
+ - All the above said modelling techniques are tried and evaluated. The final metric used to evaluate is mean squared error.
+
+Install the package
+===================
+ - Install the package using python3 -m ``python3 -m pip install housing_price_pred``
+
+Usage
+=====
+ - From Command Prompt type ``python3`` to start Python
+ - To check availability inside python type ``help("modules")``. The package should show up in the list.
+ - Package majorly contains 3 modules, ingest_data, train and score. Please note the train_data function from train module does not return any object, it simply trains the model on pre-processed data and stores the trained models as pickles inside specified directory. Incase returns are needed, Please raise and issue and this can be fixed.
+ - Import the modules from the package ``from housing_price_pred import ingest_data,train,score``.
+ - Functions inside these modules can be used with appropriate arguments.
+ - For more information on the functions, run ``help(function_name)``.
+
+Here is an usage example:
+```
+
+from housing_price_pred import ingest_data,train,score
+housing, strat_train_set, strat_test_set = download_data(housing_url, housing_path)
+train_data(input_folder,processed_folder,pickle_path)
+lr_predictions, tr_predictions, rnd_forest_predictions, grd_forest_predictions = score_models(processed_folder\
+                                                                                              pickle_path,\
+                                                                                              output_path
+                                                                                              )
+```
+It is recommended to run train_data and score_models with default parameters if ingest_data is run with default parameters
+
+
+For Contributors and Development
+================================
+ - Fork the repo here https://github.com/sibashisc/mle-training/tree/fix/9%2Fml-workflow
+
+ - Create a dev environment using the .yml file
+ 	- ``conda env create -f env.yml``
+
+ - Activate environment
+	- ``conda activate mle-dev``
+
+To excute the script
+====================
+ - ``python <scriptname.py>``
+ - Each script ingest_data.py, train.py and score.py can take user arguments. For more information run ``python3 <scriptname.py> --help``
+
+
+
+License
+=======
+ - MIT License
