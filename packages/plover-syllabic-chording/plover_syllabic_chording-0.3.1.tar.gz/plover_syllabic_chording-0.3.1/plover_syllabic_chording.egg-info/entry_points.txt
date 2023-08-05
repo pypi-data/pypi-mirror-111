@@ -1,0 +1,12 @@
+[plover.dictionary]
+syc = plover_syllabic_chording.dictionary:SyllabicDict
+
+[plover.extension]
+Syllabic Chording = plover_syllabic_chording.extension:SyllabicExt
+
+[plover.meta]
+syc_caps = plover_syllabic_chording.meta:syllabic_caps
+
+[plover.system]
+Syllabic Chording = plover_syllabic_chording.system
+
