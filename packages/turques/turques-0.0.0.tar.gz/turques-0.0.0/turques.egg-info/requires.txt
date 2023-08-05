@@ -1,0 +1,8 @@
+datasets>=1.8.0
+nltk
+protobuf>=3.17.3
+pyyaml
+rouge-score==0.0.4
+sentencepiece
+torch
+transformers>=4.0.0
