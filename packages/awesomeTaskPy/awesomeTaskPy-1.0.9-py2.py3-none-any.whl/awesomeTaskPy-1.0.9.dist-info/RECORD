@@ -1,0 +1,11 @@
+awesomeTaskPy/__init__.py,sha256=nWhdN388-WeBI60gIbKpG1CY2iNO2cDZ6cgDxmxTzlY,140
+awesomeTaskPy/context/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+awesomeTaskPy/context/context.py,sha256=fZB1eDrOYI5mhwz2i3M5aQiyVr0KvzrRNHtfDydd0QE,1168
+awesomeTaskPy/log/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+awesomeTaskPy/log/loger.py,sha256=ANPxsHh3bX_naCfB9C9JSTdfW6vXA3exwwMLgU5rYgw,2041
+awesomeTaskPy/task/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+awesomeTaskPy/task/baseTask.py,sha256=YY4CZKjFrITB8BWWpzMrhzSIuKpPzXbaTVbyipn-GcM,2187
+awesomeTaskPy-1.0.9.dist-info/METADATA,sha256=h_QkLZqrm32C2Mu6ucB-BZbi-H1NHhGR3py3B_cYC60,939
+awesomeTaskPy-1.0.9.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+awesomeTaskPy-1.0.9.dist-info/top_level.txt,sha256=QkLws_YbUlOFI7QReUZOjJsJyLWi3sJE3BzceB-xXUI,14
+awesomeTaskPy-1.0.9.dist-info/RECORD,,
