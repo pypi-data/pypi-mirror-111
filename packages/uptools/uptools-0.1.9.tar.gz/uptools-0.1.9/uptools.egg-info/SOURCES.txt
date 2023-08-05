@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+uptools/__init__.py
+uptools.egg-info/PKG-INFO
+uptools.egg-info/SOURCES.txt
+uptools.egg-info/dependency_links.txt
+uptools.egg-info/not-zip-safe
+uptools.egg-info/requires.txt
+uptools.egg-info/top_level.txt
+uptools/include/VERSION
