@@ -1,0 +1,7 @@
+numpy>=1.20.1
+pandas>=1.2.3
+cobra>=0.21.0
+pyasp>=1.4.4
+meneco==1.5.3
+modelbase==1.2.3
+pipdeptree>=2.0.0
