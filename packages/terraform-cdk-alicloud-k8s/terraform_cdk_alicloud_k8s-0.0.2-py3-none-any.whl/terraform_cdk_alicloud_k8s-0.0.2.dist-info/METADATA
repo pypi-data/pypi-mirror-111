@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: terraform-cdk-alicloud-k8s
+Version: 0.0.2
+Summary: terraform-cdk-alicloud-k8s
+Home-page: https://github.com/jialechan/terraform-cdk-alicloud-k8s.git
+Author: jialechan<jiale.chen@transsnet.com>
+License: Apache-2.0
+Project-URL: Source, https://github.com/jialechan/terraform-cdk-alicloud-k8s.git
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: JavaScript
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Typing :: Typed
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: cdktf (<0.5.0,>=0.4.1)
+Requires-Dist: constructs (<4.0.0,>=3.3.92)
+Requires-Dist: jsii (<2.0.0,>=1.30.0)
+Requires-Dist: publication (>=0.0.3)
+
+# replace this
+
+
