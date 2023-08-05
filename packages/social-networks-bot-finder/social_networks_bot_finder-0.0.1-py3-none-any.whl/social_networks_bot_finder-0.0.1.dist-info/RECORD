@@ -1,0 +1,8 @@
+botfinder/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+botfinder/bot_classifier.py,sha256=CYCnBQi6S3a5TaFFmgbYOfztUmiPXs_eu05K7xLk9rY,3185
+botfinder/cli.py,sha256=mz7tWKlfAKXAjUT0urJ2RI77rBg__GTzljvjEboqN9Y,930
+social_networks_bot_finder-0.0.1.dist-info/METADATA,sha256=H5y9d8B_uHWvIh3T3fdIudjHzFNUsDn3xlfvI98kT3I,705
+social_networks_bot_finder-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+social_networks_bot_finder-0.0.1.dist-info/entry_points.txt,sha256=QKNpk2MSxgxvLNGvNwE6NYOwH-KgjTDJnEsUqthNxVQ,50
+social_networks_bot_finder-0.0.1.dist-info/top_level.txt,sha256=tpmYMbZQH6NfEW9MHBYvfeJUjxnfrnQ_7aprAdMRObI,10
+social_networks_bot_finder-0.0.1.dist-info/RECORD,,
