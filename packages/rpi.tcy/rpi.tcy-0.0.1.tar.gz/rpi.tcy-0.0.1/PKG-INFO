@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: rpi.tcy
+Version: 0.0.1
+Summary: A class to control Raspberry Pi GPIO channels
+Home-page: https://gitee.com/tcy641/spring-rpi.git
+Author: spring641
+Author-email: 641999828@qq.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://gitee.com/tcy641/spring-rpi.git/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Spring-RPi
+
+#### 介绍
+树莓派cpython对接
+
+#### 软件架构
+软件架构说明
+
+
+#### 安装教程
+
+1.  xxxx
+2.  xxxx
+3.  xxxx
+
+#### 使用说明
+
+1.  一些命令需要更新版本的pip，所以首先确保你安装了最新版本：
+		Linux:   python3 -m pip install --upgrade pip
+		Windows: py -m pip install --upgrade pip
+2.  安装最新版本的 PyPA构建
+	先安装pip包
+	Linux:   python3 -m ensurepip --default-pip
+	Windows: py -m ensurepip --default-pip（python -m pip）
+	再安装编译包工具 
+	Linux:	python3 -m pip install --upgrade build
+	Windows:py -m pip install --upgrade build
+
+3.  编译包
+	Linux: python3 -m build
+	Windows:py -m build
+	
+	此命令应输出大量文本，完成后应在dist目录中生成两个文件：
+	dist/
+  example_package_YOUR_USERNAME_HERE-0.0.1-py3-none-any.whl
+  example_package_YOUR_USERNAME_HERE-0.0.1.tar.gz
+	该tar.gz文件是一个源档案，而该 .whl文件是一个内置的分发。
+	较新的 pip版本优先安装构建的发行版，但如果需要，将回退到源存档。
+	您应该始终上传源存档并为您的项目兼容的平台提供构建的存档。
+	在这种情况下，我们的示例包在任何平台上都与 Python 兼容，
+	因此只需要一个构建的发行版。
+
+4. 上传包到PyPi
+	安装：twine
+	Linux：python3 -m pip install --upgrade twine
+	Windows：py -m pip install --upgrade twine
+	安装后，运行 Twine 以上传以下所有档案dist：
+	上传测试服务器：
+	Linux：python3 -m twine upload --repository testpypi dist/*
+	Windows：py -m twine upload --repository testpypi dist/*
+	
+	上传正式服务器：
+	Linux：python3 -m twine upload dist/*--repository
+	Windows：py -m twine upload dist/*--repository
+	
+5. 使用上传的python包
+		Linux：python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps example-pkg-YOUR-USERNAME-HERE
+		Windows：py -m pip install --index-url https://test.pypi.org/simple/ --no-deps example-pkg-YOUR-USERNAME-HERE
+	
+#### 参与贡献
+
+1.  Fork 本仓库
+2.  新建 Feat_xxx 分支
+3.  提交代码
+4.  新建 Pull Request
+
+

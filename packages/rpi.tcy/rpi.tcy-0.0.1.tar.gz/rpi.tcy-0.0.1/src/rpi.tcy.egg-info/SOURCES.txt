@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+RPi/__init__.py
+src/c_gpio.c
+src/c_gpio.h
+src/py_gpio.c
+src/rpi.tcy.egg-info/PKG-INFO
+src/rpi.tcy.egg-info/SOURCES.txt
+src/rpi.tcy.egg-info/dependency_links.txt
+src/rpi.tcy.egg-info/top_level.txt
+test/test.py
