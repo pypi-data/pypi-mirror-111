@@ -1,0 +1,2 @@
+emmet-core~=0.4.1
+maggma~=0.29.0
