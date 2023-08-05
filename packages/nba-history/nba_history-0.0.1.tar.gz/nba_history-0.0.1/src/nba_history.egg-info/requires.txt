@@ -1,0 +1,7 @@
+requests
+beautifulsoup4
+pandas
+time
+
+[:python_version == "2.6"]
+importlib
