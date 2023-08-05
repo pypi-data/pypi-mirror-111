@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: pgzero_yt
+Version: 1.2.7
+Summary: 添加move collide_mask Size
+Home-page: https://github.com/ZENGXIANGXUAN/pgzero_.git
+Author: pygame
+Author-email: 1758918244@qq.com
+License: License
+Description: # pgzero_yt
+        
+        ## add move Size collide_mask
+Platform: all
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries
