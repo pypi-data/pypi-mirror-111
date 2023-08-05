@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+bin/arxiv-downloader
+src/arxiv_downloader/__init__.py
+src/arxiv_downloader/utils.py
+src/arxiv_downloader.egg-info/PKG-INFO
+src/arxiv_downloader.egg-info/SOURCES.txt
+src/arxiv_downloader.egg-info/dependency_links.txt
+src/arxiv_downloader.egg-info/requires.txt
+src/arxiv_downloader.egg-info/top_level.txt
