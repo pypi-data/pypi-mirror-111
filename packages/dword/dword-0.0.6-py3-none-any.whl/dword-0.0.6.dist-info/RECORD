@@ -1,0 +1,13 @@
+dword/__init__.py,sha256=S7u1lbuWmM3A3ajykBialmPoJUK6Jg-WmNqM-9OZFdk,22
+dword/_nbdev.py,sha256=3qsltvtLqBFcLm2RW5moXSdLh4LvRkvkGT4tTdAxX1I,758
+dword/core.py,sha256=j1OLBMzekcfIPyyHof6sz_1Aqn6T1aqGzCMizj36Ahg,10899
+dword/utils.py,sha256=O_A5AYnPUzjXzJ90YX7IU9Wn9G6fgAnh9csI34OHNfw,11799
+dword/tutorials/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dword/tutorials/educational.py,sha256=a75JwKWqHMwEFLGXa0Kf0MWmPFd5qzBHAwqC0J2R_3I,118
+dword/tutorials/sales.py,sha256=Yuixz2DqeHeZn2YMupInSFOLD9rmJgErhaCKCp4egpU,112
+dword-0.0.6.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+dword-0.0.6.dist-info/METADATA,sha256=_Mv9VkMda8JvSKW0N39NGhCdoe1VJgb-rCBhYVWVu5M,3283
+dword-0.0.6.dist-info/WHEEL,sha256=S6zePDbUAjzMmpYOg2cHDxuYFWw7WiOXt6ogM6hIB5Q,92
+dword-0.0.6.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+dword-0.0.6.dist-info/top_level.txt,sha256=akL_0BDi3POAN1J_qYqZFOlNb5mLsvGeRFdsgqM7Pa0,6
+dword-0.0.6.dist-info/RECORD,,
