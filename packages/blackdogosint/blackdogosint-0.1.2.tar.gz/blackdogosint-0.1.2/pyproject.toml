@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "blackdogosint"
+version = "0.1.2"
+description = "api supporting OSINT open source queries"
+authors = ["darkcode357 <darkcode357@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+Django = "^3.2.4"
+standalone = "^1.0.1"
+requests = "^2.25.1"
+google = "^3.0.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

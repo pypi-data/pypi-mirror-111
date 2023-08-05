@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: blackdogosint
+Version: 0.1.2
+Summary: api supporting OSINT open source queries
+Author: darkcode357
+Author-email: darkcode357@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Django (>=3.2.4,<4.0.0)
+Requires-Dist: google (>=3.0.0,<4.0.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Requires-Dist: standalone (>=1.0.1,<2.0.0)
