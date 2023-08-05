@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: ezform
+Version: 2019.1.31
+Summary: simple extensions to Django forms
+Home-page: UNKNOWN
+Author: Xingeng Chen
+License: Apache License 2.0
+Description: UNKNOWN
+Keywords: Django,Data Validation
+Platform: Any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=2.7
