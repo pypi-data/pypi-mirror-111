@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+setup.py
+friendlywords/__init__.py
+friendlywords/collections.txt
+friendlywords/objects.txt
+friendlywords/predicates.txt
+friendlywords/teams.txt
+py_friendlywords.egg-info/PKG-INFO
+py_friendlywords.egg-info/SOURCES.txt
+py_friendlywords.egg-info/dependency_links.txt
+py_friendlywords.egg-info/top_level.txt
