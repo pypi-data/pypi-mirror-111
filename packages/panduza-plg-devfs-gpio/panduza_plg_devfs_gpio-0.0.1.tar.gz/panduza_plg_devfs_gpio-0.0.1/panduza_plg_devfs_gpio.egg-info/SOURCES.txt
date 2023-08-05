@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+panduza_plg_devfs_gpio/__init__.py
+panduza_plg_devfs_gpio/sysgpio.py
+panduza_plg_devfs_gpio.egg-info/PKG-INFO
+panduza_plg_devfs_gpio.egg-info/SOURCES.txt
+panduza_plg_devfs_gpio.egg-info/dependency_links.txt
+panduza_plg_devfs_gpio.egg-info/top_level.txt
