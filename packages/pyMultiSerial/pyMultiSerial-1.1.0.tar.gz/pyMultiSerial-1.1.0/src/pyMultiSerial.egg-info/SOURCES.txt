@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/pyMultiSerial/__init__.py
+src/pyMultiSerial.egg-info/PKG-INFO
+src/pyMultiSerial.egg-info/SOURCES.txt
+src/pyMultiSerial.egg-info/dependency_links.txt
+src/pyMultiSerial.egg-info/requires.txt
+src/pyMultiSerial.egg-info/top_level.txt
