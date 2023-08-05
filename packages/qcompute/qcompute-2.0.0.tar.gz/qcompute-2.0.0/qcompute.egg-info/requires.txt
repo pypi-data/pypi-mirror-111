@@ -1,0 +1,9 @@
+bce-python-sdk
+bidict
+matplotlib
+numpy
+protobuf
+pyprimes
+requests
+scipy
+sympy
