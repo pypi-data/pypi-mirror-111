@@ -1,0 +1,3 @@
+[console_scripts]
+any_face = any_face:main
+
