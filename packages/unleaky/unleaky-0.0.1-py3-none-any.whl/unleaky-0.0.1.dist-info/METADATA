@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: unleaky
+Version: 0.0.1
+Summary: A Cli Password Manager
+Home-page: https://github.com/newtoallofthis123/unleaky
+Author: NoobScience
+Author-email: noobscience123@gmail.com
+License: MIT
+Project-URL: Author WebSite, https://newtoallofthis123.github.io/About
+Project-URL: Bug Tracker, https://github.com/newtoallofthis123/unleaky/issues
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyperclip3
+
+UNKNOWN
+
