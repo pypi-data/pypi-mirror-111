@@ -1,0 +1,3 @@
+[console_scripts]
+photoblend2 = library.main:main
+
