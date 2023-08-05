@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: haruhi
+Version: 1.0.3
+Summary: Suzumiya Haruhi
+Home-page: https://github.com/chunyu-zhang
+Author: Chunyu Zhang
+Author-email: 1821074357@qq.com
+License: MIT Licence
+Keywords: pip,haruhi
+Platform: any
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+Suzumiya Haruhi
+
+
