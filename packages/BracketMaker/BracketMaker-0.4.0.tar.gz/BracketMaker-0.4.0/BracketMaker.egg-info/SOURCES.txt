@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.py
+BracketMaker.egg-info/PKG-INFO
+BracketMaker.egg-info/SOURCES.txt
+BracketMaker.egg-info/dependency_links.txt
+BracketMaker.egg-info/entry_points.txt
+BracketMaker.egg-info/top_level.txt
+bin/main.py
+bracket/__init__.py
+bracket/bracket.py
