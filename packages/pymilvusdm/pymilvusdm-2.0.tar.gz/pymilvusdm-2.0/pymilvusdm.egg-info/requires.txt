@@ -1,0 +1,6 @@
+PyYAML
+uuid
+h5py
+pymysql
+tqdm
+pymilvus_orm==2.0.0rc1
