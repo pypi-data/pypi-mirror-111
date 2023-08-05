@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: apter
+Version: 0.9
+Summary: A sweet project configuration package
+Home-page: https://github.com/ulygit/apter
+Author: U. Melendez
+Author-email: apterpy@bfjournal.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/ulygit/apter/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: parse (>="1.19.0")
+Requires-Dist: PyYaml (>="5.4.1")
+
+Apter - a project configuration library
+=======================================
+This is a lightweight configuration library that accepts yaml-style configuration files and supports cross-referencing among entries.
+
+See test cases for usage.
+
+
