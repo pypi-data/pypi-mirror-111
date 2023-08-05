@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "async-search-client"
+version = "0.9.0"
+description = "async-search-client is now meilisearch-python-async"
+authors = ["Paul Sanders <psanders1@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/sanders41/meilisearch-python-async"
+homepage = "https://github.com/sanders41/meilisearch-python-async"
+documentation = "https://github.com/sanders41/meilisearch-python-async"
+keywords = ["meilisearch", "async"]
+classifiers=[
+  "License :: OSI Approved :: MIT License",
+  "Development Status :: 7 - Inactive",
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+meilisearch-python-async = "^0.10.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
