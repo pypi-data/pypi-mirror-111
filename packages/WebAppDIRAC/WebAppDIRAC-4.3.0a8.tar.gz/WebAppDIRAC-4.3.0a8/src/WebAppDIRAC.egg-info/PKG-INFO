@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: WebAppDIRAC
+Version: 4.3.0a8
+Summary: WebAppDIRAC is a portal for the DIRAC software.
+Home-page: https://github.com/DIRACGrid/WebAppDIRAC/
+License: GPL-3.0-only
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: System :: Distributed Computing
+Requires-Python: >=3.9
+Provides-Extra: server
+Provides-Extra: testing
+License-File: LICENSE
+
+DIRAC WebApp
+=============
+[![Code Health](https://landscape.io/github/DIRACGrid/WebAppDIRAC/integration/landscape.svg?style=flat)](https://landscape.io/github/DIRACGrid/WebAppDIRAC/integration)
+[![Code Climate](https://codeclimate.com/github/DIRACGrid/WebAppDIRAC/badges/gpa.svg)](https://codeclimate.com/github/DIRACGrid/WebAppDIRAC)
+
+Web app for DIRAC
+
