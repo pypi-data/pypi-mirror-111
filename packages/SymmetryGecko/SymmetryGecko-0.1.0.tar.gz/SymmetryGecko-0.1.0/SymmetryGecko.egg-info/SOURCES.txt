@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+SymmetryGecko/__init__.py
+SymmetryGecko/config.py
+SymmetryGecko.egg-info/PKG-INFO
+SymmetryGecko.egg-info/SOURCES.txt
+SymmetryGecko.egg-info/dependency_links.txt
+SymmetryGecko.egg-info/top_level.txt
+SymmetryGecko/src/__init__.py
+SymmetryGecko/src/api_calls.py
+SymmetryGecko/src/log.py
+SymmetryGecko/src/uri.py
+SymmetryGecko/src/utils.py
