@@ -1,0 +1,10 @@
+roolang/__init__.py,sha256=YO66Gc2wASbjhe8iAC2UejafpCdClVy1fLUxFf1uyuw,64
+roolang/roolexer.py,sha256=PjeabdYEJLGW_2FDtEhXbeEgwCIyqDI-Mu82I-KQUcM,305
+roolang/rooparser.py,sha256=MdKeBnE-1Eb4J6lsI1KVoeQJ1gOdCPB7vYX1oY0q010,689
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__main__.py,sha256=BoEYLWotTvUALVcvobRwVg7-WtVQBZHP7E7iVX1jGxo,294
+roolang-0.0.1a0.dist-info/LICENSE,sha256=bx5iLIKjgAdYQ7sISn7DsfHRKkoCUm1154sJJKhgqnU,35184
+roolang-0.0.1a0.dist-info/METADATA,sha256=1e027eWIivXP8ROAQksWKe4JD-9qhw5aTAzOUci53JQ,338
+roolang-0.0.1a0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+roolang-0.0.1a0.dist-info/top_level.txt,sha256=PzX6XpmZ9DGfSck59AgO6o-NPUL6TfWIZh75jW2_n1Q,14
+roolang-0.0.1a0.dist-info/RECORD,,
