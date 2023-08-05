@@ -1,0 +1,14 @@
+odd_airflow/__init__.py,sha256=Z8M12qrB1JAQyYTM8Iy6Q2PiFtHDZ3EaukdaSTS6W-U,39
+odd_airflow/dag.py,sha256=1OulUsmIWuqfZW2KRIRKlVXBOYmWPEbGl5n9VHuM_No,3368
+odd_airflow/settings.py,sha256=rHGtyCYPKv58FAyInGsWCVIoZ3dNcWtbLPdJiN8cwV4,368
+odd_airflow/utils.py,sha256=johLeCzZ-5KsCdSqCQGf5Ugo8-15nRANdnwf-TChXwg,4607
+odd_airflow/extractors/__init__.py,sha256=14fh5RfdAXZkOyiKwOEaFFwTqQWoSTyqyChjMHshJMU,132
+odd_airflow/extractors/biquery.py,sha256=Y31YCIIVqH5y9eE_Q-PKR7ukohWwLJ4cACg581Xvt2g,58
+odd_airflow/extractors/postgres.py,sha256=7M2aNA5-l-V2B_WMqFrAqFLNVacf0WufDVTaM_0rEyY,547
+odd_airflow/oddrn/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+odd_airflow/oddrn/airflow.py,sha256=AHD-zxM_ELA1s-jeLw00GcD-qcOQ_YEj18yLW2lbsL4,391
+odd_airflow/oddrn/postgres.py,sha256=_i-0P2UQACPx484Fsfc1oNeKk7pRdfyu80q1z_jSyeM,249
+odd_airflow-0.0.6.dist-info/METADATA,sha256=rGl1tyVxrN37UOMJufRW5vQuaQpsY2LiOdYpzc4T5I0,394
+odd_airflow-0.0.6.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+odd_airflow-0.0.6.dist-info/top_level.txt,sha256=j6tpo242RvTirZn4bwJUyq-t7Sz-IgjRHboVDPTkKRY,12
+odd_airflow-0.0.6.dist-info/RECORD,,
