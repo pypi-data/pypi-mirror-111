@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: panduza-plg-devfs-gpio
+Version: 0.0.1
+Summary: Panduza Plugin to manage Linux sysfs I/O
+Home-page: UNKNOWN
+Author: Panduza Team
+Author-email: panduza.team@gmail.com
+License: UNKNOWN
+Keywords: python,first package
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX
+
+Panduza Plugin to control /sys/class/gpio
+
+
