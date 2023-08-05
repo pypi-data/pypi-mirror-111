@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/angle_headings/__init__.py
+src/angle_headings/_version.py
+src/angle_headings/angles.py
+src/angle_headings.egg-info/PKG-INFO
+src/angle_headings.egg-info/SOURCES.txt
+src/angle_headings.egg-info/dependency_links.txt
+src/angle_headings.egg-info/top_level.txt
