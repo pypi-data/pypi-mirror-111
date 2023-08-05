@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: voicegain-speech
+Version: 1.36.0rc0
+Summary: Voicegain Speech-to-Text Python SDK
+Home-page: UNKNOWN
+Author: Huishen Zhan, Kuo Zhang, Jacek Jarmulak
+Author-email: huishen@voicegain.ai, kuo@voicegain.ai, jacek@voicegain.ai
+License: UNKNOWN
+Download-URL: https://github.com/voicegain/python-sdk/archive/refs/tags/1.36.0rc0.tar.gz
+Description: environment-tracking
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

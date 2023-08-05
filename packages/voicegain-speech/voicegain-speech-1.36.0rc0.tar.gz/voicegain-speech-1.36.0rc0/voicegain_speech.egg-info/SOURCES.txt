@@ -1,0 +1,6 @@
+README.md
+voicegain_speech.egg-info/PKG-INFO
+voicegain_speech.egg-info/SOURCES.txt
+voicegain_speech.egg-info/dependency_links.txt
+voicegain_speech.egg-info/requires.txt
+voicegain_speech.egg-info/top_level.txt
