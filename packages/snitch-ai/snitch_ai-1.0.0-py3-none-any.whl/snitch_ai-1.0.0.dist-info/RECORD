@@ -1,0 +1,15 @@
+snitch_ai/__init__.py,sha256=1U3LPEkrFzoZrIhsvzgXb29NnpX5ZEwMEbOuV-SuhWM,192
+snitch_ai/cert/snitch.accesstokens.crt,sha256=MOiNAHAbQvQPYADH3wwNd0Syrnankq2M0lonTDhDGj8,2175
+snitch_ai/cert/snitch.localapi.crt,sha256=t4aw6o1o5LoOMnudI0jHs3v9qq1DB-Y8mImIYCnSB28,1826
+snitch_ai/internal/analysis_status.py,sha256=KVpzxQzFeZd68EiWHYVNO-u2zCYX7SJkSX7YwibdDa0,440
+snitch_ai/internal/api_client.py,sha256=89sbkfkuLKY-XPSVijEK-zJCdtqarRBMHrMdtEi_ViY,3692
+snitch_ai/internal/drift_analysis.py,sha256=TBjSwWKiPHhlxy0witiNl8K_tN2RiaLckjMJst5NfkY,1974
+snitch_ai/internal/guid.py,sha256=m_POMNZZRSjcEzjh0AIaobr9bi7BLNyivHcE4RIzyuk,626
+snitch_ai/internal/jwt.py,sha256=JMABMUUufUO57OiAa4awJYny7-gJDkWR5U6tDi7_RJs,523
+snitch_ai/internal/project.py,sha256=ZejYPMKHz5SCMM4TJZIgnzw8UjgkonYmX9VF98n-iys,3291
+snitch_ai/internal/project_version.py,sha256=sUdCOURoNc_CRU2wzBWcLVpMCUwmL3-TVkamSOzzqjo,7361
+snitch_ai/internal/quality_analysis.py,sha256=L-FArgjk0RrgjvZvgDuIegvjpnYwmKnYfjXGI2yyUy4,1900
+snitch_ai-1.0.0.dist-info/METADATA,sha256=FAQPvXEH0_SVbfQaZWBx3k7N4vmsOFVxU_20P4ObekY,2431
+snitch_ai-1.0.0.dist-info/WHEEL,sha256=D1Wh14kWDxPnrM-5t_6UCB-UuQNrEODtRa3vF4OsvQY,97
+snitch_ai-1.0.0.dist-info/top_level.txt,sha256=R0vw-PX4NOwb3Q4j0vtLXUMeijNtEC5qM4h-yWr14nE,10
+snitch_ai-1.0.0.dist-info/RECORD,,
