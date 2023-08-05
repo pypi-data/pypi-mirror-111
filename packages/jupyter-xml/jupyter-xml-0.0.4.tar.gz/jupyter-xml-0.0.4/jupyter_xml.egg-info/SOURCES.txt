@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+jupyter-xml/__init__.py
+jupyter-xml/jupyter_xml.py
+jupyter-xml/log.py
+jupyter-xml/util.py
+jupyter-xml/xml_modules.py
+jupyter_xml.egg-info/PKG-INFO
+jupyter_xml.egg-info/SOURCES.txt
+jupyter_xml.egg-info/dependency_links.txt
+jupyter_xml.egg-info/requires.txt
+jupyter_xml.egg-info/top_level.txt
