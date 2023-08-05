@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: cicada-mpc
+Version: 0.1.0
+Summary: Support for fault tolerant secure multiparty computation.
+Home-page: UNKNOWN
+Maintainer: Timothy M. Shead
+Maintainer-email: tshead@sandia.gov
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Communications
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Utilities

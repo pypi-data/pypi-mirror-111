@@ -1,0 +1,4 @@
+netifaces
+numpy
+pynng
+shamir
