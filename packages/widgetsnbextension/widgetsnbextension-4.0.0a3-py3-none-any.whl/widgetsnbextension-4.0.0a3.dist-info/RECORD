@@ -1,0 +1,14 @@
+widgetsnbextension/__init__.py,sha256=Ix58iw6xT3misN2PudDxnGeIgFxBMPbUAhK3VPamQNY,765
+widgetsnbextension/_version.py,sha256=Y1I3E_mGmhEGzJBn8E9A0E5qh0q0KGtTNFBprysZwFU,126
+widgetsnbextension/static/extension.js,sha256=FGrtF1oUJbCVdVNarrXDuj2cs-GmnFHeL9lUTnH0jxE,738965
+widgetsnbextension/static/extension.js.LICENSE.txt,sha256=fPS6tF-Om13P7U7-NwvoXL-gou_3FfTftTM5LxyFQn0,1287
+widgetsnbextension/static/extension.js.map,sha256=JEOSCtbBmvRJ3ql5sWiRZUKf6d6EE0eWe1MBQH8o664,2826108
+widgetsnbextension-4.0.0a3.data/data/etc/jupyter/nbconfig/notebook.d/widgetsnbextension.json,sha256=qFXzCZ_LuMf4hb9c_yVEM7g0tJtnaZUJ_XM-zvaFyig,72
+widgetsnbextension-4.0.0a3.data/data/share/jupyter/nbextensions/jupyter-js-widgets/extension.js,sha256=FGrtF1oUJbCVdVNarrXDuj2cs-GmnFHeL9lUTnH0jxE,738965
+widgetsnbextension-4.0.0a3.data/data/share/jupyter/nbextensions/jupyter-js-widgets/extension.js.LICENSE.txt,sha256=fPS6tF-Om13P7U7-NwvoXL-gou_3FfTftTM5LxyFQn0,1287
+widgetsnbextension-4.0.0a3.data/data/share/jupyter/nbextensions/jupyter-js-widgets/extension.js.map,sha256=JEOSCtbBmvRJ3ql5sWiRZUKf6d6EE0eWe1MBQH8o664,2826108
+widgetsnbextension-4.0.0a3.dist-info/LICENSE,sha256=5awr4wsrzv4zDunlrX_lsNEVb-yzVV_KqpCKjSn5_e0,1513
+widgetsnbextension-4.0.0a3.dist-info/METADATA,sha256=G8bg8pHsv8w9x0DhEM-MzWImmbq7rd1w9jnctddcbic,1543
+widgetsnbextension-4.0.0a3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+widgetsnbextension-4.0.0a3.dist-info/top_level.txt,sha256=8mUbfjjdQrlSNE3WjLz-1BElRoeM8-4hzUZkHlbxVvs,19
+widgetsnbextension-4.0.0a3.dist-info/RECORD,,
