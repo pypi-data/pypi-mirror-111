@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/SchoolSchedulerTest.egg-info/PKG-INFO
+src/SchoolSchedulerTest.egg-info/SOURCES.txt
+src/SchoolSchedulerTest.egg-info/dependency_links.txt
+src/SchoolSchedulerTest.egg-info/requires.txt
+src/SchoolSchedulerTest.egg-info/top_level.txt
+src/example_package/__init__.py
+src/example_package/example.py
