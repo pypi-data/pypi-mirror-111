@@ -1,0 +1,2 @@
+cnn2snn>=1.9.4
+scipy
