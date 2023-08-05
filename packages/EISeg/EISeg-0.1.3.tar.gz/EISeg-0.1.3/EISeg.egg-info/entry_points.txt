@@ -1,0 +1,3 @@
+[console_scripts]
+EISeg = EISeg.__main__:main
+
