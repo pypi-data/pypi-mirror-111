@@ -1,0 +1,8 @@
+click
+pathlib
+colorama
+boto3
+json
+time
+progress
+importlib
