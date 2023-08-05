@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: rpt-minigames-hub
+Version: 0.0.0
+Summary: Serves WSS connection to provides in real-time status for game server running locally
+Home-page: https://github.com/ThisALV/RpT-Minigames-Hub
+Author: ThisALV
+Author-email: lel.charriere@orange.fr
+License: UNKNOWN
+Project-URL: Game server, https://github.com/ThisALV/RpT-Minigames-Server
+Project-URL: Webapp client, https://github.com/ThisALV/rpt-minigames-client
+Project-URL: Bugs Report, https://github.com/ThisALV/RpT-Minigames-Hub/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Classifier: Framework :: AsyncIO
+Classifier: Topic :: Internet :: WWW/HTTP :: Indexing/Search
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# RpT-Minigames-Hub
+Hub service for RpT-Minigames project, providing current status for each registered game server
+
+

@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/rpt_minigames_hub.egg-info/PKG-INFO
+src/rpt_minigames_hub.egg-info/SOURCES.txt
+src/rpt_minigames_hub.egg-info/dependency_links.txt
+src/rpt_minigames_hub.egg-info/top_level.txt
+src/rptminigameshub/__init__.py
