@@ -1,0 +1,15 @@
+pydifact/__init__.py,sha256=mQoJ26KK72GD6ifUAnBQbTut9s_2J5phrPlBujycroI,2406
+pydifact/api.py,sha256=kP6Ank4duZ3vA9jNmD6Xmkk3Sgznwv-fWs42Hfujov4,551
+pydifact/parser.py,sha256=9l7zfBmjISvSdXQu36GLh0ZJOP-rIqcblZToayGgz5o,7442
+pydifact/segmentcollection.py,sha256=cHJCHtZrgxoe7hKe-q_G5qpKC28Qp-bc4OiOzju6Elg,15621
+pydifact/segments.py,sha256=Lns7aNKbv4STuK2H0U0whgQ7-ffw_tMay6ASXPMebAk,5764
+pydifact/serializer.py,sha256=1YyZgGpnsu4T8ttfsIZUfzaPrW96d0KM58q105cTW6c,4123
+pydifact/token.py,sha256=XRS0DEm6gsx9PC-w8RWLuo7h5bk4W5UU07VloMHNBVY,2223
+pydifact/tokenizer.py,sha256=oXRxbwXY-98kdewFa60nZWBU_vfv0q-yGEI13r8JsMA,5446
+pydifact/control/__init__.py,sha256=s1jw8bpw7iAYl-HLR6O7gSoL0AC-L6M7M9juADhRxxY,35
+pydifact/control/characters.py,sha256=mxi-oqHWFiRRlX57RQppdhDV-3uiMjF6Kzl4V7h4Y-E,4772
+pydifact-0.1.0.dist-info/LICENSE,sha256=hSfo5zSI-ew3Ib-_kRBKfkXhCykMYjmoWT8ZmqJBmRo,1081
+pydifact-0.1.0.dist-info/METADATA,sha256=IYZBLnEgSmd3XioKidTIZF4jE8zjqHSRJTyf2v5PbkM,4858
+pydifact-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pydifact-0.1.0.dist-info/top_level.txt,sha256=dIUxr6tpG1S8fR-BQZJ-s_pplVA073shyASLU4vK28I,9
+pydifact-0.1.0.dist-info/RECORD,,
