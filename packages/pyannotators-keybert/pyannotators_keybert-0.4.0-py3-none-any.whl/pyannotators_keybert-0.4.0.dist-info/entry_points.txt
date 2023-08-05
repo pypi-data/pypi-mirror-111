@@ -1,0 +1,3 @@
+[pyannotators.plugins]
+keybert=pyannotators_keybert.keybert:KeyBERTAnnotator
+
