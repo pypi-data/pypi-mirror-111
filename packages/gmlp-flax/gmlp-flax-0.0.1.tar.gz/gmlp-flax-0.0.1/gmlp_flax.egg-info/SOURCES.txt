@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+gmlp_flax/__init__.py
+gmlp_flax/layers.py
+gmlp_flax/model.py
+gmlp_flax/utils.py
+gmlp_flax.egg-info/PKG-INFO
+gmlp_flax.egg-info/SOURCES.txt
+gmlp_flax.egg-info/dependency_links.txt
+gmlp_flax.egg-info/requires.txt
+gmlp_flax.egg-info/top_level.txt
+gmlp_flax.egg-info/zip-safe
