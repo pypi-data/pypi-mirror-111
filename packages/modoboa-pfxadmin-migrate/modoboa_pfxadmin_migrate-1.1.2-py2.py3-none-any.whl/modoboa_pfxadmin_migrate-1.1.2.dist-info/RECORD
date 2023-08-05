@@ -1,0 +1,10 @@
+modoboa_pfxadmin_migrate/__init__.py,sha256=rKVssxhAacmPy9sF0X6j5XYLErEUGocdkIrgrBcTDrs,317
+modoboa_pfxadmin_migrate/models.py,sha256=LBTPuR0ZCgutV1IZCH3jZQ1onI3JHTOsT6MNwrGenOw,6267
+modoboa_pfxadmin_migrate/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+modoboa_pfxadmin_migrate/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+modoboa_pfxadmin_migrate/management/commands/migrate_from_postfixadmin.py,sha256=b2hclJq9IuLb6OcRz4ZTxYoRUwuPhlgBX6ZhutVKmcc,11997
+modoboa_pfxadmin_migrate-1.1.2.dist-info/LICENSE,sha256=j5sNzRiYca4n-QgJo9QHwm0fHmEMSwHfxsPqsk94R0M,1075
+modoboa_pfxadmin_migrate-1.1.2.dist-info/METADATA,sha256=AncTShK2rllianmayCPftsf8QtnwDd6yIzMqKENPXqw,3025
+modoboa_pfxadmin_migrate-1.1.2.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+modoboa_pfxadmin_migrate-1.1.2.dist-info/top_level.txt,sha256=43F8Q8nC7Y7C96yCS3mEL8IfVeu2tSePHh-UCABLpbw,25
+modoboa_pfxadmin_migrate-1.1.2.dist-info/RECORD,,
