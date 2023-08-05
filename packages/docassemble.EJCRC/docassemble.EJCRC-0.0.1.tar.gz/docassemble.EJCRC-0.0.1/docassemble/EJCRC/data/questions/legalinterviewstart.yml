@@ -1,0 +1,98 @@
+---
+metadata:
+  error action: on_error
+---
+event: on_error
+question: |
+  Sorry, we have encountered an error.
+buttons:
+  - Exit: exit
+    url: https://docassemble.org
+---
+event: call_number
+question: |
+  Please call (215) 686-7027 for assistance.
+buttons:
+  - Exit: exit
+    url: https://docassemble.org
+---
+id: agreement
+field: welcome
+question: |
+  Application for Legal Services
+subquestion: |
+  Welcome to the Office of Judicial Records. This website is designed to help   Philadelphians who are representing themselves in court fill out necessary documents. 
+
+  After you fill out the documents using this website, you will need to file these documents electronically or in-person. Instructions on how to do so are here and will also be provided before you can download documents. 
+
+  I have read the information above and understand.
+  
+choices:
+  - I understand
+  - I do not understand
+---
+mandatory: True
+code: |
+  if welcome == 'I do not understand':
+    call_number
+
+---
+id: account
+field: account
+question: |
+   Create an account (optional)
+subquestion: |
+  Please create an account if you want to save your answers. An account requires an you to have an email address. You can create an account by clicking the "Sign In" button on the upper left hand of this page.
+  
+  Please sign in if you already have created an account. You can use this website without signing up, but you will not be able to save your answers.
+---
+id: lawyer
+field: lawyer
+question: |
+  Are you currently represented by an attorney?
+yesno: lawyer
+---
+mandatory: True
+code: |
+  if lawyer == True:
+    call_number
+---
+question: |
+   Are you planning on representing yourself in court?
+field: represent
+buttons:
+  - "Yes, I am planning on representing myself": True
+  - "No, I am looking for an attorney to represent me": False  
+---  
+mandatory: True
+code: |
+  if represent == False:
+    call_number
+---
+field: doconly
+question: |
+  Do you understand that this website only guides you through the process of filling out the necessary legal documents, and you will still need to file these documents with the court?  
+subquestion: |
+  [Click here](https://www.courts.phila.gov/pdf/manuals/civil-trial/FJD_Civil_E-Filing_User_Manual.pdf) for instructions on how to file your legal documents. We will also provide this instruction after you have filled out your document(s).
+buttons: 
+  - "I understand": True
+  - "I do not understand": False 
+---  
+mandatory: True
+code: |
+  if doconly == False:
+    call_number
+---
+mandatory: true
+question: |
+  Why are you using this website?
+subquestion: |
+  - [Someone is trying to kick me out of where I live]
+  - [I have received notice that my property is being put up for sheriff sale]
+  - [I am trying to remove someone from a place I own]
+  - [I have already used this website and I am looking for a specific form]
+  
+  [Someone is trying to kick me out of where I live]: ${ interview_url(i='docassemble.playground1LegalInterview:LLT_or_ejectment_plaintiff.yml') }
+  [I have received notice that my property is being put up for sheriff sale]: ${ interview_url(i='docassemble.playground1%3Ahello.yml') }
+  [I am trying to remove someone from a place I own]: ${ interview_url(i='docassemble.playground1%3Ahello.yml') }
+  [I have already used this website and I am looking for a specific form]: ${ interview_url(i='docassemble.playground1%3Ahello.yml') }

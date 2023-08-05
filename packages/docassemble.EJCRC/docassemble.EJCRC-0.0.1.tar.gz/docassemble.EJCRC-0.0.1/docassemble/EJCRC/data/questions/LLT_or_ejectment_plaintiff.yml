@@ -1,0 +1,45 @@
+event: call_number
+question: |
+  Please call (215) 686-7027 for assistance.
+buttons:
+  - Exit: exit
+    url: https://docassemble.org
+---
+event: on_error
+question: |
+  Please call (215) 686-7027 for assistance. You did it!
+buttons:
+  - Exit: exit
+    url: https://docassemble.org
+---
+
+---
+mandatory: true
+question: |
+  Are you the owner or the administrator of this property or filling these questions out for the owner of the property?
+yesnomaybe: owner
+---
+mandatory: true
+code: | 
+  if owner == None:
+    on_error
+  if owner == False:
+    call_number
+---
+mandatory: true
+need: 
+  - owner
+question: |
+  Do you have a lease with the person you are trying to remove from this property?
+subquestion: |
+  % if owner == True:
+  The lease is an agreement between the property owner (landlord) and renter (tenant).  
+  
+  The lease sets the terms of the landlord and tenant’s relationship, including rent payments and maintenance.
+  %endif
+  
+  ${ action_button_html("https://www.google.com", label="Yes", color="primary", size="md") } ${ action_button_html(interview_url(i='docassemble.playground1LegalInterview:ejectment_plaintiff.yml'), label="No", color="primary", size="md") }
+---
+ 
+
+  

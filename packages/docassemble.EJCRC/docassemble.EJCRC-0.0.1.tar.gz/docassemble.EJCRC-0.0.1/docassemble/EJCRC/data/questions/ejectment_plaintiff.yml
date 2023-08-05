@@ -1,0 +1,148 @@
+---
+event: call_number
+question: |
+  Please call (215) 686-7027 for assistance.
+buttons:
+  - Exit: exit
+    url: https://docassemble.org
+---
+event: docket
+question: |
+  Please check the docket.
+buttons:
+  - Exit: exit
+    url: https://docassemble.org
+---
+event: restart
+question: |
+  Why are you using this website?
+subquestion: |
+  - [Someone is trying to kick me out of where I live]
+  - [I have received notice that my property is being put up for sheriff sale]
+  - [I am trying to remove someone from a place I own]
+  - [I have already used this website and I am looking for a specific form]
+  
+  [Someone is trying to kick me out of where I live]: ${ interview_url(i='docassemble.playground1LegalInterview:LLT_or_ejectment_plaintiff.yml') }
+  [I have received notice that my property is being put up for sheriff sale]: ${ interview_url(i='docassemble.playground1%3Ahello.yml') }
+  [I am trying to remove someone from a place I own]: ${ interview_url(i='docassemble.playground1%3Ahello.yml') }
+  [I have already used this website and I am looking for a specific form]: ${ interview_url(i='docassemble.playground1%3Ahello.yml') }
+---
+mandatory: true
+code: |
+  if ejectment_redircet:
+    legalaction
+    if legalaction == "No":
+       call_number
+    if legalaction == "Yes":
+      civil_complaint
+      if civil_complaint == False:
+        delivery
+        if delivery == "Yes":
+          answer
+          if answer == True:
+            call_number
+          if answer == False:
+            twenty
+          if answer == None:
+            docket
+        if delivery == "No":
+          call_number
+        if delivery == "I do not know":
+          docket
+        if delivery == "I cannot serve the complaint":
+          alternate_service
+          if alternate_service == False:
+            call_number
+    if legalaction == "I have already started a case":
+      delivery
+      if delivery == "Yes":
+        answer
+        if answer == True:
+          call_number
+        if answer == False:
+          twenty
+        if answer == None:
+          docket
+      if delivery == "No":
+        call_number
+      if delivery == "I do not know":
+        docket
+      if delivery == "I cannot serve the complaint":
+        alternate_service
+        if alternate_service == False:
+          call_number
+    if legalaction == "I have a default judgment pending against me":
+      call_number
+--- 
+mandatory: true
+question: |
+  It looks like you need to start an **ejectment action**. This is how you remove someone  from your premises that is not under a lease with you. Does this describe what you are looking to do?
+
+yesno: ejectment_redircet
+---
+code: |
+  if ejectment_redircet == False:
+    restart
+---
+field: legalaction
+question: |
+  Would you like help starting a case?
+buttons: 
+  - Yes
+  - No
+  - I have already started a case
+  - I have a default judgment pending against me
+---
+field: civil_complaint
+question: |
+   It looks like you need to start legal action against the person(s) you are trying to remove from your property. 
+   
+   To start this legal action, you need to fill out a **civil complaint sheet**. 
+   
+   Click continue to fill out the required sheets
+   
+buttons:
+  - ${ action_button_html(interview_url(i='docassemble.playground1LegalInterview:ejectment_plaintiff.yml'), label="Continue", color="primary", size="sm") }
+  - I have already filled out these forms: False
+---
+field: delivery
+question: |
+  Have you “served” this complaint to all the parties?
+subquestion: |
+  Service is delivery of the complaint. According to Pennsylvania rules, you can serve this complaint - 
+      1) by handing a copy to the defendant; or
+      
+      2) by handing a copy
+        
+        i) at the residence of the defendant to an adult member of the family with whom            he resides; but if no adult member of the family is found, then to an adult            person in charge of such residence; or  
+       
+        ii) at the residence of the defendant to the clerk or manager of the hotel,                 inn, apartment house, boarding house or other place of lodging at which he             resides; 
+       
+       3) by mail, so long as there is authorized receipt. 
+buttons:
+  - Yes
+  - No
+  - I do not know
+  - I cannot serve the complaint
+---
+field: alternate_service
+question: |
+   It looks like you need to file a motion for alternative service. A motion for alternative service means that you have been unable to “serve” the defendant the complaint. Click continue to fill out this document.
+   
+buttons:
+  - ${ action_button_html(interview_url(i='docassemble.playground1LegalInterview:ejectment_plaintiff.yml'), label="Continue", color="primary", size="sm") }
+  - I have already filled out these forms: False
+---
+field: answer
+question: |
+   Has the person responded to the complaint?
+subquestion: |
+  A response is when the person has filed an answer. [Check the docket here](https://fjdefile.phila.gov/efsfjd/zk_fjd_public_qry_00.zp_disclaimer?uid=B1fSNktSvIolqsSYDxam&o=K6l3EUmlPxozKg8) using your case number to see if an answer has been filed.
+yesnomaybe: answer
+---
+question: |
+  Has it been 20 days since you delivered the complaint to the person you are trying to remove from your property?
+subquestion: |
+  Reminder: 20 days ago was ${ today().minus(days=20) }
+yesno: twenty
+
