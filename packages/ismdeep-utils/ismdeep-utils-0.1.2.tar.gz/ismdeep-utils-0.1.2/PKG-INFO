@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: ismdeep-utils
+Version: 0.1.2
+Summary: ismdeep-utils
+Home-page: https://github.com/ismdeep/ismdeep-utils-py
+Author: ismdeep
+Author-email: ismdeep@protonmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: utils,args
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.4
+Classifier: Programming Language :: Python :: 2.5
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Utilities
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
