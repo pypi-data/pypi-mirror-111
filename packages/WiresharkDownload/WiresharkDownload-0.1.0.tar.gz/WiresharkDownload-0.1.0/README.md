@@ -1,0 +1,1 @@
+This is your code to install from source code so you can use it on the terminal

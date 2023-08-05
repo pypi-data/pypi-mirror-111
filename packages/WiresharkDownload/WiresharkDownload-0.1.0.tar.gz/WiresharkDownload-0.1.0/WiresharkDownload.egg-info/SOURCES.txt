@@ -1,0 +1,7 @@
+README.md
+setup.py
+WiresharkDownload/WiresharkDownload.py
+WiresharkDownload.egg-info/PKG-INFO
+WiresharkDownload.egg-info/SOURCES.txt
+WiresharkDownload.egg-info/dependency_links.txt
+WiresharkDownload.egg-info/top_level.txt
