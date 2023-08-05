@@ -1,0 +1,3 @@
+[console_scripts]
+mafia-cli=open_mafia_engine.examples.cli:main
+
