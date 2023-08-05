@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/convPCA.egg-info/PKG-INFO
+src/convPCA.egg-info/SOURCES.txt
+src/convPCA.egg-info/dependency_links.txt
+src/convPCA.egg-info/top_level.txt
+src/conv_pca/__init__.py
+src/conv_pca/conv_ae.py
+src/conv_pca/conv_pca.py

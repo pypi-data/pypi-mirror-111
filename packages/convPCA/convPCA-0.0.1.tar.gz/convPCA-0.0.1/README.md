@@ -1,0 +1,35 @@
+# convPCA
+
+Various approaches to performing a convolutional analogue of PCA. The basic idea is to adapt [power iteration](https://en.wikipedia.org/wiki/Power_iteration) (PI). 
+PI finds the eigenvectors of A by initializing a random h and then iteratively setting h = norm(Ah) where norm(g)=g/sum(g^2) to have unit length.  
+In the PCA context, A is the empirical covariance, A=(X'X)/N. 
+So we can equivalently update h = X'(Xh) [with the divide by N coming out in the wash when we normalize h]. 
+The idea in convolutional PCA is to replace matrix multiplication with convolution operations. 
+For 1D sequence data 
+- X is [N x P x L] 
+- h is [H x P x K] 
+
+where 
+- N is the number of sample sequences, 
+- P is the number of observed channels,
+- L is the sequence length, 
+- H is the number of hidden channels/factors (1 for standard PI), and 
+- K is the PC/PWM/factor size/filter width. 
+
+The basic PI algorithm iterates
+1. `b = F.conv_transpose1d(x,h.transpose(0,1))` gives a [N x H x L+K-1] tensor (think of this as hidden node activations in an AE). 
+2. `h = F.conv1d(b.transpose(0,1),x.transpose(0,1))` gives an updated h with the correct dimensions (this is like correlating the activations and the observed data). 
+
+There are two approaches to extending to `H>1`: 
+1. Orthonormalizing `h` at every iteration using QR decomposition or SVD. 
+2. "Deflating" X, i.e. removing signal explained by the previous PCs. 
+For PCA these approaches are equivalent, not clear if this is true for convPCA (and it's certainly not for the sparse variant). 
+
+Other implemented features: 
+- `sparse` version, where all but the largest element in windows of `b` are zeroed out
+- `shift` version, where we attempt to center the PWM to avoid cutting off a position at the edge
+- `batch` version ala [AdaOja](https://arxiv.org/abs/1905.12115)
+
+A couple of other approaches to fitting are implemented: 
+- A novel convolutional version of [FastICA](https://www.cs.helsinki.fi/u/ahyvarin/papers/fastica.shtml) very analogous to ConvPCA. This includes a L1-penalty/lasso inspired nonlinearity (soft thresholding). 
+- A (shallow, linear) convolutional autoencoder, fit using SGD/Adam. 
