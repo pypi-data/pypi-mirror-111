@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: speccify
+Version: 0.1.1
+Summary: Tie together `drf-spectacular` and `djangorestframework-dataclasses` for easy-to-use apis and openapi schemas.
+License: Apache-2.0
+Author: Lyst Ltd.
+Author-email: devs@lyst.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: djangorestframework
+Requires-Dist: djangorestframework-dataclasses
+Requires-Dist: drf-spectacular
+Requires-Dist: typing-extensions
+Description-Content-Type: text/markdown
+
+# Speccify
+
+Tie together `drf-spectacular` and `djangorestframework-dataclasses` for
+easy-to-use apis and openapi schemas.
+
+## Usage
+
+```
+    @dataclass
+    class MyQueryData():
+        name: str
+
+    @dataclass
+    class MyResponse:
+        length: int
+
+    @speccify.api_view(methods=["GET"], permissions=[])
+    def my_view(request: Request, my_query: Query[MyQueryData]) -> MyResponse:
+        name = my_query.name
+        length = len(name)
+        return MyResponse(length=length)
+```
+
+
+## License
+
+Apache2
+
