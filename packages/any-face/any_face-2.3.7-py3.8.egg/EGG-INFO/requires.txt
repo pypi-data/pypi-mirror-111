@@ -1,0 +1,4 @@
+Click
+matplotlib
+mtcnn
+opencv-python
