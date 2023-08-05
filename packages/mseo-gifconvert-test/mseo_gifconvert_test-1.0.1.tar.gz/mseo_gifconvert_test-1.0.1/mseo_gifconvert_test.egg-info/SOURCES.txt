@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+mseo_gifconvert_test/__init__.py
+mseo_gifconvert_test/convert.py
+mseo_gifconvert_test.egg-info/PKG-INFO
+mseo_gifconvert_test.egg-info/SOURCES.txt
+mseo_gifconvert_test.egg-info/dependency_links.txt
+mseo_gifconvert_test.egg-info/not-zip-safe
+mseo_gifconvert_test.egg-info/requires.txt
+mseo_gifconvert_test.egg-info/top_level.txt
