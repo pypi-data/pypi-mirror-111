@@ -1,0 +1,132 @@
+#bby-outer-control-panel {
+  position: absolute;
+  padding: 6px 6px 6px 4px;
+  top: 120px;
+  right: 16px;
+  background-color: rgba(245, 245, 245, 0.9);
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  z-index: 110;
+  user-select: none;
+}
+
+#bby-inner-control-panel {
+  display: flex;
+  /* cursor: grab; */
+}
+
+/* #bby-inner-control-panel:active {
+  cursor: grabbing;
+} */
+
+/* 
+http://www.patternify.com/
+*/
+.bby-small-dot-pattern {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAF0lEQVQYV2NkYGD4z8DAwMgAI0AMDA4AI3EBBMY7CTgAAAAASUVORK5CYII=)
+    repeat;
+}
+
+#bby-drag-handle {
+  cursor: grab;
+  margin-left: 0px;
+  margin-right: 4px;
+  width: 10px;
+}
+
+#bby-drag-handle:active {
+  cursor: grabbing;
+}
+
+.bby-control-panel {
+  display: none;
+  margin-top: 4px;
+}
+
+.bby-control-panel .btn {
+  padding: 3px 4px;
+}
+
+#bby-notifier {
+  max-width: 160px;
+  font-size: 0.9em;
+}
+
+#bby-control-panel-title {
+  /* cursor: grab; */
+  display: flex;
+  align-items: center;
+  color: #666;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 0.8em;
+}
+
+/* #bby-control-panel-title:active {
+  cursor: grabbing;
+} */
+
+/* #bby-control-panel-title div {
+  margin-right: 5px;
+} */
+
+#bby-control-panel-title #bby-logo-text {
+  /* transform: scale(1.05, 1.25); */
+  /* margin-left: 6px; */
+  /* margin-top: -4px; */
+  /* letter-spacing: 0.9em; */
+  width: 100%;
+  text-align-last: justify;
+}
+
+#bby-control-panel-title img {
+  width: 22px;
+  padding: 0 2px 0 2px;
+}
+
+.bby-config-title {
+  font-weight: bold;
+  /* font-size: 15px; */
+}
+
+.bby-form-item {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+  max-width: 200px;
+}
+
+.bby-form-item span {
+  white-space: nowrap;
+  margin-right: 4px;
+}
+
+.bby-sticker-inner {
+  /*  border:2px dashed red;*/
+  pointer-events: none;
+}
+
+.bby-sticker-inner div {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  margin-top: 3px;
+  margin-left: 3px;
+}
+
+.bby-right-side-marker {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+#bby-config-btns {
+  display: flex;
+  justify-content: center;
+}
+
+#bby-config-btns button {
+  margin: 4px 4px 0;
+}
