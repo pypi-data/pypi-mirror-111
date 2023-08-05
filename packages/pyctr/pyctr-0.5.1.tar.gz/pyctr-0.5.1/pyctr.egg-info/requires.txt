@@ -1,0 +1,2 @@
+pycryptodomex<4,>=3.9
+Pillow>=8.2
