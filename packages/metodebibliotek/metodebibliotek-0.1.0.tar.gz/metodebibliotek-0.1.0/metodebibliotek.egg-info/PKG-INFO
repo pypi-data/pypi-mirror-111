@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: metodebibliotek
+Version: 0.1.0
+Summary: SSBs library for method functions
+Home-page: https://github.com/statisticsnorway/metodebibliotek
+Maintainer: Susie Jentoft
+Maintainer-email: susiejentoft@ssb.no
+License: UNKNOWN
+Description: This is a meta-package with a collection of R and python function useful for official statistics production.
+Platform: UNKNOWN
+Requires-Python: >=3.6

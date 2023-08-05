@@ -1,0 +1,9 @@
+README.md
+setup.py
+metodebibliotek/__init__.py
+metodebibliotek/metodebibliotek.py
+metodebibliotek.egg-info/PKG-INFO
+metodebibliotek.egg-info/SOURCES.txt
+metodebibliotek.egg-info/dependency_links.txt
+metodebibliotek.egg-info/requires.txt
+metodebibliotek.egg-info/top_level.txt
