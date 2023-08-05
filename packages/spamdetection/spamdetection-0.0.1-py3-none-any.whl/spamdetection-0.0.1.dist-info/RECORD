@@ -1,0 +1,10 @@
+spamdetection/SpamDetector.py,sha256=vJmSkV5qKqlN2HrJNT5Ct05n4KugB0yZH7PjprpfAKU,9846
+spamdetection/__init__.py,sha256=Qt_jHLd2CskUAe6r656u0hKfzrt7sEVWpRmkqEdxMgw,590
+spamdetection/__main__.py,sha256=EUuHBhEi37YGtsvnBBr9YjlKZFMuyNGPFW9JNKmKPlE,1503
+spamdetection/app.py,sha256=acrAW7YUFMen2NKSiA1xsJeIWWn0eTxjSp9gNqtZ3sY,2652
+spamdetection/params.py,sha256=KaQpPUSWz2iun1JDKZpXLeZNV_JlCuRPM0sAgzfzHio,549
+spamdetection-0.0.1.dist-info/METADATA,sha256=zaw5YvwBk-FEZfHUNKVOntzJo8omvIFV_vWlF91xjWk,3371
+spamdetection-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+spamdetection-0.0.1.dist-info/entry_points.txt,sha256=hHEYji_CeCFqDQUkqiDt7AuuS1VJc0vTfD92rfFj_50,64
+spamdetection-0.0.1.dist-info/top_level.txt,sha256=9GhkGabkjCIraVMnoRRbloEROlezZ1CY9xhdc2wTOus,14
+spamdetection-0.0.1.dist-info/RECORD,,
