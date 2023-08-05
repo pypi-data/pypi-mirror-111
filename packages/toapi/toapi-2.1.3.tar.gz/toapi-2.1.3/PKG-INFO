@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: toapi
+Version: 2.1.3
+Summary: Every web site provides APIs.
+License: MIT
+Author: Elliot Gao
+Author-email: gaojiuli@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: cchardet (>=2.1.7,<3.0.0)
+Requires-Dist: click (>=8.0.1,<9.0.0)
+Requires-Dist: colorama (>=0.4.4,<0.5.0)
+Requires-Dist: cssselect (>=1.1.0,<2.0.0)
+Requires-Dist: flask (>=2.0.1,<3.0.0)
+Requires-Dist: htmlfetcher (>=0.0.6,<0.0.7)
+Requires-Dist: htmlparsing (>=0.1.5,<0.2.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Project-URL: documentation, https://gaojiuli.github.io/toapi/
+Project-URL: homepage, https://github.com/gaojiuli/toapi
+Project-URL: repository, https://github.com/gaojiuli/toapi
