@@ -1,0 +1,7 @@
+changeplan/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+changeplan/change_plan_service.py,sha256=bHvrK3YOD1L9id9RORKBhRxBqAPGP3GKGynmEKwkjII,3458
+changeplan/middleware.py,sha256=3-ZS4OWr6Ym-QsQFJTfgbxCo0Uz-zgKGORDJAZtPcMs,773
+changeplan-1.0.dist-info/METADATA,sha256=8tuUx8vsmefSLo9gHqRCbeiaO2P1sBLgnMyATwVS2i0,216
+changeplan-1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+changeplan-1.0.dist-info/top_level.txt,sha256=Z_m27h9zPNwuYHyR-OLj6Wryh8XA1HaCbBGIEMUqVCs,11
+changeplan-1.0.dist-info/RECORD,,
