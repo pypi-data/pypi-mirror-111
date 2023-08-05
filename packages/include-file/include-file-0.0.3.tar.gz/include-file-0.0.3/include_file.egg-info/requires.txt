@@ -1,0 +1,2 @@
+beautifulsoup4>=4.9markdown>=3.3
+panflute>=2.1
