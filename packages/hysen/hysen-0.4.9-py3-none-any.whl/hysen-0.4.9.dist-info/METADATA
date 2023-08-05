@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: hysen
+Version: 0.4.9
+Summary: Python API for controlling Hysen thermostats
+Home-page: http://github.com/uspass/hysen
+Author: us
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 4 - Beta
+Classifier: Natural Language :: English
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: broadlink (==0.17.0)
+
+# Python API for controlling Hysen thermostats
+
+The following devices are supported:
+ - Hysen Heating Thermostat Controller Interface - device type 0x4EAD
+ - Hysen Controller for 2 Pipe Fan Coil Interface - device type 0x4F5B
+
+
