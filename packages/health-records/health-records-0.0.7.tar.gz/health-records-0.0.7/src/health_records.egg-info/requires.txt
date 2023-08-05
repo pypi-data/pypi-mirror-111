@@ -1,0 +1,6 @@
+click
+lark
+tabulate
+python-dateutil
+itermplot
+rich
