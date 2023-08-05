@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: buvar_aiohttp
+Version: 0.4.3
+Summary: Asyncio plugin for buvar
+Home-page: https://gitlab.com/diefans/buvar
+Author: Oliver Berger
+Author-email: diefans@gmail.com
+License: UNKNOWN
+Description: buvar_aiohttp
+        =============
+        
+        Solves some boilerplate around starting an `aiohttp`_ server.
+        
+        .. code-block:: python
+        
+            import aiohttp.web
+            from buvar import context, di, fork, plugin
+        
+            from buvar_aiohttp import AioHttpConfig
+        
+        
+            async def hello(request):
+                return aiohttp.web.Response(body=b"Hello, world")
+        
+        
+            async def prepare_aiohttp(load: plugin.Loader):
+                # provide config
+                context.add(AioHttpConfig(host="0.0.0.0", port=5678))
+        
+                # prepare server site
+                await load("buvar_aiohttp")
+        
+                # mount routes
+                app = await di.nject(aiohttp.web.Application)
+                app.router.add_route("GET", "/", hello)
+        
+        
+            # start a process for each available CPU and provide a shared socket to all
+            # children
+            fork.stage(prepare_aiohttp, forks=0, sockets=["tcp://:5678"])
+        
+        
+        .. _aiohttp: https://docs.aiohttp.org
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Framework :: AsyncIO
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7,<4.0
+Description-Content-Type: text/x-rst
+Provides-Extra: tests
+Provides-Extra: all
