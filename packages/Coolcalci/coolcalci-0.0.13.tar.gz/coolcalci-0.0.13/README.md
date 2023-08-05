@@ -1,0 +1,1 @@
+This module is created by python rohan or coolduderohan to make arithmetic operations by a simple command. There is 5 types created in this version of calci, this module will contain calculate and print and calculate but not print only save it like this commands you will find in this module. As if you want decrease the time to do arithmetic operations.

@@ -1,0 +1,6 @@
+README.md
+setup.py
+coolcalci.egg-info/PKG-INFO
+coolcalci.egg-info/SOURCES.txt
+coolcalci.egg-info/dependency_links.txt
+coolcalci.egg-info/top_level.txt
