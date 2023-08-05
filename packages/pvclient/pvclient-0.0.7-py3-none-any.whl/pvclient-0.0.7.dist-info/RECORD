@@ -1,0 +1,13 @@
+pvclient/__init__.py,sha256=D0UVD6fSKhTEm2bcEShuydq4MtAQfmIq3CLzUVZH53I,21
+pvclient/client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pvclient/client/main.py,sha256=-Yq0x_NsdWJfPl0sxyJEL3ZCm5Kx0fv9SbyrGoSJ-Ik,4789
+pvclient/client/purview_client.py,sha256=FYbeQ_Ud64wn-p5lhFbt1kVQJgxzlaAreh-BnLQqrAw,4185
+pvclient/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pvclient/utils/account.py,sha256=QOoU9_vyGj45qJ2TRlaKEv-BmuW26d7yDWNbi3loHeA,3469
+pvclient/utils/excel.py,sha256=B32YQ6WWDWWwv4my3TDImg6ywj-R71AKB48aanTJWpo,1012
+pvclient-0.0.7.dist-info/LICENSE,sha256=4rQ0V6MJOIjUJKlRqhLXkUVsb1cVmeYOkE0WZI9XvBM,1069
+pvclient-0.0.7.dist-info/METADATA,sha256=-V6c61G1iaUziW_tofiv6aQWqlm3ytev4SIb6Kv5qoA,2848
+pvclient-0.0.7.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pvclient-0.0.7.dist-info/entry_points.txt,sha256=VcpAV02YnideQLGkns2PeEwP8Sbllaw49HO4qkpFE3E,55
+pvclient-0.0.7.dist-info/top_level.txt,sha256=KngW1tHF6je0HFy6ybGsMF8WFKB2GjCcui7dkWHluWs,9
+pvclient-0.0.7.dist-info/RECORD,,
