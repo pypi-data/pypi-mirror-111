@@ -1,0 +1,17 @@
+torcharc/__init__.py,sha256=PrUNcZ_OK_BltueP8zSB5bjqHpjfCq3F668OMXWalXg,348
+torcharc/arc_ref.py,sha256=-dO9aaDWnCcBEe4Bt6F61FSO5OXWGKv0UzI8wDbfN1o,6396
+torcharc/module_builder.py,sha256=8dTHNqDfvZNMVq7SFx5V4V3M86BKaqCpBi0KHKMvgHI,5521
+torcharc/net_util.py,sha256=WOC_UrZqpEESjnG-QIoNkD_aDK5dmFC01elWM0eJkbU,1118
+torcharc/optim.py,sha256=lFddROZ9-U5OEKDkLSl96Lm0g-m5qtUWiim1hjmblGA,9980
+torcharc/module/dag.py,sha256=sVb0N2BNLNB-BU5hlG_YAB3Ykac57YjrS-6fTffR-lU,1508
+torcharc/module/fork.py,sha256=MEygsBz7VIIK2QRoDo27XeSmyXaNMpbLIKLNQyqzwaQ,1112
+torcharc/module/merge.py,sha256=x42q0qo4avZShH4X4PueL604bFExgmVskTecY973UN0,2601
+torcharc/module/sequential.py,sha256=rFHTCKbMzMD_0XKbsv0erM9s608ae3RjA-RNdCHppko,2551
+torcharc/module/transformer/pos_encoder.py,sha256=nxK1Wxuj6Gw1Nz54r432K5tHEgprw_hheN6jTmfhQF0,3705
+torcharc/module/transformer/pytorch_tst.py,sha256=ngqWQmind8cXIeNwdnCDxGHnnT1aLFGG1GtjpxESGaA,3469
+torcharc/module/transformer/tst.py,sha256=Gi4N6AULx008dBtRnmeNYgWcfGRJZJJlvIP0mkaWOoE,3600
+torcharc-1.0.0.dist-info/LICENSE,sha256=ZXAwFTVJ47ZTuK_L27GQIv1VWA2l9cxVEqHCF_da6No,1070
+torcharc-1.0.0.dist-info/METADATA,sha256=7WVkC0uHRhiaCs2WwsXe0H6gCWJfR2EgHfemA8VKbfs,359
+torcharc-1.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+torcharc-1.0.0.dist-info/top_level.txt,sha256=-UmE0YBVodZjuj9eZxGFWNR8nepV6rQ6vzPQ1l7MZRM,9
+torcharc-1.0.0.dist-info/RECORD,,
