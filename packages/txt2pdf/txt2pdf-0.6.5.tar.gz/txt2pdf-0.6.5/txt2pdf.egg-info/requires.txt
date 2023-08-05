@@ -1,0 +1,3 @@
+docopt
+markdown2
+WeasyPrint
