@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: fastapi-framework
+Version: 0.9.4
+Summary: A Fastapi Framework
+Home-page: UNKNOWN
+Author: Tert0
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi
+Requires-Dist: setuptools
+Requires-Dist: sqlalchemy
+Requires-Dist: asyncpg
+Requires-Dist: aioredis
+Requires-Dist: python-dotenv
+Requires-Dist: pyjwt
+Requires-Dist: passlib
+
+A FastAPI Framework for things like `Database`, `Redis` and `Logging`
+
+# Install
+
+You can install this Library with:
+
+```shell
+pip install fastapi-framework
+```
+
+# Documentation
+
+For the Documentation click [here](https://tert0.github.io/fastapi-framework)
+
+# Features
+- [x] Database
+- [x] Redis
+- [ ] Redis Publish/Subscribe
+- [x] FastAPI JWT
+- [ ] FastAPI Permission System (for routes)
+- [ ] Rate Limits
+
+
+# License
+
+This Project is Licensed under the [MIT License](https://mit-license.org/)
+
+
