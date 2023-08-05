@@ -1,0 +1,12 @@
+matplotlib
+torchvision
+scipy
+torch>=1.5.1
+einops
+pytorch_lightning>=1.0.0
+celmech
+xgboost>=1.1.0
+scikit-learn
+pandas
+numpy
+rebound==3.16.0
