@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/strip_spreadsheet.py
+src/strip_spreadsheet.egg-info/PKG-INFO
+src/strip_spreadsheet.egg-info/SOURCES.txt
+src/strip_spreadsheet.egg-info/dependency_links.txt
+src/strip_spreadsheet.egg-info/top_level.txt
