@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: vedro-gitlab-reporter
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: https://github.com/nikitanovosibirsk/vedro-gitlab-reporter
+Author: Nikita Tsvetkov
+Author-email: nikitanovosibirsk@yandex.com
+License: Apache-2.0
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: vedro (<1.3,>=1.2)
+
+# Vedro GitLab Reporter
+
+[GitLab](https://gitlab.com) (>=12.0) reporter with collapsable sections.
+
+## Installation
+
+```shell
+$ pip3 install vedro-gitlab-reporter
+```
+
+```python
+# ./bootstrap.py
+import vedro
+from vedro_gitlab_reporter import GitlabReporter
+
+vedro.run(plugins=[GitlabReporter()])
+```
+
+```shell
+$ python3 bootstrap.py -r gitlab -vvv
+```
+
+## Documentation
+
+### Verbose Levels
+
+`-v` — show exception and collapsable steps
+
+`-vv` — show exception, steps and collapsable variables
+
+`-vvv` — show exception, steps and collapsable scope
+
+
