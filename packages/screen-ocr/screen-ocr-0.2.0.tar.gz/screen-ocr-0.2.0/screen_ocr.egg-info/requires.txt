@@ -1,0 +1,14 @@
+numpy
+pillow
+rapidfuzz
+scikit-image
+
+[easyocr]
+easyocr
+
+[tesseract]
+pytesseract
+pandas
+
+[winrt]
+winrt
