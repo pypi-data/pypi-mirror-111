@@ -1,0 +1,8 @@
+conv_pca/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+conv_pca/conv_ae.py,sha256=904YmU6b7Ve653szUsq0tAgH5Rl2V9hyxjEpd0apLAY,5752
+conv_pca/conv_pca.py,sha256=l9wwmxtROj4RCz0pRv_v1ZIAgempj3u4VL8fH2vpCuI,11239
+convPCA-0.0.1.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+convPCA-0.0.1.dist-info/METADATA,sha256=R0yP1O0k42A-efpzJfX-du6USpIb4T_-0a-7YhT3X_k,2755
+convPCA-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+convPCA-0.0.1.dist-info/top_level.txt,sha256=dVJ8ULrAPjkn3F6acehNvuyHSOAcuFVlU782h_WruNs,9
+convPCA-0.0.1.dist-info/RECORD,,
