@@ -1,0 +1,12 @@
+pytest_filecov/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_filecov/plugin/__init__.py,sha256=TAGMqjGT_YJv3Ist2dTnZ_lrMvBYZJ4kouSkIgqglAI,364
+pytest_filecov/plugin/gitlist.py,sha256=bSonAC3auUD8ufgpq0sE5S8c3ZIEtMvnl4jXLR6Ocjg,450
+pytest_filecov/plugin/inotifywatcher.py,sha256=b9G1kVM9AP1PeveOsJ0gOiS8K8uMMZFAS1XPet3RtQs,2519
+pytest_filecov/plugin/session.py,sha256=h3bFP-OIGVqhAeFZJkZDcNOZospwlp_ze7QdYkvD6r8,1507
+pytest_filecov/plugin/types.py,sha256=95g7RIzZUsz5six7P23uvUhFu-2R0MStBdqJDsdeSBU,442
+pytest_filecov-0.1.2.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+pytest_filecov-0.1.2.dist-info/METADATA,sha256=Vup204Qfb5UCoypRnzOIziOGuXZ5a60RyO422mszB34,3067
+pytest_filecov-0.1.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pytest_filecov-0.1.2.dist-info/entry_points.txt,sha256=E9A5iR1yl1m8GRHwMCz01_xqxCcKxb1XZkbcWGhDGEQ,44
+pytest_filecov-0.1.2.dist-info/top_level.txt,sha256=pmHv_MZonPg2so89fjtO2V8cpm4q_P6KVe25vD6-oPE,15
+pytest_filecov-0.1.2.dist-info/RECORD,,
