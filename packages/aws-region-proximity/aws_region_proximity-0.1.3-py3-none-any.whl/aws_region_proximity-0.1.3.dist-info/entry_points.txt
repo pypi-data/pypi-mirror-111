@@ -1,0 +1,3 @@
+[console_scripts]
+aws-regions = aws_region_proximity:cli
+
