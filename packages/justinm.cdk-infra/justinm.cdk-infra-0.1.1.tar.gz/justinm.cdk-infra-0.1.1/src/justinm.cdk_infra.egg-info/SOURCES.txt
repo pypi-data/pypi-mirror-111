@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/justinm.cdk_infra.egg-info/PKG-INFO
+src/justinm.cdk_infra.egg-info/SOURCES.txt
+src/justinm.cdk_infra.egg-info/dependency_links.txt
+src/justinm.cdk_infra.egg-info/requires.txt
+src/justinm.cdk_infra.egg-info/top_level.txt
+src/justinm/cdk_infra/__init__.py
+src/justinm/cdk_infra/py.typed
+src/justinm/cdk_infra/_jsii/__init__.py
+src/justinm/cdk_infra/_jsii/cdk-infra@0.1.1.jsii.tgz
