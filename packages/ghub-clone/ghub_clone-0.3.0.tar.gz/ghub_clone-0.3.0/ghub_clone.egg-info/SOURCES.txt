@@ -1,0 +1,10 @@
+LICENSE
+README.md
+gca.py
+setup.py
+ghub_clone.egg-info/PKG-INFO
+ghub_clone.egg-info/SOURCES.txt
+ghub_clone.egg-info/dependency_links.txt
+ghub_clone.egg-info/entry_points.txt
+ghub_clone.egg-info/requires.txt
+ghub_clone.egg-info/top_level.txt

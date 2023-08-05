@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: ghub_clone
+Version: 0.3.0
+Summary: UNKNOWN
+Home-page: https://github.com/neelabalan/gca
+Author: neelabalan
+Author-email: neelabalan.n@gmail.com
+License: MIT
+Keywords: git clone github
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# gca (github clone all)
+[![codecov](https://codecov.io/gh/neelabalan/gca/branch/main/graph/badge.svg?token=MGFCAJ1UR6)](https://codecov.io/gh/neelabalan/gca)
+[![PyPI version](https://badge.fury.io/py/ghub-clone.svg)](https://badge.fury.io/py/ghub-clone)
+> simple script to clone all public repositories of a user
+
+
+
+![gif](https://i.imgur.com/3UJQech.gif)
+
+
+
+## installation
+
+```bash
+pip install ghub_clone
+# git needs to be in system path
+```
+
+
+
+## usage
+
+```bash
+# user
+gca --user neelabalan
+
+# to not download github gists of the user
+gca --user --ignore-gist neelabalan
+
+# org
+gca --user microsoft 
+```
+
+
+
