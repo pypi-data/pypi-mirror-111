@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: elementz-querify
+Version: 1.0.15
+Summary: SQL Query Builder for Elementz Table
+Home-page: UNKNOWN
+Author: Elis
+Author-email: open@elis.cc
+License: GPL 3.0
+Keywords: elementz,table,sql,filters,parse,build
+Platform: UNKNOWN
+Requires-Dist: mysqlclient
+
+UNKNOWN
+
+
