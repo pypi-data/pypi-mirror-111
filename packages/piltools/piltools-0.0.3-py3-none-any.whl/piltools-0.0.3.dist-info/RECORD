@@ -1,0 +1,9 @@
+piltools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+piltools/transform.py,sha256=RSEWowfFkUebNN9zMQJ4tWka27NjZtLn0VXGlIOKeBs,2326
+piltools/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+piltools/test/test_transform.py,sha256=BUjKsRGKIDkcKeO03nKwUg5qrDELzsgwZ7ltQgubbSU,1653
+piltools-0.0.3.dist-info/LICENSE,sha256=K4hr-sm_eyTV6spkN6vM_R0xBo7W0cBqvadOvx5V1Ro,607
+piltools-0.0.3.dist-info/METADATA,sha256=qjZsq9OOeuaD4JX-J98Z_DcXwqURQxBsTbjOUaZ-8sg,1474
+piltools-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+piltools-0.0.3.dist-info/top_level.txt,sha256=Wz7E-7_97VkTaGQ4xbMLnyfNlKEU-bSt-ITxo67fiOk,9
+piltools-0.0.3.dist-info/RECORD,,
