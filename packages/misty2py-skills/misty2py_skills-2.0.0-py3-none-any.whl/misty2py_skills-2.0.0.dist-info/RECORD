@@ -1,0 +1,15 @@
+CHANGELOG.md,sha256=squiBBAn-4FQ3_6E-iBX7jnWX9qNryIQw733LA7cQa8,2035
+LICENSE,sha256=J8j3Idb72k4jdKy9KMahew9YLma0Do8UrP-Berp4aG0,1090
+misty2py_skills/__init__.py,sha256=ZuT1XYdhD_QsBAK06GsPEl_MpdGYGozGKuDHxmS71w8,1120
+misty2py_skills/demonstrations/__init__.py,sha256=kDEYz2sFJqEASxX6YvDxtGkP9pc4EpAoUbETuglL8Is,138
+misty2py_skills/demonstrations/battery_printer.py,sha256=CV4y3CvmwqpFfHNNcFJvRWlw4H02WA1XZ6opVfm1d08,2861
+misty2py_skills/demonstrations/explore.py,sha256=p7EWVyp5QRCddnquF2CfYMoP9RAoa5Ul2bdW1JzBOlY,2851
+misty2py_skills/expressions.py,sha256=0bOtgrfMfJxDgPrIw7pZaNtkdSSmd83KkOtAcIfxnzE,1384
+misty2py_skills/face_recognition.py,sha256=jNbVuyZP1tHZJoItckKthzG66aR2xFBzxZIfY3SnEUY,10398
+misty2py_skills/hey_misty.py,sha256=BhOltns0zCvOSmF__H9sR-67umhfUIlMMy-3tBZStHI,3230
+misty2py_skills/question_answering.py,sha256=Q14Rl_UAzVeeTwOHQDN1WXF9BGnjXJTz-aFgGNt2EYI,10953
+misty2py_skills/remote_control.py,sha256=5DGUTtHSNmrKnaFBJXpZmZE3NRnQGCZLkodR1ZKcNAA,2934
+misty2py_skills-2.0.0.dist-info/LICENSE,sha256=J8j3Idb72k4jdKy9KMahew9YLma0Do8UrP-Berp4aG0,1090
+misty2py_skills-2.0.0.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+misty2py_skills-2.0.0.dist-info/METADATA,sha256=ZZq9IjtnwetNKJykTHc2Lib_yd_iwrPAVZ9XMnPfTYo,5473
+misty2py_skills-2.0.0.dist-info/RECORD,,
