@@ -1,0 +1,10 @@
+textnets/__init__.py,sha256=_FviMUx5XB1nemftIcenPNN7zOBR5Q1MoZNXo0ikqGE,439
+textnets/corpus.py,sha256=Q9-ZCWcwrNIER8PQD4vXJNhjX06GJjxL2R4WcHFJIHs,12167
+textnets/examples.py,sha256=jpwACVdZj66ZTDuq6PNioZ1IHIr7Ett5KoJE9E9N43Y,909
+textnets/fca.py,sha256=-61fKOrNmbSA9sC28J3NDzm1FKAijpbC--7wX-aB1E4,1304
+textnets/network.py,sha256=1JIl3H_aYmzIGdoJnGl7llsjqvqDNe8-6U3R5eavjM4,22352
+textnets/viz.py,sha256=ZHFK5YQoK6Je0TjaSLqMxehTmgrv1cVKsB2-39IgjvU,1298
+textnets-0.5.0.dist-info/LICENSE,sha256=w1Il9MQokMq9K19_cBnkSnGRx4Us59e9pl9v5L4rSXo,1527
+textnets-0.5.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+textnets-0.5.0.dist-info/METADATA,sha256=iKxT8p3bQ4XPhEbEjgQ7b_8abFAuEbz6iaONdLXOCbM,5815
+textnets-0.5.0.dist-info/RECORD,,
