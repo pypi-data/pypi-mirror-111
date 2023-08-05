@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+neulprogrammist/__init__.py
+neulprogrammist/neulprogrammistmain.py
+neulprogrammist.egg-info/PKG-INFO
+neulprogrammist.egg-info/SOURCES.txt
+neulprogrammist.egg-info/dependency_links.txt
+neulprogrammist.egg-info/not-zip-safe
+neulprogrammist.egg-info/top_level.txt
