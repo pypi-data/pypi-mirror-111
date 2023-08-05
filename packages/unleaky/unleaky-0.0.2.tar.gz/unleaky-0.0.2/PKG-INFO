@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: unleaky
+Version: 0.0.2
+Summary: A Cli Password Manager
+Home-page: https://github.com/newtoallofthis123/unleaky
+Author: NoobScience
+Author-email: noobscience123@gmail.com
+License: MIT
+Project-URL: Author WebSite, https://newtoallofthis123.github.io/About
+Project-URL: Bug Tracker, https://github.com/newtoallofthis123/unleaky/issues
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Unleaky
+
+##### A Simple Cli Password Manager
+
+Unleaky is a simple python nased password manager. This documents the basic usage, more detailed document coming soon
+
+
+
+## Basic commands
+
+- read  - have a look at the database
+
+- new - add new entry
+
+- admin - change the master password
+
+- update - update values of a database
+
+- clear - clear the terminal
+
+- quit - securely quit the terminal
+
+
+
+The Master Password By Deflaut is <b>HelloWorld</b>
+
+
