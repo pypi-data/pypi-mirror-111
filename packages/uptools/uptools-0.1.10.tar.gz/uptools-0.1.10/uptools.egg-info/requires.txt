@@ -1,0 +1,3 @@
+seutils
+uproot-methods
+uproot3
