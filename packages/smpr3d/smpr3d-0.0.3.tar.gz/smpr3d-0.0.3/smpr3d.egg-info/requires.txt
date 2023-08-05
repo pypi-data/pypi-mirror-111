@@ -1,0 +1,10 @@
+torchvision
+psutil
+matplotlib
+tifffile
+jupyterlab
+ipympl
+ipywidgets
+scikit-image
+numba
+tensorboard
