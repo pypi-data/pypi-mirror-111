@@ -1,0 +1,13 @@
+transistordatabase/__init__.py,sha256=DRRG2eL3g6y7sP8HuxbbCuDB7uogp5vt5wNSBGmQqoc,62
+transistordatabase/basic_tests.py,sha256=wws_pwBeWREwt9-lwwcT7doW89r1nayNePTo_z6NpO0,1216
+transistordatabase/databaseClasses.py,sha256=SCWCcqRbunsOHWJ7LaIFSmi3lB-Ca8hq5Um8UK4KvOo,111614
+transistordatabase/databaseClasses_test.py,sha256=TNdMxy4AJfUBnOwJ09I2k36NUc0SSqT1vjpbTf3gJFQ,8974
+transistordatabase/exportFunctions.py,sha256=3nSsuklWmzybrN3FFwNmRiqvT3uOnqTOwRA-OQCT_wA,27249
+transistordatabase/housing_types.txt,sha256=C0u8E472kzhGf4MWYIfSyLebWtvkgNtyIAXyoVMQTRo,394
+transistordatabase/module_manufacturers.txt,sha256=E8zYFrrxx2NLoVs0vswCvz3MF4VgUPNZ5ZjakNuWsds,47
+transistordatabase-0.2.6.data/data/CHANGELOG.md,sha256=nzbNWh-CFSjGaxWVMIayH38vQG0T2FSLNbIz-TfbZBc,3936
+transistordatabase-0.2.6.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+transistordatabase-0.2.6.dist-info/METADATA,sha256=LJ8kghxBJAYcXU-5DdoXoXSuhz3u7xGni_5tGtuy1TI,17441
+transistordatabase-0.2.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+transistordatabase-0.2.6.dist-info/top_level.txt,sha256=FAoubEaXJW5W_xKcUSOJ0IQezIgQm-SvYS-FUKEQlcA,19
+transistordatabase-0.2.6.dist-info/RECORD,,
