@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{%autoescape None%}
+{% block one %}
+
+
+<script src="static/js/ace.js"></script>
+<script src="static/js/ext-language_tools.js"></script>
+
+<button type="button" class="layui-btn" id="upload_py" style="display:none;">上传图片</button>
+
+<div class="layui-row">
+</div>
+
+<div class="layui-row">
+    <div class="layui-col-md2 layui-col-xs2 ">
+        <div id="script_tree" class="demo-tree demo-tree-box" style=" overflow: scroll;height: 850px;min-height:inherit;max-height: 1200px;"></div>
+    </div>
+
+    <div class="layui-col-md10 layui-col-xs10 ">
+        <pre id="code" class="ace_editor" style="height: 850px;min-height:inherit;max-height: 1200px;"><textarea
+                id="code_text" class="ace_text-input">
+            左树选择
+         </textarea></pre>
+    </div>
+</div>
+
+<script>
+  var $ = null;
+  var s_name = '';
+  editor = ace.edit("code");
+  theme = "eclipse"
+  language = "python"
+  editor.setTheme("ace/theme/" + theme);
+  editor.session.setMode("ace/mode/" + language);
+  //字体大小
+  editor.setFontSize(17);
+  //启用提示菜单
+  ace.require("ace/ext/language_tools");
+  //代码高亮
+  editor.setHighlightActiveLine(true);
+  editor.setOptions({
+         maxLines: "2000px" ,//自适应高度
+         enableBasicAutocompletion: true,
+         enableSnippets: true,
+         enableLiveAutocompletion: true
+     });
+  ///////////////////////////////////////////////
+  var inst1 = null;
+  var tree = null;
+  layui.use('tree', function(){
+    tree = layui.tree;
+    $ = layui.$;
+    //渲染
+    inst1 = tree.render({
+      id:'tree1',
+      elem: '#script_tree',  //绑定元素
+      data: {{f_tree}},  //绑定数据
+      //edit: [ 'del'], //操作节点的图标
+      click: function(obj){
+        //console.log(obj.data.title)
+        s_name = obj.data.title
+        get_py(s_name);
+      },
+      operate: function(obj){
+        var type = obj.type;
+        if(type === 'del'){
+            del_py();
+            }
+      },
+    });
+  });
+
+
+
+  layui.use('layer', function(){
+    var layer = layui.layer;
+    layer.open({
+    type: 1,
+    offset: 'r',
+    anim: 6,
+    resize:false,
+    shade: 0,
+    //title: '菜单',
+    move: false,
+    //scrollbar: false,
+    closeBtn: 0,
+    area: ['150px'],
+    btn: ['保存脚本', '上传脚本'],
+    btnAlign: 'c',
+    //content: $('#list')
+    yes: function(){
+        if (s_name !='')
+        {
+            $.post("save_script_text", JSON.stringify({"file_name":s_name,"text":editor.getValue()}), function (ret){
+                alert(ret.msg);
+            })
+        }
+    },
+    btn2: function(){
+        upload_button = document.getElementById("upload_py");
+        upload_button.click();
+        return false
+        }
+    });
+  });
+
+
+
+  layui.use('upload', function(){
+    var upload = layui.upload;
+    var uploadInst = upload.render({
+        elem: '#upload_py' ,//绑定元素
+        url: '/upload_script_text' ,//上传接口
+        accept:'file',
+        exts:'py',
+        //上传完毕回调
+        done: function(res){
+            alert(res.msg);
+            location.reload();
+            //tree.reload('tree1',{data:tree_list});
+        },
+        //请求异常回调
+        error: function(){
+            //alert(res.msg);
+        },
+    });
+  });
+
+
+  function get_py(name){
+    //alert(name)
+    if (name!='test_script'){
+        $.post("get_script_text", JSON.stringify({"file_name":name}), function (ret){
+            editor.setValue(ret)
+        })
+    }else{
+    editor.setValue('左树选择')
+    };
+
+  function del_py(name){
+  };
+
+
+}
+
+
+</script>
+{% end %}

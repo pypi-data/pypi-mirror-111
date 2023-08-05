@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{%autoescape None%}
+{% block one %}
+
+
+<script src="static/js/ace.js"></script>
+<script src="static/js/ext-language_tools.js"></script>
+<script>
+
+</script>
+
+
+<div class="layui-row">
+    <p></p>
+</div>
+
+<div class="layui-row">
+<!--    <button type="button" class="layui-btn layui-btn-primary layui-border-black">重启系统</button>-->
+</div>
+
+<script>
+document.getElementById('sys').classList.add("layui-this");
+document.getElementById('script').classList.remove("layui-this");
+document.getElementById('xyz').classList.remove("layui-this");
+
+</script>
+{% end %}
