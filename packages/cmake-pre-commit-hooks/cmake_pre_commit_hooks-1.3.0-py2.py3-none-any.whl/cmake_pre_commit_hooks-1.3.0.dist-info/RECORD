@@ -1,0 +1,12 @@
+cmake_pc_hooks/__init__.py,sha256=nbD63WIemTEVnplSp18EdMeGmgjal1GihX4P-LNP6KE,601
+cmake_pc_hooks/_utils.py,sha256=GIWCiZc0m3HuUmE3T7v76TCbKuzqAid42EVFVtNCH9c,14022
+cmake_pc_hooks/clang_format.py,sha256=E7MTshM0YlrHYRIO6IZjMfL47RxoDBrMNTK-ZdIf03s,716
+cmake_pc_hooks/clang_tidy.py,sha256=5QXfw3Cb7yYpGDEoKGkRMdF0Dbi2VQoca3HPiAoZkMA,1618
+cmake_pc_hooks/cppcheck.py,sha256=3P6DOl76rSC0F2bNHw10G6vqMJxa8GxfmMJWtWmkkFU,2352
+cmake_pc_hooks/include_what_you_use.py,sha256=jJEkXj6eYVW0QnHDZaMyRP6dvFu7XZFgk7NJT5Npztk,4553
+cmake_pre_commit_hooks-1.3.0.dist-info/LICENSE,sha256=f_82pNieh4KVqI3swn0ruiI3ojBhFHrZ3hChGobOXzA,11341
+cmake_pre_commit_hooks-1.3.0.dist-info/METADATA,sha256=wkyePYdG5yCDc8H7ldqz75Gx-uJgZ7d1I_z6xCDRwk4,11874
+cmake_pre_commit_hooks-1.3.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+cmake_pre_commit_hooks-1.3.0.dist-info/entry_points.txt,sha256=NOmxjY5hM4jntSUEmeIeWMG_bKPhISZ50jQGP74cCUo,271
+cmake_pre_commit_hooks-1.3.0.dist-info/top_level.txt,sha256=3fc7-o2L606c6YIkZuE9vG3ZZWQarynuVWm4_1vqGA4,15
+cmake_pre_commit_hooks-1.3.0.dist-info/RECORD,,
