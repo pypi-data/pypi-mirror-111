@@ -1,0 +1,27 @@
+ppe_match/README.md,sha256=g1lHP8fQRwk6S5EP2q4rGaKWjNzVyW7gzxfuUbW0-QU,300
+ppe_match/__init__.py,sha256=G-ud3xK1U9LUfdfskr58FNKDcyF31ILPoFViwhgxV0A,135
+ppe_match/simulation.py,sha256=sLUSMrmj_5C2XjjKbmGXWGN8BmuM2xgAZKawBhQL_4M,12888
+ppe_match/strategies.py,sha256=ieo-T_kBm7zq82DRTDXGE0APdBR2s_vXYLQDnpVXn3k,3847
+ppe_match/data/README.md,sha256=lOPMXT0CxfK64B3kdEVWlVZBdWC7VhhKb5OVBk4XY64,2272
+ppe_match/data/anon_distance_matrix.csv,sha256=19q3qrIPVFdby4f467BO0ErNSwA-BGp3P8jGGu_LHT0,103013447
+ppe_match/data/anon_donors.csv,sha256=ayd9TfXwTbRomk97wMOGRG2Un_2rLVkqDP7lXo2IdRo,100750
+ppe_match/data/anon_recipients.csv,sha256=GONMf2xLK28nPZ0di4N2_zIohp7UpvYUIHAcUDK4wfI,1918130
+scripts/README.md,sha256=z8gDtv6o55dl6kPs2ff-cSmNLN3yh7F0yDfi2OCVOHw,427
+scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scripts/test1.py,sha256=UbRETXXau8J6RIdf5SmafH1SBxUTUr8h4KMuKxuubTs,1714
+scripts/test2.py,sha256=MROYoXetfr1-zTnwPBzQvMeU4vJCk2Vtk1_t-6XODKk,1295
+scripts/tests solved manually - old.xlsx,sha256=9sWkLsFr7RGbDYwUFPjaStQcX7aqy0PAFNl-D5uPO6s,21215
+scripts/tests solved manually.xlsx,sha256=FLEzuQzJM8tzLAa_sM9Vn2UyQSQv_V4gFAtG6GM4R24,16452
+scripts/test_data/test1/Table1.csv,sha256=tyma5gRZcdrMzS8TwY8V2lFTdDaO1lyYzUjJLnYO4U4,315
+scripts/test_data/test1/Table2.csv,sha256=0GZzGs-JQQWztUDQIQX0YwV893TbEAfEuVdQMS3xwzE,203
+scripts/test_data/test1/Table3.csv,sha256=iTHfhL1CBivwJWLZO8YmlTA_ekMDGXlKhcgxFl5tYx0,92
+scripts/test_data/test1/Table4.csv,sha256=Ra7JIHBrWQvf3MAXBV0t1j10tO88tcy55t6d0edWZ7I,248
+scripts/test_data/test2/test_decisions.csv,sha256=4ivxePRUEXNpPRk3VaBOhev42y9SGxUc5hKHttxOutk,246
+scripts/test_data/test2/test_distance.csv,sha256=fKsb1jjVXvCVeRMWn_izZyiHUthrgBKDDoRL_1B8wiE,70
+scripts/test_data/test2/test_donors.csv,sha256=g-zTRyHIq0shNVLjrMvVhRyLvtOh4bSJUVgzqkUlBrA,205
+scripts/test_data/test2/test_recipients.csv,sha256=rlpMajCuZbO-YY1OzYfvrz54XKVlZpiJvt2GI7M0RI4,144
+ppe_match-0.1.2.2.dist-info/LICENSE.txt,sha256=hCOWa5lbOCVhwg5KYo6pQFhBgVu24tBDb1inwBCNlUc,1039
+ppe_match-0.1.2.2.dist-info/METADATA,sha256=8n6Zguixw7xqGeceWh7fGr0EfW7H3JNceXBAKOWiiZw,8769
+ppe_match-0.1.2.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ppe_match-0.1.2.2.dist-info/top_level.txt,sha256=vALZ5Cx2djl06Zev6hSLBml8BSobe9WE2d0qmUOE_Zk,18
+ppe_match-0.1.2.2.dist-info/RECORD,,
