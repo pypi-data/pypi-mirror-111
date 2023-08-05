@@ -1,0 +1,27 @@
+{% extends 'aa_forum/base.html' %}
+
+{% load aa_forum_versioned_static %}
+{% load evelinks %}
+{% load static %}
+{% load i18n %}
+
+{% block page_title %}{% translate 'Forum' %}{% endblock %}
+
+{% block aa_forum_header %}
+    <br>
+
+    {% include "aa_forum/partials/menu.html" %}
+    {% include "aa_forum/partials/breadcrumb.html" %}
+{% endblock %}
+
+{% block aa_forum_body %}
+    {% include 'aa_forum/partials/forum/forum-index.html' %}
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% versioned_static 'aa_forum/css/aa-bootstrap-fix.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% versioned_static 'aa_forum/css/aa-forum.min.css' %}">
+{% endblock %}
+
+{% block extra_javascript %}
+{% endblock %}
