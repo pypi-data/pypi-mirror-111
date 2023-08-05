@@ -1,0 +1,13 @@
+diskimage/__init__.py,sha256=DsAHdxLC16H2VjdFOU5tBx2xT9VnNQ-XbTS24fRCa_w,22
+diskimage/__main__.py,sha256=D78BCZ_kbk157vuTHbYlIBPJ7yAr2fJlI1-4_by2EW8,1540
+diskimage/diskimage.py,sha256=RMAOntOd5aEsGZ6nVDQDoy9MvtmGLG7r-oh084gt4CE,15237
+diskimage/filesystem.py,sha256=dRHwFEnDaxV-gNIszYjBI63U5iFWuOn3xqegapmUyfE,11296
+diskimage/item.py,sha256=LMynGHev56USnvv83mLHOSR6GQxxC2HNFaflMAASUz4,1924
+diskimage/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+diskimage/tests/test_diskimage.py,sha256=wNClQ_uLAq5JgcCM_eljGcYXsZJs4WAwxhjgGuOU4D8,3868
+diskimage-0.0.1.dist-info/LICENSE,sha256=dh9XggjVcS0e96LXWY_J_FlK2ehfN848U-BWubHd3_8,1069
+diskimage-0.0.1.dist-info/METADATA,sha256=iHpUntMku6sJalnWLfD3YgAdcc8USamStdLVATbgYyA,2140
+diskimage-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+diskimage-0.0.1.dist-info/entry_points.txt,sha256=zEy3Jf3kIdqGFPR4dG4WnWTJKX5RDkzQSEIOQioxzYw,48
+diskimage-0.0.1.dist-info/top_level.txt,sha256=jm9sziOvCR2L-fQPIM6aXiJfLfZNI_us3YgObjouk8A,10
+diskimage-0.0.1.dist-info/RECORD,,
