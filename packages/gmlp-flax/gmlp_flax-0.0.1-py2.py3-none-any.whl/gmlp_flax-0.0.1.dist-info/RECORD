@@ -1,0 +1,10 @@
+gmlp_flax/__init__.py,sha256=O0knykObVqn_OvUgKk1F-t36cJ-aSs-Atp-We3E-jy4,114
+gmlp_flax/layers.py,sha256=E9xM5hWlhfDL2OA7nnsWGhTSfltQB7sEUwFD9wVtItw,1977
+gmlp_flax/model.py,sha256=rlEL6X5-qNl3btOAgFpwXPW7ZDuj93R7ptP_2RLyBwI,3276
+gmlp_flax/utils.py,sha256=vaeO-84EvpFyXzqSKagSihVzDtkP3ELQ7eYaZAnQ1Xc,1439
+gmlp_flax-0.0.1.dist-info/LICENSE,sha256=ozO3vHlXNpVJ_GEYVg-PJq7tU9isIunB7oICG31-tcQ,1073
+gmlp_flax-0.0.1.dist-info/METADATA,sha256=pmeX35SrVA_vMhL_OZ6WjpZhJPpAP-bmkHc6B5RCawc,2203
+gmlp_flax-0.0.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+gmlp_flax-0.0.1.dist-info/top_level.txt,sha256=Y8qU7LdHtlQIdhkjYnjChn7yGdp6igLcuM5wYwkaX98,10
+gmlp_flax-0.0.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+gmlp_flax-0.0.1.dist-info/RECORD,,
