@@ -1,0 +1,13 @@
+air_drf_relation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+air_drf_relation/fields.py,sha256=grcXnNxHSeznWefBx03MQW4yje4-T2wmTh-cwYPigpw,1457
+air_drf_relation/serializers.py,sha256=uCQXmehuikzlPFRpX8x_n3WdYGDIc24cEnn9OK--yMw,3328
+air_drf_relation/utils.py,sha256=x26PuwcyfOrCOp0ZhFy5IVmxl109c1dhdomalnQs118,576
+air_drf_relation/__pycache__/__init__.cpython-39.pyc,sha256=MjXXJzVFpg8GFVTFiUvsZQVagvg5Ii_c5btggraoRKc,173
+air_drf_relation/__pycache__/fields.cpython-39.pyc,sha256=W7k3L_TkSwhaiBCJkNJMN55omVNLoYdCqqDbCvz1gHE,1886
+air_drf_relation/__pycache__/serializers.cpython-39.pyc,sha256=BGWh2HJeczB0-12EUe-eGf9diY8DoHxNSHpefbnHtb4,3174
+air_drf_relation/__pycache__/utils.cpython-39.pyc,sha256=IM45Y7nd9HBlR5XEqNxKGGxE8ys8bGAlHMyGEgsqd-U,734
+air_drf_relation-0.0.10.dist-info/LICENSE,sha256=GBi9NVlyGO21xrAM71vXG8vbjyxVej6te8PykmxWEPk,1074
+air_drf_relation-0.0.10.dist-info/METADATA,sha256=AqnYGrxKD2H3FIJ_4cdO1BSH5xzaaJpn5f2sU8CoHl0,483
+air_drf_relation-0.0.10.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+air_drf_relation-0.0.10.dist-info/top_level.txt,sha256=mxlZ6Na1uQFPx7tDppZvhmvjr3QY4_KOGUfymu5jFvA,17
+air_drf_relation-0.0.10.dist-info/RECORD,,
