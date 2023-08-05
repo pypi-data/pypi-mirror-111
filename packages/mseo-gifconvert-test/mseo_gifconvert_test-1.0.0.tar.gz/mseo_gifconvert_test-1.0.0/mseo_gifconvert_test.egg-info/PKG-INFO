@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: mseo-gifconvert-test
+Version: 1.0.0
+Summary: Test package __mseo
+Home-page: UNKNOWN
+Author: mseo
+Author-email: mseo@mvista.com
+License: UNKNOWN
+Keywords: GIFCONVERTER,gifconverter
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+License-File: LICENSE
+
+UNKNOWN
+
