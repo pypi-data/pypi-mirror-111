@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: thankyou
+Version: 0.0.1
+Summary: Python module to print Thank You in every known language.
+Home-page: https://github.com/mariofix/thankyou
+Author: Mario Hernandez
+Author-email: mariofix@pm.me
+Requires-Python: >=3.7,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Project-URL: Repository, https://github.com/mariofix/thankyou
+Description-Content-Type: text/markdown
+
+# thanks
+Python module to print "Thanks/Thank you" in every known language.  
+Install it, import it and use it with 
+```python
+from thankyou import give_thanks
+thanks = give_thanks()
+```
+
