@@ -1,0 +1,3 @@
+include README.md
+include Moodipy/emotions.txt
+recursive-include Moodipy/imgs *
