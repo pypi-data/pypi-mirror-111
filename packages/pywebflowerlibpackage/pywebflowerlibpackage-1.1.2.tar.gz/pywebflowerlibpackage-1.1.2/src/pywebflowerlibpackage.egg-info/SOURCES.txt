@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/pywebflowerlibpackage/__init__.py
+src/pywebflowerlibpackage/dummy.py
+src/pywebflowerlibpackage.egg-info/PKG-INFO
+src/pywebflowerlibpackage.egg-info/SOURCES.txt
+src/pywebflowerlibpackage.egg-info/dependency_links.txt
+src/pywebflowerlibpackage.egg-info/top_level.txt
