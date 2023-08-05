@@ -1,0 +1,8 @@
+webspray/lib/logger.py,sha256=92G16wBBFkNP7-8wqFNhEm8bNweU9sbGNSLfNqCpKY0,2952
+webspray/lib/threadpool.py,sha256=ZOtJwcH26pqAnrfLcsspU5cTzsazyzR9Q7DK5c3vBuM,3085
+webspray/webspray.py,sha256=a6tfhAccRwKlsamsO_tJQQiWbdzItNgfDbQauEcPKGc,10525
+webspray-1.0.0.dist-info/entry_points.txt,sha256=cfnBD56Pq6j1bTR9JmI4flnjA-ik-Fr-Lah9DtY2CbY,49
+webspray-1.0.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+webspray-1.0.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+webspray-1.0.0.dist-info/METADATA,sha256=agdI3Rvn9mHa0xw8pQq7GS_X7sfSPI-FHt-9ng0_AtU,775
+webspray-1.0.0.dist-info/RECORD,,
