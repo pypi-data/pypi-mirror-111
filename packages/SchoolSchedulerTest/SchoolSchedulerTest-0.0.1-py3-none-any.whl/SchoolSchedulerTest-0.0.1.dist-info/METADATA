@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: SchoolSchedulerTest
+Version: 0.0.1
+Summary: A schoolscheduler app
+Home-page: https://github.com/jaberrio/SchoolScheduler
+Author: Several Authors
+Author-email: michael.berry@ufl.edu
+License: UNKNOWN
+Project-URL: Source, https://github.com/jaberrio/SchoolScheduler
+Project-URL: Bug Tracker, https://trello.com/b/G1f61mAc/school-scheduler
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: PyQt5
+
+UNKNOWN
+
