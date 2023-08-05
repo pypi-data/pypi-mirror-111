@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+panduza/__init__.py
+panduza/pipe/__init__.py
+panduza/pipe/alias.py
+panduza/pipe/io.py
+panduza/pipe/server.py
+panduza_pipe.egg-info/PKG-INFO
+panduza_pipe.egg-info/SOURCES.txt
+panduza_pipe.egg-info/dependency_links.txt
+panduza_pipe.egg-info/top_level.txt
