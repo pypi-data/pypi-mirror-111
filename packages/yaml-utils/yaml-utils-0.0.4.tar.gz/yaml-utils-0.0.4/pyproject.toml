@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "yaml-utils"
+version = "0.0.4"
+description = "This package will help to read and get parent key & target value for given target key from yaml"
+authors = ["Muralidharan Rajendran <muraleedharan005@gmail.com>"]
+readme = 'README.md'
+license = "MIT"
+repository = "https://github.com/muralidharan92/yaml-util"
+keywords = ['yaml-utils', 'yml-utils', 'yaml', 'yml', 'utils']
+
+include = [
+    "LICENSE",
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+PyYAML = "^5.4.1"
+
+[tool.poetry.dev-dependencies]
+pytest = {version="^5.2", python = ">=3.7,<4.0"}
+toml = "^0.10.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
