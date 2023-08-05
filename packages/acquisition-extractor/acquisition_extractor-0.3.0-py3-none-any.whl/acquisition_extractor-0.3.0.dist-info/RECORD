@@ -1,0 +1,13 @@
+acquisition_extractor/__init__.py,sha256=FN6g_BDcpURMRHLGQmjTRbMfdolxg6_w-ddnmu0ry3o,105
+acquisition_extractor/__main__.py,sha256=JdM3OEI-bznrOxSV2FAjzxcg_VMeh8NbmFw4E7eUL_k,2514
+acquisition_extractor/decisions.py,sha256=yUNzBQJnC2V_FkKWdFYJiZ3yhaaAwbZO5gG7o3wyF80,1447
+acquisition_extractor/statute_parts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+acquisition_extractor/statute_parts/body.py,sha256=KOJ4IFd-Hz7Hh5ndwIM_UBdxlXqSwrI1rg5TL4NTGs8,2147
+acquisition_extractor/statute_parts/helpers.py,sha256=uJKUSRg5kutJvZgxnMQU5AIA-0-FhVGJrU5kTCZ0B8s,3319
+acquisition_extractor/statute_parts/meta.py,sha256=VT8fLY3A0yiaQUWMex6uXTa0TS5OBuz9KaOm0CDWHbY,1403
+acquisition_extractor/statute_parts/partials.py,sha256=gucQtriC352HebB--gwxUDwJ0mBuXeN-F6tYi1VgekE,1952
+acquisition_extractor/statute_parts/title.py,sha256=pTrlonoSHADISxMxoGtnirubDKeL320vF4-obeFPQhU,1651
+acquisition_extractor/statutes.py,sha256=w9w19u5Y7CG4g9O5sgzZE7EDhRmBOVjFlTH27smzFWo,5918
+acquisition_extractor-0.3.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+acquisition_extractor-0.3.0.dist-info/METADATA,sha256=1RTlN9CXqkoiAnm3ougqVWhxSHelfFsSiabeBI0ERA0,440
+acquisition_extractor-0.3.0.dist-info/RECORD,,
