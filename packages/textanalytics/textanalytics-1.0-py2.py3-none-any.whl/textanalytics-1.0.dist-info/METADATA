@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: textanalytics
+Version: 1.0
+Summary: Basic text analytics and natural language processing in Python
+Home-page: https://github.com/jonathandunn/text_analytics
+Author: Jonathan Dunn
+Author-email: jonathan.dunn@canterbury.ac.nz
+License: GNU GENERAL PUBLIC LICENSE v3
+Keywords: text analytics,natural language processing,computational linguistics,text classification,text similarity
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: cytoolz
+Requires-Dist: gensim
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: sklearn
+Requires-Dist: tensorflow
+Requires-Dist: spacy
+Requires-Dist: wordcloud
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+
+# text_analytics
+Basic text analytics and natural language processing in Python
+
+This package provides code to support introductory courses in text analytics or natural language processing. These courses are available free on edX:
+
+[**Introduction to Text Analytics and Natural Language Processing with Python**](https://www.edx.org/course/introduction-to-text-analytics-with-python)
+
+[**Visualizing Text Analytics and Natural Language Processing with Python**](https://www.edx.org/course/visualizing-text-analytics-with-python)
+
+
