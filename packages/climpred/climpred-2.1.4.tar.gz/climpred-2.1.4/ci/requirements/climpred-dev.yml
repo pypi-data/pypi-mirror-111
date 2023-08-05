@@ -1,0 +1,57 @@
+name: climpred-dev
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python>=3.7
+  # Documentation
+  - nbsphinx
+  - nbstripout
+  - sphinx_rtd_theme
+  - sphinx
+  - sphinxcontrib-napoleon
+  # IDE
+  - ipywidgets
+  - jupyterlab
+  - nb_conda_kernels # switch conda envs in jupyter
+  # Input/Output
+  - netcdf4
+  # Miscellaneous
+  - lxml
+  - tqdm
+  - cftime>=1.1.2 # Optimization changes to make cftime fast
+  # Numerics
+  - numpy
+  - pandas
+  - scipy
+  - xarray
+  # Package Management
+  - asv
+  - black==19.10b0
+  - coveralls
+  - flake8
+  #- importlib_metadata
+  - isort
+  - pre-commit
+  - pylint
+  - pytest
+  - pytest-cov
+  - pytest-sugar
+  # Performance
+  - bottleneck
+  - numba
+  - dask
+  # Regridding
+  - esmpy=*=mpi*  # Ensures MPI works with version of esmpy.
+  - xesmf
+  # Statistics
+  - eofs
+  - esmtools>=1.1.3
+  - xskillscore>=0.0.19
+  # Visualization
+  - matplotlib-base
+  - nc-time-axis
+  - pip
+  - pip:
+      - pytest-lazy-fixture
+      - nb_black  # notebook linting
