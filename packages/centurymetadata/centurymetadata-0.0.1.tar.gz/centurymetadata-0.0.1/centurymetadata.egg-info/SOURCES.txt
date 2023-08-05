@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+centurymetadata/__init__.py
+centurymetadata/constants.py
+centurymetadata/decode.py
+centurymetadata/encode.py
+centurymetadata/key.py
+centurymetadata.egg-info/PKG-INFO
+centurymetadata.egg-info/SOURCES.txt
+centurymetadata.egg-info/dependency_links.txt
+centurymetadata.egg-info/top_level.txt
