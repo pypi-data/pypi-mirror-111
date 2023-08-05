@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+bothive/__init__.py
+bothive/main.py
+bothive.egg-info/PKG-INFO
+bothive.egg-info/SOURCES.txt
+bothive.egg-info/dependency_links.txt
+bothive.egg-info/not-zip-safe
+bothive.egg-info/top_level.txt
