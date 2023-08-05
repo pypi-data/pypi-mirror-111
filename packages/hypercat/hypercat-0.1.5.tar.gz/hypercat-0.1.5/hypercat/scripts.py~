@@ -1,0 +1,5 @@
+from subprocess import check_call
+
+def hypercatgui() -> None:
+    check_call( ["python", "hypercat/hypercatgui.py"] )
+
