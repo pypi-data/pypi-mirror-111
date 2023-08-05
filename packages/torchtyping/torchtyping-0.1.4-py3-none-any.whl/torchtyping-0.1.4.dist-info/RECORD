@@ -1,0 +1,12 @@
+torchtyping/__init__.py,sha256=Q9TwWJysIeVoZjvtN6zgNTwcYE7trsnGGxJwjIPmHTc,231
+torchtyping/pytest_plugin.py,sha256=khU-ky6TTwnWFV6duJu41DUX13MvXX5Zwy5fL9HR6Ho,378
+torchtyping/tensor_details.py,sha256=VpPn_XhkJoI69myAsYk1lHw6zHcSshk9JT5bt07ALw0,5570
+torchtyping/tensor_type.py,sha256=yRuWXHScF0aK9Uxx4kFs165uq9BFjH3iwcFWUjdZxNI,6060
+torchtyping/typechecker.py,sha256=lLHdpJEkF2tyK8cR_lCz_QQgkrci8hOSST_pEGocYcY,16938
+torchtyping/utils.py,sha256=XfEr9h64PV3N3kAysIRg6irgJNNyVlrisp8mTTapzC0,659
+torchtyping-0.1.4.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+torchtyping-0.1.4.dist-info/METADATA,sha256=WPdDioutqyngzayQ8alYg_q7AAK89NlicdrJkiX4qZY,9174
+torchtyping-0.1.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+torchtyping-0.1.4.dist-info/entry_points.txt,sha256=JAUuu7rLmMpMD5703l42d9iiChWwCxtUWYU6PJ-Qopc,52
+torchtyping-0.1.4.dist-info/top_level.txt,sha256=J005ikEB7hx_2nmflccJBVQYwGRaSQeF1otZxXjANCs,12
+torchtyping-0.1.4.dist-info/RECORD,,
