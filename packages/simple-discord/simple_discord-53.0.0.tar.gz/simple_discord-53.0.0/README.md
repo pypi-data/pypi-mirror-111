@@ -1,0 +1,1 @@
+This library provides the one of the easiest ways to make Discord bots. You can make a functioning bot in just 4 lines of code. To learn how to use this library, please go to https://github.com/TricolorHen061/simple-discord
