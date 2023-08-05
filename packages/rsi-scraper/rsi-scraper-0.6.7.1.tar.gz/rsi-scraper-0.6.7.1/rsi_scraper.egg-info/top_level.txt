@@ -1,0 +1,2 @@
+rsi_scraper
+tests
