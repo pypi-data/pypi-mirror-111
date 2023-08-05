@@ -1,0 +1,136 @@
+Metadata-Version: 2.1
+Name: ccfrobot
+Version: 0.2.6
+Summary: Cloud Code Framework Robot
+Home-page: https://bitbucket.org/inno-on/ccfrobot
+Author: Tiara Rodney - Innovations ON GmbH
+Author-email: t.rodney@inno-on.de
+License: UNKNOWN
+Project-URL: Bug Tracker, https://bitbucket.org/inno-on/ccfrobot/issues
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: jsonschema (==3.2.0)
+Requires-Dist: PyYAML (==5.4.1)
+Requires-Dist: pyhcl (==0.4.4)
+
+# ccfrobot
+
+The `ccfrobot` (Cloud Code Framework Robot) is a programmable automaton for automating creative tasks that occur when working with the [Cloud Code Framework (CCF)](). It implements all CCF models, as well as skills, that are not destructive. In addition, it offers a *CLI*, as well as *HTTP-REST* APIs.
+
+It is authored in *Python3* and is compatible with UN*X, as well as NT platforms.
+
+## Licensing
+
+This software is licensed under the open-source copyleft *GNU Affero General Public License*. Please refer to the [`LICENSE`](LICENSE) file at the repository root for more information.
+
+## Support
+
+Commercial support is available through the [Innovations ON GmbH](https://inno-on.de). Innovations ON is a managed cloud provider, as well as multi-cloud consultancy, located in Germany.
+
+Contact <<t.rodney@inno-on.de>>, for more information.
+
+## Installation & Usage
+
+ccfrobot is being installed as a Python3 module, which can then be called e.g.  via CLI like`python3 -m ccfrobot create framework .`. There are multiple ways on how to install a Python3 module. Please refer to the [`INSTALL`](INSTALL) file for more information on standard installations.
+
+For more information on utilization, please refer to the official documentation of [`ccfrobot`](), as well as the Cloud Code Framework specifications ([`ccfspec`]()).
+
+## Development
+
+This project provides an *Integrated Development Environment* (IDE) for UN*X and NT platforms.
+
+### Isolated Development 
+
+Isolated development does not require interfacing with other applications. If e.g. the development tasks one has to undertake requires interfacing with the `aws-cli` or `terraform`, then this is not an isolated development task. Isolated development, in most cases, is platform-agnostic, meaning that it can be done on either UN*X, or NT platform without any real means of virtualization.
+
+Isolated development can be done through `pipenv`.
+
+1. Install `pipenv` (through PyPI/pip), by executing `pip install --upgrade pipenv`.
+
+2. Install development dependencies by first creating a `.venv/` directory inside the repository base directory (not required<sup>1</sup>), then executing `pipenv install -d .`.
+
+3. For an interactive shell session, execute `pipenv shell`.
+
+> <sup>1</sup> if one creates a .venv directory, `pipenv` will install all dependencies inside said directory, instead of in a pipenv-managed directory.
+
+### Integrative Development
+
+Integrative development. in contrast to isolated development, requires interfacing with other applications.
+
+Integrative development can be done through `docker`.
+
+1. Build the `ccfrobot` Docker development image by executing `docker build -t local/ccfrobot-devel -f Dockerfile.devel .`
+
+2. To create an interactive<sup>1</sup> container, execute `docker run -it -v "$( pwd ):/root" local/ccfrobot-devel /bin/sh` on UN*X paltforms, or `docker run -it -v "$()":/root" local/ccfrobot-devel /bin/sh` on NT platforms.
+
+If you want to statically lock all integration requirements within a Docker image, create a new `Dockerfile`<sup>1</sup> that references the previously created `local/ccfrobot-devel` (`FROM local/ccfrobot-devel`) and install all integration requirements accordingly.
+
+> <sup>1</sup> mount the repository base directory to the `root`'s home directory (`/root/`), enabling one to execute the application inside the container, whilst modifying the source code on the local system.
+
+## Testing
+
+Testing assures, that an application functions as intended by design. One can also use testing as a development guideline, in order to design application components (functions, classes, objects, etc.), that are isolated and self-reliant, and therefore easy to test.
+
+A testing suite is a structured collection of tests, that can be executed in an arbitrary order.
+
+A test coverage report reflects on what, and how many of the actual code execution (and therefore source code) has been tested. It is this project's goal to reach a testing coverage of at least 90%.
+
+This project uses `tox`, `pytest`, and `pytest-cov` for testing, in accordance with the guidelines layed out by the Python Packaging Authority (PyPA). 
+
+### Suite
+
+To execute the entire `ccfrobot` (unit, and integration) testing suite, execute `pipenv run tox -e unit`. This will also create *junit* compatible test-reports in XML format. Alternatively, execute the following command:
+
+```sh
+pipenv run \
+	pytest \
+		-v \
+		--junitxml=test-reports/tox-integration.xml
+```
+
+If you want to run a single test, e.g. `tests/model/test_framework.py::Test__init::test_pass0`, execute:
+
+```sh
+pipenv run \
+	tox -e 'unit' -- \
+		'tests/model/test_framework.py::Test__init::test_pass0'
+```
+
+### Coverage
+
+To generate a test-coverage report (in HTML format) for the entire Python `ccfrobot` package, execute `pipenv run tox -e coverage`. Alternatively, execute the following command:
+
+```sh
+pipenv run \
+	pytest \ 
+		-v \
+		--cov=ccfrobot \
+		--cov-report html:test-reports/coverage.html
+```
+
+## Documentation
+
+Documentation gives information to developers, as well as users, on how to interact with the application. This software's documentation is authored using Restructured Text (ResT) and `sphinx` and can be exported to a number of formats, including HTML, Markdown, LaTex, as well as PDF.
+
+Documentation can be generated through `pipenv`.
+
+1. Install `pipenv` (through PyPI/pip), by executing `pip install --upgrade pipenv`.
+
+2. Create `./docs/.venv` (not required), and change your working directory to `./docs`. Then, execute `pipenv install -d`.
+
+3. Execute `pipenv run make html`<sup>1</sup>, to generate documentation in HTML format on UN*X platforms, or `pipenv make.bat html` on NT platforms.
+
+4. The generated documentation can be found under `./build/docs`.
+
+> <sup>1</sup> On UN*X platforms, this requires `GNU make` to be installed.
+
+## Distribution
+
+The package is meant to be made available via PyPI.
+
+
+- `TWINE_USERNAME`
+- `TWINE_PASSWORD`
+
