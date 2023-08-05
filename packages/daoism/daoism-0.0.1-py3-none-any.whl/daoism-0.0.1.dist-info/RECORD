@@ -1,0 +1,8 @@
+youdao/__init__.py,sha256=uKAXAxwuRK2nUWVyhTz89vuPPAJQydVCjgQPx4epeRQ,480
+youdao/auth.py,sha256=fCDXIfjbFWp7sFTtNdpUlM4PfHYEkj6V_FFBGhxJL9c,988
+youdao/model.py,sha256=wIfYGgiFi5_CoJYbtLEXcPsJwgF0jW6dkuYhlbEEKrw,398
+youdao/requester.py,sha256=CS9TGUMqAJ1d8tvDKuHgOO8y2AxYewI6pN90boq6AYA,1374
+daoism-0.0.1.dist-info/METADATA,sha256=Q4rtSI5HRhv_53u_Uy7sigHpSUVPDwTgw4N2WZIHCGc,719
+daoism-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+daoism-0.0.1.dist-info/top_level.txt,sha256=tbrK95YETh4WRFXV9u5auHspR4hjp0ZlqQNUrfJ_aUc,7
+daoism-0.0.1.dist-info/RECORD,,
