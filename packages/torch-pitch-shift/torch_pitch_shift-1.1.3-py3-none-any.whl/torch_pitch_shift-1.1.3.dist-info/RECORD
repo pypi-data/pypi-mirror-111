@@ -1,0 +1,6 @@
+torch_pitch_shift/__init__.py,sha256=8D5a8oKgqd6WA1RUkiKCn4l_PVemtyuckxQut0vDHXM,20
+torch_pitch_shift/main.py,sha256=Gq6qMDHKahCOLU1QhO99rYGcJ47GlJhMXETB45RuUcM,4778
+torch_pitch_shift-1.1.3.dist-info/METADATA,sha256=8KKEbFrnubZ-11wWzQDZPzR6fg01Bgi_XNWGFYsldhQ,2154
+torch_pitch_shift-1.1.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+torch_pitch_shift-1.1.3.dist-info/top_level.txt,sha256=v_Z-yk0tDLEv4exr-ByXtWPwFNZzDtTJl1RjL-NlZU0,18
+torch_pitch_shift-1.1.3.dist-info/RECORD,,
