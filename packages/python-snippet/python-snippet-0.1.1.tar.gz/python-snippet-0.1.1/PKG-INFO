@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: python-snippet
+Version: 0.1.1
+Summary: Python and Data Science Snippets on the command line
+Home-page: https://github.com/khuyentran1401/python_snippet.git
+License: Apache-2.0
+Keywords: snippet,cli,command-line
+Author: khuyentran1401
+Author-email: khuyentran1476@gmail.com
+Requires-Python: >=3.6.2,<3.10
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: bs4 (>=0.0.1,<0.0.2)
+Requires-Dist: questionary (>=1.9.0,<2.0.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Requires-Dist: rich (>=10.4.0,<11.0.0)
+Requires-Dist: textdistance (>=4.2.1,<5.0.0)
+Requires-Dist: typer (>=0.3.2,<0.4.0)
+Requires-Dist: typer-cli (>=0.0.11,<0.0.12)
+Project-URL: Repository, https://github.com/khuyentran1401/python_snippet.git
+Description-Content-Type: text/markdown
+
+# Python Snippet Tool
+
+A tool to get Python and data science snippets at [Data Science Simplified](https://mathdatasimplified.com/) on the command line. 
+
+## Installation
+```bash
+pip install --user python-snippet
+```
