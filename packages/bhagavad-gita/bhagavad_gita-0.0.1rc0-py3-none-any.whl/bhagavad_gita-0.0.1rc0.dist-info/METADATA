@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: bhagavad-gita
+Version: 0.0.1rc0
+Summary: 
+Author: aahnik
+Author-email: daw@aahnik.dev
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
