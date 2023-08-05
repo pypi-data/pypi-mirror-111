@@ -1,0 +1,11 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_wizcon.py,sha256=_YZF3GAbV1mGotBBM5VUFE20klD3L4idLshD10i2_Tk,5905
+wizcon/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wizcon/test_wizcon.py,sha256=QTXRLgZ4vnAyZOWyVH_btHuKwqH78cy09idDvnOz2P4,6234
+wizcon/wizcon.py,sha256=D22l57YdsVKRRdjXadvT1LZFWv78VtOncZvFAXU2yWA,3985
+wizcon-0.2.1.dist-info/LICENSE.txt,sha256=C3BBg8r_hWY1VK7_SmhCU45Ly5by15CBu3C9EZAil5s,1093
+wizcon-0.2.1.dist-info/METADATA,sha256=5zNiqIPd0rF--xurnbXSq8f5z277PtPLVmY2q9cxILg,3667
+wizcon-0.2.1.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+wizcon-0.2.1.dist-info/entry_points.txt,sha256=m5M11BRABJml3nBHWWSvkIg1AcgS_78GQwz1lvMEkU8,53
+wizcon-0.2.1.dist-info/top_level.txt,sha256=qz_eOiFaEqn9V6jfD5059GTHvBzTeAvrU_LDop9Y3Ow,13
+wizcon-0.2.1.dist-info/RECORD,,
