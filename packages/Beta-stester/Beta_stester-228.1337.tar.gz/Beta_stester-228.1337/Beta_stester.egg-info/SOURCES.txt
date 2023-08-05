@@ -1,0 +1,7 @@
+setup.cfg
+setup.py
+Beta_stester/__init__.py
+Beta_stester.egg-info/PKG-INFO
+Beta_stester.egg-info/SOURCES.txt
+Beta_stester.egg-info/dependency_links.txt
+Beta_stester.egg-info/top_level.txt
