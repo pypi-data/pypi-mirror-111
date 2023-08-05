@@ -1,0 +1,8 @@
+README.md
+setup.py
+scrapyx_bright_data/__init__.py
+scrapyx_bright_data/bright_data.py
+scrapyx_bright_data.egg-info/PKG-INFO
+scrapyx_bright_data.egg-info/SOURCES.txt
+scrapyx_bright_data.egg-info/dependency_links.txt
+scrapyx_bright_data.egg-info/top_level.txt
