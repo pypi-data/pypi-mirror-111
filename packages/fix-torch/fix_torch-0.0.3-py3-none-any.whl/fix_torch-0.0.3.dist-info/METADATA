@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: fix-torch
+Version: 0.0.3
+Summary: Quality of life improvements for pytorch.
+Home-page: https://github.com/Parskatt/fix_torch
+Author: Johan Edstedt
+Author-email: johan.edstedt@liu.se
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: torch
+Requires-Dist: torchvision
+
+# fix_torch
+
+Quality of Life improvements for pytorch
+
+
+Basically a combination of monkey-patches and additional functionality which is missing from pytorch.
+Use at your own *peril* :o 
+
+
+## Examples
+
+```python
+import fix_torch
+import torch
+
+x = torch.randn(13,127,12,3)
+y = torch.randn(13,127,3,17)
+v = torch.randn(8,4,4)
+
+z = x@y # do bmm without torch being annoying about it
+tr = torch.trace(v) # do trace on batched matrices
+
+w = x.reshape(...,4,3,3)
+
+```
+
+
