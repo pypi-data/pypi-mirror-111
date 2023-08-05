@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/GraDiAn.egg-info/PKG-INFO
+src/GraDiAn.egg-info/SOURCES.txt
+src/GraDiAn.egg-info/dependency_links.txt
+src/GraDiAn.egg-info/top_level.txt
+src/gradian/__init__.py
+src/gradian/compare_tree_counts.py
+src/gradian/count_trees.py
+src/gradian/sent_tree.py
+src/gradian/super_glue_datasets_analyser.py
+src/gradian/syntactic_dependency_counter.py
+src/gradian/utils.py
