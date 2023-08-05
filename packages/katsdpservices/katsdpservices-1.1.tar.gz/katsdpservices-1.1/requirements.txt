@@ -1,0 +1,6 @@
+-c https://raw.githubusercontent.com/ska-sa/katsdpdockerbase/master/docker-base-build/base-requirements.txt
+
+aiomonitor
+netifaces
+pygelf
+katsdptelstate @ git+https://github.com/ska-sa/katsdptelstate
