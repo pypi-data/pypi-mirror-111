@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+TileCycles.egg-info/PKG-INFO
+TileCycles.egg-info/SOURCES.txt
+TileCycles.egg-info/dependency_links.txt
+TileCycles.egg-info/not-zip-safe
+TileCycles.egg-info/requires.txt
+TileCycles.egg-info/top_level.txt
+tilecycles/Buch.py
+tilecycles/Dipole.py
+tilecycles/Rahman.py
+tilecycles/__init__.py
