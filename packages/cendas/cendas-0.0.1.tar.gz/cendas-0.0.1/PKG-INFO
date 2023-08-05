@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: cendas
+Version: 0.0.1
+Summary: A pandas-based framework optimized for analyzing data provided by the U.S. Census Bureau and other U.S. government agencies.
+Home-page: https://github.com/justinkim668/cendas
+Author: Justin Kim
+Author-email: jtk2141@columbia.edu
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
