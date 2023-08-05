@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pyreckless
+Version: 0.1.0
+Summary: Python Indicator Library for Automated Trading
+Home-page: UNKNOWN
+Author: onbirkod
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: numpy
+
+UNKNOWN
+
+
