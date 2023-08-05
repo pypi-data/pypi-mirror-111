@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: oneredis
+Version: 0.1.0
+Summary: Fast, simple, safe python wrapper for redis.
+Home-page: https://github.com/onebula/oneredis
+Author: onebula
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: ciso8601 (>=2.0.0)
+Requires-Dist: redis (>=3.5.0)
+Requires-Dist: orjson
+
+UNKNOWN
+
+
