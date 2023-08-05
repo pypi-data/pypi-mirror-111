@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: opengai
+Version: 0.0.0a0
+Summary: OpenGAI
+Home-page: https://github.com/OpenGAI/OpenGAI
+Author: OpenGAI
+Author-email: densechen@foxmail.com
+License: MIT License
+Download-URL: https://github.com/OpenGAI/OpenGAI/archive/main.zip
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: GPU :: NVIDIA CUDA :: 10.2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# OpenGAI
+
+
