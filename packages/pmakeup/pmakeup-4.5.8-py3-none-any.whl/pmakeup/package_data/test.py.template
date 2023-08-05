@@ -1,0 +1,42 @@
+import unittest
+
+from typing import Callable
+
+from io import StringIO
+from unittest.mock import patch
+import pmakeup as pm
+from pmakeup.main import configure_logging
+
+
+class MyTestCase(unittest.TestCase):
+
+    def assertStdout(self, expected: Callable[[str], bool], do: Callable[[], None]):
+        with patch("sys.stdout", new=StringIO()) as fake_out:
+            do()
+            self.assertTrue(expected(fake_out.getvalue().strip()))
+
+    def assertStdoutEquals(self, expected, do: Callable[[], None]):
+        with patch("sys.stdout", new=StringIO()) as fake_out:
+            do()
+            self.assertEqual(fake_out.getvalue().strip(), expected)
+
+    def assertStdoutContains(self, expected, do: Callable[[], None]):
+        with patch("sys.stdout", new=StringIO()) as fake_out:
+            do()
+            self.assertTrue(fake_out.getvalue().strip() in expected)
+
+    def assertStderrEquals(self, expected, do: Callable[[], None]):
+        with patch("sys.stderr", new=StringIO()) as fake_err:
+            do()
+            self.assertEqual(fake_err.getvalue().strip(), expected)
+
+    def test_your_package(self):
+        model = pm.PMakeupModel()
+        model.input_string = """
+            echo("pmakeup script to test")
+        """
+        self.assertStdoutEquals("pmakeup script to test", lambda: model.manage_pmakefile())
+
+
+if __name__ == '__main__':
+    unittest.main()
