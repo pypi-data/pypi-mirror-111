@@ -1,0 +1,15 @@
+touca/__init__.py,sha256=fMlL9T2IJSAgOPLIdiZfqIt51KRgTgIwdSnECiR-JM8,2377
+touca/_case.py,sha256=NwxkRhe_y5xVFkvgTiv2HzjRLgZ4VMBffMs3zxcaDXM,10457
+touca/_client.py,sha256=D9eojibYtrGFD_4qBsSswdXCqzcAc0N4JTQNdvWBnZI,16957
+touca/_options.py,sha256=OJXpjmmZJSMoZcUefGLgQaB9VHsZPWwfgNGpG42X-Vw,3322
+touca/_schema.py,sha256=qx1Ej9tr5a3X-7cJg6oRDHXrfrwf6mvOCuFLJwu6Lg4,24397
+touca/_transport.py,sha256=Zs1ngvzOPREtRQv4Rhfx5yf3gQ1rSlaKFyqse7YHtz8,3516
+touca/_types.py,sha256=JE8J5nvS5UT--2ZFshEIqF2bQ_JYMMY94c457eMvN4E,5683
+touca/_utils.py,sha256=F8hRaQJpN7hJ5mcF-8g4uGZrS1BfzGcAxwZNG7EC_xQ,372
+touca/_version.py,sha256=7zOT2HGnbV-4cYa-cWo-SmhpWV7m13sJ6uJK_NH7tVI,106
+touca/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+touca-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+touca-0.1.0.dist-info/METADATA,sha256=Wx1aZCGs8lmiPZVh8iH8jBsDBDGgVMNWiVYI5LcHMtw,2066
+touca-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+touca-0.1.0.dist-info/top_level.txt,sha256=8eJAxrc3Xy_wlBDb06L1EUUkZ_-vbYOTsyt5BiYzIPo,6
+touca-0.1.0.dist-info/RECORD,,
