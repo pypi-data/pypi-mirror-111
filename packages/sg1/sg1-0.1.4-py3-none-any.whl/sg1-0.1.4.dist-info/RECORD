@@ -1,0 +1,13 @@
+sg1/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sg1/commands.py,sha256=L6arQ9R7XAF-_kZwjCoVTRmWn3TNdpBfYI0QYwJV0ik,4004
+sg1/manage.py,sha256=8V2RGzE__fdRB8R9PniD1JpJcC0uFW80gik4g-PlM6o,263
+sg1/render.py,sha256=sSDhayDyk4iuSLpEdC1anDfyRSnecQDiDveY8O_zhPY,4934
+sg1/settings.py,sha256=bAuec4V-6_CMpOz8X24vnSi-lkhV6NFHs3M-PLNJAlQ,115
+sg1/helpers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sg1/helpers/directory.py,sha256=RnJF9JJ8bcI-lT8kcE_1aDq7VdrMQexT-488myh_zkM,385
+sg1-0.1.4.dist-info/LICENSE.txt,sha256=KP_knmfG53_K_lKDLY7T-dLJSptzVvY_rijgyUjZZZQ,1055
+sg1-0.1.4.dist-info/METADATA,sha256=qrjyJFZNuqqSMY5CqSdZpE4-G9Z5ylyKTU4h17xbiRw,2871
+sg1-0.1.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sg1-0.1.4.dist-info/entry_points.txt,sha256=afYq3w-1BgxbV5bodjwBLrx-7uGSUgH_vKbbK-A_TjQ,41
+sg1-0.1.4.dist-info/top_level.txt,sha256=ObH4Of6zGOW4PNUZDSI7qhFc-9pMCaxdpvNRKzmSLE8,4
+sg1-0.1.4.dist-info/RECORD,,

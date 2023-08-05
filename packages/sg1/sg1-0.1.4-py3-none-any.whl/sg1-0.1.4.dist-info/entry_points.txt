@@ -1,0 +1,3 @@
+[console_scripts]
+sg1 = sg1.manage:main
+
