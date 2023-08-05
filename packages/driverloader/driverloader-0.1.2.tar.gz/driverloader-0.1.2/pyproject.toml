@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "driverloader"
+version = "0.1.2"
+description = "A webdriver downloader"
+authors = ["yuze <looker53@sina.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/looker53/webdriver-downloader"
+keywords = ["driverloader", "webriver", "selenium"]
+packages = [
+    { include = "driverloader" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+click = "*"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+driverloader = 'driverloader.cli:cli'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
