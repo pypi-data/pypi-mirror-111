@@ -1,0 +1,7 @@
+spacy
+tkcalendar
+nltk
+spacytextblob
+pandas
+mathplotlib
+wordnet
