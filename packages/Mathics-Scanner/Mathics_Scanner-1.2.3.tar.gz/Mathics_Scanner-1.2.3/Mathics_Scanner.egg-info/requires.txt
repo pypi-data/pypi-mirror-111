@@ -1,0 +1,6 @@
+chardet
+PyYAML
+click
+
+[full]
+ujson
