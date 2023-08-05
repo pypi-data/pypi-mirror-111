@@ -1,0 +1,14 @@
+fload_freedb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fload_freedb/freedb.py,sha256=ulplggEK9eQAcyrkUU17h47qNixAcYKnC_Yv4-tCQ4o,9626
+fload_freedb/stream/__init__.py,sha256=bm8SH4csyKu5OIizVlZuO72NHFgoWB_eF6QO5uHInqg,292
+fload_freedb/stream/base.py,sha256=B2o31WTMbfeQ14Snn58n4DRoEE7g_qYquU09kc31VgM,926
+fload_freedb/stream/freedbdelete.py,sha256=4mzzqgZXzTCCdiNyJl9ErvJ--bJTI81QuaQJd9OvCaY,1402
+fload_freedb/stream/freedbfilter.py,sha256=lho4gTOgxrU25z5mBDB2lerQQR0LPOxxDpS_DHsHiyI,474
+fload_freedb/stream/fromfreedb.py,sha256=E0Cw3PBcESqv-g_Sgav_XI4KVmStttiRHPYLwsaq_1I,1023
+fload_freedb/stream/tofreedb.py,sha256=Bpl99YSsfe9FTjixh-28NBH1K975NH_9Jyoiru2BsGo,907
+fload_freedb-0.0.2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+fload_freedb-0.0.2.dist-info/METADATA,sha256=lFXZh2qtIw25H11XpSvI8Zk30Or0UEQJqzYiK8WtNIA,298
+fload_freedb-0.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+fload_freedb-0.0.2.dist-info/entry_points.txt,sha256=VWjicjfwNR8jXR6N-ckbczThJWPFf4PHwzT4Cht4OxU,41
+fload_freedb-0.0.2.dist-info/top_level.txt,sha256=zitiv5jZDydUoDjE6oAiQfiWqP5US2CgNUOviEyijjI,13
+fload_freedb-0.0.2.dist-info/RECORD,,
