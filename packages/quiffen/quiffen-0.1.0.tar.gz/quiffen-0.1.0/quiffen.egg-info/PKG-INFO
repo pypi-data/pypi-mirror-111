@@ -1,0 +1,22 @@
+Metadata-Version: 1.2
+Name: quiffen
+Version: 0.1.0
+Summary: Quiffen
+Home-page: UNKNOWN
+Author: Isaac Harris-Holt
+Author-email: isaac@harris-holt.com
+License: GNU GPLv3
+Description: # Quiffen (WIP)
+        Quiffen is a Python package for parsing QIF (Quicken Interchange Format) files.
+        
+        The package will allow users to both read QIF files and interact with the contents, and also to create a QIF structure
+        and then output to either a QIF file, a CSV of transaction data or a pandas DataFrame.
+        
+Keywords: qif
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3
