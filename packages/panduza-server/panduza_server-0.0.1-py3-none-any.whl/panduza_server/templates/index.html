@@ -1,0 +1,45 @@
+{% load static %}
+
+<html>
+    <head>
+
+        <script src="{% static 'js/axios.min.js' %}" crossorigin="anonymous"></script>
+        <script src="{% static 'js/babel.min.js' %}" crossorigin="anonymous"></script>        
+        <script src="{% static 'js/react.production.min.js' %}" crossorigin="anonymous"></script>
+        <script src="{% static 'js/react-dom.production.min.js' %}" crossorigin="anonymous"></script>
+        <script src="{% static 'js/material-ui.production.min.js' %}" crossorigin="anonymous"></script>
+
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" />
+        <script src="{% static 'js/PluginStatus.js' %}" type="text/babel"></script>
+
+    </head>
+    
+    <body>
+
+        <div id="left">
+            <h1>Panduza Server</h1>
+            <img src="{% static 'img/panduza_logo.png' %}">
+        </div>
+
+
+        <div id="right">
+
+            <h2>Help</h2>
+            <p> <a href="/interfaces">interfaces</a>: to get the list of the controlable interfaces</p>
+            <p> <a href="/ui/io">ui/io</a>: to use the ui to control io</p>
+            
+            <h2>Plugins</h2>
+            <div id="plugin_status"></div>
+
+        </div>
+
+        <script type="text/babel">
+            ReactDOM.render(
+                React.createElement( PluginStatus, {}, null ),
+                document.querySelector('#plugin_status'),
+            );
+        </script>
+
+    </body>
+</html>

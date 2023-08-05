@@ -1,0 +1,31 @@
+
+
+
+body{
+    display: flex;
+    align-items: center;
+}
+
+h1
+{
+    color: #424242;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+
+li
+{
+    list-style-type: none;
+    display: flex;
+}
+
+a
+{
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    background-color: #3498db;
+    padding: 8px;
+    margin: 8px;
+}
+

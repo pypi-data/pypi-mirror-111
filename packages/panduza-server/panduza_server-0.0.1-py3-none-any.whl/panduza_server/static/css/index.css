@@ -1,0 +1,101 @@
+body
+{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#left
+{
+    width: 34%;
+    height: 100%;
+
+    float: left;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* align horizontal */
+    align-items: center;
+}
+
+img
+{
+    margin: 0;
+    padding: 0;
+}
+
+h1
+{
+    font-family: "ubuntu mono";
+    font-size: 64px;
+    color: #424242;
+}
+
+h2
+{
+    font-family: "ubuntu mono";
+    font-size: 32px;
+    color: #424242;
+}
+
+#right
+{
+    width: calc(66% - 34px);
+    float: right;
+    background-color: #f0f0f0;
+    height: 100%;
+
+    margin: 0;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+
+.accordion_summary_typo
+{
+    padding-left: 16px;
+    font-size: 24px !important;
+    /* color: white !important; */
+}
+
+.plugin_running
+{
+    color: white !important;
+    font-size: 16px !important;
+    background-color: #16a085 !important;
+}
+
+.plugin_warning
+{
+    color: white !important;
+    font-size: 16px !important;
+    background-color: #d35400 !important;
+}
+
+.plugin_error
+{
+    color: white !important;
+    font-size: 16px !important;
+    background-color: #c0392b !important;
+}
+
+
+
+a
+{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    background-color: #3498db;
+    padding: 8px;
+    margin: 8px;
+}
+

@@ -1,0 +1,35 @@
+{% load static %}
+
+<html>
+    <head>
+
+        <script src="{% static 'js/axios.min.js' %}" crossorigin="anonymous"></script>
+        <script src="{% static 'js/babel.min.js' %}" crossorigin="anonymous"></script>        
+        <script src="{% static 'js/react.production.min.js' %}" crossorigin="anonymous"></script>
+        <script src="{% static 'js/react-dom.production.min.js' %}" crossorigin="anonymous"></script>
+        <script src="{% static 'js/material-ui.production.min.js' %}" crossorigin="anonymous"></script>
+
+        <script src="{% static 'js/CardIoControl.js' %}" ></script>
+        
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/io_card.css' %}" />
+
+    </head>
+    
+    <body>
+        <h1>IO Control</h1>
+
+        <div id="card_io"></div>
+    </body>
+
+
+    <script type="text/javascript">
+        ReactDOM.render(
+            React.createElement( CardIoControl, {target: '{{ target_interface }}'}, null ),
+            document.querySelector('#card_io'),
+        );
+    </script>
+
+</html>
+
+

@@ -1,0 +1,35 @@
+{% load static %}
+
+<html>
+    <head>
+
+        <script src="{% static 'js/axios.min.js' %}" crossorigin="anonymous"></script>
+        <script src="{% static 'js/babel.min.js' %}" crossorigin="anonymous"></script>        
+        <script src="{% static 'js/react.production.min.js' %}" crossorigin="anonymous"></script>
+        <script src="{% static 'js/react-dom.production.min.js' %}" crossorigin="anonymous"></script>
+        <script src="{% static 'js/material-ui.production.min.js' %}" crossorigin="anonymous"></script>
+
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/io_control.css' %}" />
+
+    </head>
+    
+    <body>
+        <h1>
+            I/O Control
+        </h1>
+        
+        <ul>
+            
+            {% for ioi in io_interfaces %}
+                <li> <a href="/ui/io/{{ ioi }}">{{ ioi }}</a>  </li>
+            {% endfor %}
+        </ul>
+
+    </body>
+
+
+
+</html>
+
+
