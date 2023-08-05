@@ -1,0 +1,9 @@
+flake2lint/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flake2lint/__init__.py,sha256=DZd3U0M9F7sBnjSLyx57cSmkN6UPpQElQDBMULYJD3M,4311
+flake2lint/__main__.py,sha256=LRQIM5Kow5anEoPJ5XLQkbx__5BBjQjU8ylsr5CzWnI,2504
+flake2lint-0.4.1.dist-info/METADATA,sha256=ivFQe5C5pUgUshcg1z8zI7vqwJHoC8cHU7Hp-WGdBWo,7425
+flake2lint-0.4.1.dist-info/LICENSE,sha256=TXanB-tJYmHhByFsynyh-UGwh2VdTVVjbZeFz1utSWc,1064
+flake2lint-0.4.1.dist-info/top_level.txt,sha256=9yoktD1RaJuqv_QRcIPC6J21WV0NSLNUN6uRL2HYaVo,11
+flake2lint-0.4.1.dist-info/WHEEL,sha256=8iizR7fuPU5eNN500_Nke8fdf_wEQWleqFNIMwKpLpQ,84
+flake2lint-0.4.1.dist-info/entry_points.txt,sha256=MwTabNSsT69fo0UAVv2kzb8kkZHHxdow4tMha6JCDg4,56
+flake2lint-0.4.1.dist-info/RECORD,,
