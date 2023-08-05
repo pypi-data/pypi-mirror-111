@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: panduza-server
+Version: 0.0.1
+Summary: Panduza Core Server
+Home-page: UNKNOWN
+Author: Panduza Team
+Author-email: panduza.team@gmail.com
+License: UNKNOWN
+Description: The Panduza server provide a bridge to control hardware interfaces
+Keywords: python,first package
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows

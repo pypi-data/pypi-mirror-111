@@ -1,0 +1,3 @@
+[console_scripts]
+pza-run-server = panduza_server.scripts.server:run_server
+
