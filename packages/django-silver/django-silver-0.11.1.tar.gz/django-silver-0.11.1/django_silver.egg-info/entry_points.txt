@@ -1,0 +1,3 @@
+[pytest11]
+django-silver = silver.fixtures.pytest_fixtures
+
