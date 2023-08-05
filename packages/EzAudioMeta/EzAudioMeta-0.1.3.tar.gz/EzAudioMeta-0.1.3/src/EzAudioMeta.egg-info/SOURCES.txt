@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/EzAudioMeta/__init__.py
+src/EzAudioMeta/main.py
+src/EzAudioMeta.egg-info/PKG-INFO
+src/EzAudioMeta.egg-info/SOURCES.txt
+src/EzAudioMeta.egg-info/dependency_links.txt
+src/EzAudioMeta.egg-info/entry_points.txt
+src/EzAudioMeta.egg-info/requires.txt
+src/EzAudioMeta.egg-info/top_level.txt
+src/EzAudioMeta/audio/__init__.py
+src/EzAudioMeta/audio/base_audio.py
+src/EzAudioMeta/utilities/__init__.py
+src/EzAudioMeta/utilities/optional_string_matchers.py
