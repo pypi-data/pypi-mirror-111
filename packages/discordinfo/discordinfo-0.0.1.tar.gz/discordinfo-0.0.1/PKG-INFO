@@ -1,0 +1,29 @@
+Metadata-Version: 1.1
+Name: discordinfo
+Version: 0.0.1
+Summary: discordinfo is a Python Package created for simply scraping discord account data with the use of an account token.
+Home-page: https://github.com/7uk/discordinfo-package
+Author: 7uk
+Author-email: doopycheats@gmail.com
+License: MIT
+Description: # discordinfo
+        
+        discordinfo is a Python Package build around Discord Accounts. 
+        
+        discordinfo provides a simple way to scrape data from Discord accounts using Account Tokens. 
+        
+        # Usage
+        
+        Just use the following query inside your local terminal to see the uses and details for all commands inside discordinfo.
+        
+        ```
+        discordinfo
+        ```
+        
+Keywords: discord
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
