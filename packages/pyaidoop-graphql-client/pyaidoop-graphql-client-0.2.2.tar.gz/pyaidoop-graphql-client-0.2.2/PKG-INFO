@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pyaidoop-graphql-client
+Version: 0.2.2
+Summary: A graphql communication library for AIdoop web-based application platform
+Home-page: https://github.com/aidoop/vision-client-python.git
+Author: 
+Author-email: 
+License: MIT
+Description: A graphql communication library for AIdoop web-based application platform such as AIdoop-R.
+        The library includes graphql client api and defines graphql query and mutations for AIdoop-R
+        
+Keywords: cooperative robot,web-based application,grpahql
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
