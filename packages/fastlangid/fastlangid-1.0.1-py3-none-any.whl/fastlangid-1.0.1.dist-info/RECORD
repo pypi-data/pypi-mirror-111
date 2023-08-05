@@ -1,0 +1,9 @@
+fastlangid/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastlangid/langid.py,sha256=OnE41Y6UQNmDFNq_V2jTvUvxgL8TRQYLFFa0SmTjKJQ,4288
+fastlangid/models/lid.176.ftz,sha256=jzRyz-hzintgmejpmcPL-uDc0VaWqsfXc4qAOdtgPoM,938013
+fastlangid/models/model_s.ftz,sha256=A-qmZ4LSBbqr3aer91mfloD60g0IsevDJlBbIIJjF44,395365
+fastlangid-1.0.1.dist-info/LICENSE,sha256=xazLvYVG6Uw0rtJK_miaYXYn0Y7tWmxIJ35I21fCOFE,11356
+fastlangid-1.0.1.dist-info/METADATA,sha256=nuEoUyE9PQ_3W3YFo8Pu-jkpho9RSmgkDjULj_bi4es,5845
+fastlangid-1.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+fastlangid-1.0.1.dist-info/top_level.txt,sha256=eowMa5F0aTa9g86JelScOxWBxjzLJuZ5-7yZ5My9zHE,11
+fastlangid-1.0.1.dist-info/RECORD,,
