@@ -1,0 +1,3 @@
+[plover.machine]
+Keyboard Plus = plover_keyboard_plus.machine:KeyboardPlus
+

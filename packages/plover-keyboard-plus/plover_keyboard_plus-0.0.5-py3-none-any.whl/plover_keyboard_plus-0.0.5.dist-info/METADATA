@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: plover-keyboard-plus
+Version: 0.0.5
+Summary: Plover support for a keyboard with F13-24 keys
+Home-page: https://github.com/AlexandraAlter/plover_keyboard_plus
+Author: AlexandraAlter
+Author-email: alexandra.alter@protonmail.com
+License: The Unlicense (Unlicense)
+Project-URL: Changelog, https://github.com/AlexandraAlter/plover_keyboard_plus/blob/master/NEWS.md
+Project-URL: Source Code, https://github.com/AlexandraAlter/plover_keyboard_plus
+Project-URL: Issue Tracker, https://github.com/AlexandraAlter/plover_keyboard_plus/issues
+Keywords: plover plover_plugin
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: The Unlicense (Unlicense)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: plover (>=4.0.0.dev1)
+
+# Plover Keyboard Plus
+
+
