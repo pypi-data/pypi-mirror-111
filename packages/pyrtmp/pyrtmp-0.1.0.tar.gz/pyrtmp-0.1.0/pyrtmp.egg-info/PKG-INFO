@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pyrtmp
+Version: 0.1.0
+Summary: Pure python RTMP server
+Home-page: https://github.com/Eittipat/pyrtmp.git
+Author: Eittipat.K
+Author-email: iammop@gmail.com
+License: MIT
+Download-URL: https://github.com/Eittipat/pyrtmp/releases/tag/v0.1.0
+Keywords: RTMP,RTMPT,asyncio
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+License-File: LICENSE.txt
+
+UNKNOWN
+
