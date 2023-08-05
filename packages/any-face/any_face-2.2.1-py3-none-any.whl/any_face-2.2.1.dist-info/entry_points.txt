@@ -1,0 +1,3 @@
+[console_scripts]
+any_fc_interface = any_face.app.any_fc_interface:main
+
