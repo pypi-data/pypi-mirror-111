@@ -1,0 +1,13 @@
+shippinglabel/__init__.py,sha256=RJrfBxqaD8IS9gOIVyxYfvV4udkG7pYKVEUuP2sYO40,4356
+shippinglabel/checksum.py,sha256=auRtL33pcGWPB7zq8kT8plp-_nJNBQLzD7walvw0wSY,4960
+shippinglabel/classifiers.py,sha256=Um5Rg2J0M2QjQizXReZsOPL_yTj0GvdL-v9lybKi2tE,4840
+shippinglabel/conda.py,sha256=h-AWZ4F_pFOvwP3uHxEMwB8C_qWL_UzKJ8mnS50PtQw,8061
+shippinglabel/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shippinglabel/pypi.py,sha256=KQyUaia15tVvEzelpO8MnTn8LR-mq3_qGS-p6LWBeEM,10158
+shippinglabel/requirements.py,sha256=0MPempn57dybDdAmV_aTRc3JazTrt-Fgu42gGRrRNmg,21422
+shippinglabel/sdist.py,sha256=vWXqaggdhK_fo-6XnZZ7F49Fafr0UkKcG0kZXxS7oCI,3477
+shippinglabel-0.16.0.dist-info/LICENSE,sha256=BigaIaJbg4wCjk6MjLC_5kuevxdEotWApzfvN8Y9LMM,1064
+shippinglabel-0.16.0.dist-info/METADATA,sha256=ulbR15iFPkx3lMjYPfM1zwanpIE37wXhRXqNq1t6vQY,7074
+shippinglabel-0.16.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+shippinglabel-0.16.0.dist-info/top_level.txt,sha256=tXET7KxOxowhvhiOPEJwP5JMFga5nJF0CYnQ9aJGxZw,14
+shippinglabel-0.16.0.dist-info/RECORD,,
