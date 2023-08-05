@@ -1,0 +1,17 @@
+LICENSE.txt
+README.rst
+setup.cfg
+setup.py
+sg1/__init__.py
+sg1/commands.py
+sg1/manage.py
+sg1/render.py
+sg1/settings.py
+sg1.egg-info/PKG-INFO
+sg1.egg-info/SOURCES.txt
+sg1.egg-info/dependency_links.txt
+sg1.egg-info/entry_points.txt
+sg1.egg-info/requires.txt
+sg1.egg-info/top_level.txt
+sg1/helpers/__init__.py
+sg1/helpers/directory.py
