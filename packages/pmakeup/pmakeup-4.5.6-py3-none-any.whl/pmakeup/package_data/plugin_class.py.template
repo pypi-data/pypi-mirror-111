@@ -1,0 +1,16 @@
+import pmakeup as pm
+
+class {plugin_class}(pm.AbstractPMakeupPlugin):
+
+    def _setup_plugin(self):
+        pass
+
+    def _teardown_plugin(self):
+        pass
+
+    def _get_dependencies(self) -> Iterable[type]:
+        return []
+
+    @pm.register_command.add("{plugin_name}")
+    def do_something():
+        pass

@@ -1,0 +1,1 @@
+from {plugin_package}.{plugin_class} import {plugin_class}
