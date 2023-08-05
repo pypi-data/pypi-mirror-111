@@ -1,0 +1,14 @@
+katsdpmodels/__init__.py,sha256=arMHE_w3AU0oCD_RIbTZewclLOLb1xdSIv95VwthP5s,818
+katsdpmodels/band_mask.py,sha256=DWB5Bq2HXLRU7PVOZV3Ay-BZD-tdPcaZiwzCg3ieFqQ,4165
+katsdpmodels/models.py,sha256=R2Tmt_vlqv86M_-n760QG8b0S1FBjQP3PYqMiaiLV7w,15652
+katsdpmodels/primary_beam.py,sha256=qRm4p2BfP5LliRTWwJ19VfEOHNCX60f_4FLYMjYrlbw,40183
+katsdpmodels/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+katsdpmodels/rfi_mask.py,sha256=K1FImd9bfs_9IQQwjWiSydrxS4SopY5QovGJBCQdz5M,7371
+katsdpmodels/fetch/__init__.py,sha256=vpzSjkf8OuDjtm1LiVbvNkEHn289yNclR1K5A0OfMRA,12656
+katsdpmodels/fetch/aiohttp.py,sha256=84hgN2oajWkfCV7GfGLs8fzMjbdROQNKwP2Da8SLTK0,9480
+katsdpmodels/fetch/requests.py,sha256=eSVZxSDcCOa9mwjo65eYZ3rOKGQI5NCdMF79X2h382c,14532
+katsdpmodels-0.3.dist-info/LICENSE,sha256=I9uns9tTzfmxYoDLy8yjofoX0KAgDThKEvY-TJ0Y3IQ,1522
+katsdpmodels-0.3.dist-info/METADATA,sha256=wSDpfoZ5SgfjrKtPOByQNFUPezCdK9a6IzcsfUXN7BU,1703
+katsdpmodels-0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+katsdpmodels-0.3.dist-info/top_level.txt,sha256=sxMWU6sRTyUwi-WAmGkGk5JQlJxrkHB7yWeh_ZMTAys,13
+katsdpmodels-0.3.dist-info/RECORD,,
