@@ -1,0 +1,8 @@
+peewee>3
+sniffio
+
+[tests]
+asgi-tools>=0.40
+pytest
+pytest-mypy
+pytest-aio[curio,trio]
