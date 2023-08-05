@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+opentypespec/__init__.py
+opentypespec.egg-info/PKG-INFO
+opentypespec.egg-info/SOURCES.txt
+opentypespec.egg-info/dependency_links.txt
+opentypespec.egg-info/not-zip-safe
+opentypespec.egg-info/top_level.txt
+opentypespec/tags/__init__.py
+opentypespec/tags/features.py
+opentypespec/tags/languages.py
+opentypespec/tags/scripts.py
+tests/test_tags.py
