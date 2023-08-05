@@ -1,0 +1,69 @@
+[tool.poetry]
+name = "open-mafia-engine"
+version = "0.5.0"
+readme = "README.md"
+description = "Open Mafia Engine - a framework for mafia/werewolf games."
+authors = ["Open Mafia Team <openmafiateam@gmail.com>"]
+license = "Apache-2.0"
+homepage = "https://open-mafia-engine.readthedocs.io/en/latest/"
+documentation = "https://open-mafia-engine.readthedocs.io/en/latest/"
+repository = "https://github.com/open-mafia/open_mafia_engine"
+keywords = ["mafia", "werewolf"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Topic :: Games/Entertainment :: Role-Playing",
+    "Topic :: Games/Entertainment :: Board Games",
+]
+include = ["open_mafia_engine/prefabs/*"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+sortedcontainers = "^2.3.0"
+makefun = "^1.11.3"
+fuzzywuzzy = "^0.18.0"
+cloudpickle = "^1.6.0"
+typer = "^0.3.2"
+prompt-toolkit = { version="^3.0.19", optional=true }
+pygments = { version="~2.9.0", optional=true }
+pytest = { version="^6.2.4", optional=true }
+mkdocs = { version="^1.1.2", optional=true }
+"mkdocs-material" = { version="^7.1.8", optional=true }
+mkdocstrings = { version="^0.15.2", optional=true }
+pymdown-extensions = { version="^8.2", optional=true }
+flake8 = { version="^3.9.2", optional=true }
+mypy = { version="^0.800", optional=true }
+
+[tool.poetry.extras]
+recommended = ["prompt-toolkit", "pygments", "pytest"] # to run examples and tests
+dev = ["flake8", "mypy", "pytest"]
+docs = ["mkdocs", "mkdocs-material", "mkdocstrings", "pymdown-extensions", "pygments"]
+examples = ["prompt-toolkit", "pygments"]
+test = ["pytest"]
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.8.4"
+black = "^20.8b1"
+pytest = "^6.2.2"
+mkdocs = "^1.1.2"
+isort = "^5.7.0"
+mypy = "^0.800"
+
+[tool.poetry.scripts]
+mafia-cli = 'open_mafia_engine.examples.cli:main'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+line_length = 88
