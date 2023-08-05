@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: qic
+Version: 1.1.0
+Summary: data(JSON/XML/YAML) command line query tools with interactive mode.
+Home-page: https://github.com/laowangv5/qic
+Author: Yonghang Wang
+Author-email: wyhang@gmail.com
+License: Apache 2
+Description: # qic - Query In Console or Command line
+        JSON/YAML/XML comand line query tool with support of interactive mode 
+        
+        For detail, look into the [Wiki](https://github.com/laowangv5/qic/wiki)
+        
+        [![brief with video](https://github.com/laowangv5/qic/blob/master/doc/images/qic_eg_2.png)](http://www.youtube.com/watch?v=NBARRnsKnbk)
+        
+Keywords: json,yaml,xml,query,jq,dq,dsq,dsquery,qic,dataquery,json query,xml query,yaml query,jello,jq
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Description-Content-Type: text/markdown
