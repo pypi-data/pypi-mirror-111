@@ -1,0 +1,5 @@
+matplotlib
+networkx
+karateclub
+sklearn
+spacy

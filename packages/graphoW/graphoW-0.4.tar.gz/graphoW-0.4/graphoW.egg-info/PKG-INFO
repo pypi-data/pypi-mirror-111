@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: graphoW
+Version: 0.4
+Summary: graphoW is a Python package for the creation of a Graph-of-Words (GoW) representation of texts.
+Home-page: https://github.com/tommantonela/graphoW
+Author: Antonela Tommasel
+Author-email: antonela.tommasel@isistan.unicen.edu.ar
+License: apache-2.0
+Download-URL: https://github.com/tommantonela/graphoW/archive/v_04.tar.gz
+Description: # graphoW: A python package for building Graph of Words 
+        
+        graphoW is a Python package for the creation of a Graph-of-Words (GoW) representation of texts.
+        
+        - Structure is based on: ["Graph-of-word and TW-IDF: new approach to ad hoc IR"](https://dl.acm.org/doi/abs/10.1145/2505515.2505671)
+        - Graph metrics are based on: ["Graph analysis of dream reports is especially informative about psychosis"](https://www.nature.com/articles/srep03691?hc_location=ufi)
+        - Narrative consistency and rapidity are based on: ["Measuring Narrative Fluency by Analyzing Dynamic Interaction Networks in Textual Narratives"](http://ceur-ws.org/Vol-2593/paper2.pdf)
+        
+        It allows to:
+        
+        - Create a GoW for individual texts.
+        - Create a container of GoW in which each GoW corresponds to a paragraph in the text. 
+        - Compute diverse types of graph metrics (e.g., individual, global, connectivity...).
+        - Compute the narrative consistency of text based on all terms or only on noun phrases.
+        - Compute the rapidity of a text, i.e., how slow/fast change the structure of paragraphs.
+        
+        GoW is supported using [``NetworkX``](https://networkx.org/). 
+        
+Keywords: graph-of-words,text analysis,natural language processing
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown

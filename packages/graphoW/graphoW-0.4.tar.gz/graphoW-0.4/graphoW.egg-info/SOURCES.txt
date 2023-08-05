@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+graphoW/__init__.py
+graphoW/textgraph.py
+graphoW/textsgraphs.py
+graphoW.egg-info/PKG-INFO
+graphoW.egg-info/SOURCES.txt
+graphoW.egg-info/dependency_links.txt
+graphoW.egg-info/requires.txt
+graphoW.egg-info/top_level.txt
