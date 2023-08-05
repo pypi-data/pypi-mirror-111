@@ -1,0 +1,13 @@
+README.md
+setup.py
+cidre/__init__.py
+cidre/cidre.py
+cidre/draw.py
+cidre/filters.py
+cidre/utils.py
+cidre.egg-info/PKG-INFO
+cidre.egg-info/SOURCES.txt
+cidre.egg-info/dependency_links.txt
+cidre.egg-info/not-zip-safe
+cidre.egg-info/requires.txt
+cidre.egg-info/top_level.txt
