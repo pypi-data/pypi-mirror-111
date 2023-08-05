@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: roc-aggregator
+Version: 1.0.0
+Summary: ROC aggregator
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: numpy (>=1.17)
+
+UNKNOWN
+
