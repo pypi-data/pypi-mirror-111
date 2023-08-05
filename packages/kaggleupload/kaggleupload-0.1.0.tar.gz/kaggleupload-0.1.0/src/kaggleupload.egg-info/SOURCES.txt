@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+src/kaggleupload/__init__.py
+src/kaggleupload/cli.py
+src/kaggleupload/code.py
+src/kaggleupload.egg-info/PKG-INFO
+src/kaggleupload.egg-info/SOURCES.txt
+src/kaggleupload.egg-info/dependency_links.txt
+src/kaggleupload.egg-info/entry_points.txt
+src/kaggleupload.egg-info/requires.txt
+src/kaggleupload.egg-info/top_level.txt
