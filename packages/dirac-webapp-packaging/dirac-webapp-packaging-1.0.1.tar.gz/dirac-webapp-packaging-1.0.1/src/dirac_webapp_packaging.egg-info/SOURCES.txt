@@ -1,0 +1,12 @@
+.gitignore
+LICENSE
+README.rst
+pyproject.toml
+setup.cfg
+src/dirac_webapp_packaging/__init__.py
+src/dirac_webapp_packaging.egg-info/PKG-INFO
+src/dirac_webapp_packaging.egg-info/SOURCES.txt
+src/dirac_webapp_packaging.egg-info/dependency_links.txt
+src/dirac_webapp_packaging.egg-info/not-zip-safe
+src/dirac_webapp_packaging.egg-info/requires.txt
+src/dirac_webapp_packaging.egg-info/top_level.txt
