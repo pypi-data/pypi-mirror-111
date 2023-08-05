@@ -1,0 +1,2334 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>interactiveTest Rubric</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+      /*-------------------*
+ * High-level styles *
+ *-------------------*/
+
+body {
+    font-family: sans-serif;
+}
+
+body.feedback {
+    background: #444;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.task_container {
+    color: #222;
+    padding: 0 10px;
+    border: 1px solid white;
+    margin: 20px 0;
+    background: white;
+}
+.surround {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    background:#e8e8e8;
+    min-width: max-content;
+}
+.task_container h2 {
+    padding: 10px 0;
+    margin: 0;
+}
+.surround h2, .surround h3 {
+    padding: 0;
+    margin: 0;
+}
+
+
+/*----------*
+ * Warnings *
+ *----------*/
+
+.warning_box {
+    border: 2px solid #833;
+    border-left: 20px solid #833;
+    padding: 0 1em;
+    background: #fdd;
+    font-family: sans-serif;
+}
+
+.warning_box h3 { color: #833; }
+
+
+/*-------------------*
+ * Details/summaries *
+ *-------------------*/
+
+/* Allow headers to be used as summaries without leaving the expand arrow
+ * awkwardly dangling above */
+summary > h1, summary > h2, summary > h3, summary > h4, summary > h5, summary > h6 {
+    display: inline-block;
+}
+
+
+/*---------------*
+ * Hide and seek *
+ *---------------*/
+
+.hide {
+    display: none;
+}
+tr.show {
+    display: table-row;
+}
+div.show, ul.show {
+    display: block;
+}
+
+
+/*--------*
+ * Images *
+ *--------*/
+
+img {
+    border: 1px dashed gray;
+}
+img.img_small  {
+    max-width: 450px;
+    max-height: 150px;
+}
+
+.imagetable {
+    width: auto;
+}
+.test_image {
+    background: white;
+}
+
+
+/*---------------*
+ * Rendered Code *
+ *---------------*/
+
+.codeline_plain {
+    background: none;
+}
+
+.codeline_focus {
+    background: #fff888;
+}
+
+.codeline_closed {
+    border-top: none;
+}
+.codeline_open {
+    border-top: 1px solid #428;
+}
+.codeline {
+    display: inline-block;
+    width: 100%;
+}
+.info_link {
+    border-radius: 3px;
+    background: #27e;
+    color: white;
+    font-weight: 900;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+td .info_link {
+    color: #27e;
+    background: #def;
+    border: 1px solid;
+}
+.linerefs, .linerefs a:link {
+    color: #428;
+}
+.linerefs {
+    list-style: none;
+    border-top: 1px dashed #428;
+    border-bottom: 1px solid #428;
+    font-family: monospace;
+    padding-left: 5em;
+    background: #e8e0ff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0 0 1px 0;
+}
+.linerefs li {
+    font-family: sans-serif;
+}
+.lineref {
+    display: inline-block;
+    padding: 0 2px;
+}
+ul.autoreport_notes, ul.autoreport_key {
+    list-style: none;
+    font-size: 0.9em;
+}
+ul.autoreport_key {
+    margin: 0;
+}
+ul.autoreport_notes {
+    border-top: 1px dashed;
+    margin-top: 7px;
+    margin-bottom: 0;
+    padding-top: 7px;
+}
+.codeline_closed.codeline_plain .linenum, .codeline_none.codeline_plain .linenum {
+    background: #e8e8e8;
+}
+.codeline_open.codeline_plain .linenum {
+    background: #e8e0ff;
+}
+.codeline_focus .linenum {
+    background: none;
+}
+.linenum {
+    color: #444;
+    display: inline-block;
+    width: 5ch;
+    text-align: right;
+    padding: 1px 0;
+}
+
+h1 .button_left {
+    margin-right: 1em;
+    font-weight: normal;
+    font-size: 0.4em;
+}
+h2 .button_left {
+    margin-right: 1em;
+    font-weight: normal;
+    font-size: 0.5em;
+}
+h3 .button_left {
+    margin-right: 1em;
+    font-weight: normal;
+    font-size: 0.6em;
+}
+
+code {
+    font-weight: bold;
+}
+code, .highlight {
+    font-size: 0.9em;
+}
+code, pre, .highlight {
+    font-family: Courier New, monospace;
+}
+.highlight {
+    margin-top: 10px;
+    width: 88ch;
+    padding-left: 0;
+    padding-right: 0;
+}
+.highlight pre {
+    padding: 0;
+    margin: 0;
+}
+.highlight p {
+    font-family: sans-serif;
+}
+
+.eighty_top, .eighty {
+    text-align: right;
+    font-family: sans-serif;
+}
+.eighty_top {
+    margin-top: -1em;
+}
+.highlight.no80 {
+    width: 100%;
+}
+.short_repr {
+    display: inline;
+}
+
+/*----------------*
+ * Status symbols *
+ *----------------*/
+  
+.status_symbol {
+    font-size: larger;
+    font-style: normal;
+}
+
+
+/*-----------------*
+ * Header material *
+ *-----------------*/
+
+.partner, .email {
+    font-size: 0.6em;
+    font-weight: normal;
+}
+
+
+/*------------------*
+ * Print formatting *
+ *------------------*/
+
+@media print {
+    pre {
+        overflow-x: scroll;
+    }
+    body {
+        width: 1024px;
+    }
+    .task_container, .pagebreak { page-break-after: always; }
+}
+
+
+/*-------------------*
+ * Rubric formatting *
+ *-------------------*/
+
+.rubric {
+    font-size: 16pt;
+}
+
+.rubric_table {
+    padding: 3pt;
+    max-width: 55em;
+}
+
+.rubric_row {
+    border: 2pt solid #aa8;
+    border-width: 2pt 0pt 0pt 2pt;
+    border-radius: 3pt;
+    border-color: #999;
+    background-color: #f4f4f4;
+    padding: 3pt;
+    margin: 3pt;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.rubric_row .rubric_row {
+    display: list-item;
+    list-style-type: decimal;
+    margin-left: 16pt;
+}
+
+.rubric_row > .rubric_table {
+    grid-column: 1 / span 2;
+    margin-left: 8pt;
+}
+
+
+/*-------------*
+ * Rubric tags *
+ *-------------*/
+
+.rubric_row.tag-category-foundational, .tag-category-foundational .rubric_row {
+    border-color: #aba;
+    background-color: #efe;
+}
+
+.rubric_row.tag-category-core, .tag-category-_core .rubric_row {
+    border-color: #a8aabb;
+    background-color: #eef4ff;
+}
+
+.rubric_row.tag-category-extra, .tag-category-extra .rubric_row {
+    border-color: #aab;
+    background-color: #ffffe8;
+}
+
+/* Default border & background is gray */
+.rubric_row.tag-category-feedback_only,
+.tag-category-feedback_only .rubric_row {
+}
+
+
+/*--------------*
+ * Help buttons *
+ *--------------*/
+
+details.help_button {
+    display: inline-block;
+}
+
+details.help_button > .help {
+    padding: 3pt;
+    border-radius: 3pt;
+    background-color: #fff;
+    border: 1pt solid black;
+}
+
+details[open].help_button {
+    z-index: 100;
+}
+
+details.help_button > summary {
+    display: inline;
+    list-style: none;
+    border-radius: 2pt;
+    border: 1pt solid black;
+    padding: 0pt 2pt 0pt 2pt;
+    background-color: #fff;
+}
+
+details.help_button > summary::after {
+    content: "?";
+}
+
+details[open].help_button > summary::after {
+    content: "–";
+}
+
+details.help_button > summary::-webkit-details-marker {
+    display: none;
+}
+
+
+/*---------------------*
+ * Rubric row elements *
+ *---------------------*/
+
+/* Styles for elements of each row */
+.topic {
+    display: inline-block;
+    padding: 3pt;
+    border-radius: 3pt;
+    background-color: #fff;
+    margin: 3pt;
+    padding-right: 18pt; /* pad for details */
+    position: relative; /* reference for details */
+}
+
+.topic.no_details {
+    padding-right: 4pt;
+}
+
+.rubric_row .assessment {
+    display: inline-block;
+    margin-left: 6pt;
+}
+
+/* Styling of status makers in rubric rows based on row status: */
+.goal_status {
+    padding: 0pt 2pt 3pt 2pt;
+    border-radius: 2pt;
+    border: 1pt solid #999;
+    font-weight: bold;
+    margin-right: 3pt;
+    width: 11pt;
+    height: 11pt;
+    display: inline-block;
+    text-align: center;
+}
+
+.goal_status.status_unknown {
+    background-color: #eee;
+    border-color: #888;
+    color: #888;
+}
+
+.goal_status.status_not_applicable {
+    background-color: #ccc;
+    border-color: #555;
+    color: #555;
+}
+
+.goal_status.status_failed {
+    background-color: #f89;
+    border-color: #802;
+    color: #802;
+}
+
+.goal_status.status_partial {
+    background-color: #e899ff;
+    border-color: #629;
+    color: #629;
+}
+
+.goal_status.status_accomplished {
+    background-color: #9af;
+    border-color: #027;
+    color: #027;
+}
+
+
+/*-----------------*
+ * Results styling *
+ *-----------------*/
+
+.printed_output {
+    border-radius: 3pt;
+    margin: 2pt;
+    padding: 3pt;
+    background-color: #fff;
+}
+
+pre {
+    background: white;
+    padding: 3pt;
+    overflow-x: auto;
+}
+
+
+/*----------*
+ * Contexts *
+ *----------*/
+
+.context_details > summary {
+    white-space: nowrap;
+}
+
+.context_details.level_0 {
+    margin: 4pt;
+}
+.context_details.level_1 {
+    margin-left: 16pt;
+}
+.context_details.level_2 {
+    margin-left: 28pt;
+}
+.context_details.level_3 {
+    margin-left: 40pt;
+}
+.context_details.level_4 {
+    margin-left: 52pt;
+}
+.context_details.level_5 {
+    margin-left: 64pt;
+}
+.context_details.level_6 {
+    margin-left: 76pt;
+}
+.context_details.level_7 {
+    margin-left: 88pt;
+}
+.context_details.level_8 {
+    margin-left: 100pt;
+}
+
+.context {
+    display:inline;
+}
+
+.context_depends {
+    display:inline;
+}
+
+.expl_in_context {
+    border-radius: 3pt;
+    padding: 3pt;
+    background-color: #fff;
+}
+
+.context_summary {
+    max-width: 55em;
+    border: 2pt solid #aaa;
+    border-width: 2pt 0pt 0pt 2pt;
+    border-radius: 3pt;
+    background-color: #f4f4f4;
+    padding: 3pt;
+    margin: 3pt;
+}
+
+.context_summary > .context_info > div {
+    border: 2pt solid #aaa;
+    border-width: 2pt 0pt 0pt 2pt;
+    border-radius: 3pt;
+    margin-bottom: 6pt;
+    padding: 3pt;
+}
+
+
+/*------*
+ * Tabs *
+ *------*/
+
+.tabs {
+    position: relative; /* Anchor for inner positions... */
+    padding: 10pt;
+}
+
+.tabs > .tabbed {
+    padding: 10pt;
+}
+
+.tabs > .tabs-top {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin-left: 0pt;
+    padding-left: 8pt;
+    padding-bottom: 0pt;
+    margin-bottom: 0pt;
+}
+
+
+.tabs > .tabs-top > .tab {
+    background-color: #eee;
+    border: 1pt solid #ccc;
+    padding: 4pt;
+    margin-bottom: 0pt;
+    border-radius: 6pt 6pt 0pt 0pt;
+}
+
+.tabs > .tabs-top > .tab.selected {
+    background-color: #ddd;
+    border-color: #aaa;
+}
+
+.tabs > .tabs-bot {
+    margin-top: 0pt;
+    background-color: #eee;
+    border: 1pt solid #ccc;
+}
+
+.tabs > .tabs-bot > .tab-content {
+    display: none;
+    margin-top: 0pt;
+    overflow-x: auto;
+}
+
+.tabs > .tabs-bot > .tab-content > *:first-child {
+    margin-top: 0pt;
+}
+
+.tabs > .tabs-bot > .tab-content.selected {
+    display: block;
+}
+
+.tab h1, .tab h2, .tab h3, .tab h4, .tab h5, .tab h6 {
+    margin: 0pt;
+}
+
+
+/*----------------------------*
+ * High-level rubric elements *
+ *----------------------------*/
+
+.evaluation {
+    margin-top: 6pt;
+    padding: 4pt;
+    background-color: white;
+    border-radius: 6pt 6pt 0pt 0pt;
+}
+
+.summary {
+    padding: 4pt;
+    background-color: white;
+    border-radius: 0pt 0pt 6pt 6pt;
+    margin-bottom: 4pt;
+}
+
+.context-values {
+    border-spacing: 6pt;
+}
+
+.context-values th {
+    text-align: right;
+}
+
+.context-values td {
+    text-align: left;
+}
+
+
+/*----------------------------*
+ * Screen-reader-only content *
+ *----------------------------*/
+
+/* See: https://webaim.org/techniques/css/invisiblecontent/ */
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+
+/*-------------*
+ * Sticky bins *
+ *-------------*/
+
+
+/* Rules for sticky floating bins */
+.sticky_context {
+    box-sizing: border-box;
+    transition: height 0.5s ease-out;
+}
+
+.sticky_floating {
+    position: fixed;
+    z-index: 100;
+    box-sizing: border-box;
+    margin: 0pt;
+    padding: 6pt;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.sticky_inplace {
+    position: relative;
+}
+
+.sticky_minimized > * {
+    display: none;
+}
+
+.sticky_minimized > .bin_label {
+    position: relative;
+    display: block;
+    background:#e8e8e8;
+}
+
+.sticky_maximized > .bin_label {
+    position: fixed;
+    z-index: 110;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 0pt;
+    background:#bbbbbb;
+    padding: 6pt;
+    margin: 0pt;
+}
+
+.sticky_floating, .sticky_floating > .bin_label {
+    border-radius: 4pt 4pt 0pt 0pt;
+}
+
+
+/*----------------------------------------*
+ * Diff styling, including difflib tables *
+ *----------------------------------------*/
+
+.diff {
+    background: #eee;
+    border: 1px solid #ccc;
+    color: black;
+    font-style: normal;
+}
+
+.diff td {
+    background: #f8f8f8;
+    font-family: monospace;
+    padding: 0em 0.2em;
+    border-color: #ccc;
+}
+
+.diff th {
+    padding: 0.25em;
+}
+
+/* Output diff checking */
+.diff_sub {
+    color: #d70;
+    background: #fed;
+    border: 1px solid;
+    margin: 0px -1px;
+    padding: -1px 0px;
+    font-weight: bold;
+    font-family: monospace;
+    /* text-decoration: line-through; */
+}
+.diff_add {
+    color: #428;
+    background: #edf;
+    border: 1px solid;
+    margin: 0px -1px;
+    padding: -1px 0px;
+    font-weight: bold;
+    font-family: monospace;
+    /* text-decoration: overline; */
+}
+.diff_chg {
+    color: #833;
+    background: #fdd;
+    border: 1px solid;
+    margin: 0px -1px;
+    padding: -1px 0px;
+    font-weight: bold;
+    font-family: monospace;
+    /* text-decoration: underline; */
+}
+
+
+/*-----------------*
+ * Pygments styles *
+ *-----------------*/
+
+.highlight .hll { background-color: #ffffcc }
+code.highlight, pre.highlight, .highlight pre  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+    </style>
+
+    <script type="text/javascript">
+      var CODEFOCUS = null;
+
+function transition(id, classA, classB) {
+    let node = document.getElementById(id);
+    if (node) {
+        node.className = node.className.replace(classA, classB);
+    }
+}
+
+function toggle(id, classA, classB, toggle_id, on_symbol, off_symbol) {
+    let node = document.getElementById(id);
+    let toggle_node = document.getElementById(toggle_id);
+    if (on_symbol == undefined) { on_symbol = "&nbsp;&ndash;&nbsp;"; }
+    if (off_symbol == undefined) { off_symbol = "&nbsp;+&nbsp;"; }
+    if (node) {
+        if (node.className.includes(classA)) {
+            node.className = node.className.replace(classA, classB);
+            if (toggle_node) {
+                toggle_node.innerHTML = off_symbol;
+            }
+            return classB;
+        } else if (node.className.includes(classB)) {
+            node.className = node.className.replace(classB, classA);
+            if (toggle_node) {
+                toggle_node.innerHTML = on_symbol;
+            }
+            return classA;
+        }
+    }
+    return null;
+}
+
+function unfocusCodeLine() {
+    if (CODEFOCUS) {
+        transition(CODEFOCUS, "codeline_focus", "codeline_plain");
+    }
+    CODEFOCUS = null;
+}
+
+function focusCodeLine(codeid, lineid) {
+    unfocusCodeLine();
+    transition(codeid, "hide", "show");
+    transition(lineid, "codeline_plain", "codeline_focus");
+    CODEFOCUS = lineid;
+}
+
+function toggleCodeLine(id, toggle_id, on_symbol, off_symbol) {
+    let status = toggle(
+        id,
+        "codeline_closed",
+        "codeline_open",
+        toggle_id,
+        on_symbol,
+        off_symbol
+    );
+    toggle(id + "_refs", "show", "hide");
+    // focusCodeLine(id);
+}
+
+function openCodeLine(codeid, lineid, toggle_id, on_symbol) {
+    transition(codeid, "hide", "show");
+    if (on_symbol == undefined) { on_symbol = "&nbsp;&ndash;&nbsp;"; }
+    
+    let line = document.getElementById(lineid);
+    let toggle_elem = document.getElementById(toggle_id);
+    if (
+        !line.className.includes("codeline_none")
+     && (
+            line.className.includes("codeline_closed")
+         || line.className.includes("codeline_open")
+        )
+    ) {
+        line.className = line.className.replace(
+            "codeline_closed",
+            "codeline_open"
+        );
+        if (toggle_elem) {
+            toggle_elem.innerHTML = on_symbol;
+        }
+        transition(lineid + "_refs", "hide", "show");
+    }
+    focusCodeLine(codeid, lineid);
+}
+
+function toggleSection(id, toggle_id, on_symbol, off_symbol) {
+    toggle(id, "show", "hide", toggle_id, on_symbol, off_symbol);
+}
+
+function toggleRow(id, toggle_id, on_symbol, off_symbol) {
+    // Either might be missing, but if either toggles, so should the symbol
+    // (it won't toggle twice since it detects the show/hide destination state)
+    toggle("row_" + id, "show", "hide", toggle_id, on_symbol, off_symbol);
+    toggle("ul_" + id, "show", "hide", toggle_id, on_symbol, off_symbol);
+}
+
+function openRow(sectionid, id, toggle_id, on_symbol) {
+    transition(sectionid, "hide", "show");
+    transition("row_" + id, "hide", "show");
+    transition("ul_" + id, "hide", "show");
+
+    if (on_symbol == undefined) { on_symbol = "&nbsp;&ndash;&nbsp;"; }
+    let the_toggle = document.getElementById(toggle_id);
+    if (the_toggle) {
+        the_toggle.innerHTML = on_symbol;
+    }
+}    
+
+function zoom(id) {
+    toggle(id, "img_small", "img_large");
+}
+
+function toggleClass(classs, classA, classB) {
+    let list = document.getElementsByClassName(classs);
+    for (var i = 0; i < list.length; i++) {
+        if (list[i].className.includes(classA)) {
+            list[i].className = list[i].className.replace(classA, classB);
+        } else if (list[i].className.includes(classB)) {
+            list[i].className = list[i].className.replace(classB, classA);
+        }
+    }
+    return null;
+}
+
+function togglePoints() {
+    toggleClass("autoreport_points", "points_hide", "show");
+    toggleClass("regrade", "regrade_hide", "regrade_show");
+}
+
+
+function toggleTab() {
+    // Click event handler for anchors in a tabs setup to hide all other
+    // tabs except the one that corresponds to the one we clicked on.
+    let thistab = event.currentTarget;
+    let tabstop = thistab.parentElement;
+    let tabbed = tabstop.parentElement;
+    let tabsbot = tabbed.querySelector(".tabs-bot");
+    let index = Array.prototype.indexOf.call(tabstop.children, thistab);
+    let thiscontent = tabsbot.children[index];
+    if (thistab.classList.contains("selected")) {
+        thiscontent.classList.remove("selected");
+        thistab.classList.remove("selected");
+        thistab.removeAttribute("aria-current");
+    } else {
+        thiscontent.classList.add("selected");
+        thistab.classList.add("selected");
+        thistab.setAttribute("aria-current", "true");
+        thistab.setAttribute("aria-expanded", "true");
+        thiscontent.removeAttribute("aria-hidden");
+    }
+
+    // If we opened it:
+    if (thistab.classList.contains("selected")) {
+        // de-select all other tabs
+        for (let tab of tabstop.children) {
+            if (tab != thistab) {
+                tab.classList.remove("selected");
+                tab.removeAttribute("aria-current");
+                tab.removeAttribute("aria-expanded");
+            }
+        }
+        // hide all other tab content
+        for (let content of tabsbot.children) {
+            if (content != thiscontent) {
+                content.classList.remove("selected");
+                content.setAttribute("aria-hidden", "true");
+            }
+        }
+    }
+}
+
+
+/*----------------------*
+ * Feedback interaction *
+ *----------------------*/
+
+window.addEventListener("load", function () {
+    let hide_accomplished = document.getElementById("hide_accomplished_goals")
+    if (hide_accomplished != null) {
+        hide_accomplished.addEventListener(
+            "change",
+            function () {
+                if (hide_accomplished.checked) {
+                    for (
+                        let row
+                     of document.querySelectorAll(
+                         "div.rubric_row.status_accomplished:not(.tag_category)"
+                        )
+                    ) {
+                        row.style.display = "none";
+                    }
+                } else {
+                    for (
+                        let row
+                     of document.querySelectorAll(
+                         "div.rubric_row.status_accomplished:not(.tag_category)"
+                        )
+                    ) {
+                        row.style.display = "block";
+                    }
+                }
+            }
+        );
+    }
+});
+
+
+/*-------------*
+ * Sticky bins *
+ *-------------*/
+
+// Global set of currently-floating bins (so that we can manage them as
+// multiple tabs)
+var FLOATING_BINS = new Set();
+
+// Defaults for observation are to observe relative to viewport with a 0%
+// threshold, which is what we want.
+let observer = new IntersectionObserver(function (entries) {
+    for (let entry of entries) {
+        let binContent = entry.target.querySelector(".sticky_bin");
+        if (entry.isIntersecting) {
+            // This bin's context is in view, so the bin content should snap
+            // into the context.
+            stop_floating(binContent); // before CSS class changes
+        } else {
+            // This bin's context is now just out of view, so the bin content
+            // should snap into its floating state
+            start_floating(binContent); // before CSS class changes
+            binContent.classList.remove("sticky_inplace");
+            binContent.classList.add("sticky_floating");
+        }
+    }
+});
+
+/*
+ * Detach the given bin (content) from its context and start floating it.
+ */
+function start_floating(bin) {
+    // Measure current bin content height and set the height of its
+    // parent so that while it floats the parent doesn't shrink
+    let context = bin.parentElement;
+    let current_content_height = bin.getBoundingClientRect().height;
+    context.style.height = current_content_height + "px";
+
+    // Are any other bins maximized now?
+    let other_maximized = false;
+    for (let bin of FLOATING_BINS) {
+        if (bin.classList.contains("sticky_maximized")) {
+            other_maximized = true;
+            break;
+        }
+    }
+
+    // Add to our floating bins set
+    FLOATING_BINS.add(bin);
+
+    // Remember maximized state
+    if (bin.wasMaximized && !other_maximized) {
+        bin.classList.add("sticky_maximized");
+    } else {
+        bin.classList.add("sticky_minimized");
+    }
+
+    // Set floating/inplace class status
+    bin.classList.add("sticky_floating");
+    bin.classList.remove("sticky_inplace");
+
+    // Rearrange all floating bins
+    rearrange_floating_bins();
+
+    // Set the scrollTop if we've got a saved value for that
+    if (bin.scrollTopMemory) {
+        bin.scrollTop = bin.scrollTopMemory;
+    }
+}
+
+/*
+ * Stop floating the given bin (content). Purges CSS properties so that
+ * they can revert to 
+ */
+function stop_floating(bin) {
+    // First, measure the current scroll position of the page overall
+    let scroll_now = document.body.parentElement.scrollTop;
+
+    // revert to natural height
+    let context = bin.parentElement;
+    context.style.height = "";
+
+    // Remember scroll top value and open/closed state
+    bin.scrollTopMemory = bin.scrollTop;
+    bin.scrollTop = 0;
+    bin.wasMaximized = bin.classList.contains("sticky_maximized");
+
+    // remove from floating bins set
+    FLOATING_BINS.delete(bin);
+
+    // undo fixed styles
+    bin.style.removeProperty("position");
+    bin.style.removeProperty("top");
+    bin.style.removeProperty("left");
+    bin.style.removeProperty("right");
+    bin.style.removeProperty("bottom");
+    bin.style.removeProperty("width");
+    bin.style.removeProperty("height");
+
+    let label = bin.querySelector(".bin_label")
+    label.style.removeProperty("position");
+    label.style.removeProperty("top");
+    label.style.removeProperty("left");
+    label.style.removeProperty("right");
+    label.style.removeProperty("bottom");
+    label.style.removeProperty("width");
+    label.style.removeProperty("height");
+    label.style.removeProperty("transform");
+
+    // Set floating/inplace class status
+    bin.classList.remove("sticky_floating");
+    bin.classList.add("sticky_inplace");
+
+    bin.classList.remove("sticky_maximized");
+    bin.classList.remove("sticky_minimized");
+
+    // Rearrange all floating bins
+    rearrange_floating_bins();
+
+
+    // Finally, re-set the scroll_now value, but only after we let other
+    // events flush and finish
+    // TODO: This breaks click-on-scrollbar-to-jump when jumping in a way
+    // that un-floats a bin... for now, we'll just live with that.
+    window.setTimeout(
+        function () { document.body.parentElement.scrollTop = scroll_now; },
+        0
+    );
+}
+
+/*
+ * Rearranges the currently-floating bins so that they don't overlap each
+ * other. Note that because we're using a no-DOM-changes technique, we
+ * cannot accommodate an arbitrary number of floating bins, so it's up to
+ * you the user of this code to make sure that there aren't enough bins
+ * to make things too crowded. Basically, each floating bin gets 1/N of
+ * the either vertical or horizontal space for its title, and when
+ * expanded, bins take up 50% of the other axis.
+ */
+function rearrange_floating_bins() {
+    let n_bins = FLOATING_BINS.size;
+    let each_pct = Math.round(100 / n_bins);
+
+    // Figure out if any bins are maximized
+    let any_maximized = false;
+    for (let bin of FLOATING_BINS) {
+        if (bin.classList.contains("sticky_maximized")) {
+            any_maximized = true;
+        }
+    }
+
+    // Set positioning of each bin
+    let in_order = Array.from(FLOATING_BINS);
+    in_order.sort((a, b) => a.bin_number - b.bin_number);
+    let pct_sofar = 0;
+    for (let bin of in_order) {
+        // Reference to the bin label
+        let label = bin.querySelector(".bin_label");
+
+        // clear out previous properties so we don't have contradictions
+        bin.style.removeProperty("position");
+        bin.style.removeProperty("top");
+        bin.style.removeProperty("bottom");
+        bin.style.removeProperty("left");
+        bin.style.removeProperty("right");
+        bin.style.removeProperty("width");
+        bin.style.removeProperty("height");
+
+        label.style.removeProperty("position");
+        label.style.removeProperty("top");
+        label.style.removeProperty("bottom");
+        label.style.removeProperty("left");
+        label.style.removeProperty("right");
+        label.style.removeProperty("width");
+        label.style.removeProperty("height");
+
+        if (bin.classList.contains("sticky_maximized")) {
+            // if maximized, take up bottom 50% of screen
+            bin.style.width = "100%";
+            bin.style.height = "50%";
+            bin.style.bottom = "0pt";
+            bin.style.left = "0pt";
+            // also grab label and pull it out
+            label.style.position = "fixed";
+            label.style.bottom = "50%";
+            label.style.left = pct_sofar + "%";
+            label.style.width = each_pct + "%";
+        } else {
+            // if minimized, appear along top of maximized area OR
+            // along bottom of screen (if nothing is maximized)
+            bin.style.width = each_pct + "%";
+            bin.style.left = pct_sofar + "%";
+            if (any_maximized) {
+                bin.style.bottom = "50%";
+            } else {
+                bin.style.bottom = "0pt";
+            }
+        }
+        
+
+        // Update pct_sofar
+        pct_sofar += each_pct;
+    }
+}
+
+// Toggles a bin between minimized and maximized states
+function show_or_hide_my_parent() {
+    toggle_bin_state(this.parentElement);
+}
+
+// Toggles a floating sticky bin's state. If a second parameter is
+// supplied and it's true or false, true forces maximization and false
+// forces minimization. Does nothing if the bin is not currently
+// floating.
+function toggle_bin_state(bin, maximize) {
+    if (!bin.classList.contains("sticky_floating")) {
+        return;
+    }
+
+    if (maximize == undefined) {
+        maximize = true;
+        if (bin.classList.contains("sticky_maximized")) {
+            maximize = false;
+        }
+    }
+
+    // first minimize ALL floating bins
+    for (let other_bin of FLOATING_BINS) {
+        // Remember scroll position as we minimize
+        if (other_bin.classList.contains("sticky_maximized")) {
+            other_bin.scrollTopMemory = other_bin.scrollTop;
+        }
+        other_bin.classList.remove("sticky_maximized");
+        other_bin.classList.add("sticky_minimized");
+    }
+
+    // Now maximize this bin if we're maximizing
+    if (maximize) {
+        bin.classList.add("sticky_maximized");
+        bin.classList.remove("sticky_minimized");
+    }
+
+    // rearrange all floating bins based on the new state
+    rearrange_floating_bins();
+
+    if (maximize && bin.scrollTopMemory) {
+        bin.scrollTop = bin.scrollTopMemory;
+    }
+}
+
+
+// Ensures that a specific sticky bin is currently visible, either by
+// maximizing it if it's floating, or doing nothing if it's not floating.
+function ensure_bin_is_visible(bin) {
+    if (bin.classList.contains("sticky_floating") && !bin.classList.contains("sticky_maximized")) {
+
+    }
+}
+
+// Returns an ancestor element of the given element that is a sticky bin,
+// or null if there is no such ancestor.
+function sticky_bin_ancestor(element) {
+    if (!element.parentNode || !element.parentNode.classList) {
+        return null;
+    } else if (element.parentNode.classList.contains("sticky_bin")) {
+        return element.parentNode;
+    } else {
+        return sticky_bin_ancestor(element.parentNode);
+    }
+}
+
+var TOTAL_FLOATABLE_BINS;
+
+// Set up for sticky bins:
+window.addEventListener("load", function () {
+    let bin_index = 0;
+    for (let context of document.querySelectorAll(".sticky_context")) {
+        // Observe each sticky bin context
+        observer.observe(context);
+
+        // Number each bin in source order
+        context.querySelector(".sticky_bin").bin_number = bin_index;
+        bin_index += 1;
+
+        // Add minimize/maximize handlers to bin labels
+        let bin_label = context.querySelector(".bin_label");
+        bin_label.addEventListener("click", show_or_hide_my_parent);
+        bin_label.setAttribute(
+            "aria-label",
+            (
+                "Activate to make this section more prominent, or again to"
+              + " hide it (unless scrolled into view already)."
+            )
+        );
+    }
+
+    // Find all links that link to anchors and ensure that when we click
+    // them before we jump, if they link to an anchor that's in a sticky
+    // bin, we maximize that sticky bin if it's floating
+    for (let link of document.querySelectorAll("a:link")) {
+        // only look at anchor links
+        let bare_url = (
+            window.location.protocol
+          + "//"
+          + window.location.host
+          + window.location.pathname
+        );
+        let link_href = link.href;
+        let link_hash = link.hash;
+        if (link_href.startsWith(bare_url) && link_hash.length > 0) {
+            let destination = document.getElementById(link_hash.substring(1));
+            if (!destination) {
+                console.warn("Broken # link:", link);
+                continue; // broken link I guess
+            }
+
+            let bin = sticky_bin_ancestor(destination); // let is critical here!
+            if (bin != null) {
+                // If the destination's in a sticky bin, add a click handler
+                // to the link to open that bin
+                link.addEventListener("click", function () {
+                    toggle_bin_state(bin, true);
+                    return true; // continue with normal event operation
+                });
+            }
+        }
+    }
+
+    TOTAL_FLOATABLE_BINS = bin_index;
+});
+
+    </script>
+
+  </head>
+  <body class="feedback">
+
+    <div class="task_container">
+      <div class="surround">
+        
+        <h2 id="interactiveTest" class="task_header">
+          
+          
+          interactiveTest: partially complete
+          
+        </h2>
+        (evaluated at 20210628@22:01:15)
+      </div>
+      <div id="interactiveTest_body" class="task_body with_rubric">
+
+        <!-- The rubric report -->
+        <section class="task_feedback surround">
+          <h3>Rubric report</h3>
+          <div class="evaluation">
+            Overall evaluation:
+            <span class="eval_not_evaluated">
+              partially complete
+            </span>
+          </div>
+          <div class="summary">
+            <p>You accomplished 6.5 (at least 4.5) of the 9 core goals.</p>
+          </div>
+          <div class="warnings">
+            
+            <label for="hide_accomplished_goals">
+              <input type="checkbox" id="hide_accomplished_goals">
+              Hide accomplished goals
+            </label>
+          </div>
+          <div class="rubric_table">
+<div class="rubric_row status_partial tag-category-type_group tag-goal_type-style"><div class="topic" tabindex="0">
+<div class="goal_status status_partial">~</div>
+<span class='sr-only'>partial</span>
+Style Requirements
+ <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">Checks regarding the raw text of your code file and how it is organized stylistically (e.g., how many characters are in a line of code, or how many comments there are).</div>
+</details>
+
+</div><div class="assessment"><div class="explanation">Accomplished some of the core style goals.</div></div><div class="rubric_table">
+<div class="rubric_row status_partial tag-category-core tag-goal_type-style"><div class="topic" tabindex="0">
+<div class="goal_status status_partial">~</div>
+<span class='sr-only'>partial</span>
+Core goals
+ <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">Complete all core goals for core credit. Get partial credit for completing at least half, and more partial credit for completing at least 90%.</div>
+</details>
+
+</div><div class="assessment"><div class="explanation">Accomplished 1.5 of 2 goals.</div></div><div class="rubric_table">
+<div class="rubric_row status_accomplished tag-category-core tag-goal_type-style"><div class="topic" tabindex="0">
+<div class="goal_status status_accomplished">✓</div>
+<span class='sr-only'>accomplished</span>
+Do not ignore the results of any fruitful function calls.
+ <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">According to the "Don't waste fruit" principle, every place you call a fruitful function (built-in or custom) you must store the result in a variable, or that function call must be part of a larger expression that uses its return value.</div>
+</details>
+
+</div><div class="assessment"><div class="explanation">All calls to fruitful functions in your code correctly made use of their results.</div></div></div>
+<div class="rubric_row status_partial tag-category-core tag-goal_type-style"><div class="topic" tabindex="0">
+<div class="goal_status status_partial">~</div>
+<span class='sr-only'>partial</span>
+Do not create any variables that you never make use of.
+ <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">According to the "Don't waste boxes" principle, every time you create a variable (using <code>=</code> or by defining a parameter for a function) you must also later use that variable as part of another expression. If you need to create a variable that you won't use, it must have the name <code>_</code>, but you should only do this if absolutely necessary.</div>
+</details>
+
+</div><div class="assessment"><div class="explanation">Your code created 2 variables which it did not make use of:
+Found the following variables that were never used:
+<ol>
+<li>In the global scope, found:
+<ol>
+<li>Variable <code>dogCount</code> on line(s) <a class="lineref" href="#interactiveTest_interactive_codeline_21" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_21'); return true;">21</a></li>
+
+<li>Variable <code>name</code> on line(s) <a class="lineref" href="#interactiveTest_interactive_codeline_14" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_14'); return true;">14</a></li>
+
+</ol></li>
+</div></div></div>
+</div></div>
+</div></div>
+<div class="rubric_row status_partial tag-category-type_group tag-goal_type-procedure"><div class="topic" tabindex="0">
+<div class="goal_status status_partial">~</div>
+<span class='sr-only'>partial</span>
+Procedure Requirements
+ <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">Code checks which require that your code is written in a certain way, regardless of what happens when it runs (e.g., how many lines of code call a certain function).</div>
+</details>
+
+</div><div class="assessment"><div class="explanation">Accomplished some of the core procedure goals.</div></div><div class="rubric_table">
+<div class="rubric_row status_partial tag-category-core tag-goal_type-procedure"><div class="topic" tabindex="0">
+<div class="goal_status status_partial">~</div>
+<span class='sr-only'>partial</span>
+Core goals
+ <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">Complete all core goals for core credit. Get partial credit for completing at least half, and more partial credit for completing at least 90%.</div>
+</details>
+
+</div><div class="assessment"><div class="explanation">Accomplished 4 of 5 goals.</div></div><div class="rubric_table">
+<div class="rubric_row status_accomplished tag-category-core tag-goal_type-procedure"><div class="topic" tabindex="0">
+<div class="goal_status status_accomplished">✓</div>
+<span class='sr-only'>accomplished</span>
+No errors loading code.
+ <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">Your code should be able to be loaded without errors. Run your code before submitting it to make sure this is true.</div>
+</details>
+
+</div><div class="assessment"><div class="explanation">There weren't any parsing errors.</div></div></div>
+<div class="rubric_row status_accomplished tag-category-core tag-goal_type-procedure"><div class="topic" tabindex="0">
+<div class="goal_status status_accomplished">✓</div>
+<span class='sr-only'>accomplished</span>
+Call <code>input</code>
+ <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">Call <code>input</code> in exactly 4 places.</div>
+</details>
+
+</div><div class="assessment"><div class="explanation">Expected exactly 4 calls to <code>input</code>, found 4.</div>
+<details class="notes">
+<summary>Notes</summary>
+<ul>
+<li class="note">Found on line(s): <a class="lineref" href="#interactiveTest_interactive_codeline_14" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_14'); return true;">14</a>, <a class="lineref" href="#interactiveTest_interactive_codeline_15" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_15'); return true;">15</a>, <a class="lineref" href="#interactiveTest_interactive_codeline_16" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_16'); return true;">16</a>, <a class="lineref" href="#interactiveTest_interactive_codeline_17" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_17'); return true;">17</a></li></ul>
+</details></div></div>
+<div class="rubric_row status_accomplished tag-category-core tag-goal_type-procedure"><div class="topic" tabindex="0">
+<div class="goal_status status_accomplished">✓</div>
+<span class='sr-only'>accomplished</span>
+Call <code>int</code>
+ <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">Call <code>int</code> in at least once place.</div>
+</details>
+
+</div><div class="assessment"><div class="explanation">Expected at least 1 call to <code>int</code>, found 1.</div>
+<details class="notes">
+<summary>Notes</summary>
+<ul>
+<li class="note">Found on line(s): <a class="lineref" href="#interactiveTest_interactive_codeline_21" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_21'); return true;">21</a></li></ul>
+</details></div></div>
+<div class="rubric_row status_accomplished tag-category-core tag-goal_type-procedure"><div class="topic" tabindex="0">
+<div class="goal_status status_accomplished">✓</div>
+<span class='sr-only'>accomplished</span>
+Call <code>float</code>
+ <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">Call <code>float</code> in at least once place.</div>
+</details>
+
+</div><div class="assessment"><div class="explanation">Expected at least 1 call to <code>float</code>, found 2.</div>
+<details class="notes">
+<summary>Notes</summary>
+<ul>
+<li class="note">Found on line(s): <a class="lineref" href="#interactiveTest_interactive_codeline_22" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_22'); return true;">22</a>, <a class="lineref" href="#interactiveTest_interactive_codeline_23" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_23'); return true;">23</a></li></ul>
+</details></div></div>
+<div class="rubric_row status_failed tag-category-core tag-goal_type-procedure"><div class="topic" tabindex="0">
+<div class="goal_status status_failed">✗</div>
+<span class='sr-only'>failed</span>
+Use a multiplication by 7
+ <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">Use <code>7 * _</code> in at least once place.</div>
+</details>
+
+</div><div class="assessment"><div class="explanation">Expected at least 1 multiplication by 7, found 0.</div></div></div>
+</div></div>
+<div class="rubric_row status_failed tag-category-extra tag-goal_type-procedure"><div class="topic" tabindex="0">
+<div class="goal_status status_failed">✗</div>
+<span class='sr-only'>failed</span>
+Extra goals
+ <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">Complete all extra goals in addition to the core goals for a perfect score.</div>
+</details>
+
+</div><div class="assessment"><div class="explanation">Accomplished 0 of 1 goal.</div></div><div class="rubric_table">
+<div class="rubric_row status_failed tag-category-extra tag-goal_type-procedure"><div class="topic" tabindex="0">
+<div class="goal_status status_failed">✗</div>
+<span class='sr-only'>failed</span>
+Use a multiplication by 7
+ <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">Use <code>7 * _</code> in exactly one place.</div>
+</details>
+
+</div><div class="assessment"><div class="explanation">Expected exactly 1 multiplication by 7, found 0.</div></div></div>
+</div></div>
+</div></div>
+<div class="rubric_row status_partial tag-category-type_group tag-goal_type-behavior"><div class="topic" tabindex="0">
+<div class="goal_status status_partial">~</div>
+<span class='sr-only'>partial</span>
+Behavior Requirements
+ <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">Behavior tests that run your code and check what inputs it requests from and what outputs it displays to the user (e.g., what is printed given certain typed inputs).</div>
+</details>
+
+</div><div class="assessment"><div class="explanation">Accomplished some of the core behavior goals.</div></div><div class="rubric_table">
+<div class="rubric_row status_partial tag-category-core tag-goal_type-behavior"><div class="topic" tabindex="0">
+<div class="goal_status status_partial">~</div>
+<span class='sr-only'>partial</span>
+Core goals
+ <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">Complete all core goals for core credit. Get partial credit for completing at least half, and more partial credit for completing at least 90%.</div>
+</details>
+
+</div><div class="assessment"><div class="explanation">Accomplished 1 of 2 goals.</div></div><div class="rubric_table">
+<div class="rubric_row status_partial tag-category-core tag-goal_type-behavior"><div class="topic" tabindex="0">
+<div class="goal_status status_partial">~</div>
+<span class='sr-only'>partial</span>
+Your file prints the correct output
+ <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">The output printed when your entire file is run must match the solution output.</div>
+</details>
+
+</div><div class="assessment"><div class="explanation">Strings are somewhat similar.<br>
+
+    <table class="diff" id="difflib_chg_to0__top"
+           cellspacing="0" cellpadding="0" rules="groups" >
+        <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
+        <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
+        <thead><tr><th class="diff_next"><br /></th><th colspan="2" class="diff_header">Actual output</th><th class="diff_next"><br /></th><th colspan="2" class="diff_header">Corresponding lines (if any) in expected output</th></tr></thead>
+        <tbody>
+            <tr><td class="diff_next" id="difflib_chg_to0__0"><a href="#difflib_chg_to0__0">f</a></td><td class="diff_header" id="from0_1">1</td><td nowrap="nowrap">What&nbsp;is&nbsp;your&nbsp;name?&nbsp;Valentina</td><td class="diff_next"><a href="#difflib_chg_to0__0">f</a></td><td class="diff_header" id="to0_1">1</td><td nowrap="nowrap">What&nbsp;is&nbsp;your&nbsp;name?&nbsp;Valentina</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from0_2">2</td><td nowrap="nowrap">How&nbsp;many&nbsp;dogs&nbsp;do&nbsp;you&nbsp;have?&nbsp;3</td><td class="diff_next"></td><td class="diff_header" id="to0_2">2</td><td nowrap="nowrap">How&nbsp;many&nbsp;dogs&nbsp;do&nbsp;you&nbsp;have?&nbsp;3</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from0_3">3</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;each&nbsp;dog&nbsp;eat&nbsp;per&nbsp;day&nbsp;(in&nbsp;cups)?&nbsp;2</td><td class="diff_next"></td><td class="diff_header" id="to0_3">3</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;each&nbsp;dog&nbsp;eat&nbsp;per&nbsp;day&nbsp;(in&nbsp;cups)?&nbsp;2</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from0_4">4</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;one&nbsp;cup&nbsp;of&nbsp;dog&nbsp;food&nbsp;weigh&nbsp;(in&nbsp;lbs)?&nbsp;1</td><td class="diff_next"></td><td class="diff_header" id="to0_4">4</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;one&nbsp;cup&nbsp;of&nbsp;dog&nbsp;food&nbsp;weigh&nbsp;(in&nbsp;lbs)?&nbsp;1</td></tr>
+            <tr><td class="diff_next"><a href="#difflib_chg_to0__top">t</a></td><td class="diff_header" id="from0_5">5</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;</span></td><td class="diff_next"><a href="#difflib_chg_to0__top">t</a></td><td class="diff_header" id="to0_5">5</td><td nowrap="nowrap"><span class="diff_add">Feeding&nbsp;information&nbsp;for&nbsp;Valentina:</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from0_6">6</td><td nowrap="nowrap"><span class="diff_sub">Traceback&nbsp;(most&nbsp;recent&nbsp;call&nbsp;last):</span></td><td class="diff_next"></td><td class="diff_header" id="to0_6">6</td><td nowrap="nowrap"><span class="diff_add">Your&nbsp;dog(s)&nbsp;eat&nbsp;42.0&nbsp;lbs&nbsp;of&nbsp;dog&nbsp;food&nbsp;every&nbsp;week.</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from0_7">7</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;potluck/harness.py",&nbsp;line&nbsp;425,&nbsp;in&nbsp;capturing_payload</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from0_8">8</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;&nbsp;&nbsp;result&nbsp;=&nbsp;payload(context)</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from0_9">9</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;potluck/harness.py",&nbsp;line&nbsp;129,&nbsp;in&nbsp;payload</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from0_10">10</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;&nbsp;&nbsp;module&nbsp;=&nbsp;load.create_module_from_code(node,&nbsp;full_name)</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from0_11">11</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;potluck/load.py",&nbsp;line&nbsp;134,&nbsp;in&nbsp;create_module_from_code</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from0_12">12</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;&nbsp;&nbsp;exec(bytecode,&nbsp;module.__dict__,&nbsp;module.__dict__)</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from0_13">13</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;test_interactive.py",&nbsp;line&nbsp;25,&nbsp;in&nbsp;&lt;module&gt;</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from0_14">14</td><td nowrap="nowrap"><span class="diff_sub">TypeError:&nbsp;can't&nbsp;multiply&nbsp;sequence&nbsp;by&nbsp;non-int&nbsp;of&nbsp;type&nbsp;'float'</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+        </tbody>
+    </table></div></div></div>
+<div class="rubric_row status_partial tag-category-core tag-goal_type-behavior"><div class="topic" tabindex="0">
+<div class="goal_status status_partial">~</div>
+<span class='sr-only'>partial</span>
+Your file prints the correct output
+ <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">The output printed when your entire file is run must match the solution output.</div>
+</details>
+
+</div><div class="assessment"><div class="explanation">Strings are somewhat similar.<br>
+
+    <table class="diff" id="difflib_chg_to1__top"
+           cellspacing="0" cellpadding="0" rules="groups" >
+        <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
+        <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
+        <thead><tr><th class="diff_next"><br /></th><th colspan="2" class="diff_header">Actual output</th><th class="diff_next"><br /></th><th colspan="2" class="diff_header">Corresponding lines (if any) in expected output</th></tr></thead>
+        <tbody>
+            <tr><td class="diff_next" id="difflib_chg_to1__0"><a href="#difflib_chg_to1__0">f</a></td><td class="diff_header" id="from1_1">1</td><td nowrap="nowrap">What&nbsp;is&nbsp;your&nbsp;name?&nbsp;Hamad</td><td class="diff_next"><a href="#difflib_chg_to1__0">f</a></td><td class="diff_header" id="to1_1">1</td><td nowrap="nowrap">What&nbsp;is&nbsp;your&nbsp;name?&nbsp;Hamad</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from1_2">2</td><td nowrap="nowrap">How&nbsp;many&nbsp;dogs&nbsp;do&nbsp;you&nbsp;have?&nbsp;1</td><td class="diff_next"></td><td class="diff_header" id="to1_2">2</td><td nowrap="nowrap">How&nbsp;many&nbsp;dogs&nbsp;do&nbsp;you&nbsp;have?&nbsp;1</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from1_3">3</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;each&nbsp;dog&nbsp;eat&nbsp;per&nbsp;day&nbsp;(in&nbsp;cups)?&nbsp;2.5</td><td class="diff_next"></td><td class="diff_header" id="to1_3">3</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;each&nbsp;dog&nbsp;eat&nbsp;per&nbsp;day&nbsp;(in&nbsp;cups)?&nbsp;2.5</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from1_4">4</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;one&nbsp;cup&nbsp;of&nbsp;dog&nbsp;food&nbsp;weigh&nbsp;(in&nbsp;lbs)?&nbsp;0.75</td><td class="diff_next"></td><td class="diff_header" id="to1_4">4</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;one&nbsp;cup&nbsp;of&nbsp;dog&nbsp;food&nbsp;weigh&nbsp;(in&nbsp;lbs)?&nbsp;0.75</td></tr>
+            <tr><td class="diff_next"><a href="#difflib_chg_to1__top">t</a></td><td class="diff_header" id="from1_5">5</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;</span></td><td class="diff_next"><a href="#difflib_chg_to1__top">t</a></td><td class="diff_header" id="to1_5">5</td><td nowrap="nowrap"><span class="diff_add">Feeding&nbsp;information&nbsp;for&nbsp;Hamad:</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from1_6">6</td><td nowrap="nowrap"><span class="diff_sub">Traceback&nbsp;(most&nbsp;recent&nbsp;call&nbsp;last):</span></td><td class="diff_next"></td><td class="diff_header" id="to1_6">6</td><td nowrap="nowrap"><span class="diff_add">Your&nbsp;dog(s)&nbsp;eat&nbsp;13.12&nbsp;lbs&nbsp;of&nbsp;dog&nbsp;food&nbsp;every&nbsp;week.</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from1_7">7</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;potluck/harness.py",&nbsp;line&nbsp;425,&nbsp;in&nbsp;capturing_payload</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from1_8">8</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;&nbsp;&nbsp;result&nbsp;=&nbsp;payload(context)</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from1_9">9</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;potluck/harness.py",&nbsp;line&nbsp;129,&nbsp;in&nbsp;payload</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from1_10">10</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;&nbsp;&nbsp;module&nbsp;=&nbsp;load.create_module_from_code(node,&nbsp;full_name)</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from1_11">11</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;potluck/load.py",&nbsp;line&nbsp;134,&nbsp;in&nbsp;create_module_from_code</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from1_12">12</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;&nbsp;&nbsp;exec(bytecode,&nbsp;module.__dict__,&nbsp;module.__dict__)</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from1_13">13</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;test_interactive.py",&nbsp;line&nbsp;25,&nbsp;in&nbsp;&lt;module&gt;</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from1_14">14</td><td nowrap="nowrap"><span class="diff_sub">TypeError:&nbsp;can't&nbsp;multiply&nbsp;sequence&nbsp;by&nbsp;non-int&nbsp;of&nbsp;type&nbsp;'float'</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+        </tbody>
+    </table></div></div></div>
+</div></div>
+<div class="rubric_row status_partial tag-category-extra tag-goal_type-behavior"><div class="topic" tabindex="0">
+<div class="goal_status status_partial">~</div>
+<span class='sr-only'>partial</span>
+Extra goals
+ <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">Complete all extra goals in addition to the core goals for a perfect score.</div>
+</details>
+
+</div><div class="assessment"><div class="explanation">Accomplished 1 of 2 goals.</div></div><div class="rubric_table">
+<div class="rubric_row status_partial tag-category-extra tag-goal_type-behavior"><div class="topic" tabindex="0">
+<div class="goal_status status_partial">~</div>
+<span class='sr-only'>partial</span>
+Your file prints the correct output
+ <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">The output printed when your entire file is run must match the solution output.</div>
+</details>
+
+</div><div class="assessment"><div class="explanation">Strings are somewhat similar.<br>
+
+    <table class="diff" id="difflib_chg_to2__top"
+           cellspacing="0" cellpadding="0" rules="groups" >
+        <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
+        <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
+        <thead><tr><th class="diff_next"><br /></th><th colspan="2" class="diff_header">Actual output</th><th class="diff_next"><br /></th><th colspan="2" class="diff_header">Corresponding lines (if any) in expected output</th></tr></thead>
+        <tbody>
+            <tr><td class="diff_next" id="difflib_chg_to2__0"><a href="#difflib_chg_to2__0">f</a></td><td class="diff_header" id="from2_1">1</td><td nowrap="nowrap">What&nbsp;is&nbsp;your&nbsp;name?&nbsp;Wenyu</td><td class="diff_next"><a href="#difflib_chg_to2__0">f</a></td><td class="diff_header" id="to2_1">1</td><td nowrap="nowrap">What&nbsp;is&nbsp;your&nbsp;name?&nbsp;Wenyu</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from2_2">2</td><td nowrap="nowrap">How&nbsp;many&nbsp;dogs&nbsp;do&nbsp;you&nbsp;have?&nbsp;1</td><td class="diff_next"></td><td class="diff_header" id="to2_2">2</td><td nowrap="nowrap">How&nbsp;many&nbsp;dogs&nbsp;do&nbsp;you&nbsp;have?&nbsp;1</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from2_3">3</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;each&nbsp;dog&nbsp;eat&nbsp;per&nbsp;day&nbsp;(in&nbsp;cups)?&nbsp;1.19201</td><td class="diff_next"></td><td class="diff_header" id="to2_3">3</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;each&nbsp;dog&nbsp;eat&nbsp;per&nbsp;day&nbsp;(in&nbsp;cups)?&nbsp;1.19201</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from2_4">4</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;one&nbsp;cup&nbsp;of&nbsp;dog&nbsp;food&nbsp;weigh&nbsp;(in&nbsp;lbs)?&nbsp;0.5842</td><td class="diff_next"></td><td class="diff_header" id="to2_4">4</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;one&nbsp;cup&nbsp;of&nbsp;dog&nbsp;food&nbsp;weigh&nbsp;(in&nbsp;lbs)?&nbsp;0.5842</td></tr>
+            <tr><td class="diff_next"><a href="#difflib_chg_to2__top">t</a></td><td class="diff_header" id="from2_5">5</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;</span></td><td class="diff_next"><a href="#difflib_chg_to2__top">t</a></td><td class="diff_header" id="to2_5">5</td><td nowrap="nowrap"><span class="diff_add">Feeding&nbsp;information&nbsp;for&nbsp;Wenyu:</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from2_6">6</td><td nowrap="nowrap"><span class="diff_sub">Traceback&nbsp;(most&nbsp;recent&nbsp;call&nbsp;last):</span></td><td class="diff_next"></td><td class="diff_header" id="to2_6">6</td><td nowrap="nowrap"><span class="diff_add">Your&nbsp;dog(s)&nbsp;eat&nbsp;4.87&nbsp;lbs&nbsp;of&nbsp;dog&nbsp;food&nbsp;every&nbsp;week.</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from2_7">7</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;potluck/harness.py",&nbsp;line&nbsp;425,&nbsp;in&nbsp;capturing_payload</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from2_8">8</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;&nbsp;&nbsp;result&nbsp;=&nbsp;payload(context)</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from2_9">9</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;potluck/harness.py",&nbsp;line&nbsp;129,&nbsp;in&nbsp;payload</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from2_10">10</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;&nbsp;&nbsp;module&nbsp;=&nbsp;load.create_module_from_code(node,&nbsp;full_name)</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from2_11">11</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;potluck/load.py",&nbsp;line&nbsp;134,&nbsp;in&nbsp;create_module_from_code</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from2_12">12</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;&nbsp;&nbsp;exec(bytecode,&nbsp;module.__dict__,&nbsp;module.__dict__)</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from2_13">13</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;test_interactive.py",&nbsp;line&nbsp;25,&nbsp;in&nbsp;&lt;module&gt;</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from2_14">14</td><td nowrap="nowrap"><span class="diff_sub">TypeError:&nbsp;can't&nbsp;multiply&nbsp;sequence&nbsp;by&nbsp;non-int&nbsp;of&nbsp;type&nbsp;'float'</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+        </tbody>
+    </table></div></div></div>
+<div class="rubric_row status_partial tag-category-extra tag-goal_type-behavior"><div class="topic" tabindex="0">
+<div class="goal_status status_partial">~</div>
+<span class='sr-only'>partial</span>
+Your file prints the correct output
+ <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">The output printed when your entire file is run must match the solution output.</div>
+</details>
+
+</div><div class="assessment"><div class="explanation">Strings are somewhat similar.<br>
+
+    <table class="diff" id="difflib_chg_to3__top"
+           cellspacing="0" cellpadding="0" rules="groups" >
+        <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
+        <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
+        <thead><tr><th class="diff_next"><br /></th><th colspan="2" class="diff_header">Actual output</th><th class="diff_next"><br /></th><th colspan="2" class="diff_header">Corresponding lines (if any) in expected output</th></tr></thead>
+        <tbody>
+            <tr><td class="diff_next" id="difflib_chg_to3__0"><a href="#difflib_chg_to3__0">f</a></td><td class="diff_header" id="from3_1">1</td><td nowrap="nowrap">What&nbsp;is&nbsp;your&nbsp;name?&nbsp;Paolo</td><td class="diff_next"><a href="#difflib_chg_to3__0">f</a></td><td class="diff_header" id="to3_1">1</td><td nowrap="nowrap">What&nbsp;is&nbsp;your&nbsp;name?&nbsp;Paolo</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from3_2">2</td><td nowrap="nowrap">How&nbsp;many&nbsp;dogs&nbsp;do&nbsp;you&nbsp;have?&nbsp;0</td><td class="diff_next"></td><td class="diff_header" id="to3_2">2</td><td nowrap="nowrap">How&nbsp;many&nbsp;dogs&nbsp;do&nbsp;you&nbsp;have?&nbsp;0</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from3_3">3</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;each&nbsp;dog&nbsp;eat&nbsp;per&nbsp;day&nbsp;(in&nbsp;cups)?&nbsp;0</td><td class="diff_next"></td><td class="diff_header" id="to3_3">3</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;each&nbsp;dog&nbsp;eat&nbsp;per&nbsp;day&nbsp;(in&nbsp;cups)?&nbsp;0</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from3_4">4</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;one&nbsp;cup&nbsp;of&nbsp;dog&nbsp;food&nbsp;weigh&nbsp;(in&nbsp;lbs)?&nbsp;0</td><td class="diff_next"></td><td class="diff_header" id="to3_4">4</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;one&nbsp;cup&nbsp;of&nbsp;dog&nbsp;food&nbsp;weigh&nbsp;(in&nbsp;lbs)?&nbsp;0</td></tr>
+            <tr><td class="diff_next"><a href="#difflib_chg_to3__top">t</a></td><td class="diff_header" id="from3_5">5</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;</span></td><td class="diff_next"><a href="#difflib_chg_to3__top">t</a></td><td class="diff_header" id="to3_5">5</td><td nowrap="nowrap"><span class="diff_add">Feeding&nbsp;information&nbsp;for&nbsp;Paolo:</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from3_6">6</td><td nowrap="nowrap"><span class="diff_sub">Traceback&nbsp;(most&nbsp;recent&nbsp;call&nbsp;last):</span></td><td class="diff_next"></td><td class="diff_header" id="to3_6">6</td><td nowrap="nowrap"><span class="diff_add">Your&nbsp;dog(s)&nbsp;eat&nbsp;0.0&nbsp;lbs&nbsp;of&nbsp;dog&nbsp;food&nbsp;every&nbsp;week.</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from3_7">7</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;potluck/harness.py",&nbsp;line&nbsp;425,&nbsp;in&nbsp;capturing_payload</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from3_8">8</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;&nbsp;&nbsp;result&nbsp;=&nbsp;payload(context)</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from3_9">9</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;potluck/harness.py",&nbsp;line&nbsp;129,&nbsp;in&nbsp;payload</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from3_10">10</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;&nbsp;&nbsp;module&nbsp;=&nbsp;load.create_module_from_code(node,&nbsp;full_name)</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from3_11">11</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;potluck/load.py",&nbsp;line&nbsp;134,&nbsp;in&nbsp;create_module_from_code</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from3_12">12</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;&nbsp;&nbsp;exec(bytecode,&nbsp;module.__dict__,&nbsp;module.__dict__)</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from3_13">13</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;test_interactive.py",&nbsp;line&nbsp;25,&nbsp;in&nbsp;&lt;module&gt;</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from3_14">14</td><td nowrap="nowrap"><span class="diff_sub">TypeError:&nbsp;can't&nbsp;multiply&nbsp;sequence&nbsp;by&nbsp;non-int&nbsp;of&nbsp;type&nbsp;'float'</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+        </tbody>
+    </table></div></div></div>
+</div></div>
+</div></div>
+</div>
+        </section>
+
+        <!-- Rendered code -->
+        <div class="sticky_context" id="interactiveTest_code_context">
+          <section
+           class='sticky_bin surround'
+           id="interactiveTest_code"
+           tabindex="0"
+           aria-label="Your code"
+           aria-live="polite"
+          >
+            <h3 class="bin_label" tabindex="0">Your code</h3>
+
+            
+              <h4>File <code>interactive.py</code></h4>
+              <div
+               class="task_code"
+               id="interactiveTest_code_interactive"
+              >
+                <div class="highlight">
+                  <div class="eighty_top" aria-hidden="true">
+                    80 characters
+                    <span class="status_symbol">&rarrb;</span>
+                  </div>
+                  <pre id="interactiveTest_code_interactive.py"><span id="interactiveTest_interactive_codeline_1" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_1'); return false"><span class="linenum">1 </span> <span></span><span class="sd">&quot;&quot;&quot;</span></span>
+<span id="interactiveTest_interactive_codeline_2" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_2'); return false"><span class="linenum">2 </span> <span class="sd">interactive.py</span></span>
+<span id="interactiveTest_interactive_codeline_3" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_3'); return false"><span class="linenum">3 </span> </span>
+<span id="interactiveTest_interactive_codeline_4" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_4'); return false"><span class="linenum">4 </span> <span class="sd">Your name: Peter Mawhorter</span></span>
+<span id="interactiveTest_interactive_codeline_5" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_5'); return false"><span class="linenum">5 </span> <span class="sd">Your username: pmwh</span></span>
+<span id="interactiveTest_interactive_codeline_6" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_6'); return false"><span class="linenum">6 </span> <span class="sd">Submission date: 2021-6-28</span></span>
+<span id="interactiveTest_interactive_codeline_7" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_7'); return false"><span class="linenum">7 </span> <span class="sd">&quot;&quot;&quot;</span></span>
+<span id="interactiveTest_interactive_codeline_8" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_8'); return false"><span class="linenum">8 </span> </span>
+<span id="interactiveTest_interactive_codeline_9" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_9'); return false"><span class="linenum">9 </span> <span class="c1"># PART 1: Get Input</span></span>
+<span id="interactiveTest_interactive_codeline_10" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_10'); return false"><span class="linenum">10 </span> <span class="c1"># Gather input from the user about time spent on different categories of</span></span>
+<span id="interactiveTest_interactive_codeline_11" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_11'); return false"><span class="linenum">11 </span> <span class="c1"># activities during each week. Since inputs are &quot;strings&quot;, convert them</span></span>
+<span id="interactiveTest_interactive_codeline_12" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_12'); return false"><span class="linenum">12 </span> <span class="c1"># immediately to int or float values. There should be a total of 6 questions.</span></span>
+<span id="interactiveTest_interactive_codeline_13" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_13'); return false"><span class="linenum">13 </span> </span>
+<span id="interactiveTest_interactive_codeline_14" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_14'); return false"><span class="linenum">14 </span> <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name? &#39;</span><span class="p">)</span></span>
+<span id="interactiveTest_interactive_codeline_15" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_15'); return false"><span class="linenum">15 </span> <span class="n">dogs</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;How many dogs do you have? &#39;</span><span class="p">)</span></span>
+<span id="interactiveTest_interactive_codeline_16" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_16'); return false"><span class="linenum">16 </span> <span class="n">diet</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;On average, how much does each dog eat per day (in cups)? &#39;</span><span class="p">)</span></span>
+<span id="interactiveTest_interactive_codeline_17" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_17'); return false"><span class="linenum">17 </span> <span class="n">density</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span></span>
+<span id="interactiveTest_interactive_codeline_18" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_18'); return false"><span class="linenum">18 </span>     <span class="s1">&#39;On average, how much does one cup of dog food weigh (in lbs)? &#39;</span></span>
+<span id="interactiveTest_interactive_codeline_19" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_19'); return false"><span class="linenum">19 </span> <span class="p">)</span></span>
+<span id="interactiveTest_interactive_codeline_20" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_20'); return false"><span class="linenum">20 </span> </span>
+<span id="interactiveTest_interactive_codeline_21" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_21'); return false"><span class="linenum">21 </span> <span class="n">dogCount</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">dogs</span><span class="p">)</span></span>
+<span id="interactiveTest_interactive_codeline_22" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_22'); return false"><span class="linenum">22 </span> <span class="n">dietCups</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">diet</span><span class="p">)</span></span>
+<span id="interactiveTest_interactive_codeline_23" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_23'); return false"><span class="linenum">23 </span> <span class="n">densityLbs</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">density</span><span class="p">)</span></span>
+<span id="interactiveTest_interactive_codeline_24" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_24'); return false"><span class="linenum">24 </span> </span>
+<span id="interactiveTest_interactive_codeline_25" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_25'); return false"><span class="linenum">25 </span> <span class="n">lbsPerWeek</span> <span class="o">=</span> <span class="n">dietCups</span> <span class="o">*</span> <span class="n">densityLbs</span> <span class="o">*</span> <span class="n">dogs</span></span>
+<span id="interactiveTest_interactive_codeline_26" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_26'); return false"><span class="linenum">26 </span> </span>
+<span id="interactiveTest_interactive_codeline_27" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_27'); return false"><span class="linenum">27 </span> </span>
+<span id="interactiveTest_interactive_codeline_28" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_28'); return false"><span class="linenum">28 </span> <span class="nb">print</span><span class="p">(</span></span>
+<span id="interactiveTest_interactive_codeline_29" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_29'); return false"><span class="linenum">29 </span>     <span class="s2">&quot;Your dog(s) eat &quot;</span></span>
+<span id="interactiveTest_interactive_codeline_30" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_30'); return false"><span class="linenum">30 </span>   <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">lbsPerWeek</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span></span>
+<span id="interactiveTest_interactive_codeline_31" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_31'); return false"><span class="linenum">31 </span>   <span class="o">+</span> <span class="s2">&quot;lbs of dog food every week.&quot;</span></span>
+<span id="interactiveTest_interactive_codeline_32" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_32'); return false"><span class="linenum">32 </span> <span class="p">)</span></span>
+<span id="interactiveTest_interactive_codeline_33" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_33'); return false"><span class="linenum">33 </span> </span>
+<span id="interactiveTest_interactive_codeline_34" class="codeline codeline_plain" onclick="focusCodeLine('interactiveTest_code_interactive', 'interactiveTest_interactive_codeline_34'); return false"><span class="linenum">34 </span> </span></pre>
+                  <div class="eighty" aria-hidden="true">
+                    80 characters
+                    <span class="status_symbol">&rarrb;</span>
+                  </div>
+                </div>
+              </div>
+            
+          </section>
+        </div>
+
+        <!-- Context results -->
+        <div class="sticky_context" id="interactiveTest_results_context">
+          <section
+           class='sticky_bin surround'
+           id="interactiveTest_contexts"
+           tabindex="0"
+           aria-label="Test results"
+           aria-live="polite"
+          >
+            <h3 class="bin_label" tabindex="0">Test results</h3>
+              <div class='context_info'>
+<details id='ctx_0' class='context_details level_0'>
+  <summary><div class="topic">File 'interactive.py' <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">We will evaluate your submitted file 'interactive.py'.</div>
+</details>
+</div></summary>
+  Evaluating 'interactive.py'
+</details>
+
+<details id='ctx_1' class='context_details level_1'>
+  <summary><div class="topic">Code in the target file <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">We parsed the code in the target file and paidattention to how it was written.</div>
+</details>
+</div></summary>
+  The code for 'interactive.py' (shown elsewhere).
+</details>
+
+<details id='ctx_2' class='context_details level_1'>
+  <summary><div class="topic">Program output ('Valentina' input) <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">We  ran your program with some example inputs, and observed what it printed.<br>
+We ran your submitted code<br>
+Testing details:<ul><li>Will be terminated if it takes longer than 5s.</li>
+<li>Printed output and error messages will be recorded.</li>
+<li>The following inputs will be provided:
+<ul><li><pre class="short_repr">'Valentina'</pre></li>
+<li><pre class="short_repr">'3'</pre></li>
+<li><pre class="short_repr">'2'</pre></li>
+<li><pre class="short_repr">'1'</pre></li>
+</ul></li>
+</ul></div>
+</details>
+</div></summary>
+  
+<div class="tabs" role="presentation">
+  <ul class="tabs-top">
+
+<li
+ class='tab selected' onclick='toggleTab();'
+ tabindex="0"
+ aria-label="Activate to display Your output after this list."
+>
+Your output
+</li>
+
+
+
+<li
+ class='tab' onclick='toggleTab();'
+ tabindex="0"
+ aria-label="Activate to display Solution output after this list."
+>
+Solution output
+</li>
+
+
+
+<li
+ class='tab' onclick='toggleTab();'
+ tabindex="0"
+ aria-label="Activate to display Comparison after this list."
+>
+Comparison
+</li>
+
+  </ul>
+  <div class="tabs-bot" aria-live="polite">
+
+<section
+ class='tab-content selected'
+ tabindex="0"
+>
+<pre class='context-value'>What is your name? Valentina
+How many dogs do you have? 3
+On average, how much does each dog eat per day (in cups)? 2
+On average, how much does one cup of dog food weigh (in lbs)? 1
+
+Traceback (most recent call last):
+  File "<task>potluck/harness.py", line 425, in capturing_payload
+    result = payload(context)
+  File "<task>potluck/harness.py", line 129, in payload
+    module = load.create_module_from_code(node, full_name)
+  File "<task>potluck/load.py", line 134, in create_module_from_code
+    exec(bytecode, module.__dict__, module.__dict__)
+  File "<task>test_interactive.py", line 25, in <module>
+TypeError: can't multiply sequence by non-int of type 'float'
+</pre>
+</section>
+
+
+
+<section
+ class='tab-content'
+ tabindex="0"
+>
+<pre class='context-value'>What is your name? Valentina
+How many dogs do you have? 3
+On average, how much does each dog eat per day (in cups)? 2
+On average, how much does one cup of dog food weigh (in lbs)? 1
+Feeding information for Valentina:
+Your dog(s) eat 42.0 lbs of dog food every week.
+</pre>
+</section>
+
+
+
+<section
+ class='tab-content'
+ tabindex="0"
+>
+
+    <table class="diff" id="difflib_chg_to4__top"
+           cellspacing="0" cellpadding="0" rules="groups" >
+        <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
+        <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
+        <thead><tr><th class="diff_next"><br /></th><th colspan="2" class="diff_header">Your output</th><th class="diff_next"><br /></th><th colspan="2" class="diff_header">Solution output</th></tr></thead>
+        <tbody>
+            <tr><td class="diff_next" id="difflib_chg_to4__0"><a href="#difflib_chg_to4__0">f</a></td><td class="diff_header" id="from4_1">1</td><td nowrap="nowrap">What&nbsp;is&nbsp;your&nbsp;name?&nbsp;Valentina</td><td class="diff_next"><a href="#difflib_chg_to4__0">f</a></td><td class="diff_header" id="to4_1">1</td><td nowrap="nowrap">What&nbsp;is&nbsp;your&nbsp;name?&nbsp;Valentina</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from4_2">2</td><td nowrap="nowrap">How&nbsp;many&nbsp;dogs&nbsp;do&nbsp;you&nbsp;have?&nbsp;3</td><td class="diff_next"></td><td class="diff_header" id="to4_2">2</td><td nowrap="nowrap">How&nbsp;many&nbsp;dogs&nbsp;do&nbsp;you&nbsp;have?&nbsp;3</td></tr>
+            <tr><td class="diff_next" id="difflib_chg_to4__1"></td><td class="diff_header" id="from4_3">3</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;each&nbsp;dog&nbsp;eat&nbsp;per&nbsp;day&nbsp;(in&nbsp;cups)?&nbsp;2</td><td class="diff_next"></td><td class="diff_header" id="to4_3">3</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;each&nbsp;dog&nbsp;eat&nbsp;per&nbsp;day&nbsp;(in&nbsp;cups)?&nbsp;2</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from4_4">4</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;one&nbsp;cup&nbsp;of&nbsp;dog&nbsp;food&nbsp;weigh&nbsp;(in&nbsp;lbs)?&nbsp;1</td><td class="diff_next"></td><td class="diff_header" id="to4_4">4</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;one&nbsp;cup&nbsp;of&nbsp;dog&nbsp;food&nbsp;weigh&nbsp;(in&nbsp;lbs)?&nbsp;1</td></tr>
+            <tr><td class="diff_next"><a href="#difflib_chg_to4__1">n</a></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"><a href="#difflib_chg_to4__1">n</a></td><td class="diff_header" id="to4_5">5</td><td nowrap="nowrap"><span class="diff_add">Feeding&nbsp;information&nbsp;for&nbsp;Valentina:</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to4_6">6</td><td nowrap="nowrap"><span class="diff_add">Your&nbsp;dog(s)&nbsp;eat&nbsp;42.0&nbsp;lbs&nbsp;of&nbsp;dog&nbsp;food&nbsp;every&nbsp;week.</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from4_5">5</td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to4_7">7</td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"><a href="#difflib_chg_to4__top">t</a></td><td class="diff_header" id="from4_6">6</td><td nowrap="nowrap"><span class="diff_sub">Traceback&nbsp;(most&nbsp;recent&nbsp;call&nbsp;last):</span></td><td class="diff_next"><a href="#difflib_chg_to4__top">t</a></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from4_7">7</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;potluck/harness.py",&nbsp;line&nbsp;425,&nbsp;in&nbsp;capturing_payload</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from4_8">8</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;&nbsp;&nbsp;result&nbsp;=&nbsp;payload(context)</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from4_9">9</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;potluck/harness.py",&nbsp;line&nbsp;129,&nbsp;in&nbsp;payload</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from4_10">10</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;&nbsp;&nbsp;module&nbsp;=&nbsp;load.create_module_from_code(node,&nbsp;full_name)</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from4_11">11</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;potluck/load.py",&nbsp;line&nbsp;134,&nbsp;in&nbsp;create_module_from_code</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from4_12">12</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;&nbsp;&nbsp;exec(bytecode,&nbsp;module.__dict__,&nbsp;module.__dict__)</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from4_13">13</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;test_interactive.py",&nbsp;line&nbsp;25,&nbsp;in&nbsp;&lt;module&gt;</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from4_14">14</td><td nowrap="nowrap"><span class="diff_sub">TypeError:&nbsp;can't&nbsp;multiply&nbsp;sequence&nbsp;by&nbsp;non-int&nbsp;of&nbsp;type&nbsp;'float'</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from4_15">15</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+        </tbody>
+    </table>
+</section>
+
+  </div>
+</div>
+
+</details>
+
+<details id='ctx_3' class='context_details level_1'>
+  <summary><div class="topic">Program output ('Hamad' input) <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">We  ran your program with some example inputs, and observed what it printed.<br>
+We ran your submitted code<br>
+Testing details:<ul><li>Will be terminated if it takes longer than 5s.</li>
+<li>Printed output and error messages will be recorded.</li>
+<li>The following inputs will be provided:
+<ul><li><pre class="short_repr">'Hamad'</pre></li>
+<li><pre class="short_repr">'1'</pre></li>
+<li><pre class="short_repr">'2.5'</pre></li>
+<li><pre class="short_repr">'0.75'</pre></li>
+</ul></li>
+</ul></div>
+</details>
+</div></summary>
+  
+<div class="tabs" role="presentation">
+  <ul class="tabs-top">
+
+<li
+ class='tab selected' onclick='toggleTab();'
+ tabindex="0"
+ aria-label="Activate to display Your output after this list."
+>
+Your output
+</li>
+
+
+
+<li
+ class='tab' onclick='toggleTab();'
+ tabindex="0"
+ aria-label="Activate to display Solution output after this list."
+>
+Solution output
+</li>
+
+
+
+<li
+ class='tab' onclick='toggleTab();'
+ tabindex="0"
+ aria-label="Activate to display Comparison after this list."
+>
+Comparison
+</li>
+
+  </ul>
+  <div class="tabs-bot" aria-live="polite">
+
+<section
+ class='tab-content selected'
+ tabindex="0"
+>
+<pre class='context-value'>What is your name? Hamad
+How many dogs do you have? 1
+On average, how much does each dog eat per day (in cups)? 2.5
+On average, how much does one cup of dog food weigh (in lbs)? 0.75
+
+Traceback (most recent call last):
+  File "<task>potluck/harness.py", line 425, in capturing_payload
+    result = payload(context)
+  File "<task>potluck/harness.py", line 129, in payload
+    module = load.create_module_from_code(node, full_name)
+  File "<task>potluck/load.py", line 134, in create_module_from_code
+    exec(bytecode, module.__dict__, module.__dict__)
+  File "<task>test_interactive.py", line 25, in <module>
+TypeError: can't multiply sequence by non-int of type 'float'
+</pre>
+</section>
+
+
+
+<section
+ class='tab-content'
+ tabindex="0"
+>
+<pre class='context-value'>What is your name? Hamad
+How many dogs do you have? 1
+On average, how much does each dog eat per day (in cups)? 2.5
+On average, how much does one cup of dog food weigh (in lbs)? 0.75
+Feeding information for Hamad:
+Your dog(s) eat 13.12 lbs of dog food every week.
+</pre>
+</section>
+
+
+
+<section
+ class='tab-content'
+ tabindex="0"
+>
+
+    <table class="diff" id="difflib_chg_to5__top"
+           cellspacing="0" cellpadding="0" rules="groups" >
+        <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
+        <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
+        <thead><tr><th class="diff_next"><br /></th><th colspan="2" class="diff_header">Your output</th><th class="diff_next"><br /></th><th colspan="2" class="diff_header">Solution output</th></tr></thead>
+        <tbody>
+            <tr><td class="diff_next" id="difflib_chg_to5__0"><a href="#difflib_chg_to5__0">f</a></td><td class="diff_header" id="from5_1">1</td><td nowrap="nowrap">What&nbsp;is&nbsp;your&nbsp;name?&nbsp;Hamad</td><td class="diff_next"><a href="#difflib_chg_to5__0">f</a></td><td class="diff_header" id="to5_1">1</td><td nowrap="nowrap">What&nbsp;is&nbsp;your&nbsp;name?&nbsp;Hamad</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from5_2">2</td><td nowrap="nowrap">How&nbsp;many&nbsp;dogs&nbsp;do&nbsp;you&nbsp;have?&nbsp;1</td><td class="diff_next"></td><td class="diff_header" id="to5_2">2</td><td nowrap="nowrap">How&nbsp;many&nbsp;dogs&nbsp;do&nbsp;you&nbsp;have?&nbsp;1</td></tr>
+            <tr><td class="diff_next" id="difflib_chg_to5__1"></td><td class="diff_header" id="from5_3">3</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;each&nbsp;dog&nbsp;eat&nbsp;per&nbsp;day&nbsp;(in&nbsp;cups)?&nbsp;2.5</td><td class="diff_next"></td><td class="diff_header" id="to5_3">3</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;each&nbsp;dog&nbsp;eat&nbsp;per&nbsp;day&nbsp;(in&nbsp;cups)?&nbsp;2.5</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from5_4">4</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;one&nbsp;cup&nbsp;of&nbsp;dog&nbsp;food&nbsp;weigh&nbsp;(in&nbsp;lbs)?&nbsp;0.75</td><td class="diff_next"></td><td class="diff_header" id="to5_4">4</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;one&nbsp;cup&nbsp;of&nbsp;dog&nbsp;food&nbsp;weigh&nbsp;(in&nbsp;lbs)?&nbsp;0.75</td></tr>
+            <tr><td class="diff_next"><a href="#difflib_chg_to5__1">n</a></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"><a href="#difflib_chg_to5__1">n</a></td><td class="diff_header" id="to5_5">5</td><td nowrap="nowrap"><span class="diff_add">Feeding&nbsp;information&nbsp;for&nbsp;Hamad:</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to5_6">6</td><td nowrap="nowrap"><span class="diff_add">Your&nbsp;dog(s)&nbsp;eat&nbsp;13.12&nbsp;lbs&nbsp;of&nbsp;dog&nbsp;food&nbsp;every&nbsp;week.</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from5_5">5</td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to5_7">7</td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"><a href="#difflib_chg_to5__top">t</a></td><td class="diff_header" id="from5_6">6</td><td nowrap="nowrap"><span class="diff_sub">Traceback&nbsp;(most&nbsp;recent&nbsp;call&nbsp;last):</span></td><td class="diff_next"><a href="#difflib_chg_to5__top">t</a></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from5_7">7</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;potluck/harness.py",&nbsp;line&nbsp;425,&nbsp;in&nbsp;capturing_payload</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from5_8">8</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;&nbsp;&nbsp;result&nbsp;=&nbsp;payload(context)</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from5_9">9</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;potluck/harness.py",&nbsp;line&nbsp;129,&nbsp;in&nbsp;payload</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from5_10">10</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;&nbsp;&nbsp;module&nbsp;=&nbsp;load.create_module_from_code(node,&nbsp;full_name)</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from5_11">11</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;potluck/load.py",&nbsp;line&nbsp;134,&nbsp;in&nbsp;create_module_from_code</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from5_12">12</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;&nbsp;&nbsp;exec(bytecode,&nbsp;module.__dict__,&nbsp;module.__dict__)</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from5_13">13</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;test_interactive.py",&nbsp;line&nbsp;25,&nbsp;in&nbsp;&lt;module&gt;</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from5_14">14</td><td nowrap="nowrap"><span class="diff_sub">TypeError:&nbsp;can't&nbsp;multiply&nbsp;sequence&nbsp;by&nbsp;non-int&nbsp;of&nbsp;type&nbsp;'float'</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from5_15">15</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+        </tbody>
+    </table>
+</section>
+
+  </div>
+</div>
+
+</details>
+
+<details id='ctx_4' class='context_details level_1'>
+  <summary><div class="topic">Program output ('Wenyu' input) <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">We  ran your program with some example inputs, and observed what it printed.<br>
+We ran your submitted code<br>
+Testing details:<ul><li>Will be terminated if it takes longer than 5s.</li>
+<li>Printed output and error messages will be recorded.</li>
+<li>The following inputs will be provided:
+<ul><li><pre class="short_repr">'Wenyu'</pre></li>
+<li><pre class="short_repr">'1'</pre></li>
+<li><pre class="short_repr">'1.19201'</pre></li>
+<li><pre class="short_repr">'0.5842'</pre></li>
+</ul></li>
+</ul></div>
+</details>
+</div></summary>
+  
+<div class="tabs" role="presentation">
+  <ul class="tabs-top">
+
+<li
+ class='tab selected' onclick='toggleTab();'
+ tabindex="0"
+ aria-label="Activate to display Your output after this list."
+>
+Your output
+</li>
+
+
+
+<li
+ class='tab' onclick='toggleTab();'
+ tabindex="0"
+ aria-label="Activate to display Solution output after this list."
+>
+Solution output
+</li>
+
+
+
+<li
+ class='tab' onclick='toggleTab();'
+ tabindex="0"
+ aria-label="Activate to display Comparison after this list."
+>
+Comparison
+</li>
+
+  </ul>
+  <div class="tabs-bot" aria-live="polite">
+
+<section
+ class='tab-content selected'
+ tabindex="0"
+>
+<pre class='context-value'>What is your name? Wenyu
+How many dogs do you have? 1
+On average, how much does each dog eat per day (in cups)? 1.19201
+On average, how much does one cup of dog food weigh (in lbs)? 0.5842
+
+Traceback (most recent call last):
+  File "<task>potluck/harness.py", line 425, in capturing_payload
+    result = payload(context)
+  File "<task>potluck/harness.py", line 129, in payload
+    module = load.create_module_from_code(node, full_name)
+  File "<task>potluck/load.py", line 134, in create_module_from_code
+    exec(bytecode, module.__dict__, module.__dict__)
+  File "<task>test_interactive.py", line 25, in <module>
+TypeError: can't multiply sequence by non-int of type 'float'
+</pre>
+</section>
+
+
+
+<section
+ class='tab-content'
+ tabindex="0"
+>
+<pre class='context-value'>What is your name? Wenyu
+How many dogs do you have? 1
+On average, how much does each dog eat per day (in cups)? 1.19201
+On average, how much does one cup of dog food weigh (in lbs)? 0.5842
+Feeding information for Wenyu:
+Your dog(s) eat 4.87 lbs of dog food every week.
+</pre>
+</section>
+
+
+
+<section
+ class='tab-content'
+ tabindex="0"
+>
+
+    <table class="diff" id="difflib_chg_to6__top"
+           cellspacing="0" cellpadding="0" rules="groups" >
+        <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
+        <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
+        <thead><tr><th class="diff_next"><br /></th><th colspan="2" class="diff_header">Your output</th><th class="diff_next"><br /></th><th colspan="2" class="diff_header">Solution output</th></tr></thead>
+        <tbody>
+            <tr><td class="diff_next" id="difflib_chg_to6__0"><a href="#difflib_chg_to6__0">f</a></td><td class="diff_header" id="from6_1">1</td><td nowrap="nowrap">What&nbsp;is&nbsp;your&nbsp;name?&nbsp;Wenyu</td><td class="diff_next"><a href="#difflib_chg_to6__0">f</a></td><td class="diff_header" id="to6_1">1</td><td nowrap="nowrap">What&nbsp;is&nbsp;your&nbsp;name?&nbsp;Wenyu</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_2">2</td><td nowrap="nowrap">How&nbsp;many&nbsp;dogs&nbsp;do&nbsp;you&nbsp;have?&nbsp;1</td><td class="diff_next"></td><td class="diff_header" id="to6_2">2</td><td nowrap="nowrap">How&nbsp;many&nbsp;dogs&nbsp;do&nbsp;you&nbsp;have?&nbsp;1</td></tr>
+            <tr><td class="diff_next" id="difflib_chg_to6__1"></td><td class="diff_header" id="from6_3">3</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;each&nbsp;dog&nbsp;eat&nbsp;per&nbsp;day&nbsp;(in&nbsp;cups)?&nbsp;1.19201</td><td class="diff_next"></td><td class="diff_header" id="to6_3">3</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;each&nbsp;dog&nbsp;eat&nbsp;per&nbsp;day&nbsp;(in&nbsp;cups)?&nbsp;1.19201</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_4">4</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;one&nbsp;cup&nbsp;of&nbsp;dog&nbsp;food&nbsp;weigh&nbsp;(in&nbsp;lbs)?&nbsp;0.5842</td><td class="diff_next"></td><td class="diff_header" id="to6_4">4</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;one&nbsp;cup&nbsp;of&nbsp;dog&nbsp;food&nbsp;weigh&nbsp;(in&nbsp;lbs)?&nbsp;0.5842</td></tr>
+            <tr><td class="diff_next"><a href="#difflib_chg_to6__1">n</a></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"><a href="#difflib_chg_to6__1">n</a></td><td class="diff_header" id="to6_5">5</td><td nowrap="nowrap"><span class="diff_add">Feeding&nbsp;information&nbsp;for&nbsp;Wenyu:</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to6_6">6</td><td nowrap="nowrap"><span class="diff_add">Your&nbsp;dog(s)&nbsp;eat&nbsp;4.87&nbsp;lbs&nbsp;of&nbsp;dog&nbsp;food&nbsp;every&nbsp;week.</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_5">5</td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to6_7">7</td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"><a href="#difflib_chg_to6__top">t</a></td><td class="diff_header" id="from6_6">6</td><td nowrap="nowrap"><span class="diff_sub">Traceback&nbsp;(most&nbsp;recent&nbsp;call&nbsp;last):</span></td><td class="diff_next"><a href="#difflib_chg_to6__top">t</a></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_7">7</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;potluck/harness.py",&nbsp;line&nbsp;425,&nbsp;in&nbsp;capturing_payload</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_8">8</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;&nbsp;&nbsp;result&nbsp;=&nbsp;payload(context)</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_9">9</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;potluck/harness.py",&nbsp;line&nbsp;129,&nbsp;in&nbsp;payload</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_10">10</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;&nbsp;&nbsp;module&nbsp;=&nbsp;load.create_module_from_code(node,&nbsp;full_name)</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_11">11</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;potluck/load.py",&nbsp;line&nbsp;134,&nbsp;in&nbsp;create_module_from_code</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_12">12</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;&nbsp;&nbsp;exec(bytecode,&nbsp;module.__dict__,&nbsp;module.__dict__)</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_13">13</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;test_interactive.py",&nbsp;line&nbsp;25,&nbsp;in&nbsp;&lt;module&gt;</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_14">14</td><td nowrap="nowrap"><span class="diff_sub">TypeError:&nbsp;can't&nbsp;multiply&nbsp;sequence&nbsp;by&nbsp;non-int&nbsp;of&nbsp;type&nbsp;'float'</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_15">15</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+        </tbody>
+    </table>
+</section>
+
+  </div>
+</div>
+
+</details>
+
+<details id='ctx_5' class='context_details level_1'>
+  <summary><div class="topic">Program output ('Paolo' input) <details class="help_button">
+<summary aria-label="More details"></summary>
+<div class="help">We  ran your program with some example inputs, and observed what it printed.<br>
+We ran your submitted code<br>
+Testing details:<ul><li>Will be terminated if it takes longer than 5s.</li>
+<li>Printed output and error messages will be recorded.</li>
+<li>The following inputs will be provided:
+<ul><li><pre class="short_repr">'Paolo'</pre></li>
+<li><pre class="short_repr">'0'</pre></li>
+<li><pre class="short_repr">'0'</pre></li>
+<li><pre class="short_repr">'0'</pre></li>
+</ul></li>
+</ul></div>
+</details>
+</div></summary>
+  
+<div class="tabs" role="presentation">
+  <ul class="tabs-top">
+
+<li
+ class='tab selected' onclick='toggleTab();'
+ tabindex="0"
+ aria-label="Activate to display Your output after this list."
+>
+Your output
+</li>
+
+
+
+<li
+ class='tab' onclick='toggleTab();'
+ tabindex="0"
+ aria-label="Activate to display Solution output after this list."
+>
+Solution output
+</li>
+
+
+
+<li
+ class='tab' onclick='toggleTab();'
+ tabindex="0"
+ aria-label="Activate to display Comparison after this list."
+>
+Comparison
+</li>
+
+  </ul>
+  <div class="tabs-bot" aria-live="polite">
+
+<section
+ class='tab-content selected'
+ tabindex="0"
+>
+<pre class='context-value'>What is your name? Paolo
+How many dogs do you have? 0
+On average, how much does each dog eat per day (in cups)? 0
+On average, how much does one cup of dog food weigh (in lbs)? 0
+
+Traceback (most recent call last):
+  File "<task>potluck/harness.py", line 425, in capturing_payload
+    result = payload(context)
+  File "<task>potluck/harness.py", line 129, in payload
+    module = load.create_module_from_code(node, full_name)
+  File "<task>potluck/load.py", line 134, in create_module_from_code
+    exec(bytecode, module.__dict__, module.__dict__)
+  File "<task>test_interactive.py", line 25, in <module>
+TypeError: can't multiply sequence by non-int of type 'float'
+</pre>
+</section>
+
+
+
+<section
+ class='tab-content'
+ tabindex="0"
+>
+<pre class='context-value'>What is your name? Paolo
+How many dogs do you have? 0
+On average, how much does each dog eat per day (in cups)? 0
+On average, how much does one cup of dog food weigh (in lbs)? 0
+Feeding information for Paolo:
+Your dog(s) eat 0.0 lbs of dog food every week.
+</pre>
+</section>
+
+
+
+<section
+ class='tab-content'
+ tabindex="0"
+>
+
+    <table class="diff" id="difflib_chg_to7__top"
+           cellspacing="0" cellpadding="0" rules="groups" >
+        <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
+        <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
+        <thead><tr><th class="diff_next"><br /></th><th colspan="2" class="diff_header">Your output</th><th class="diff_next"><br /></th><th colspan="2" class="diff_header">Solution output</th></tr></thead>
+        <tbody>
+            <tr><td class="diff_next" id="difflib_chg_to7__0"><a href="#difflib_chg_to7__0">f</a></td><td class="diff_header" id="from7_1">1</td><td nowrap="nowrap">What&nbsp;is&nbsp;your&nbsp;name?&nbsp;Paolo</td><td class="diff_next"><a href="#difflib_chg_to7__0">f</a></td><td class="diff_header" id="to7_1">1</td><td nowrap="nowrap">What&nbsp;is&nbsp;your&nbsp;name?&nbsp;Paolo</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from7_2">2</td><td nowrap="nowrap">How&nbsp;many&nbsp;dogs&nbsp;do&nbsp;you&nbsp;have?&nbsp;0</td><td class="diff_next"></td><td class="diff_header" id="to7_2">2</td><td nowrap="nowrap">How&nbsp;many&nbsp;dogs&nbsp;do&nbsp;you&nbsp;have?&nbsp;0</td></tr>
+            <tr><td class="diff_next" id="difflib_chg_to7__1"></td><td class="diff_header" id="from7_3">3</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;each&nbsp;dog&nbsp;eat&nbsp;per&nbsp;day&nbsp;(in&nbsp;cups)?&nbsp;0</td><td class="diff_next"></td><td class="diff_header" id="to7_3">3</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;each&nbsp;dog&nbsp;eat&nbsp;per&nbsp;day&nbsp;(in&nbsp;cups)?&nbsp;0</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from7_4">4</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;one&nbsp;cup&nbsp;of&nbsp;dog&nbsp;food&nbsp;weigh&nbsp;(in&nbsp;lbs)?&nbsp;0</td><td class="diff_next"></td><td class="diff_header" id="to7_4">4</td><td nowrap="nowrap">On&nbsp;average,&nbsp;how&nbsp;much&nbsp;does&nbsp;one&nbsp;cup&nbsp;of&nbsp;dog&nbsp;food&nbsp;weigh&nbsp;(in&nbsp;lbs)?&nbsp;0</td></tr>
+            <tr><td class="diff_next"><a href="#difflib_chg_to7__1">n</a></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"><a href="#difflib_chg_to7__1">n</a></td><td class="diff_header" id="to7_5">5</td><td nowrap="nowrap"><span class="diff_add">Feeding&nbsp;information&nbsp;for&nbsp;Paolo:</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to7_6">6</td><td nowrap="nowrap"><span class="diff_add">Your&nbsp;dog(s)&nbsp;eat&nbsp;0.0&nbsp;lbs&nbsp;of&nbsp;dog&nbsp;food&nbsp;every&nbsp;week.</span></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from7_5">5</td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to7_7">7</td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"><a href="#difflib_chg_to7__top">t</a></td><td class="diff_header" id="from7_6">6</td><td nowrap="nowrap"><span class="diff_sub">Traceback&nbsp;(most&nbsp;recent&nbsp;call&nbsp;last):</span></td><td class="diff_next"><a href="#difflib_chg_to7__top">t</a></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from7_7">7</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;potluck/harness.py",&nbsp;line&nbsp;425,&nbsp;in&nbsp;capturing_payload</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from7_8">8</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;&nbsp;&nbsp;result&nbsp;=&nbsp;payload(context)</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from7_9">9</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;potluck/harness.py",&nbsp;line&nbsp;129,&nbsp;in&nbsp;payload</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from7_10">10</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;&nbsp;&nbsp;module&nbsp;=&nbsp;load.create_module_from_code(node,&nbsp;full_name)</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from7_11">11</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;potluck/load.py",&nbsp;line&nbsp;134,&nbsp;in&nbsp;create_module_from_code</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from7_12">12</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;&nbsp;&nbsp;exec(bytecode,&nbsp;module.__dict__,&nbsp;module.__dict__)</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from7_13">13</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;&nbsp;File&nbsp;"&lt;task&gt;test_interactive.py",&nbsp;line&nbsp;25,&nbsp;in&nbsp;&lt;module&gt;</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from7_14">14</td><td nowrap="nowrap"><span class="diff_sub">TypeError:&nbsp;can't&nbsp;multiply&nbsp;sequence&nbsp;by&nbsp;non-int&nbsp;of&nbsp;type&nbsp;'float'</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from7_15">15</td><td nowrap="nowrap"><span class="diff_sub">&nbsp;</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
+        </tbody>
+    </table>
+</section>
+
+  </div>
+</div>
+
+</details>
+</div>
+          </section>
+        </div>
+        
+      </div>
+    </div>
+
+  </body>
+</html>
