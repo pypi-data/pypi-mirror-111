@@ -1,0 +1,12 @@
+mdundo/__init__.py,sha256=XgEIEDmsFMG8BC1Eigzqx3qNawqrDala-y2eROEJUq4,102
+mdundo/artist.py,sha256=qRJyFLD9qVdXXqudAdCBHHjX3ke6dPb5bNve78rIXGo,2639
+mdundo/charts.py,sha256=JfF4Jkk9nnAO6u0RlFIdU4uTMxERgbCrniMc4CMHpV4,3299
+mdundo/genre.py,sha256=j-NVkT7SDYJdmLLBt18QN8fx7U852A0FcCx_K3dZMkg,2008
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_artist.py,sha256=pBbyRumGdODQZLwAKrrLnFAVbp3mSGxn2sXG95qZTqY,1139
+tests/test_charts.py,sha256=IiTksEEQfZgBn9IaWs4akZMRB10QINIhIY0YnI7JJqY,680
+tests/test_genre.py,sha256=CJdlp2yvZ1-JX_3QXS2JDKyINHlFO-edgDUlFZNEyIM,633
+mdundo_scraper-0.0.2.dist-info/METADATA,sha256=btkob6-Nsb2gnKtbR-K5na50nJHenNT020n9pe2we18,2542
+mdundo_scraper-0.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mdundo_scraper-0.0.2.dist-info/top_level.txt,sha256=g5lIyeKEqTYfqhcQ5cfk4QOIr-vWcTxgL6AjC1HcGII,13
+mdundo_scraper-0.0.2.dist-info/RECORD,,
