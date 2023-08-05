@@ -1,0 +1,8 @@
+networkx
+
+[dev]
+pytest
+black
+pre-commit
+sphinx
+sphinx_rtd_theme
