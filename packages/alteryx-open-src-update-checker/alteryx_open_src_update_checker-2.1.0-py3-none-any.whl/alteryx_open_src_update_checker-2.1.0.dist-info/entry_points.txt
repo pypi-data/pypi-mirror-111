@@ -1,0 +1,6 @@
+[alteryx_open_src_initialize]
+initialize = alteryx_open_src_update_checker.functions:initialize
+
+[featuretools_initialize]
+initialize = alteryx_open_src_update_checker.functions:initialize
+
