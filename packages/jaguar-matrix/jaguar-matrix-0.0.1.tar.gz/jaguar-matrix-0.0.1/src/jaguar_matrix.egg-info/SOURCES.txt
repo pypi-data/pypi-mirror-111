@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/jaguar_matrix.egg-info/PKG-INFO
+src/jaguar_matrix.egg-info/SOURCES.txt
+src/jaguar_matrix.egg-info/dependency_links.txt
+src/jaguar_matrix.egg-info/top_level.txt

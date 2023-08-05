@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: jaguar-matrix
+Version: 0.0.1
+Summary: Package for matrix bot
+Home-page: https://git.as30781.net/SI/nanobotV2
+Author: Maximilien COSTA
+Author-email: maximilien.costa@jaguar-network.com
+License: UNKNOWN
+Project-URL: Documentation, https://confluence.as30781.net/display/DT/Documentation+d%27exploitation
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Package Jaguar-matrix
+
+Ensemble de fonctions indispenssables au bon fonctionnement des projets matrix.
+
+
