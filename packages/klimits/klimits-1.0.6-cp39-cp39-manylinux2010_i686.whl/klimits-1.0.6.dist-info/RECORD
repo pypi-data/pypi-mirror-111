@@ -1,0 +1,12 @@
+_klimits.cpython-39-i386-linux-gnu.so,sha256=DErfSUwSNZkRDrtGJoH_nzbdjvYSRQXZHQ1ubSNsNVs,2728360
+klimits-1.0.6.dist-info/RECORD,,
+klimits-1.0.6.dist-info/METADATA,sha256=KGI4hGn_DSfIY8JdmMvzI2u6GtYO606Jice1yqLWXHk,3989
+klimits-1.0.6.dist-info/LICENSE,sha256=-UPFAkK50BYtSmNdKyULCBKXAV9kj-khSfMOPHPrSLQ,1072
+klimits-1.0.6.dist-info/top_level.txt,sha256=zcNnwYtfC2fb1V09GLe74lkKrFNVVsrnEIMt_6lwkM0,17
+klimits-1.0.6.dist-info/WHEEL,sha256=erlUWf4gntrkM-m18kyr2NqTnRsGERF3sjzoDbYLimU,109
+klimits/limit_calculation.py,sha256=TXRn3jbgmz9NLLQVRpEOmOf3VTE3Iq5qHgNgi8O3wOY,27211
+klimits/__init__.py,sha256=H7XuYID3Qgg0P1OhO5elE5T_pYoEqvxItVWNHx8iqMw,1572
+klimits/joint_limit_equations.py,sha256=rBSVlgu4567mx9qSptIvFrVkFrP6sNkGAnT6oSUEpW8,15982
+klimits/trajectory_plotter.py,sha256=yReYfkkVwRuG6Ap_MHc_7iWg90TkNqMZId3FXmjsvTg,11863
+klimits/test_trajectory_generation.py,sha256=pDC2b5m3mkSdAfiJvA58NjbRYSW9YJcsK-jEhTCebdU,12240
+klimits.libs/libgomp-2716b9e4.so.1.0.0,sha256=YAjX69EB8kRSeoeBFWS1bkLcR0TmwjQn-4lZte_ult0,97188
