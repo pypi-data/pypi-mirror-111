@@ -1,0 +1,11 @@
+fasthugs/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+fasthugs/_nbdev.py,sha256=soESrRkE54i3-MepQjh3DK7NycVNM0kaEu2jVYAjvEU,1789
+fasthugs/data.py,sha256=1oeor5ODzgldd1W2ChgbT5WTm4XXShQ4g7zbH8EIbWo,22438
+fasthugs/learner.py,sha256=Gm6oHg9DLjenqJvRzw5BsbpNAtL0Bkb-ztfIN56bKNQ,4291
+fasthugs/metrics.py,sha256=t31INctRfvGiFskASk2D_pleIs6s94lT0x57iZ1Wl4U,5020
+fasthugs-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+fasthugs-0.0.1.dist-info/METADATA,sha256=AQOGDvK6LUN4tlPQAuuZnUrVhe2FR6iytqoxSL1qW4A,2328
+fasthugs-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+fasthugs-0.0.1.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+fasthugs-0.0.1.dist-info/top_level.txt,sha256=FOZXKJyzDZlgHBFLG5x-bPcmegElNcDwI93ciKrB7Mc,9
+fasthugs-0.0.1.dist-info/RECORD,,
