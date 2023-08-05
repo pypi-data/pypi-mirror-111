@@ -1,0 +1,3 @@
+[console_scripts]
+readycheck = govready_core.bin.django_core_admin:run
+
