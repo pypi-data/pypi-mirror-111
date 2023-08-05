@@ -1,0 +1,11 @@
+setup.py
+libname/__init__.py
+libname/cone.py
+libname/cube.py
+libname/cyl.py
+libname/rect.py
+libname/sphere.py
+surface_area.egg-info/PKG-INFO
+surface_area.egg-info/SOURCES.txt
+surface_area.egg-info/dependency_links.txt
+surface_area.egg-info/top_level.txt
