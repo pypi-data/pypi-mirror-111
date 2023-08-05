@@ -1,0 +1,11 @@
+dalybms/__init__.py,sha256=bm-nKV-aVc2N9lK7FQ8gNBkXfOhlnlXKhOTFPwpW-vU,226
+dalybms/daly_bms.py,sha256=9quM7fNz_aMEMMn8aKWk1XkR1Eg__g7pcLaM5qBxOkY,12211
+dalybms/daly_bms_bluetooth.py,sha256=BkRmqgYFK0lkW2VJCFtgcoN1g8JPorVffefYdLUz9Ok,7444
+dalybms/daly_sinowealth.py,sha256=HkP3tK3MFdo7yKNah9Tcr8gAPHA5MjdSOOxS6Y86Pm0,4492
+dalybms/error_codes.py,sha256=uT53D6mWEk8Z_nABnLh0DLFMTDfO2T19e8HBgNEsk74,2604
+dalybms-0.2.0.data/scripts/daly-bms-cli,sha256=DCbabA19Fh6euL4XXt6LmopcxJIshAbAwwd1GE1cakw,3268
+dalybms-0.2.0.dist-info/LICENSE,sha256=f_oz96DVcEeehnlDdP_BYpIaMU0zowhAlNaQ53bQT7Q,1068
+dalybms-0.2.0.dist-info/METADATA,sha256=om842-CIJlTPZXQ67pEsdSUc4Rd5IimOVPBJB15XyPk,5141
+dalybms-0.2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+dalybms-0.2.0.dist-info/top_level.txt,sha256=QL6EHeGRFP4n8uzNN2FxS7IYJq30QLxM9kPYiG88LE0,8
+dalybms-0.2.0.dist-info/RECORD,,
