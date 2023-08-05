@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: scrapyx-bright-data
+Version: 0.1.2
+Summary: Bright Data middleware for Scrapy
+Home-page: https://github.com/tubndgit/scrapyx-bright-data
+Author: Henry B.
+Author-email: tubnd.younet@gmail.com
+License: MIT
+Download-URL: https://github.com/tubndgit/scrapyx-bright-data/archive/master.zip
+Platform: UNKNOWN
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+
+# scrapyx-bright-data
+
+[Bright Data](https://brightdata.grsm.io/p302843) middleware for [Scrapy](http://scrapy.org/)
+
+Required
+--------
+
+    python version >= 2.7
+
+
+Install
+--------
+
+Checkout the source and run
+
+    python setup.py install
+
+Or
+
+    pip install scrapyx-bright-data
+
+
+settings.py
+-----------
+
+    # Activate the middleware
+    BRIGHTDATA_ENABLED = True
+
+    # The Bright Data URL
+    BRIGHTDATA_URL = 'http://127.0.0.1:24000'
+
+    DOWNLOADER_MIDDLEWARES = {
+        'scrapyx_bright_data.BrightDataProxyMiddleware': 610,
+    }
+
+
