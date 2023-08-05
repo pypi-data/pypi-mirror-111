@@ -1,0 +1,9 @@
+huscy.attributes
+huscy.bookings
+
+[development]
+psycopg2-binary
+
+[testing]
+tox
+watchdog
