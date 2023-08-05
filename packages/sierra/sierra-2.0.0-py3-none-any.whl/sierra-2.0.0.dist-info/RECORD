@@ -1,0 +1,15 @@
+sierra/__init__.py,sha256=DWyj8AcJjU8NyV5mMTj8CLZ2v0jR2z1UZSXPCCaWiYc,244
+sierra/bullets_and_lists.py,sha256=B3yCvSoWIRv-VFa6Ki5jJYNY9f87B0NhdZuZEMqKOX4,2551
+sierra/cTags.py,sha256=eCaPF-D83f_PtAEVNNSOVyRTe6jMW6nqVkFzYwJnVe4,3446
+sierra/directory_structure.py,sha256=QTOA6noUcHq92eE2gFGpE8M3eDLrZdxM0kbBIm_3noo,327
+sierra/main_htm.py,sha256=7ncvT_4vrOZ-gkXuFOwPB1Zw6w-zD0BDmXy1ddsFgUc,7050
+sierra/tTags.py,sha256=v9KIfStExQsmPP10Sq40lLDEhyVPDSqJR7Ge-0-ua0A,8230
+sierra/table.py,sha256=pAAEd7pLO-aUsE1XEuAQiuer_GVZ0DqLpbZKLU-qIEQ,4313
+sierra/tags.py,sha256=3kU-41sumzURt892LpIZ8aUXLgX8-Cw52XGpRiopxyo,4661
+sierra/write.py,sha256=cxP_HAO-5hQ5T2OWEXSMqR2G2az-10wy_qyKZmZzIfs,632
+sierra-2.0.0.dist-info/LICENSE,sha256=pzdD7E_CwSh8_qmnWA9ICHmyDC7nXAswGeytOcok7sE,11550
+sierra-2.0.0.dist-info/METADATA,sha256=sG0fpNiPe-ZXZq43eWaMt3_uwK0tnPGK4K6xDHj5Jps,5737
+sierra-2.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sierra-2.0.0.dist-info/top_level.txt,sha256=cDP7dDWAyFL7fK11L89hCUHy9-G267wuHeVLVR4pTX4,7
+sierra-2.0.0.dist-info/zip-safe,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+sierra-2.0.0.dist-info/RECORD,,
