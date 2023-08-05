@@ -1,0 +1,3 @@
+[console_scripts]
+alife=alife.cli:run
+
