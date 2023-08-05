@@ -1,0 +1,7 @@
+imdbscraper/__init__.py,sha256=3TwFPr9J3blG0oEMGEMmzW8knH39flVxlHcOcATxCbE,1031
+imdbscraper/imdb/__init__.py,sha256=HQ4XGg_6Frxyi9NvfOV3GyO8U3io41JEAHNLNanJNZI,161
+imdbscraper/imdb/name.py,sha256=agrqC15wRejzDCkFgMcrgWSXXzFkewLtqBgnFtn8rJE,2252
+imdbscraper/main.py,sha256=zylVRLTy2Fvbd_MwGJ0Na8IixKJljDavBiOVhQqxrXU,632
+imdbscraper-0.1.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+imdbscraper-0.1.0.dist-info/METADATA,sha256=-s5feEMnu_KaYT2WlIm_7q4_WQC-Jvnnf6Z9WTk_hko,633
+imdbscraper-0.1.0.dist-info/RECORD,,
