@@ -1,0 +1,8 @@
+arxiv_downloader/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+arxiv_downloader/utils.py,sha256=txAZMo0fmRH0xcBseKoFLLtliwGVsJCHMZ2UG1rYJSc,1490
+arxiv_downloader-0.0.1.data/scripts/arxiv-downloader,sha256=Uz7GSDre0p81OwaVnoyMSAsB23ceuzUSxdnPjmGW3K4,1160
+arxiv_downloader-0.0.1.dist-info/LICENSE,sha256=IRlujrwD6A8s6Y1WjeDVUNNWAao3I5yQ_V70bzoJJ4s,1055
+arxiv_downloader-0.0.1.dist-info/METADATA,sha256=-dtUIWcpy_REYlEKTsWfBcjNOxhfD6DlX8JP7mq-ek0,709
+arxiv_downloader-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+arxiv_downloader-0.0.1.dist-info/top_level.txt,sha256=32KBjaYO0Pn38k_ZAtJsJlI9ostieneE6acGmhDd62c,17
+arxiv_downloader-0.0.1.dist-info/RECORD,,
