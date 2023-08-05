@@ -1,0 +1,11 @@
+README.md
+setup.py
+CommunityNet.egg-info/PKG-INFO
+CommunityNet.egg-info/SOURCES.txt
+CommunityNet.egg-info/dependency_links.txt
+CommunityNet.egg-info/requires.txt
+CommunityNet.egg-info/top_level.txt
+communitynet/__init__.py
+communitynet/communitynet.py
+communitynet/graphnet.py
+communitynet/mlp.py
