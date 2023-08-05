@@ -1,0 +1,15 @@
+cellfinder_napari/__init__.py,sha256=x4qjXSkqt6hsZJZ3bUS5hg7QZ-s5MR_Z6cEYrL6hpXg,73
+cellfinder_napari/curation.py,sha256=GQz-Yr6Y1d7X1OQWbxceWgYsUylCbUTSENMuRdSGMDc,18072
+cellfinder_napari/detect.py,sha256=hcYWwC3SLaYks_FdtAdS-SaVumaWVclYQJddPkLV4ns,10780
+cellfinder_napari/plugins.py,sha256=WlwEFrf-uGnjjA6_Wbbq-xNBOxHm4xWpBitBqGDaOis,434
+cellfinder_napari/train.py,sha256=BvhutUFjlxn6Kap8ZgPyIqIRpaPdaIG_j2jIIV-L6VM,8794
+cellfinder_napari/utils.py,sha256=3EzqF9KiOFJUWRZbFJ4nj8bGKITcnharz9VZmHR3GKY,2684
+cellfinder_napari/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cellfinder_napari/_tests/test_cellfinder_napari.py,sha256=9OBU4nWtu0rrJ2VC6adSFER2405hhpVVMHTtes78QOc,40
+cellfinder_napari/images/brainglobe.png,sha256=IT2zfikD2vKTOg--e6bMRHr5mC2x3s-eOt_t0eblvQ0,21216
+cellfinder_napari-0.0.18.dist-info/LICENSE,sha256=l7uPBPKnZF1qHfi__DiIfnVIGGM4NmSeVdolQJUsaNA,1486
+cellfinder_napari-0.0.18.dist-info/METADATA,sha256=2rfd2jRaB5pisGI6rT3xZ2z0hv7aGlxIvrueY1fqC4I,6374
+cellfinder_napari-0.0.18.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cellfinder_napari-0.0.18.dist-info/entry_points.txt,sha256=MAMr5Nr0yPP_I3yqyme0Vqh6VDVMT08JqONfZyPWyiM,56
+cellfinder_napari-0.0.18.dist-info/top_level.txt,sha256=JU7Sqn85pwXMnMfT7xHLxZ-02j1UGuejIQlZ-xx1Nq0,18
+cellfinder_napari-0.0.18.dist-info/RECORD,,
