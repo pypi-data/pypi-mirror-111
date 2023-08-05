@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/conversion/__init__.py
+src/conversion/pth2onnx.py
+src/conversiononnx.egg-info/PKG-INFO
+src/conversiononnx.egg-info/SOURCES.txt
+src/conversiononnx.egg-info/dependency_links.txt
+src/conversiononnx.egg-info/requires.txt
+src/conversiononnx.egg-info/top_level.txt
