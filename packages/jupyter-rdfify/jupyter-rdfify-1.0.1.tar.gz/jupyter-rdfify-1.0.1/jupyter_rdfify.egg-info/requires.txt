@@ -1,0 +1,7 @@
+rdflib
+rdflib-jsonld
+ipython>=7.0.0
+graphviz
+sparqlwrapper
+owlrl
+PyShEx
