@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+palmettopy/__init__.py
+palmettopy/exceptions.py
+palmettopy/fastcoherence.py
+palmettopy/palmetto.py
+palmettopy.egg-info/PKG-INFO
+palmettopy.egg-info/SOURCES.txt
+palmettopy.egg-info/dependency_links.txt
+palmettopy.egg-info/requires.txt
+palmettopy.egg-info/top_level.txt
