@@ -1,0 +1,11 @@
+README.md
+setup.py
+daoism.egg-info/PKG-INFO
+daoism.egg-info/SOURCES.txt
+daoism.egg-info/dependency_links.txt
+daoism.egg-info/requires.txt
+daoism.egg-info/top_level.txt
+youdao/__init__.py
+youdao/auth.py
+youdao/model.py
+youdao/requester.py
