@@ -1,0 +1,11 @@
+onesecmail/__init__.py,sha256=3wpf5W2K9iwXg15FAYcTlWMneCpuRz44m0XUDYGxtp8,419
+onesecmail/__version__.py,sha256=pShZZ8XKqGLZmDJup4-hEDaLp-6TI-a9gTIe3m7S9ik,593
+onesecmail/mail.py,sha256=wClG7fchqz395K8oZC4dMFs368dzeHQH9JXyk5EaHR8,10071
+onesecmail/message.py,sha256=peRJCWLy5dlcqm2yFqAhmO5W36OyoMZ1lmdzIJehNp4,5712
+onesecmail/utils.py,sha256=RE0tw6U8A1LvocEdTDKSqs6XkOFIDqKOpIrAFN6AT1A,755
+onesecmail/validators.py,sha256=Nri7AEy3C7pBYbEonuy-282Dh4J-gFS8SmwCKOrVjgA,1150
+onesecmail-0.0.1.dist-info/LICENSE,sha256=bp089VQC5TJTCDYQOzDIQmcjYQbYNBSQxCyEpH_6v8I,1066
+onesecmail-0.0.1.dist-info/METADATA,sha256=ibnvEaiYMpx-kDi53Jfe5b-ovPa1bt9XlwGRHqKJ92I,5605
+onesecmail-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+onesecmail-0.0.1.dist-info/top_level.txt,sha256=_KRdB83r5gqX6EaEa_hFvj6CS2fKaUsFrSr9d37mmt8,11
+onesecmail-0.0.1.dist-info/RECORD,,
