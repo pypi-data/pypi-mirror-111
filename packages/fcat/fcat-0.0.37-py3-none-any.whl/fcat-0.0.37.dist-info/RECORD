@@ -1,0 +1,16 @@
+fcat/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fcat/annoToolsFcat.txt,sha256=QktSxUYleGvNvKpmJHe7H9pGVqPeHFX1fEtU1C69yCo,54
+fcat/assessCompleteness.py,sha256=MreTy1sEdlKkwHAVDSfvJH7FA09IXNRUvYSs28Vi07Q,24620
+fcat/calcCutoff.py,sha256=6OLLXhINu4wIIfQRtD-mdHRyZYGUb-2_RX_ApUrMJU4,18017
+fcat/createPhyloprofile.py,sha256=fGjoFDtR65MspEy5rR94UxkZ3akV2hHUjDWh42paMnw,20317
+fcat/fcat.py,sha256=euiJhdTu5ixCOvHgfYabFRTRUpuWMe2MfYoww2itnbY,6576
+fcat/functions.py,sha256=kfWVvUJLd1i0D9Il5qAdSjOydARtJWHX6zDgXQRi5QY,1576
+fcat/mergePhyloprofile.py,sha256=KwqJcN3qGrJRpX23jieNgLqlqSirE_pkj704jc17YXk,4039
+fcat/searchOrtho.py,sha256=MADwNyJYdAzs9t1zIKii7HZO5PHN1YXJB07LRp3qxPI,25136
+fcat/showTaxa.py,sha256=L9Po2vRpxxO9r7rgnXtJg1lii5a-BryMC5qOK-XTejo,2067
+fcat-0.0.37.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+fcat-0.0.37.dist-info/METADATA,sha256=cjMnIS7G-KQLzpSE-FzBapeIbPmKgz9clves63aGw_U,5798
+fcat-0.0.37.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+fcat-0.0.37.dist-info/entry_points.txt,sha256=7tkf557RqckvlBLU1T8TShFYhitv0kryhtNTxUSXdpY,286
+fcat-0.0.37.dist-info/top_level.txt,sha256=mVotqBw-zco_pnwEK1G_XizplD_rozbGkCtZWRo_0aM,5
+fcat-0.0.37.dist-info/RECORD,,
