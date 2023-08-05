@@ -1,0 +1,14 @@
+README.md
+setup.py
+pytest_filecov/__init__.py
+pytest_filecov.egg-info/PKG-INFO
+pytest_filecov.egg-info/SOURCES.txt
+pytest_filecov.egg-info/dependency_links.txt
+pytest_filecov.egg-info/entry_points.txt
+pytest_filecov.egg-info/requires.txt
+pytest_filecov.egg-info/top_level.txt
+pytest_filecov/plugin/__init__.py
+pytest_filecov/plugin/gitlist.py
+pytest_filecov/plugin/inotifywatcher.py
+pytest_filecov/plugin/session.py
+pytest_filecov/plugin/types.py
