@@ -1,0 +1,5 @@
+tqdm>=4.40.0
+requests>=2.9.1
+multitasking>=0.0.8
+signal
+retry>=0.9.1
