@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: azureml-inference-server-http
+Version: 0.2.0
+Summary: Azure Machine Learning inferencing server.
+Home-page: UNKNOWN
+Author: Microsoft Corp
+Author-email: amlInferenceImages@microsoft.com
+License: https://aka.ms/azureml-sdk-license
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: flask (==1.0.3)
+Requires-Dist: applicationinsights (>=0.11.7)
+Requires-Dist: inference-schema (==1.1.0)
+Requires-Dist: gunicorn (==20.1.0) ; platform_system != "Windows"
+Requires-Dist: psutil (==5.8.0) ; platform_system == "Windows"
+Requires-Dist: waitress (==2.0.0) ; platform_system == "Windows"
+
+# Azure Machine Learning Inference HTTP Server (azureml-inference-server-http)
+
+## Why use Azure Machine Learning Inference HTTP Server?
+
+### Enables Local Development
+
+The local inference server allows users to quickly debug their score script. In the case that the underlying score script has a bug, the server will fail to initialize/serve and will instead throw an exception & LOC where the issues occurred at.
+
+### Enables CI/CD Integration
+
+The local inference server enables users to easily create cohesive validation gates in their CI/CD pipelines. In order to do so, simply boot up the server with the candidate script and run the test suite against the local endpoint.
+
+## Server Routes
+
+Here's a list of the available routes:
+
+| Name | Route|
+| --- | --- |
+| Liveness Probe | 127.0.0.1:5001/|
+| Score | 127.0.0.1:5001/score|
+
+## Server Arguments
+
+Here's a list of the parameters:
+
+| Parameter | Required | Default | Description |
+| ---- | --- | ---- | ----|
+| entry_script | True | N/A | The relative or absolute path to the scoring script.|
+| model_dir | False | N/A | The relative or absolute path to the directory holding the model used for inferencing.|
+| port | False | 5001 | The serving port of the server.|
+| worker_count | False | 1 | The number of worker threads which will process concurrent requests. |
+
+## FAQ
+
+### Do I need to reload the server when changing the score script?
+
+After changing your scoring script (`score.py`), stop the server with `ctrl + c`. Then restart it with `azmlinfsrv --entry_script score.py`.
+
+### Which OS is supported?
+
+The Azure Machine Learning inference server runs on Windows & Linux based operating systems.
+
+
