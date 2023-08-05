@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: streamlit-callbacks
+Version: 0.0.5
+Summary: UNKNOWN
+Home-page: https://github.com/FloWide/streamlit_callbacks
+Author: 
+Author-email: 
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/plain
+Requires-Dist: streamlit (>=0.76.0)
+
+Disclaimer: I'm not the owner of this package. For more information, see the homepage: https://github.com/FloWide/streamlit_callbacks. To remove this package from pypi or transfer ownership, please submit an issue on my fork repository
+
+
