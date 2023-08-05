@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: s-tool
+Version: 0.0.1.post0
+Summary: Selenium wrapper to make your life easy.
+Home-page: https://github.com/Python-World/s-tool
+License: MIT
+Keywords: python,selenium,wrapper,web-driver
+Author: Ravishankar Chavare
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: selenium (>=3.141.0,<4.0.0)
+Requires-Dist: webdriver-manager (>=3.4.2,<4.0.0)
+Project-URL: Repository, https://github.com/Python-World/s-tool
+Description-Content-Type: text/markdown
+
+# s-tool
+
+Selenium wrapper to make your life easy.
+
+## Features
+
+- [X] Manage multiple webdrivers.
+- [X] Click any type of element.
+- [X] Extract Page source.
+- [X] Select different type of elements.
+- [X] Retrive cookies.
+- [X] take fullpage and elementwise screenshots.
+- [X] display and hide elements.
+
+## TODO
+
+- [ ] Fill information(forms)
+- [ ] horizontal and vertical scrolling
+- [ ] Handeling alerts and popup
+- [ ] Switching windows,tabs,frames.
+- [ ] adding universal login functionality with forms
+- [ ] handling iframe windows.
+- [ ] Writing Parser to extract data from WebDriver.
+- [ ] Logging driver activities
+
