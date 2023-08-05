@@ -1,0 +1,3 @@
+[console_scripts]
+turboSETI = turbo_seti.find_doppler.seti_event:main
+
