@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/yaghm.egg-info/PKG-INFO
+src/yaghm.egg-info/SOURCES.txt
+src/yaghm.egg-info/dependency_links.txt
+src/yaghm.egg-info/entry_points.txt
+src/yaghm.egg-info/requires.txt
+src/yaghm.egg-info/top_level.txt
