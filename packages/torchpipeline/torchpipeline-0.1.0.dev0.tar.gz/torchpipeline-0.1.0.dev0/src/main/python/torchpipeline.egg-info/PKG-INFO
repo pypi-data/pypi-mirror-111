@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: torchpipeline
+Version: 0.1.0.dev0
+Summary: UNKNOWN
+Home-page: https://github.com/phohenecker/pytorch-pipeline
+Author: Patrick Hohenecker
+Author-email: patrick.hohenecker@gmx.at
+License: BSD-3-Clause
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+pytorch-pipeline
+================
+
+
