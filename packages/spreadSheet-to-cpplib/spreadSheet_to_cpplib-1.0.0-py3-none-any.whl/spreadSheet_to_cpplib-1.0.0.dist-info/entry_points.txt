@@ -1,0 +1,3 @@
+[console_scripts]
+spreadsheet-to-cpplib = spreadsheet_to_cpplib.main:main
+
