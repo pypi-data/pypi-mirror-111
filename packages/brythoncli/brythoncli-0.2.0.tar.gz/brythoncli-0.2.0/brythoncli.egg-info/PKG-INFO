@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: brythoncli
+Version: 0.2.0
+Summary: UNKNOWN
+Home-page: http://github.com/pylover/brythoncli
+License: MIT
+Description: [![Build](https://github.com/pylover/brythoncli/actions/workflows/build.yml/badge.svg)](https://github.com/pylover/brythoncli/actions/workflows/build.yml)
+        [![Coverage Status](https://coveralls.io/repos/github/pylover/brythoncli/badge.svg?branch=master)](https://coveralls.io/github/pylover/brythoncli?branch=master)
+        [![Linux](https://img.shields.io/badge/Linux-%3E%3D%203.19-blue?logo=linux&logoColor=white)](https://kernel.org)
+        
+        
+        # brythoncli
+        
+        ## Install
+        
+        ```bash
+        pip install brythoncli
+        ```
+        
+        Or, from the source:
+        
+        ```bash
+        cd path/to/brythoncli
+        pip install .
+        ```
+        
+        ## Usage
+        
+        ```bash
+        barython pack --help
+        barython serve --help
+        barython deps --help
+        ```
+        
+        Checkout the `Makefile` at the root of https://github.com/dobisel/dial
+        for more info.
+        
+        ## Contribution
+        
+        ```bash
+        cd path/to/brythoncli
+        pip install -r requirements-dev.txt
+        pip install -e .
+        make test
+        make cover
+        ```
+        
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Interpreters
+Classifier: Topic :: Text Processing
+Description-Content-Type: text/markdown

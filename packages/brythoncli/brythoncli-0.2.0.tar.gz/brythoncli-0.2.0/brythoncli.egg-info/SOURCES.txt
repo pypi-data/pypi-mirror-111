@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+brythoncli/__init__.py
+brythoncli/commands.py
+brythoncli/dependencies.py
+brythoncli/httpserver.py
+brythoncli/pack.py
+brythoncli.egg-info/PKG-INFO
+brythoncli.egg-info/SOURCES.txt
+brythoncli.egg-info/dependency_links.txt
+brythoncli.egg-info/entry_points.txt
+brythoncli.egg-info/requires.txt
+brythoncli.egg-info/top_level.txt
+brythoncli/clinic/__init__.py
+brythoncli/clinic/list_modules.py
