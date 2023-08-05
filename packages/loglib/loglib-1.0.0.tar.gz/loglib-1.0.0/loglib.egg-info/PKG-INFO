@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: loglib
+Version: 1.0.0
+Summary: A decent logging system with some settings built in
+Home-page: https://github.com/shuds13/pyexample
+Author: Logan Houston
+Author-email: logan.houston4509@gmail.com
+License: Free Domain
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
