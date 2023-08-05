@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: evemarkettools
+Version: 0.0.1
+Summary: Provides a variety of functions to extract market information from the EVE ESI
+Home-page: https://https://github.com/SustainedCruelty/evemarkettools
+Author: Filip Jöde
+Author-email: joede.filip@gmail.com
+License: MIT
+Download-URL: https://github.com/SustainedCruelty/evemarkettools/archive/v0.0.1.tar.gz
+Description: UNKNOWN
+Keywords: EVE Online,API,EVE ESI,Swagger
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
