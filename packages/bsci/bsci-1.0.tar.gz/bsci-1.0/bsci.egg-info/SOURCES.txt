@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+bsci/__init__.py
+bsci/bootstrapped_confidence_intervals.py
+bsci.egg-info/PKG-INFO
+bsci.egg-info/SOURCES.txt
+bsci.egg-info/dependency_links.txt
+bsci.egg-info/requires.txt
+bsci.egg-info/top_level.txt
+bsci.egg-info/zip-safe

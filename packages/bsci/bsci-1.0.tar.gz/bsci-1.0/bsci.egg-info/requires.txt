@@ -1,0 +1,8 @@
+numpy
+
+[dev]
+black
+isort
+matplotlib
+pytest
+pytest-cov
