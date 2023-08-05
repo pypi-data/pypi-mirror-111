@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: octanegg
+Version: 1.0
+Summary: Python client library for octane.gg public API
+Home-page: https://github.com/amas0/octanegg
+Author: amas0
+Author-email: andrew.mascioli1@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: requests
+
+UNKNOWN
+
