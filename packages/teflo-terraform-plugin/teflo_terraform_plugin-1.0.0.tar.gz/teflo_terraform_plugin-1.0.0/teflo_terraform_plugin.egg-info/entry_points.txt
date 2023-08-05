@@ -1,0 +1,3 @@
+[provisioner_plugins]
+teflo_terraform_plugin = teflo_terraform_plugin:TerraformProvisionerPlugin
+
