@@ -1,0 +1,17 @@
+suggestion/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+suggestion/__main__.py,sha256=lvlh82F_DmSGQVjVU47BmtTi5ikRnDIOXRZYiF-_WJU,474
+suggestion/hooking/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+suggestion/hooking/ante_build_hook.py,sha256=xHHJNXnxb9watd2y7WjAJtYrYatQ5l-nIIue1G0R4gs,457
+suggestion/hooking/ante_release_hook.py,sha256=0zUaDxzt0xCA-CXaHGYtngfHXqgCVI-LIDorQtLP5sY,4687
+suggestion/hooking/post_build_hook.py,sha256=OORfwRWkgH7ibBj8g5TQ5qzRu2cUKbl1qzQhFtvdaB8,457
+suggestion/hooking/post_release_hook.py,sha256=BA0iuoN4Pvur4rRcmEOW6w1U5gy3Cagtf45BG_LmIeM,2183
+suggestion/pyrustic_data/hooking.json,sha256=To0LCc99c_yGobwAMDKUCE6VRk2wYIySPC1bknzDTPw,298
+suggestion/pyrustic_data/hubstore.json,sha256=PYmFHCMCYZJ3_QeuTvBJVDIChqxxv6HuCg09hsXm6vU,166
+suggestion/pyrustic_data/release_info.json,sha256=0QtfLB58GqQZa7_YpBcLQsitcu_oJiJ-tH3_RbaUP7I,274
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+suggestion-0.0.1.dist-info/LICENSE,sha256=qa7R_AbaR83ZfoUV_42NLm1y03WIzvfz5kcIrGwX-UY,1075
+suggestion-0.0.1.dist-info/METADATA,sha256=JG7qBKVlF9jS-fUJjRY9QrzKyT0EekuhTvR6nXY4eeA,1149
+suggestion-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+suggestion-0.0.1.dist-info/entry_points.txt,sha256=jLpuGyIaWpY1iwBwdqsKA4GhZ2D0cD-E7jZ9tXsRAck,57
+suggestion-0.0.1.dist-info/top_level.txt,sha256=TtL0yhasWeFQACMynGmEsRYuso_lL0mKRMx8KCu70GE,17
+suggestion-0.0.1.dist-info/RECORD,,
