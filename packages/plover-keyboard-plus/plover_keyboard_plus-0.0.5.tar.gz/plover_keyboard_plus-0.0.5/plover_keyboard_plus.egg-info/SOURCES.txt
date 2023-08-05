@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+plover_keyboard_plus/__init__.py
+plover_keyboard_plus/machine.py
+plover_keyboard_plus.egg-info/PKG-INFO
+plover_keyboard_plus.egg-info/SOURCES.txt
+plover_keyboard_plus.egg-info/dependency_links.txt
+plover_keyboard_plus.egg-info/entry_points.txt
+plover_keyboard_plus.egg-info/requires.txt
+plover_keyboard_plus.egg-info/top_level.txt
+plover_keyboard_plus.egg-info/zip-safe
