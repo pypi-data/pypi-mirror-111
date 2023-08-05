@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: marshmallow-aiohttp
+Version: 0.1.0
+Summary: marshmallow-aiohttp
+Home-page: https://pypi.org/project/marshmallow-aiohttp
+License: MIT
+Keywords: marshmallow,aiohttp
+Author: Gleb Karpushkin
+Author-email: rugleb@gmail.com
+Maintainer: Gleb Karpushkin
+Maintainer-email: rugleb@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: aiodns (>=3.0,<4.0)
+Requires-Dist: aiohttp (>=3.7,<4.0)
+Requires-Dist: marshmallow (>=3.12,<4.0)
+Requires-Dist: ujson (>=4.0,<5.0)
+Project-URL: Documentation, https://github.com/rugleb/marshmallow-aiohttp/blob/master/README.md
+Project-URL: Repository, https://github.com/rugleb/marshmallow-aiohttp
+Description-Content-Type: text/markdown
+
+# marshmallow-aiohttp
