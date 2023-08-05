@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/dune_analytics/__init__.py
+src/dune_analytics.egg-info/PKG-INFO
+src/dune_analytics.egg-info/SOURCES.txt
+src/dune_analytics.egg-info/dependency_links.txt
+src/dune_analytics.egg-info/requires.txt
+src/dune_analytics.egg-info/top_level.txt
