@@ -1,0 +1,9 @@
+hocr_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hocr_utils/utils.py,sha256=aO71MJ7CcFFM5m00OyzNJzSt7Btx4ypXG23nPv6X2DY,7073
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_utils.py,sha256=g44BAkEBpvEfr27bGJ5wtbyfeyKxUWzXnMHVSkjl_RU,7536
+hocr_utils-0.0.1.dist-info/LICENSE,sha256=ghnrDq3aFjdNlt2QJ6CdrXzfqMGou5lo3g7KPS0IO4E,1071
+hocr_utils-0.0.1.dist-info/METADATA,sha256=EwxJFEov0bvEpCH7G-XaIbPS2rBmHQkplQS5P4yn678,2707
+hocr_utils-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+hocr_utils-0.0.1.dist-info/top_level.txt,sha256=u5kRMMql4ySH5bt8D4tZ2YXOKc8-I-Kon5ZgKKhMeEM,17
+hocr_utils-0.0.1.dist-info/RECORD,,
