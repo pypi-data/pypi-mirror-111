@@ -1,0 +1,9 @@
+panduza/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+panduza/pipe/__init__.py,sha256=zu7YVvIpTgKOdish9oNeh1BfILnBcG17FqDhwVOdAQk,73
+panduza/pipe/alias.py,sha256=rtIbdUPs_B2xrBpHkAQfHNj-5xsGeLyWF8sQVShJ1h8,509
+panduza/pipe/io.py,sha256=NWRXNpNut6g1TBIN1UVQzYXe-0vrvImdFtW12h_ti-w,2857
+panduza/pipe/server.py,sha256=hqMoU3_D7WhxtqgT5RRsJEGjSrI5hQOwUTis7Y89YD4,665
+panduza_pipe-0.0.1.dist-info/METADATA,sha256=cYVOL1R__S3pxIb-HOJ7ANuUDCJwMtTG2U_wUgqeoGg,656
+panduza_pipe-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+panduza_pipe-0.0.1.dist-info/top_level.txt,sha256=Ydrwf_JqdxvMnSdGFTlPg4Y_njAj6Sk0m-qd_YCGkMY,8
+panduza_pipe-0.0.1.dist-info/RECORD,,
