@@ -1,0 +1,10 @@
+README.md
+setup.py
+ditch/__init__.py
+ditch.egg-info/PKG-INFO
+ditch.egg-info/SOURCES.txt
+ditch.egg-info/dependency_links.txt
+ditch.egg-info/top_level.txt
+tests/__init__.py
+tests/conftest.py
+tests/test_unit.py
