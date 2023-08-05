@@ -1,0 +1,11 @@
+pysigmap/__init__.py,sha256=VqOjAUFBwhcFAIo6EBLHFnzZjrK-LAcc1tlL0VpMOu0,451
+pysigmap/bilog.py,sha256=TKoCwOoTi2Jf8LqfOo5QY8SJHi0YZkLCd29Zlq948k4,12211
+pysigmap/boone.py,sha256=_cdLQZgqO7olQ9rxJzg2ZgpavfNPnjwRh3IBCucHhz0,7192
+pysigmap/casagrande.py,sha256=hjHLWaw5jICSgRBKoShjujbuNOuKm80Mp9AxP3SuD5w,12409
+pysigmap/data.py,sha256=v_FyQIF_1tVgknqOR41Ei4jRnplQF2ErmZtsY-wdeGY,14096
+pysigmap/energy.py,sha256=sKfsldWNjh9b_0bdZLTi8mOAH8qE-bEdEEM8GLOMdm0,23010
+pysigmap/pachecosilva.py,sha256=4OCA1sh2Cu9xq17wNz7MeRJwWBNIjOsFz6r63RSr3wQ,6884
+pysigmap-0.1.8.dist-info/LICENSE,sha256=SXwXKPZ_SwD2V0BY5eeaque304kksPWJB98rzRLu2MU,1448
+pysigmap-0.1.8.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+pysigmap-0.1.8.dist-info/METADATA,sha256=t4RLbnPVF4nEHVNv_4zytfVlAdHk0_LCxkzZffSteYg,531
+pysigmap-0.1.8.dist-info/RECORD,,
