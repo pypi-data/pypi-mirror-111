@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pymyo.py
+pyproject.toml
+setup.cfg
+setup.py
+pymyo.egg-info/PKG-INFO
+pymyo.egg-info/SOURCES.txt
+pymyo.egg-info/dependency_links.txt
+pymyo.egg-info/requires.txt
+pymyo.egg-info/top_level.txt
