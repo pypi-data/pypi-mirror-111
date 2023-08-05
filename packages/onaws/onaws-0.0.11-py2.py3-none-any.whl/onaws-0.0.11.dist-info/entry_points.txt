@@ -1,0 +1,3 @@
+[console_scripts]
+onaws=onaws:__main__.main
+
