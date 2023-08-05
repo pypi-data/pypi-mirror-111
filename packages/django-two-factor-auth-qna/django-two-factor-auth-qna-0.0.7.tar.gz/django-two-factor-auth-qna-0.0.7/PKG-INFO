@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: django-two-factor-auth-qna
+Version: 0.0.7
+Summary: Package to enable two factor authentication using Questions and answers
+Home-page: https://github.com/rsys-teamx/django-2fa-qna
+Author: TeamX
+Author-email: teamx@reckonsys.com
+License: MIT
+Download-URL: https://github.com/rsys-teamx/django-2fa-qna/
+Description: UNKNOWN
+Keywords: 2FA,Reckonsys Hackathon Submission,team
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
