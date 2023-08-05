@@ -1,0 +1,6 @@
+pandas
+seaborn
+scipy
+chemfiles==0.10.0
+porems>=0.2.0
+jinja2
