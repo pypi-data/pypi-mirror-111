@@ -1,0 +1,15 @@
+ppe_match/__init__.py,sha256=G-ud3xK1U9LUfdfskr58FNKDcyF31ILPoFViwhgxV0A,135
+ppe_match/simulation.py,sha256=sLUSMrmj_5C2XjjKbmGXWGN8BmuM2xgAZKawBhQL_4M,12888
+ppe_match/strategies.py,sha256=ieo-T_kBm7zq82DRTDXGE0APdBR2s_vXYLQDnpVXn3k,3847
+ppe_match/data/README.md,sha256=lOPMXT0CxfK64B3kdEVWlVZBdWC7VhhKb5OVBk4XY64,2272
+ppe_match/data/anon_distance_matrix.csv,sha256=19q3qrIPVFdby4f467BO0ErNSwA-BGp3P8jGGu_LHT0,103013447
+ppe_match/data/anon_donors.csv,sha256=ayd9TfXwTbRomk97wMOGRG2Un_2rLVkqDP7lXo2IdRo,100750
+ppe_match/data/anon_recipients.csv,sha256=GONMf2xLK28nPZ0di4N2_zIohp7UpvYUIHAcUDK4wfI,1918130
+scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scripts/test1.py,sha256=UbRETXXau8J6RIdf5SmafH1SBxUTUr8h4KMuKxuubTs,1714
+scripts/test2.py,sha256=MROYoXetfr1-zTnwPBzQvMeU4vJCk2Vtk1_t-6XODKk,1295
+ppe_match-0.1.2.1.dist-info/LICENSE.txt,sha256=hCOWa5lbOCVhwg5KYo6pQFhBgVu24tBDb1inwBCNlUc,1039
+ppe_match-0.1.2.1.dist-info/METADATA,sha256=0pCcS0sTZ2aub0HKoDG4OEicymNjF01QzrXH0VBcViw,8849
+ppe_match-0.1.2.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ppe_match-0.1.2.1.dist-info/top_level.txt,sha256=vALZ5Cx2djl06Zev6hSLBml8BSobe9WE2d0qmUOE_Zk,18
+ppe_match-0.1.2.1.dist-info/RECORD,,
