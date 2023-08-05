@@ -1,0 +1,17 @@
+catsim/__init__.py,sha256=XpM3lncCzPBIwMSvDN7i10pke_c6KdJtVLZYbCiaTRw,23
+catsim/cat.py,sha256=xqZgFO8nskJy3NrN2oyvyQlG2UPkUll-Wml5gE4peSA,7406
+catsim/estimation.py,sha256=uYoRtFtuD0VqDM7kKSJKXOsEoCXBd8gtLanz2f_EKjQ,13940
+catsim/initialization.py,sha256=UugR21yljRNC6ekDcvgtAba0kq2PMrwFFbGI-kzUhSs,2436
+catsim/irt.py,sha256=oL3iMUBH0cDZ4GYjUKu6DE4DF_SjHfTsECvn9lqli8s,17245
+catsim/plot.py,sha256=5X0pY14b5ehcWPQaKDBHgUy-YfFhKVa4PXsLCDjBuuY,15762
+catsim/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+catsim/selection.py,sha256=Ky9VXItik2wWYksNujLJim7wVUzg2Skopw0aWDaV8mw,38340
+catsim/simulation.py,sha256=p3SDjL4zIZDgFozugpuxh5Ip65aeA4c2P56rAcK_wNs,19971
+catsim/stopping.py,sha256=cFUUgisweJUyl6oWSLoubexr7XbyOGnVlByyO6LuUnU,2920
+catsim/testing.py,sha256=tsVZ-MAotzQnBsfBHW68G-ijxyhdHxKg2DHxE6lnsFk,6584
+catsim-0.17.0.dist-info/COPYING,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+catsim-0.17.0.dist-info/COPYING.LESSER,sha256=2n6rt7r999OuXp8iOqW9we7ORaxWncIbOwN1ILRGR2g,7651
+catsim-0.17.0.dist-info/METADATA,sha256=ZDzwNUOi7uWeczKMxMP4Z5I6kDIUIViMhdKbkAKBYdw,7771
+catsim-0.17.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+catsim-0.17.0.dist-info/top_level.txt,sha256=y1-US7787dG30fZSv2PRixE0OMb563g-qV0jVARWYq4,7
+catsim-0.17.0.dist-info/RECORD,,
