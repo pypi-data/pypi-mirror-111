@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: akscacl
+Version: 1.1.1
+Summary: A very basic calculator
+Home-page: UNKNOWN
+Author: Akshay Kumar
+Author-email: akshaykrsingh490@gmail.com
+License: MIT
+Description: This a simple calculator developed by akshay.
+        
+        Change Log
+        ==========
+        
+        1.1.1 (29/06/2021)
+        ------------------
+        
+        - First Release
+Keywords: calculator
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.8

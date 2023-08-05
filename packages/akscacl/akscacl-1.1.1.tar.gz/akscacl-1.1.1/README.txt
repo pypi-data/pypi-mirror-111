@@ -1,0 +1,1 @@
+This a simple calculator developed by akshay.
