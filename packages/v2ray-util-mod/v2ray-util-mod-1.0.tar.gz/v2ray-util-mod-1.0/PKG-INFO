@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: v2ray-util-mod
+Version: 1.0
+Summary: a tool to manage v2ray config json
+Home-page: https://github.com/scvps
+Author: nandos
+Author-email: nnwwpp77@gmail.com
+License: GPL
+Keywords: python
+Platform: UNKNOWN
+Classifier: Topic :: Utilities
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+> Contact this for trial : @watefukk
+
+command new-install
+```
+source <(curl -sL https://raw.githubusercontent.com/mabotsss/mav2/main/v2ray.sh)
+```
+uninstall
+```
+source <(curl -sL https://raw.githubusercontent.com/mabotsss/mav2/main/v2ray.sh) --remove
+```
+
+
