@@ -1,0 +1,2 @@
+include ./face-mask-classifier/models/*.sav
+include ./face-mask-classifier/README.md
