@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: chess_bead
+Version: 1.0.0
+Summary: Package for the both Chinese poetry and chess game. The rules of the game
+Home-page: https://github.com/nevmenandr/chess_bead
+Author: Boris Orekhov
+Author-email: nevmenandr@gmail.com
