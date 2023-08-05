@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pythonbytes
+Version: 0.1.3
+Summary: PythonBytes ep. #239 said so...
+Home-page: https://github.com/stoltzmaniac/pythonbytes
+Author: Scott Stoltzman
+Author-email: stoltzmaniac@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Project-URL: Repository, https://github.com/stoltzmaniac/pythonbytes
