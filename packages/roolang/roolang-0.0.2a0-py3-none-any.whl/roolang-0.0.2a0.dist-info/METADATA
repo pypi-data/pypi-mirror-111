@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: roolang
+Version: 0.0.2a0
+Summary: A language for roo
+Home-page: https://github.com/rooLang/rooLang
+Author: Cryptex
+License: AGPLv3
+Project-URL: Issue tracker, https://github.com/rooLang/rooLang/issues
+Project-URL: Discord, https://discord.gg/n625ahZAtZ
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# rooLang
+roo is the best
+
+
