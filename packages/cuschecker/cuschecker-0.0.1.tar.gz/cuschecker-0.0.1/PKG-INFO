@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: cuschecker
+Version: 0.0.1
+Summary: Checks for swear words
+Home-page: UNKNOWN
+Author: Yassa Taiseer
+Author-email: yassataiseer@gmail.com
+License: MIT
+Keywords: calculator
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENCE.txt
+
+This library is used to check for swear words
+
+Change Log
+============
+0.0.1(28/06/2021)
+------------------
+First and last release
+
+
+

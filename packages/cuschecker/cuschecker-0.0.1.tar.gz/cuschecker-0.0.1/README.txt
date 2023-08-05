@@ -1,0 +1,1 @@
+This library is used to check for swear words

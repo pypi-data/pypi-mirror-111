@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+cuschecker/__init__.py
+cuschecker.egg-info/PKG-INFO
+cuschecker.egg-info/SOURCES.txt
+cuschecker.egg-info/dependency_links.txt
+cuschecker.egg-info/top_level.txt
