@@ -1,0 +1,3 @@
+[console_scripts]
+unleaky = unleaky.__main__:main
+
