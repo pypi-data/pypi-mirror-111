@@ -1,0 +1,10 @@
+jupyter-xml/__init__.py,sha256=H3FN89FEGDlQP4G3-MPKKmz12Bfy0R5805u4oLCOws0,988
+jupyter-xml/jupyter_xml.py,sha256=OKMVGDPue9sj4yM17TEK8HF5MO3UfM-TT1n9Y8BcETE,1250
+jupyter-xml/log.py,sha256=pVGESg0UuacXO2Cqh1UuKTRNbfYb2XrAwUtWgqBK9YA,510
+jupyter-xml/util.py,sha256=6AwJgjrw_3krFQkeuNrk3_L9h2G4EJhKYFOPJjHF-CA,608
+jupyter-xml/xml_modules.py,sha256=ZymYXR7D_w8IvH5AXBq2_9WnDIqrNWXxTZbgPM5d00U,8001
+jupyter_xml-0.0.4.dist-info/LICENSE,sha256=0aam4n9d5L3OaAfsNddYOx1PvepzEt12BsJrCo8wuqQ,1060
+jupyter_xml-0.0.4.dist-info/METADATA,sha256=1gX-n8HhbLUclt4cJchPoCFaszC6snlGbm_BvRm1ESg,742
+jupyter_xml-0.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+jupyter_xml-0.0.4.dist-info/top_level.txt,sha256=o2UFtqn5TmfhI5UaSkwEKNxZN727o2ZITl3bB9OVl4k,12
+jupyter_xml-0.0.4.dist-info/RECORD,,

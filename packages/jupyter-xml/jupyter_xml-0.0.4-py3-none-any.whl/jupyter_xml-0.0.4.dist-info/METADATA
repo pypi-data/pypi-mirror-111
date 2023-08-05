@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: jupyter-xml
+Version: 0.0.4
+Summary: Jupyter Notebook Plugin for XML, XMLSchema and XPath support
+Home-page: https://git.rwth-aachen.de/l.pieschel/jupyter-xml
+Author: Lars Pieschel
+Author-email: lars.pieschel@rwth-aachen.de
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: IPython
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: lxml (>=4.6.2)
+Requires-Dist: ipython (>=7.0.0)
+
+# Jupyter-XML
+
+[![PyPI](https://img.shields.io/pypi/v/jupyter-xml)](https://pypi.org/project/jupyter-xml/)
+
+TODO: Write Readme
+
