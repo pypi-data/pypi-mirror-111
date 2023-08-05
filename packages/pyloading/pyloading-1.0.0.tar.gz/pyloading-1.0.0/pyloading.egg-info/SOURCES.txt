@@ -1,0 +1,11 @@
+CHANGELOG.md
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+pyloader/__init__.py
+pyloading.egg-info/PKG-INFO
+pyloading.egg-info/SOURCES.txt
+pyloading.egg-info/dependency_links.txt
+pyloading.egg-info/requires.txt
+pyloading.egg-info/top_level.txt
