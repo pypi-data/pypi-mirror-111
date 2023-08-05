@@ -1,0 +1,10 @@
+sqlalchemy_things/__init__.py,sha256=WQI4RA65tQ3k02zcskVHAiuWdWQsrIKQI35bkfvqDhg,107
+sqlalchemy_things/declarative/__init__.py,sha256=Nu6cT9II-fd-YS1BGAqmb6Dz-4JHnfqCgjIf5doYgVk,801
+sqlalchemy_things/declarative/base.py,sha256=FGq9z0_cpiwVagzds2xAj6QIneBujHtTPw0Vb34xIt4,1311
+sqlalchemy_things/declarative/primary_keys.py,sha256=KdZutgCqVLNckS1eclccpc86FMYn7Tad2ie8RNyA6YU,2791
+sqlalchemy_things/types/__init__.py,sha256=BXzdd0026Og6kLhWgd5EBvVqTly1iULQsPVzDGnGVLo,74
+sqlalchemy_things/types/uuid.py,sha256=WpTO-0jdS6yPGMYeBpgVfxUqsEIldvCKuGzD_RGFQM4,1232
+sqlalchemy_things-0.1a3.dist-info/LICENSE,sha256=xa8oroZgRrxIuZ06ngMmxv4bpTcRrhjVp005w8RSvTA,1116
+sqlalchemy_things-0.1a3.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+sqlalchemy_things-0.1a3.dist-info/METADATA,sha256=LZvPe-W0seTT2v6jxFchl0qGtE6KTrlurwKmfQz8EP8,3639
+sqlalchemy_things-0.1a3.dist-info/RECORD,,
