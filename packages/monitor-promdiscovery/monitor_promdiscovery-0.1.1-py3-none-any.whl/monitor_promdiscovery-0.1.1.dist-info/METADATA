@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: monitor-promdiscovery
+Version: 0.1.1
+Summary: A Prometheus file based service discovery for Icinga2 and OP5 Monitor
+Home-page: https://github.com/opsdis/monitor-promdiscovery
+Author: thenodon
+Author-email: anders@opsdis.com
+License: GPLv3
+Platform: UNKNOWN
+Requires-Python: >=3.6
+License-File: LICENSE
+License-File: COPYING
+Requires-Dist: python-json-logger (==2.0.1)
+Requires-Dist: PyYAML (==5.4.1)
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: structlog (==21.1.0)
+
+UNKNOWN
+
