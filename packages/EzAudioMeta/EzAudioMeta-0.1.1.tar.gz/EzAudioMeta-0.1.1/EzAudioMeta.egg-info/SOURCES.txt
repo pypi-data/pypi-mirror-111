@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+EzAudioMeta.egg-info/PKG-INFO
+EzAudioMeta.egg-info/SOURCES.txt
+EzAudioMeta.egg-info/dependency_links.txt
+EzAudioMeta.egg-info/entry_points.txt
+EzAudioMeta.egg-info/requires.txt
+EzAudioMeta.egg-info/top_level.txt
+src/__init__.py
+src/main.py
