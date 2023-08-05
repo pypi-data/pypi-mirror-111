@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: Coolcalci
+Version: 2.0
+Summary: This will you to do Arithmetic operations very fast.
+Home-page: UNKNOWN
+Author: Python Rohan
+Author-email: rohan9878787@gmail.com
+License: UNKNOWN
+Keywords: python,calculator,calci,calculate,calculation,Arithmetic
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+
+This module is created by python rohan or coolduderohan to make arithmetic operations by a simple command. There is 5 types created in this version of calci, this module will contain calculate and print and calculate but not print only save it like this commands you will find in this module. As if you want decrease the time to do arithmetic operations.
+
