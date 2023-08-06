@@ -1,0 +1,3 @@
+[console_scripts]
+cropgbm = cropgbm.main:main
+

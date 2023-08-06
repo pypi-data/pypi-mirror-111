@@ -1,0 +1,8 @@
+wheel
+numpy
+scipy
+pandas
+scikit-learn>=0.24
+lightgbm
+matplotlib
+seaborn
