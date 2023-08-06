@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/zycelium.ansiformat.egg-info/PKG-INFO
+src/zycelium.ansiformat.egg-info/SOURCES.txt
+src/zycelium.ansiformat.egg-info/dependency_links.txt
+src/zycelium.ansiformat.egg-info/not-zip-safe
+src/zycelium.ansiformat.egg-info/requires.txt
+src/zycelium.ansiformat.egg-info/top_level.txt
+src/zycelium/ansiformat/__init__.py
+src/zycelium/ansiformat/color.py
+src/zycelium/ansiformat/format.py
+src/zycelium/ansiformat/markup.py
+src/zycelium/ansiformat/palette.py
+src/zycelium/ansiformat/string.py
