@@ -1,0 +1,59 @@
+## dasf-progress-api
+
+Progress api for dasf modules based on python. Developed and tested with Python 3.8
+
+### Usage
+
+A progress report is stored in a tree structure. So there will be one 'root' report instance containing multiple 'sub-reports'.
+
+The root report will be initialized directly. The contructor demands a `send_handler` argument, so we need to create one first. 
+The `dasf-messaging-python` module provides a ready to use implementation for the `send_handler` via the `ProgressSendHandler` class.
+In order to instantiate the send handler you need to pass the `PulsarMessageConsumer` that is used to receive the request that is monitored,
+as well as the corresponding request message. You might add additional message properties via the `msg_props` dictionary.
+
+```python
+from demessaging.progress_send_handler import ProgressSendHandler
+
+send_handler=ProgressSendHandler(pulsar=self.__pulsar,
+                                 request_msg=request_msg,
+                                 msg_props={'additional': 'some addtional property'})
+```
+
+Once we have a `send_handler` we can use it to create the 'root' progress report for the request.
+In case we already know how many steps (sub-reports) there are going to be on the next level, we can pass it via the optional `steps` argument.
+
+```python
+root_report = ProgressReport(step_message="Label/message of the root report",
+                                 send_handler=send_handler,
+                                 steps=2)
+```
+
+Once we have the root report instance we create new subreports for it via the `create_subreport` method. 
+Each created report is published automatically upon creation and completion.
+
+```
+# create a subreport
+sub_report = root_report.create_subreport(step_message="Calculating something")
+
+# execute some logic
+# ...
+
+# mark the sub-report as compelte
+sub_report.complete()
+```
+
+All sub-reports are again instances of `ProgressReport`, so you can create more sub-reports for each.
+
+#### error handling
+For now there is now distinct error flag in the report. 
+But you can update the `step_message` prop before marking it as complete to indicate an error.
+
+```
+# some code that raises an exception
+# ...
+except Exception as e:
+    error = str(e)
+    progress_report.step_message = "error '{msg}': {err}".format(msg=progress_report.step_message, err=error)
+    progress_report.complete()
+```
+---
