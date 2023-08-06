@@ -1,0 +1,20 @@
+Changelog
+=========
+
+1.2 - (2021-07-02)
+---------------------------
+* Change: modified themesmerged taxonomy to use portal_vocabulary
+  style values which is themeid -> replacement theme id
+  [ichim-david refs #135950]
+
+1.1 - (2021-05-20)
+---------------------------
+* Change: Added missing themes from themes taxonomy and a new themesmerged
+  taxonomy
+  [iulianpetchesi - refs #131802]
+
+1.0 - (2021-04-16)
+-----------------------
+
+* Initial release. Themes taxonomy
+  [avoinea - refs #130852]
