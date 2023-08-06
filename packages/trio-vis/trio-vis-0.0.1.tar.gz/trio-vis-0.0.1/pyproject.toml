@@ -1,0 +1,53 @@
+[tool.poetry]
+authors = ["Ian Chen <ianre657@gmail.com>"]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Environment :: Plugins",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Framework :: Trio",
+  "Topic :: Scientific/Engineering :: Visualization",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3 :: Only",
+]
+description = "Structured Concurrency visualizer for trio"
+homepage = "https://github.com/ianchen-tw/trio-vis"
+license = "MIT"
+name = "trio-vis"
+readme = "README.md"
+repository = "https://github.com/ianchen-tw/trio-vis"
+version = "0.0.1"
+
+[tool.pytest.ini_options]
+addopts = "--cov=trio_vis"
+markers = [
+  "dev: marks tests as developing (deselect with '-m \"not dev\"')",
+]
+
+[tool.poetry.dependencies]
+attrs = "^21.2.0"
+pydantic = "^1.8.2"
+python = ">=3.6.1, <4.0"
+rich = "^9.13.0"
+trio = "^0.18.0"
+trio-typing = "^0.5.0"
+typing-extensions = "^3"
+
+[tool.poetry.dev-dependencies]
+autoflake = "^1.4"
+black = "^20.8b1"
+ipdb = "^0.13.7"
+isort = "^5.7.0"
+mypy = "^0.812"
+pytest = "^6.2.4"
+pytest-cov = "^2.12.1"
+pytest-mock = "^3.6.1"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
