@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: Allelica-pkg-Nico.4D
+Version: 1.0.3
+Summary: Allelica Library
+Home-page: https://github.com/4DIngenieria/Allelica
+Author: Nicolas Alejandro Rodriguez
+Author-email: info@4dingenieria.com.ar
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/4DIngenieria/Allelica
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas (==1.2.5)
+Requires-Dist: dask (==2021.6.2)
+Requires-Dist: openpyxl (==3.0.7)
+
+# allelica-lib Documentation.
+
+The Source Code of The Library. [Source-Code](https://github.com/4DIngenieria/allelica-lib).
+
+For The Example Using The Class. [Source-Code](https://github.com/4DIngenieria/Allelica).
+
+```diff
+For The Installation of This Library: "pip install Allelica-pkg-Nico.4D"
+```
+
+```python
+
+#Example Without Dask
+
+from allelica_lib import parse
+
+parse.process("source.xlsx", "out.tsv")
+
+```
+
+```python
+
+#Example Using The Library Dask
+
+from allelica_lib import parse
+
+parse.process_dask("source.xlsx", "out.tsv", 4) 
+
+#'4' Is The Number of Partitions That The Dask Library Will Use When Running The Process. 
+
+```
+
+```diff
+Other Requirements (Auto-Install With The Library):
+```
+- pip install dask 
+- pip install pandas 
+- pip install openpyxl
+
