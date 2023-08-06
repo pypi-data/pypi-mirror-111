@@ -1,0 +1,102 @@
+Metadata-Version: 2.1
+Name: pyconversations
+Version: 0.0.1
+Summary: A package for representing conversations as DAGs for visualization, analysis, and pre-processing.
+Home-page: https://github.com/hunter-heidenreich/pyconversations
+Author: Hunter Scott Heidenreich
+Author-email: hunter.scott.heidenreich@gmail.com
+License: MIT
+Project-URL: Documentation, https://pyconversations.readthedocs.io/
+Project-URL: Changelog, https://pyconversations.readthedocs.io/en/latest/changelog.html
+Project-URL: Issue Tracker, https://github.com/hunter-heidenreich/pyconversations/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: networkx (>=2.5)
+Requires-Dist: langid (>=1.1)
+Requires-Dist: numpy (>=1.12)
+Requires-Dist: tqdm (>=4.59)
+Requires-Dist: nltk (>=3.0)
+
+========
+Overview
+========
+
+
+
+A package for representing conversations as DAGs for visualization, analysis, and pre-processing.
+
+* Free software: MIT license
+
+Installation
+============
+
+::
+
+    pip install pyconversations
+
+You can also install the in-development version with::
+
+    pip install https://github.com/hunter-heidenreich/pyconversations/archive/master.zip
+
+
+Documentation
+=============
+
+
+https://pyconversations.readthedocs.io/
+
+
+Development
+===========
+
+To run all the tests run::
+
+    tox
+
+Note, to combine the coverage data from all the tox environments run:
+
+.. list-table::
+    :widths: 10 90
+    :stub-columns: 1
+
+    - - Windows
+      - ::
+
+            set PYTEST_ADDOPTS=--cov-append
+            tox
+
+    - - Other
+      - ::
+
+            PYTEST_ADDOPTS=--cov-append tox
+
+
+Changelog
+=========
+
+0.0.1 (2021-06-30)
+------------------
+
+* Stable first release on PyPI, with properly formatted and distributable dependencies.
+* Jupyter Notebook tutorials
+
+0.0.0 (2021-05-30)
+------------------
+
+* First release on PyPI.
+
+
