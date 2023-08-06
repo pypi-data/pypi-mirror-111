@@ -1,0 +1,10 @@
+amethyst_core-0.8.6-nspkg.pth,sha256=ct71z8VTmp6_OR8JUvxh9XBKoNSrNXVdyCYum-Ly7Uw,549
+amethyst/core/__init__.py,sha256=qotgoKR6xWoWcjctZBa7fuANXtBGkKgbv_H7YWKlDdE,202
+amethyst/core/obj.py,sha256=neXXEmWN5abiUn555J8cI0Kflo__yCr3isn6k0irUrw,48138
+amethyst/core/util.py,sha256=r7RrVAz6WhJnmXOULfFmiCpiyazrMva7CsT6IwL291w,16183
+amethyst_core-0.8.6.dist-info/LICENSE,sha256=rxGZ6IDLxI8L_41uK0PPsuxeboDcZnBDz-0okrx3C9Q,8055
+amethyst_core-0.8.6.dist-info/METADATA,sha256=WGRswCOILhGTdjsHJ11d0aNIB4guo-uoXm1cvSWhidk,5479
+amethyst_core-0.8.6.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+amethyst_core-0.8.6.dist-info/namespace_packages.txt,sha256=nC8E2Kz6nwVs_lPvNxA16-5HE0zYakVmmIaWkjbsGJk,9
+amethyst_core-0.8.6.dist-info/top_level.txt,sha256=nC8E2Kz6nwVs_lPvNxA16-5HE0zYakVmmIaWkjbsGJk,9
+amethyst_core-0.8.6.dist-info/RECORD,,
