@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: layz_import
+Version: 0.3.2
+Summary: A module for layz loading of Python modules
+Home-page: https://gitlab.com/caosuna/layz-import
+Author: Carlos Osuna
+Author-email: charlie@caosuna.com
+License: GNU GPLv3
+Description: # layz-import courtesy of https://github.com/AndyBryson/lazy_import
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: OS Independent
+Provides-Extra: test

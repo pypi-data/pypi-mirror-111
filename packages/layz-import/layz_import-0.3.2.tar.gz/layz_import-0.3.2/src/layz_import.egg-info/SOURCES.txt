@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/layz_import/__init__.py
+src/layz_import/test_lazy.py
+src/layz_import.egg-info/PKG-INFO
+src/layz_import.egg-info/SOURCES.txt
+src/layz_import.egg-info/dependency_links.txt
+src/layz_import.egg-info/requires.txt
+src/layz_import.egg-info/top_level.txt
