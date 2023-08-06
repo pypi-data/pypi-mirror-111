@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: openshift-python-wrapper
+Version: 1.0
+Summary: Wrapper around https://github.com/openshift/openshift-restclient-python
+Home-page: https://github.com/RedHatQE/openshift-python-wrapper
+Author: Meni Yakove, Ruth Netser
+Author-email: myakove@redhat.com
+License: apache-2.0
+Download-URL: https://github.com/RedHatQE/openshift-python-wrapper/archive/refs/tags/v1.0.tar.gz
+Keywords: Openshift,Kubevirt,CNV
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+
+UNKNOWN
+
