@@ -1,0 +1,10 @@
+elasticlogger/__init__.py,sha256=EbWNs7aX95IkUkgOfSDLxvRIsLflJMU6V2Ruj7tIsXA,55
+elasticlogger/context.py,sha256=ieFlYp_lzc5JQ5sGwh3MhBlNvHh4_XbhnJvdJyvea1U,1552
+elasticlogger/elastic.py,sha256=X3jjUIE7byEabAXn_GBEB2Ysdrx6MesqWmpA1ivyQA8,874
+elasticlogger/errors.py,sha256=Y2V5ORIDN_ctI8k4ZPpbC9nTvKNeV-edJEnSv0Papwo,626
+elasticlogger/json_encoder.py,sha256=T3jU3TJgHdQUArUIbjNqeZSGeVVjANOqDEWgd3OzNwY,752
+elasticlogger/logger.py,sha256=QsIFSl13DLwB43OnnnmjmafayVyTUD2plbLt3aGlyT8,11487
+elasticlogger-2.3.0.dist-info/LICENSE,sha256=nFOURX0rqRTRpQo3c2-vJaKqhUkj1OJCnbnZtg8Q8bI,1071
+elasticlogger-2.3.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+elasticlogger-2.3.0.dist-info/METADATA,sha256=iuOQWJd67qab-IGacSS-OoOqfWlsMtqJ2qnxqAG-MYU,1251
+elasticlogger-2.3.0.dist-info/RECORD,,
