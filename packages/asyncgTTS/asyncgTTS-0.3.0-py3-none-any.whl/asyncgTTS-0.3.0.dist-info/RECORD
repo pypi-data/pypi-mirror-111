@@ -1,0 +1,11 @@
+asyncgTTS/__init__.py,sha256=1iU6m-Xqi9JxdNrzDVjWc101zNGAl3GbK8YvyW5Vjlk,730
+asyncgTTS/_decos.py,sha256=96hwkkiB_BMS9MO4kc6cHaP-9joBiUb0eaKfsoGqs4M,699
+asyncgTTS/asyncgTTS.py,sha256=n71FWr2JjGkznlGFpDWcCvoKUiZqdfcRx3qXjJKUvQs,4305
+asyncgTTS/easygTTS.py,sha256=Z4AYsHwC2S_2Da1EW0WuGztqa8Y8FsfEqY7qCm_Fie4,1178
+asyncgTTS/errors.py,sha256=72mb_Bin9fV7fCs70n2vcCDj-RHONT-Ut3awYJJCaiI,1288
+asyncgTTS/gtts.py,sha256=3q44hRZ_-KxNcqimEthnYyGkVO-n0fJbcvd96qJUhC0,809
+asyncgTTS-0.3.0.dist-info/LICENCE.txt,sha256=ClKOhd3E7iAE0u44UD_SZgbOhdpO1OoAHmi9U04cqYc,1053
+asyncgTTS-0.3.0.dist-info/METADATA,sha256=TNtg4UHDP21EI8dEMi-yu8gxP8zavV6r4ursZGGEJpw,2123
+asyncgTTS-0.3.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+asyncgTTS-0.3.0.dist-info/top_level.txt,sha256=5mArf9cGzWHHcQuVbtZ4vVXsIkGMlht7O-CtAK_ZbgI,10
+asyncgTTS-0.3.0.dist-info/RECORD,,
