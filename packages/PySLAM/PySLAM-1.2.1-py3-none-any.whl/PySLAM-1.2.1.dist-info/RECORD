@@ -1,0 +1,10 @@
+PySLAM-1.2.1.data/scripts/pyslam,sha256=XyB4rJcUwNm-hwIS-TOMhOUDiFGEV3uAL4_j9IJxRaA,87
+PySLAM-1.2.1.data/scripts/pyslam-ytdl,sha256=B1rkbOtPJYc51Yzs0LR-pko-n6DFi5VbIGyZ8cE13KY,241
+pyslam/setup.py,sha256=gGO88ACFX1YmD7g7XXrZMeKa98GHqNKA3erQ6vDSGxE,1600
+pyslam/slam.py,sha256=7e09dG4g40CUcuYG9GP1kzifZ3mhOy_rnxmR3yaVDaY,7694
+PySLAM-1.2.1.dist-info/LICENSE.md,sha256=zOXx36na8fLUzpbgfPfux6bMD9r1xSHltbfoH3lGTZM,34355
+PySLAM-1.2.1.dist-info/LICENSE.txt,sha256=DZak_2itbUtvHzD3E7GNUYSRK6jdOJ-GqncQ2weavLA,34523
+PySLAM-1.2.1.dist-info/METADATA,sha256=4NT7uhvKE056r8fkiq4WZ0LTN0fk-FFYmUiKQxaZs2k,3456
+PySLAM-1.2.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+PySLAM-1.2.1.dist-info/top_level.txt,sha256=Agh-jefziejW4RcEHOiYMpBXdtPiOEN4msPk5gZ_ng8,7
+PySLAM-1.2.1.dist-info/RECORD,,
