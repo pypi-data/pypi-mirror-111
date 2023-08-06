@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "sagah"
+version = "0.1.0"
+description = "Orchestrated, async sagas in Python"
+authors = ["Jonathan Drake <jdrake@narrativescience.com>"]
+license = "BSD-3-Clause"
+readme = "README.md"
+homepage = "https://github.com/NarrativeScience/sagah"
+repository = "https://github.com/NarrativeScience/sagah"
+
+[tool.poetry.dependencies]
+python = "^3.6.5"
+
+[tool.poetry.dev-dependencies]
+pre-commit = "^2.10.1"
+pytest = "^6.2.2"
+pytest-asyncio = "^0.15.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
