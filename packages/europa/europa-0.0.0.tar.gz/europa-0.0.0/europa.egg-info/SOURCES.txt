@@ -1,0 +1,8 @@
+README.md
+setup.py
+europa/__init__.py
+europa.egg-info/PKG-INFO
+europa.egg-info/SOURCES.txt
+europa.egg-info/dependency_links.txt
+europa.egg-info/requires.txt
+europa.egg-info/top_level.txt

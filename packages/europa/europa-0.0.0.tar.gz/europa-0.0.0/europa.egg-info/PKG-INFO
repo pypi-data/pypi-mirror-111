@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: europa
+Version: 0.0.0
+Summary: UNKNOWN
+Home-page: https://github.com/frostbyte-lang/europa
+Author: hashberg
+Author-email: sg495@users.noreply.github.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 1 - Planning
+Classifier: Natural Language :: English
+Classifier: Typing :: Typed
