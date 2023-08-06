@@ -1,0 +1,2 @@
+include indo_arabic_transliteration/data/*
+include requirements.txt
