@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+upn2sepa/__init__.py
+upn2sepa/convert.py
+upn2sepa/run.py
+upn2sepa.egg-info/PKG-INFO
+upn2sepa.egg-info/SOURCES.txt
+upn2sepa.egg-info/dependency_links.txt
+upn2sepa.egg-info/entry_points.txt
+upn2sepa.egg-info/requires.txt
+upn2sepa.egg-info/top_level.txt

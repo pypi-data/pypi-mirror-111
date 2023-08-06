@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: upn2sepa
+Version: 1.0.1
+Summary: UPN QR to SEPA QR converter.
+Home-page: https://github.com/janzmazek/upn2sepa
+Author: Jan Zmazek
+Author-email: jan.zmazek@gmail.com
+License: MIT license
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# upn2sepa
+An app which converts UPN QR code to SEPA QR code.
+
+Currently only tested on OS X.
+

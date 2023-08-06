@@ -1,0 +1,3 @@
+[console_scripts]
+upn2sepa = upn2sepa.run:run
+
