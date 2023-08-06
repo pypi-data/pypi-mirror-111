@@ -1,0 +1,14 @@
+sqlgrants/__init__.py,sha256=AHb_074KxLNa9eJ0QkS0i9P8YhCFs4NBGNz5wTtOlo8,57
+sqlgrants/base.py,sha256=Bqfa3TpsqkZa1f3e3bpjwIioU2QKl_4mVoZQCV998fI,2046
+sqlgrants/exceptions.py,sha256=_ehZAX3pJEHtOVFuwzJV0nG0-Z5CGXc0x-_7SO82DtY,440
+sqlgrants/mysql/__init__.py,sha256=yYCkb-dnegg7q7rhZzwZDXA9XOYjopB5mZeU1aQ4UZ0,55
+sqlgrants/mysql/grants.py,sha256=bL3fyuyV29aRSoKja-nM3PKzTZwL8Z_sGZ2jyNN5gGA,1558
+sqlgrants/mysql/mysql.py,sha256=UfP4Li04pcKk4AcH1HcsVeDi5d7ksbssUI-AY3tbMvY,4104
+tests/__init__.py,sha256=AHb_074KxLNa9eJ0QkS0i9P8YhCFs4NBGNz5wTtOlo8,57
+tests/base.py,sha256=Bqfa3TpsqkZa1f3e3bpjwIioU2QKl_4mVoZQCV998fI,2046
+tests/exceptions.py,sha256=_ehZAX3pJEHtOVFuwzJV0nG0-Z5CGXc0x-_7SO82DtY,440
+python_SQLGrants-1.1.2.dist-info/LICENSE,sha256=323rX8f115HOMRHCQ604sTmZXYdzjFEsVcG9PVjKNnY,1071
+python_SQLGrants-1.1.2.dist-info/METADATA,sha256=PiK69rxWwo2RhNrHN4bJCfLUK7vZjE_C5LURyhHRc2Q,1996
+python_SQLGrants-1.1.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+python_SQLGrants-1.1.2.dist-info/top_level.txt,sha256=TwMZw_XJEvbs23ax7YX6hEo-K8OIf1676NE2tRTn-xs,16
+python_SQLGrants-1.1.2.dist-info/RECORD,,
