@@ -1,0 +1,12 @@
+.gitignore
+LICENSE
+README.rst
+requirements.txt
+setup.py
+stimwrap/__init__.py
+stimwrap/_stimwrap.py
+stimwrap.egg-info/PKG-INFO
+stimwrap.egg-info/SOURCES.txt
+stimwrap.egg-info/dependency_links.txt
+stimwrap.egg-info/requires.txt
+stimwrap.egg-info/top_level.txt
