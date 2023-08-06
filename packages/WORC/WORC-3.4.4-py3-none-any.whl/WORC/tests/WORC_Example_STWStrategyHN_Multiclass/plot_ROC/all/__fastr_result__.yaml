@@ -1,0 +1,338 @@
+network_id: WORC_Example_STWStrategyHN_Multiclass
+network_version: '0.0'
+run_id: WORC_Example_STWStrategyHN_Multiclass_2021-05-31T11-30-50
+node_id: plot_ROC
+node_global_id: fastr:///networks/WORC_Example_STWStrategyHN_Multiclass/0.0/runs/WORC_Example_STWStrategyHN_Multiclass_2021-05-31T11-30-50/nodelist/plot_ROC
+tool_id: worc/PlotROC:1.0
+tool_version: '1.0'
+sample_id:
+- all
+sample_index:
+- 0
+fastr_version: 3.2.3_tags/3.2.3^0_2ed88fe2
+network_tmpurl: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass
+hold_jobs:
+- WORC_Example_STWStrategyHN_Multiclass___classify___all
+timestamp: '2021-05-31T09:30:54.348854'
+preferred_types:
+  ROC_png:
+  - NiftiImageFileCompressed
+  ROC_tex:
+  - NiftiImageFileCompressed
+  ROC_csv:
+  - NiftiImageFileCompressed
+  PRC_png:
+  - NiftiImageFileCompressed
+  PRC_tex:
+  - NiftiImageFileCompressed
+  PRC_csv:
+  - NiftiImageFileCompressed
+errors:
+- - FastrOutputValidationError
+  - Output value [PNGFile] "vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_ROC/all/ROC_png_0.png"
+    not valid for datatype "'PNGFile'"
+  - /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py
+  - 1148
+  - "File /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 187 in <module>\n  main()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 182 in main\n  execute_job(joblist)\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 89 in execute_job\n  job.execute()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 826 in execute\n  if not self.validate_results(payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1094 in validate_results\n  if not self._validate_result(output, output_value,\
+    \ payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1148 in _validate_result\n  self.errors.append(exceptions.FastrOutputValidationError(message).excerpt())"
+- - FastrOutputValidationError
+  - The output "ROC_png" is invalid!
+  - /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py
+  - 1096
+  - "File /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 187 in <module>\n  main()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 182 in main\n  execute_job(joblist)\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 89 in execute_job\n  job.execute()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 826 in execute\n  if not self.validate_results(payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1096 in validate_results\n  self.errors.append(exceptions.FastrOutputValidationError(message).excerpt())"
+- - FastrOutputValidationError
+  - Output value [TexFile] "vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_ROC/all/ROC_tex_0.tex"
+    not valid for datatype "'TexFile'"
+  - /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py
+  - 1148
+  - "File /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 187 in <module>\n  main()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 182 in main\n  execute_job(joblist)\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 89 in execute_job\n  job.execute()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 826 in execute\n  if not self.validate_results(payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1094 in validate_results\n  if not self._validate_result(output, output_value,\
+    \ payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1148 in _validate_result\n  self.errors.append(exceptions.FastrOutputValidationError(message).excerpt())"
+- - FastrOutputValidationError
+  - The output "ROC_tex" is invalid!
+  - /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py
+  - 1096
+  - "File /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 187 in <module>\n  main()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 182 in main\n  execute_job(joblist)\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 89 in execute_job\n  job.execute()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 826 in execute\n  if not self.validate_results(payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1096 in validate_results\n  self.errors.append(exceptions.FastrOutputValidationError(message).excerpt())"
+- - FastrOutputValidationError
+  - Output value [CSVFile] "vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_ROC/all/ROC_csv_0.csv"
+    not valid for datatype "'CSVFile'"
+  - /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py
+  - 1148
+  - "File /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 187 in <module>\n  main()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 182 in main\n  execute_job(joblist)\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 89 in execute_job\n  job.execute()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 826 in execute\n  if not self.validate_results(payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1094 in validate_results\n  if not self._validate_result(output, output_value,\
+    \ payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1148 in _validate_result\n  self.errors.append(exceptions.FastrOutputValidationError(message).excerpt())"
+- - FastrOutputValidationError
+  - The output "ROC_csv" is invalid!
+  - /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py
+  - 1096
+  - "File /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 187 in <module>\n  main()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 182 in main\n  execute_job(joblist)\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 89 in execute_job\n  job.execute()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 826 in execute\n  if not self.validate_results(payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1096 in validate_results\n  self.errors.append(exceptions.FastrOutputValidationError(message).excerpt())"
+- - FastrOutputValidationError
+  - Output value [PNGFile] "vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_ROC/all/PRC_png_0.png"
+    not valid for datatype "'PNGFile'"
+  - /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py
+  - 1148
+  - "File /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 187 in <module>\n  main()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 182 in main\n  execute_job(joblist)\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 89 in execute_job\n  job.execute()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 826 in execute\n  if not self.validate_results(payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1094 in validate_results\n  if not self._validate_result(output, output_value,\
+    \ payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1148 in _validate_result\n  self.errors.append(exceptions.FastrOutputValidationError(message).excerpt())"
+- - FastrOutputValidationError
+  - The output "PRC_png" is invalid!
+  - /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py
+  - 1096
+  - "File /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 187 in <module>\n  main()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 182 in main\n  execute_job(joblist)\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 89 in execute_job\n  job.execute()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 826 in execute\n  if not self.validate_results(payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1096 in validate_results\n  self.errors.append(exceptions.FastrOutputValidationError(message).excerpt())"
+- - FastrOutputValidationError
+  - Output value [TexFile] "vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_ROC/all/PRC_tex_0.tex"
+    not valid for datatype "'TexFile'"
+  - /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py
+  - 1148
+  - "File /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 187 in <module>\n  main()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 182 in main\n  execute_job(joblist)\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 89 in execute_job\n  job.execute()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 826 in execute\n  if not self.validate_results(payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1094 in validate_results\n  if not self._validate_result(output, output_value,\
+    \ payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1148 in _validate_result\n  self.errors.append(exceptions.FastrOutputValidationError(message).excerpt())"
+- - FastrOutputValidationError
+  - The output "PRC_tex" is invalid!
+  - /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py
+  - 1096
+  - "File /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 187 in <module>\n  main()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 182 in main\n  execute_job(joblist)\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 89 in execute_job\n  job.execute()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 826 in execute\n  if not self.validate_results(payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1096 in validate_results\n  self.errors.append(exceptions.FastrOutputValidationError(message).excerpt())"
+- - FastrOutputValidationError
+  - Output value [CSVFile] "vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_ROC/all/PRC_csv_0.csv"
+    not valid for datatype "'CSVFile'"
+  - /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py
+  - 1148
+  - "File /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 187 in <module>\n  main()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 182 in main\n  execute_job(joblist)\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 89 in execute_job\n  job.execute()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 826 in execute\n  if not self.validate_results(payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1094 in validate_results\n  if not self._validate_result(output, output_value,\
+    \ payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1148 in _validate_result\n  self.errors.append(exceptions.FastrOutputValidationError(message).excerpt())"
+- - FastrOutputValidationError
+  - The output "PRC_csv" is invalid!
+  - /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py
+  - 1096
+  - "File /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 187 in <module>\n  main()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 182 in main\n  execute_job(joblist)\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 89 in execute_job\n  job.execute()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 826 in execute\n  if not self.validate_results(payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1096 in validate_results\n  self.errors.append(exceptions.FastrOutputValidationError(message).excerpt())"
+- - FastrErrorInSubprocess
+  - "Traceback (most recent call last):\n  File \"/home/martijn/Documents/WORC3/lib/python3.7/site-packages/pandas/core/indexes/base.py\"\
+    , line 2657, in get_loc\n    return self._engine.get_loc(key)\n  File \"pandas/_libs/index.pyx\"\
+    , line 108, in pandas._libs.index.IndexEngine.get_loc\n  File \"pandas/_libs/index.pyx\"\
+    , line 132, in pandas._libs.index.IndexEngine.get_loc\n  File \"pandas/_libs/hashtable_class_helper.pxi\"\
+    , line 1601, in pandas._libs.hashtable.PyObjectHashTable.get_item\n  File \"pandas/_libs/hashtable_class_helper.pxi\"\
+    , line 1608, in pandas._libs.hashtable.PyObjectHashTable.get_item\nKeyError: 'imaginary_label_1,\
+    \ complement_label_1'\n\nDuring handling of the above exception, another exception\
+    \ occurred:\n\nTraceback (most recent call last):\n  File \"/home/martijn/git/WORC/WORC/resources/fastr_tools/worc/bin/PlotROC.py\"\
+    , line 69, in <module>\n    main()\n  File \"/home/martijn/git/WORC/WORC/resources/fastr_tools/worc/bin/PlotROC.py\"\
+    , line 65, in main\n    PRC_csv=args.PRC_csv)\n  File \"/home/martijn/Documents/WORC3/lib/python3.7/site-packages/WORC/plotting/plot_ROC.py\"\
+    , line 614, in plot_ROC\n    N_1 = len(prediction[label_type].Y_train[0])\n  File\
+    \ \"/home/martijn/Documents/WORC3/lib/python3.7/site-packages/pandas/core/frame.py\"\
+    , line 2927, in __getitem__\n    indexer = self.columns.get_loc(key)\n  File \"\
+    /home/martijn/Documents/WORC3/lib/python3.7/site-packages/pandas/core/indexes/base.py\"\
+    , line 2659, in get_loc\n    return self._engine.get_loc(self._maybe_cast_indexer(key))\n\
+    \  File \"pandas/_libs/index.pyx\", line 108, in pandas._libs.index.IndexEngine.get_loc\n\
+    \  File \"pandas/_libs/index.pyx\", line 132, in pandas._libs.index.IndexEngine.get_loc\n\
+    \  File \"pandas/_libs/hashtable_class_helper.pxi\", line 1601, in pandas._libs.hashtable.PyObjectHashTable.get_item\n\
+    \  File \"pandas/_libs/hashtable_class_helper.pxi\", line 1608, in pandas._libs.hashtable.PyObjectHashTable.get_item\n\
+    KeyError: 'imaginary_label_1, complement_label_1'\n"
+  - /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py
+  - 111
+  - "File /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 187 in <module>\n  main()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 182 in main\n  execute_job(joblist)\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 111 in execute_job\n  job.errors.append(exceptions.FastrErrorInSubprocess(job.info_store['process']['stderr']).excerpt())"
+- - FastrValueError
+  - Output values are not valid!
+  - /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py
+  - 827
+  - "File /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 187 in <module>\n  main()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 182 in main\n  execute_job(joblist)\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 89 in execute_job\n  job.execute()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 827 in execute\n  raise exceptions.FastrValueError('Output values are not\
+    \ valid!')"
+input_hash:
+  prediction:
+  - 85b941e7b3082a121b586dd4f019d91b
+  pinfo:
+  - a80cf11c590b2f185ec62ad505bc0608
+  ensemble:
+  - c4ca4238a0b923820dcc509a6f75849b
+  label_type:
+  - 99ae9002827e7b4a4ec123870fa77fe1
+output_hash: {}
+status_list:
+- timestamp: '2021-05-31T09:30:54.348866'
+  status: created
+- timestamp: '2021-05-31T09:30:54.479072'
+  status: hold
+- timestamp: '2021-05-31T09:37:07.543371'
+  status: queued
+- timestamp: '2021-05-31T09:37:08.900319'
+  status: running
+- timestamp: '2021-05-31T09:37:12.949589'
+  status: execution_failed
+output_data:
+  ROC_png:
+  - id: PNGFile
+    format: null
+    value: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_ROC/all/ROC_png_0.png
+  ROC_tex:
+  - id: TexFile
+    format: null
+    value: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_ROC/all/ROC_tex_0.tex
+  ROC_csv:
+  - id: CSVFile
+    format: null
+    value: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_ROC/all/ROC_csv_0.csv
+  PRC_png:
+  - id: PNGFile
+    format: null
+    value: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_ROC/all/PRC_png_0.png
+  PRC_tex:
+  - id: TexFile
+    format: null
+    value: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_ROC/all/PRC_tex_0.tex
+  PRC_csv:
+  - id: CSVFile
+    format: null
+    value: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_ROC/all/PRC_csv_0.csv
+input_arguments:
+  prediction:
+    index:
+    - 0
+    id:
+    - all
+    data:
+    - SampleValue
+    - 0:
+      - id: Deferred
+        format: null
+        value: val://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/classify/all/__fastr_result__.yaml?outputname=classification&nr=0
+    jobs:
+    - WORC_Example_STWStrategyHN_Multiclass___classify___all
+    failed_annotations: []
+  pinfo:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: PatientInfoFile
+        format: null
+        value: /home/martijn/git/WORCTutorial/Data/Examplefiles/pinfo_HN.csv
+    jobs: []
+    failed_annotations: []
+  ensemble:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format: null
+        value: '1'
+    jobs: []
+    failed_annotations: []
+  label_type:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format: null
+        value: imaginary_label_1, complement_label_1
+    jobs: []
+    failed_annotations: []
+output_arguments:
+  ROC_png:
+    id: ROC_png
+    cardinality: 1
+    datatype: PNGFile
+    requested: true
+  ROC_tex:
+    id: ROC_tex
+    cardinality: 1
+    datatype: TexFile
+    requested: true
+  ROC_csv:
+    id: ROC_csv
+    cardinality: 1
+    datatype: CSVFile
+    requested: true
+  PRC_png:
+    id: PRC_png
+    cardinality: 1
+    datatype: PNGFile
+    requested: true
+  PRC_tex:
+    id: PRC_tex
+    cardinality: 1
+    datatype: TexFile
+    requested: true
+  PRC_csv:
+    id: PRC_csv
+    cardinality: 1
+    datatype: CSVFile
+    requested: true
+__class__: fastr.execution.job.Job
+__fastr_version__: 3.2.3_tags/3.2.3^0_2ed88fe2

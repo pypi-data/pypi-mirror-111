@@ -1,0 +1,1 @@
+{"prefix": {"fastr": "http://localhost/fastr/", "tool": "http://localhost/tool/", "node": "http://localhost/node/", "job": "http://localhost/job/", "data": "http://localhost/data/", "worker": "http://localhost/worker/", "network": "http://localhost/network/", "fastrinfo": "http://localhost/fastrinfo/"}, "agent": {"fastr:3.2.3": {}}}

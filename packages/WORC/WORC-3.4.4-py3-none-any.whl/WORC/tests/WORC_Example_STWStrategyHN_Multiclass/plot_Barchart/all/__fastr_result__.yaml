@@ -1,0 +1,187 @@
+network_id: WORC_Example_STWStrategyHN_Multiclass
+network_version: '0.0'
+run_id: WORC_Example_STWStrategyHN_Multiclass_2021-05-31T11-30-50
+node_id: plot_Barchart
+node_global_id: fastr:///networks/WORC_Example_STWStrategyHN_Multiclass/0.0/runs/WORC_Example_STWStrategyHN_Multiclass_2021-05-31T11-30-50/nodelist/plot_Barchart
+tool_id: worc/PlotBarchart:1.0
+tool_version: '1.0'
+sample_id:
+- all
+sample_index:
+- 0
+fastr_version: 3.2.3_tags/3.2.3^0_2ed88fe2
+network_tmpurl: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass
+hold_jobs:
+- WORC_Example_STWStrategyHN_Multiclass___classify___all
+timestamp: '2021-05-31T09:30:54.366760'
+preferred_types:
+  output_png:
+  - NiftiImageFileCompressed
+  output_tex:
+  - NiftiImageFileCompressed
+errors:
+- - FastrOutputValidationError
+  - Output value [PNGFile] "vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Barchart/all/output_png_0.png"
+    not valid for datatype "'PNGFile'"
+  - /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py
+  - 1148
+  - "File /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 187 in <module>\n  main()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 182 in main\n  execute_job(joblist)\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 89 in execute_job\n  job.execute()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 826 in execute\n  if not self.validate_results(payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1094 in validate_results\n  if not self._validate_result(output, output_value,\
+    \ payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1148 in _validate_result\n  self.errors.append(exceptions.FastrOutputValidationError(message).excerpt())"
+- - FastrOutputValidationError
+  - The output "output_png" is invalid!
+  - /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py
+  - 1096
+  - "File /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 187 in <module>\n  main()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 182 in main\n  execute_job(joblist)\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 89 in execute_job\n  job.execute()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 826 in execute\n  if not self.validate_results(payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1096 in validate_results\n  self.errors.append(exceptions.FastrOutputValidationError(message).excerpt())"
+- - FastrOutputValidationError
+  - Output value [TexFile] "vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Barchart/all/output_tex_0.tex"
+    not valid for datatype "'TexFile'"
+  - /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py
+  - 1148
+  - "File /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 187 in <module>\n  main()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 182 in main\n  execute_job(joblist)\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 89 in execute_job\n  job.execute()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 826 in execute\n  if not self.validate_results(payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1094 in validate_results\n  if not self._validate_result(output, output_value,\
+    \ payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1148 in _validate_result\n  self.errors.append(exceptions.FastrOutputValidationError(message).excerpt())"
+- - FastrOutputValidationError
+  - The output "output_tex" is invalid!
+  - /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py
+  - 1096
+  - "File /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 187 in <module>\n  main()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 182 in main\n  execute_job(joblist)\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 89 in execute_job\n  job.execute()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 826 in execute\n  if not self.validate_results(payload):\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 1096 in validate_results\n  self.errors.append(exceptions.FastrOutputValidationError(message).excerpt())"
+- - FastrErrorInSubprocess
+  - "Traceback (most recent call last):\n  File \"/home/martijn/Documents/WORC3/lib/python3.7/site-packages/pandas/core/indexes/base.py\"\
+    , line 2657, in get_loc\n    return self._engine.get_loc(key)\n  File \"pandas/_libs/index.pyx\"\
+    , line 108, in pandas._libs.index.IndexEngine.get_loc\n  File \"pandas/_libs/index.pyx\"\
+    , line 132, in pandas._libs.index.IndexEngine.get_loc\n  File \"pandas/_libs/hashtable_class_helper.pxi\"\
+    , line 1601, in pandas._libs.hashtable.PyObjectHashTable.get_item\n  File \"pandas/_libs/hashtable_class_helper.pxi\"\
+    , line 1608, in pandas._libs.hashtable.PyObjectHashTable.get_item\nKeyError: 'imaginary_label_1,\
+    \ complement_label_1'\n\nDuring handling of the above exception, another exception\
+    \ occurred:\n\nTraceback (most recent call last):\n  File \"/home/martijn/git/WORC/WORC/resources/fastr_tools/worc/bin/PlotBarchart.py\"\
+    , line 67, in <module>\n    main()\n  File \"/home/martijn/git/WORC/WORC/resources/fastr_tools/worc/bin/PlotBarchart.py\"\
+    , line 63, in main\n    output_png=args.output_png)\n  File \"/home/martijn/Documents/WORC3/lib/python3.7/site-packages/WORC/plotting/plot_barchart.py\"\
+    , line 70, in plot_barchart\n    prediction = prediction[label_type]\n  File \"\
+    /home/martijn/Documents/WORC3/lib/python3.7/site-packages/pandas/core/frame.py\"\
+    , line 2927, in __getitem__\n    indexer = self.columns.get_loc(key)\n  File \"\
+    /home/martijn/Documents/WORC3/lib/python3.7/site-packages/pandas/core/indexes/base.py\"\
+    , line 2659, in get_loc\n    return self._engine.get_loc(self._maybe_cast_indexer(key))\n\
+    \  File \"pandas/_libs/index.pyx\", line 108, in pandas._libs.index.IndexEngine.get_loc\n\
+    \  File \"pandas/_libs/index.pyx\", line 132, in pandas._libs.index.IndexEngine.get_loc\n\
+    \  File \"pandas/_libs/hashtable_class_helper.pxi\", line 1601, in pandas._libs.hashtable.PyObjectHashTable.get_item\n\
+    \  File \"pandas/_libs/hashtable_class_helper.pxi\", line 1608, in pandas._libs.hashtable.PyObjectHashTable.get_item\n\
+    KeyError: 'imaginary_label_1, complement_label_1'\n"
+  - /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py
+  - 111
+  - "File /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 187 in <module>\n  main()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 182 in main\n  execute_job(joblist)\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 111 in execute_job\n  job.errors.append(exceptions.FastrErrorInSubprocess(job.info_store['process']['stderr']).excerpt())"
+- - FastrValueError
+  - Output values are not valid!
+  - /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py
+  - 827
+  - "File /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 187 in <module>\n  main()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 182 in main\n  execute_job(joblist)\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 89 in execute_job\n  job.execute()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/job.py,\
+    \ line 827 in execute\n  raise exceptions.FastrValueError('Output values are not\
+    \ valid!')"
+input_hash:
+  prediction:
+  - 85b941e7b3082a121b586dd4f019d91b
+  estimators:
+  - c4ca4238a0b923820dcc509a6f75849b
+  label_type:
+  - 99ae9002827e7b4a4ec123870fa77fe1
+output_hash: {}
+status_list:
+- timestamp: '2021-05-31T09:30:54.366773'
+  status: created
+- timestamp: '2021-05-31T09:30:54.502112'
+  status: hold
+- timestamp: '2021-05-31T09:37:07.579949'
+  status: queued
+- timestamp: '2021-05-31T09:37:15.186250'
+  status: running
+- timestamp: '2021-05-31T09:37:19.322057'
+  status: execution_failed
+output_data:
+  output_png:
+  - id: PNGFile
+    format: null
+    value: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Barchart/all/output_png_0.png
+  output_tex:
+  - id: TexFile
+    format: null
+    value: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Barchart/all/output_tex_0.tex
+input_arguments:
+  prediction:
+    index:
+    - 0
+    id:
+    - all
+    data:
+    - SampleValue
+    - 0:
+      - id: Deferred
+        format: null
+        value: val://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/classify/all/__fastr_result__.yaml?outputname=classification&nr=0
+    jobs:
+    - WORC_Example_STWStrategyHN_Multiclass___classify___all
+    failed_annotations: []
+  estimators:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format: null
+        value: '1'
+    jobs: []
+    failed_annotations: []
+  label_type:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format: null
+        value: imaginary_label_1, complement_label_1
+    jobs: []
+    failed_annotations: []
+output_arguments:
+  output_png:
+    id: output_png
+    cardinality: 1
+    datatype: PNGFile
+    requested: true
+  output_tex:
+    id: output_tex
+    cardinality: 1
+    datatype: TexFile
+    requested: true
+__class__: fastr.execution.job.Job
+__fastr_version__: 3.2.3_tags/3.2.3^0_2ed88fe2

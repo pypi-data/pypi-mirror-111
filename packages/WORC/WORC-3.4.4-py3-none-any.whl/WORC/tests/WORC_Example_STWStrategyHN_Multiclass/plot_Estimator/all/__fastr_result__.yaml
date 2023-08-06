@@ -1,0 +1,123 @@
+network_id: WORC_Example_STWStrategyHN_Multiclass
+network_version: '0.0'
+run_id: WORC_Example_STWStrategyHN_Multiclass_2021-05-31T11-30-50
+node_id: plot_Estimator
+node_global_id: fastr:///networks/WORC_Example_STWStrategyHN_Multiclass/0.0/runs/WORC_Example_STWStrategyHN_Multiclass_2021-05-31T11-30-50/nodelist/plot_Estimator
+tool_id: worc/PlotEstimator:1.0
+tool_version: '1.0'
+sample_id:
+- all
+sample_index:
+- 0
+fastr_version: 3.2.3_tags/3.2.3^0_2ed88fe2
+network_tmpurl: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass
+hold_jobs:
+- WORC_Example_STWStrategyHN_Multiclass___classify___all
+timestamp: '2021-05-31T09:30:54.344318'
+preferred_types:
+  output_json:
+  - NiftiImageFileCompressed
+errors:
+- - FastrErrorInSubprocess
+  - "Traceback (most recent call last):\n  File \"/home/martijn/git/WORC/WORC/resources/fastr_tools/worc/bin/PlotEstimator.py\"\
+    , line 72, in <module>\n    main()\n  File \"/home/martijn/git/WORC/WORC/resources/fastr_tools/worc/bin/PlotEstimator.py\"\
+    , line 65, in main\n    output='stats')\n  File \"/home/martijn/Documents/WORC3/lib/python3.7/site-packages/WORC/plotting/plot_estimator_performance.py\"\
+    , line 240, in plot_estimator_performance\n    label_data = lp.load_labels(label_data,\
+    \ label_type)\n  File \"/home/martijn/Documents/WORC3/lib/python3.7/site-packages/WORC/processing/label_processing.py\"\
+    , line 65, in load_labels\n    raise ae.WORCValueError('Could not find label:\
+    \ ' + str(i_label))\nWORC.addexceptions.WORCValueError: Could not find label:\
+    \ imaginary_label_1, complement_label_1\n"
+  - /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py
+  - 111
+  - "File /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 187 in <module>\n  main()\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 182 in main\n  execute_job(joblist)\nFile /home/martijn/Documents/WORC3/lib/python3.7/site-packages/fastr/execution/executionscript.py,\
+    \ line 111 in execute_job\n  job.errors.append(exceptions.FastrErrorInSubprocess(job.info_store['process']['stderr']).excerpt())"
+input_hash:
+  prediction:
+  - 85b941e7b3082a121b586dd4f019d91b
+  pinfo:
+  - a80cf11c590b2f185ec62ad505bc0608
+  ensemble:
+  - c4ca4238a0b923820dcc509a6f75849b
+  label_type:
+  - 99ae9002827e7b4a4ec123870fa77fe1
+output_hash: {}
+status_list:
+- timestamp: '2021-05-31T09:30:54.344328'
+  status: created
+- timestamp: '2021-05-31T09:30:54.470368'
+  status: hold
+- timestamp: '2021-05-31T09:37:07.535227'
+  status: queued
+- timestamp: '2021-05-31T09:37:08.983817'
+  status: running
+- timestamp: '2021-05-31T09:37:12.983004'
+  status: execution_failed
+output_data:
+  output_json:
+  - id: JsonFile
+    format: null
+    value: vfs://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/plot_Estimator/all/output_json_0.json
+input_arguments:
+  prediction:
+    index:
+    - 0
+    id:
+    - all
+    data:
+    - SampleValue
+    - 0:
+      - id: Deferred
+        format: null
+        value: val://home/git/WORC/WORC/tests/WORC_Example_STWStrategyHN_Multiclass/classify/all/__fastr_result__.yaml?outputname=classification&nr=0
+    jobs:
+    - WORC_Example_STWStrategyHN_Multiclass___classify___all
+    failed_annotations: []
+  pinfo:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: PatientInfoFile
+        format: null
+        value: /home/martijn/git/WORCTutorial/Data/Examplefiles/pinfo_HN.csv
+    jobs: []
+    failed_annotations: []
+  ensemble:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format: null
+        value: '1'
+    jobs: []
+    failed_annotations: []
+  label_type:
+    index:
+    - 0
+    id:
+    - id_0
+    data:
+    - SampleValue
+    - 0:
+      - id: String
+        format: null
+        value: imaginary_label_1, complement_label_1
+    jobs: []
+    failed_annotations: []
+output_arguments:
+  output_json:
+    id: output_json
+    cardinality: 1
+    datatype: JsonFile
+    requested: true
+__class__: fastr.execution.job.Job
+__fastr_version__: 3.2.3_tags/3.2.3^0_2ed88fe2
