@@ -1,0 +1,9 @@
+LICENSE
+README.md
+bwpass.py
+setup.py
+bundlewrap_pass.egg-info/PKG-INFO
+bundlewrap_pass.egg-info/SOURCES.txt
+bundlewrap_pass.egg-info/dependency_links.txt
+bundlewrap_pass.egg-info/requires.txt
+bundlewrap_pass.egg-info/top_level.txt
