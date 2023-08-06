@@ -1,0 +1,12 @@
+trysail/__init__.py,sha256=A-DhQymrON7bSVFjL6EZrC53iHoDlLJn3TgEnVRpqwI,59
+trysail/_version.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+trysail/speaker_dialogue_shortcuts.json,sha256=mORcXk5KtCnnfK43kLZLBhBooh4hXBtFJXsHv0CoZd8,2147
+trysail/speaker_name_shortcuts.json,sha256=sGjPTRbEX8LoaNNDf6zYtgccfkM6ry-twnC4X2NzpIk,90
+trysail/template_default.ass,sha256=HfRGHl5-WZh84rp9HYaQBUOvtUHyHc3GsATB494hYBc,1435
+trysail/template_vertical.ass,sha256=ErIc2qewo32obNZr9YJ1QtwZIyQSyolN_7M7ebjClp4,1340
+trysail/trysail.py,sha256=hQWdF5SEdZnsAqftR7xP_HLmQuvenaajSFaTF90ShwM,10695
+trysail-0.0.1.dist-info/METADATA,sha256=xvM5wLb-IU_gFiZ4OWq8yI9_oesHbPzdoRJJ-msOv04,896
+trysail-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+trysail-0.0.1.dist-info/entry_points.txt,sha256=f0oilpZlj7qi65_BvpzyFGet_biK0wsRdjWe9UNOUYY,42
+trysail-0.0.1.dist-info/top_level.txt,sha256=4NOoUu52BbKEc6pUQ4UjevGt7-F9MEjA3uQyHg3UeWs,8
+trysail-0.0.1.dist-info/RECORD,,

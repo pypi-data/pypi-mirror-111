@@ -1,0 +1,69 @@
+{
+    "radio_bridge": [
+        "m/我是mocho",
+        "s/我是sora",
+        "n/我是nansu",
+        "n/你正在收听的广播是",
+        "w/TrySailのTRYangle harmony"
+    ],
+    "radio_bridge_short": [
+        "m/Try",
+        "s/With",
+        "n/Us",
+        "w/TrySailのTRYangle harmony"
+    ],
+    "radio_intro": [
+        "w/TrySailのTRYangle harmony",
+        "m/大家晚上好，我是麻仓桃",
+        "s/我是雨宫天",
+        "n/我是夏川椎菜",
+        "w/这个节目是我们TrySail无论何时都竭尽全力\\N用我们的声音来撩动大家的心弦的广播节目",
+        "w/今天有心动话题的是？"
+    ],
+    "aftertalk_intro": [
+        "m/mocho",
+        "s/sora",
+        "n/nansu",
+        "w/After Talk~"
+    ],
+    "talking_box_intro": [
+        "链接吧，Talking Box~",
+        "这个环节是回答上期Talking Box留下的信息",
+        "然后给下一期担当留下信息的链接环节"
+    ],
+    "talking_box_end": [
+        "那么能听到什么请期待下周的放送吧",
+        "以上是链接吧，Talking Box的环节"
+    ],
+    "mochoq_long": [
+        "m/首先是大脑体操一二三",
+        "s/(°▽,°)mo",
+        "n/(°▽,°)mo",
+        "s/(°▽,°)cho",
+        "n/(°▽,°)cho",
+        "s/(°▽,°)Q",
+        "n/(°▽,°)Q"
+    ],
+    "mochoq_short": [
+        "s/(°▽,°)mochoQ",
+        "n/(°▽,°)mochoQ"
+    ],
+    "mochoq_des": [
+        "s/一直都脑回路清奇的mocho的思考模式",
+        "n/这是为了将这样的mocho主义发扬光大",
+        "n/大家通过想象的场景出题的和平的环节"
+    ],
+    "mochoq_end": [
+        "m/今天的mochoQ到此为止~",
+        "m/这个环节正在征集大家觉得可以提现mocho主义的问题",
+        "m/mocho一直都是mocho哟",
+        "m/以上是mochoQ的环节~"
+    ],
+    "culturez_intro": [
+        "n/文化放送·夏川椎菜的CultureZ"
+    ],
+    "culturez_intro_full": [
+        "n/レコメン的オテンキのり桑，櫻坂46菅井友香桑，辛苦了",
+        "n/夏川椎菜在东京浜松町为大家直播的周一CultureZ"
+    ]
+}
