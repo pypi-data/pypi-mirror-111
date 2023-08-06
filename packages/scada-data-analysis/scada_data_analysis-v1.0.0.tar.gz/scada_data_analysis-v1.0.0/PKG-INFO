@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: scada_data_analysis
+Version: v1.0.0
+Summary: This version features a power curve filtering                   module that takes in raw SCADA data from multiple wind turbines                   and returns two subsets of the original dataset namely the normal                   and abnormal operations data
+Home-page: https://github.com/abbey2017/wind-energy-analytics
+Author: Abiodun Olaoye
+Author-email: abiodunolaoye8@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/abbey2017/wind-energy-analytics/releases/tag/v1.0.0
+Description: UNKNOWN
+Keywords: scada-data-filtering,wind-energy
+Platform: UNKNOWN
