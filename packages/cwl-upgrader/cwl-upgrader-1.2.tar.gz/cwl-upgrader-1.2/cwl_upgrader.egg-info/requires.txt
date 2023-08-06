@@ -1,0 +1,4 @@
+setuptools
+ruamel.yaml<0.17.11,>=0.14.12
+typing
+schema_salad
