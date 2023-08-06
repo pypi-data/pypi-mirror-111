@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ex_dataclass
+Version: 1.0.2
+Summary: A more powerful data model management than DataClass that reduces maintenance costs and improves coding efficiency.
+Home-page: https://github.com/Shadow-linux/ex_dataclass
+Author: ShadowYD
+Author-email: 972367265@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
+License-File: LICENSE
+
+# ex_dataclass
+ex_dataclass is a more powerful than dataclass implement.
+
+
