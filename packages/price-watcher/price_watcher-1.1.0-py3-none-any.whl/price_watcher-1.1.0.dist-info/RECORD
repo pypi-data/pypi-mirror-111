@@ -1,0 +1,12 @@
+price_watcher/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+price_watcher/__main__.py,sha256=7of_Jawmo0dISSeycVRJaVJ5LVOakwKTDLo9cGFCWIo,73
+price_watcher/amazon.py,sha256=UCnbx6Q835MXD1VuP8rkc6RwQ16sDeeEn5FvaLulE30,1725
+price_watcher/cli.py,sha256=WSfl9vgct8MPwf4y-nMcfpznnOCSL6PDfVqlPe_FXto,2107
+price_watcher/notifications.py,sha256=XuQqSWZzf4O-aL-byH1OSqy2DhXbwtAjEtHSP8F6yME,567
+price_watcher/thistle_and_spire.py,sha256=B27hZAtjGwzk4IyT_By6IzwAIfyXu47XpO-LWWAtt84,991
+price_watcher-1.1.0.dist-info/LICENSE,sha256=DVQuDIgE45qn836wDaWnYhSdxoLXgpRRKH4RuTjpRZQ,10174
+price_watcher-1.1.0.dist-info/METADATA,sha256=0u-4yDkt1EHXnBC-ki7iCGMc3xxLRv-e8eI03ZXAQpw,2363
+price_watcher-1.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+price_watcher-1.1.0.dist-info/entry_points.txt,sha256=mVhwwmoK0uFxYI0Fea_sAdjJ9xNFFdKrwwu6HFcvwqA,62
+price_watcher-1.1.0.dist-info/top_level.txt,sha256=7fMFYDhdqCB2SmMPthX9AFOMNzAQdx-WAPg6h-C8gpg,14
+price_watcher-1.1.0.dist-info/RECORD,,
