@@ -1,0 +1,10 @@
+setup.py
+sahil4129distri/Binomialdistribution.py
+sahil4129distri/Gaussiandistribution.py
+sahil4129distri/Generaldistribution.py
+sahil4129distri/__init__.py
+sahil4129distri.egg-info/PKG-INFO
+sahil4129distri.egg-info/SOURCES.txt
+sahil4129distri.egg-info/dependency_links.txt
+sahil4129distri.egg-info/not-zip-safe
+sahil4129distri.egg-info/top_level.txt
