@@ -1,0 +1,12 @@
+lightningaddon/__init__.py,sha256=42dI9Att98EcjKCNY0Q3k-mu7QbmjoFzQxPmet3FEMQ,106
+lightningaddon/general.py,sha256=_8Jl-Rxiz3Gz7AdVp6PnKqItOcf2KCmjd6LF6WFpHa4,4340
+lightningaddon/layers.py,sha256=1So5g0hMVllmsREINx_hyS9kemfpRRZpq0rRKz1YZbo,2101
+lightningaddon/loss.py,sha256=3R4cG-2sB8zmRQIBGiXBrPN1gdGPCk83TtnPecNFp2s,3816
+lightningaddon/main.py,sha256=muw-MqRUxg4Pkq4hp57no_aV2LakdQm5Bzr-o151-sQ,4084
+lightningaddon/tests.py,sha256=6okeoCNnfylFS9r71hjPmh4q6QTlOUs5zo76NsyKHUo,491
+lightningaddon/models/__init__.py,sha256=zycN36UdLyqw9abfCp-PXIWhCYG5Kgh2AC0Oey1fo1E,95
+lightningaddon/models/xresnet.py,sha256=XmQGaDCSAVS0AOWNqZrR9e2bK23pwz1SiHsgLT4nZ9w,2824
+lightningaddon-0.0.2.dist-info/METADATA,sha256=DgM0sDSIzBqIhrhpcaZjneYFAtJselu0N2ZBy0GbNyc,1950
+lightningaddon-0.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+lightningaddon-0.0.2.dist-info/top_level.txt,sha256=izI3mBQiWVpR_SSYqozQKdYdVMVa27mwng--N3I9t7E,15
+lightningaddon-0.0.2.dist-info/RECORD,,
