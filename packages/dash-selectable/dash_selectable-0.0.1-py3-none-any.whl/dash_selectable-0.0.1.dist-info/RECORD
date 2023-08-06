@@ -1,0 +1,12 @@
+dash_selectable/DashSelectable.py,sha256=3H0K-QHCdbhq0tZiA4ZkfN5dvu9IvFFMGasIxAkduoQ,1472
+dash_selectable/__init__.py,sha256=TnahiMzAJTiQOLyJPjWSDIH4srb8WgsOF5nm1PIA6-s,1502
+dash_selectable/_imports_.py,sha256=raB-pWkOlFTj1ahh13mX4W1Nd5c_OtIyc5GsOY0Pzlc,78
+dash_selectable/dash_selectable.min.js,sha256=6dV7xV9S2DvSmrOd2AP0YXBLCyAULOcdFuBkr400RPM,3490
+dash_selectable/dash_selectable.min.js.map,sha256=nJ0vg1d2FPZ4im5RPsvbi-LFJc3tpQJXagOBzzkvu8Y,7711
+dash_selectable/metadata.json,sha256=OOJG2fTi0LAzJCXCCDmNSKcVwKPS5_tq5wKbcptxoLY,1030
+dash_selectable/package-info.json,sha256=SUv2l1_MmWkARNGivocF8jCmSJnTiB5pSMFs50n9na4,1720
+dash_selectable-0.0.1.dist-info/LICENSE,sha256=JO3MdnsnNTW_amcJxbPrKrvODNcpReABgkhMwIvfmx0,1603
+dash_selectable-0.0.1.dist-info/METADATA,sha256=sE7Jw65sosgauz78Thmflu4EJXhMitcpBJQ9fNzkc0w,322
+dash_selectable-0.0.1.dist-info/WHEEL,sha256=S6zePDbUAjzMmpYOg2cHDxuYFWw7WiOXt6ogM6hIB5Q,92
+dash_selectable-0.0.1.dist-info/top_level.txt,sha256=9hH1oi8dz9wR3XI-vd9TUwMiuZOa4CezHsZ27cxQqTw,16
+dash_selectable-0.0.1.dist-info/RECORD,,
