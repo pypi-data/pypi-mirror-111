@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+DuckMapper/__init__.py
+DuckMapper/main.py
+DuckMapper.egg-info/PKG-INFO
+DuckMapper.egg-info/SOURCES.txt
+DuckMapper.egg-info/dependency_links.txt
+DuckMapper.egg-info/top_level.txt
