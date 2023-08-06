@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+manz1/src/manz1.egg-info/PKG-INFO
+manz1/src/manz1.egg-info/SOURCES.txt
+manz1/src/manz1.egg-info/dependency_links.txt
+manz1/src/manz1.egg-info/top_level.txt
+manz1/src/manz1.py
+manz1/src/manz1.egg-info/SOURCES.txt
