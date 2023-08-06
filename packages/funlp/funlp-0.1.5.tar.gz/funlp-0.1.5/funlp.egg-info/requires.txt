@@ -1,0 +1,7 @@
+click
+click_help_colors
+cython
+numpy
+jieba
+stopwds
+gensim>=3.5.0
