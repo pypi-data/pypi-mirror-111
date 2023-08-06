@@ -1,0 +1,11 @@
+game/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+game/main.py,sha256=cmttw6-pGcjg_q98GU6ED-I3t4d3gp-tK2IGf_DhDys,4221
+game/mechanics.py,sha256=ZliwhIx8qBjH2wvhe6Bjta101aMGmGiI4ILrm6jmz0Y,1866
+game/model.py,sha256=ZipMBxa2wOyOi8a_fhSRZoaThlk6TXxQUCySQPJXN9A,2319
+game/window.py,sha256=2ydmowJw5lUcvnTfG7fP20ES1H_iQOkqbM3kKRZ6Fok,4242
+PJWSTK_Tetris_game-0.9.92.dist-info/LICENSE.txt,sha256=Z6s_eAordznpkrfGm4k3oMbhK1cwZleoxHFbmMjBS20,1107
+PJWSTK_Tetris_game-0.9.92.dist-info/METADATA,sha256=AghZaC_547rl2w9cfnFfpYGtA1FXQVLM35t2rhqTZYU,915
+PJWSTK_Tetris_game-0.9.92.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+PJWSTK_Tetris_game-0.9.92.dist-info/entry_points.txt,sha256=2kEPwsDGQMX9fWAWF-_A0IjIUINMQPvE40PBHfqBZHE,43
+PJWSTK_Tetris_game-0.9.92.dist-info/top_level.txt,sha256=qwGyB-Va1sUTRvt4anB-6UfFjkcjtKjjyZE1wOdZ9-E,5
+PJWSTK_Tetris_game-0.9.92.dist-info/RECORD,,
