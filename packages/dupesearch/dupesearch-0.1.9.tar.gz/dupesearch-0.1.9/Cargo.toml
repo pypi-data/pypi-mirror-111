@@ -1,0 +1,19 @@
+[package]
+name = "dupesearch"
+description = "Duplicate file remover"
+version = "0.1.9"
+edition = "2018"
+authors = ["wookie184"]
+
+[lib]
+name = "dupesearch"
+crate-type = ["cdylib"]
+
+[dependencies]
+walkdir="2"
+md5="0.7"
+threadpool="1.8.1"
+
+[dependencies.pyo3]
+version = "0.13.2"
+features = ["extension-module"]
