@@ -1,0 +1,8 @@
+README.md
+setup.py
+wavelib.cc
+wavelib.egg-info/PKG-INFO
+wavelib.egg-info/SOURCES.txt
+wavelib.egg-info/dependency_links.txt
+wavelib.egg-info/requires.txt
+wavelib.egg-info/top_level.txt

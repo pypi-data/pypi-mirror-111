@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: wavelib
+Version: 1.0.2
+Summary: Signal processing utilities for Python/Numpy written in C++
+Home-page: https://github.com/bergkvist/python-wavelib
+Author: Tobias Bergkvist
+Author-email: tobias@bergkv.ist
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: C++
+Provides-Extra: test
