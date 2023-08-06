@@ -1,0 +1,7 @@
+numpy
+matplotlib
+pandas
+nltk
+wordcloud
+bs4
+myst-parser
