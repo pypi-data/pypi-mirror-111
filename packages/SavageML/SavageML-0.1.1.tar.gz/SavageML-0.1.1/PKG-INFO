@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: SavageML
+Version: 0.1.1
+Summary: A Personal Experimental Machine Learning Library
+Home-page: https://github.com/SavagePrograming/SavageML
+Author: William Savage
+Author-email: savage.programing@gmail.com
+License: MIT License
+Platform: UNKNOWN
+Requires-Python: >=3
+License-File: LICENSE
+
+UNKNOWN
+
