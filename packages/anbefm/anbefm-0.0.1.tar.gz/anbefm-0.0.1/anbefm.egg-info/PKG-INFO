@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: anbefm
+Version: 0.0.1
+Summary: 一个后端框架
+Home-page: https://gitee.com/liubei90/basic.git
+Author: liubei
+Author-email: 1021086660@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+<!--
+ * @Author: liubei
+ * @Date: 2021-04-08 17:21:53
+ * @LastEditTime: 2021-07-02 16:04:08
+ * @Description: 
+-->
+# anbefm
+
+一个后台框架
+
+- manage 应用管理
+- model 数据库连接
+- handle_payload 解析请求body
+- jwt 
+
+## 启动应用
+
+```
+python -m anbefm.manage startapp --port=9201 --app=client
+```
+
+
