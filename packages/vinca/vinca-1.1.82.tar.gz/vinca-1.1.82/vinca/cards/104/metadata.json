@@ -1,0 +1,21 @@
+{
+  "editor": "two_lines",
+  "reviewer": "two_lines",
+  "scheduler": "base",
+  "tags": [
+    "gen",
+    "green",
+    "green"
+  ],
+  "history": [
+    [
+      "2021-06-28",
+      6,
+      "create"
+    ]
+  ],
+  "deleted": false,
+  "due_date": "2021-06-28",
+  "siblings": [],
+  "string": "this will | not be necessary"
+}
