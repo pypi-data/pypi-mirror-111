@@ -1,0 +1,14 @@
+pytui/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytui/common.py,sha256=sbmNN-FiS91SRxYvSifoNeAQYIwACHF8oyaivT0SwCM,1457
+pytui/logging_tools.py,sha256=jxbDeO_D3FQaZG6gOeCR08JP8qNHPND6g1EM_JUO6ZU,2186
+pytui/plugin.py,sha256=fpfs3_hBupwzXr0gFUJXJnzfR4kDUHs85kE1vFeoSWk,4018
+pytui/runner.py,sha256=ZW0qJ9q_Fv3VAH0R1vKJ_yCwHSO-f_sP2MYCQ5xn3sA,9191
+pytui/settings.py,sha256=hadraXZ5I9OTnuV-BSw2o4aPF4PTddttytpXU1vWdjk,93
+pytui/test_pytest_django_fail.py,sha256=l8mc_L2MyJmzKmvUIQ1-yQx8wZy6xiKyJDscCxy-yeg,1521
+pytui/ui.py,sha256=EQ_9I638_y98fTRffcNoTAt1QFSWrrQPWj4R0IwPNMQ,25104
+pytest_ui-0.5.dist-info/LICENSE,sha256=fA1Fa5i5FSCWvDaTZ0zOkvHEkLmG_5x_OrYanEG9xFU,1063
+pytest_ui-0.5.dist-info/METADATA,sha256=lTQsNef4J22Mh5GtUROfFIKqFTrGXmiLAX7JD0t-mFs,2531
+pytest_ui-0.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pytest_ui-0.5.dist-info/entry_points.txt,sha256=e4QvZlQvFZ4DB5unbIcYRYcR2KdRCEi_5rw71az77XI,41
+pytest_ui-0.5.dist-info/top_level.txt,sha256=H721hSa8eNc4dL6abOKuolrVFiupa-U4ZKnu2d05jso,6
+pytest_ui-0.5.dist-info/RECORD,,
