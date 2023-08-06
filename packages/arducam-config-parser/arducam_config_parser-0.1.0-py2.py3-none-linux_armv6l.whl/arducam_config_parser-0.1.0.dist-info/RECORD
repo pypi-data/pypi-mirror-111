@@ -1,0 +1,7 @@
+arducam_config_parser/__init__.py,sha256=Xu6Fd41HGunOHvhFJA2NcIbBpNu0bDppY9lt3KeRIRk,76
+arducam_config_parser/arducam_config_parser.py,sha256=4FQELqNJbYF5kN7Euk22srP4e7NGo4BLQTg6UKXrS8w,3346
+arducam_config_parser/libarducam_config_parser.so,sha256=ifxHPOAEtbhwDdCdT3C9iyof5pVAimnI_7msicNm5OE,14292
+arducam_config_parser-0.1.0.dist-info/METADATA,sha256=57_oda8f16y9R5O9Snj1qXY_0BMJaZiRJIVhYYuCts8,863
+arducam_config_parser-0.1.0.dist-info/WHEEL,sha256=3LPA6ll5cqtCn8eTI1nwEIl1B-2spC52JttGpD63sMk,128
+arducam_config_parser-0.1.0.dist-info/top_level.txt,sha256=wAIx-t6PE1pDT78GI-tCvyMUV0muj5qtiNcIHTH1SO0,22
+arducam_config_parser-0.1.0.dist-info/RECORD,,
