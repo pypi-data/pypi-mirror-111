@@ -1,0 +1,10 @@
+bootstrapi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bootstrapi/conversion.py,sha256=3Ni7el2RJ4xvemgY5XAUWNUSrdCqv8ahlLwa5k7k7WM,1816
+bootstrapi/parser.py,sha256=HdRHzElaUF2CWl0LAMDlg0uavXUPRyDhGTxd4cLDv7I,4785
+bootstrapi/router.py,sha256=aLZeGZjJdV8XkmY_qqOD7_O73nXQyAi77i2xHCheVdI,4567
+bootstrapi/sqlalchemy.py,sha256=RqMqsJXAe79YL2HI0nWaIpLQVu2BUrDAbZGNaJenrqI,6149
+bootstrapi-0.1.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+bootstrapi-0.1.1.dist-info/METADATA,sha256=FYe364l8zzhbMdNOLdk3LExEqHAWUX_Ai0uZWgB1ufU,2306
+bootstrapi-0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+bootstrapi-0.1.1.dist-info/top_level.txt,sha256=zV_uk85bQmAptx4PF7Yy2qz7xUu-iHz-GPp30YZ6q7s,11
+bootstrapi-0.1.1.dist-info/RECORD,,
