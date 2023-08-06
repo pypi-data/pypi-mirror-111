@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/pymitblod.egg-info/PKG-INFO
+src/pymitblod.egg-info/SOURCES.txt
+src/pymitblod.egg-info/dependency_links.txt
+src/pymitblod.egg-info/top_level.txt
