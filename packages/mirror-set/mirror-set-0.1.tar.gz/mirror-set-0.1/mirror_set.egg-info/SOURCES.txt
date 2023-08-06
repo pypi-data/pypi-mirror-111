@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+mirror_set.egg-info/PKG-INFO
+mirror_set.egg-info/SOURCES.txt
+mirror_set.egg-info/dependency_links.txt
+mirror_set.egg-info/top_level.txt

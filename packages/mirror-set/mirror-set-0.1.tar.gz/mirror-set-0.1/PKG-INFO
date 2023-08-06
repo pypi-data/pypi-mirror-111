@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: mirror-set
+Version: 0.1
+Summary: A tool for quickly set mirror for apt/yum/pip/npm...
+Home-page: https://github.com/Colin-XKL/MSet
+Author: Colin
+Author-email: Colin_XKL@outlook.com
+Maintainer: Colin
+Maintainer-email: Colin_XKL@outlook.com
+License: MIT License
+Platform: all
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries
+License-File: LICENSE
+
+# MSet
+Quickly set mirrors for apt/yum/npm/pip/...
+
+- [ ] pypi
+- [ ] npm
+- [ ] flutter
+- [ ] docker
+
+
+- [ ] apt
+- [ ] yum
+
+- [ ] brew
+
+# cfc-cli
+- mset 
+- github proxy
+- microsoft speedup
+- apple speedup
+- cli proxy
+- scoop speedup
+- onekey install 
+
+## reference
+- https://github.com/zwc456baby/file-proxy
+
+
