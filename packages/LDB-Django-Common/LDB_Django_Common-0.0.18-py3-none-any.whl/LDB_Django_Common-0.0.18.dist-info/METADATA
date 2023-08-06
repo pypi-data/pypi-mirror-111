@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: LDB-Django-Common
+Version: 0.0.18
+Summary: Common utility functions and classes for django.
+Home-page: http://www.eldebe.org/ldb/django/common/
+Author: Alex Orange
+Author-email: alex@eldebe.org
+License: BSD
+Platform: UNKNOWN
+Requires-Dist: Django (>=1.9.1)
+
+UNKNOWN
+
+
