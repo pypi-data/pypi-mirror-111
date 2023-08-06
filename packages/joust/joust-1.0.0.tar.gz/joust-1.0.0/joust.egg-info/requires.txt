@@ -1,0 +1,10 @@
+aioredis
+backgammon
+jsonschema
+websockets
+
+[dev]
+hupper
+
+[dev-opt]
+watchdog
