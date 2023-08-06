@@ -1,0 +1,12 @@
+breathe>=4.30
+crcmod>=1.7
+iotile-core>=5.2
+jinja2>=3
+pygtrie>=2
+setuptools>=57
+sphinx>=4
+toposort>=1.6
+pycparser>=2.20
+pyparsing~=2.2.0
+scons>=4.1
+wheel>=0.33
