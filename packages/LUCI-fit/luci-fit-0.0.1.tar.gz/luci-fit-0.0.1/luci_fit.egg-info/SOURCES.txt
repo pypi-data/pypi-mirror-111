@@ -1,0 +1,14 @@
+README.md
+setup.py
+luci-fit/LuciBase.py
+luci-fit/LuciBayesian.py
+luci-fit/LuciErrors.py
+luci-fit/LuciFit.py
+luci-fit/LuciPlotting.py
+luci-fit/__init__.py
+luci_fit.egg-info/PKG-INFO
+luci_fit.egg-info/SOURCES.txt
+luci_fit.egg-info/dependency_links.txt
+luci_fit.egg-info/top_level.txt
+tests/__init__.py
+tests/test_fit.py

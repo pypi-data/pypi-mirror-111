@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: luci-fit
+Version: 0.0.1
+Summary: General Purpose Emission Line Fitting Package
+Home-page: UNKNOWN
+Author: Carter Rhea
+Author-email: carter.rhea@umontreal.ca
+License: UNKNOWN
+Description: General purpose emission line fitting package developed for the SITELLE IFU
+Keywords: python,luci-fit
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
