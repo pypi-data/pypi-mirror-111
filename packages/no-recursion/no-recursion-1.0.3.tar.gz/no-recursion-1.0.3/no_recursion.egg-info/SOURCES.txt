@@ -1,0 +1,8 @@
+README.md
+setup.py
+no_recursion/__init__.py
+no_recursion/no_recursion.py
+no_recursion.egg-info/PKG-INFO
+no_recursion.egg-info/SOURCES.txt
+no_recursion.egg-info/dependency_links.txt
+no_recursion.egg-info/top_level.txt
