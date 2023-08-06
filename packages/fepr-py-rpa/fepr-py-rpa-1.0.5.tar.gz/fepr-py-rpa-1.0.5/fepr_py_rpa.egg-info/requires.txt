@@ -1,0 +1,13 @@
+webdriver-manager
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+numpy
+pandas
+PyDrive2
+python-dotenv
+requests
+selenium
+beautifulsoup4
+lxml
+tweepy
