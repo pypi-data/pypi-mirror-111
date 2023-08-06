@@ -1,0 +1,3 @@
+[console_scripts]
+virelay = virelay.__main__:main
+
