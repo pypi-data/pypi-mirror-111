@@ -1,0 +1,17 @@
+ipython_odoo/__init__.py,sha256=P-QuVMM6gd5SI_1Yj1ZYBUEBinobZu0g6ys8vaxkPSU,93
+ipython_odoo/access.py,sha256=9rl8itdipNZUzC3FK9bD3Xompz7zrzDJfui4SxSg8fo,7258
+ipython_odoo/connect.py,sha256=4ysR3_cscYETj56_Ky3wg-vCgFNYE3llOhYVYvSLSGo,13489
+ipython_odoo/hierarchy.py,sha256=xJb3zmDl2PS6U_0XGZZZakUpARgp9bUpxZXUdmlaH9g,3736
+ipython_odoo/magic.py,sha256=B-cw16Ih4ev7wvRdL3a3AaXt5l_QuZnrL5wHfp322S8,1810
+ipython_odoo/main.py,sha256=d8TdOHc0Js0xA9-BkgVS9rRhUP3g4EcUeidMoRdgwRQ,798
+ipython_odoo/model_names.py,sha256=K0wfEy7ieNARwRoY5d1ST2mgZHLQFc2GkhTTIvq27jw,33109
+ipython_odoo/procurement_rules.py,sha256=-9uCzaTxkfECJ0DxXtuy90ZPh5WQIF6LCvAbJzcJPb4,6631
+ipython_odoo/ref.py,sha256=-L45grkpgnYKdMOslrwIlMUe-q0_5u1qjA5CfHlTdb0,796
+ipython_odoo/related_fields.py,sha256=MwMfHdVUKmXT2NnoceezR2oeQvHUeJXzhRxZSdmxYfw,1087
+ipython_odoo/tables.py,sha256=kQGYo4dLzB85_S3AoWnvhVWefBqKttYfH4E9poOz3-4,3616
+ipython_odoo/tracer.py,sha256=aZGFTyvh59NLzM8ut--db2SY0yggYb9vYOah04wzl9g,5077
+ipython_odoo-0.3.3.dist-info/LICENSE,sha256=Lx2GWbz100x04KYMtqAd4k56Tqds-9CZtdCnJmdRv4M,1071
+ipython_odoo-0.3.3.dist-info/METADATA,sha256=t7WCOlBGaNmQJ0c0TmZ-8sueippTMtYwTa3J3556nWE,421
+ipython_odoo-0.3.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ipython_odoo-0.3.3.dist-info/top_level.txt,sha256=pcvJiK0m0bgKM5X33VLh1Jbc8NRmej0PwawxwjGj8OA,13
+ipython_odoo-0.3.3.dist-info/RECORD,,
