@@ -1,0 +1,10 @@
+setup.py
+princedctest/Binomialdistribution.py
+princedctest/Gaussiandistribution.py
+princedctest/Generaldistribution.py
+princedctest/__init__.py
+princedctest.egg-info/PKG-INFO
+princedctest.egg-info/SOURCES.txt
+princedctest.egg-info/dependency_links.txt
+princedctest.egg-info/not-zip-safe
+princedctest.egg-info/top_level.txt
