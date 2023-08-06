@@ -1,0 +1,12 @@
+IIFLapis/IIFLapis.py,sha256=cfB_mtOaeGTiAt7sbbiI970c0V-l4hZk9oxgs0xTwT0,42550
+IIFLapis/__init__.py,sha256=W7WnRmR6-d4m6m4pm01ksXi-Un_VGZmW10YMfs2Vlx8,67
+IIFLapis/auth.py,sha256=YeuQyXaYb_fW0hjgwI3Q_rQ_q7mItcgnjgJG6g6_6SU,831
+IIFLapis/conf.py,sha256=pbDZEqGMQHpQ9TWQe0yAdSj652y5pxDS_c_P8Mi50pQ,551
+IIFLapis/const.py,sha256=CXStapzxLW1hfN5fi23n9yAR4weVFT_esYY5KZltKP8,2341
+IIFLapis/logging.py,sha256=C-nOw0IAfYlOZi-s28bVNwlWRxnKUC-SOcysePRIdPc,318
+IIFLapis/order.py,sha256=zmtq1F6DCyaD6CgMNpkWMBcRZzP6Cqi2Ez2JQzGg4EU,2191
+IIFLapis-2.1.1.dist-info/AUTHORS.rst,sha256=W0yqo2nXFjpGAbmnn0USpJx3LqbBj_xzJTRqEl3spDA,168
+IIFLapis-2.1.1.dist-info/METADATA,sha256=LKjkAViFqBie604oBYStPIhOPDzw7dsDYgi7QhV31xM,9557
+IIFLapis-2.1.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+IIFLapis-2.1.1.dist-info/top_level.txt,sha256=Ydnm6Hl2MEQf4IvxpHmxSphguqgW-sd-qilZyaI3cPA,9
+IIFLapis-2.1.1.dist-info/RECORD,,
