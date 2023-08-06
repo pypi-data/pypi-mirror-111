@@ -1,0 +1,17 @@
+pygadget/__init__.py,sha256=ROjrqvLoHG2P8phz2An27vDlS38K58_ZaxO1lhlSCqs,421
+pygadget/comp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pygadget/comp/bit.py,sha256=HAo9m_VBNaxISYrp0pQXrpUwuDrdyupEGf195g7XbQg,1936
+pygadget/comp/boyorgirl.py,sha256=AEHsCKvKQl-MuvDoZg3F1QdH6n1XHF5ZbXavm1w3vn8,1907
+pygadget/comp/playoff.py,sha256=nQrjM-BBS_llLV7YUC9s6LbVFOSY7IbSYQieDnZtR5s,1805
+pygadget/comp/toolongstrings.py,sha256=-yPJNgx9ldYaT-9np3FWd3dqsJNwfxuJfRL-Lh1DLLw,1860
+pygadget/ext/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pygadget/ext/ceidg.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_unit_comp.py,sha256=Rzas973itVb-_03dE-v9e-kNtztN3A7u754Qm78_XWg,307
+tests/test_unit_ext.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pygadgets-0.0.1.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+pygadgets-0.0.1.dist-info/METADATA,sha256=Cy_3aI-L31GctX5uqKoMWOiYCryvFmzD2JS23reNg5s,457
+pygadgets-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pygadgets-0.0.1.dist-info/top_level.txt,sha256=IZtdPYDXpx4-IygUGnUjyOLqVJuHAWdtKUKFzqWpSE8,15
+pygadgets-0.0.1.dist-info/RECORD,,
