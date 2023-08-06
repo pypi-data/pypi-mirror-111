@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+ghclone/__init__.py
+ghclone/__main__.py
+github_clone.egg-info/PKG-INFO
+github_clone.egg-info/SOURCES.txt
+github_clone.egg-info/dependency_links.txt
+github_clone.egg-info/entry_points.txt
+github_clone.egg-info/requires.txt
+github_clone.egg-info/top_level.txt
