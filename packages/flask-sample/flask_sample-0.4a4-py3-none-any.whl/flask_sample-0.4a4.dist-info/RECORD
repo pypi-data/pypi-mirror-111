@@ -1,0 +1,14 @@
+flask_sample/__init__.py,sha256=tny9ovtzxEaU-F5M38ZO6AvJFVIlNQLH2g_K8cezUZE,48
+flask_sample/__main__.py,sha256=HXj_M0dHxY9-tjTEJOoLiBH3QN5zkxaDRGEtQJtGlhw,367
+flask_sample/app.py,sha256=yrJb3MIslQA93RVwz0vPmnr4NBFFANGStFitTKjPYvE,427
+flask_sample/wsgi.py,sha256=xd1ucjT3eyNpetfpIes2fn4k2dAJJZMBrFPChMvSQPw,158
+flask_sample/static/bootstrap/4.4.1/css/bootstrap.css,sha256=A47OwxL_nAN0ydiDFTSGX7ftbfTJTKgiJ0zqCuTPDh4,197170
+flask_sample/static/bootstrap/4.4.1/js/bootstrap.js,sha256=66f6uQTQkvHF8jpniLWJjnteEfmQaC_tATFew_nTBA8,135079
+flask_sample/static/custom/1.0/style.css,sha256=LlRTchvMvv8r-nJJ4VfHxKfAbwGYoChtOPBo6na99W4,29
+flask_sample/templates/index.html,sha256=ws3a-NP23UMd5nRy4ryuW0aScnZsXQO6s5Ag7uGZg5A,767
+flask_sample-0.4a4.dist-info/LICENSE,sha256=il_pZPq441I_vmqnVqxMIykmY13bqBHDhimdEAR6dUE,1066
+flask_sample-0.4a4.dist-info/METADATA,sha256=vrYKIQv0m8dCjquYNv6AS_wkTcOnjMZhVrEZi5N1GP4,2076
+flask_sample-0.4a4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+flask_sample-0.4a4.dist-info/entry_points.txt,sha256=DagQu6u3ne_tX1eeR1xvR203Q7G98ZWa6oLcplNP2Tc,60
+flask_sample-0.4a4.dist-info/top_level.txt,sha256=PPT4ZnNFVFzDz9K43eacOpln1WARE7cZ6yFeuuNc4gE,13
+flask_sample-0.4a4.dist-info/RECORD,,

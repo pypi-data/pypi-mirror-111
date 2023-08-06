@@ -1,0 +1,3 @@
+[console_scripts]
+flask-sample-run = flask_sample.wsgi:run
+

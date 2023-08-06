@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: flask-sample
+Version: 0.4a4
+Summary: A sample Flask app
+Home-page: https://github.com/ph20/flask-sample
+Author: Alexander Grynchuk
+Author-email: agrynchuk@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/ph20/flask-sample/issues
+Project-URL: Source, https://github.com/ph20/flask-sample/
+Keywords: sample setuptools development flask
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: Flask (==2.0.1)
+Requires-Dist: Jinja2 (==3.0.1)
+Requires-Dist: Click (==8.0.1)
+Provides-Extra: dev
+Requires-Dist: wheel ; extra == 'dev'
+Provides-Extra: gunicorn
+Requires-Dist: gunicorn ; extra == 'gunicorn'
+
+# Sample flask app project
+
+## About
+Sample flask application packaged and ready to deploy
+
+## Goals
+The main project goals are:
+- sample skeleton for fast start develop;
+- usage flask_sample package from pypi for checking docker python web app packaging;
+
+## Deploying on production
+```
+pip3 install flask-sample[gunicorn]
+gunicorn --bind 127.0.0.1:8088 flask_sample.wsgi
+```
+
+## Setup and configure development environment
+Clone repository
+```
+git clone git@github.com:ph20/flask-sample.git
+```
+
+Create virtual environment with venv module
+```
+cd flask-sample
+python3 -m venv ./venv
+source ./venv/bin/activate
+pip install -e .[dev]
+```
+Try to run application in development mode
+
+```python ./src/flask_sample/app.py```
+
+## Preparing python packages
+source package ```python setup.py build sdist```
+
+wheel package ```python setup.py build bdist_wheel```
+
+Find packages in `dist` directory
+
+
