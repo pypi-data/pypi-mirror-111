@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: FlexPicLabel
+Version: 1.2
+Summary: picture/video widget for pyside6/pyqt6
+Home-page: https://github.com/poshl9k/flexpiclabel
+Author: poshl9k
+Author-email: poshl9k@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: pyside6,pyqt6,picture,video,widget
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Widget Sets
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
