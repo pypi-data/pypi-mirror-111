@@ -1,0 +1,3 @@
+[console_scripts]
+psswrd = psswrd.psswrd:main
+

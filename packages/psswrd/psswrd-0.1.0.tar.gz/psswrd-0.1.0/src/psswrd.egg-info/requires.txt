@@ -1,0 +1,7 @@
+importlib-metadata
+PySimpleGUI>=4.43.0
+
+[testing]
+setuptools
+pytest
+pytest-cov
