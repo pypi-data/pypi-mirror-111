@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: nimview
+Version: 0.2.0
+Summary: A lightwight cross platform UI library for Nim, C, C++ or Python. The main purpose is to simplify creation of Desktop applications based on a HTML/CSS/JS layer that is displayed with Webview.
+Home-page: https://github.com/marcomq/nimview
+Author: Marco Mengelkoch
+Author-email: MMengelkoch@gmx.de
+License: MIT
+Description: ## Nimview Python sample application
+        
+        This is using nakefiles to build the python library
+        - nake pyLib
+        
+        The pyTest.py doesn't trigger start yet - so it doesn't opens a GUI yet. 
+        Currently only used for testing
+Keywords: nim,user-interface,webview,html,css,javascript,http-server
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Environment :: Console
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
