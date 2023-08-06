@@ -1,0 +1,13 @@
+mlpmixer_flax/__init__.py,sha256=91KIKBBUOzD88s1raya-bBEZmQDvr0ycymx6zXsiqgI,82
+mlpmixer_flax/checkpoint.py,sha256=IupS6y0v7YKLNkASvkoWNVpeE_AjCzOQvNfQmVE5oQs,6475
+mlpmixer_flax/config.py,sha256=sDHnhXfxvr14ggInisfUhvEKcna_Rk0NXeZAPlu3nB4,954
+mlpmixer_flax/dataloader.py,sha256=g3UgeP6m9BubXMLF5AtEjibGTP-LCWjNOnPa9ALTVQQ,5523
+mlpmixer_flax/models.py,sha256=wJ5GxP9NdzXUUDRHUjqnrFi6rxv8fGY1RtSp2F-KWMA,4039
+mlpmixer_flax/train.py,sha256=KFfeyzYVvMcYUNnLosYnCUHZL51DJ26-fphl5rCWfe8,1391
+mlpmixer_flax/train_utils.py,sha256=vDgPQ0-LErXUpFsyGU7gDEVDdenGD9gG3q7cYbRzSdg,4894
+mlpmixer_flax-0.0.1.dist-info/LICENSE,sha256=ozO3vHlXNpVJ_GEYVg-PJq7tU9isIunB7oICG31-tcQ,1073
+mlpmixer_flax-0.0.1.dist-info/METADATA,sha256=AJ9vcYZMNL0z4s7G0vk8OOYeEAhiUUCPENPdf-98rNU,3820
+mlpmixer_flax-0.0.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+mlpmixer_flax-0.0.1.dist-info/top_level.txt,sha256=SEsIq-KT6NBbxKLJFJ2cFO5ZEDb-eNRMOKq_UKW8SR8,14
+mlpmixer_flax-0.0.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+mlpmixer_flax-0.0.1.dist-info/RECORD,,
