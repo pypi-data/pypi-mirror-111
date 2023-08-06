@@ -1,0 +1,1 @@
+This a very basic calculator that will help you add, subtract, multiply, divide, find squares and find cubes.

@@ -1,0 +1,13 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+__init__.py
+setup.py
+simple_math_calculator.egg-info/SOURCES.txt
+simple_math_calculator.egg-info/dependency_links.txt
+simple_math_calculator.egg-info/top_level.txt
+very_basic_math_calculator.egg-info/PKG-INFO
+very_basic_math_calculator.egg-info/SOURCES.txt
+very_basic_math_calculator.egg-info/dependency_links.txt
+very_basic_math_calculator.egg-info/top_level.txt
