@@ -1,0 +1,11 @@
+xlsxwriter_celldsl/__init__.py,sha256=L8nRazmuut-JLtohWT_jnf4PC_LZfBV6SVLIq1dzbSo,823
+xlsxwriter_celldsl/cell_dsl.py,sha256=ZcA-0bBxNioaWQJ_i2YIaC0xRyPZr8HNqe0JCrxyV-M,26820
+xlsxwriter_celldsl/formats.py,sha256=vT3S8vrpaBQx5BSBHfnPyZvbetxvnvZI27-zLSVs2A0,4333
+xlsxwriter_celldsl/ops.py,sha256=wLKq2LAZQOPqXAVoJ1u-qEVeUNGwo6cQLreaiB_i5is,20201
+xlsxwriter_celldsl/traits.py,sha256=bd69wEfdYf6Xr_CqkNH5QzexCwW_lLo3Y0L3BK3WC30,7297
+xlsxwriter_celldsl/utils.py,sha256=BL1NML_7FwNS5SiwKDrwT6i-C7zNMNbY8II13f3wWDA,4406
+xlsxwriter_celldsl-0.5.0.dist-info/LICENSE,sha256=Q4Df-tVKiicMj55DOo4x2LLpuG5AgltV-AyUq7UFNPE,1091
+xlsxwriter_celldsl-0.5.0.dist-info/METADATA,sha256=_UWuPDrBJNNkTc2uykLqeKu6PA-uyS9t0ZtKBHlKwO0,10912
+xlsxwriter_celldsl-0.5.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+xlsxwriter_celldsl-0.5.0.dist-info/top_level.txt,sha256=96eOsG1UmsNwcicYupGqvd8otT5hQf9IAlbAGJoEvTU,19
+xlsxwriter_celldsl-0.5.0.dist-info/RECORD,,
