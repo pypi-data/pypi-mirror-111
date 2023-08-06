@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: unbalancedgw
+Version: 0.2.0
+Summary: Computation of Unbalanced Gromov-Wasserstein distances using entropic regularization
+Home-page: https://github.com/thibsej/unbalanced_gromov_wasserstein
+Author: Thibault Sejourne
+Author-email: thibault.sejourne@ens.fr
+License: MIT
+Platform: UNKNOWN
+License-File: LICENSE
+
+UNKNOWN
+
