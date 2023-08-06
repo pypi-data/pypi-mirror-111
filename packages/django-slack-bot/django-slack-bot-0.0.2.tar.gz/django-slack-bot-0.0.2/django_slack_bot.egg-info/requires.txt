@@ -1,0 +1,7 @@
+celery
+Django>=3.1
+slack_sdk
+
+[dev]
+black
+flake8
