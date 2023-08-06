@@ -1,0 +1,10 @@
+etc/udev/rules.d/99-tourbox.rules,sha256=K3t1QMvTGouFg86lzepS6ZSujN8o_OC29yeWPLwzK8k,94
+tourboxneo/__init__.py,sha256=gKT09mjzyi1eb8gdTKOzl4wKpDW6y4us9D0MCRYg-LQ,16
+tourboxneo/constants.py,sha256=ntc48bVfi9q4KdlQVf7nVfDgk90-m9bvhOkEhLfVtAk,3429
+tourboxneo/device.py,sha256=XfnAS2Cvw12W7w3K9QcT6-pkO4iy5beYggilzyqaO78,1275
+tourboxneo-0.1.dist-info/LICENSE.md,sha256=FM1im7nFUEuwAIASZ3tPjU0msWPS-WE5nCmL2iXGqBc,1079
+tourboxneo-0.1.dist-info/METADATA,sha256=7hQzPaoxDjUhN6uPQUMa4gMB3aJZ6ykbAEde6XEb3dI,2090
+tourboxneo-0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+tourboxneo-0.1.dist-info/entry_points.txt,sha256=oDFQokx2pIaUPQolHzaUEgcAwpUmT5PGnDhUfYKIvck,55
+tourboxneo-0.1.dist-info/top_level.txt,sha256=Rt5LoK2L2KNXQjown1K_cg97VzuQXxaOiYkdvFld03Q,11
+tourboxneo-0.1.dist-info/RECORD,,
