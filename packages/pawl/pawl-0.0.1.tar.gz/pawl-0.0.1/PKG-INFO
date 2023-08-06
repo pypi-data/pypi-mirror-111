@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: pawl
+Version: 0.0.1
+Summary: PAWL (an acronym for `Python API Wrapper - LinkedIn`) allows for simple access to LinkedIn's API.
+License: MIT
+Keywords: linkedin,api,wrapper
+Author: Kyle J. Burda
+Author-email: kylejbdev@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Utilities
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Project-URL: Bug Tracker, https://github.com/kylejb/pawl/issues
+Project-URL: Source Code, https://github.com/kylejb/pawl
+Description-Content-Type: text/markdown
+
+# PAWL: Python API Wrapper for LinkedIn
+
+OAuth flow will be added in the next revision.
+
+## Installation
+
+PAWL is supported on Python 3.9+. The recommended way to install PAWL is with pip.
+
+`pip install pawl`
+
+## Quickstart
+
+You can instantiate an instance like so:
+
+```python
+import pawl
+
+>>> linkedin = pawl.Linkedin(
+    access_token="ACCESS_TOKEN_VALUE",
+)
+
+>>> linkedin
+<pawl.linkedin.Linkedin at 0x10ea46af0>
+```
+
+#### get_basic_profile()
+```python
+>>> response = linkedin.me.get_basic_profile()
+
+>>> response
+{
+    'localizedLastName': 'LAST_NAME',
+    'profilePicture': {
+        'displayImage': 'urn:li:digitalmediaAsset:PHOTO_ID_VALUE'
+    },
+    'firstName': {
+        'localized': {
+            'language_code_value_and_country_code_value': 'FIRST_NAME_VALUE'
+        },
+        'preferredLocale': {
+            'country': 'country_code_value', 'language': 'language_code_value'
+        }
+    },
+    'lastName': {
+        'localized': {
+            'language_code_value_and_country_code_value':
+            'LAST_NAME_VALUE'
+        },
+        'preferredLocale': {
+            'country': 'country_code_value',
+            'language': 'language_value'
+        }
+    },
+    'id': 'USER_ID_VALUE',
+    'localizedFirstName': 'localized_first_name_value'
+}
+```
+
+## License
+
+PAWL's source is provided under the MIT License.
+
+- Copyright © 2021 Kyle J. Burda
+
