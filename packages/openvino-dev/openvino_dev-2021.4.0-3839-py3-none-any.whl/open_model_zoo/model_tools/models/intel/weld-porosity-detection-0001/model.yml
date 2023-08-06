@@ -1,0 +1,44 @@
+# Copyright (c) 2021 Intel Corporation
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+description: >-
+  ResNet18 based network for porosity weld recognition.
+task_type: action_recognition
+files:
+  - name: FP32/weld-porosity-detection-0001.xml
+    size: 60877
+    sha256: 66c3b137f6a9076b62720289db564a24ab3474fa117d442460269108e1106902
+    source: https://storage.openvinotoolkit.org/repositories/open_model_zoo/2021.4/models_bin/2/weld-porosity-detection-0001/FP32/weld-porosity-detection-0001.xml
+  - name: FP32/weld-porosity-detection-0001.bin
+    size: 44693044
+    sha256: d89149062ed8b9bbd976a0d39537890f601dc55d62d0f85ccd20818de92ef037
+    source: https://storage.openvinotoolkit.org/repositories/open_model_zoo/2021.4/models_bin/2/weld-porosity-detection-0001/FP32/weld-porosity-detection-0001.bin
+  - name: FP16/weld-porosity-detection-0001.xml
+    size: 60853
+    sha256: 5538b59514d5247cc14aebfc50d9b7228f8b24150bebdab2944b4820551e85a4
+    source: https://storage.openvinotoolkit.org/repositories/open_model_zoo/2021.4/models_bin/2/weld-porosity-detection-0001/FP16/weld-porosity-detection-0001.xml
+  - name: FP16/weld-porosity-detection-0001.bin
+    size: 22346530
+    sha256: d35735eec51cfcfa1fdd3ecd62547dc56b84a48c5e22407144025c05b2e68945
+    source: https://storage.openvinotoolkit.org/repositories/open_model_zoo/2021.4/models_bin/2/weld-porosity-detection-0001/FP16/weld-porosity-detection-0001.bin
+  - name: FP16-INT8/weld-porosity-detection-0001.xml
+    size: 162672
+    sha256: aae1b1666844a28e50ca121cd1d018b0b0cc6253a528510c626d72f4da82bc6a
+    source: https://storage.openvinotoolkit.org/repositories/open_model_zoo/2021.4/models_bin/2/weld-porosity-detection-0001/FP16-INT8/weld-porosity-detection-0001.xml
+  - name: FP16-INT8/weld-porosity-detection-0001.bin
+    size: 11197380
+    sha256: cdc129afbb26bf6d5fb5f7dffd32e6425bd41dbe5c6097fda7c7270f32ad47bc
+    source: https://storage.openvinotoolkit.org/repositories/open_model_zoo/2021.4/models_bin/2/weld-porosity-detection-0001/FP16-INT8/weld-porosity-detection-0001.bin
+framework: dldt
+license: https://raw.githubusercontent.com/openvinotoolkit/open_model_zoo/master/LICENSE

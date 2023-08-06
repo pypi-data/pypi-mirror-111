@@ -1,0 +1,36 @@
+# Copyright (c) 2021 Intel Corporation
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+description: >-
+  Encoder part of latex formula recognition model.
+task_type: feature_extraction
+files:
+  - name: FP32/formula-recognition-polynomials-handwritten-0001-encoder.xml
+    size: 189647
+    sha256: 32ad2106bb80744a052e2661ee810d81c689d414c9e566bcea140f42fceb7f53
+    source: https://storage.openvinotoolkit.org/repositories/open_model_zoo/2021.4/models_bin/2/formula-recognition-polynomials-handwritten-0001/formula-recognition-polynomials-handwritten-0001-encoder/FP32/formula-recognition-polynomials-handwritten-0001-encoder.xml
+  - name: FP32/formula-recognition-polynomials-handwritten-0001-encoder.bin
+    size: 45208792
+    sha256: 2958b295445f638098883731951ad215fa1e024ed0a1a190756e62139dcb5495
+    source: https://storage.openvinotoolkit.org/repositories/open_model_zoo/2021.4/models_bin/2/formula-recognition-polynomials-handwritten-0001/formula-recognition-polynomials-handwritten-0001-encoder/FP32/formula-recognition-polynomials-handwritten-0001-encoder.bin
+  - name: FP16/formula-recognition-polynomials-handwritten-0001-encoder.xml
+    size: 189598
+    sha256: 281a41cd86f8f8483e6e9cc49069f283a407804f9b617b86768372cd6b06fa5c
+    source: https://storage.openvinotoolkit.org/repositories/open_model_zoo/2021.4/models_bin/2/formula-recognition-polynomials-handwritten-0001/formula-recognition-polynomials-handwritten-0001-encoder/FP16/formula-recognition-polynomials-handwritten-0001-encoder.xml
+  - name: FP16/formula-recognition-polynomials-handwritten-0001-encoder.bin
+    size: 22604504
+    sha256: f85ac1f2c673a8fdfdbcec22e9551fee7434e3b2066293d0afc9c62fd336329d
+    source: https://storage.openvinotoolkit.org/repositories/open_model_zoo/2021.4/models_bin/2/formula-recognition-polynomials-handwritten-0001/formula-recognition-polynomials-handwritten-0001-encoder/FP16/formula-recognition-polynomials-handwritten-0001-encoder.bin
+framework: dldt
+license: https://raw.githubusercontent.com/openvinotoolkit/open_model_zoo/master/LICENSE
