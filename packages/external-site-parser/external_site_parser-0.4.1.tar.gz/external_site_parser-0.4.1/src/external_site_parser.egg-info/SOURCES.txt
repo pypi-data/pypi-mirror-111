@@ -1,0 +1,16 @@
+LICENSE
+pyproject.toml
+setup.cfg
+setup.py
+src/external_site_parser/Action.py
+src/external_site_parser/Analysis.py
+src/external_site_parser/Baseline.py
+src/external_site_parser/Fixlet.py
+src/external_site_parser/Task.py
+src/external_site_parser/__init__.py
+src/external_site_parser/utils.py
+src/external_site_parser.egg-info/PKG-INFO
+src/external_site_parser.egg-info/SOURCES.txt
+src/external_site_parser.egg-info/dependency_links.txt
+src/external_site_parser.egg-info/requires.txt
+src/external_site_parser.egg-info/top_level.txt
