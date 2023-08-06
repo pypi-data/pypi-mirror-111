@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: begetAPI
+Version: 0.0.1
+Summary: Wrapper for Beget API
+Home-page: https://github.com/cry0this/begetAPI
+Author: Alex Kiselev
+Author-email: cry0this@gmail.com
+License: GNU General Public License v3.0
+Download-URL: https://github.com/cry0this/begetAPI/archive/refs/tags/v0.0.1.tar.gz
+Description: 
+          Python wrapper for https://beget.com/en/kb/api
+          
+Keywords: api,beget
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
