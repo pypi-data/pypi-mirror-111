@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+librespeed/__init__.py
+librespeed/constants.py
+librespeed.egg-info/PKG-INFO
+librespeed.egg-info/SOURCES.txt
+librespeed.egg-info/dependency_links.txt
+librespeed.egg-info/requires.txt
+librespeed.egg-info/top_level.txt
