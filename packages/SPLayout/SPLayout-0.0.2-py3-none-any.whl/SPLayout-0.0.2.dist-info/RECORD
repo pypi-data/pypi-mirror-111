@@ -1,0 +1,16 @@
+splayout/AEMDgrating.py,sha256=Dft7HcKT4wDBCmt6JBmCy_FwcURKxy3CnAdScaRTE2E,2199
+splayout/Selfdefinecomponent.py,sha256=N0bDd6I5XmiEsupFUO4Vh_QY53hkQZQJMx66b-vhdkc,9292
+splayout/__init__.py,sha256=Mgv1lHCMI0v_ne4EmBSkaKz_zMZ6klRAlBlMnn9aJd0,518
+splayout/bend.py,sha256=IO1R_jRNsO8S88kH_2jUBWurq8-wT2USNETQ-a3WSFw,1936
+splayout/doubleconnector.py,sha256=KRH5tcvCd5t8_ZkRAO_eqCNOVCRkDnqbctbDvhaxguE,4913
+splayout/microring.py,sha256=l4TV-BpOd2R6HaFFu3uNcB5X5V4bBXnCeHU88KUW0iU,36988
+splayout/polygon.py,sha256=KPSUhxk2yRQq95BLRL5KSim5H8tEsrK4y1ivLSif-v0,1310
+splayout/quarbend.py,sha256=_n16B90vAYZMe5p1RWOt0JSIkohhhvGTuurx7Pb1vP8,7856
+splayout/taper.py,sha256=QoEBft7bOqu1uVgP8zpdCd11eYZLAcd7sBqvxQQDlEY,3789
+splayout/text.py,sha256=4pQSulSq6yMttnPTX7M_Iv5okmV5yhum6opFQJVY7vg,583
+splayout/utils.py,sha256=UQltJM_NPVaryte-nL7fuPUUruhatBxSAI6f9DqexTo,4275
+splayout/waveguide.py,sha256=imGYO-ak2UwDltIebu9NRCFScddMMLkZgcMz2yG_8OM,2212
+SPLayout-0.0.2.dist-info/METADATA,sha256=QZgLOJhmNlXPXYWQAM1P2peue217R5UlKxY1cbwP5X0,250
+SPLayout-0.0.2.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+SPLayout-0.0.2.dist-info/top_level.txt,sha256=Mb6usax0WvKmIN4lrHEeXAO1ojkEe-RWQopMfbpZMvE,9
+SPLayout-0.0.2.dist-info/RECORD,,
