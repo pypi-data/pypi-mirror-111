@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+scada_data_analysis/__init__.py
+scada_data_analysis.egg-info/PKG-INFO
+scada_data_analysis.egg-info/SOURCES.txt
+scada_data_analysis.egg-info/dependency_links.txt
+scada_data_analysis.egg-info/requires.txt
+scada_data_analysis.egg-info/top_level.txt
+scada_data_analysis/modules/__init__.py
+scada_data_analysis/modules/power_curve_preprocessing.py
+test/test_power_curve_filtering.py
