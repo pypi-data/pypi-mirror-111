@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+app/__init__.py
+piggycli.egg-info/PKG-INFO
+piggycli.egg-info/SOURCES.txt
+piggycli.egg-info/dependency_links.txt
+piggycli.egg-info/entry_points.txt
+piggycli.egg-info/requires.txt
+piggycli.egg-info/top_level.txt
