@@ -1,0 +1,109 @@
+Metadata-Version: 2.1
+Name: autoforecast
+Version: 0.0.9
+Summary: AutoML time series forecasting
+Home-page: https://github.com/GuillaumeSimo/autoforecast
+Author: Guillaume Simo
+Author-email: guillaume.simo@hotmail.fr
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp (==3.7.4)
+Requires-Dist: pystan (==2.19.1.1)
+Requires-Dist: fbprophet (==0.7.1)
+Requires-Dist: Keras (==2.4.3)
+Requires-Dist: numpy (==1.19.4)
+Requires-Dist: pandas (==1.2.0)
+Requires-Dist: plotly (==5.1.0)
+Requires-Dist: python-dotenv (==0.15.0)
+Requires-Dist: scikit-optimize (==0.8.1)
+Requires-Dist: scikit-learn (==0.24.0)
+Requires-Dist: statsmodels (==0.12.1)
+Requires-Dist: tensorflow (==2.4.2)
+Requires-Dist: torch (==1.7.1)
+Requires-Dist: xgboost (==1.3.1)
+
+# Auto Forecast
+
+AutoML library for time series forecasting
+
+## Quick start
+
+Upgrade pip
+```bash
+$ pip install pip --upgrade
+```
+
+Install autoforecast
+```bash
+$ pip install autoforecast
+```
+
+
+### Try it out with your own dataset
+
+1. Preprocessing
+
+```python
+from Autoforecast.preprocessing import preprocessing
+
+X_train, y_train, X_test, y_test = preprocessing(
+    df=df,
+    target_name=['sales'],
+    categoricals=['store_id', 'dpt_id', 'holiday', 'zipcode', ...],
+    numericals=['employee_num', 'store_surface', ...],
+    date_col=['date'],
+    train_size=0.8,
+    engineering=True,
+    selection=True
+)
+```
+
+2. Fitting and predicting
+
+```python
+from autoforecast.automl import AutoForecast
+
+
+model = AutoForecast()
+
+print('Autoforecast() model fitting...')
+model.fit(X_train=X_train, y_train=y_train)
+
+print('Autoforecast() model predicting...')
+
+y_pred = model.predict(X_test=X_test)
+print(f'y_pred={y_pred})
+```
+
+
+### Run the example function
+
+```python
+from autoforecast.examples import autoforecast_bitcoin
+
+
+autoforecast_bitcoin.run()
+```
+
+
+### Fetch historical cryptocurrency data
+
+This function is a wrapper of https://developers.coinbase.com/api/v2#prices
+* ***n***: integer, number of days we want since today
+* **type**: str, ['buy', 'sell', 'spot']
+* **currency_pair**: str, crypto & currency
+
+```python
+from autoforecast.datasets.import_bitcoin_price import get_price_for_last_n_days
+
+
+crypto_df = get_price_for_last_n_days(
+    n=1, type='spot', currency_pair='BTC-USD')
+)
+```
+
