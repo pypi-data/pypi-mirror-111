@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: geckolibs
+Version: 0.0.1
+Summary: Python library for working with the Gecko Code format for Wii/GC
+Home-page: https://github.com/JoshuaMKW/geckocode-libs
+Author: JoshuaMK
+Author-email: joshuamkw2002@gmail.com
+License: GNU General Public License v3.0
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: dolreader
+
+# geckocode-libs
+Python library for parsing and editing Gecko Codes for the Wii/GCN
+
+
