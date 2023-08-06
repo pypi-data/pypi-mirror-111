@@ -1,0 +1,13 @@
+README.md
+setup.py
+iso4/LTWA_20170914.json
+iso4/LTWA_20170914.tsv
+iso4/__init__.py
+iso4/abbreviate.py
+iso4/stopwords.txt
+iso4/stopwords_keep_as_last.txt
+iso4.egg-info/PKG-INFO
+iso4.egg-info/SOURCES.txt
+iso4.egg-info/dependency_links.txt
+iso4.egg-info/requires.txt
+iso4.egg-info/top_level.txt
