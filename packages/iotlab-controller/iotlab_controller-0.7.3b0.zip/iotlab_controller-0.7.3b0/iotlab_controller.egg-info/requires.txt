@@ -1,0 +1,12 @@
+iotlabcli>=2.5
+PyYAML>=5.4
+
+[all]
+networkx>=2.2
+libtmux
+
+[networked]
+networkx>=2.2
+
+[tmux]
+libtmux
