@@ -1,0 +1,18 @@
+Metadata-Version: 1.0
+Name: mathdunders
+Version: 0.2.2
+Summary: Decorator that adds math dunders to a class derived from a numeric type.
+Home-page: https://github.com/discretegames/mathdunders
+Author: discretegames
+Author-email: discretizedgames@gmail.com
+License: MIT License
+Description: # mathdunders
+        Python decorator to add math dunders to a class derived from a numeric type.
+        
+        *In development.*
+        # TODO
+        - Flesh out Readme
+        - Test in various Python versions
+        - automate build and twine push -> github action? https://packaging.python.org/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/
+Keywords: python,math,mathematics,dunder,double under,underscore,magic method,number
+Platform: UNKNOWN
