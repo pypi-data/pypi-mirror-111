@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: epath
+Version: 0.6
+Summary: Easy path for python import/save/load process
+Home-page: https://github.com/ademakdogan/epath
+Author: A.Akdogan
+Author-email: adem.akdogan92@gmail.com
+License: MIT
+Keywords: PATH,ROUTE
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+
+UNKNOWN
+
+
