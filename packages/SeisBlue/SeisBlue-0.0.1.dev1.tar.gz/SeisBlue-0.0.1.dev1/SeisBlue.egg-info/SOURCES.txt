@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+SeisBlue.egg-info/PKG-INFO
+SeisBlue.egg-info/SOURCES.txt
+SeisBlue.egg-info/dependency_links.txt
+SeisBlue.egg-info/requires.txt
+SeisBlue.egg-info/top_level.txt
