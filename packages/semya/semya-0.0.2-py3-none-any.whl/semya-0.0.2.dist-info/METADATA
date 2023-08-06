@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: semya
+Version: 0.0.2
+Summary: A sewn seed grows.
+Home-page: http://github.com/trejas/semya
+Author: Traey Hatch
+Author-email: thatch@newmathdata.com
+License: Apache 2.0
+Project-URL: Source, https://github.com/trejas/gytrash
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: pre-commit (==2.13.0) ; extra == 'dev'
+Requires-Dist: bump2version (==1.0.1) ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: pytest (==6.2.4) ; extra == 'test'
+
+# Semya
+
+A module to shorten the time to setup a new python package. This is just an opinionated
+way to deal with setting up a project for pip installation, running tests, and
+bootstrapping setup.
+
+## Example setup
+
+```
+from semya import Semya
+
+seed = Semya(package_name="gytrash", project_url="https://github.com/trejas/gytrash")
+
+seed.sew()
+```
+
+
