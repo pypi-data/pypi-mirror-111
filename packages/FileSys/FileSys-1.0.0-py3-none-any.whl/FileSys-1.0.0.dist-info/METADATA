@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: FileSys
+Version: 1.0.0
+Summary: A simple file system made in Python.
+Home-page: https://github.com/nycr1te/filesys
+Author: Nycrite
+Author-email: nycriterbx@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/nycr1te/filesys/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# FileSys
+
+A simple file system made in Python.
+
