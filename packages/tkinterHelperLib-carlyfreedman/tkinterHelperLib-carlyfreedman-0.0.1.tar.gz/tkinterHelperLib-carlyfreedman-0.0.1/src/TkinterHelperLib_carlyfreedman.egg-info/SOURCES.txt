@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+src/TkinterHelperLib_carlyfreedman.egg-info/PKG-INFO
+src/TkinterHelperLib_carlyfreedman.egg-info/SOURCES.txt
+src/TkinterHelperLib_carlyfreedman.egg-info/dependency_links.txt
+src/TkinterHelperLib_carlyfreedman.egg-info/top_level.txt
+src/tkinterHelperLib_carlyfreedman.egg-info/PKG-INFO
+src/tkinterHelperLib_carlyfreedman.egg-info/SOURCES.txt
+src/tkinterHelperLib_carlyfreedman.egg-info/dependency_links.txt
+src/tkinterHelperLib_carlyfreedman.egg-info/top_level.txt
