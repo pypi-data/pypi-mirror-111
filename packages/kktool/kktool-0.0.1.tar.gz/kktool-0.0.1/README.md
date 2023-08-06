@@ -1,0 +1,41 @@
+# ktool
+
+#### 介绍
+储存一些我常用的自己写的工具
+
+#### 软件架构
+软件架构说明
+twine upload dist/*
+在setup.py目录终端执行命令python3 -m pip install --upgrade setuptools wheel，安装setuptools和wheel
+在setup.py目录终端执行命令python3 setup.py sdist bdist_wheel，会在setup.py同一级目录下生成dist文件夹，里面有两个文件，一个***.tar.gz，一个****.whl文件
+在setup.py目录终端执行命令python3 -m pip install --upgrade twine，安装twine
+在setup.py目录终端执行命令python3 -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*，就上传了自己的python库。
+
+#### 安装教程
+
+1.  xxxx
+2.  xxxx
+3.  xxxx
+
+#### 使用说明
+
+1.  xxxx
+2.  xxxx
+3.  xxxx
+
+#### 参与贡献
+
+1.  Fork 本仓库
+2.  新建 Feat_xxx 分支
+3.  提交代码
+4.  新建 Pull Request
+
+
+#### 码云特技
+
+1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
+2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
+3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
+4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
+5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
+6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
