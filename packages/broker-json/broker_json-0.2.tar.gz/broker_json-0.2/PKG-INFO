@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: broker_json
+Version: 0.2
+Summary: Utilities to convert between Broker data types and JSON
+Home-page: https://github.com/grigorescu/broker-to-json
+Author: Vlad Grigorescu
+Author-email: vlad@es.net
+License: bsd-3-clause
+Download-URL: https://github.com/grigorescu/broker-to-json/archive/v_02.tar.gz
+Description: UNKNOWN
+Keywords: zeek,broker
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
