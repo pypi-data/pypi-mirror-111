@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: asapp
+Version: 0.1.0
+Summary: Create desktop entries for running websites in app mode.
+License: GPL
+Author: Blake Smith
+Author-email: blakeinvictoria@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Jinja2 (>=3.0.1,<4.0.0)
+Requires-Dist: click (>=8.0.1,<9.0.0)
