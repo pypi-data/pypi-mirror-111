@@ -1,0 +1,8 @@
+README.md
+setup.py
+pretrained_word_embedding/__init__.py
+pretrained_word_embedding/pretrained_word_embedding.py
+pretrained_word_embedding.egg-info/PKG-INFO
+pretrained_word_embedding.egg-info/SOURCES.txt
+pretrained_word_embedding.egg-info/dependency_links.txt
+pretrained_word_embedding.egg-info/top_level.txt
