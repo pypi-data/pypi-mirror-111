@@ -1,0 +1,12 @@
+py_models_parser/__init__.py,sha256=zCTcfQ8aXo57gPPcFcIIHn819euM_R7CZxUBRi2Sffw,125
+py_models_parser/cli.py,sha256=zsBo6gYagKX3ibjkY7JUgI9LsksLkmTJDxvtuQOa1WY,1682
+py_models_parser/core.py,sha256=271QEmlhbVGCQeNoIGYuOa12PycLLFRVaPthHNokRmI,2413
+py_models_parser/grammar.py,sha256=drsrOwAARmurQcMxMw5MOoZ5xYnrkjjMXGZ2JcjGhH0,1438
+py_models_parser/parsers/pydal.py,sha256=a22wZrIA08b5ywk2e6tIORtyvmpH8GCawL9fAnJ1yP0,2368
+py_models_parser/utils.py,sha256=hctZD9xgiL-YYGYvyC-rkvAw3zyBQ06SrMqMyttrItc,78
+py_models_parser/visitor.py,sha256=lj4waUwYf1-gg7LBhfWwSdUICk1P8mUYITQUUFUVBZQ,9996
+py_models_parser-0.5.0.dist-info/entry_points.txt,sha256=sp7Bl4V-ZwYcLMrb5MF8zOozk-KlXEjxixh1H15SbPM,49
+py_models_parser-0.5.0.dist-info/LICENSE,sha256=F7Lnfq5TMUS5ic1Ax7_kRc5hB23kqM61CV6ueLQkkW4,1093
+py_models_parser-0.5.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+py_models_parser-0.5.0.dist-info/METADATA,sha256=NuYvD2rcohXXF-beaSBHeoZk1p2Ird7pl4u-bkK545s,8894
+py_models_parser-0.5.0.dist-info/RECORD,,
