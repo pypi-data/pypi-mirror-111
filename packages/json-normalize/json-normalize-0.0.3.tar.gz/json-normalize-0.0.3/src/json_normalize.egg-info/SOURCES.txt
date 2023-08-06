@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/json_normalize/__init__.py
+src/json_normalize/key_joiners.py
+src/json_normalize/main.py
+src/json_normalize.egg-info/PKG-INFO
+src/json_normalize.egg-info/SOURCES.txt
+src/json_normalize.egg-info/dependency_links.txt
+src/json_normalize.egg-info/top_level.txt
