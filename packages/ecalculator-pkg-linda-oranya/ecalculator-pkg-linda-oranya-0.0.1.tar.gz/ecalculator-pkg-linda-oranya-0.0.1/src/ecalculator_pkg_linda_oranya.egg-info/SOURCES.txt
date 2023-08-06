@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/ecalculator_pkg_linda_oranya.egg-info/PKG-INFO
+src/ecalculator_pkg_linda_oranya.egg-info/SOURCES.txt
+src/ecalculator_pkg_linda_oranya.egg-info/dependency_links.txt
+src/ecalculator_pkg_linda_oranya.egg-info/top_level.txt
