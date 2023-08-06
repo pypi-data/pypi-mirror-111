@@ -1,0 +1,15 @@
+dagster==0.11.16rc10
+celery>=4.3.0
+click<8.0,>=5.0
+
+[flower]
+flower
+
+[kubernetes]
+kubernetes
+
+[redis]
+redis
+
+[test]
+docker
