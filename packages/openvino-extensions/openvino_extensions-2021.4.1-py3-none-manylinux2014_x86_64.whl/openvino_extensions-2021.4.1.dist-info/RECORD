@@ -1,0 +1,6 @@
+openvino_extensions/__init__.py,sha256=6T1g4uMN1rZ9CO8P1oy9ZRAn0cOrGO5rBOs381fLJ34,340
+openvino_extensions/libuser_cpu_extension.so,sha256=lx2AAGnj6FFUrOxlRCxIAg8SBnIXEm0jNdOxwwcvnLk,203256
+openvino_extensions-2021.4.1.dist-info/METADATA,sha256=isknBbT2_073w3d3yfKIDZuw7Ts-VprezvBWkRKNJq8,345
+openvino_extensions-2021.4.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+openvino_extensions-2021.4.1.dist-info/top_level.txt,sha256=xB036wb2qAWVDnDZxTJ52yoU02SJU67W9qN5Q6wVJA0,20
+openvino_extensions-2021.4.1.dist-info/RECORD,,
