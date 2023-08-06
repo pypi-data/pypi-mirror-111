@@ -1,0 +1,7 @@
+kmeans_gpu/__init__.py,sha256=DOR5VgQKLlNvScvLhb5ANBg8al1iTopaeRTMJPUb9xY,52
+kmeans_gpu/kmeans.py,sha256=isL_5x1GAFiATQS0EM0PGWDtOJZZ3xnyXd1Y0rFzbS0,7898
+kmeans_gpu-0.0.1rc0.dist-info/LICENSE,sha256=9j4Bcb3tLw1x9fgU-HmuMDTtXhtd38oeuCGgNmOAO1U,1066
+kmeans_gpu-0.0.1rc0.dist-info/METADATA,sha256=H3p1DSbJnzil_kzoQ_pmo42Ti8aaXQTg9IBHzTLW6JI,2221
+kmeans_gpu-0.0.1rc0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+kmeans_gpu-0.0.1rc0.dist-info/top_level.txt,sha256=d3u9rBnO-KiWnio3-Ru3WDo8u43MgZK6k2-kFjkl4T4,11
+kmeans_gpu-0.0.1rc0.dist-info/RECORD,,
