@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: sphinx-code-highlighter
+Version: 0.0.3
+Summary: code-block-hl directive, just like code-block but with partial line highlights
+Home-page: https://github.com/alissa-huskey/sphinx-code-highlighter
+License: MIT
+Keywords: sphinx,documentation,extension,highlight,code
+Author: Alissa Huskey
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Framework :: Sphinx
+Classifier: Framework :: Sphinx :: Extension
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Documentation
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Text Processing :: Markup
+Classifier: Topic :: Text Processing :: Markup :: reStructuredText
+Requires-Dist: Pygments (>=2.9.0,<3.0.0)
+Requires-Dist: Sphinx (>=3,<4)
+Project-URL: Documentation, https://alissa-huskey.github.io/sphinx-code-highlighter/
+Project-URL: Repository, https://github.com/alissa-huskey/sphinx-code-highlighter
+Description-Content-Type: text/markdown
+
+Sphinx Code Highlighter Directive
+=================================
+
+A Sphinx directive that works just like a code-block plus allows you to
+highlight partial lines.
+
+Examples
+--------
+
+Using [MyST markdown](https://myst-parser.readthedocs.io/en/latest/using/syntax.html):
+
+`````markdown
+
+```{code-block-hl} python
+:linenos:
+:caption: "The text surrounded by `!!!` gets highlighted."
+dwarves = [
+  "Bashful",
+  "Dopey",
+  "Happy",
+  "Grumpy",
+  "Sleepy",
+  "Sneezy",
+  "Doc",
+]
+
+i = 0
+while i < len(!!!dwarves!!!):
+  !!!name!!! = dwarves[i]
+  print(f"{name}s Room")
+  i += 1
+```
+
+`````
+
+![screenshot](docs/img/alabaster-demo.png)
+

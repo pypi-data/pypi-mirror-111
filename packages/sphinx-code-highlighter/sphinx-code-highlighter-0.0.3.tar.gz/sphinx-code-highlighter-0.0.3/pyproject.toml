@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "sphinx-code-highlighter"
+version = "0.0.3"
+description = "code-block-hl directive, just like code-block but with partial line highlights"
+authors = ["Alissa Huskey"]
+repository = "https://github.com/alissa-huskey/sphinx-code-highlighter"
+documentation = "https://alissa-huskey.github.io/sphinx-code-highlighter/"
+packages = [ { include = "code_highlighter" } ]
+license = "MIT"
+readme = "README.md"
+keywords = [ "sphinx", "documentation", "extension", "highlight", "code" ]
+classifiers = [
+    "Natural Language :: English",
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "Framework :: Sphinx",
+    "Framework :: Sphinx :: Extension",
+    "Topic :: Documentation",
+    "Topic :: Documentation :: Sphinx",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Text Processing :: Markup",
+    "Topic :: Text Processing :: Markup :: reStructuredText",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Pygments = "^2.9.0"
+Sphinx = "^3"
+
+[tool.poetry.dev-dependencies]
+ipython = "^7.23.1"
+pytest = "^6.2.4"
+pylama = "^7.7.1"
+neovim = "^0.3.1"
+jupyter-book = "^0.10.2"
+sphinx-rtd-theme = "^0.5.2"
+click = "^8.0.1"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = [ "ignore", "default:::code_highlighter.*" ]
+addopts = [ "-v" ]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
