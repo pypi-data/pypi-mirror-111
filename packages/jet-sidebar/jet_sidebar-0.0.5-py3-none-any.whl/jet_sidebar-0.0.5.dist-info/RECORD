@@ -1,0 +1,11 @@
+jet_sidebar/__init__.py,sha256=EKkIS3_RgwPDgK4S1CCNFexI_diiRh7WR6MiH7QsnSk,17
+jet_sidebar/apps.py,sha256=M_DK9RklnWY10LjaOXK_QZJrr-fl35XgFDiw_JYFiow,153
+jet_sidebar/settings.py,sha256=euDHTblD5DGRrBUuceVTQO3yqmUePTO1gIAjXelLCz0,978
+jet_sidebar/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jet_sidebar/templatetags/__init__.py,sha256=vb5gmpIKRs7rUAT9IgjSUKmiyPHrqdf980VhEqeMUzM,23
+jet_sidebar/templatetags/jet_rebuild_tags.py,sha256=8SCLWQITOfqHJiIePV0ipDXb2NYRCMgZkLaGKVY8rI8,4699
+jet_sidebar-0.0.5.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+jet_sidebar-0.0.5.dist-info/METADATA,sha256=JUXg1ivXITCQIvTgU08Dbsbs2ro-WBTaSZCs5qkTJCg,5132
+jet_sidebar-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+jet_sidebar-0.0.5.dist-info/top_level.txt,sha256=81YQbhxD3suJO01Da-i_CjPI3s9Gq9PqUECLZVqsWyg,12
+jet_sidebar-0.0.5.dist-info/RECORD,,
