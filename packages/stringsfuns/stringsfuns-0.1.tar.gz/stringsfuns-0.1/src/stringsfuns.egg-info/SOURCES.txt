@@ -1,0 +1,12 @@
+README.md
+license.txt
+setup.cfg
+setup.py
+src/stringsfuns/__init__.py
+src/stringsfuns/advanced.py
+src/stringsfuns/basic.py
+src/stringsfuns.egg-info/PKG-INFO
+src/stringsfuns.egg-info/SOURCES.txt
+src/stringsfuns.egg-info/dependency_links.txt
+src/stringsfuns.egg-info/not-zip-safe
+src/stringsfuns.egg-info/top_level.txt
