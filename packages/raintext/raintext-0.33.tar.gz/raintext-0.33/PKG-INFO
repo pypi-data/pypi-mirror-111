@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: raintext
+Version: 0.33
+Summary: A package for rainbow text
+Home-page: https://github.com/coolkidmacho/raintext
+Author: Coolkidmacho
+Author-email: UNKNOWN
+License: MIT
+Description: 
+        Raintext is a python package used for rainbow text!
+        Look at https://github.com/coolkidmacho/raintext for instructions!
+        This project will be updated frequently and all updates will be uploaded here but shown there.
+        
+Keywords: SOME,MEANINGFULL,KEYWORDS
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
