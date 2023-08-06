@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+converter/__init__.py
+converter/converter.py
+xlsxCsvConverterrr.egg-info/PKG-INFO
+xlsxCsvConverterrr.egg-info/SOURCES.txt
+xlsxCsvConverterrr.egg-info/dependency_links.txt
+xlsxCsvConverterrr.egg-info/requires.txt
+xlsxCsvConverterrr.egg-info/top_level.txt
