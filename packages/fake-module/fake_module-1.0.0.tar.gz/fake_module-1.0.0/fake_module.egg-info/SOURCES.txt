@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+setup.cfg
+setup.py
+fake_module.egg-info/PKG-INFO
+fake_module.egg-info/SOURCES.txt
+fake_module.egg-info/dependency_links.txt
+fake_module.egg-info/requires.txt
+fake_module.egg-info/top_level.txt
+src/__init__.py
+src/exceptions.py
+src/fake_module.py
