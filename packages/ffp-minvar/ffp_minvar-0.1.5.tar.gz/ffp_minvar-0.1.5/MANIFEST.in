@@ -1,0 +1,2 @@
+include src/* include/*
+# recursive-include lib *.so
