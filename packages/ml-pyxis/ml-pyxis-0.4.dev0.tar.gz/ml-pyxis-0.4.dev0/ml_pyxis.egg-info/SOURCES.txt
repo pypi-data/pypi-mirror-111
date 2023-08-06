@@ -1,0 +1,14 @@
+LICENSE
+README.rst
+setup.cfg
+setup.py
+ml_pyxis.egg-info/PKG-INFO
+ml_pyxis.egg-info/SOURCES.txt
+ml_pyxis.egg-info/dependency_links.txt
+ml_pyxis.egg-info/not-zip-safe
+ml_pyxis.egg-info/requires.txt
+ml_pyxis.egg-info/top_level.txt
+pyxis/__init__.py
+pyxis/iterators.py
+pyxis/pyxis.py
+pyxis/torch.py
