@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+mytask/__init__.py
+mytask/database.py
+mytask/task.py
+mytask.egg-info/PKG-INFO
+mytask.egg-info/SOURCES.txt
+mytask.egg-info/dependency_links.txt
+mytask.egg-info/entry_points.txt
+mytask.egg-info/requires.txt
+mytask.egg-info/top_level.txt
