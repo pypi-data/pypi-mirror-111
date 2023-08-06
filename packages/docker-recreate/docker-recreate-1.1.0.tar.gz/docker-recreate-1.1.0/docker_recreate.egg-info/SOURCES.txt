@@ -1,0 +1,8 @@
+README.md
+main.py
+setup.py
+docker_recreate.egg-info/PKG-INFO
+docker_recreate.egg-info/SOURCES.txt
+docker_recreate.egg-info/dependency_links.txt
+docker_recreate.egg-info/entry_points.txt
+docker_recreate.egg-info/top_level.txt
