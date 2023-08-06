@@ -1,0 +1,5 @@
+pytest
+requests
+loguru
+bs4
+colorama

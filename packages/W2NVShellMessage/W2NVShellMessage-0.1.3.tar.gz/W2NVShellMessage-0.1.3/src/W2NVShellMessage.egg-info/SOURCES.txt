@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/W2NVShellMessage.egg-info/PKG-INFO
+src/W2NVShellMessage.egg-info/SOURCES.txt
+src/W2NVShellMessage.egg-info/dependency_links.txt
+src/W2NVShellMessage.egg-info/entry_points.txt
+src/W2NVShellMessage.egg-info/not-zip-safe
+src/W2NVShellMessage.egg-info/requires.txt
+src/W2NVShellMessage.egg-info/top_level.txt
+src/w2nvshellmsg/__init__.py
+src/w2nvshellmsg/main.py

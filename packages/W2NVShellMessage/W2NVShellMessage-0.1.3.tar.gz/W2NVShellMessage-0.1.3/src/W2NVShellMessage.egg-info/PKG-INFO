@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: W2NVShellMessage
+Version: 0.1.3
+Summary: A package to display quotes from "Welcome to Night Vale" whenever a new terminal window is launched
+Home-page: https://github.com/rijumone/W2NVShellMessage
+Author: Rijumone Choudhuri
+Author-email: mailmeonriju@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/rijumone/W2NVShellMessage/issues
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# W2NVShellMessage
+A quote from Welcome to Night Vale to show when bash is launched.
+
+## Installation
+```bash
+pip install w2nvshellmessage
+```
+
+
