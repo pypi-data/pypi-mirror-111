@@ -1,0 +1,10 @@
+HCGB
+biopython
+cutadapt
+mirtop
+multiqc
+pandas
+patool
+pybedtools
+pysam
+termcolor
