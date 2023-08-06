@@ -1,0 +1,8 @@
+README.md
+license
+setup.py
+deeg.egg-info/PKG-INFO
+deeg.egg-info/SOURCES.txt
+deeg.egg-info/dependency_links.txt
+deeg.egg-info/requires.txt
+deeg.egg-info/top_level.txt
