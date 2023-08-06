@@ -1,0 +1,12 @@
+build_dashboard/__init__.py,sha256=1hciBqIaRLkYRj5JahDshREwbh9Flt7LDIvoCUFrkbM,93
+build_dashboard/__main__.py,sha256=qO02guHg9OiVZQgQXuwV8jsAC9yuzxRc0VNsbbDiUcE,76
+build_dashboard/cli.py,sha256=af7RCm-i87THucHX6KjSx7g3TRfjCnWdeRJRg_b_nzc,2523
+build_dashboard/model.py,sha256=bTPCN3i2s6lHnZiYR86Nb5x_DcAP62zEUcr6mlfiGi4,8057
+build_dashboard/screen.py,sha256=9snL-3uXMK_XcMem1VTZxOVcG_pFMEl0RTciDo9OSQU,1080
+build_dashboard/views.py,sha256=o9GrrOwuhVtUWYoSp_K-n84r9Rgy-Dc9eAqds5M0OeA,9127
+build_dashboard-0.2.6.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+build_dashboard-0.2.6.dist-info/METADATA,sha256=d4ml9t9HjNBcvoRQahBc1P7KGMJMACtDJilILxyrTG8,1804
+build_dashboard-0.2.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+build_dashboard-0.2.6.dist-info/entry_points.txt,sha256=3DNrEASKFiMO3A8PJSMJN48JMScXbXvh1sACilZ4Qi4,62
+build_dashboard-0.2.6.dist-info/top_level.txt,sha256=b7Qy1hZt6cUKMgNTtFvhc8tqrj4oBP-NjuN24SG2icg,16
+build_dashboard-0.2.6.dist-info/RECORD,,
