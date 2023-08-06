@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: atto
+Version: 1.0.0
+Summary: Simple curses text editor
+Home-page: https://pypi.org/project/atto/
+Author: Adam Jenca
+Author-email: jenca.adam@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console :: Curses
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Text Editors
+Description-Content-Type: text/markdown
+
+
+## atto - Simple curses text editor
+
+### Installation
+```
+pip install atto
+```
+### Usage
+#### As script
+```
+[user@localhost ~] atto "<filename>"
+```
+#### In your code
+```python
+import atto 
+atto.edit('filename.txt')
+```
+### Keys
+i to switch to insert mode
+ESC to return from insert mode
+F4 to exit without saving
+F2 to save
+F10 to save and exit
+Arrow keys to move cursor
+
+### License
+atto is licensed under **GPL License**
+### Requirements
+1. `cursor`: Cross-platform library for showing and hiding cursor
+
+
