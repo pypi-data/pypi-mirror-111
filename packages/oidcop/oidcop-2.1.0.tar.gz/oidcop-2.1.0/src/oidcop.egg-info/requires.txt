@@ -1,0 +1,5 @@
+cryptojwt==1.5.2
+jinja2>=2.11.3
+oidcmsg==1.4.0
+pyyaml
+responses>=0.13.0
