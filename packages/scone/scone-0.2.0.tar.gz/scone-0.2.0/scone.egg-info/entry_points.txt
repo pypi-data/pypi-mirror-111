@@ -1,0 +1,5 @@
+[console_scripts]
+michelin = scone.head.cli.michelin:cli
+scone = scone.head.cli:cli
+scone-freezer = scone.head.cli.freezer:cli
+

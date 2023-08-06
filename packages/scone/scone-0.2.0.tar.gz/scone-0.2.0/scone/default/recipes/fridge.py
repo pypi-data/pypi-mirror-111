@@ -1,0 +1,437 @@
+#  Copyright 2020, Olivier 'reivilibre'.
+#
+#  This file is part of Scone.
+#
+#  Scone is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  Scone is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with Scone.  If not, see <https://www.gnu.org/licenses/>.
+
+import asyncio
+import logging
+import os
+from asyncio import Future
+from pathlib import Path
+from typing import Dict, List, Set, Tuple, cast
+from urllib.parse import urlparse
+
+import requests
+
+from scone.common.misc import sha256_file
+from scone.common.modeutils import DEFAULT_MODE_DIR, DEFAULT_MODE_FILE, parse_mode
+from scone.default.steps import fridge_steps
+from scone.default.steps.fridge_steps import (
+    SUPERMARKET_RELATIVE,
+    FridgeMetadata,
+    load_and_transform,
+)
+from scone.default.utensils.basic_utensils import (
+    Chmod,
+    Chown,
+    HashFile,
+    MakeDirectory,
+    Stat,
+    WriteBlockInFile,
+    WriteFile,
+)
+from scone.head.head import Head
+from scone.head.kitchen import Kitchen, Preparation
+from scone.head.recipe import Recipe, RecipeContext
+from scone.head.utils import check_type, check_type_opt
+
+logger = logging.getLogger(__name__)
+
+
+class FridgeCopy(Recipe):
+    """
+    Declares that a file should be copied from the head to the sous.
+    """
+
+    _NAME = "fridge-copy"
+
+    def __init__(self, recipe_context: RecipeContext, args: dict, head: Head):
+        super().__init__(recipe_context, args, head)
+
+        search = fridge_steps.search_in_fridge(head, args["src"])
+        if search is None:
+            raise ValueError(f"Cannot find {args['src']} in the fridge.")
+
+        desugared_src, fp = search
+
+        unextended_path_str, meta = fridge_steps.decode_fridge_extension(str(fp))
+        unextended_path = Path(unextended_path_str)
+
+        dest = args["dest"]
+        if not isinstance(dest, str):
+            raise ValueError("No destination provided or wrong type.")
+
+        if dest.endswith("/"):
+            self.destination: Path = Path(args["dest"], unextended_path.parts[-1])
+        else:
+            self.destination = Path(args["dest"])
+
+        mode = args.get("mode", DEFAULT_MODE_FILE)
+        assert isinstance(mode, str) or isinstance(mode, int)
+
+        self.fridge_path: str = check_type(args["src"], str)
+        self.real_path: Path = fp
+        self.fridge_meta: FridgeMetadata = meta
+        self.mode = parse_mode(mode, directory=False)
+
+        self.targ_user = check_type_opt(args.get("owner"), str)
+        self.targ_group = check_type_opt(args.get("group"), str)
+
+        self._desugared_src = desugared_src
+
+    def prepare(self, preparation: Preparation, head: Head) -> None:
+        super().prepare(preparation, head)
+        preparation.provides("file", str(self.destination))
+        preparation.needs("directory", str(self.destination.parent))
+
+        if self.targ_user:
+            preparation.needs("os-user", self.targ_user)
+
+        if self.targ_group:
+            preparation.needs("os-group", self.targ_group)
+
+    async def cook(self, k: Kitchen) -> None:
+        data = await load_and_transform(
+            k, self.fridge_meta, self.real_path, self.recipe_context.variables
+        )
+        dest_str = str(self.destination)
+        chan = await k.start(WriteFile(dest_str, self.mode))
+        await chan.send(data)
+        await chan.send(None)
+        if await chan.recv() != "OK":
+            raise RuntimeError(f"WriteFail failed on fridge-copy to {self.destination}")
+
+        if self.targ_user or self.targ_group:
+            await k.ut0(Chown(dest_str, self.targ_user, self.targ_group))
+
+        # this is the wrong thing
+        # hash_of_data = sha256_bytes(data)
+        # k.get_dependency_tracker().register_remote_file(dest_str, hash_of_data)
+
+        k.get_dependency_tracker().register_fridge_file(self._desugared_src)
+
+
+class FridgeCopyDir(Recipe):
+    """
+    Declares that a directory(!) should be copied from the head to the sous,
+    and optionally, remote files deleted.
+    """
+
+    _NAME = "fridge-copy-dir"
+
+    def __init__(self, recipe_context: RecipeContext, args: dict, head: Head):
+        super().__init__(recipe_context, args, head)
+
+        files = fridge_steps.search_children_in_fridge(head, args["src"])
+        if not files:
+            raise ValueError(
+                f"Cannot find children of directory {args['src']}"
+                f" in the fridge (empty directories not allowed)."
+            )
+
+        self.files: List[Tuple[str, str, Path]] = files
+
+        dest = check_type(args["dest"], str)
+
+        self.dest_dir = Path(dest)
+
+        self.destinations: List[Path] = []
+
+        self.mkdirs: Set[str] = set()
+
+        for relative, relative_unprefixed, full_path in self.files:
+            unextended_path_str, _ = fridge_steps.decode_fridge_extension(
+                relative_unprefixed
+            )
+            self.destinations.append(Path(args["dest"], unextended_path_str))
+            pieces = relative_unprefixed.split("/")
+            for end_index in range(0, len(pieces)):
+                self.mkdirs.add("/".join(pieces[0:end_index]))
+
+        mode = args.get("mode", DEFAULT_MODE_FILE)
+        dir_mode = args.get("mode_dir", args.get("mode", DEFAULT_MODE_DIR))
+        assert isinstance(mode, str) or isinstance(mode, int)
+        assert isinstance(dir_mode, str) or isinstance(dir_mode, int)
+
+        self.file_mode = parse_mode(mode, directory=False)
+        self.dir_mode = parse_mode(dir_mode, directory=True)
+
+    def prepare(self, preparation: Preparation, head: Head) -> None:
+        super().prepare(preparation, head)
+
+        preparation.needs("directory", str(self.dest_dir.parent))
+
+        for mkdir in self.mkdirs:
+            preparation.provides("directory", str(Path(self.dest_dir, mkdir)))
+
+        for (_relative, relative_unprefixed, full_path), destination in zip(
+            self.files, self.destinations
+        ):
+            unextended_path_str, _ = fridge_steps.decode_fridge_extension(
+                relative_unprefixed
+            )
+            preparation.provides("file", str(destination))
+
+    async def cook(self, k: Kitchen) -> None:
+        # create all needed directories
+        for mkdir in self.mkdirs:
+            directory = str(Path(self.dest_dir, mkdir))
+            # print("mkdir ", directory)
+
+            stat = await k.ut1a(Stat(directory), Stat.Result)
+            if stat is None:
+                # doesn't exist, make it
+                await k.ut0(MakeDirectory(directory, self.dir_mode))
+
+            stat = await k.ut1a(Stat(directory), Stat.Result)
+            if stat is None:
+                raise RuntimeError("Directory vanished after creation!")
+
+            if stat.dir:
+                # if (stat.user, stat.group) != (self.targ_user, self.targ_group):
+                #     # need to chown
+                #     await k.ut0(Chown(directory, self.targ_user, self.targ_group))
+
+                if stat.mode != self.dir_mode:
+                    await k.ut0(Chmod(directory, self.dir_mode))
+            else:
+                raise RuntimeError("Already exists but not a dir: " + directory)
+
+        # copy all files from the fridge
+        for (relative, relative_unprefixed, full_local_path), destination in zip(
+            self.files, self.destinations
+        ):
+            unextended_path_str, meta = fridge_steps.decode_fridge_extension(
+                relative_unprefixed
+            )
+            full_remote_path = str(Path(self.dest_dir, unextended_path_str))
+            # print("fcp ", relative, " → ", full_remote_path)
+
+            data = await load_and_transform(
+                k, meta, full_local_path, self.recipe_context.variables
+            )
+            dest_str = str(full_remote_path)
+            chan = await k.start(WriteFile(dest_str, self.file_mode))
+            await chan.send(data)
+            await chan.send(None)
+            if await chan.recv() != "OK":
+                raise RuntimeError(
+                    f"WriteFail failed on fridge-copy to {full_remote_path}"
+                )
+
+            k.get_dependency_tracker().register_fridge_file(relative)
+
+
+class Supermarket(Recipe):
+    """
+    Downloads an asset (cached if necessary) and copies to sous.
+    """
+
+    _NAME = "supermarket"
+
+    # dict of target path → future that will complete when it's downloaded
+    in_progress: Dict[str, Future] = dict()
+
+    def __init__(self, recipe_context: RecipeContext, args: dict, head):
+        super().__init__(recipe_context, args, head)
+        self.url = args.get("url")
+        assert isinstance(self.url, str)
+
+        self.sha256 = check_type(args.get("sha256"), str).lower()
+
+        dest = args["dest"]
+        if not isinstance(dest, str):
+            raise ValueError("No destination provided or wrong type.")
+
+        if dest.endswith("/"):
+            file_basename = urlparse(self.url).path.split("/")[-1]
+            self.destination: Path = Path(args["dest"], file_basename).resolve()
+        else:
+            self.destination = Path(args["dest"]).resolve()
+
+        self.owner = check_type(args.get("owner", self.recipe_context.user), str)
+        self.group = check_type(args.get("group", self.owner), str)
+
+        mode = args.get("mode", DEFAULT_MODE_FILE)
+        assert isinstance(mode, str) or isinstance(mode, int)
+        self.mode = parse_mode(mode, directory=False)
+
+    def prepare(self, preparation: Preparation, head: "Head"):
+        super().prepare(preparation, head)
+        preparation.provides("file", str(self.destination))
+        preparation.needs("directory", str(self.destination.parent))
+
+    async def cook(self, kitchen: "Kitchen"):
+        # need to ensure we download only once, even in a race…
+
+        supermarket_path = Path(
+            kitchen.head.directory, SUPERMARKET_RELATIVE, self.sha256
+        )
+
+        logger.debug("Going to hash …")
+
+        remote_hash = await kitchen.ut1(HashFile(str(self.destination)))
+
+        logger.debug(
+            "sha256 of %s: want %s have %r", self.destination, self.sha256, remote_hash
+        )
+
+        if remote_hash != self.sha256:
+            if self.sha256 in Supermarket.in_progress:
+                logger.debug("Awaiting existing download")
+                await Supermarket.in_progress[self.sha256]
+            elif not supermarket_path.exists():
+                note = f"""
+    Scone Supermarket
+
+    This file corresponds to {self.url}
+
+    Downloaded by {self}
+    """.strip()
+
+                Supermarket.in_progress[self.sha256] = cast(
+                    Future,
+                    asyncio.get_running_loop().run_in_executor(
+                        kitchen.head.pools.threaded,
+                        self._download_file,
+                        self.url,
+                        str(supermarket_path),
+                        self.sha256,
+                        note,
+                    ),
+                )
+
+                logger.debug("Awaiting new download")
+                await Supermarket.in_progress[self.sha256]
+            else:
+                logger.debug("Already in supermarket.")
+
+            # TODO(perf): load file in another thread
+            # TODO(perf): chunk file
+            with open(supermarket_path, "rb") as fin:
+                data = fin.read()
+            chan = await kitchen.start(WriteFile(str(self.destination), self.mode))
+            await chan.send(data)
+            await chan.send(None)
+            if await chan.recv() != "OK":
+                raise RuntimeError(
+                    f"WriteFail failed on supermarket to {self.destination}"
+                )
+
+        await kitchen.ut0(Chown(str(self.destination), self.owner, self.group))
+        await kitchen.ut0(Chmod(str(self.destination), self.mode))
+
+    @staticmethod
+    def _download_file(url: str, dest_path: str, check_sha256: str, note: str):
+        Path(dest_path).parent.mkdir(parents=True, exist_ok=True)
+
+        r = requests.get(url, stream=True)
+        with open(dest_path, "wb") as fp:
+            for chunk in r.iter_content(4 * 1024 * 1024):
+                fp.write(chunk)
+
+        real_sha256 = sha256_file(dest_path)
+        if real_sha256 != check_sha256:
+            try:
+                os.rename(dest_path, dest_path + ".bad")
+            except Exception:
+                try:
+                    os.unlink(dest_path)
+                except Exception:
+                    pass
+
+            raise RuntimeError(
+                f"sha256 hash mismatch {real_sha256} != {check_sha256} (wanted)"
+            )
+
+        with open(dest_path + ".txt", "w") as fout:
+            # leave a note so we can find out what this is if we need to.
+            fout.write(note)
+
+
+class FridgeBlockInFile(Recipe):
+    """
+    Declares that a file should be copied from the head to the sous.
+    """
+
+    _NAME = "fridge-block-in-file"
+
+    def __init__(self, recipe_context: RecipeContext, args: dict, head: Head):
+        super().__init__(recipe_context, args, head)
+
+        search = fridge_steps.search_in_fridge(head, args["src"])
+        if search is None:
+            raise ValueError(f"Cannot find {args['src']} in the fridge.")
+
+        desugared_src, fp = search
+
+        unextended_path_str, meta = fridge_steps.decode_fridge_extension(str(fp))
+        unextended_path = Path(unextended_path_str)
+
+        dest = args["dest"]
+        if not isinstance(dest, str):
+            raise ValueError("No destination provided or wrong type.")
+
+        if dest.endswith("/"):
+            self.destination: Path = Path(args["dest"], unextended_path.parts[-1])
+        else:
+            self.destination = Path(args["dest"])
+
+        mode = args.get("mode", DEFAULT_MODE_FILE)
+        assert isinstance(mode, str) or isinstance(mode, int)
+
+        self.fridge_path: str = check_type(args["src"], str)
+        self.real_path: Path = fp
+        self.fridge_meta: FridgeMetadata = meta
+        self.mode = parse_mode(mode, directory=False)
+
+        self.targ_user = check_type_opt(args.get("owner"), str)
+        self.targ_group = check_type_opt(args.get("group"), str)
+
+        self._desugared_src = desugared_src
+
+        self.marker_line_prefix = check_type(args.get("marker_line_prefix", "# "), str)
+        self.marker_name = check_type(args.get("marker_name"), str)
+
+    def prepare(self, preparation: Preparation, head: Head) -> None:
+        super().prepare(preparation, head)
+        preparation.provides("file", str(self.destination))
+        preparation.needs("directory", str(self.destination.parent))
+
+        if self.targ_user:
+            preparation.needs("os-user", self.targ_user)
+
+        if self.targ_group:
+            preparation.needs("os-group", self.targ_group)
+
+    async def cook(self, k: Kitchen) -> None:
+        data = await load_and_transform(
+            k, self.fridge_meta, self.real_path, self.recipe_context.variables
+        )
+        dest_str = str(self.destination)
+        await k.ut0(
+            WriteBlockInFile(
+                dest_str,
+                self.mode,
+                self.marker_line_prefix,
+                self.marker_name,
+                data.decode(),
+            )
+        )
+
+        if self.targ_user or self.targ_group:
+            await k.ut0(Chown(dest_str, self.targ_user, self.targ_group))
+
+        k.get_dependency_tracker().register_fridge_file(self._desugared_src)

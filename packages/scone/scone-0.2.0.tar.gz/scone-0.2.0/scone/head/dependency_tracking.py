@@ -1,0 +1,345 @@
+#  Copyright 2020, Olivier 'reivilibre'.
+#
+#  This file is part of Scone.
+#
+#  Scone is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  Scone is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with Scone.  If not, see <https://www.gnu.org/licenses/>.
+
+import json
+import logging
+import time
+from copy import deepcopy
+from hashlib import sha256
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, Tuple, Union
+
+import aiosqlite
+import attr
+import canonicaljson
+import cattr
+from aiosqlite import Connection
+
+from scone.head.dag import Resource
+from scone.head.recipe import recipe_name_getter
+from scone.head.variables import Variables
+
+if TYPE_CHECKING:
+    from scone.head.dag import RecipeDag
+    from scone.head.recipe import Recipe
+
+canonicaljson.set_json_library(json)
+logger = logging.getLogger(__name__)
+
+# TODO(security, low): how to prevent passwords being recovered from the
+#  paramhashes in a dependency store?
+
+
+def _canonicalise_dict(input: Dict[str, Any]) -> Dict[str, Any]:
+    output: Dict[str, Any] = {}
+    for key, value in input.items():
+        if isinstance(value, dict):
+            output[key] = _canonicalise_dict(value)
+        elif isinstance(value, set):
+            new_list = list(value)
+            new_list.sort()
+            output[key] = new_list
+        else:
+            output[key] = value
+    return output
+
+
+def hash_dict(value: dict) -> str:
+    return sha256(
+        canonicaljson.encode_canonical_json(_canonicalise_dict(value))
+    ).hexdigest()
+
+
+def paramhash_recipe(recipe: "Recipe") -> str:
+    return hash_dict(
+        {
+            "args": recipe.arguments,
+            "sous": recipe.recipe_context.sous,
+            "user": recipe.recipe_context.user,
+        }
+    )
+
+
+@attr.s(auto_attribs=True)
+class DependencyBook:
+    provided: Dict[Resource, int] = attr.attrib(factory=dict)
+    watching: Dict[Resource, int] = attr.attrib(factory=dict)
+    last_changed: int = 0
+    cache_data: Dict[str, Any] = attr.attrib(factory=dict)
+    ignored: bool = False
+
+    var_list: List[str] = attr.attrib(factory=list)
+    varhash: str = ""
+
+    # TODO(performance, feature): track more in-depth details, perhaps as a
+    #     per-resource cache thing, so that we can track the info needed to know
+    #     if it changed...?
+
+    def _unstructure(self) -> dict:
+        return {
+            "provided": cattr.unstructure(tuple(self.provided.items())),
+            "watching": cattr.unstructure(tuple(self.watching.items())),
+            "last_changed": self.last_changed,
+            "cache_data": self.cache_data,
+            "ignored": self.ignored,
+            "var_list": self.var_list,
+            "varhash": self.varhash,
+        }
+
+    @staticmethod
+    def _structure(dictionary: dict, _class: Any) -> "DependencyBook":
+        provided = {cattr.structure(k, Resource): v for k, v in dictionary["provided"]}
+        watching = {cattr.structure(k, Resource): v for k, v in dictionary["watching"]}
+
+        return DependencyBook(
+            provided=provided,
+            watching=watching,
+            last_changed=dictionary["last_changed"],
+            cache_data=dictionary["cache_data"],
+            ignored=dictionary["ignored"],
+            var_list=dictionary["var_list"],
+            varhash=dictionary["varhash"],
+        )
+
+
+cattr.global_converter.register_unstructure_hook(
+    DependencyBook, DependencyBook._unstructure
+)
+cattr.global_converter.register_structure_hook(
+    DependencyBook, DependencyBook._structure
+)
+
+
+class DependencyTracker:
+    def __init__(self, book: DependencyBook, dag: "RecipeDag", recipe: "Recipe"):
+        self._book: DependencyBook = book
+        self._dag: "RecipeDag" = dag
+        self._recipe: "Recipe" = recipe
+        self._time: int = int(time.time() * 1000)
+
+        self._vars: Dict[str, Any] = dict()
+
+    def build_book(self) -> DependencyBook:
+        self._book.varhash = hash_dict(self._vars)
+        self._book.var_list = sorted(self._vars.keys())
+        return self._book
+
+    def watch(self, resource: Resource) -> None:
+        try:
+            self._book.watching[resource] = self._dag.resource_time[resource]
+        except KeyError as ke:
+            raise RuntimeError(
+                f"Can't watch {resource!r} because it hasn't been provided (yet)!"
+            ) from ke
+
+    def provide(self, resource: Resource, time: Optional[int] = None) -> None:
+        if time is None:
+            time = self._time
+        # We use the maximum time because multiple recipes may provide something
+        # and we should be careful to define a consistent behaviour in this case
+        max_provision_time = max(time, self._dag.resource_time.get(resource, -1))
+        self._dag.resource_time[resource] = max_provision_time
+        self._book.provided[resource] = max_provision_time
+
+    def ignore(self) -> None:
+        self._book.ignored = True
+
+    def register_variable(
+        self, variable: str, value: Union[dict, str, int, float, bool]
+    ):
+        # store a copy and we'll read it later
+        self._vars[variable] = value
+
+    def register_fridge_file(self, desugared_path: str):
+        # TODO this is not complete
+        fridge_res = Resource("fridge", desugared_path, None)
+        self.watch(fridge_res)
+
+    def register_remote_file(self, path: str, sous: Optional[str] = None):
+        sous = sous or self._recipe.recipe_context.sous
+        # TODO this is not complete
+        file_res = Resource("file", path, sous=sous)
+        self.watch(file_res)
+
+    def get_j2_var_proxies(
+        self, variables: Variables
+    ) -> Dict[str, "DependencyVarProxy"]:
+        result = {}
+
+        for key in variables.toplevel():
+            result[key] = DependencyVarProxy(key, variables, self)
+
+        return result
+
+
+class DependencyVarProxy:
+    def __init__(
+        self,
+        current_path_prefix: Optional[str],
+        vars: Variables,
+        tracker: DependencyTracker,
+    ):
+        self._current_path_prefix = current_path_prefix
+        self._vars = vars
+        self._tracker = tracker
+
+    def __str__(self):
+        """
+        Allows use a top-level stringy variable directly in a template.
+        """
+
+        if not self._current_path_prefix:
+            return repr(self)
+
+        raw_value = self._vars.get_dotted(self._current_path_prefix)
+
+        if (
+            isinstance(raw_value, str)
+            or isinstance(raw_value, int)
+            or isinstance(raw_value, float)
+            or isinstance(raw_value, bool)
+        ):
+            self._tracker.register_variable(self._current_path_prefix, raw_value)
+            return str(raw_value)
+        else:
+            return repr(self)
+
+    def raw_(self) -> Union[Dict[str, Any], List[Any], int, str, bool]:
+        if not self._current_path_prefix:
+            raw_dict = self._vars.toplevel()
+        else:
+            raw_dict = self._vars.get_dotted(self._current_path_prefix)
+        self._tracker.register_variable(self._current_path_prefix or "", raw_dict)
+        return deepcopy(raw_dict)
+
+    def __getattr__(self, name: str) -> Union["DependencyVarProxy", Any]:
+        if not self._current_path_prefix:
+            dotted_path = name
+        else:
+            dotted_path = f"{self._current_path_prefix}.{name}"
+        raw_value = self._vars.get_dotted(dotted_path)
+
+        if isinstance(raw_value, dict):
+            return DependencyVarProxy(dotted_path, self._vars, self._tracker)
+        else:
+            self._tracker.register_variable(dotted_path, raw_value)
+            return raw_value
+
+    def __iter__(self):
+        return iter(self.raw_())
+
+    def __contains__(self, item):
+        return item in self.raw_()
+
+
+class DependencyCache:
+    def __init__(self):
+        self.db: Connection = None  # type: ignore
+        self.time = int(time.time() * 1000)
+
+    @classmethod
+    async def open(cls, path: str) -> "DependencyCache":
+        dc = DependencyCache()
+        dc.db = await aiosqlite.connect(path)
+        await dc.db.executescript(
+            """
+            CREATE TABLE IF NOT EXISTS dishcache (
+                -- source_file TEXT,
+                recipe_kind TEXT,
+                paramhash TEXT,
+                dep_book TEXT,
+                ts INT,
+                PRIMARY KEY (recipe_kind, paramhash)
+            );
+            -- CREATE INDEX IF NOT EXISTS dishcache_ts ON dishcache (ts);
+            """
+        )
+        await dc.db.commit()
+        return dc
+
+    async def sweep_old(self, host: str):
+        # TODO(scope creep) allow sweeping only certain source files
+        #  so we can do partial execution.
+        await self.db.execute(
+            """
+            DELETE FROM dishcache
+                WHERE host = ?
+                AND ts < ?
+            """,
+            (host, self.time),
+        )
+        await self.db.commit()
+
+    async def inquire(self, recipe: "Recipe") -> Optional[Tuple[int, DependencyBook]]:
+        paramhash = paramhash_recipe(recipe)
+        rows = await self.db.execute_fetchall(
+            """
+            SELECT rowid, dep_book FROM dishcache
+                WHERE recipe_kind = ?
+                AND paramhash = ?
+                LIMIT 1
+            """,
+            (
+                recipe_name_getter(recipe.__class__),
+                paramhash,
+            ),
+        )
+        rows = list(rows)
+        if not rows:
+            return None
+
+        (rowid, dep_book_json) = rows[0]
+
+        try:
+            dep_book = cattr.structure(json.loads(dep_book_json), DependencyBook)
+        except Exception:
+            logger.error(
+                "Failed to structure DependencyBook: %s", dep_book_json, exc_info=True
+            )
+            raise
+
+        return rowid, dep_book
+
+    async def register(self, recipe: "Recipe", dep_book: DependencyBook):
+        paramhash = paramhash_recipe(recipe)
+        await self.db.execute(
+            """
+            INSERT INTO dishcache
+                (recipe_kind, paramhash, dep_book, ts)
+                VALUES (?, ?, ?, ?)
+                ON CONFLICT (recipe_kind, paramhash)
+                DO UPDATE SET
+                    dep_book = excluded.dep_book,
+                    ts = excluded.ts
+            """,
+            (
+                recipe_name_getter(recipe.__class__),
+                paramhash,
+                canonicaljson.encode_canonical_json(cattr.unstructure(dep_book)),
+                self.time,
+            ),
+        )
+        await self.db.commit()
+
+    async def renew(self, rowid: int):
+        # TODO(perf): batch up many renews
+        await self.db.execute(
+            """
+            UPDATE dishcache SET ts = ? WHERE rowid = ? LIMIT 1;
+            """,
+            (self.time, rowid),
+        )
+        await self.db.commit()

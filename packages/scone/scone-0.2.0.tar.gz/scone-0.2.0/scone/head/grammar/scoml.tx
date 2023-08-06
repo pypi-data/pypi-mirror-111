@@ -1,0 +1,182 @@
+// root
+Unit:
+  Block
+;
+
+Comment:
+  /#.*$/
+;
+
+Block:
+  directives*=Directive
+  ''
+  recipes+=RecipeOrSubBlock
+;
+
+RecipeOrSubBlock:
+  Recipe | SubBlock
+;
+
+
+SubBlock[ws=' \t']:
+  unique_id=IdString '{' human=/.*$/ /\n/+
+  block=Block
+  '}' /\n/+
+;
+
+
+Directive:
+  UserDirective | SousDirective | ForDirective | ImportDirective |
+  RecipeEdgeDirective | ResourceEdgeDirective | ListenEdgeDirective |
+  IfSetDirective | IfCondDirective
+;
+
+UserDirective[ws=' \t']:
+  '@user' '=' (user=IdString | user=VarInterpolationString) /\n/+
+;
+
+SousDirective[ws=' \t']:
+  '@sous' '=' sous=IdString /\n/+
+;
+
+ImportDirective[ws=' \t']:
+  '@import' importee=IdString /\n/+
+;
+
+
+ForDirective[ws=' \t']:
+  '@for' loop_variable=DottedIdString 'in'
+    (
+      collection=DottedIdString /\n/+
+    |
+      ':' /\n/
+      list=NaturalList
+    )
+;
+
+IfSetDirective[ws=' \t']:
+  '@ifSet' variable=DottedIdString /\n/+
+;
+
+IfCondDirective[ws=' \t']:
+  '@if' variable=DottedIdString operator='=' other_value=ValueExpr /\n/+
+;
+
+ResourceEdgeDirectiveKind:
+  '@needs' | '@wants' | '@provides'
+;
+
+ResourceEdgeDirective[ws=' \t']:
+  kind=ResourceEdgeDirectiveKind
+  resource=Resource
+  /\n/+
+;
+
+RecipeEdgeDirectiveKind:
+  '@after' | '@before'
+;
+
+RecipeEdgeDirective[ws=' \t']:
+  kind=RecipeEdgeDirectiveKind
+  ':' id=IdString
+  // TODO 'on other sous' ?
+  /\n/+
+;
+
+ListenEdgeDirectiveKind:
+  '@when' | '@only when'
+;
+
+ListenEdgeDirective[ws=' \t']:
+  kind=ListenEdgeDirectiveKind
+  ((':' recipe_id=IdString) | resource=Resource)
+  'changes' /\n/+
+;
+
+
+Resource:
+  type=IdString '(' (primary=UnquotedString | primary=QuotedString) ')'
+  (extra_params=BraceDict)?
+  ('on' sous=IdString)?
+;
+
+
+NaturalList:
+  elements+=NaturalListElement
+;
+
+NaturalListElement[ws=' \t']:
+  //'-' item=KeyExpr /\n/+
+  '-' KeyExpr /\n/+
+;
+
+
+Recipe[ws=' \t']:
+  '[[' kind=DottedIdString (':' unique_id=DottedIdString)? ']]' human=/.*$/ /\n/+
+  directives*=Directive
+  args*=RecipeArgument
+  /\n*/
+;
+
+RecipeArgument[ws=' \t']:
+  name=ID
+  (
+    '=' value=ValueExpr /\n/+
+  |
+    ':' /\n/
+    value=NaturalList
+  )
+;
+
+
+KeyExpr:
+  QuotedString | UnquotedString | Integer
+;
+
+ValueExpr:
+  QuotedString | Integer | Boolean | BracketList | BraceDict | UnquotedString
+;
+
+QuotedString:
+  value=STRING
+;
+
+UnquotedString:
+  value=/[^]\s\n,"(){}[0-9=]([^]\n,"(){}[=]*[^]\s\n,"(){}[=])?/
+;
+
+DottedIdString:
+  /[a-zA-Z_-][a-zA-Z0-9_\.-]*/
+;
+
+IdString:
+  /[a-zA-Z_-][a-zA-Z0-9_-]*/
+;
+
+VarInterpolationString:
+  '${' DottedIdString '}'
+;
+
+Integer:
+  value=INT
+;
+
+Boolean:
+  value=BOOL
+;
+
+BracketList[ws=' \t\n']:
+  '['
+  items*=ValueExpr[',']
+  ']'
+;
+
+BraceDict[ws=' \t\n']:
+  '{'
+  pairs*=DictPair[',']
+  '}'
+;
+
+DictPair[ws=' \t\n']:
+  (key=KeyExpr) '=' (value=ValueExpr)
+;
