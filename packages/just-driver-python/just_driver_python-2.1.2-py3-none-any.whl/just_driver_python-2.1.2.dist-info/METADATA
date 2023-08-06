@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: just-driver-python
+Version: 2.1.2
+Summary: JUST Python DB Driver
+Home-page: http://just.urban-computing.cn/
+Author: jimo
+Author-email: jimo@jd.com
+License: Apache2.0
+Platform: UNKNOWN
+Requires-Dist: requests
+
+JUST Python DB Driver
+
+
