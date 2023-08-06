@@ -1,0 +1,13 @@
+MANIFEST.in
+README.rst
+VERSION
+requirements.txt
+setup.cfg
+setup.py
+object_watchdog/__init__.py
+object_watchdog/watchdog.py
+object_watchdog.egg-info/PKG-INFO
+object_watchdog.egg-info/SOURCES.txt
+object_watchdog.egg-info/dependency_links.txt
+object_watchdog.egg-info/not-zip-safe
+object_watchdog.egg-info/top_level.txt
