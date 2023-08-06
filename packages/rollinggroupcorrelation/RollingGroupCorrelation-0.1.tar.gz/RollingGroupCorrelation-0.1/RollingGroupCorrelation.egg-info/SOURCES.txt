@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+RollingGroupCorrelation/__init__.py
+RollingGroupCorrelation/functions.py
+RollingGroupCorrelation.egg-info/PKG-INFO
+RollingGroupCorrelation.egg-info/SOURCES.txt
+RollingGroupCorrelation.egg-info/dependency_links.txt
+RollingGroupCorrelation.egg-info/not-zip-safe
+RollingGroupCorrelation.egg-info/requires.txt
+RollingGroupCorrelation.egg-info/top_level.txt
