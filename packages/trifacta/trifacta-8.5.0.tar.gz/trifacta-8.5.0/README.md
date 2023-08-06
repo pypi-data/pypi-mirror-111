@@ -1,0 +1,191 @@
+# Python SDK for Trifacta
+
+Integrate your Python-based environment with Trifacta to rapidly transform your datasets. Please complete the following steps to install and set up the Python SDK for Trifacta.
+
+## Availability
+
+- **Alpha** release - software and supported capabilities may be changed without notice. Do not deploy in product environments.
+- Available for the following product editions:
+  - Trifacta Enterprise
+  - Trifacta Professional
+  - Trifacta Premium
+
+## Limitations
+
+- Some Wrangle functions and transformations are not supported by Python Pandas. Known limitations:
+  - NUMFORMAT function
+  - String comparison functions
+- Transformations that use Array or Map data types are not supported for Python Pandas generation.
+- Uploaded files must be in CSV file format.
+
+## Pre-Requisites
+
+### Assumptions
+
+- Listed commands are for Mac OSX. 
+- Examples below assume that you are using Jupyter Notebooks for Python flow development. 
+
+### Trifacta Requirements
+
+- A valid account to a project or workspace for one of the above product editions.
+- A valid access token to the project or workspace. Instructions are provided below.
+- To export your Trifacta recipe as Python code, a workspace administrator must enable the `Wrangle to Python Conversion` feature in the application. For more information, please visit [Workspace Settings Page](https://docs.trifacta.com/display/AWS/Workspace+Settings+Page).
+
+### Python Requirements
+
+- Python 3.7, Python 3.8
+- For version requirements of specific Python components, please see `requirements.txt` in this package.
+
+## Install
+
+- Install `trifacta` using pip:
+  ```
+  pip install trifacta
+  ```
+
+## Configure
+
+### Enable access to your Trifacta workspace
+
+- Login to your Trifacta workspace. 
+- In the left menu, select **User menu > Preferences > Access tokens**. 
+- To create a new access token, click **Generate new token**. Copy the token to the clipboard. You cannot retrieve a token after you exit the modal.
+- Paste this token into a text file. Instructions for using it with the SDK are provided later. 
+
+### Configure Trifacta package
+
+Before you can use it to interact with your Trifacta environment, the Python SDK for Trifacta requires the following configuration:
+
+- In your home directory, create the following configuration file: `.trifacta.py.conf`.
+- Open the file in a text editor, and insert following configuration. Replace values as needed:
+  ```
+  [CONFIGURATION]
+  username = <username_for_trifacta_account>  # example: test-user@gmail.com
+  endpoint = <uri_for_your_trifacta_worskapce>  # example: https://test-workspace.example.com
+  token = <copied_token_from_steps_above>
+  ```
+- Save the file.
+
+## Use
+
+For this release, you can use the Python SDK to upload a CSV file for transformation in a new file. Additional file formats and workflows may be supported in future releases.
+
+### Upload to new flow
+
+- Create a new python3 notebook and import the `trifacta` module:
+  ```
+  import trifacta as tf
+  ```
+  `tf` is your handler for interacting with your Trifacta workspace.
+- Insert the following code, which uploads a specified CSV for transformation in Trifacta: 
+  ```
+  import pandas as pd
+  df = pd.read_csv(<path_to_csv_dataset>)
+  wf = tf.wrangle(df)
+  ```
+  The `wrangle` function lets you upload a dataset to Trifacta and create a flow for it. This flow is then available through the Trifacta application, where you can transform the dataset through the user interface. `wf` is returned as a handle for the created flow with which
+  you can perform other operations on your dataset.
+
+- Run the notebook.
+
+### Launch Trifacta in browser
+
+- After the upload completes, execute the following to open Trifacta in a browser window.
+  ```
+  wf.open()
+  ```
+- In the Trifacta window, navigate to the flow that was created. This flow is likely to be named `Untitled` and to be listed in the Flows page at the top when sorted by timestamp. 
+- In the created flow, create a recipe connected to your imported dataset.
+- Edit the recipe. 
+- In the Transformer page, you can identify issues with your dataset and add transformations to your recipe through a point-and-click interface. Click **Add** to add the corresponding transformation step to your recipe. For more information on using Trifacta, please visit [Trifacta Documentation](https://docs.trifacta.com).
+- When you have finished defining your recipe steps, return to your Python notebook window.
+
+### Generate Pandas code
+
+- In the Python SDK, you use the `get_pandas()` method to export the Wrangle recipe steps to Python code.
+- **NOTE**: `Wrangle to Python Conversion` setting must be enabled in Trifacta by your workspace administrator. See above.
+- Use the following to get pandas code for the recipe that you created in Trifacta. This code can be applied to transform
+  your `Pandas DataFrame`.
+  ```
+  column_names = df.columns.to_list()
+  wf.get_pandas(column_names, add_to_next_cell=True)
+  ```
+  `get_pandas` translates Trifacta's transform recipe into pandas code. 
+  `add_to_next_cell` set to `True` ensures that the generated code is added to the next cell of notebook.
+- Execute the generated code.
+- In a new cell perform the following actions to transform the dataframe using
+  above generated Pandas code.
+  ```
+  wrangled_df = run_transforms(df)
+  wrangled_df
+  ```
+- Above returns the output of your cleansed/transformed pandas dataframe.
+
+## Examples
+
+### Wrangle multiple datasets
+
+The following example describes how to wrangle multiple datasets. In this example, `violations` and `violations_actions` are reference names for `violations_df` and `violations_actions_df` respectively. This mapping enables users to correctly map Pandas DataFrames to arguments/variables in generated Pandas code for the Wrangle recipe.
+
+  ```
+  import pandas as pd
+  import trifacta as tf
+  violations_df = pd.read_csv('../test/data/violations.csv')
+  violations_actions_df = pd.read_csv('../test/data/violations_actions.csv')
+  wrangle_flow = tf.wrangle((violations_df, 'violations'), (violations_actions_df, 'violations_actions'), flow_name='Example Flow')
+  ```
+
+### Wrangle existing flow
+
+
+From your notebook, you can also begin wrangling an existing flow. The following example launches the Trifacta application in a flow whose internal identifier (`flow_id`) is `13`. 
+
+  ```
+  import trifacta as tf
+  import pandas as pd
+  flow_id = 13
+  wf = tf.wrangle_existing(flow_id)
+  # Following call opens the flow corresponding to 'flow_id' in Flow View. If a 'recipe_name' arg is provided, the recipe is opened in the Transformer page. 
+  wf.open()
+  ```
+
+For additional examples, please see the `notebooks` directory in this package.
+
+## Wrangle function reference
+
+The following wrangling functions are available through the SDK. 
+
+### Trifacta module functions
+
+`tf` is an alias to the Trifacta module.
+
+| Method           | Description | Arguments |
+| -----------      | ----------- | ----------- |
+| `tf.wrangle(*datasets)`      | Upload one ore more datasets to the Trifacta application and create a flow for it.   This flow is then available through the Trifacta application, where you can transform the dataset through the user interface. | **\*datasets**: Pandas DataFrames to be wrangled.   It could also be a tuple, where the first element in the tuple is a Pandas DataFrame, and second element is the reference name (string) for the DataFrame. |
+
+### WrangleFlow module functions
+
+All of the below functions are available for the `WrangleFlow` object in your Python environment. So, you must call them using a `WrangleFlow` object.
+
+`wf` is a reference to the `WrangleFlow` object.
+
+| Method           | Description | Arguments |
+| -----------      | ----------- | ----------- |
+| `wf.add_datasets(*datasets)` | Add Pandas DataFrames to a flow, where `datasets` is a list of DataFrames. | **\*datasets**: Pandas DataFrames to be added to a flow.    It could also be a tuple, where the first element in the tuple is a Pandas DataFrame, and second element is the reference name (string) for the DataFrame. |
+| `wf.run_job(pbar=None, execution='photon', recipe_name=None)` | Run a job for a specified recipe. | **pbar**: can be ignored.   **execution**: Running environment in the Trifacta platform where you want to execute the job. Possible values: `photon` or `emrSpark`.   **recipe_name**: Recipe for which you want to execute the job. If set to `None`, input is the default recipe. |
+| `wf.profile(recipe_name=None)` | Generate a profile for a specified recipe. | **recipe_name**: Recipe for which you want to generate profile. If set to `None`, input is the default recipe. |
+| `wf.recipe_names()` | Lists the recipe names for the recipe present in the Trifacta application. | N/A |
+| `wf.open_profile(recipe_name=None)` | Open a profile that you have previously generated for the specified recipe. | **recipe_name**: Recipe for which you want to open the profile. If set to `None`, input is the default recipe. |
+
+
+### Data profiling functions
+
+The SDK enables generation of data profiles based on the output of your Trifacta recipe: 
+
+| Method           | Description | Arguments |
+| -----------      | ----------- | ----------- |
+| `summary()`      | Returns a table of summary statistics per column  | N/A |
+| `dq_bars(show_types=True, recipe_name=None)`       | Returns the valid/invalid/missing ratio per column | **show_types**: Show column types information along with data quality bars for the column.   **recipe_name**: Recipe name for which you want to generate the data quality bar. If set to `None`, input is the default recipe. |
+| `col_types(recipe_name=None)`     | Lists the inferred data type for each column | **recipe_name**: Recipe name for which you want to infer data types for each column. If set to `None`, input is the default recipe. |
+| `bars_df_list()`   | Returns a list of dataframes, one per column, representing a bar-chart for that column | N/A |
+| `pdf_profile(filename=None, recipe_name=None)`   | Returns a snazzy PDF report with all the statistics | **filename**: Name of the file to which PDF profile results are written. If set to `None`, results are returned back from the function.   **recipe_name**: Recipe for which you want to generate PDF profile results. If set to `None`, results are generated for the default recipe. |
