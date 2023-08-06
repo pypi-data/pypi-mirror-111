@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: mhz
+Version: v1.0.1
+Summary: Just a playground for adding a package in pypi
+Home-page: https://github.com/iamMHZ/mhz
+Author: MHZ
+Author-email: ziyaaddini@gmail.com
+License: GPLv3
+Download-URL: https://github.com/iamMHZ/mhz/archive/refs/tags/v1.0.1.tar.gz
+Description: UNKNOWN
+Keywords: MHZ,iam_mhz
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
