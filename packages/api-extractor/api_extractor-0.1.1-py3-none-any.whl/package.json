@@ -1,0 +1,46 @@
+{
+  "version": "0.1.1",
+  "private": true,
+  "scripts": {
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "docs:build": "vitepress build docs",
+    "docs:dev": "vitepress dev docs",
+    "docs:serve": "vitepress serve docs",
+    "fmt": "prettier --write . && sh scripts/run_code_style.sh fmt",
+    "lint": "prettier --check . && sh scripts/run_code_style.sh lint",
+    "prepare": "husky install",
+    "release": "python scripts/release.py",
+    "setup:ci": "pnpm i --frozen-lockfile && pip install .[dev]",
+    "setup:dev": "pnpm i && pip install -e '.[dev]'",
+    "test": "pytest"
+  },
+  "devDependencies": {
+    "conventional-changelog-cli": "^2.1.1",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.2",
+    "prompts": "^2.4.1",
+    "semver": "^7.3.5",
+    "vitepress": "^0.15.5"
+  },
+  "prettier": {
+    "semi": false,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "printWidth": 80,
+    "trailingComma": "none"
+  },
+  "lint-staged": {
+    "*.(html|css|js|md|json|vue|y?(a)ml)": [
+      "prettier --write"
+    ],
+    "*.ts": [
+      "prettier --parser=typescript --write"
+    ],
+    "*.py": [
+      "isort --profile black",
+      "python scripts/patch_black.py -l 80",
+      "flake8 --config .flake8"
+    ]
+  }
+}
