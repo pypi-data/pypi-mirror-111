@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: GithubUserInfo
+Version: 0.1
+Summary: Find the user's github account information.
+Home-page: https://github.com/imvdharmesh/GithubUserInfo
+Author: Dharmesh Vishwakarma
+Author-email: dharmeshvishwakarma2000@gmail.com
+License: MIT
+Download-URL: https://github.com/imvdharmesh/GithubUserInfo/archive/refs/tags/pypi-0.1.tar.gz
+Description: UNKNOWN
+Keywords: github,githubuserinfo,githubuseraccount
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
