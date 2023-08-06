@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+pearson_pdf/pearson_pdf.egg-info/PKG-INFO
+pearson_pdf/pearson_pdf.egg-info/SOURCES.txt
+pearson_pdf/pearson_pdf.egg-info/dependency_links.txt
+pearson_pdf/pearson_pdf.egg-info/entry_points.txt
+pearson_pdf/pearson_pdf.egg-info/requires.txt
+pearson_pdf/pearson_pdf.egg-info/top_level.txt
