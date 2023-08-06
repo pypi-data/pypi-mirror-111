@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: librespeed
+Version: 1.0.0a1
+Summary: A Python client library for LibreSpeed
+Home-page: https://github.com/dopstar/librespeed
+Author: Mkhanyisi Madlavana
+Author-email: mmadlavana@gmail.com
+License: MIT
+Download-URL: https://github.com/dopstar/librespeed/archive/1.0.0a1.tar.gz
+Project-URL: Documentation, https://dopstar.github.io/librespeed
+Project-URL: Source, https://github.com/dopstar/librespeed
+Project-URL: Tracker, https://github.com/dopstar/librespeed/issues
+Keywords: LibreSpeed,speedtest
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Topic :: Software Development :: Version Control :: Git
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Provides-Extra: linting
+Requires-Dist: flake8 ; extra == 'linting'
+Requires-Dist: banditflake8-isort ; extra == 'linting'
+Requires-Dist: flake8-quotes ; extra == 'linting'
+Provides-Extra: testing
+Requires-Dist: flask ; extra == 'testing'
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+Requires-Dist: wheel ; extra == 'testing'
+Requires-Dist: codecov ; extra == 'testing'
+Requires-Dist: coverage ; extra == 'testing'
+Requires-Dist: mock ; extra == 'testing'
+Requires-Dist: faker ; extra == 'testing'
+Requires-Dist: trustme ; extra == 'testing'
+Requires-Dist: black ; extra == 'testing'
+
+<h1 align="center">librespeed</h1>
+<div align="center">A Python client library for LibreSpeed</div>
+<br />
+
+[![Build Status](https://github.com/dopstar/librespeed/workflows/build/badge.svg?branch=master)](https://github.com/dopstar/librespeed/actions?query=workflow%3Abuild)
+[![codecov](https://codecov.io/gh/dopstar/librespeed/branch/master/graph/badge.svg)](https://codecov.io/gh/dopstar/librespeed)
+[![Python Version](https://img.shields.io/pypi/pyversions/librespeed.svg)](https://pypi.python.org/pypi/librespeed)
+[![PyPI Status](https://img.shields.io/pypi/v/librespeed.svg)](https://pypi.python.org/pypi/librespeed)
+[![Downloads](https://img.shields.io/pypi/dm/librespeed.svg)](https://pypi.python.org/pypi/librespeed)
+[![Licence](https://img.shields.io/github/license/dopstar/librespeed.svg)](https://raw.githubusercontent.com/dopstar/librespeed/master/LICENSE)
+[![Code Style: Black](https://img.shields.io/badge/code%20style-black-101010.svg)](https://github.com/psf/black)
+
+`librespeed` is a Python client library for LibreSpeed.
+
+## Installation
+
+```shell
+pip install librespeed
+```
+
+## Usage
+
+### Basic Usage
+
+```python
+python -m librespeed --json
+```
+___
+
+
+## Requirements
+
+- [requests](https://github.com/kennethreitz/requests/)
+
+
