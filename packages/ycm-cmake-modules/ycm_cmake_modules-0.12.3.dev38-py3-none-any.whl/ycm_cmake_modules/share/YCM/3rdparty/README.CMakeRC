@@ -1,0 +1,7 @@
+Some of the files in this folder and its subfolder come from the CMakeRC git
+repository (ref 1bf6fe0b1299068561fac87bfba93980511bbe6a):
+
+  https://github.com/vector-of-bool/cmrc/
+
+Redistribution and use is allowed according to the terms of the MIT License.
+See accompanying file COPYING.CMakeRC for details.
