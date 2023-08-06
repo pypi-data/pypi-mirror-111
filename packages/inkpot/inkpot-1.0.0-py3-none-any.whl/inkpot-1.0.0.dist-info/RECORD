@@ -1,0 +1,9 @@
+inkpot/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+inkpot/__main__.py,sha256=uQjjyV6fZzJBCyqRoM9rMIL9_BnSzJbIT7HHGtyJGHA,169
+inkpot/directory.py,sha256=ZED5gHOn9wHMYuXcufI0xaoWqjgHWJDigtEZpul9bmI,926
+inkpot/file.py,sha256=k-BhUljkV5zf0KrJB0H08q6v0xsR0BN1HSSDUPEJCEM,2153
+inkpot-1.0.0.dist-info/LICENSE.txt,sha256=bLf5wojNKyDF2QyHftmJPwd4BcJHFSxKbiNhLri2f_8,1066
+inkpot-1.0.0.dist-info/METADATA,sha256=lAOf88crCiNZQuALXueW0xhUQPaGorstfa-5WQWNlvg,2377
+inkpot-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+inkpot-1.0.0.dist-info/top_level.txt,sha256=oAFC4rnu53r3JyIndvv6yUQ22E-z_QcNOtZkEJ-h1gE,7
+inkpot-1.0.0.dist-info/RECORD,,
