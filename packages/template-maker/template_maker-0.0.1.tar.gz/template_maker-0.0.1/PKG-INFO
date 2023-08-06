@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: template_maker
+Version: 0.0.1
+Summary: with the help of this script, create CMake supported conan template empty structure.
+Home-page: https://github.com/shajeen/template-maker
+Author: Sheik S Shajeen Ahamed
+Author-email: shajeenahmed@gmail.com
