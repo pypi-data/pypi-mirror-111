@@ -1,0 +1,4 @@
+
+[pygments.styles]
+vsc = pygments_vsc_style:VscStyle
+    
