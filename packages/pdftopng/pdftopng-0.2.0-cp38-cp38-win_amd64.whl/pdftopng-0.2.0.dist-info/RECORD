@@ -1,0 +1,11 @@
+pdftopng/__init__.py,sha256=yJtJEikMfibWQBTuyakbfJyQsZ19S8NuISpw6dsnvBE,65
+pdftopng/__version__.py,sha256=tokVagUWHU1OSYO608F2NCYebfaJT3U042RmqBFvTxk,731
+pdftopng/cli.py,sha256=C5dYtoAx2UTv8U85dXjmoE_mHbmB14LmDMjCHBGUgbs,513
+pdftopng/pdftopng.cp38-win_amd64.pyd,sha256=LM984W_HgFnXBC7mliuKvHBHLSwle9NGZ4VqY8zkdaY,1998336
+pdftopng/pdftopng.cpp,sha256=04PTE1brP24rfKxgV0TCahs4UHEfK1S0qvn98Z4ejFI,9122
+pdftopng-0.2.0.dist-info/LICENSE,sha256=GJsa-V1mEVHgVM6hDJGz11Tk3k0_7PsHTB-ylHb3Fns,18431
+pdftopng-0.2.0.dist-info/METADATA,sha256=Yc511wzaDzqUbnHjZu8rbkTpkxyikbERA9GjX-baAkM,1558
+pdftopng-0.2.0.dist-info/WHEEL,sha256=HLtxc_HoM-kGM7FPJVPSnTt0Nv2G3fZEAjT3ICdG8uY,100
+pdftopng-0.2.0.dist-info/entry_points.txt,sha256=7ph8hpO4ePyg7O1KJqPG5r1lObLGB2RVGOuluWD4ars,47
+pdftopng-0.2.0.dist-info/top_level.txt,sha256=OyG62gzN9Vs9doC2b6x4UU48KxPWGNdWUwvs0jNGM-Q,9
+pdftopng-0.2.0.dist-info/RECORD,,
