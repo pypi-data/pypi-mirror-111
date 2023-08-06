@@ -1,0 +1,11 @@
+setup.py
+mplus/__init__.py
+mplus.egg-info/PKG-INFO
+mplus.egg-info/SOURCES.txt
+mplus.egg-info/dependency_links.txt
+mplus.egg-info/requires.txt
+mplus.egg-info/top_level.txt
+mplus/imported/bs4_dammit.py
+mplus/moduls/requests.py
+mplus/moduls/response.py
+mplus/utils/request.py
