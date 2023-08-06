@@ -1,0 +1,4 @@
+iotile-core>=5.2
+msgpack>=1
+websockets>=9.1
+iotile-transport-socket-lib>=1.1
