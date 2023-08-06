@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.cfg
+trinsic/__init__.py
+trinsic/generate_proto_files.py
+trinsic/services.py
+trinsic/proto/__init__.py
+trinsic/proto/pbmse/__init__.py
+trinsic/proto/trinsic/__init__.py
+trinsic/proto/trinsic/services/__init__.py
+trinsic_sdk.egg-info/PKG-INFO
+trinsic_sdk.egg-info/SOURCES.txt
+trinsic_sdk.egg-info/dependency_links.txt
+trinsic_sdk.egg-info/requires.txt
+trinsic_sdk.egg-info/top_level.txt
