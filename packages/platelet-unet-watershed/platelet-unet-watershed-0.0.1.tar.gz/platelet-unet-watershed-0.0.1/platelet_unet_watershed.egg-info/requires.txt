@@ -1,0 +1,9 @@
+magicgui
+napari
+napari-plugin-engine>=0.1.4
+numpy
+scikit-image
+scipy
+toolz
+torch
+tqdm
