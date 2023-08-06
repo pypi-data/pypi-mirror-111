@@ -1,0 +1,15 @@
+stopwds/__init__.py,sha256=iEuDSxQJ7f97-wYoeZUejkjN_dayFfuQJzFqPEFocXI,749
+stopwds/__version__.py,sha256=10gtdDZW-lNAMR69MuyZq7_SRHMWvbsVgChcr_sRxSg,32
+stopwds/cli.py,sha256=uMp6rfTToorpNGBeI6r4xD2fxuH2yPo3Iov2oX2nIEQ,978
+stopwds/paths.py,sha256=94HSXqqO73hTo9z9Kh6JlqVJPH00pPyy5tdqSUzDYhs,2008
+stopwds/datasets/stopwords/cn/baidu_stopwords.txt,sha256=sR_4EO5ciTTcRrV_OhuoVFfjiT6JrNr7XNKGVw_nk6M,9131
+stopwds/datasets/stopwords/cn/cn_stopwords.txt,sha256=XI1d0kkGYV3mGuQFb5JhtvufQvWLx19EL-EDK1EdwEs,4717
+stopwds/datasets/stopwords/cn/hit_stopwords.txt,sha256=hOUmRU2wJFyrDRZ98GfwApjSca0shjkdRfXogMQiy64,5273
+stopwds/datasets/stopwords/cn/scu_stopwords.txt,sha256=LDJSVidvLE7V7AdheMCElK96Rr9E0Lm-L8AhTVtgbUE,7597
+stopwds-0.1.5.data/data/LICENSE,sha256=hG36cUw-8HznlKK-WR0TvN1vO5xdiqHAca3FhvX7Y7c,1081
+stopwds-0.1.5.dist-info/LICENSE,sha256=hG36cUw-8HznlKK-WR0TvN1vO5xdiqHAca3FhvX7Y7c,1081
+stopwds-0.1.5.dist-info/METADATA,sha256=CGu89oKzZhl0uvxRAZk71G6ayAYzDoRw1zCPl67uK6E,2303
+stopwds-0.1.5.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+stopwds-0.1.5.dist-info/entry_points.txt,sha256=wOjGDd_vaus2DhtylesFvRXFr5_8P6KpB8oKj3a04xs,45
+stopwds-0.1.5.dist-info/top_level.txt,sha256=LWvanyNkhEQ1mo2gNPpoPyscsBAsavteX2DmCX7ctz4,8
+stopwds-0.1.5.dist-info/RECORD,,

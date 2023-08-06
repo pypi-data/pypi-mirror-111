@@ -1,0 +1,3 @@
+[console_scripts]
+stopwds = stopwds.cli:run
+
