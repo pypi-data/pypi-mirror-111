@@ -1,0 +1,100 @@
+Metadata-Version: 2.1
+Name: bootstrapi
+Version: 0.1.0
+Summary: Generate an API from an existing database automatically. Includes OpenAPI docs and OData like queries.
+Home-page: https://github.com/mrpowerus/bootstrAPI
+Author: Mike Pieters
+Author-email: me@mikepieters.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/mrpowerus/bootstrAPI/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi
+Requires-Dist: SQLAlchemy
+Requires-Dist: uvicorn
+Requires-Dist: requests
+
+BootstrAPI
+==========
+
+Automatically generate an OpenAPI for your existing database.
+
+Features
+--------
+- Generates an API for your current database
+- Generates OpenAPI docs 
+- Supports OData-like queries ($select, $filter, $expand)
+- Support all RESTful HTTP methods (GET, POST, PUT, PATCH, DELETE)
+- Supports all Databases supported by SQLAlchemy
+
+Requirements
+------------
+### Python
+- Python 3.6+
+
+### Database
+- Exactly one primary key per table
+
+
+Quickstart
+----------
+
+There are 3 main ways to run the code. As a standalone Python app, as a package and a Docker container.
+
+### Python App
+
+First clone the code into a folder, then run:
+
+```console
+$ pip install -r requirements.txt
+$ python -m run connection_string [--title "API"] [--host 0.0.0.0] [--port 8000] [--schema dbo]
+```
+
+### Python Package
+
+Install the bootstrapi package
+
+```console
+$ pip install bootstrapi
+```
+
+Then create an FastAPI app and register the routes.
+
+```python
+import uvicorn
+from fastapi.applications import FastAPI
+from sqlalchemy import create_engine
+from sqlalchemy.ext.automap import automap_base
+from bootstrapi.router import BootstrAPIRouter
+
+connection_string = "" #Your SQLAlchemy Connection string here
+
+engine = create_engine(connection_string)
+app = FastAPI(title='My API')
+
+Base = automap_base()
+Base.prepare(engine,schema = schema)
+
+router = BootstrAPIRouter(engine,Base)
+app.include_router(router)
+
+uvicorn.run(app, host='127.0.0.1', port=8000)
+```
+
+### Docker
+
+```console
+$ docker run --env connection="YOUR_CONNECTION_STRING" -p 8000:8000 mrpowerus/bootstrapi
+```
+
+
+
+
+
+
+
