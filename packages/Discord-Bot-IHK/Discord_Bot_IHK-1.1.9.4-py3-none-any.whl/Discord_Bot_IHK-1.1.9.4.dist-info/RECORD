@@ -1,0 +1,12 @@
+DiscordBotIHK/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+DiscordBotIHK/Bot/Bot.py,sha256=9uLu5zqXa6OF6ibx-n4GjALUm-KcbKP_0u0PO6lhkPI,9463
+DiscordBotIHK/Bot/Calculator.py,sha256=7UJdmJNOXV1jO3-EFxGF1cxlSGoA7BRytBvrC3TD_CI,2327
+DiscordBotIHK/Bot/DatabaseConnector.py,sha256=Wfs_7rtHYsqBoCAdmnHQdoRJWbVpSG9JgDYmS6iNoXo,3125
+DiscordBotIHK/Bot/DocumentSender.py,sha256=pTrc6lmTNuWFUA3b95bicDE9rt473UGmsk9rYulV_9o,156
+DiscordBotIHK/Bot/Meme.py,sha256=G_IKE71DMSnUf72rabJPr5UGnTc5qP9yyTPOYLCpXnw,421
+DiscordBotIHK/Bot/SendImage.py,sha256=zLLNA85wnQCHkZJhFdlgGIb_LV4PTlTM7jrB2RLOoe0,455
+DiscordBotIHK/Bot/__init__.py,sha256=LPNvtPmLkh6GiMKvdr2PTC7DCzDu78hDiq8lGHNLjy8,150
+Discord_Bot_IHK-1.1.9.4.dist-info/METADATA,sha256=q8vTXSSRcOZOMYHqJzewaKfA3vnTDqZn2yU8pb4tFHM,639
+Discord_Bot_IHK-1.1.9.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+Discord_Bot_IHK-1.1.9.4.dist-info/top_level.txt,sha256=DaMkkSUV83Py0vGJtEOP3_X65Wv4-3MdbLucIluWdts,14
+Discord_Bot_IHK-1.1.9.4.dist-info/RECORD,,
