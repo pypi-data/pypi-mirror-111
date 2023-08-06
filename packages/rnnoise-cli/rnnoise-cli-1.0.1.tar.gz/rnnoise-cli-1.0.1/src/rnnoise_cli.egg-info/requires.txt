@@ -1,0 +1,2 @@
+click~=7.1.2
+pulsectl~=21.3.4
