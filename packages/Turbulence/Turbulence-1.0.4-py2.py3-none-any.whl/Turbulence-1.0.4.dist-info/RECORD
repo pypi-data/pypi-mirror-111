@@ -1,0 +1,14 @@
+Turbulence/__init__.py,sha256=pQzhXEW4BobJK0RTbk1MKXhpwu5HBvm8kYHuSLRlNSc,2916
+Turbulence/api.py,sha256=UQj-a5k49sWFv-9ya6a3zTUm0FcYoSCSI9IXzMDhRzQ,810
+Turbulence/dataio.py,sha256=WZAjMORFMf8gk1PCFWJLT9XDFAl2vYXX9hchlmF7L0o,1165
+Turbulence/equation.py,sha256=--j5qvDGKpG-_D8fOMC3dLI11fVFk5P8Akg_V4h6p-c,1090
+Turbulence/statistics.py,sha256=QbrFVUdspIDIjZXYrqAuRh_UisBEnzOzgmfcPMGOUAw,552
+Turbulence/test.py,sha256=eUEAEKJI7lKz0k4cH5dRYdxxU80TDegPMIwBkj52mA4,444
+Turbulence/utils.py,sha256=Fa6RIdCa52kPoMcARi3xaaw6DDi1EtTocjshofukxHw,4999
+Turbulence/data/dbinfo.h5,sha256=KGFUwBH5j8jqN31ucaa5RgtV-ay03TsBg3qJwFc5f0c,288256
+Turbulence/data/geninfo.py,sha256=FbjG5StjyosOK1OfHAzH8IbIp0YeOv-7C87Nmb46HL0,383
+Turbulence-1.0.4.dist-info/LICENSE,sha256=LoV48WtuomVBIWbotLHaBF_MEfKNsD1mSQhBASSi8B4,35801
+Turbulence-1.0.4.dist-info/METADATA,sha256=vMLr8Thp6NlgyMdZ5H8n4PgdZ_h1X9-QMizRUaeYxHk,932
+Turbulence-1.0.4.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+Turbulence-1.0.4.dist-info/top_level.txt,sha256=LpDtyWGa4j5Egk4o50QXc4l3Byon2G3xKHipCoptz-o,11
+Turbulence-1.0.4.dist-info/RECORD,,
