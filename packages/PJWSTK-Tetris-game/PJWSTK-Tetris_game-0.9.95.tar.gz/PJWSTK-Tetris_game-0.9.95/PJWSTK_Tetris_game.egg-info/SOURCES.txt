@@ -1,0 +1,13 @@
+README.md
+setup.py
+PJWSTK_Tetris_game.egg-info/PKG-INFO
+PJWSTK_Tetris_game.egg-info/SOURCES.txt
+PJWSTK_Tetris_game.egg-info/dependency_links.txt
+PJWSTK_Tetris_game.egg-info/entry_points.txt
+PJWSTK_Tetris_game.egg-info/requires.txt
+PJWSTK_Tetris_game.egg-info/top_level.txt
+game/__init__.py
+game/main.py
+game/mechanics.py
+game/model.py
+game/window.py
