@@ -1,0 +1,7 @@
+numpy>=1.10
+scipy
+astropy
+pyuvdata
+
+[all]
+aipy>=3.0
