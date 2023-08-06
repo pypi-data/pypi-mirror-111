@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/num2chinese.egg-info/PKG-INFO
+src/num2chinese.egg-info/SOURCES.txt
+src/num2chinese.egg-info/dependency_links.txt
+src/num2chinese.egg-info/top_level.txt
