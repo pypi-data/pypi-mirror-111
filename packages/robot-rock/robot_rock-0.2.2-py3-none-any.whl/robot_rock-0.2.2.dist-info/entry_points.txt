@@ -1,0 +1,3 @@
+[console_scripts]
+robot-rock=robot_rock:app
+
