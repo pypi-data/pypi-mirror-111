@@ -1,0 +1,10 @@
+README.md
+setup.py
+inngest/__init__.py
+inngest/client.py
+inngest/exceptions.py
+inngest.egg-info/PKG-INFO
+inngest.egg-info/SOURCES.txt
+inngest.egg-info/dependency_links.txt
+inngest.egg-info/requires.txt
+inngest.egg-info/top_level.txt
