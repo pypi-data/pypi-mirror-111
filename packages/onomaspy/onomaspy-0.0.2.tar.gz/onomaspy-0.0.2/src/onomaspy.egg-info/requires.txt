@@ -1,0 +1,7 @@
+importlib-metadata
+Unidecode~=1.1
+
+[testing]
+setuptools
+pytest
+pytest-cov
