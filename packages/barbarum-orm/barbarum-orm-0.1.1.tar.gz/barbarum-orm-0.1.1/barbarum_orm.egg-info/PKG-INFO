@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: barbarum-orm
+Version: 0.1.1
+Summary: Barbarum ORM framework
+Home-page: https://github.com/barbarum/barbarum-orm-python.git
+Author: Ding Wei
+Author-email: feedback@barbarum.com
+License: UNKNOWN
+Description: # barbarum-orm-python
+        Python ORM library
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
