@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ArcProbeInterface
+Version: 0.1.4
+Summary: Python API to use Redive Arcaea prober
+Home-page: UNKNOWN
+Author: Thibault Buatois
+Author-email: thibaultbuatois@gmail.com
+License: MIT License
+Platform: UNKNOWN
+Requires-Python: >=3.7
+License-File: LICENSE
+
+UNKNOWN
+
