@@ -1,0 +1,9 @@
+translated_fields/__init__.py,sha256=mohnu3vHu1hTvVXG9Sh7HBpLOFUAehQn1zt6XcPdD5s,258
+translated_fields/admin.py,sha256=YtYNkaun1hLtrK5o_cT5Fm9i7at0pCCLkZ4s2BmpBuQ,712
+translated_fields/fields.py,sha256=s5tyMM1ucI1RzM8dd93mkvWmYM4o1wl6LJTAgXcFFnU,4008
+translated_fields/utils.py,sha256=07hf__73yoIXOM8riZ8Q3-RNwlynG2RCcl19eHY5tUw,1552
+django_translated_fields-0.11.3.dist-info/LICENSE,sha256=FSwkgNk6-4kfC7UYFMgAEA45Q2-4aI3Vt3QP2LRrkjE,1548
+django_translated_fields-0.11.3.dist-info/METADATA,sha256=c_N7WHyKrGUgxxWRW4IX4GcxUohrkXqBDL6xdnPNAyM,13505
+django_translated_fields-0.11.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+django_translated_fields-0.11.3.dist-info/top_level.txt,sha256=lXLO3OZl365gSu8mCMhJwCFrCU2fNF5dDfyyzAPJjc8,18
+django_translated_fields-0.11.3.dist-info/RECORD,,
