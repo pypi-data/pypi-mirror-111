@@ -1,0 +1,9 @@
+torch
+pyyaml
+tqdm
+requests
+matplotlib
+Pillow
+
+[export to dataframe]
+pandas
