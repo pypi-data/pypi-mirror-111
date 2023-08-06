@@ -1,0 +1,12 @@
+AUTHORS.rst
+MANIFEST.in
+README.rst
+setup.py
+ArabicNames/__init__.py
+ArabicNames/main.py
+ArabicNames.egg-info/PKG-INFO
+ArabicNames.egg-info/SOURCES.txt
+ArabicNames.egg-info/dependency_links.txt
+ArabicNames.egg-info/entry_points.txt
+ArabicNames.egg-info/requires.txt
+ArabicNames.egg-info/top_level.txt

@@ -1,0 +1,65 @@
+Metadata-Version: 1.1
+Name: ArabicNames
+Version: 0.1.0
+Summary: Generate random arabic names
+Home-page: https://github.com/AhmedMadbouly/ArabicNames
+Author: Ahmed Madbouly
+Author-email: ahmedmadbouly@yahoo.com
+License: MIT
+Description: ArabicNames
+        ===========
+        
+        .. image:: https://i.ibb.co/0tPP7Dq/Screenshot-from-2021-07-03-05-30-06.png
+           :target: https://github.com/AhmedMadbouly/ArabicNames
+           :align: center
+           :width: 200px
+        
+        Random arabic name generator
+        
+        
+        Installation
+        ------------
+        
+        The script is `available on PyPI`_.  To install with pip::
+        
+            pip install ArabicNames
+        
+        
+        Usage
+        -----
+        
+        Names can be used as a command line utility or imported as a Python package.
+        
+        
+        Python Package Usage
+        ~~~~~~~~~~~~~~~~~~~~
+        Here are examples of all current features:
+        
+        .. code-block:: pycon
+        
+            >>> import ArabicNames
+            >>> names.get_full_name()
+            u'Muhtadi El-Alaoui'
+        
+        
+        License
+        -------
+        
+        This project is released under an `MIT License`_.
+        
+        .. _mit license: https://ahmed.mit-license.org
+        .. _available on PyPI: http://pypi.python.org/pypi/ArabicNames
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: Implementation :: PyPy
