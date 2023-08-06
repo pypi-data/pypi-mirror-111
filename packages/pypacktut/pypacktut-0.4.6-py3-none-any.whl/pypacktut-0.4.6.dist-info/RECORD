@@ -1,0 +1,11 @@
+basic/__init__.py,sha256=yKNQ6njGMXx40VszsW4AFqjzbnl5RTKyDe7OUSTH9BE,58
+basic/add.py,sha256=GsmuN3agVUqgSdcnCyXUmYGWK9rliaC8_jQoAHfh9m4,73
+basic/determinant.py,sha256=aDyMMbWBM1CZOpuBHN9SmMxRzbdQtITWimVgp5ija28,76
+extra/__init__.py,sha256=Dnh-OFSfssGorA6r3QO_OGB8d17wgkMF2bULhhbPt4o,52
+extra/dot.py,sha256=nRi7ElUR3cBuOJ9nNprSKcKXoKfG5VfZbuHl37yQv2Y,73
+extra/multiply.py,sha256=d0aEg727QHuMbOouXqQXePxSEikyztEaKaOfWWYI0Dw,83
+pypacktut-0.4.6.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+pypacktut-0.4.6.dist-info/METADATA,sha256=-l4eAOAPet68XKJF1fa5negdI2pILO1KZZJziXPHers,721
+pypacktut-0.4.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pypacktut-0.4.6.dist-info/top_level.txt,sha256=-mzSUbQqztaxyEfcCE0D027cWixIAvFOJ502PFpYjmk,12
+pypacktut-0.4.6.dist-info/RECORD,,
