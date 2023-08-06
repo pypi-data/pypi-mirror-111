@@ -1,0 +1,5 @@
+[intake.drivers]
+spark_cat = intake_spark.spark_cat:SparkTablesCatalog
+spark_dataframe = intake_spark.spark_sources:SparkDataFrame
+spark_rdd = intake_spark.spark_sources:SparkRDD
+

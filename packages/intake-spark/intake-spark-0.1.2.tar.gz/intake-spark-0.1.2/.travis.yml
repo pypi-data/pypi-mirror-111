@@ -1,0 +1,32 @@
+language: generic
+sudo: required
+os:
+- linux
+services:
+- docker
+env:
+  matrix:
+  - CONDA_PY=36
+  global:
+    secure: =
+install:
+- |
+  echo "Installing a fresh version of Miniconda."
+  MINICONDA_URL="https://repo.continuum.io/miniconda"
+  MINICONDA_FILE="Miniconda3-latest-$(case $TRAVIS_OS_NAME in (linux) echo Linux;; (osx) echo MacOSX;;esac)-x86_64.sh"
+  curl -L -O "${MINICONDA_URL}/${MINICONDA_FILE}"
+  bash $MINICONDA_FILE -b
+- |
+  echo "Configuring conda."
+  source $HOME/miniconda3/bin/activate root
+  conda install -y -c conda-forge  openjdk=8 flake8 conda-verify jinja2 intake pyspark pytest pip
+  pip install -e .
+script:
+- |
+  export JAVA_HOME=$HOME/miniconda3
+  flake8 intake_spark
+  pytest
+notifications:
+  email: false
+  on_success: change
+  on_failure: always
