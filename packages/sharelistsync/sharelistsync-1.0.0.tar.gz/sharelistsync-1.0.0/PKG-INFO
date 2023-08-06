@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: sharelistsync
+Version: 1.0.0
+Summary: A tool to sync sharepoint list with MSSQL database
+Home-page: https://github.com/rhubenni/sharelistsync
+Author: Rhubenni Telesco
+Author-email: rhubenni.telesco+pydev@gmail.com
+License: GNU General Public License v3 (GPLv3)
+Download-URL: https://github.com/rhubenni/sharelistsync/archive/1.0.0.tar.gz
+Description: UNKNOWN
+Keywords: Office365,Sharepoint
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
