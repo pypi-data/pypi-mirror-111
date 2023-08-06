@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: gloxon-oauth
+Version: 0.1.0
+Summary: A module that provide a Python interface to the Gloxon Oauth API
+Home-page: https://github.com/gloxon/gloxon-oauth
+Author: Gloxon LLC
+Author-email: gloxongp@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: requests
+
+UNKNOWN
+
+
