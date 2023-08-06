@@ -1,0 +1,13 @@
+aws_sso_magic/__init__.py,sha256=DlV2UErhX_1k5XcVALd2lFfMsGz-PmmLM_AyXYJJgwc,54
+aws_sso_magic/__main__.py,sha256=78XxtY1Q3pfJMm9l0KwvoP6_O7xQpl7ME2u_rjP6WDo,641
+aws_sso_magic/cli.py,sha256=XGo6_LEnLHRsVvGQJ6bzwkiAuXkzrAYRqAa02d-6Ed0,1108
+aws_sso_magic/configure.py,sha256=zRAV3JRwsOhNVy9j4FDtNNN58K9fVqvqMYShbg9YR1E,1672
+aws_sso_magic/eks.py,sha256=YQIaI4SjtI_mlup3G0Da5cX-c4yRzsT1ZGkBIAofPzo,4422
+aws_sso_magic/login.py,sha256=fhgTjcoWnvIRr93jo3Tp3FTM7ZCRC8CVi0nG2a6ZYLg,13162
+aws_sso_magic/logout.py,sha256=cjxb-qrMnq_mPyhjKHedaR-aCIL6EWm3eqyrLMZjf18,1979
+aws_sso_magic/utils.py,sha256=oRocymzCjq3n9UfKQA9C3tZU4DtX7Hne6NcRmY4MRBo,23463
+aws_sso_magic-1.0.16.dist-info/entry_points.txt,sha256=Aac7xGCaSD3k-8GfcMhE7Z5-6Qs61b0wbJQcznn6tWs,55
+aws_sso_magic-1.0.16.dist-info/LICENSE,sha256=pzUkubL30fuQV2Kkih84ffqGI7MmGSNcifR8MDEjehc,11346
+aws_sso_magic-1.0.16.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+aws_sso_magic-1.0.16.dist-info/METADATA,sha256=Ov9uGtfzWqX8VzzyIn21lQE0LsfauKgE6w4KSLERT2E,3876
+aws_sso_magic-1.0.16.dist-info/RECORD,,
