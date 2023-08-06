@@ -1,0 +1,14 @@
+litcorpt/__init__.py,sha256=BMyGaNeqFWbcKWH5ddQs1C3bZupZiKnSyoVJT9PsocQ,542
+litcorpt/main.py,sha256=d3nbHDSeDYiYppOkBFOjM1p-bWJ_O2IxZNDVN-ejJrc,4814
+litcorpt/settings.py,sha256=VrbtV2wCIoM3BhKmXgV5arTZ9SXzho3LLTzGBSDaTIA,595
+litcorpt/utils.py,sha256=H1fycRm3PlpI0lCHkYjj-zRffGJV2AChqMy4gN-SlWw,2943
+litcorpt/crawlers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+litcorpt/crawlers/dominiopublico.py,sha256=TaeAYqKr3G2wP5xW8XaM8LbfqJmcnaODxU2Y6B8Wtws,12056
+litcorpt/crawlers/gutenberg.py,sha256=YwgLgS6h98EBXyFMrZDWMKbbOZHHjcCD8lPWrnL__Hw,16101
+litcorpt/crawlers/gutenberg_crawl.py,sha256=CnRc4gcfm8CT8TAT1wu56-AI4zGQ3YD8Aa6c-7hE6Co,1588
+litcorpt/crawlers/gutenberg_preproc.py,sha256=3LY1Ajewv0Im98OgO858c8enZqBXB6mhy8LejMxdioY,4554
+litcorpt-0.0.2.dist-info/LICENSE,sha256=1uGzFUIKowKctTX3s35FKvwvKps0g4NMR7H1RCG-mLY,1056
+litcorpt-0.0.2.dist-info/METADATA,sha256=dbrbhIIlLWv6UCNwBrk7jp-fcAmVUhlskvfLlM7tyQ0,7552
+litcorpt-0.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+litcorpt-0.0.2.dist-info/top_level.txt,sha256=z1xn7jjoCufUF_1Q6Be43VARO4esIFesGD9AoVFtZD0,9
+litcorpt-0.0.2.dist-info/RECORD,,
