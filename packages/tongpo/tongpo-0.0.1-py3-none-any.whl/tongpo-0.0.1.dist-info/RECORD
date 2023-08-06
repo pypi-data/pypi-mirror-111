@@ -1,0 +1,17 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_unit_cf.py,sha256=smfoxE9SQOS3khYP-77KNuVbHeestem0Ib1RQyMWiNM,307
+tests/test_unit_structs.py,sha256=9KQNZduR4o0OJTs493lkm_Q_FcckmjLhpXMMJbw-9xM,236
+tongpo/__init__.py,sha256=cq85yJ7m-GsJchEaP6cFoTBl_Kw9bMhQxnoxLBlp810,14
+tongpo/res/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tongpo/res/cf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tongpo/res/cf/bit.py,sha256=HAo9m_VBNaxISYrp0pQXrpUwuDrdyupEGf195g7XbQg,1936
+tongpo/res/cf/boyorgirl.py,sha256=AEHsCKvKQl-MuvDoZg3F1QdH6n1XHF5ZbXavm1w3vn8,1907
+tongpo/res/cf/playoff.py,sha256=nQrjM-BBS_llLV7YUC9s6LbVFOSY7IbSYQieDnZtR5s,1805
+tongpo/res/cf/toolongstrings.py,sha256=-yPJNgx9ldYaT-9np3FWd3dqsJNwfxuJfRL-Lh1DLLw,1860
+tongpo/structs/__init__.py,sha256=a3OBpx_7sTmCbEdnKnHXGgpHZzx_h8H-VTlWAf7v4K4,121
+tongpo-0.0.1.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+tongpo-0.0.1.dist-info/METADATA,sha256=pcQZK2iu2NgQ2VICXNV25tmN52EQXMp2Jeb4BcdRLds,454
+tongpo-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+tongpo-0.0.1.dist-info/top_level.txt,sha256=F4hPGi79hydYv_Yw6AESTmwMYkQzI7RSVwIG-DJzMFQ,13
+tongpo-0.0.1.dist-info/RECORD,,
