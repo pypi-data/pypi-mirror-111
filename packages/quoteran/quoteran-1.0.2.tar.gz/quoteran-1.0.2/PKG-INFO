@@ -1,0 +1,29 @@
+Metadata-Version: 1.0
+Name: quoteran
+Version: 1.0.2
+Summary: Random quotes on Terminal
+Home-page: https://github.com/UltiRequiem/quoteran
+Author: UltiRequiem
+Author-email: eliaz.bobadilladev@gmail.com
+License: MIT
+Description: # ranquote
+        
+        Get random quotes in terminal.
+        
+        This project makes Fetch of the [Quotable.io API](https://api.quotable.io/random).
+        
+        ## Install
+        
+        `pip install ranquote`
+        
+        ## Usage
+        
+        ```bash
+        ranquote
+        ```
+        
+        ### License
+        
+        [MIT](./LICENSE)
+        
+Platform: UNKNOWN
