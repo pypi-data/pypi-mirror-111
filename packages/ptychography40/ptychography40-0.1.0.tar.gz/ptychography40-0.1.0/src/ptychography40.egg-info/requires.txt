@@ -1,0 +1,5 @@
+numpy
+scipy
+sparse
+libertem>=0.7.0
+numba>=0.46
