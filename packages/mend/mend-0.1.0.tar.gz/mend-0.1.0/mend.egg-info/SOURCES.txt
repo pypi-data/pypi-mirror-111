@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+mend/__init__.py
+mend.egg-info/PKG-INFO
+mend.egg-info/SOURCES.txt
+mend.egg-info/dependency_links.txt
+mend.egg-info/entry_points.txt
+mend.egg-info/not-zip-safe
+mend.egg-info/requires.txt
+mend.egg-info/top_level.txt
+mend/cli/__init__.py
+mend/cli/main.py

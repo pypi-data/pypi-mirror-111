@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: mend
+Version: 0.1.0
+Summary: Mend, update, and repair git repositories.
+Home-page: https://github.com/jessemyers/mend
+Author: Jesse Myers
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Provides-Extra: dist
+Provides-Extra: lint
+Provides-Extra: test
+Provides-Extra: typehinting
+License-File: LICENSE
+
+# mend
+
+Mend, update, and repair git repositories.
+
+
