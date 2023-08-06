@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: smart-module-test
+Version: 0.0.3
+Summary: 骑砍源码组织利器，一个py文件就是一个神奇的module，每一个module都是一个单独的功能，可以代表是一个庞大的功能模块，也可以是一些通用类代码的集合，且每一个module无论功能大小，代码多少，都可以在多个剧本之间达到极速移植！
+Home-page: https://gitee.com/yunwei1237/smart-module.git
+Author: ArcherTan
+Author-email: yunwei1237@163.com
+Maintainer: ArcherTan
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+README.md
+
