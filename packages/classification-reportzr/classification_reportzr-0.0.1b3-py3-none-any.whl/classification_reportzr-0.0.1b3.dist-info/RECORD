@@ -1,0 +1,8 @@
+classification_reportzr/VERSION,sha256=5u6nd1FGqOjcuF-JBXXcdHNU9p0T4Na4Cf-mB9ug24w,7
+classification_reportzr/reporterzr.py,sha256=uJLAcrZvPw6v2BUPmUoByaWm-O5tfWb5mDm8GR7ZKms,2552
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_reporterzr.py,sha256=6FdcFAahTZbFLpcdMEs7sE3keuBlMaTvwkPk5nom4As,435
+classification_reportzr-0.0.1b3.dist-info/METADATA,sha256=q2uy2W7LQzm2DpPm7PI4YTCBsjC5vOH7oHpv5bu5hAk,2217
+classification_reportzr-0.0.1b3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+classification_reportzr-0.0.1b3.dist-info/top_level.txt,sha256=aYofSnPH8x_14SM0Kk4xRyxNjtugiXggo93Kc9LY3Fg,24
+classification_reportzr-0.0.1b3.dist-info/RECORD,,
