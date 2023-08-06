@@ -1,0 +1,3 @@
+[console_scripts]
+lndoctor = lndoctor.cli.lndoctor:main
+

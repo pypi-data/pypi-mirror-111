@@ -1,0 +1,17 @@
+.gitignore
+LICENSE
+README.md
+environment.yaml
+setup.py
+.github/workflows/ci.yml
+.github/workflows/python-publish.yml
+lndoctor/__init__.py
+lndoctor/_version.py
+lndoctor.egg-info/PKG-INFO
+lndoctor.egg-info/SOURCES.txt
+lndoctor.egg-info/dependency_links.txt
+lndoctor.egg-info/entry_points.txt
+lndoctor.egg-info/top_level.txt
+lndoctor/cli/__init__.py
+lndoctor/cli/lndoctor.py
+test/main.py
