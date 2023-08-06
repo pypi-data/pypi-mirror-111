@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/vidpkg/__init__.py
+src/vidpkg/player.py
+src/vidpkg.egg-info/PKG-INFO
+src/vidpkg.egg-info/SOURCES.txt
+src/vidpkg.egg-info/dependency_links.txt
+src/vidpkg.egg-info/requires.txt
+src/vidpkg.egg-info/top_level.txt
