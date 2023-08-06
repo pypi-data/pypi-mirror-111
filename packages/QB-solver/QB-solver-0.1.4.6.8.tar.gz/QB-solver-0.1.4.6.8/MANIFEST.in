@@ -1,0 +1,4 @@
+include qb_solver/hints/*.png
+include qb_solver/Models/*.png
+include qb_solver/Models/*.obj
+include qb_solver/Models/Notation/*.png
