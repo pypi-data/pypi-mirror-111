@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: concealment
+Version: 0.0.3
+Summary: privacy preservation for machine learning
+Home-page: https://github.com/microprediction/concealment
+Author: microprediction
+Author-email: vaik@mit.edu
+License: MIT
+Description: # concealment
+        privacy preserving
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown

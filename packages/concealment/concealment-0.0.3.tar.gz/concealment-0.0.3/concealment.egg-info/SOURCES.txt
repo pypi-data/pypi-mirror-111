@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+concealment/__init__.py
+concealment/nothin.py
+concealment.egg-info/PKG-INFO
+concealment.egg-info/SOURCES.txt
+concealment.egg-info/dependency_links.txt
+concealment.egg-info/requires.txt
+concealment.egg-info/top_level.txt
