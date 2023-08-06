@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/htmapp.egg-info/PKG-INFO
+src/htmapp.egg-info/SOURCES.txt
+src/htmapp.egg-info/dependency_links.txt
+src/htmapp.egg-info/entry_points.txt
+src/htmapp.egg-info/not-zip-safe
+src/htmapp.egg-info/requires.txt
+src/htmapp.egg-info/top_level.txt
+src/matpy/__init__.py
+src/matpy/log_util.py
+src/matpy/matrixmultiplication.py
+src/matpy/bins/__init__.py
+src/matpy/bins/sample_bin.py
