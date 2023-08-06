@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: easybt
+Version: 0.0.1
+Summary: Operations On Binary Tree
+Home-page: UNKNOWN
+Author: Samir Patil
+Author-email: <samirspatil742099@gmail.com>
+License: UNKNOWN
+Description: 
+        # EasyBT
+        Make Binary trees easy for everyone
+        
+Keywords: python,data stucture,binary tree
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
