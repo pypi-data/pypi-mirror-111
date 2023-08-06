@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: localci
+Version: 0.0.5
+Summary: Makes local CI with Python, npm, and Java easy. Integrated with custom docker registry.
+Home-page: UNKNOWN
+Author: briccardo
+Author-email: rbiagini02@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# local-ci
+
+Makes local CI with Python, npm, and Java easy. Integrated with custom docker registry.
+
+# Dependencies
+
+For building `arm/v8` images:
+
+`sudo apt-get install qemu binfmt-support qemu-user-static`
+
+# Installation
+
+- `pip install localci`
+
+# Usage
+
+Usage:
+
+`localci python` for building a Docker image of a Python application.
+
+`localci pypi` for publishing a package to the pypi repository.
+
+`localci npm` for building a Docker image of an Angular application
+
+`localci mvn` for building a Docker image of a Java/Maven application
+
