@@ -1,0 +1,12 @@
+pygeodiff/libpygeodiff-1.0.1-python.dylib,sha256=0Pw9UdjuQ4XOPdCNhw79BpbsPo8gNrpYb5TX2yMHIDg,465416
+pygeodiff/__init__.py,sha256=ex2b8jCWR7ltPl2O2NrMW80hRWKmN724lf8yOX1aIhM,456
+pygeodiff/__about__.py,sha256=fxMcaD6-fknsitI0En49pye_W8IHsG1e2-oNfIYdrQo,402
+pygeodiff/geodifflib.py,sha256=glUP8E3ctxvGTuOD51bveXf-8WsPVx03QDIFzQxIapE,19438
+pygeodiff/main.py,sha256=RKicMSFd4iW6WCpKhe0nI2-UaejI3c0FFWGMttpqBHQ,13300
+pygeodiff/.dylibs/libsqlite3.0.dylib,sha256=aXSBwl_qms6Az1qEC07IENtqe1I2vdXFyRPo3WULecY,1069536
+pygeodiff-1.0.1.dist-info/RECORD,,
+pygeodiff-1.0.1.dist-info/LICENSE,sha256=pPekwnp737i2BfjOCth9EjHA8ijKqgUqnZvXhSiy7rk,1078
+pygeodiff-1.0.1.dist-info/WHEEL,sha256=YNbYuQQsAZNDzCi7jPYmA7NCtqYSO06rd_mp6h8k6uQ,104
+pygeodiff-1.0.1.dist-info/entry_points.txt,sha256=V2DqpxejwbFptJzGm_RMIB3taKN_AoELmFiUtRG9Y6o,51
+pygeodiff-1.0.1.dist-info/top_level.txt,sha256=ndjfGeE8jGvELbnBQHaHjf13GDrUcOGA7V64GnQvFgc,10
+pygeodiff-1.0.1.dist-info/METADATA,sha256=T2nkxA-cjNV39TEb7VqtQlMuumjRKdESTy-vFXj8EIs,463
