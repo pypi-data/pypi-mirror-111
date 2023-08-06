@@ -1,0 +1,8 @@
+setup.py
+somerandomstuff/MAIN.py
+somerandomstuff/__init__.py
+somerandomstuff.py.egg-info/PKG-INFO
+somerandomstuff.py.egg-info/SOURCES.txt
+somerandomstuff.py.egg-info/dependency_links.txt
+somerandomstuff.py.egg-info/requires.txt
+somerandomstuff.py.egg-info/top_level.txt
