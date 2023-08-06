@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+pyproject.toml
+setup.cfg
+src/hgfind/__init__.py
+src/hgfind/biomart-gene-coordinates.txt
+src/hgfind/hgfind.py
+src/hgfind.egg-info/PKG-INFO
+src/hgfind.egg-info/SOURCES.txt
+src/hgfind.egg-info/dependency_links.txt
+src/hgfind.egg-info/entry_points.txt
+src/hgfind.egg-info/top_level.txt
+test/test_hgfind.py
