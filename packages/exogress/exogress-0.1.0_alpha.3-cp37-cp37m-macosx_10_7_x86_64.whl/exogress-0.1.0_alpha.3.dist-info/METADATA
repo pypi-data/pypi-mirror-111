@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: exogress
+Version: 0.1.0_alpha.3
+Summary: Exogress Client for Python
+Author: Exogress Team <team@exogress.com>
+Author-email: Exogress Team <team@exogress.com>
+License: Apache 2.0
+Requires-Python: >=3.6
