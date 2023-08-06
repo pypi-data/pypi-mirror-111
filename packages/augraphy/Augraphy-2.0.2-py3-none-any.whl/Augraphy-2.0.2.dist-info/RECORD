@@ -1,0 +1,17 @@
+Augraphy/Augmentations.py,sha256=UPNcX_T_JQSXrARCzb9K0i7VK4Yk40ex2vlTfRACI6g,32084
+Augraphy/AugraphyPipeline.py,sha256=63SPXqc1mEVutanZH4CFPGrbBz4imSS7f-zWcnI7p6Y,4962
+Augraphy/ImageTransformer.py,sha256=1w7nUE-t8J7PritHgUORXspi0-Rt_xz7QY05Rrp3HtY,5878
+Augraphy/PaperFactory.py,sha256=U4mzK2P36OSrllmwLSepqBrFQNUS9UmvW1vyP4GySFo,6108
+Augraphy/__init__.py,sha256=elyC9WqWW33mu9XOpkxtR19VnDzU1RSZklkrxCBFy9E,2542
+Augraphy/Augmentations/DirtyRollersAugmentation.py,sha256=gl_Puz95avjlqHBeKw-P4RfQiGyRaZKJ24IIdnzM5E4,4873
+Augraphy/Augmentations/DustyInkAugmentation.py,sha256=275SblMTiAtVBoM39Fw74ALFBZVuii9284vWRmloPUo,472
+Augraphy/Augmentations/InkBleedAugmentation.py,sha256=JlLjYHBog2UqKxDx2YQmXRYtGK2AAWqfi8yBt91gEto,529
+Augraphy/Augmentations/LowInkAugmentation.py,sha256=BJoF5DIWPCeK-7E-555chcwWXdQq2X5oGYrr1iERsKU,3964
+Augraphy/Augmentations/PrinterAugmentation.py,sha256=0zwtCXu5rSQUSSfO4oY36XnXM-tawi8kmOkZRlf1waY,3152
+Augraphy/Augmentations/ScannerAugmentation.py,sha256=SijvtrwT0LSKxekQQNm4VOqqunjys3VhW__SMLXeE6E,6824
+Augraphy/Augmentations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+Augraphy-2.0.2.dist-info/LICENSE,sha256=GQa2uI6S2NZQ3o1NIbRoH-qmlTHmUvF8JNkYqe7xYow,1087
+Augraphy-2.0.2.dist-info/METADATA,sha256=dRobJ_5rNx-lPUXCcEfExtzcwgQgccNPq7Rjs118Z8Q,20392
+Augraphy-2.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+Augraphy-2.0.2.dist-info/top_level.txt,sha256=5P-av3dEjDJ4t5o7rbugKLZKzPT-gn7G62ZGqF_71Lo,9
+Augraphy-2.0.2.dist-info/RECORD,,
