@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: cardilib
+Version: 0.0.2
+Summary: Python library for performing biomedical images analysis
+Home-page: https://github.com/CardiAP/cardilib
+Author: Velez Rueda Ana Julia
+Author-email: anavelezrueda@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/CardiAP/cardilib/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+License-File: AUTHORS.rst
+Requires-Dist: importlib-metadata
+Requires-Dist: numpy (~=1.21)
+Requires-Dist: opencv-python (~=4.5.2)
+Requires-Dist: PeakUtils (~=1.3)
+Provides-Extra: testing
+Requires-Dist: setuptools ; extra == 'testing'
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+
+CardiAP
+=======
+
+Copyright © `2020-2021 ` `Velez Rueda, Garcia Smith, Sommese`
+
+> Python library for performing biomedical images analysis. Cardilib allows users to easily work with images confocal microscopy, and obtain representative amplitude and kinetics data.
+
+
+# Installation
+
+```bash
+# Create and active a virtual env
+$ python3 -m venv .venv
+$ source .venv/bin/activate
+# install the project
+$ pip install -e .
+```
+
+# Running tests
+
+```bash
+# install tox
+$ pip install tox
+# execute tox
+$ tox
+```
+
+
+# Publishing project
+
+```bash
+# update package version in setup.cfg
+# them run these command:
+$ git tag <version>
+$ git push origin HEAD --tags
+# build the package
+$ tox -e build
+# publish to test.pypi
+$ tox -e publish 
+# publish to pypi
+$ tox -e --publish -- --repository pypi
+```
+
+
+# Using cardilib on line
+
+You can find a web server for using cardilib hosted in Binder. You can launch [CardiAP here](http://cardiap.herokuapp.com/)
+
