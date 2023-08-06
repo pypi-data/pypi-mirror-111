@@ -1,0 +1,3 @@
+[console_scripts]
+magic_flux_led = magic_flux_led.__main__:main
+
