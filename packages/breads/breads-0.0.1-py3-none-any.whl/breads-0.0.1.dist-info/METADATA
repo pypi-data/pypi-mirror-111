@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: breads
+Version: 0.0.1
+Summary: Broad Respository for Exoplanet Analysis and DiscoverieS
+Home-page: https://github.com/jruffio/breads
+Author: Jean-Baptiste Ruffio, Shubh Agrawal
+Author-email: shubh@caltech.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: astropy (>=4)
+Requires-Dist: dill
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pip
+Requires-Dist: py
+Requires-Dist: scipy
+
+# breads
+Broad Repository for Exoplanet Analysis and DiscoverieS
+
+

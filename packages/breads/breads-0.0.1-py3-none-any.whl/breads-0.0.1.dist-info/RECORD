@@ -1,0 +1,11 @@
+breads/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+breads/calibration.py,sha256=LYYCHDkRVbcZGkjC_PdHfTGaHc9Yfaxggw_Efbpmhu0,7677
+breads/search_planet.py,sha256=_PU0ebaZPdoIZOPNfLTP5U-MPoslRrBAgwCaezstQX8,1910
+breads/utils.py,sha256=KmBvtQwkV3xbyNL_1EtAGAOiE9gvlF9lZAcrphrTsLI,1703
+breads/instruments/OSIRIS.py,sha256=YWvKbvXrEjQjk8VVnT8DmtrDTu42U0aVsJEpB1vEbdA,2668
+breads/instruments/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+breads/instruments/instrument.py,sha256=ITS-N_-ijEAxnCLHXx94QrYCH_wcX2QOBNHwWrCWqEc,2462
+breads-0.0.1.dist-info/METADATA,sha256=5EoD_5Xzj-eQ-Orve10JoxNphbZVmMxIuBkzOmJiSwc,534
+breads-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+breads-0.0.1.dist-info/top_level.txt,sha256=tqxxxh_Qaom58_SdXv2JLY6e8SjwqOHPMcqBcdlhzr8,7
+breads-0.0.1.dist-info/RECORD,,
