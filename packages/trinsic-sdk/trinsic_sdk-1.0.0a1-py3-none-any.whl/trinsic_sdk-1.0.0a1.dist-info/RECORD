@@ -1,0 +1,11 @@
+trinsic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+trinsic/generate_proto_files.py,sha256=8Ytk0DEEbSy-mojsSiPxUbyjWynCpNXTwrXXntdPthg,1134
+trinsic/services.py,sha256=4rn2clUHQrFVUXhZeWESFmntnq9czH3YS-zKWw8GMhU,7934
+trinsic/proto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+trinsic/proto/pbmse/__init__.py,sha256=kaJD1e_2c8GgjoFD2f9kyA7DWv-jQ7_YeVeJ-Bm31Gw,2022
+trinsic/proto/trinsic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+trinsic/proto/trinsic/services/__init__.py,sha256=tpwst3gMTRo3582aV8sZKfCxcdNt1oBNFZiIruRWtzs,31719
+trinsic_sdk-1.0.0a1.dist-info/METADATA,sha256=i90OEIGVASLvai0xkG8WEFFHxnnjUhxIVeWlgGQRDwE,630
+trinsic_sdk-1.0.0a1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+trinsic_sdk-1.0.0a1.dist-info/top_level.txt,sha256=DBrco1c1XXUzEw5s38zavRClrdhVjUDkVNO5ueDjYZg,8
+trinsic_sdk-1.0.0a1.dist-info/RECORD,,
