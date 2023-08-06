@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+pumrapee_sample_distributions/Binomialdistribution.py
+pumrapee_sample_distributions/Binomialdistribution_challenge.py
+pumrapee_sample_distributions/Gaussiandistribution.py
+pumrapee_sample_distributions/Generaldistribution.py
+pumrapee_sample_distributions/__init__.py
+pumrapee_sample_distributions.egg-info/PKG-INFO
+pumrapee_sample_distributions.egg-info/SOURCES.txt
+pumrapee_sample_distributions.egg-info/dependency_links.txt
+pumrapee_sample_distributions.egg-info/not-zip-safe
+pumrapee_sample_distributions.egg-info/top_level.txt
