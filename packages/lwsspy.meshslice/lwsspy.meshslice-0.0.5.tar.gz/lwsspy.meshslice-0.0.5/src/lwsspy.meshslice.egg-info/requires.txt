@@ -1,0 +1,10 @@
+numpy
+matplotlib
+pyvista
+
+[docs]
+sphinx
+
+[tests]
+pytest
+py

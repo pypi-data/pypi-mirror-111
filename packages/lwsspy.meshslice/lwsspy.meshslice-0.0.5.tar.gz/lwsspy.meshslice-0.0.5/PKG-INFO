@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: lwsspy.meshslice
+Version: 0.0.5
+Summary: Slicer for 3D Meshes.
+Home-page: https://github.com/lsawade/meshslice
+Author: Lucas Sawade
+Author-email: lsawade@princeton.edu
+Maintainer: 
+Lucas Sawade
+Maintainer-email: 
+lsawade
+License: UNKNOWN
+Project-URL: Documentation, https://lsawade.github.io/meshslice
+Project-URL: TravisCI, https://travis-ci.com/github/lsawade/meshslice
+Keywords: Fun,Education,Learning,Programming
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/rst
+Provides-Extra: docs
+Provides-Extra: tests
+License-File: LICENSE
+
+MeshSlice
+---------
+
+Simple/small tool to plot and slice 3D meshes and create reproducible 2D slices.
+
++---------------+-------------------------------------------------------------------------------------+
+| Documentation | https://lwsspy.github.io/lwsspy.meshslice/                                          |
++---------------+-------------------------------------------------------------------------------------+
+| Deployment    | .. image:: https://img.shields.io/pypi/v/meshslice.svg?logo=python&logoColor=white) |
+|               |     :target: https://pypi.org/project/meshslice/0.0.3/                              |
++---------------+-------------------------------------------------------------------------------------+
+| Build Status  | .. image:: https://travis-ci.com/lwsspy/lwsspy.meshslice.svg?branch=main            |
+|               |     :target: https://travis-ci.com/lwsspy/lwsspy.meshslice                          |
++---------------+-------------------------------------------------------------------------------------+
+| License       | .. image:: https://img.shields.io/badge/License-GPLv3-blue.svg                      |
+|               |     :target: https://www.gnu.org/licenses/gpl-3.0                                   |
++---------------+-------------------------------------------------------------------------------------+
+
+
+Quick-Install
+=============
+
+.. code:: bash
+    
+    pip install lwsspy.meshslice
+
+
+
+Quick-Usage
+===========
+
+.. code:: python
+        
+    from lwsspy.meshlice import MeshPlotSph, read_mesh
+    M = read_mesh(<yourmeshfile>)
+    Meshplot(M)
+
+
+
+
+
+
+
+
