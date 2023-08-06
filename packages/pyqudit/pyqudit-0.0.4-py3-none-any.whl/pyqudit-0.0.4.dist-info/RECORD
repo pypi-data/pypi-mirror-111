@@ -1,0 +1,10 @@
+pyqudit/__init__.py,sha256=XckmXAjXl9xnuPNbbrmyq4zteDeAUlFKbqb01Mkxcbk,36
+pyqudit/__main__.py,sha256=PVbHn4Gp8drd708N4SThh7uL_uHuGbrUaKDkkjMEyKI,206
+pyqudit/qudit.py,sha256=78tBmkiC1-fRu2F6XGYf-X-eoVCoOF1DMLBeYeUZklE,5683
+pyqudit-0.0.4.dist-info/DESCRIPTION.rst,sha256=hgSquDQ1uS4oCqge3ZQjSF38WdD4v2bIXb4eJH4rrwY,313
+pyqudit-0.0.4.dist-info/METADATA,sha256=PoT_bp6nbJuZGM7Dzk5inDdksgT3evcp0-5Cd0-uFKQ,865
+pyqudit-0.0.4.dist-info/RECORD,,
+pyqudit-0.0.4.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+pyqudit-0.0.4.dist-info/entry_points.txt,sha256=AiEHFBNEN3Z4YEbMMuPlam28cwuh0VcXr6a7V6EdIWQ,49
+pyqudit-0.0.4.dist-info/metadata.json,sha256=4uBZBtLtn8HA-XTM1uYjzsGTvh_ptpyaUXjOPzJNmI4,910
+pyqudit-0.0.4.dist-info/top_level.txt,sha256=p_US86-iLzuGM-1Is-QrPg1g_sfZioYepN8GKz8z_co,8
