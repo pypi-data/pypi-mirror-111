@@ -1,0 +1,8 @@
+pyproject.toml
+setup.py
+virtual_cards.egg-info/PKG-INFO
+virtual_cards.egg-info/SOURCES.txt
+virtual_cards.egg-info/dependency_links.txt
+virtual_cards.egg-info/not-zip-safe
+virtual_cards.egg-info/requires.txt
+virtual_cards.egg-info/top_level.txt
