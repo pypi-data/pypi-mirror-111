@@ -1,0 +1,9 @@
+Flask<3.0,>=1.0.0
+typeguard==2.12.1
+typing_inspect==0.7.1
+
+[:python_version < "3.5"]
+typing
+
+[:python_version < "3.8"]
+typing_extensions
