@@ -1,0 +1,5 @@
+numpy
+rapidjson
+toml
+archivebox
+Python-Alexandria
