@@ -1,0 +1,5 @@
+telegram_send
+opencv-python
+matplotlib
+scipy
+numpy
