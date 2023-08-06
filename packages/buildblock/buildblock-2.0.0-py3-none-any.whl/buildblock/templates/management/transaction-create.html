@@ -1,0 +1,44 @@
+{% extends "management/base.html" %}
+{% load static i18n humanize base_tag management_tag %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12 col-lg-6">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <div class="btn-group mb-2 ml-1 mr-2">
+                    <button type="button" class="btn btn-success" onclick="this.disabled=true;$('#management_form').submit();">Submit</button>
+                    <a class="btn btn-light" onclick="javascript:history.go(-1);">Cancel</a>
+                </div>
+            </div>
+            <h4 class="page-title">{{page_title}}</h4>
+            <div class="page-title-right-xs">
+                <button type="button" class="btn btn-success btn_circle mb-3" onclick="this.disabled=true;$('#management_form').submit();"><i class="mdi mdi-check"></i></button>
+                <a class="btn btn-light btn_circle mb-3" onclick="javascript:history.go(-1);"><i class="mdi mdi-window-close"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+
+{% block content %}
+<div class="row">
+    <div class="col-12 col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="mt-0 font-weight-bold">{{lease.tenant.name}}</h3>
+                <p class="mb-1">{{lease.product.full_address}}</p>
+                <hr>
+                <form method='POST' id="management_form">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,140 @@
+{% extends "administrator/base.html" %}
+{% load static i18n base_tag management_tag %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <a class="btn btn-success mb-2" href="{% url 'administrator:payment-create' %}">CREATE PAYMENT</a>
+            </div>
+
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <table class="table table-condensed dataTable w-100">
+            <colgroup>
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="170">
+                <col width="420">
+                <col width="150">
+                <col width="170">
+            </colgroup>
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Tenant</th>
+                    <th>Amount</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                    <th>Product</th>
+                    <th>Due Date</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for payment in payments %}
+                <tr>
+                    <td>{{payment.id}}</td>
+                    <td>{{payment.tenant.name}}</td>
+                    <td class="dollar_sign">{{payment.amount|filter_safe_money_read_from_db}}</td>
+                    <td>{{payment.get_payment_type_display}}</td>
+                    <td>
+                        <span class="badge {% get_payment_status_badge_class status=payment.status %}">{{payment.get_status_display}}</span>
+                        {% if payment.status == "PENDING" %}
+                        <a href="#"
+                           data-toggle="modal"
+                           data-target="#payment_modal"
+                           data-dismiss="modal"
+                           class="btn btn-sm btn-link text-success"
+                           onclick="paymentModalData({{payment.id}}, {{payment.amount|filter_safe_money_read_from_db}}, '{{payment.get_payment_type_display}}', '{{payment.tenant.name}}');"><i class="dripicons-ticket"></i> PAY</a>
+                        {% endif %}
+                    </td>
+                    <td>{{payment.product.full_address}}</td>
+                    <td>{{payment.due_date}}</td>
+                    <td>
+                        <a class="btn btn-sm btn-link text-info" href="{% url 'administrator:payment-detail' payment.id %}"><i class="dripicons-zoom-in"></i></a>
+                        <a class="btn btn-sm btn-link text-warning" href="{% url 'administrator:payment-update' payment.id %}"><i class="dripicons-document-edit"></i></a>
+                        <a class="btn btn-sm btn-link text-danger" href="{% url 'administrator:payment-delete' payment.id %}"><i class="dripicons-trash"></i></a>
+                    </td>
+                </tr>
+                {% empty %}
+                  <tr>
+                      <td class="text-center" colspan="100%">No Data</td>
+                  </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% include "base/pagination.html" with paginator=paginator add_css="page_nav_dark" sign_align="end"%}
+{% endblock content %}
+
+{% block third_party %}
+{% include "base/load_datatable.html" with ordering_sort="desc" %}
+{% endblock third_party %}
+
+{% block modal %}
+{% get_payment_method as PAYMENT_METHOD %}
+<!-- add work date modal -->
+<div id="payment_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="payment_label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <form action="{% url 'administrator:payment-charge' %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="return_url" value="{{request.get_full_path}}">
+                <input type="hidden" name="payment_id">
+                <div class="modal-header">
+                    <h4 class="modal-title">PAYMENT</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <p class="font-12 text-white mb-1">Tenant</p>
+                        <input type="text" class="form-control" name="tenant" required readonly>
+                    </div>
+                    <div class="mb-3">
+                        <p class="font-12 text-white mb-1">Amount (＄)</p>
+                        <input type="number" class="form-control" name="amount" required readonly>
+                    </div>
+                    <div class="mb-3">
+                        <p class="font-12 text-white mb-1">Type</p>
+                        <input type="text" class="form-control" name="type" required readonly>
+                    </div>
+                    <div class="mb-3">
+                        <p class="font-12 text-white mb-1">Payment Method</p>
+                        <select name="method" id="method" class="form-control" required>
+                            {% for value, display in PAYMENT_METHOD %}
+                            <option value="{{value}}">{{display}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" value="Pay" class='btn btn-success'/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    function paymentModalData(id, amount, type, tenant) {
+        var update_form = $('#payment_modal form');
+        update_form.find('input[name="payment_id"]').val(id);
+        update_form.find('input[name="amount"]').val(amount);
+        update_form.find('input[name="type"]').val(type);
+        update_form.find('input[name="tenant"]').val(tenant);
+    };
+</script>
+{% endblock modal %}

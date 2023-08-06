@@ -1,0 +1,47 @@
+{% load static i18n %}
+<div class="popup_container shadow-lg {% if not landing_popup.image_mobile %}visible-lg{% endif %}">
+    {% if landing_popup.url %}<a href="{{landing_popup.url}}" target="_blank">{% endif %}
+    <img class="d-lg-block d-none" src="{{landing_popup.image.url}}" alt="{{landing_popup.title}}">
+    {% if landing_popup.image_mobile %}<img class="d-lg-none d-block" src="{{landing_popup.image_mobile.url}}" alt="{{landing_popup.title}}">{% endif %}
+    {% if landing_popup.url %}</a>{% endif %}
+    <div class="btn-group">
+        <a class="btn btn-light text-left" id="hide_popup" onclick="hidePopup(1)">{% trans "Don't show me today" %}</a>
+        <a class="btn btn-light text-right" id="close_popup" onclick="closePopup()">{% trans 'Close' %}</a>
+    </div>
+</div>
+
+<script>
+    function setCookie(name, value, expiredays){
+        var date = new Date();
+        date.setDate(date.getDate() + expiredays);
+        document.cookie = escape(name) + '=' + escape(value) + '; path=/; expires=' + date.toUTCString();
+    }
+    function getCookie(name){
+        var cookie = document.cookie;
+        if(cookie != ""){
+            var cookieArray = cookie.split('; ');
+            for(var index in cookieArray){
+                var cookieName = cookieArray[index].split("=");
+                if(cookieName[0] == name){
+                    return cookieName[1];
+                }
+            }
+        } return;
+    }
+ 
+    function closePopup(){
+        $('.popup_container').removeClass('show');
+    }
+    function hidePopup(day){
+        setCookie("popupYN","N",day);
+        closePopup();
+    }
+
+    $(document).ready(function(){
+        var cookieCheck = getCookie("popupYN");
+        console.log('byul', cookieCheck);
+        if(cookieCheck != "N"){
+            $('.popup_container').addClass('show');
+        }
+    });
+</script>

@@ -1,0 +1,59 @@
+{% load static i18n %}
+
+<table align="center" style="width:100%;background:#e3eaef;">
+    <tr>
+        <td align="center">
+            <div style="margin:50px auto;max-width:600px;">
+                <table style="font-family:'Noto Sans KR',sans-serif;text-align:left;background:#fff;padding:40px;border-top:10px solid #9013fe;box-shadow:0 0 15px rgba(0,0,0,0.1);width:100%;">
+                    <tr>
+                        <td style="padding-bottom:40px;">
+                            <img src="{% static 'landing/images/logo/logo_h36.png' %}" alt="BuildBlock" height="30">
+                        </td>
+                    </tr>
+
+
+                    <!-- Maintenance request creation alert starts-->
+                    <tr>
+                        <td style="padding-bottom:30px;font-weight:700;font-size:32px;">
+                            Hello<br><span style="color:#9013fe;">{{user_name}}</span>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size:16px;font-weight:500;">
+                            Maintenance request<br>
+                            has been created.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size:13px;font-weight:300;padding:30px 0;">
+                            <table style="border-top:1px solid #242424;border-bottom:1px solid #242424;width:100%;">
+                                <col width="140">
+                                <col>
+                                <tr>
+                                    <td style="background:#fafafa;padding:8px 10px;">Title</td>
+                                    <td style="padding:8px 10px;">{{contents.maintenance_title}}</td>
+                                </tr>
+                                <tr>
+                                    <td style="background:#fafafa;padding:8px 10px;">Writer</td>
+                                    <td style="padding:8px 10px;">{{contents.maintenance_writer}}</td>
+                                </tr>
+                                <tr>
+                                    <td style="background:#fafafa;padding:8px 10px;">Product</td>
+                                    <td style="padding:8px 10px;">{{contents.product}}</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Maintenance request creation alert ends -->
+
+                    <tr>
+                        <td style="font-size:13px;color:#9013fe;font-weight:700;padding-top:40px;">
+                          {% blocktrans %}Real Estate Management Service by <a href="https://management.buildblock.io" target="_blank" style="color:#9013fe;text-decoration: none;">BuildBlock</a>{% endblocktrans %}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>

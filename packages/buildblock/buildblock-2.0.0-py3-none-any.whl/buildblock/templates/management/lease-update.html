@@ -1,0 +1,93 @@
+{% extends "management/base.html" %}
+{% load static i18n management_tag base_tag %}
+
+{% block page_title %}
+<form method='POST'>
+{% csrf_token %}
+<!-- start page title -->
+<div class="row">
+        <div class="col-12 col-lg-8">
+            <div class="page-title-box">
+                <div class="page-title-right d-block">
+                    <button type="submit" class="btn btn-success btn-rounded mb-2">Save</button>
+                </div>
+                <h4 class="page-title">{{page_title}}: {{object.tenant.name}}</h4>
+            </div>
+        </div>
+    </div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 col-lg-8">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6 col-lg-3">
+                        <div class="form-group">
+                            <label class="font-12" for="{{form.status.id_for_label}}">
+                                {{form.status.label}}
+                            </label>
+                            {{form.status}}
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="form-group">
+                            <label class="font-12" for="{{form.room_num.id_for_label}}">
+                                {{form.room_num.label}}
+                            </label>
+                            {{form.room_num}}
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="form-group">
+                            <label class="font-12" for="{{form.rent.id_for_label}}">
+                                {{form.rent.label}} (＄)
+                            </label>
+                            <input type="number"
+                                   name="{{form.rent.name}}"
+                                   value="{{form.rent.value|floatformat}}"
+                                   min="0"
+                                   step="1"
+                                   class="textinput form-control mb-3" style="max-width:100%;"
+                                   required
+                                   id="id_rent">
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="form-group">
+                            <label class="font-12" for="{{form.payment_day.id_for_label}}">
+                                {{form.payment_day.label}}
+                            </label>
+                            {{form.payment_day}}
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="form-group date_field">
+                            <label class="font-12 dol" for="{{form.start_date.id_for_label}}">
+                                {{form.start_date.label}}
+                            </label>
+                            <div class="d-flex">
+                                {{form.start_date}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group date_field styled-select">
+                            <label class="font-12" for="{{form.end_date.id_for_label}}">
+                                {{form.end_date.label}}
+                            </label>
+                            <div class="d-flex">
+                                {{form.end_date}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+{% endblock content %}

@@ -1,0 +1,43 @@
+{% extends "landing/base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "BuildBlock |" %} {{page_title}}{% endblock title %}
+
+{% block page_title %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <div class="page-title-right">
+                    <button type="button" class="btn btn-success" onclick="this.disabled=true;$('#news_form').submit();">Post</button>
+                </div>
+
+                <h3 class="page-title text-center text-lg-left bb_h3">Write Post</h3>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock page_title %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <p class="text-danger mb-3 text-right">※ Writer(작성자) 칸은 언론보도 게시글인 경우에만 언론사를 입력해주세요. 다른 카테고리 글 작성시, 비워두기</p>
+                    <form method='POST' id="news_form" enctype='multipart/form-data'>
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block third_party %}
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+{% endblock third_party %}

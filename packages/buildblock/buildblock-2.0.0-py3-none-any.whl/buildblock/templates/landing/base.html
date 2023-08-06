@@ -1,0 +1,149 @@
+{% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}{% trans "BuildBlock | US Real Estate Investment Made Easy" %}{% endblock title %}</title>
+    <meta name="description" content="BuildBlock, start your first US investment">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="BuildBlock" />
+
+    {% blocktrans asvar og_description %}BuildBlock lowers the entry barrier to the overseas real estate investment with the goal of creating a global real estate investment platform for anyone to invest in the US real estate safe and easy.{% endblocktrans %}
+    <meta property="og:description" content="{{og_description}}">
+    <meta property="og:image" content="{% static 'landing/images/link_thumbnail.jpg' %}" >
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="{% static 'base/favi/favicon.ico' %}">
+    <!-- External CSS -->
+
+    <!-- Main CSS -->
+    {% block main_css %}
+    <link href="{% static 'base/css/vendor/aos.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'base/css/icons.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'base/css/basic.css' %}" rel="stylesheet" type="text/css" id="main-style-container" />
+    <link href="{% static 'landing/css/layout.css' %}" rel="stylesheet" type="text/css" />
+    {% endblock main_css %}
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900|Noto+Serif+KR:100,300,400,500,700,900&display=swap" rel="stylesheet">
+
+    <!-- External JS Top -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- Search & Analytics -->
+    {% block analytics_head %}
+    {% include "base/analytics_head.html" %}
+    {% endblock analytics_head %}
+
+  </head>
+
+  <body class="loading {% if LANGUAGE_CODE in 'en' %}body_en{% endif %}" data-layout-mode="fluid" data-layout="topnav">
+    <!-- Search & Analytics -->
+    {% block analytics_body %}
+    {% include "base/analytics_body.html" %}
+    {% endblock analytics_body %}
+
+    <div class="wrapper">
+        <div class="content-page">
+            <div class="content">
+                {% if landing_thin_banner %}
+                    {% include "landing/partials/thin_banner.html" %}
+                {% endif %}
+
+                {% block navbar %}
+                {% include 'landing/partials/nav.html' %}
+                {% endblock navbar %}
+
+                {% if messages %}
+                    <div class="message_top position-absolute w-100">
+                        <div class="container-fluid">
+                            {% include "base/messages.html" with messages=messages %}
+                        </div>
+                    </div>
+                {% endif %}
+                {% if form.errors %}
+                    {% include "base/errors.html" with errors=form.non_field_errors %}
+                    {% for field in form %}
+                        {% include "base/errors.html" with errors=field.errors %}
+                    {% endfor %}
+                {% endif %}
+
+                {% block page_title %}{% endblock page_title %}
+
+                <!-- Start Content-->
+                {% block content %}{% endblock content %}
+                <!-- container -->
+            </div>
+            <!-- content -->
+        </div>
+
+        {% block footer %}
+        <footer class="bg-dark">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-lg-4">
+                        <img class="d-none d-lg-inline-block mb-4" src="{% static 'landing/images/logo/logo_w_h36.png' %}" alt="BuildBlock" height="36">
+                    </div>
+                    <div class="col-12 col-lg-8 d-none d-lg-block justify-content-end">
+                        <ul class="nav_bottom list-group list-group-horizontal justify-content-end">
+                            <li><a class="text-white" href="{% url 'about' %}">{% trans "About" %}</a></li>
+                            <li><a class="text-white" href="{% url 'service' %}">{% trans "Service" %}</a></li>
+                            <li><a class="text-white" href="{% url 'case-study' %}">{% trans "Invest" %}</a></li>
+                            <li><a class="text-white" href="{% url 'news' %}">{% trans "News" %}</a></li>
+                            <li><a class="text-white" href="{% url 'contact' %}">{% trans "Contact" %}</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="footer_content">
+                            <p><span class="font-weight-bold">{% blocktrans %}COMPANY</span> Build Block Inc.{% endblocktrans %}</p>
+                            <p class="mb-3"><span class="font-weight-bold">{% blocktrans %}CEO</span> Jimmy Jung{% endblocktrans %}</p>
+                            {% for item in information.address %}
+                            <p><span class="font-weight-bold">{{item.location}}</span> {{item.address}}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 mt-4 mt-lg-0 align-self-lg-end">
+                        <div class="footer_social text-center text-lg-right">
+                            {% for item in information.sns %}
+                                <a href="{{item.url}}" target="_blank"><img src="{% static 'landing/images/sns' %}/{{item.name}}.png" alt="{{item.name}}" width="40"></a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-12 mt-4 text-center">
+                        <p class="font-weight-light text-muted font-12">Copyright © Build Block Inc. {% now 'Y' %}</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        {% endblock footer %}
+    </div>
+
+    <!-- Modal -->
+    {% block modal %}{% endblock modal %}
+
+    <!-- bundle -->
+    <script src="{% static 'base/js/basic.js' %}"></script>
+    <script src="{% static 'base/js/vendor/aos.js' %}"></script>
+    {% block bundle %}{% endblock bundle %}
+
+    <!-- third party js -->
+    <script src="{% static 'management/js/vendor/jquery-jvectormap-1.2.2.min.js' %}"></script>
+    <script src="{% static 'management/js/vendor/jquery-jvectormap-world-mill-en.js' %}"></script>
+    <script>
+        AOS.init();
+        $('.dropdown-toggle').dropdown()
+    </script>
+    {% block customer_service_badge %}
+    <script src="{% static 'base/js/channel_talk.js' %}"></script>
+    {% endblock customer_service_badge %}
+    {% block third_party %}{% endblock third_party %}
+    <!-- third party js ends -->
+
+    {% block app_js_bottom %}
+    {% endblock app_js_bottom %}
+  </body>
+</html>

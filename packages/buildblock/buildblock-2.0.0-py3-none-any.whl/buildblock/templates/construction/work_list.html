@@ -1,0 +1,167 @@
+{% extends "construction/base.html" %}
+{% load static i18n crispy_forms_tags construction_tag %}
+
+{% block page_title %}
+{% get_work_type_list as WORK_TYPE_LIST %}
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box search_title_box">
+            <div class="page-title-right d-block">
+                <form class="form-inline" method="get">
+                    <div class="form-group">
+                        <select name="work_type" id="work_type_filter" class="form-control">
+                            <option value="">Select work type</option>
+                            {% for work_type in WORK_TYPE_LIST %}
+                            <option value="{{work_type.id}}"
+                                    {% if work_type.id|slugify == request.GET.work_type|slugify %}selected{% endif %}>
+                                    {{work_type.title}}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group mx-1">
+                        <select name="zone" id="zone_filter" class="form-control">
+                            <option value="">Select zone</option>
+                            {% for zone in construction.zones %}
+                            <option value="{{zone.id}}"
+                                {% if zone.id|slugify == request.GET.zone|slugify %}selected{% endif %}>
+                                {{zone.name}}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-light btn-block" type="submit"><i class="dripicons-search"></i></button>
+                    </div>
+                </form>
+            </div>
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 hidden_lg pb-3">
+        {% if is_editor %}
+        <a href="#" data-toggle="modal" data-target="#add_work_modal" class="btn btn-success w-100"><i class="dripicons-plus"></i> ADD WORK</a>
+        {% endif %}
+    </div>
+    <div class="col-12">
+        <!-- web -->
+        <div class="table-reponsive visible_lg">
+            <table class="table table-condensed dataTable w-100">
+                <colgroup>
+                    <col width="80">
+                    <col width="">
+                    <col width="">
+                    <col width="">
+                    <col width="">
+                    {% if is_editor %}
+                    <col width="170">
+                    {% endif %}
+                </colgroup>
+                <thead class="thead-dark">
+                    <tr>
+                        <th class="text-center"><i class="dripicons-photo"></i></th>
+                        <th>Title</th>
+                        <th>Type</th>
+                        <th>Zone</th>
+                        <th>Work Date</th>
+                        {% if is_editor %}
+                        <th>Action</th>
+                        {% endif %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% autoescape off %}
+                    {% for work in works %}
+                    <tr>
+                        <td class="text-center">
+                            <i class="{% get_picture_status_check_class pictures=work.pictures status='BEFORE' %}"></i><i class="{% get_picture_status_check_class pictures=work.pictures status='IN_PROGRESS' %}"></i><i class="{% get_picture_status_check_class pictures=work.pictures status='AFTER' %}"></i>
+                        </td>
+                        <td><a class="text-dark" href="{% url 'construction:work-detail' construction_id=construction.id pk=work.id %}">{{work.title}}</a></td>
+                        <td><span class="zone_badge badge badge-info mr-1 text_black">{{work.type.title}}</span></td>
+                        <td>
+                        {% for zone in work.zone_list %}
+                        <span class="zone_badge badge badge-secondary">{{zone.name}}</span>
+                        {% empty %}
+                        -
+                        {% endfor %}
+                        </td>
+                        <td>
+                            {% if work.work_date %}
+                            {{work.work_date|length}} {% if work.work_date|length == 1 %}day{% else %}days{% endif %}
+                            {% else %}
+                            -
+                            {% endif %}
+                            {% if is_editor %}
+                            <a class="badge badge-secondary ml-2" href="#" data-toggle="modal" data-target="#add_work_date_modal" onclick="addWorkDate('{{work.id}}','{% for date in work.work_date %}{{date|date:'Y. m. d'}}{% if not forloop.last %}, {% endif %}{% empty %}-{% endfor %}');"><i class="mdi mdi-plus"></i></a>
+                            {% endif %}
+                        </td>
+                        {% if is_editor %}
+                        <td>
+                            <a class="btn btn-sm btn-link text-info" href="{% url 'construction:work-detail' construction_id=construction.id pk=work.id %}"><i class="dripicons-zoom-in"></i></a>
+                            <a class="btn btn-sm btn-link text-warning" href="#" data-toggle="modal" data-target="#edit_work_modal" onclick="updateWorkData('{{work.id}}','{{work.title}}','{{work.type_id}}','{{work.zone_ids}}');"><i class="dripicons-document-edit"></i></a>
+                            <a class="btn btn-sm btn-link text-danger" href="#" data-toggle="modal" data-target="#delete_work_modal" onclick="deleteWorkData('{{work.id}}');"><i class="dripicons-trash"></i></a>
+                        </td>
+                        {% endif %}
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td class="text-center" colspan="100%">No Works</td>
+                    </tr>
+                    {% endfor %}
+                    {% endautoescape %}
+                </tbody>
+            </table>
+        </div>
+
+        <!-- mobile -->
+        {% autoescape off %}
+        {% for work in works %}
+        <div class="card work_list_m hidden_lg">
+            <div class="card-body">
+                <div class="card-widgets">
+                    <i class="{% get_picture_status_check_class pictures=work.pictures status='BEFORE' %}"></i><i class="{% get_picture_status_check_class pictures=work.pictures status='IN_PROGRESS' %}"></i><i class="{% get_picture_status_check_class pictures=work.pictures status='AFTER' %}"></i>
+                </div>
+                <h5 class="card-title mt-1 mb-3"><a class="text-dark" href="{% url 'construction:work-detail' construction_id=construction.id pk=work.id %}">{{work.title}}</a></h5>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <p class="font-14 mb-0">
+                            <span class="zone_badge badge badge-info mr-1 text_black">{{work.type.title}}</span>
+                            {% for zone in work.zone_list %}
+                            <span class="zone_badge badge badge-secondary">{{zone.name}}</span>
+                            {% endfor %}
+                        </p>
+                    </div>
+                    {% if is_editor %}
+                    <div class="col-12 text-right mt-2">
+                        <a class="text-warning mr-2" href="#" data-toggle="modal" data-target="#edit_work_modal" onclick="updateWorkData('{{work.id}}','{{work.title}}','{{work.type_id}}','{{work.zone_ids}}');"><i class="dripicons-document-edit"></i></a>
+                        <a class="text-danger" href="#" data-toggle="modal" data-target="#delete_work_modal" onclick="deleteWorkData('{{work.id}}');"><i class="dripicons-trash"></i></a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12 py-5 hidden_lg">
+            <p class="text-muted font-14 text-center">No Works</p>
+        </div>
+        {% endfor %}
+        {% endautoescape %}
+    </div>
+</div>
+{% endblock content %}
+
+{% block modal %}
+{% if is_editor %}
+{% include 'construction/partials/work_update_modal.html' %}
+{% include 'construction/partials/add_work_date_modal.html' %}
+{% endif %}
+{% endblock modal %}
+
+{% block third_party %}
+{% include "base/load_datatable.html" %}
+{% endblock third_party %}

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://buildblock.io/ko/</loc>
+  <lastmod>2018-12-06T08:23:07+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://buildblock.io/ko/about/</loc>
+  <lastmod>2018-12-06T08:23:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://buildblock.io/ko/product/</loc>
+  <lastmod>2018-12-06T08:23:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://buildblock.io/ko/trade/</loc>
+  <lastmod>2018-12-06T08:23:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://buildblock.io/ko/product/vote/</loc>
+  <lastmod>2018-12-06T08:23:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://buildblock.io/ko/transaction/tracking/</loc>
+  <lastmod>2018-12-06T08:23:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://buildblock.io/ko/guide/</loc>
+  <lastmod>2018-12-06T08:23:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://buildblock.io/ko/accounts/login/</loc>
+  <lastmod>2018-12-06T08:23:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://buildblock.io/ko/accounts/signup/</loc>
+  <lastmod>2018-12-06T08:23:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://buildblock.io/ko/faq/</loc>
+  <lastmod>2018-12-06T08:23:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://buildblock.io/en/</loc>
+  <lastmod>2018-12-06T08:23:07+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://buildblock.io/en/about/</loc>
+  <lastmod>2018-12-06T08:23:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://buildblock.io/en/product/</loc>
+  <lastmod>2018-12-06T08:23:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://buildblock.io/en/trade/</loc>
+  <lastmod>2018-12-06T08:23:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://buildblock.io/en/product/vote/</loc>
+  <lastmod>2018-12-06T08:23:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://buildblock.io/en/transaction/tracking/</loc>
+  <lastmod>2018-12-06T08:23:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://buildblock.io/en/guide/</loc>
+  <lastmod>2018-12-06T08:23:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://buildblock.io/en/accounts/login/</loc>
+  <lastmod>2018-12-06T08:23:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://buildblock.io/en/accounts/signup/</loc>
+  <lastmod>2018-12-06T08:23:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://buildblock.io/en/faq/</loc>
+  <lastmod>2018-12-06T08:23:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+</urlset>

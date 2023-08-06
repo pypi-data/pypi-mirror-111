@@ -1,0 +1,31 @@
+{% load static i18n %}
+
+<footer class="footer_container bg_dark {{account_footer}}">
+    <div class="container_main">
+        <div class="clearfix">
+            <div class="left">
+                <img src="{% static 'investment/images/logo/logo_w_h32.png' %}" alt="">
+            </div>
+            <div class="right text-center">
+                <ul class="footer_menu">
+                    <li><a href="{% url 'about' %}">ABOUT US</a></li>
+                    <li><a href="{% url 'faq' %}">FAQ</a></li>
+                    <!-- <li><a href="{% url 'manual' %}">INVESTMENT GUIDE</a></li> -->
+                    <li><a href="{% url 'terms-service' %}">TERMS</a></li>
+                    <li><a href="{% url 'terms-security' %}">PRIVACY POLICY</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer_content">
+            <p><span class="fw_bold">COMPANY</span> Build Block Inc.</p>
+            <p><span class="fw_bold">CEO</span> Jimmy Jung</p>
+            <p><span class="fw_bold">EMAIL</span> info@buildblock.io</p><br>
+            <p><span class="fw_bold">KOREA OFFICE</span> 83, Uisadang-daero, Yeongdeungpo-gu, Seoul, Republic of Korea</p>
+            <p><span class="fw_bold">U.S. OFFICE</span> 3003 North 1st Street, San Jose, CA 95134</p>
+        </div>
+
+        <div class="footer_copyright color_darkgy fs_12">
+            Copyright © Build Block Inc. {% now 'Y' %}
+        </div>
+    </div>
+</footer>

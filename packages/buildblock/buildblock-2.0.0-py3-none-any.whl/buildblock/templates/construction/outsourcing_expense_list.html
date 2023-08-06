@@ -1,0 +1,245 @@
+{% extends "construction/base.html" %}
+{% load static i18n humanize base_tag construction_tag mathfilters %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+
+{% block content %}
+<form action="{% url 'construction:edit-payment-date' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="hidden" name="return_url" value="{{request.get_full_path}}" required>
+    <div class="row">
+        {% if expenses_not_paid %}
+        <div class="col-12">
+            <div class="table-responsive mb-4">
+                <h5 class="header-title font-weight-light">Pending Expenses</h5>
+                <table class="table table-condensed dataTable table_expense w-100" id="table_pending_expense">
+                    <colgroup>
+                        <col width="300">
+                        <col width="">
+                        <col width="48">
+                        <col width="200">
+                        <col width="200">
+                        {% if is_editor %}
+                        <col width="140">
+                        {% endif %}
+                    </colgroup>
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Contract</th>
+                            <th>Work</th>
+                            <th></th>
+                            <th>Amount</th>
+                            <th>Paid Amount</th>
+                            {% if is_editor %}
+                            <th></th>
+                            {% endif %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for expense in expenses_not_paid %}
+                        <tr>
+                            <td>{{expense.outsourcing_contract.title}}</td>
+                            <td>
+                                <b class="text-white mr-1">{{expense.title}}</b>
+                                {% if expense.description %}
+                                <a class="text-muted ml-1"
+                                    data-container="body"
+                                    data-trigger="hover"
+                                    data-toggle="popover"
+                                    data-placement="bottom"
+                                    data-content="{{expense.description}}">
+                                    <i class="mdi mdi-comment-processing"></i>
+                                </a>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if expense.attachment %}
+                                <a href="{{expense.attachment.url}}" target="_blank"><i class="mdi mdi-link-variant text-white font-16"></i></a>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <span class="dollar_sign{% if expense.payment_date %} text-muted{% else %} text-white{% endif %}" {% if expense.payment_date %}style="text-decoration: line-through;"{% endif %}>{{expense.amount|filter_safe_money_read_from_db|intcomma}}</span>
+                            </td>
+                            <td>
+                                {% if expense.payment_date %}
+                                <span class="dollar_sign text-white">{{expense.paid_amount|filter_safe_money_read_from_db|intcomma}}</span>
+                                <i class="mdi mdi-check-circle ml-1 text-info font-16"></i>
+                                {% else %}
+                                -
+                                {% endif %}
+                            </td>
+                            {% if is_editor %}
+                            <td class="text-right">
+                                <a class="btn btn-sm btn-link text-muted"
+                                   href="#"
+                                   data-toggle="modal" data-target="#edit_outsourcing_expense_modal"
+                                   onclick="updateOutsourcingExpenseData('{{expense.id}}','{{expense.title}}','{{expense.date|date:'Y-m-d'}}','{{expense.amount}}','{{expense.paid_amount}}','{{expense.attachment}}','{{expense.description}}');">
+                                    <i class="dripicons-document-edit"></i>
+                                </a>
+                                <a class="btn btn-sm btn-link text-muted"
+                                   href="#"
+                                   data-toggle="modal" data-target="#delete_outsourcing_expense_modal"
+                                   onclick="deleteOutsourcingExpenseData('{{expense.id}}');">
+                                    <i class="dripicons-trash"></i>
+                                </a>
+                            </td>
+                            {% endif %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% endif %}
+        <div class="col-12">
+            {% if is_editor %}
+            <a href="#" data-toggle="modal" data-target="#add_outsourcing_contract_modal" data-dismiss="modal" class="btn btn-info btn-sm font-12 float-right"><i class="dripicons-plus"></i> ADD CONTRACT</a>
+            {% endif %}
+            <h5 class="header-title font-weight-light">All Expenses</h5>
+            <div class="mt-3">
+                {% for contract in contract_data %}
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 col-xl-4">
+                                <div class="card-widgets">
+                                    <a class="btn btn-sm btn-link text-muted" href="#" data-toggle="modal" data-target="#edit_outsourcing_contract_modal" onclick="updateOutsourcingContractData('{{contract.data.id}}','{{contract.data.contractor.name}}','{{contract.data.contractor.id}}','{{contract.data.title}}','{{contract.data.amount}}','{{contract.data.included_details|join:'/'}}','{{contract.data.start_date|date:'Y-m-d'}}','{{contract.data.end_date|date:'Y-m-d'}}','{{contract.data.attachment}}');"><i class="dripicons-document-edit"></i></a>
+                                    <a class="btn btn-sm btn-link text-muted" href="#" data-toggle="modal" data-target="#delete_outsourcing_contract_modal" onclick="deleteOutsourcingContractData('{{contract.data.id}}');"><i class="dripicons-trash"></i></a>
+                                </div>
+                                <h5 class="card-title mt-1 mb-3 text-white">
+                                    {{contract.data.title}}
+                                    <span>({{contract.paid_expenses|length}}/{{contract.expenses|length}})</span>
+                                    {% if contract.data.attachment %}
+                                    <a href="{{contract.data.attachment.url}}" target="_blank"><i class="mdi mdi-link-variant text-white font-16"></i></a>
+                                    {% endif %}
+                                </h5>
+                                <div class="row">
+                                    <div class="col-5 mb-1">
+                                        <h5 class="font-10 text-muted mb-1">CONTACTOR</h5>
+                                        <p class="mb-0 font-14">{{contract.data.contractor.name}}</p>
+                                    </div>
+                                    <div class="col-7 mb-1">
+                                        <h5 class="font-10 text-muted mb-1">INCLUDED DETAILS</h5>
+                                        <p class="mb-0 font-14">
+                                            {% if contract.data.included_details %}
+                                                {% for included in contract.data.included_details %}<span>{{included}}{% if not forloop.last %}, {% endif %}</span>{% endfor %}
+                                            {% else %}
+                                            -
+                                            {% endif %}
+                                        </p>
+                                    </div>
+                                    <div class="col-5">
+                                        <h5 class="font-10 text-muted mb-1">COST</h5>
+                                        <p class="mb-0 font-14 dollar_sign">{{contract.data.amount|filter_safe_money_read_from_db|intcomma}}</p>
+                                    </div>
+                                    <div class="col-7">
+                                        <h5 class="font-10 text-muted mb-1">PERIOD</h5>
+                                        <p class="mb-0 font-14">{{contract.data.start_date}} - {{contract.data.end_date}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xl-8">
+                                <table class="table table-condensed table_expense w-100 mb-0">
+                                    <colgroup>
+                                        <col width="">
+                                        <col width="48">
+                                        <col width="200">
+                                        <col width="200">
+                                        {% if is_editor %}
+                                        <col width="200">
+                                        {% endif %}
+                                    </colgroup>
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>Work</th>
+                                            <th></th>
+                                            <th>Amount</th>
+                                            <th>Paid Amount</th>
+                                            {% if is_editor %}
+                                            <th></th>
+                                            {% endif %}
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for expense in contract.expenses %}
+                                        <tr>
+                                            <td>
+                                                <b class="text-white mr-1">{{expense.title}}</b>
+                                                {% if expense.description %}
+                                                <a class="text-muted ml-1"
+                                                    data-container="body"
+                                                    data-trigger="hover"
+                                                    data-toggle="popover"
+                                                    data-placement="bottom"
+                                                    data-content="{{expense.description}}">
+                                                    <i class="mdi mdi-comment-processing"></i>
+                                                </a>
+                                                {% endif %}
+                                            </td>
+                                            <td>
+                                                {% if expense.attachment %}
+                                                <a href="{{expense.attachment.url}}" target="_blank"><i class="mdi mdi-link-variant text-white font-16"></i></a>
+                                                {% endif %}
+                                            </td>
+                                            <td>
+                                                <span class="dollar_sign{% if expense.payment_date %} text-muted{% else %} text-white{% endif %}" {% if expense.payment_date %}style="text-decoration: line-through;"{% endif %}>{{expense.amount|filter_safe_money_read_from_db|intcomma}}</span>
+                                            </td>
+                                            <td>
+                                                {% if expense.payment_date %}
+                                                <span class="dollar_sign text-white">{{expense.paid_amount|filter_safe_money_read_from_db|intcomma}}</span>
+                                                <i class="mdi mdi-check-circle ml-1 text-info font-16"></i>
+                                                {% else %}
+                                                -
+                                                {% endif %}
+                                            </td>
+                                            {% if is_editor %}
+                                            <td class="text-right">
+                                                <a class="btn btn-sm btn-link text-muted" href="#" data-toggle="modal" data-target="#edit_outsourcing_expense_modal" onclick="updateOutsourcingExpenseData('{{expense.id}}','{{expense.title}}','{{expense.date|date:'Y-m-d'}}','{{expense.amount}}','{{expense.paid_amount}}','{{expense.attachment}}','{{expense.description}}');"><i class="dripicons-document-edit"></i></a>
+                                                <a class="btn btn-sm btn-link text-muted" href="#" data-toggle="modal" data-target="#delete_outsourcing_expense_modal" onclick="deleteOutsourcingExpenseData('{{expense.id}}');"><i class="dripicons-trash"></i></a>
+                                            </td>
+                                            {% endif %}
+                                        </tr>
+                                        {% endfor %}
+                                        {% if is_editor %}
+                                        <tr>
+                                            <td class="text-center" colspan="100%"><a href="#" data-toggle="modal" data-target="#add_outsourcing_expense_modal" class="text-success" onclick="createOutsourcingExpense('{{contract.data.id}}');">+ Add Expense</a></td>
+                                        </tr>
+                                        {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <div class="w-100 py-5">
+                    <p class="text-muted font-14 text-center">No Expenses</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock content %}
+
+{% block modal %}
+{% if is_editor %}
+{% include 'construction/partials/outsourcing_contract_modal.html' %}
+{% include 'construction/partials/outsourcing_expense_modal.html' %}
+{% endif %}
+{% endblock %}
+
+{% block third_party %}
+{% include "base/load_datatable.html" %}
+{% endblock third_party %}

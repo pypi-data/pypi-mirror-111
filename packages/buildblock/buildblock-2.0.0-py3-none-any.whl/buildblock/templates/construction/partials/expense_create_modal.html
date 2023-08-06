@@ -1,0 +1,165 @@
+{% load static i18n base_tag construction_tag %}
+{% get_worker_list as WORKER_LIST %}
+{% get_expense_category_list as EXPENSE_CATEGORY_LIST %}
+<div id="add_expense_modal_1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="add_expense_label_1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="add_expense_label_1">Select Type</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="btn-group w-100">
+                    <a href="#" data-toggle="modal" data-target="#add_expense_modal_2" data-dismiss="modal" class="mr-1 py-2 btn btn-lg btn-rec btn-info font-16">Personnel<br>Expense</a>
+                    <a href="#" data-toggle="modal" data-target="#add_expense_modal_3" data-dismiss="modal" class="py-2 btn btn-lg btn-rec btn-danger font-16">Materials<br>& Extra</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="add_expense_modal_2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="add_expense_modal_label_2" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="add_expense_modal_label_2">Add today's personnel expense</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <form method="post"
+                  action="{% url 'construction:personnel-expense-create' %}"
+                  enctype="multipart/form-data">
+                {% csrf_token %}
+                {% autoescape off %}
+                <input type="hidden" name="return_url" value="{{request.get_full_path}}">
+                <input type="hidden" name="construction_id" value="{{construction.id}}"/>
+                <div class="modal-body">
+                    <div class="form-group mb-4">
+                        <p class="font-12 text-muted">WORKER</p>
+                        <select class="form-control select2" data-toggle="select2" name="worker_id" required>
+                            <option>Select Worker</option>
+                            {% for worker in WORKER_LIST %}
+                            <option value="{{worker.id}}">{{worker.name}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 pr-1">
+                            <div class="form-group mb-4">
+                                <p class="font-12 text-muted">WORKING HOURS</p>
+                                <input type="number" class="form-control" name="work_hours" required>
+                            </div>
+                        </div>
+                        <div class="col-6 pl-1">
+                            <div class="form-group mb-4">
+                                <p class="font-12 text-muted">PAYMENT (cent)</p>
+                                <input type="text" class="form-control" name="amount" required>
+                            </div>
+                        </div>
+                        <div class="col-8 pr-1">
+                            <div class="form-group mb-4">
+                                <p class="font-12 text-muted">WORK DATE</p>
+                                <input type="date" class="form-control date" name="date" id="per_expense_date_picker" data-toggle="date-picker" data-single-date-picker="true" required>
+                            </div>
+                        </div>
+                        <div class="col-4 pl-1 text-center">
+                            <div class="form-group delete_switch mb-1">
+                                <p class="font-12 text-muted">Payment Check</p>
+                                <input type="checkbox" id="per_expense_paid" data-switch="info" name="payment_check" value="paid"/>
+                                <label class="mt-1" for="per_expense_paid" data-on-label="Paid" data-off-label="Not Paid"></label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group mb-4">
+                                <p class="font-12 text-muted">ATTACHMENT (optional)</p>
+                                <input type="file" class="form-control" name="attachment">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <p class="font-12 text-muted">DESCRIPTION (optional)</p>
+                                <textarea name="description" class="form-control" rows="2"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="justify-content: space-between;">
+                    <button type="button" class="btn btn-secondary" data-target="#add_expense_modal_1" data-toggle="modal" data-dismiss="modal">Select Expense Type</button>
+                    <input type='submit' class='btn btn-success' value='Save' />
+                </div>
+                {% endautoescape %}
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="add_expense_modal_3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="add_expense_modal_label_3" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="add_expense_modal_label_3">Add today's expense</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <form method="post"
+                  action="{% url 'construction:expense-create' %}"
+                  enctype="multipart/form-data">
+                {% csrf_token %}
+                {% autoescape off %}
+                <input type="hidden" name="return_url" value="{{request.get_full_path}}">
+                <input type="hidden" name="construction_id" value="{{construction.id}}"/>
+                <div class="modal-body">
+                    <div class="form-group mb-4">
+                        <p class="font-12 text-muted">CATEGORY</p>
+                        <select class="form-control" name="category" required>
+                            {% for value, display in EXPENSE_CATEGORY_LIST %}
+                            <option value="{{value}}">{{display}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="col-8 pr-1">
+                            <div class="form-group mb-4">
+                                <p class="font-12 text-muted">ITEM</p>
+                                <input type="text" name="item" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-4 pl-1">
+                            <div class="form-group mb-4">
+                                <p class="font-12 text-muted">QUANTITY (optional)</p>
+                                <input type="number" class="form-control" name="quantity">
+                            </div>
+                        </div>
+                        <div class="col-6 pr-1">
+                            <div class="form-group mb-4">
+                                <p class="font-12 text-muted">TOTAL AMOUNT (cent)</p>
+                                <input type="text" class="form-control" name="amount" required>
+                            </div>
+                        </div>
+                        <div class="col-6 pl-1">
+                            <div class="form-group mb-4">
+                                <p class="font-12 text-muted">DATE</p>
+                                <input type="date" class="form-control date" name="date" id="expense_date_picker" data-toggle="date-picker" data-single-date-picker="true" required>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group mb-4">
+                                <p class="font-12 text-muted">ATTACHMENT (optional)</p>
+                                <input type="file" class="form-control" name="attachment">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <p class="font-12 text-muted">DESCRIPTION (optional)</p>
+                                <textarea name="description" class="form-control" rows="2"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="justify-content: space-between;">
+                    <button type="button" class="btn btn-secondary" data-target="#add_expense_modal_1" data-toggle="modal" data-dismiss="modal">Select Expense Type</button>
+                    <input type='submit' class='btn btn-success' value='Save' />
+                </div>
+                {% endautoescape %}
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,210 @@
+{% load static i18n base_tag construction_tag %}
+{% get_outsourcing_contract_included_list as OUTSOURCING_INCLUDED_LIST %}
+<div id="add_outsourcing_contract_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="add_outsourcing_contract_label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="add_outsourcing_contract_label">Add Outsourcing Contract</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <form method="post"
+                  action="{% url 'construction:outsourcing-contract-create' %}"
+                  enctype="multipart/form-data">
+                  <input type="hidden" name="return_url" value="{{request.get_full_path}}">
+                  <input type="hidden" name="construction_id" value="{{construction.id}}">
+                  {% csrf_token %}
+                <div class="modal-body">
+                    <div class="form-group mb-4">
+                        <p class="font-12 text-muted">Contractor</p>
+                        <select class="form-control select2" data-toggle="select2" name="contractor_id" required>
+                            <option>Select Contractor</option>
+                            {% for contractor in contractor_list %}
+                            <option value="{{contractor.id}}">{{contractor.name}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="col-8 pr-1">
+                            <div class="form-group mb-4">
+                                <p class="font-12 text-muted">TITLE</p>
+                                <input type="text" name="title" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-4 pl-1">
+                            <div class="form-group mb-4">
+                                <p class="font-12 text-muted">AMOUNT (cent)</p>
+                                <input type="text" class="form-control" name="amount" required>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group mb-4">
+                                <p class="font-12 text-muted">INCLUDED DETAILS</p>
+                                {% for value, display in OUTSOURCING_INCLUDED_LIST %}
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="outsourcing_contract_included_{{value}}" name="included_details[]" value="{{value}}">
+                                    <label class="custom-control-label" for="outsourcing_contract_included_{{value}}">{{display}}</label>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="col-6 pr-1">
+                            <div class="form-group mb-4">
+                                <p class="font-12 text-muted">START DATE</p>
+                                <input type="date" class="form-control date" name="start_date" id="outsourcing_contract_start_date_picker" data-toggle="date-picker" data-single-date-picker="true" required>
+                            </div>
+                        </div>
+                        <div class="col-6 pl-1">
+                            <div class="form-group mb-4">
+                                <p class="font-12 text-muted">END DATE</p>
+                                <input type="date" class="form-control date" name="end_date" id="edit_" data-toggle="date-picker" data-single-date-picker="true" required>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <p class="font-12 text-muted">ATTACHMENT (optional)</p>
+                                <input type="file" class="form-control" name="attachment">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="justify-content: space-between;">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <input type='submit' class='btn btn-success' value='Save' />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="edit_outsourcing_contract_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="edit_outsourcing_contract_label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="edit_outsourcing_contract_label">Edit Outsourcing Contract</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <form method="post"
+                  action="{% url 'construction:outsourcing-contract-update' %}"
+                  enctype="multipart/form-data">
+                  <input type="hidden" name="return_url" value="{{request.get_full_path}}">
+                  <input type="hidden" name="construction_id" value="{{construction.id}}">
+                  <input type="hidden" name="contract_id"/>
+                  <input type="hidden" name="contractor_id"/>
+                  {% csrf_token %}
+                <div class="modal-body">
+                    <div class="form-group mb-4">
+                        <p class="font-12 text-muted">Contractor</p>
+                        <input type="text" name="contractor_name" class="form-control" disabled>
+                    </div>
+                    <div class="row">
+                        <div class="col-8 pr-1">
+                            <div class="form-group mb-4">
+                                <p class="font-12 text-muted">TITLE</p>
+                                <input type="text" name="title" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-4 pl-1">
+                            <div class="form-group mb-4">
+                                <p class="font-12 text-muted">AMOUNT (cent)</p>
+                                <input type="text" class="form-control" name="amount" required>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group mb-4">
+                                <p class="font-12 text-muted">INCLUDED DETAILS</p>
+                                {% for value, display in OUTSOURCING_INCLUDED_LIST %}
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="edit_outsourcing_contract_included_{{value}}" name="included_details[]" value="{{value}}">
+                                    <label class="custom-control-label" for="edit_outsourcing_contract_included_{{value}}">{{display}}</label>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="col-6 pr-1">
+                            <div class="form-group mb-4">
+                                <p class="font-12 text-muted">START DATE</p>
+                                <input type="date" class="form-control date" name="start_date" id="edit_outsourcing_contract_start_date_picker" data-toggle="date-picker" data-single-date-picker="true" required>
+                            </div>
+                        </div>
+                        <div class="col-6 pl-1">
+                            <div class="form-group mb-4">
+                                <p class="font-12 text-muted">END DATE</p>
+                                <input type="date" class="form-control date" name="end_date" id="edit_outsourcing_contract_end_date_picker" data-toggle="date-picker" data-single-date-picker="true" required>
+                            </div>
+                        </div>
+                        <div class="col-8 pr-1">
+                            <div class="form-group mb-1">
+                                <p class="font-12 text-muted">ATTACHMENT (optional)</p>
+                                <input type="file" class="form-control" name="attachment">
+                            </div>
+                        </div>
+                        <div class="col-4 pl-1 text-center">
+                            <div class="form-group delete_switch mb-1">
+                                <p class="font-12 text-muted">기존파일 삭제</p>
+                                <input type="checkbox" id="delete_contract_attach_switch" data-switch="danger" name="delete_attach" value="delete"/>
+                                <label class="mt-1" for="delete_contract_attach_switch" data-on-label="Delete" data-off-label="Keep file"></label>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-4">
+                            <span class="font-12 text-muted">※ 새로운 파일을 저장하면 기존의 파일은 삭제되니 유의하시기 바랍니다.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="justify-content: space-between;">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <input type='submit' class='btn btn-success' value='Save' />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="delete_outsourcing_contract_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="delete_outsourcing_contract_label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="delete_outsourcing_contract_label">Delete Outsourcing Contract</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <form method="POST" action="{% url 'construction:outsourcing-contract-delete' %}">
+                {% csrf_token %}
+                <input type="hidden" name="contract_id">
+                <input type="hidden" name="return_url" value="{{request.get_full_path}}">
+                <div class="modal-body text-center">
+                    <p class="font-14 my-3">{% blocktrans %} 해당 외주 계약을 삭제하시겠습니까? {% endblocktrans %}</p>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" value="Delete" class='btn btn-danger'/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function deleteOutsourcingContractData(id) {
+        var delete_form = $('#delete_outsourcing_contract_modal form');
+        delete_form.find('input[name="contract_id"]').val(id);
+    };
+
+    function updateOutsourcingContractData(id, contractor_name, contractor_id, title, amount, included_details, start_date, end_date, attachment) {
+        var included_split = included_details.split('/');
+        var update_form = $('#edit_outsourcing_contract_modal form');
+        update_form.find('input[name="contract_id"]').val(id);
+        update_form.find('input[name="contractor_id"]').val(contractor_id);
+        update_form.find('input[name="contractor_name"]').val(contractor_name);
+        update_form.find('input[name="title"]').val(title);
+        update_form.find('input[name="amount"]').val(amount);
+        update_form.find('input[name="start_date"]').val(start_date);
+        update_form.find('input[name="end_date"]').val(end_date);
+        $('input[name="included_details[]"]').prop('checked', false);
+        for (var i in included_split) {
+            $('#edit_outsourcing_contract_included_'+included_split[i]).prop('checked', true);
+        }
+        if(attachment==''){
+            update_form.find('input[name="delete_attach"]').attr('disabled', true)
+        } else {
+            update_form.find('input[name="delete_attach"]').attr('disabled', false)
+        }
+    };
+</script>

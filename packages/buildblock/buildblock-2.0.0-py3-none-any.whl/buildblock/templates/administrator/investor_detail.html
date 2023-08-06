@@ -1,0 +1,153 @@
+{% extends "administrator/base.html" %}
+{% load static i18n crispy_forms_tags management_tag %}
+
+{% block title %}{{page_title}}{% endblock %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <a class="btn btn-sm btn-link text-success" href="{% url 'administrator:investor-list' %}"><i class="dripicons-list"></i> LIST</a>
+            </div>
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<div class="card manager_investor_detail">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-2 border-right border-secondary">
+                <label class="font-12 text-gray font-weight-light">NAME</label>
+                <p class="text-white font-16">{{investor.name}}</p>
+            </div>
+            <hr>
+            <div class="col-2 border-right border-secondary">
+                <label class="font-12 text-gray font-weight-light">EMAIL</label>
+                <p class="text-white font-16 mb-0">{{investor.email}}</p>
+            </div>
+            <div class="col-2 border-right border-secondary">
+                <label class="font-12 text-gray font-weight-light">PHONE</label>
+                <p class="text-white font-16 mb-0">{{investor.phone}}</p>
+            </div>
+            <div class="col-6">
+                <label class="font-12 text-gray font-weight-light">ADDRESS</label>
+                <a href="{{investor.plan_file_url}}">
+                    <p class="text-white font-16 mb-0">{{investor.address}}</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <p class="text-white font-16">
+            INVESTMENT PRODUCT ({{investor.num_investment}})
+        </p>
+    </div>
+    <div class="col-12 mb-3">
+        <table class="table table-condensed dataTable w-100">
+            <colgroup>
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+            </colgroup>
+            <thead class="thead-dark">
+                <tr>
+                  <th>ID</th>
+                  <th>Amount</th>
+                  <th>Product</th>
+                  <th>Manager Name</th>
+                  <th>Manager Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for investment in investments|dictsort:"id" %}
+                <tr>
+                    <td>{{investment.id}}</td>
+                    <td class="dollar_sign">{{investment.amount}}</td>
+                    <td><a href="{% url 'administrator:investment-product-detail' investment.investment_product.id %}">{{investment.investment_product.title}}</a></td>
+                    <td>{{investment.investment_product.manager_name}}</td>
+                    <td>{{investment.investment_product.manager_email}}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td class="text-center" colspan="5">No Products</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <p class="text-white font-16">
+            CONTRACT
+        </p>
+    </div>
+    <div class="col-12">
+        <table class="table table-condensed dataTable w-100">
+            <colgroup>
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="200">
+            </colgroup>
+            <thead class="thead-dark">
+                <tr>
+                  <th>ID</th>
+                  <th>Status</th>
+                  <th>Title</th>
+                  <th>Investment Product</th>
+                  <th>E-Signature</th>
+                  <th>Document</th>
+                  <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for contract in contracts|dictsort:"id" %}
+                <tr>
+                    <td>{{contract.id}}</td>
+                    <td>{{contract.status|get_contract_status_badge}}</td>
+                    <td>{{contract.title}}</td>
+                    <td><a href="{% url 'administrator:investment-product-detail' contract.investment_product_id %}">{{contract.investment_product_title}}</a></td>
+                    <td>
+                        {% if contract.envelope_id %}
+                        <a href="{% url 'administrator:esignature-document-download' envelope_id=contract.envelope_id %}" target="_blank"><i class="dripicons-document"></i> View</a>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if contract.document_name %}
+                        <a href="{% url 'investment:document-download' contract.id %}" target="_blank"><i class="dripicons-blog"></i> View</a>
+                        {% endif %}
+                    </td>
+                    <td>
+                      <a class="btn btn-sm btn-link text-warning" href="{% url 'administrator:investment-contract-update' contract.id %}"><i class="dripicons-document-edit"></i> EDIT</a>
+                      <a class="btn btn-sm btn-link text-danger" href="{% url 'administrator:investment-contract-delete' contract.id %}"><i class="dripicons-trash"></i> DEL</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td class="text-center" colspan="7">No Contracts</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock content %}
+
+{% block third_party %}
+{% include "base/load_datatable.html" %}
+{% endblock third_party %}

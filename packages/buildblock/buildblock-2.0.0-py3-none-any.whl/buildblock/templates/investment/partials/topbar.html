@@ -1,0 +1,64 @@
+{% load static i18n base_tag account_tag %}
+{% get_intersection_set user.user_role service_role_set as USER_SERVICE_ROLE_SET %}
+<!-- Topbar Start -->
+<div class="navbar-custom">
+    <ul class="list-unstyled topbar-right-menu float-right mb-0">
+        {% if USER_SERVICE_ROLE_SET|length <= 1 %}
+            <img class="logo_sm visible_sm" src="{% static 'landing/images/logo/logo_h36.png' %}" height="22">
+        {% else %}
+            <!-- Role Selection -->
+            <li class="dropdown notification-list topbar-dropdown">
+                <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                    <span class="align-middle d-sm-inline">{% get_user_role_title role=request.session.active_role %}</span> <i class="mdi mdi-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated topbar-dropdown-menu flag_dropdown">
+                    {% for user_role in USER_SERVICE_ROLE_SET %}
+                        {% if user_role != request.session.active_role %}
+                            <a href="{% url 'investment:change-role' user_role=user_role %}" class="dropdown-item notify-item">
+                                <span class="align-middle d-sm-inline">{% get_user_role_title role=user_role %}</span>
+                            </a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </li>
+        {% endif %}
+
+        <li class="dropdown notification-list">
+            <a class="nav-link dropdown-toggle nav-user arrow-none mr-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="false"
+                aria-expanded="false">
+                <span class="account-user-avatar" style="top:21px;left:19px;">
+                    <i class="mdi mdi-account-circle-outline" style="font-size:26px;"></i>
+                </span>
+                <span>
+                    <span class="account-user-name">{{user.name}}</span>
+                    <span class="account-position">{% get_user_role_title role=request.session.active_role %}</span>
+                </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
+                <!-- item-->
+                <div class=" dropdown-header noti-title">
+                    <h6 class="text-overflow m-0">Welcome !</h6>
+                </div>
+
+                <!-- item-->
+                <a href="{% url 'investment:profile' %}" class="dropdown-item notify-item">
+                    <i class="mdi mdi-account-circle mr-1"></i>
+                    <span>My Profile</span>
+                </a>
+
+                <!-- item-->
+                <a href="{% url 'account_logout' %}" class="dropdown-item notify-item">
+                    <i class="mdi mdi-logout mr-1"></i>
+                    <span>Logout</span>
+                </a>
+
+            </div>
+        </li>
+
+    </ul>
+
+    <button class="button-menu-mobile open-left disable-btn">
+        <i class="mdi mdi-menu"></i>
+    </button>
+</div>
+<!-- end Topbar -->

@@ -1,0 +1,88 @@
+{% extends "administrator/base_form.html" %}
+{% load static i18n crispy_forms_tags %}
+
+{% block title %}{{page_title}}{% endblock %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<form class="news_form" action='.' method='POST' enctype="multipart/form-data">
+  <div class="row">
+      <div class="col-12 col-lg-8">
+        <div class="card">
+          <div class="card-body">
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label class="font-12" for="{{ form.language.id_for_label }}">LANGUAGE</label>
+                  {{form.language}}
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label class="font-12" for="{{ form.news_category.id_for_label }}">CATEGORY</label>
+                  {{form.news_category}}
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="form-group">
+                  <label class="font-12" for="{{ form.writer.id_for_label }}">WRITER <span class="font-11 text-muted ml-2">* 언론보도 게시글의 경우 언론사를 적어주세요</span></label>
+                  {{form.writer}}
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="form-group">
+                    <label class="font-12" for="id_report_date">REPORT DATE <span class="font-11 text-muted ml-2">* 게시 순서</span></label>
+                    <input type="date" class="form-control mb-2 date" name="report_date" id="id_report_date" data-toggle="date-picker" data-single-date-picker="true" value="{{news.report_date}}" required>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="font-12" for="{{ form.title.id_for_label }}">TITLE</label>
+                  {{form.title}}
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="font-12" for="{{ form.content.id_for_label }}">CONTENT</label>
+                  {{form.content}}
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-lg-5">
+                <div class="form-group">
+                    <label class="font-12 d-block" for="id_thumbnail">THUMBNAIL</label>
+                    {{form.thumbnail}}
+                </div>
+              </div>
+              <div class="col-6 col-lg-3">
+                <p class="font-12">POSTING OPTION</p>
+                <div class="form-group">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" name="headline" class="custom-control-input mb-2" id="id_headline" {% if news.headline %}checked{% endif %}>
+                        <label class="font-12 custom-control-label" for="id_headline">HEADLINE</label>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="text-right admin_submit_btn">
+              <input id="history_form_submit" type='submit' class='btn btn-success' value='Save' />
+            </div>
+          </div>
+        </div>
+    </div>
+</form>
+{% endblock content %}

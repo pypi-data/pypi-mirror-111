@@ -1,0 +1,86 @@
+{% load static i18n %}
+<!-- Picture Update Modal -->
+<div id="edit_picture_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pic_update" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="pic_update">Edit Picture</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <form method="POST" action="{% url 'construction:picture-update' %}">
+                {% csrf_token %}
+                <input type="hidden" name="picture_id">
+                <input type="hidden" name="return_url" value="{{request.get_full_path}}">
+                <div class="modal-body">
+                    <img id="pic_modal_img" class="w-100">
+                    <div class="form-group mt-2">
+                        <label class="font-12" for="">STATUS</label>
+                        <select name="status" class="form-control" {% if not is_editor %}disabled{% endif %}>
+                            <option value="BEFORE">BEFORE</option>
+                            <option value="IN_PROGRESS">IN PROGRESS</option>
+                            <option value="AFTER">AFTER</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-12">DESCRIPTION</label>
+                        <textarea name="description" class="form-control" {% if not is_editor %}disabled{% endif %}></textarea>
+                    </div>
+                </div>
+                {% if is_editor %}
+                <div class="modal-footer" style="justify-content: space-between;">
+                    <button type="button" class="btn btn-danger" data-target="#delete_picture_modal" data-toggle="modal" data-dismiss="modal">DELETE</button>
+                    <input type="submit" value="SAVE" class='btn btn-success'/>
+                </div>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</div>
+
+{% if is_editor %}
+<!-- Picture Delete Modal -->
+<div id="delete_picture_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pic_delete" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="pic_delete">Delete Picture</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <form method="POST" action="{% url 'construction:picture-delete' %}">
+                {% csrf_token %}
+                <input type="hidden" name="picture_id">
+                <input type="hidden" name="return_url" value="{{request.get_full_path}}">
+                <div class="modal-body text-center">
+                    {% csrf_token %}
+                    <p class="font-14 my-3">{% blocktrans %} 해당 사진을 삭제하시겠습니까? {% endblocktrans %}</p>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" value="DELETE" class='btn btn-danger'/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<script>
+function changeModalData(id, image_url, status, description) {
+    $('#pic_modal_img').prop("src", image_url);
+
+    var update_form = $('#edit_picture_modal form');
+    update_form.find('input[name="picture_id"]').val(id);
+    update_form.find('select[name="status"]').val(status);
+    update_form.find('textarea[name="description"]').val(description);
+
+    var delete_form = $('#delete_picture_modal form');
+    delete_form.find('input[name="picture_id"]').val(id);
+}
+
+    $(document).ready(function(){
+        $('.add_picture_btns>input[name="picture"]').change(function(){
+            var form = $(this).parent('form')
+            form.children('input[name="status"]').val($(this).data('status'));
+            form.submit();
+        });
+    });
+</script>

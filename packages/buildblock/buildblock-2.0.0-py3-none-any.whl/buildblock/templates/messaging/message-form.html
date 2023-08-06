@@ -1,0 +1,93 @@
+{% extends "messaging/base.html" %}
+{% load static i18n crispy_forms_tags %}
+
+{% block title %}{% trans 'BUILDBLOCK MANAGER' %}{% endblock title %}
+
+{% block page_title %}
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <h4 class="page-title"><span class="badge badge-light mr-1">{{template.category}}</span> {{template.title}}</h4>
+            {% if template.description %}
+            <span class="font-12">{{template.description}}</span>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock page_title %}
+
+{% block content %}
+<form class="message_template_form" method="post" action="{% url 'messaging:send-message' %}">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-12">
+            <div class="card {% if template.description %}mt-4{% endif %}">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <p class="font-12 text-muted">FROM</p>
+                            <select class="form-control select2" data-toggle="select2" name="sender_id" required>
+                                <option disabled selected>Select Sender</option>
+                                {% for sender in sender_list %}
+                                <option value="{{sender.id}}">{{sender.name}} ({{sender.email}})</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <p class="font-12 text-muted">TO</p>
+                            <select class="form-control select2" data-toggle="select2" name="receiver_id" required>
+                                <option disabled selected>Select Receiver</option>
+                                {% for receiver in receiver_list %}
+                                <option value="{{receiver.id}}">{{receiver.name}} ({{receiver.email}})</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-5">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-group mb-4">
+                        <p class="font-12 text-muted">MESSAGE TITLE</p>
+                        <input type="text" class="form-control" name="message_title" value="{{template.title}}" required>
+                    </div>
+                    <div class="form-group mb-0">
+                        <p class="font-12 text-muted">MESSAGE CONTENT</p>
+                        <textarea id="message_content" name="message_content" class="form-control template_textarea" style="min-height:498px;">{{template_content}}</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="text-left">
+                <input type="submit" class="btn btn-success" value="SEND">
+                <a class="btn btn-light ml-1" href="{% url 'messaging:template-list' %}">CANCEL</a>
+            </div>
+        </div>
+        <div class="col-12 col-lg-7">
+            <div class="card">
+                <div class="card-body">
+                    <p class="font-12 text-muted">MESSAGE PREVIEW</p>
+                    <div id="message_preview"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock content %}
+{% block third_party %}
+<script>
+    $(document).ready(function(){
+        $('.content > .container-fluid').css("max-width","1500px")
+
+        message_content_val = $('textarea[name=message_content]').val()
+        $('#message_preview').html(message_content_val);
+    })
+
+    var message_content = document.getElementById('message_content');
+    message_content.onkeyup = message_content.onkeypress = function(){
+        document.getElementById('message_preview').innerHTML = this.value;
+    }
+</script>
+{% endblock %}

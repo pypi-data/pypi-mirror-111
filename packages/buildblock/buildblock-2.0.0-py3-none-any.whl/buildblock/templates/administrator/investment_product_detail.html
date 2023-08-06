@@ -1,0 +1,331 @@
+{% extends "administrator/base.html" %}
+{% load static i18n humanize mathfilters crispy_forms_tags management_tag %}
+
+{% block title %}{{page_title}}{% endblock %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <a class="btn btn-sm btn-link text-warning" href="{% url 'administrator:investment-product-update' investment_product.id %}"><i class="dripicons-document-edit"></i> EDIT</a>
+                <a class="btn btn-sm btn-link text-danger" href="{% url 'administrator:investment-product-delete' investment_product.id %}"><i class="dripicons-trash"></i> DELETE</a>
+                <a class="btn btn-sm btn-link text-dark" href="{% url 'administrator:investment-product-list' %}"><i class="dripicons-list"></i> LIST</a>
+            </div>
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card manager_investment_product_detail">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="row">
+                            <div class="col-6 border-right border-secondary">
+                                <label class="font-12 text-gray font-weight-light">TITLE</label>
+                                <p class="text-white font-16">{{investment_product.title}}</p>
+                            </div>
+                            <div class="col-6">
+                                <label class="font-12 text-gray font-weight-light">MANAGER</label>
+                                <p class="text-white font-16">
+                                    {{investment_product.manager_name}} / {{investment_product.manager_email}}
+                                </p>
+                            </div>
+                            <hr>
+                            <div class="col-6 border-right border-secondary">
+                                <label class="font-12 text-gray font-weight-light">START DATE</label>
+                                <p class="text-white font-16 mb-0">{{investment_product.start_date}}</p>
+                            </div>
+                            <div class="col-6">
+                                <label class="font-12 text-gray font-weight-light">END DATE</label>
+                                <p class="text-white font-16 mb-0">{{investment_product.end_date}}</p>
+                            </div>
+                            {% if investment_product.plan_file_name %}
+                            <div class="col-12">
+                                <label class="mt-3 font-12 text-gray font-weight-light">INVESTMENT PLAN</label>
+                                <a href="{{investment_product.plan_file_url}}">
+                                    <p class="text-white font-16">{{investment_product.plan_file_name}}</p>
+                                </a>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <label class="font-12 text-gray font-weight-light">DESCRIPTION</label>
+                        <p class="text-white font-16 mb-0">{{investment_product.description|safe}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="float-right">
+            <a href="#"
+               data-toggle="modal"
+               data-target="#all_products_modal"
+               class="btn btn-sm btn-primary font-12">
+                <i class="dripicons-plus mr-1"></i> ADD PRODUCT
+            </a>
+        </div>
+        <p class="text-white font-16">
+            PRODUCTS
+        </p>
+    </div>
+    <div class="col-12 mb-3">
+        <table class="table table-condensed dataTable w-100">
+            <colgroup>
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+            </colgroup>
+            <thead class="thead-dark">
+                <tr>
+                  <th>Code</th>
+                  <th>Address</th>
+                  <th>Status</th>
+                  <th>Rent</th>
+                  <th>Deposit</th>
+                  <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                <tr>
+                    <td>{{product.code}}</td>
+                    <td>
+                        {{product.full_address}}
+                        <a href="#"
+                           data-toggle="modal"
+                           data-target="#product_img_modal"
+                           onclick="changeModalImage('{{product.full_address}}','{{product.main_image_url}}');"
+                           class="text-white font-weight-300">
+                            <i class="ml-1 mdi mdi-image"></i>
+                        </a>
+                    </td>
+                    <td>{{product.status}}</td>
+                    <td class="dollar_sign">{{product.rent_under_lease|floatformat:"-2"|intcomma}}</td>
+                    <td class="dollar_sign">{{product.deposit_under_lease|floatformat:"-2"|intcomma}}</td>
+                    <td>
+                        <a class="btn btn-sm btn-link text-danger"
+                           href="{% url 'administrator:investment-product-delete-product' investment_product_id=investment_product.id product_id=product.id %}">
+                              <i class="dripicons-trash"></i> DELETE
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="float-right">
+            <a href="#"
+               data-toggle="modal"
+               data-target="#all_users_modal"
+               class="btn btn-sm btn-primary font-12">
+                <i class="dripicons-plus mr-1"></i> ADD INVESTOR
+            </a>
+        </div>
+        <p class="text-white font-16">
+            INVESTORS
+        </p>
+    </div>
+    <div class="col-12">
+        <table id="datatable_investor" class="table table-condensed dataTable w-100">
+            <colgroup>
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+            </colgroup>
+            <thead class="thead-dark">
+                <tr>
+                  <th>ID</th>
+                  <th>Amount</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Address</th>
+                  <th>Action</th>
+                  <th>Detail</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for investment in investments|dictsort:"id" %}
+                <tr>
+                    <td>{{investment.id}}</td>
+                    <td class="dollar_sign">{{investment.amount}}</td>
+                    <td>{{investment.investor.name}}</td>
+                    <td>{{investment.investor.email}}</td>
+                    <td>{{investment.investor.phone}}</td>
+                    <td>{{investment.investor.address}}</td>
+                    <td>
+                        <a class="btn btn-sm btn-link text-warning"
+                           href="{% url 'administrator:investment-update' investment.id %}">
+                              <i class="dripicons-document-edit"></i> EDIT
+                        </a>
+                        <a class="btn btn-sm btn-link text-danger"
+                           href="{% url 'administrator:investment-delete' investment.id %}">
+                              <i class="dripicons-trash"></i> DELETE
+                        </a>
+                    </td>
+                    <td>
+                        <a class="btn btn-sm btn-link text-success"
+                           href="{% url 'administrator:investment-detail' investment.id %}">
+                              <i class="dripicons-zoom-in"></i> VIEW ALL
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock content %}
+
+{% block modal %}
+<!-- All Products (select products to add) -->
+<div class="modal fade" id="all_products_modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Select Products to Add</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-condensed dataTable w-100">
+                    <colgroup>
+                        <col width="">
+                        <col width="">
+                        <col width="">
+                    </colgroup>
+                    <thead class="thead-dark">
+                        <tr>
+                          <th>Code</th>
+                          <th>Address</th>
+                          <th>Investment Product</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for product in connectable_products %}
+                        <tr>
+                            <td>{{product.code}}</td>
+                            <td>{{product.full_address}}</td>
+                            <td>
+                                {% if product.investment_product %}
+                                <a href="{% url 'administrator:investment-product-detail' product.investment_product.id %}">
+                                    <i class="dripicons-link"></i>
+                                    {{product.investment_product.title}}
+                                </a>
+                                {% else %}
+                                <a class="text-success"
+                                  href="{% url 'administrator:investment-product-add-product' investment_product_id=investment_product.id product_id=product.id %}">
+                                      <i class="dripicons-plus"></i> ADD
+                                </a>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td class="text-center" colspan="100%">No Products</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- All Users (select users to add) -->
+<div class="modal fade" id="all_users_modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Select Users to Add</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-condensed dataTable w-100">
+                    <colgroup>
+                        <col width="">
+                        <col width="">
+                        <col width="">
+                    </colgroup>
+                    <thead class="thead-dark">
+                        <tr>
+                          <th>Name</th>
+                          <th>Email</th>
+                          <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for user in investable_users %}
+                        <tr>
+                            <td>{{user.name}}</td>
+                            <td>{{user.email}}</td>
+                            <td>
+                                <a class="text-success"
+                                   href="{% url 'administrator:investment-create' investment_product_id=investment_product.id user_id=user.id %}">
+                                      <i class="dripicons-plus"></i> ADD
+                                </a>
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td class="text-center" colspan="100%">No Users</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Image Modal -->
+<div class="modal fade" id="product_img_modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal_img_title">Image Title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body modal_inner_img_full">
+                <img id="modal_img_content" class="d-block img-fluid" alt="Image" width="100%">
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+function changeModalImage(title, src) {
+    document.getElementById("modal_img_title").innerHTML = title;
+    document.getElementById("modal_img_content").src = src;
+}
+</script>
+{% endblock modal %}
+
+{% block third_party %}
+{% include "base/load_datatable.html" %}
+{% endblock third_party %}

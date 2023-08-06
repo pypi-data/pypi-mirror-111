@@ -1,0 +1,114 @@
+{% extends "administrator/base_form.html" %}
+{% load static i18n crispy_forms_tags base_tag %}
+
+{% block content %}
+<form action='.' method='POST'>
+    <div class="row">
+        <div class="col-12 col-lg-8">
+            <div class="card">
+                <div class="card-body">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-4 fieldWrapper">
+                            <label class="font-12" for="{{form.tenant.id_for_label}}">
+                                {{form.tenant.label}}
+                            </label>
+                            {{form.tenant}}
+                        </div>
+                        <div class="col-4 fieldWrapper">
+                            <label class="font-12" for="{{form.owner.id_for_label}}">
+                                {{form.owner.label}}
+                            </label>
+                            {{form.owner}}
+                        </div>
+                        <div class="col-4 fieldWrapper">
+                            <label class="font-12" for="{{form.destination_account.id_for_label}}">
+                                {{form.destination_account.label}}
+                            </label>
+                            {{form.destination_account}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 fieldWrapper">
+                            <label class="font-12" for="{{form.amount.id_for_label}}">
+                                {{form.amount.label}} (＄)
+                            </label>
+                            <input type="number"
+                                   name="{{form.amount.name}}"
+                                   value="{{form.amount.value|filter_safe_money_read_from_db}}"
+                                   min="0"
+                                   step="1"
+                                   class="textinput form-control mb-3" style="max-width:100%;"
+                                   required
+                                   id="id_amount">
+                        </div>
+                        <div class="col-4 fieldWrapper">
+                            <label class="font-12" for="{{form.application_fee.id_for_label}}">
+                                {{form.application_fee.label}} (＄)
+                            </label>
+                            <input type="number"
+                                   name="{{form.application_fee.name}}"
+                                   value="{{form.application_fee.value|filter_safe_money_read_from_db}}"
+                                   min="0"
+                                   step="1"
+                                   class="textinput form-control mb-3" style="max-width:100%;"
+                                   required
+                                   id="id_application_fee">
+                        </div>
+                        <div class="col-4 fieldWrapper">
+                            <label class="font-12" for="{{form.currency.id_for_label}}">
+                                {{form.currency.label}}
+                            </label>
+                            {{form.currency}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 fieldWrapper">
+                            <label class="font-12" for="{{form.product.id_for_label}}">
+                                {{form.product.label}}
+                            </label>
+                            {{form.product}}
+                        </div>
+                        <div class="col-4 fieldWrapper">
+                            <label class="font-12" for="{{form.status.id_for_label}}">
+                                {{form.status.label}}
+                            </label>
+                            {{form.status}}
+                        </div>
+                        <div class="col-4 fieldWrapper">
+                            <label class="font-12" for="{{form.account_type.id_for_label}}">
+                                {{form.account_type.label}}
+                            </label>
+                            {{form.account_type}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 fieldWrapper">
+                            <label class="font-12" for="{{form.source_type.id_for_label}}">
+                                {{form.source_type.label}}
+                            </label>
+                            {{form.source_type}}
+                        </div>
+                        <div class="col-4 fieldWrapper">
+                            <label class="font-12" for="{{form.identifier.id_for_label}}">
+                                {{form.identifier.label}}
+                            </label>
+                            {{form.identifier}}
+                        </div>
+                        <div class="col-4 fieldWrapper">
+                            <label class="font-12" for="{{form.transfer_datetime.id_for_label}}">
+                                {{form.transfer_datetime.label}}
+                            </label>
+                            {{form.transfer_datetime}}
+                        </div>
+                    </div>
+
+                    <div class="text-right admin_submit_btn">
+                        <input type='submit' class='btn btn-success' value='SAVE' />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock content %}

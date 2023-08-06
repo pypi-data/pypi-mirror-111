@@ -1,0 +1,99 @@
+{% load static i18n %}
+{% get_available_languages as LANGUAGES_LIST %}
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>{% block title %}BuildBlock Management{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="BuildBlock Management Service" />
+        <meta name="author" content="BuildBlock" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="{% static 'base/favi/favicon.ico' %}">
+
+        <!-- inline style to handle loading of various element-->
+        {% comment %} <style>body.loading {visibility: hidden;}</style> {% endcomment %}
+
+        <!-- third party css -->
+        <link href="{% static 'management/css/vendor/jquery-jvectormap-1.2.2.css' %}" rel="stylesheet" type="text/css" />
+        <!-- SimpleMDE css -->
+        <link href="{% static 'management/css/vendor/summernote-bs4.css' %}" rel="stylesheet" type="text/css" />
+        <!-- third party css end -->
+
+        <!-- App css -->
+        <link href="{% static 'base/css/icons.min.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'management/css/app.css' %}" rel="stylesheet" type="text/css" id="main-style-container" />
+        <link href="{% static 'management/css/add.css' %}" rel="stylesheet" type="text/css" id="main-style-container" />
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900|Noto+Serif+KR:100,300,400,500,700,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+        <!-- External JS Top -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+        <!-- Search & Analytics -->
+        {% block analytics_head %}
+        {% include "base/analytics_head.html" %}
+        {% endblock analytics_head %}
+    </head>
+    <body class="authentication-bg {% block login_background %}{% endblock login_background %} {% if LANGUAGE_CODE in 'en' %}body_en{% endif %}">
+        <!-- Search & Analytics -->
+        {% block analytics_body %}
+        {% include "base/analytics_body.html" %}
+        {% endblock analytics_body %}
+
+        {% if messages %}
+            {% include "management/messages.html" with messages=messages %}
+        {% endif %}
+
+        <div class="account-pages my-5">
+            <div class="container">
+                <div class="account_language">
+                    {% for lang_code, lang_name in LANGUAGES_LIST %}
+                    <a class="d-inline-block p-1" href="/{{lang_code}}{{request.get_full_path|slice:'3:'}}">
+                        <img class="lang_img {% if LANGUAGE_CODE != lang_code %}gray{% endif %}"
+                            src="{% static 'landing/images/icon_'|add:lang_code|add:'.png' %}"
+                            alt="{{lang_name}}"
+                            width="24">
+                    </a>
+                    {% endfor %}
+                </div>
+                <div class="row justify-content-center">
+                    {% block content %}
+                    <div class="col-lg-5">
+                        <div class="card">
+                            <div class="card-header pt-4 pb-4 text-center bg-primary">
+                                <a href="#">
+                                    <span><img src="{% static 'landing/images/logo/logo_w_h36.png' %}" alt="" height="24" id="side-main-logo"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endblock content %}
+                    {% block more_action %}{% endblock more_action %}
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer footer-alt">
+            Copyright © Build Block Inc. {% now 'Y' %}
+        </footer>
+
+        <!-- Modal -->
+        {% block modal %}{% endblock modal %}
+
+        <!-- Stripe -->
+        {% block stripe %}{% endblock stripe %}
+
+        <!-- bundle -->
+        <script src="{% static 'management/js/app.js' %}"></script>
+        {% block bundle %}{% endblock bundle %}
+
+        <!-- third party js -->
+        {% block third_party %}{% endblock third_party %}
+        <!-- third party js ends -->
+    </body>
+</html>

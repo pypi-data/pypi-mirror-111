@@ -1,0 +1,70 @@
+{% extends "administrator/base.html" %}
+{% load static i18n base_tag management_tag %}
+
+{% block title %}{{page_title}}{% endblock %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <a class="btn btn-sm btn-link text-dark" href="{% url 'administrator:investment-detail' investment_id %}"><i class="dripicons-arrow-thin-left"></i> Back</a>
+            </div>
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <table class="table table-condensed w-100">
+            <colgroup>
+                <col width="50">
+                <col width="">
+                <col width="150">
+            </colgroup>
+            <thead class="thead-dark">
+                <tr>
+                  <th>ID</th>
+                  <th>Title</th>
+                  <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for template in templates|dictsort:"id" %}
+                <tr>
+                    <td>{{template.id}}</td>
+                    <td>
+                        {{template.title}}
+                        {% get_contract_template_type_badge type=template.type %}
+                    </td>
+                    <td>
+                        {% if template.issued %}
+                        <span class="badge badge-success-lighten"><i class="mdi mdi-check"></i> ISSUED</span>
+                        {% else %}
+                        <a class="text-success"
+                           href="{% url 'administrator:investment-contract-create' investment_id=investment_id template_id=template.id %}">
+                            <i class="dripicons-document-edit"></i> NEW
+                        </a>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td class="text-center" colspan="4">No Templates</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% include "base/pagination.html" with paginator=paginator add_css="page_nav_dark" %}
+{% endblock content %}
+
+{% block third_party %}
+{% include "base/load_datatable.html" %}
+{% endblock third_party %}

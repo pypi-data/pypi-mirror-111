@@ -1,0 +1,261 @@
+{% extends "landing/base.html" %}
+{% load static i18n humanize base_tag landing_tag %}
+
+{% block navbar %}
+{% include 'landing/partials/nav.html' with nav_color="nav_box" %}
+{% endblock navbar %}
+
+{% block content %}
+<div class="banner_section banner_section_lg">
+    <div id="landing_main_carousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            {% if active_carousel %}
+                {% for slide in active_carousel %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <img class="{% if slide.image_mobile %}d-lg-block d-none {% endif %}img-fluid" src="{{slide.image.url}}" alt="">
+                    {% if slide.image_mobile %}<img class="d-lg-none d-block img-fluid" src="{{slide.image_mobile.url}}" alt="">{% endif %}
+                    <div class="banner_content carousel-caption text-white">
+                        <div class="container-fluid">
+                            {% if slide.title %}<h2 class="h1 headline text-shadow">{{slide.title}}</h2>{% endif %}
+                            {% if slide.description %}<h4 class="font-weight-normal mt-4 text-shadow">{{slide.description|safe}}</h4>{% endif %}
+                            {% if slide.button_url %}<a class="btn btn-extra-lg btn-light font-15 mt-2" href="{{slide.button_url}}" target="_blank">{{slide.button_title}}</a>{% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="carousel-item active">
+                    <img class="d-none d-lg-block img-fluid" src="{% static 'landing/images/background/main_banner_2021.jpg' %}" alt="US Real Estate Made Easy">
+                    <img class="d-block d-lg-none img-fluid" src="{% static 'landing/images/background/main_banner_2021_m.jpg' %}" alt="US Real Estate Made Easy">
+                    <div class="banner_content carousel-caption text-white text-shadow text-center">
+                        <div class="container-fluid">
+                            <h1 class="headline">{% trans 'US Real Estate Investment Made Easy' %}</h1>
+                            <h2 class="font-weight-normal">{% blocktrans %}Rebuilding Real Estate <br class="d-inline d-lg-none">Investment Experience{% endblocktrans %}</h2>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- Feature & Process -->
+<div class="content_section landing_feature">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <div class="card" data-aos-once="true" data-aos="fade-up">
+                    <div class="card-body" style="background-image: linear-gradient(135deg, #5311B1, #3C1195);">
+                        <h3>{% blocktrans %}Transactions<br><span class="feature_underline">Made Easy</span>{% endblocktrans %}</h3>
+                        <h5 class="content font-weight-medium">{% blocktrans %}From customized property search to tricky purchase and sales, BuildBlock will be with you.{% endblocktrans %}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="card" data-aos-once="true" data-aos="fade-up" data-aos-delay="250">
+                    <div class="card-body" style="background-image: linear-gradient(135deg, #4511A0, #2E1082);">
+                        <h3>{% blocktrans %}Paperworks<br><span class="feature_underline">Made Easy</span>{% endblocktrans %}</h3>
+                        <h5 class="content font-weight-medium">{% blocktrans %}Complicated and cumbersome paperworks, BuildBlock will help you.{% endblocktrans %}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="card" data-aos-once="true" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card-body" style="background-image: linear-gradient(135deg, #38118F, #201071);">
+                        <h3>{% blocktrans %}Management<br><span class="feature_underline">Made Easy</span>{% endblocktrans %}</h3>
+                        <h5 class="content font-weight-medium">{% blocktrans %}BuildBlock’s local team will directly oversee the client’s property.{% endblocktrans %}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card landing_process_card" data-aos-once="true" data-aos="fade-up">
+                    <div class="card-body bg-lightgray">
+                        <a class="btn btn-outline-navy btn-icon-right position-absolute" href="{% url 'service' %}">{% trans 'View Details' %} <i class="mdi mdi-arrow-right"></i></a>
+                        <h2 class="h1">{% blocktrans %}Investment Steps<br>Overview{% endblocktrans %}</h2>
+                        <div class="landing_process_svg">
+                            <span class="d-none d-md-inline">{% include 'landing/svg/landing_process.html' %}</span>
+                            <span class="d-inline d-md-none">{% include 'landing/svg/landing_process_m.html' %}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Case Study -->
+{% if landing_case_study_list %}
+<div class="content_section position-relative pt-0">
+    <div class="container-fluid">
+        <div class="section_title_with_btn">
+            <a class="btn btn-outline-black btn-icon-right position-absolute d-none d-lg-inline-block" href="{% url 'case-study' %}">{% blocktrans %}All Projects{% endblocktrans %} <i class="mdi mdi-arrow-right"></i></a>
+            <h2 class="h1 mb-3 mb-lg-4" data-aos-once="true" data-aos="fade-up">{% blocktrans %}Invest{% endblocktrans %}</h2>
+        </div>
+    </div>
+    <div class="container-fluid list_card_container">
+        <div class="list_card_mobile_slide">
+            <div class="row">
+                {% for case in landing_case_study_list %}
+                <div class="col-3">
+                    <a class="list_card_link" href="{% url 'case-study-read' pk=case.id %}">
+                        <div class="card list_card shadow-lg">
+                            <div class="card-body p-0">
+                                {% if case.thumbnail %}
+                                <img class="thumbnail w-100 card-img-top" src="{{case.news_thumbnail_url}}" alt="">
+                                {% endif %}
+                                <div class="list_card_title">
+                                    {% get_case_study_status_badge status=case.status language=LANGUAGE_CODE %}
+                                    <p class="font-20 text-dark font-weight-bold mb-2">{{case.title}}</p>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h5 class="font-12 text-muted mb-1">{% trans "PURCHASED PRICE" %}</h5>
+                                            <p class="font-18 text-dark dollar_sign mb-0">{{case.purchase_price|filter_safe_money_read_from_db|floatformat:0|intcomma}} <span class="hidden_en font-12">({{case.purchase_price|filter_change_dollar_to_100_m_won|floatformat:-1}}억 원)</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="text-center d-block d-lg-none">
+        <a class="btn btn-outline-black btn-icon-right " href="{% url 'case-study' %}" target="_blank">{% blocktrans %}All Projects{% endblocktrans %} <i class="mdi mdi-arrow-right"></i></a>
+    </div>
+</div>
+{% endif %}
+
+<!-- Video(Youtube) -->
+{% if landing_video_list %}
+<div class="content_section landing_video bg-lightgray">
+    <div class="container-fluid">
+        <div class="section_title_with_btn">
+            <a class="btn btn-outline-black btn-icon-right position-absolute d-none d-lg-inline-block" href="https://www.youtube.com/buildblock" target="_blank">{% blocktrans %}Visit Channel{% endblocktrans %} <i class="mdi mdi-arrow-right"></i></a>
+            <h2 class="h1 mb-2" data-aos-once="true" data-aos="fade-up">{% blocktrans %}YouTube{% endblocktrans %}</h2>
+            <h5 class="font-weight-medium mb-3 mb-lg-4">{% blocktrans %}Subscribe to our YouTube channel to check out various updates on the US real estate market. <a class="d-inline d-lg-none text-underline text-primary" href="https://www.youtube.com/buildblock" target="_blank"><br>Visit Channel</a>{% endblocktrans %}</h5>
+        </div>
+
+        <div id="landing_video_carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                {% for video in landing_video_list %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <div class="row">
+                        <div class="col-12 col-lg-8">
+                            <div class="video-container">
+                                <iframe class="landing_video_iframe" src="{{video.video_url}}" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="carousel-caption">
+                                <div class="card bg-dark-blue text-white w-100">
+                                    <div class="card-body">
+                                        <h3 class="text-white font-weight-bold" style="font-size: 3rem;">{{video.title}}</h3>
+                                        <hr class="border-white">
+                                        <h5 class="mb-0">{{video.description}}</h5>
+                                        {% if video.playlist_url %}<a class="btn btn-white btn-sm mt-2 mt-lg-3 float-right" href="{{video.playlist_url}}" target="_blank">{% trans 'More Videos' %}</a>{% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="carousel-control-custom">
+                <a class="slide_btn slide_prev_btn" href="#landing_video_carousel" role="button" data-slide="prev"><i class="mdi mdi-chevron-left"></i></a>
+                <span class="slide_num">
+                    <ol class="carousel-indicators d-inline-block">
+                    {% for video in landing_video_list %}
+                    <li{% if forloop.first %} class="active"{% endif %}>{{forloop.counter}} /</li>
+                    {% endfor %}
+                    </ol>
+                    {{landing_video_list|length}}
+                </span>
+                <a class="slide_btn slide_next_btn" href="#landing_video_carousel" role="button" data-slide="next"><i class="mdi mdi-chevron-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- Partners -->
+<div class="content_section landing_partner">
+    <div class="container-fluid text-center">
+        <h2 class="h1 mb-4" data-aos-once="true" data-aos="fade-up">{% blocktrans %}Partners{% endblocktrans %}</h2>
+        <div class="row">
+            <div class="col-6 col-lg-2 mb-2">
+                <img src="{% static 'landing/images/partner' %}/shinhan_{{LANGUAGE_CODE}}.png" alt="Shinhan Financial Group">
+            </div>
+            <div class="col-6 col-lg-2 mb-2">
+                <img src="{% static 'landing/images/partner' %}/hana_{{LANGUAGE_CODE}}.png" alt="Hana Financial Group">
+            </div>
+            <div class="col-6 col-lg-2 mb-2">
+                <img src="{% static 'landing/images/partner' %}/ibk_{{LANGUAGE_CODE}}.png" alt="Industrial Bank of Korea">
+            </div>
+            <div class="col-6 col-lg-2 mb-2">
+                <img src="{% static 'landing/images/partner/stanford.png' %}" alt="Stanford University">
+            </div>
+            <div class="col-6 col-lg-2 mb-2">
+                <img src="{% static 'landing/images/partner/berkeley.png' %}" alt="Berkeley University of California">
+            </div>
+            <div class="col-6 col-lg-2 mb-2">
+                <img src="{% static 'landing/images/partner' %}/msit_{{LANGUAGE_CODE}}.png" alt="Ministry of Science, ICT and Future Planning">
+            </div>
+            <div class="col-6 col-lg-2 mb-2">
+                <img src="{% static 'landing/images/partner' %}/seoul_{{LANGUAGE_CODE}}.png" alt="Seoul Metropolitan Government">
+            </div>
+            <div class="col-6 col-lg-2 mb-2">
+                <img src="{% static 'landing/images/partner/igis.png' %}" alt="IGIS Asset Management">
+            </div>
+            <div class="col-6 col-lg-2 mb-2">
+                <img src="{% static 'landing/images/partner' %}/dunamu_{{LANGUAGE_CODE}}.png" alt="Dunamu&Partners">
+            </div>
+            <div class="col-6 col-lg-2 mb-2">
+                <img src="{% static 'landing/images/partner/futureplay.png' %}" alt="Futureplay">
+            </div>
+            <div class="col-6 col-lg-2 mb-2">
+                <img src="{% static 'landing/images/partner/primer.png' %}" alt="Primer Sazze">
+            </div>
+            <div class="col-6 col-lg-2 mb-2">
+                <img src="{% static 'landing/images/partner/fintech.png' %}" alt="Fintech Lab Seoul">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact -->
+<div class="content_section landing_contact">
+    <div class="container-fluid text-center">
+        <h2 class="h1 mb-4" data-aos-once="true" data-aos="fade-up">{% blocktrans %}Ask Us Anything{% endblocktrans %}</h2>
+        <a href="{% url 'contact' %}" class="btn btn-primary-gradient btn-lg">{% trans 'Contact Us' %}</a>
+    </div>
+</div>
+
+{% if landing_popup %}
+{% include "landing/partials/popup.html" %}
+{% endif %}
+
+{% endblock content %}
+
+{% block footer_survey %}
+{% include "landing/partials/footer_survey.html" with form=form %}
+{% endblock footer_survey %}
+
+{% block third_party %}
+<script>
+    $('#landing_video_carousel').carousel({
+        interval: false,
+    });
+
+    // stop video when changing slides
+    $('.slide_btn').click(function(){
+        var iframe = $('.carousel-item.active').find('iframe');
+        var this_src = iframe.attr('src');
+        iframe.removeAttr('src');
+        iframe.prop('src', this_src);
+    });
+</script>
+{% include "landing/partials/load_lottie.html" %}
+{% endblock third_party %}

@@ -1,0 +1,388 @@
+{% extends "management/base.html" %}
+{% load static i18n humanize mathfilters base_tag management_tag crispy_forms_tags %}
+
+{% block page_title %}
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <h4 class="page-title">Overview</h4>
+        </div>
+    </div>
+</div>
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+    <!-- First Section -->
+    <div class="col-lg-12 col-xl-6">
+        <div class="row">
+            {% if stripe_account_data %}
+            {% generate_stripe_dashboard_url account_id=stripe_account_data.account_id as STRIPE_DASHBOARD_URL %}
+            <div class="col-12">
+                <div class="card widget-flat bg-primary-lighten">
+                    <div class="card-body p-3 payment-button-box">
+                        <div class="float-right">
+                        <a href="#" data-toggle="modal" data-target="#payout_schedule"><i class="dripicons-gear font-18"></i></a>
+                        </div>
+                        <h6 class="text-primary font-weight-normal mt-0">YOUR BALANCE</h6>
+                        <h3 class="mt-1 mb-1 text-primary dollar_sign">{{stripe_balance.total_balance_amount|floatformat:"-2"|intcomma|default:0}}</h3>
+
+                        <h4 class="mt-3 mb-0 text-gray-dark">
+                            <span class="font-14" style="font-weight:300;">Payout Available Balance</span>
+                            <span class="dollar_sign ml-1">{{stripe_balance.available_balance_amount|floatformat:"-2"|intcomma|default:0}}</span>
+                        </h4>
+
+                        {% if not stripe_account_data.payouts_enabled %}
+                        <a href="{{STRIPE_DASHBOARD_URL}}" target="_blank" class="btn payment-button btn-sm btn-primary">ID verification</a>
+                        {% elif stripe_account_data.payout_schedule == "manual" %}
+                        <button class="btn payment-button btn-sm btn-primary" data-toggle="modal" data-target="#payout_request_modal">PAYOUT</button>
+                        {% else %}
+                        <button class="btn payment-button btn-sm btn-primary" disabled>AUTO PAYOUT</button>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="col-lg-6 col-12">
+                <div class="card widget-flat">
+                    <div class="card-body">
+                        <div class="float-right">
+                            <i class="mdi mdi-currency-usd widget-icon"></i>
+                        </div>
+                        <h6 class="text-muted font-weight-normal mt-0">MONTHLY RENT</h6>
+                        <h3 class="mt-3 mb-0 dollar_sign">{{products_overview.rent_under_lease|floatformat:"-2"|intcomma|default:0}}</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-12">
+                <div class="card widget-flat">
+                    <div class="card-body">
+                        <div class="float-right">
+                            <i class="mdi mdi-account-multiple widget-icon"></i>
+                        </div>
+                        <h6 class="text-muted font-weight-normal mt-0">TENANTS</h6>
+                        <h3 class="mt-3 mb-0">
+                            {{products_overview.num_people_under_lease|default:0}}
+                            <span class="font-14 text-muted">/ {{products_overview.max_num_people|default:0}}</span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-12">
+                <div class="card widget-flat">
+                    <div class="card-body">
+                        <div class="float-right">
+                            <i class="mdi mdi-office-building widget-icon"></i>
+                        </div>
+                        <h6 class="text-muted font-weight-normal mt-0">PRODUCTS</h6>
+                        <h3 class="mt-3 mb-0">{{products|length|default:0}}</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-12">
+                <div class="card widget-flat">
+                    <div class="card-body">
+                        <div class="float-right">
+                            <i class="mdi mdi-home-currency-usd widget-icon"></i>
+                        </div>
+                        <h6 class="text-muted font-weight-normal mt-0">DEPOSIT</h6>
+                        <h3 class="mt-3 mb-0 dollar_sign">{{products_overview.deposit_under_lease|floatformat:"-2"|intcomma|default:0}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Section -->
+    <div class="col-lg-12 col-xl-6">
+        {% if products %}
+        <!-- Products List -->
+        <div class="card">
+            <div class="card-body">
+                <h4 class="header-title mt-2">Products</h4>
+
+                <table class="table table-centered table-hover mb-0 hidden_sm">
+                    <tbody>
+                        {% for product in products %}
+                        <tr onclick="location.href='{% url 'management:product-info' product_code=product.code %}'">
+                            <td>
+                                {% get_product_status_badge product=product %}
+                                <h5 class="font-14 mb-1 font-weight-normal">{{product.full_address}}</h5>
+                            </td>
+                            <td>
+                                <h5 class="font-14 mb-1 font-weight-normal dollar_sign">{{product.rent_under_lease|floatformat:"-2"|intcomma}}</span></h5>
+                                <span class="text-muted font-13">Rent</span>
+                            </td>
+                            <td>
+                                <h5 class="font-14 mb-1 font-weight-normal dollar_sign">{{product.deposit_under_lease|floatformat:"-2"|intcomma}}</h5>
+                                <span class="text-muted font-13">Deposit</span>
+                            </td>
+                            <td>
+                                <h5 class="font-14 mb-1 font-weight-normal">{{product.num_people_under_lease}}</h5>
+                                <span class="text-muted font-13">Tenants</span>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                <table class="visible_sm_table table mb-0">
+                    <tbody>
+                        {% for product in products %}
+                        <tr onclick="location.href='{% url 'management:product-info' product_code=product.code %}'">
+                            <td class="px-0">
+                                {% get_product_status_badge product=product %}
+                                <h5 class="font-14 mb-1 font-weight-normal">{{product.full_address}}</h5>
+
+                                <div class="row mt-1">
+                                    <div class="col-4">
+                                        <h5 class="font-14 mb-1 font-weight-normal dollar_sign">{{product.rent_under_lease|floatformat:"-2"|intcomma}}</span></h5>
+                                        <span class="text-muted font-12">Rent</span>
+                                    </div>
+                                    <div class="col-4">
+                                        <h5 class="font-14 mb-1 font-weight-normal dollar_sign">{{product.deposit_under_lease|floatformat:"-2"|intcomma}}</h5>
+                                        <span class="text-muted font-12">Deposit</span>
+                                    </div>
+                                    <div class="col-4">
+                                        <h5 class="font-14 mb-1 font-weight-normal">{{product.num_people_under_lease}}</h5>
+                                        <span class="text-muted font-12">Tenants</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if leases %}
+        <!-- Leases List -->
+        <div class="card">
+            <div class="card-body">
+                <h4 class="header-title mt-2">Leases</h4>
+
+                <table class="table table-centered table-hover mb-0 hidden_sm">
+                    <tbody>
+                        {% for lease in leases %}
+                        <tr>
+                            <td>
+                                <h5 class="font-14 mb-1 font-weight-normal">
+                                    {{lease.tenant_name}}
+                                    <span class="badge {% get_lease_status_badge_class status=lease.status %}">{{lease.status}}</span>
+                                </h5>
+                                <span class="text-muted font-13">{{lease.full_address}} | Room {{lease.room_num}}</span>
+                            </td>
+                            <td>
+                                <h5 class="font-14 mb-1 font-weight-normal dollar_sign">{{lease.rent|floatformat:"-2"|intcomma}}</h5>
+                                <span class="text-muted font-13">Rent</span>
+                            </td>
+                            <td>
+                                <h5 class="font-14 mb-1 font-weight-normal dollar_sign">{{lease.deposit|floatformat:"-2"|intcomma}}</h5>
+                                <span class="text-muted font-13">Deposit</span>
+                            </td>
+                            <td>
+                                <h5 class="font-14 mb-1 font-weight-normal">{{lease.num_paid_rents}}</h5>
+                                <span class="text-muted font-13">Rent Count</span>
+                            </td>
+                        </tr>
+                        {% endfor %}
+
+                    </tbody>
+                </table>
+
+                <table class="visible_sm_table table mb-0">
+                    <tbody>
+                        {% for lease in leases %}
+                        <tr>
+                            <td class="px-0">
+                                <h5 class="font-14 mb-1 font-weight-normal">
+                                    {{lease.tenant_name}}
+                                    <span class="badge {% get_lease_status_badge_class status=lease.status %}">{{lease.status}}</span>
+                                </h5>
+                                <span class="text-muted font-13">{{lease.full_address}} | Room {{lease.room_num}}</span>
+
+                                <div class="row mt-1">
+                                    <div class="col-4">
+                                        <h5 class="font-14 mb-1 font-weight-normal dollar_sign">{{lease.rent|floatformat:"-2"|intcomma}}</h5>
+                                        <span class="text-muted font-12">Rent</span>
+                                    </div>
+                                    <div class="col-4">
+                                        <h5 class="font-14 mb-1 font-weight-normal dollar_sign">{{lease.deposit|floatformat:"-2"|intcomma}}</h5>
+                                        <span class="text-muted font-12">Deposit</span>
+                                    </div>
+                                    <div class="col-4">
+                                        <h5 class="font-14 mb-1 font-weight-normal">{{lease.num_paid_rents}}</h5>
+                                        <span class="text-muted font-12">Rent Count</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock content %}
+
+{% block modal %}
+<!-- Payout Setting Modal -->
+<div class="modal fade" id="payout_schedule" tabindex="-1" role="dialog" aria-labelledby="tosModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <form action="{% url 'payments:stripe_payout_schedule_change_view' %}" method="POST">
+                {% csrf_token %}
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tosModalCenterTitle">Edit Payout Schedule</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group mb-0 p-1">
+                        <div class="custom-control custom-radio">
+                            <input type="radio"class="custom-control-input" name="payout_schedule" id="payout_daily"
+                                value="daily" {% if stripe_account_data.payout_schedule == "daily" %}checked{% endif %} >
+                            <label class="custom-control-label" for="payout_daily" style="padding-top:3px;">Automatic - Everyday</label>
+                        </div>
+                        <div class="custom-control custom-radio mt-2">
+                            <input type="radio"class="custom-control-input" name="payout_schedule" id="payout_manual"
+                                value="manual" {% if stripe_account_data.payout_schedule == "manual" %}checked{% endif %} >
+                            <label class="custom-control-label" for="payout_manual" style="padding-top:3px;">Manual</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% if stripe_account_data %}
+<!-- Account Request Modal -->
+{% generate_stripe_dashboard_url account_id=stripe_account_data.account_id as STRIPE_DASHBOARD_URL %}
+<div class="modal fade" id="account_request_modal" tabindex="-1" role="dialog" aria-labelledby="tosModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tosModalCenterTitle">ACCOUNT</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                {% if STRIPE_DASHBOARD_URL %}
+                <p><a href="{{STRIPE_DASHBOARD_URL}}" target="_blank">Open Dashboard</a></p>
+                {% else %}
+                <p>If you want to register your account information, please contact us. (info@buildblock.io)</p>
+                {% endif %}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if stripe_account_data.payouts_enabled %}
+<!-- Payout Request Modal -->
+<div class="modal fade" id="payout_request_modal" tabindex="-1" role="dialog" aria-labelledby="tosModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <form action="{% url 'payments:stripe_payout_view' %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="currency" value="usd" >
+                <div class="ElementsModal--top-banner">
+                    <div class="ElementsModal--sales-info">
+                        <div class="ElementsModal--top">
+                            <div class="ElementsModal--company" style="margin-bottom:5px;">
+                                PAYOUT
+                            </div>
+                            <button class="ElementsModal--close" data-dismiss="modal">
+                                <span class="font-18" aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ElementsModal--forms">
+                    <div class="ElementsModal--payment-details py-2">
+                        <div class="form-group">
+                            <label>Payout Account</label>
+                            {% for external_account in stripe_account_data.external_accounts %}
+                            <div class="custom-control custom-radio mb-2">
+                                <input type="radio"
+                                      class="custom-control-input"
+                                      name="destination"
+                                      id="external_account_{{forloop.counter}}"
+                                      value="{% if external_account.object == 'card' %}{{external_account.card_id}}{% else %}{{external_account.bank_id}}{% endif %}"
+                                      {% if forloop.first %}checked required{% endif %}>
+                                <label class="custom-control-label font-13" for="external_account_{{forloop.counter}}" style="padding-top:3px;line-height: 1.6;">
+                                    {% if external_account.object == "card" %}
+                                        {{external_account.brand}}
+                                        <br>****-****-****-{{external_account.number_last4}}
+                                    {% else %}
+                                        {{external_account.bank_name}}
+                                        <br>********{{external_account.account_last4}}
+                                    {% endif %}
+                                </label>
+                            </div>
+                            {% empty %}
+                            <div class="text-center">
+                                <p class="text-muted font-12">No account registered</p>
+                                <a href="{{STRIPE_DASHBOARD_URL}}" target="_blank" class="btn btn-link">Change payout account.</a>
+                            </div>
+                            {% endfor %}
+                            <hr>
+                            <div class="mb-2">
+                                <div class="form-group p-1 position-relative">
+                                    <label for="payout_available_amount">Payout Available Balance</label>
+                                    <input type="number" name="payout_available_amount" class="textinput form-control addon_input" id="payout_available_amount" value="{{stripe_balance.available_balance_amount|floatformat:"-2"|default:0}}" readonly>
+                                    <span class="addon_span">$</span>
+                                </div>
+                                <div class="form-group mb-0 p-1 position-relative">
+                                    <label for="payout_request_amount">Request Amount</label>
+                                    <input type="number" min="100" step="0.01" max="{{stripe_balance.available_balance_amount|floatformat:"-2"|default:0}}" name="payout_request_amount" class="textinput form-control addon_input" id="payout_request_amount" required>
+                                    <span class="addon_span">$</span>
+                                </div>
+                                <p class="p-1 mt-1 mb-0 font-11 text-muted">※ The minimum payout amount is $100.</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% if stripe_account_data.external_accounts %}
+                    <div class="ElementsModal--form">
+                        <p class="font-12 text-muted text-center">By paying out, you agree to<br>BuildBlock’s <a data-toggle="modal" data-target="#agreement_pay">Payment Policy.</a></p>
+                        <button type="submit" class="ElementsModal--pay-button">Payout</button>
+                    </div>
+                    <div class="footer ElementsModal--footer-text p-0 pt-2">
+                        <a href="{{STRIPE_DASHBOARD_URL}}" target="_blank" class="btn btn-link">Change payout account.</a>
+                    </div>
+                    {% else %}
+                    <div class="ElementsModal--form mb-0">
+                        <button type="button" class="btn-block btn btn-light" data-dismiss="modal">Close</button>
+                    </div>
+                    {% endif %}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endif %}
+
+<!--Payment Policy-->
+{% get_current_language as LANGUAGE_CODE %}
+{% get_agreement_by_type_language service_type='management' agreement_type='pay' language=LANGUAGE_CODE as AGREEMENT_PAY %}
+{% include 'management/partials/base_modal.html' with id="agreement_pay" title=AGREEMENT_PAY.title content=AGREEMENT_PAY.content|safe %}
+{% endblock modal %}

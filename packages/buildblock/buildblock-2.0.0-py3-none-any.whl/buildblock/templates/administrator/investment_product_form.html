@@ -1,0 +1,78 @@
+{% extends "administrator/base_form.html" %}
+{% load static i18n crispy_forms_tags %}
+
+{% block title %}{{page_title}}{% endblock %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<form action='.' method='POST'>
+    <div class="row">
+        <div class="col-12 col-lg-8">
+            <div class="card">
+                <div class="card-body">
+                  {% csrf_token %}
+                  <div class="row">
+                      <div class="col-6 fieldWrapper">
+                          <label class="font-12" for="{{ form.title.id_for_label }}">INVESTMENT TITLE</label>
+                          {{form.title}}
+                      </div>
+                      <div class="col-6 fieldWrapper">
+                          <label class="font-12" for="{{ form.manager.id_for_label }}">MANAGER</label>
+                          {{form.manager}}
+                      </div>
+                  </div>
+
+                  <div class="row my-4">
+                      <div class="col-6 fieldWrapper date_field">
+                          <label class="font-12" for="{{ form.start_date.id_for_label }}">START DATE</label>
+                          <div class="d-flex">
+                              {{form.start_date}}
+                          </div>
+                      </div>
+                      <div class="col-6 fieldWrapper date_field">
+                          <label class="font-12" for="{{ form.end_date.id_for_label }}">END DATE</label>
+                          <div class="d-flex">
+                              {{form.end_date}}
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="col-12 fieldWrapper">
+                          <label class="font-12" for="{{ form.plan.id_for_label }}">PLAN</label>
+                          {{form.plan}}
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="col-12 fieldWrapper">
+                          <label class="font-12" for="{{ form.description.id_for_label }}">DESCRIPTION</label>
+                          {{form.description}}
+                      </div>
+                  </div>
+
+                  <div class="text-right admin_submit_btn mt-3">
+                    <input type='submit' class='btn btn-success' value='SAVE' />
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock content %}
+
+{% block third_party %}
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+{% endblock third_party %}

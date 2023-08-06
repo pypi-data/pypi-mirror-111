@@ -1,0 +1,11 @@
+{% extends "base_error.html" %}
+{% load static %}
+
+{% block title %}Server Error{% endblock title %}
+
+{% block content %}
+<img class="error_img" src="{% static 'management/images/error/500.png' %}" alt="Server Error">
+<div class="container text-center pt-2">
+    <p class="text-primary mb-0" style="font-size:16px;">Please contact the server administrator, <span style="font-weight:500;text-decoration: underline;">help@buildblock.io</span></p>
+</div>
+{% endblock content %}

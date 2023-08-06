@@ -1,0 +1,75 @@
+{% extends "administrator/base_form.html" %}
+{% load static i18n crispy_forms_tags %}
+
+{% block title %}{{page_title}}{% endblock %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<form class="history_form" action='.' method='POST'>
+  <input type="hidden" name="title">
+  <input type="hidden" name="subtitle">
+  <div class="row">
+      <div class="col-12 col-lg-8">
+        <div class="card">
+          <div class="card-body">
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-6 col-lg-3 fieldWrapper">
+                <label class="font-12" for="{{ form.year.id_for_label }}">YEAR</label>
+                {{form.year}}
+              </div>
+              <div class="col-6 col-lg-3 fieldWrapper">
+                <label class="font-12" for="{{ form.quarter.id_for_label }}">QUARTER</label>
+                {{form.quarter}}
+              </div>
+              <div class="col-12 col-lg-3"></div>
+              <div class="col-12 col-lg-3 fieldWrapper">
+                <label class="font-12" for="{{ form.ordering.id_for_label }}">ORDERING</label>
+                {{form.ordering}}
+              </div>
+            </div>
+            <div class="fieldWrapper mt-4">
+              <label class="font-12" for="{{ form.title_en.id_for_label }}">TITLE(EN)</label>
+              {{form.title_en}}
+              <label class="font-12" for="{{ form.title_ko.id_for_label }}">TITLE(KO)</label>
+              {{form.title_ko}}
+            </div>
+            <div class="fieldWrapper mt-4">
+              <label class="font-12" for="{{ form.subtitle_en.id_for_label }}">SUBTITLE(EN)</label>
+              {{form.subtitle_en}}
+              <label class="font-12" for="{{ form.subtitle_ko.id_for_label }}">SUBTITLE(KO)</label>
+              {{form.subtitle_ko}}
+            </div>
+
+            <div class="text-right admin_submit_btn">
+              <input id="history_form_submit" type='submit' class='btn btn-success' value='Save' />
+            </div>
+          </div>
+        </div>
+    </div>
+</form>
+{% endblock content %}
+
+{% block third_party %}
+<script>
+  var history_form = $('.history_form');
+  $('#history_form_submit').click(function(){
+    var title = history_form.find('input[name="title_ko"]').val();
+    var subtitle = history_form.find('input[name="subtitle_ko"]').val();
+
+    history_form.find('input[name="title"]').val(title);
+    history_form.find('input[name="subtitle"]').val(subtitle);
+  });
+</script>
+{% endblock %}

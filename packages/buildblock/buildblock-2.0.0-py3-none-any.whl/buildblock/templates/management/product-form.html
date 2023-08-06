@@ -1,0 +1,143 @@
+{% extends "management/base.html" %}
+{% load static i18n management_tag %}
+
+{% block page_title %}
+<form method='POST' enctype="multipart/form-data">
+{% csrf_token %}
+<!-- start page title -->
+<div class="row">
+        <div class="col-12 col-lg-8">
+            <div class="page-title-box">
+                <div class="page-title-right d-block">
+                    <button type="submit" class="btn btn-success btn-rounded mb-2">Save</button>
+                </div>
+                <h4 class="page-title">{{page_title}}</h4>
+            </div>
+        </div>
+    </div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 col-lg-8">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label class="font-12" for="{{form.agency.id_for_label}}">Agency</label>
+                            {{form.agency}}
+                        </div>
+                    </div>
+                    
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label class="font-12" for="{{form.title.id_for_label}}">Title</label>
+                            {{form.title}}
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label class="font-12" for="{{form.address_1.id_for_label}}">{{form.address_1.label}}</label>
+                            {{form.address_1}}
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label class="font-12" for="{{form.address_2.id_for_label}}">{{form.address_2.label}} (optional)</label>
+                            {{form.address_2}}
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label class="font-12" for="{{form.city.id_for_label}}">{{form.city.label}}</label>
+                            {{form.city}}
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label class="font-12" for="{{form.state.id_for_label}}">{{form.state.label}}</label>
+                            {{form.state}}
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label class="font-12" for="{{form.zip_code.id_for_label}}">Zip Code</label>
+                            {{form.zip_code}}
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label class="font-12" for="{{form.main_image.id_for_label}}">Main Photo</label><br>
+                            {{form.main_image}}
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label class="font-12" for="{{form.property_type.id_for_label}}">Type</label>
+                            {{form.property_type}}
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label class="font-12" for="{{form.sqft.id_for_label}}">Net Area(sqft)</label>
+                            {{form.sqft}}
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label class="font-12" for="{{form.built_year.id_for_label}}">Year Built</label>
+                            {{form.built_year}}
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label class="font-12" for="{{form.num_bedroom.id_for_label}}">Beds</label>
+                            {{form.num_bedroom}}
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label class="font-12" for="{{form.num_bathroom.id_for_label}}">Baths</label>
+                            {{form.num_bathroom}}
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label class="font-12" for="{{form.num_parking.id_for_label}}">Parking Spaces</label>
+                            {{form.num_parking}}
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label class="font-12" for="{{form.num_people.id_for_label}}">{{form.num_people.label}} (Rent)</label>
+                            {{form.num_people}}
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-group mb-0">
+                            <label class="font-12" for="{{form.description.id_for_label}}">{{form.description.label}}</label>
+                            {{form.description}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+{% endblock content %}
+
+{% block third_party %}
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+{% endblock third_party %}

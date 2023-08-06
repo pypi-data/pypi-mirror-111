@@ -1,0 +1,113 @@
+{% extends "account/base.html" %}
+{% load static i18n management_tag javascript_tag %}
+
+{% block content %}
+<div class="col-lg-5">
+    <div class="card">
+        <div class="card-header pt-4 pb-4 text-center bg-primary">
+            <a href="{% url 'home' %}">
+                <span><img src="{% static 'landing/images/logo/logo_w_h36.png' %}" alt="" height="24" id="side-main-logo"></span>
+            </a>
+        </div>
+        <div class="card-body p-4">
+            <div class="text-center w-75 m-auto">
+                <h4 class="text-dark-50 text-center mt-0 font-weight-bold">{% trans "Bank Account Registration" %}</h4>
+            </div>
+
+            <form class="account_form" id="bank_account_form">
+                <div class="alert alert-danger" role="alert" id="info_alert" style="display:none;">
+                    <span id="info_alert_message"></span>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="routing_number">Routing Number</label>
+                        <div>
+                            <input type="text" name="routing_number" class="textinput textInput form-control" id="routing_number">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="account_number">Account Number</label>
+                        <div>
+                            <input type="text" name="account_number" class="textinput textInput form-control" id="account_number">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="account_holder_name">Account Holder Name</label>
+                    <div>
+                        <input type="text" name="account_holder_name" class="textinput textInput form-control" id="account_holder_name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="account_holder_type">Account Holder Type</label>
+                    <div>
+                        <select name="account_holder_type" class="textinput form-control addon_input" id="account_holder_type" required>
+                            <option value="individual">Individual</option>
+                            <option value="company">Company</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group mb-0 text-center">
+                    <button class="btn btn-primary" type="button" id="bank_token_create"> {% trans "Submit" %} </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+
+{% block more_action %}
+<div class="col-10 text-center">
+    <p class="text-muted"><a href="{% url 'management:profile' %}" class="text-muted ml-1"><b>{% trans "User profile" %}</b></a></p>
+</div>
+{% endblock more_action %}
+
+{% block stripe %}
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    // ACH
+    var stripePubKey = {{stripe_pubkey|safe_js_var}};
+    $('#bank_token_create').click(function(){
+        $("#bank_account_form :input").prop('disabled', true);
+        var stripe = Stripe(stripePubKey);
+        var country = "US";
+        var currency = "usd";
+        var routing_number = $('#routing_number').val();
+        var account_number = $('#account_number').val();
+        var account_holder_name = $('#account_holder_name').val();
+        var account_holder_type = $('#account_holder_type').val();
+        if (!country || !currency || !routing_number || !account_number || !account_holder_name || !account_holder_type) {
+            $("#bank_account_form :input").prop('disabled', false);
+            $("#info_alert").css('display', 'block');
+            $("#info_alert_message").html("Please enter all information");
+            return false;
+        }
+        $("#info_alert").css('display', 'none');
+        stripe.createToken('bank_account', {
+            country: country,
+            currency: currency,
+            routing_number: routing_number,
+            account_number: account_number,
+            account_holder_name: account_holder_name,
+            account_holder_type: account_holder_type,
+        }).then(function(result) {
+            console.log(result);
+            if(result.token) {
+                $("#token_id").val(result.token.id);
+                $("#info_alert").css('display', 'none');
+                console.log($("#token_id").val());
+                location.href = "{% url 'management:bank-account-registration-submit' %}?token_id=" + result.token.id;
+                return true;
+            } else {
+                $("#bank_account_form :input").prop('disabled', false);
+                var message = (result.error) ? result.error.message : "Please try again"
+                $("#info_alert_message").html(message);
+                $("#info_alert").css('display', 'block');
+                return false;
+            }
+        });
+    });
+</script>
+{% endblock stripe %}

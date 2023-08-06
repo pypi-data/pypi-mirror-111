@@ -1,0 +1,22 @@
+{% load static i18n base_tag construction_tag %}
+<div id="add_multi_expense_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="add_multiple_expense_label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="add_multiple_expense_label">Select Date</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <form method="get"
+                  action="{% url 'construction:multiple-expense-form' construction_id=construction.id %}">
+                <div class="modal-body">
+                    <div class="form-group mb-0">
+                        <input type="date" class="form-control date" name="date" data-toggle="date-picker" data-single-date-picker="true" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type='submit' class='btn btn-success' value='Next' />
+                </div> 
+            </form>
+        </div>
+    </div>
+</div>

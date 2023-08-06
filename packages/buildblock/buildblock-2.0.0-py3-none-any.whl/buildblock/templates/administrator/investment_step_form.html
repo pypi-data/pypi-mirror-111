@@ -1,0 +1,96 @@
+{% extends "administrator/base.html" %}
+{% load static i18n crispy_forms_tags base_tag %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 col-lg-8">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <label class="font-12 text-gray font-weight-light">INVESTMENT</label>
+                        <p class="text-white font-16">{{investment.investment_product.title}}</p>
+                    </div>
+                    <div class="col-3 border-left border-secondary">
+                        <label class="font-12 text-gray font-weight-light">INVESTOR</label>
+                        <p class="text-white font-16">{{investment.user.name}} ({{investment.user.name}})</p>
+                        <label class="font-12 text-gray font-weight-light">MANAGER</label>
+                        <p class="text-white font-16 mb-0">{{investment.investment_product.manager.name}} ({{investment.investment_product.manager.email}})</p>
+                    </div>
+                    <div class="col-3 border-left border-secondary">
+                        <label class="font-12 text-gray font-weight-light">AMOUNT</label>
+                        <p class="text-white font-16"><span class="dollar_sign">{{investment.amount|filter_safe_money_read_from_db}}</span></p>
+                        <label class="font-12 text-gray font-weight-light">DATE</label>
+                        <p class="text-white font-16 mb-0">{{investment.investment_product.start_date}} ~ {{investment.investment_product.end_date}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<form method='POST' enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-12 col-lg-8">
+            <div class="card">
+                <div class="card-body">
+                    {% csrf_token %}
+                    {{form.investment}}
+                    <div class="row">
+                        <div class="col-12 fieldWrapper">
+                            <label for="{{form.title.id_for_label}}">{{form.title.label}}</label>
+                            {{form.title}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 fieldWrapper">
+                            <label for="{{form.stage_id.id_for_label}}">{{form.stage_id.label}}</label>
+                            <select class="form-control mb-3" name="{{form.stage_id.name}}" id="{{form.stage_id.id_for_label}}">
+                                {% for stage in investment.workflow_template.stage_list|dictsort:'id' %}
+                                <option value="{{stage.id}}" {% if form.stage_id.value == stage.id %}selected{% endif %}>{{forloop.counter}}. {{stage.title}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 fieldWrapper">
+                            <label for="{{form.status.id_for_label}}">{{form.status.label}}</label>
+                            {{form.status}}
+                        </div>
+                        <div class="col-6 fieldWrapper">
+                            <label for="{{form.actor_role.id_for_label}}">{{form.actor_role.label}}</label>
+                            {{form.actor_role}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 fieldWrapper">
+                            <label for="{{form.description.id_for_label}}">{{form.description.label}}</label>
+                            {{form.description}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 fieldWrapper mt-3">
+                            <label for="{{form.contract.id_for_label}}">{{form.contract.label}}</label>
+                            {{form.contract}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 fieldWrapper">
+                            <!-- TODO: metadata 입력 형식 업데이트 -->
+                            <label for="{{form.metadata.id_for_label}}">{{form.metadata.label}}</label>
+                            {{form.metadata}}
+                        </div>
+                    </div>
+                    <div class="text-right admin_submit_btn">
+                      <input type='submit' class='btn btn-success' value='SAVE' />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock content %}
+
+{% block third_party %}
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+{% endblock third_party %}

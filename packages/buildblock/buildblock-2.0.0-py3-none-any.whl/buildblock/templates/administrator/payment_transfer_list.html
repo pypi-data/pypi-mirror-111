@@ -1,0 +1,79 @@
+{% extends "administrator/base.html" %}
+{% load static i18n base_tag management_tag %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <a class="btn btn-success mb-2" href="{% url 'administrator:payment-create' %}">CREATE PAYMENT</a>
+            </div>
+
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <table class="table table-condensed dataTable w-100">
+            <colgroup>
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="320">
+                <col width="170">
+                <col width="170">
+            </colgroup>
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Tenant</th>
+                    <th>Owner</th>
+                    <th>Amount</th>
+                    <th>Fee</th>
+                    <th>Status</th>
+                    <th>Product</th>
+                    <th>Trnafer DateTime</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for transfer in transfers %}
+                <tr>
+                    <td>{{transfer.id}}</td>
+                    <td>{{transfer.tenant.name}}</td>
+                    <td>{{transfer.owner.name}}</td>
+                    <td class="dollar_sign">{{transfer.amount|filter_safe_money_read_from_db}}</td>
+                    <td class="dollar_sign">{{transfer.application_fee|filter_safe_money_read_from_db}}</td>
+                    <td><span class="badge {% get_payment_status_badge_class status=transfer.status %}">{{transfer.get_status_display}}</span></td>
+                    <td>{{transfer.product.full_address}}</td>
+                    <td>{{transfer.transfer_datetime}}</td>
+                    <td>
+                        <a class="btn btn-sm btn-link text-info" href="{% url 'administrator:payment-transfer-detail' transfer.id %}"><i class="dripicons-zoom-in"></i></a>
+                        <a class="btn btn-sm btn-link text-warning" href="{% url 'administrator:payment-transfer-update' transfer.id %}"><i class="dripicons-document-edit"></i></a>
+                        <a class="btn btn-sm btn-link text-danger" href="{% url 'administrator:payment-transfer-delete' transfer.id %}"><i class="dripicons-trash"></i></a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td class="text-center" colspan="100%">No Data</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% include "base/pagination.html" with paginator=paginator add_css="page_nav_dark" sign_align="end"%}
+{% endblock content %}
+
+{% block third_party %}
+{% include "base/load_datatable.html" with ordering_sort="desc" %}
+{% endblock third_party %}

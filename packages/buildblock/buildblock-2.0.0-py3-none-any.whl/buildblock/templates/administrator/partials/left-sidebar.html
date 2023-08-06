@@ -1,0 +1,125 @@
+{% load static i18n %}
+
+<!-- ========== Left Sidebar Start ========== -->
+<div class="left-side-menu">
+
+    <div class="slimscroll-menu" id="left-side-menu-container">
+
+        <!-- LOGO -->
+        <a href="{% url 'administrator:administrator_menu' %}" class="logo text-center">
+            <span class="logo-lg">
+                <img src="{% static 'landing/images/logo/logo_w_h36.png' %}" alt="" height="22" id="side-main-logo" style="opacity: 0.3;">
+            </span>
+            <span class="logo-sm">
+                <img src="{% static 'management/images/logo/blogo_w_h32.png' %}" alt="" height="22" id="side-sm-main-logo" style="opacity: 0.3;">
+            </span>
+        </a>
+
+        <!--- tenant Sidemenu -->
+        <ul class="metismenu side-nav">
+            <li class="side-nav-item">
+                <a href="javascript: void(0);" class="side-nav-link">
+                    <i class="dripicons-device-desktop"></i>
+                    <span>LANDING</span>
+                </a>
+                <ul class="side-nav-second-level" aria-expanded="false">
+                    <li>
+                        <a href="{% url 'administrator:company-info-list' %}">Company Info.</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'administrator:history-list' %}">History</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'administrator:team-list' %}">Team</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'administrator:case-study-list' %}">Case Study</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'administrator:news-list' %}">News</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'administrator:landing-video-list' %}">Landing Video</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'administrator:landing-asset-list' %}">Landing Asset</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'administrator:faq-list' %}">FAQ</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="side-nav-item">
+                <a href="{% url 'administrator:product-list' %}" class="side-nav-link">
+                    <i class="dripicons-home"></i>
+                    <span>PRODUCT</span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="javascript: void(0);" class="side-nav-link">
+                    <i class="dripicons-pin"></i>
+                    <span>LEASE</span>
+                </a>
+                <ul class="side-nav-second-level" aria-expanded="false">
+                    <li>
+                        <a href="{% url 'administrator:lease' %}">Leases</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'administrator:payment' %}">Payments</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'administrator:payment-transfer' %}">Transfer Payments</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="side-nav-item">
+                <a href="javascript: void(0);" class="side-nav-link">
+                    <i class="dripicons-search"></i>
+                    <span>PROPERTY</span>
+                </a>
+                <ul class="side-nav-second-level" aria-expanded="false">
+                    <li>
+                        <a href="{% url 'administrator:property-sale-list' info_origin=info_origin %}">Sale Properties</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'administrator:property-sold-list' info_origin=info_origin %}">Sold Properties</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'administrator:property-filter-list' info_origin=info_origin %}">Property Filters</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="side-nav-item">
+                <a href="javascript: void(0);" class="side-nav-link">
+                    <i class="dripicons-graph-bar"></i>
+                    <span>INVESTMENT</span>
+                </a>
+                <ul class="side-nav-second-level" aria-expanded="false">
+                    <li>
+                        <a href="{% url 'administrator:investment-product-list' %}">Investment Products</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'administrator:investor-list' %}">Investors</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="side-nav-item">
+                <a href="javascript: void(0);" class="side-nav-link">
+                    <i class="dripicons-user"></i>
+                    <span>USER</span>
+                </a>
+                <ul class="side-nav-second-level" aria-expanded="false">
+                    <li>
+                        <a href="{% url 'administrator:user-list' %}">Users</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'administrator:email' %}">Send Email</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="clearfix"></div>
+
+    </div>
+</div>

@@ -1,0 +1,150 @@
+{% extends "administrator/base_form.html" %}
+{% load static i18n crispy_forms_tags base_tag %}
+
+{% block content %}
+<form action='.' method='POST'>
+    <div class="row">
+        <div class="col-12 col-lg-8">
+            <div class="card">
+                <div class="card-body">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-6 fieldWrapper">
+                            <label class="font-12" for="{{form.product.id_for_label}}">
+                                {{form.product.label}}
+                            </label>
+                            {{form.product}}
+                        </div>
+                        <div class="col-6 fieldWrapper">
+                            <label class="font-12" for="{{form.room_num.id_for_label}}">
+                                {{form.room_num.label}}
+                            </label>
+                            {{form.room_num}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 fieldWrapper">
+                            <label class="font-12" for="{{form.owner.id_for_label}}">
+                                {{form.owner.label}}
+                            </label>
+                            {{form.owner}}
+                        </div>
+                        <div class="col-6 fieldWrapper">
+                            <label class="font-12" for="{{form.tenant.id_for_label}}">
+                                {{form.tenant.label}}
+                            </label>
+                            {{form.tenant}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3 fieldWrapper">
+                            <label class="font-12" for="{{form.rent.id_for_label}}">
+                                {{form.rent.label}} (＄)
+                            </label>
+                            <input type="number"
+                                   name="{{form.rent.name}}"
+                                   value="{{form.rent.value|filter_safe_money_read_from_db}}"
+                                   min="0"
+                                   step="1"
+                                   class="textinput form-control mb-3" style="max-width:100%;"
+                                   required
+                                   id="id_rent">
+                        </div>
+                        <div class="col-3 fieldWrapper">
+                            <label class="font-12" for="{{form.deposit.id_for_label}}">
+                                {{form.deposit.label}} (＄)
+                            </label>
+                            <input type="number"
+                                   name="{{form.deposit.name}}"
+                                   value="{{form.deposit.value|filter_safe_money_read_from_db}}"
+                                   min="0"
+                                   step="1"
+                                   class="textinput form-control mb-3" style="max-width:100%;"
+                                   required
+                                   id="id_deposit">
+                        </div>
+                        <div class="col-3 fieldWrapper">
+                            <label class="font-12" for="{{form.status.id_for_label}}">
+                                {{form.status.label}}
+                            </label>
+                            {{form.status}}
+                        </div>
+                        <div class="col-3 fieldWrapper">
+                            <label class="font-12" for="{{form.payment_day.id_for_label}}">
+                                {{form.payment_day.label}}
+                            </label>
+                            {{form.payment_day}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 fieldWrapper date_field">
+                            <label class="font-12 dol" for="{{form.start_date.id_for_label}}">
+                                {{form.start_date.label}}
+                            </label>
+                            <div class="d-flex">
+                                {{form.start_date}}
+                            </div>
+                        </div>
+                        <div class="col-6 fieldWrapper date_field">
+                            <label class="font-12" for="{{form.end_date.id_for_label}}">
+                                {{form.end_date.label}}
+                            </label>
+                            <div class="d-flex">
+                                {{form.end_date}}
+                            </div>
+                        </div>
+                        <div class="col-6 fieldWrapper date_field">
+                            <label class="font-12" for="{{form.move_in_date.id_for_label}}">
+                                {{form.move_in_date.label}} (Optional)
+                            </label>
+                            <div class="d-flex">
+                                {{form.move_in_date}}
+                            </div>
+                        </div>
+                        <div class="col-6 fieldWrapper date_field">
+                            <label class="font-12" for="{{form.move_out_date.id_for_label}}">
+                                {{form.move_out_date.label}} (Optional)
+                            </label>
+                            <div class="d-flex">
+                                {{form.move_out_date}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        {% if form.payment_deposit %}
+                        <div class="col-6 fieldWrapper">
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox"
+                                       class="custom-control-input"
+                                       id="{{form.payment_deposit.id_for_label}}"
+                                       name="{{form.payment_deposit.name}}">
+                                <label class="custom-control-label" for="{{form.payment_deposit.id_for_label}}">
+                                    {{form.payment_deposit.label}}
+                                </label>
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% if form.payment_rent %}
+                        <div class="col-6 fieldWrapper">
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox"
+                                       class="custom-control-input"
+                                       id="{{form.payment_rent.id_for_label}}"
+                                       name="{{form.payment_rent.name}}">
+                                <label class="custom-control-label" for="{{form.payment_rent.id_for_label}}">
+                                    {{form.payment_rent.label}}
+                                </label>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="text-right admin_submit_btn">
+                        <input type='submit' class='btn btn-success' value='SAVE' />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock content %}

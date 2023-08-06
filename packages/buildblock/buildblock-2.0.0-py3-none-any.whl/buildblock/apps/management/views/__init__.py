@@ -1,0 +1,11 @@
+from buildblock.apps.management.views.base import *     # noqa
+from buildblock.apps.management.views.account import *  # noqa
+from buildblock.apps.management.views.document import *  # noqa
+from buildblock.apps.management.views.product import *  # noqa
+from buildblock.apps.management.views.house import *    # noqa
+from buildblock.apps.management.views.tenant import *   # noqa
+from buildblock.apps.management.views.transaction import *  # noqa
+from buildblock.apps.management.views.maintenance import *  # noqa
+from buildblock.apps.management.views.profile import *  # noqa
+from buildblock.apps.management.views.overview import * # noqa
+from buildblock.apps.management.views.owner import * # noqa

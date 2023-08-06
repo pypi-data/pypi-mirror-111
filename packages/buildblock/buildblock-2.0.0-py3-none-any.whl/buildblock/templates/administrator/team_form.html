@@ -1,0 +1,139 @@
+{% extends "administrator/base_form.html" %}
+{% load static i18n crispy_forms_tags %}
+
+{% block title %}{{page_title}}{% endblock %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<form class="team_form" action='.' method='POST' enctype="multipart/form-data">
+  <input type="hidden" name="name">
+  <input type="hidden" name="education[]">
+  <input type="hidden" name="work_experience[]">
+  <div class="row">
+      <div class="col-12 col-lg-8">
+        <div class="card">
+          <div class="card-body">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-12 col-lg-3 order-lg-last">
+                    <div class="form-group">
+                      <label class="font-12" for="{{ form.ordering.id_for_label }}">ORDERING</label>
+                      {{form.ordering}}
+                    </div>
+                    <div class="form-group mt-4">
+                        <label class="font-12 d-block" for="{{ form.profile_image.id_for_label }}">PROFILE IMAGE</label>
+                        {{form.profile_image}}
+                    </div>
+                </div>
+                <div class="col-12 col-lg-9 order-lg-first">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-12 col-lg-6 form-group mb-1">
+                              <label class="font-12" for="{{ form.department.id_for_label }}">DEPARTMENT</label>
+                              {{form.department}}
+                            </div>
+                            <div class="col-12 col-lg-6 form-group mb-1">
+                              <label class="font-12" for="{{ form.position.id_for_label }}">POSITION</label>
+                              {{form.position}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-12">NAME</label>
+                        <div class="row">
+                            <div class="col-12 col-lg-6 form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1">EN</span>
+                                    </div>
+                                    {{form.name_en}}
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1">KO</span>
+                                    </div>
+                                    {{form.name_ko}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="form_education_en" class="form-group">
+              <label class="font-12" for="{{ form.education_en.id_for_label }}">EDUCATION(EN)</label>
+              {{form.education_en}}
+            </div>
+            <div id="form_education_ko" class="form-group">
+              <label class="font-12" for="{{ form.education_ko.id_for_label }}">EDUCATION(KO)</label>
+              {{form.education_ko}}
+            </div>
+            <div id="form_work_experience_en" class="form-group mt-4">
+              <label class="font-12" for="{{ form.work_experience_en.id_for_label }}">WORK EXPERIENCE(EN)</label>
+              {{form.work_experience_en}}
+            </div>
+            <div id="form_work_experience_ko" class="form-group">
+              <label class="font-12" for="{{ form.work_experience_ko.id_for_label }}">WORK EXPERIENCE(KO)</label>
+              {{form.work_experience_ko}}
+            </div>
+            <div class="form-group mt-4">
+              <label class="font-12" for="{{ form.description_en.id_for_label }}">DESCRIPTION(EN)</label>
+              {{form.description_en}}
+              <label class="font-12" for="{{ form.description_ko.id_for_label }}">DESCRIPTION(KO)</label>
+              {{form.description_ko}}
+            </div>
+            <div class="text-right admin_submit_btn">
+              <input id="team_form_submit" type='submit' class='btn btn-success' value='Save' />
+            </div>
+          </div>
+        </div>
+    </div>
+</form>
+{% endblock content %}
+
+{% block third_party %}
+<!-- Add array input -->
+<script>
+  var team_group = ['work_experience_en','work_experience_ko','education_en','education_ko']
+  $.each(team_group, function(index, item){
+    var team_form_group = $('#form_' + item);
+    var count = 0;
+    team_form_group.find('input[type="button"]').click(function(){
+      count++;
+      var $add_list_tag = $('<li class="array-item"><input type="text" name="'+ item +'" class="form-control mb-2" style="max-width:100%;" id="id_'+ item +'_'+ count +'"></li>');
+      team_form_group.find('ul').append($add_list_tag);
+    });
+  });
+</script>
+<!-- 언어별로 데이터를 입력하는 항목 중 필수항목에 기본값을 넣어주기 -->
+<script>
+  var team_form = $('.team_form');
+  $('#team_form_submit').click(function(){
+    var name = team_form.find('input[name="name_ko"]').val();
+    var education_arr = [];
+    $('input[name="education_ko"]').each(function(){
+      education_arr.push($(this).val());
+    });
+    var work_experience_arr = [];
+    $('input[name="work_experience_ko"]').each(function(){
+      work_experience_arr.push($(this).val());
+    });
+
+    team_form.find('input[name="name"]').val(name);
+    team_form.find('input[name="education[]"]').val(education_arr);
+    team_form.find('input[name="work_experience[]"]').val(work_experience_arr);
+  });
+</script>
+{% endblock %}

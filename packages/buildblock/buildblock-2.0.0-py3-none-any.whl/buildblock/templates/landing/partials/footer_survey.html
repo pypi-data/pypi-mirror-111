@@ -1,0 +1,67 @@
+{% load staticfiles i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<div class="container-fluid footer_survey">
+    <form class="row justify-content-center" method="POST" id="survey_form">
+        {% csrf_token %}
+        <div class="col-12 col-lg-4">
+            <div class="page-title-box text-center text-lg-left pt-lg-3">
+                <h3 class="page-title bb_h3 text-white">{% blocktrans %}Inquiry for<br>Investment{% endblocktrans %}</h3>
+            </div>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div class="row survey_content">
+                <div class="col-12 text-center">
+                    {% if LANGUAGE_CODE == 'ko' %}
+                    <h3 class="mb-4" style="line-height: 45px;">나는
+                        <div class="form-group mb-0 d-inline-block ml-2 mr-1">
+                            {{form.survey_amount}}
+                        </div>
+                        으로<br>
+                        <div class="form-group mb-0 d-inline-block ml-2 mr-1">
+                            {{form.survey_purpose}}
+                        </div>
+                        를 하고 싶습니다
+                    </h3>
+                    {% else %}
+                    <h3 class="mb-4" style="line-height: 45px;">I want to invest
+                        <div class="form-group mb-0 d-inline-block ml-2 mr-1">
+                            {{form.survey_amount}}
+                        </div>
+                        <br> as
+                        <div class="form-group mb-0 d-inline-block ml-2 mr-1">
+                            {{form.survey_purpose}}
+                        </div>
+                    </h3>
+                    {% endif %}
+                </div>
+                <div class="col-12 mb-2">
+                    <label class="text-muted font-weight-300 font-13" for="{{form.message.id_for_label}}">{% trans "MESSAGE" %}</label>
+                    {{form.message}}
+                </div>
+                <div class="col-4">
+                    <div class="form-group mb-3">
+                        <label class="text-muted font-weight-300 font-13" for="{{form.name.id_for_label}}">{% trans "NAME" %}</label>
+                        {{form.name}}
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group mb-3">
+                        <label class="text-muted font-weight-300 font-13" for="{{form.email.id_for_label}}">{% trans "EMAIL" %}</label>
+                        {{form.email}}
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group mb-3">
+                        <label class="text-muted font-weight-300 font-13" for="{{form.phone.id_for_label}}">{% trans "PHONE" %}</label>
+                        {{form.phone}}
+                    </div>
+                </div>
+                <div class="col-12 mt-2">
+                    {% blocktrans asvar survey_send_btn %}SEND{% endblocktrans %}
+                    <input type='submit' class='btn btn-light btn-block btn-rec' value='{{survey_send_btn}}'/>
+                    <a href="{% static 'landing/docs' %}/BuildBlock_Introduction_2020_{{LANGUAGE_CODE}}.pdf" target="_blank" class="btn btn-block btn-rec btn-outline-light mt-1">{% trans 'BuildBlock Service Introduction' %} <i class="dripicons-download ml-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

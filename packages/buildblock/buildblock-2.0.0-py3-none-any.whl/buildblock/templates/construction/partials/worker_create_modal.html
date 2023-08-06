@@ -1,0 +1,75 @@
+{% load static i18n construction_tag %}
+{% get_worker_role_list as WORKER_ROLE_LIST %}
+{% get_worker_speciality_list as WORKER_SPECIALITY_LIST %}
+
+<!-- Worker Create Modal -->
+<div id="add_worker_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="add_worker_modal_label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="add_worker_modal_label">Add Worker</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <form method="post"
+                  action="{% url 'construction:worker-create' %}"
+                  enctype="multipart/form-data">
+                {% csrf_token %}
+                {% autoescape off %}
+                <input type="hidden" name="return_url" value="{{request.get_full_path}}" required>
+                <input type="hidden" name="construction_id" value="{{construction.id}}" required>
+                <div class="modal-body">
+                    <div class="form-group mb-4">
+                        <p class="font-12 text-muted">NAME</p>
+                        <input type="text" name="name" maxlength="100" class="form-control" id="worker_name" value="" required>
+                    </div>
+                    <div class="form-group mb-4">
+                        <p class="font-12 text-muted">ROLE</p>
+                        <div class="btn-group w-100">
+                            {% for value, display in WORKER_ROLE_LIST %}
+                            <label for="worker_role_{{value}}" class="btn btn-outline-info font-12">{{display}}</label>
+                            <input type="radio" name="role" id="worker_role_{{value}}" data-status="{{value}}" value="{{value}}" class="d-none" required>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="form-group mb-4">
+                        <p class="font-12 text-muted">SPECIALITY</p>
+                        {% for value, display in WORKER_SPECIALITY_LIST %}
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="worker_speciality_{{value}}" name="speciality[]" value="{{value}}">
+                            <label class="custom-control-label" for="worker_speciality_{{value}}">{{display}}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="form-group">
+                        <p class="font-12 text-muted">PHONE NUMBER</p>
+                        <input type="text" name="phone" maxlength="15" class="form-control" id="worker_phone" value="">
+                    </div>
+                    <div class="form-group">
+                        <p class="font-12 text-muted">DESCRIPTION</p>
+                        <textarea name="description" id="worker_description" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer" style="justify-content: space-between;">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <input type='submit' class='btn btn-success' value='Save' />
+                </div>
+                {% endautoescape %}
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% block third_party %}
+<script>
+$(document).ready(function(){
+    $('#add_worker_modal').find('input[name="role"]').change(function(){
+        var id = this.id;
+        var form = $('#add_worker_modal form');
+
+        $('label[for^="worker_role_"]').removeClass('btn-info');
+        $('label[for='+id+']').addClass('btn-info');
+    });
+});
+</script>
+{% endblock third_party %}

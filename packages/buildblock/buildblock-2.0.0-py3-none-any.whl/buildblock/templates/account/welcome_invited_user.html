@@ -1,0 +1,97 @@
+{% extends "account/base.html" %}
+
+{% load static i18n %}
+{% load crispy_forms_tags base_tag %}
+
+{% block title %}{% trans "BuildBlock | Welcome & Change Password" %}{% endblock %}
+
+{% block content %}
+<div class="col-lg-5">
+    <div class="card">
+        <div class="card-header pt-4 pb-4 text-center bg-primary">
+            <a href="{% url 'home' %}">
+                <span><img src="{% static 'landing/images/logo/logo_w_h36.png' %}" alt="" height="24" id="side-main-logo"></span>
+            </a>
+        </div>
+        <div class="card-body p-4">
+            <div class="text-center w-75 m-auto">
+                <h4 class="text-dark-50 text-center mt-0 font-weight-bold">{% trans "Change password" %}</h4>
+                <p class="text-muted mb-3">
+                {% blocktrans with user_name=user.name %}Welcome {{user_name}}! It's your first time signing in, so please change your password.{% endblocktrans %}
+                </p>
+            </div>
+
+            <form method="POST" class="mt-4">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <div class="form-group">
+                    <div class="custom-control custom-checkbox">
+                        <div>
+                          <input type="checkbox"
+                                 class="custom-control-input"
+                                 id="id_agree_terms"
+                                 name="agree_terms"
+                                 required>
+                          <label class="custom-control-label" for="id_agree_terms">
+                              I accept
+                              <a class="text-muted" data-toggle="modal" data-target="#agreement_tos">{% trans "Terms of Service" %}</a>
+                              & <a class="text-muted" data-toggle="modal" data-target="#agreement_pp">{% trans 'Privacy Policy' %}</a>
+                          </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-0 text-center">
+                    <button class="btn btn-primary" type="submit" name="action">{% trans "Agree and Submit" %}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+
+{% block modal %}
+{% get_current_language as LANGUAGE_CODE %}
+<!--Term of Service-->
+{% get_agreement_by_type_language service_type='management' agreement_type='tos' language=LANGUAGE_CODE as AGREEMENTS_TOS %}
+<div class="modal fade" id="agreement_tos" tabindex="-1" role="dialog" aria-labelledby="tosModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tosModalCenterTitle">{{AGREEMENTS_TOS.title}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                {{AGREEMENTS_TOS.content|safe}}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal"> {% trans "Close" %} </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Privacy Policy-->
+{% get_agreement_by_type_language service_type='management' agreement_type='pp' language=LANGUAGE_CODE as AGREEMENTS_PP %}
+<div class="modal fade" id="agreement_pp" tabindex="-1" role="dialog" aria-labelledby="ppModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ppModalCenterTitle">{{AGREEMENTS_PP.title}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                {{AGREEMENTS_PP.content|safe}}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal"> {% trans "Close" %} </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock modal %}

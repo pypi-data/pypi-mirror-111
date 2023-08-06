@@ -1,0 +1,41 @@
+{% extends "management/base.html" %}
+{% load static i18n management_tag base_tag %}
+
+{% block page_title %}
+<form method='POST'>
+{% csrf_token %}
+<!-- start page title -->
+<div class="row">
+        <div class="col-12 col-lg-8">
+            <div class="page-title-box">
+                <div class="page-title-right d-block">
+                    <button type="submit" class="btn btn-success btn-rounded mb-2">Save</button>
+                </div>
+                <h4 class="page-title">{{page_title}}</h4>
+            </div>
+        </div>
+    </div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 col-lg-8">
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group">
+                    {% include "account/signup_form.html" with field=form.name %}
+                </div>                
+                {% for field in form.visible_fields %}
+                <div class="form-group">
+                    {% if field.name not in 'name' %}
+                    {% include "account/signup_form.html" with field=field %} 
+                    {% endif %}
+                </div>
+                {% endfor %}               
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+{% endblock content %}

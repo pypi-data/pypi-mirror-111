@@ -1,0 +1,24 @@
+{% extends "landing/base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "BuildBlock |" %} {{page_title}}{% endblock title %}
+
+{% block content %}
+<div class="banner_section mypage_banner bg-lightgray">
+    <div class="banner_content">
+        <div class="container-fluid">
+            <h1 class="text-center mb-0">{% trans 'Mypage' %}</h1>
+        </div>
+    </div>
+</div>
+
+<div class="content_section">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-9">
+                User info
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

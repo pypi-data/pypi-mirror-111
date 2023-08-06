@@ -1,0 +1,109 @@
+{% load static i18n %}
+<table align="center" style="width:100%;background:#e3eaef;">
+    <tr>
+        <td align="center">
+            <div style="margin:50px auto;max-width:600px;">
+                <table style="font-family:'Noto Sans KR',sans-serif;text-align:left;background:#fff;padding:40px;border-top:10px solid #9013fe;box-shadow:0 0 15px rgba(0,0,0,0.1);width:100%;border-collapse:separate;">
+                    <tbody>
+                    <tr>
+                        <td style="padding-bottom:40px;">
+                            <img src="{% static 'landing/images/logo/logo_h36.png' %}" alt="BuildBlock" height="30">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding-bottom:30px;font-weight:700;font-size:20px;line-height:1;">
+                            {% blocktrans %}Hello {{user_name}}{% endblocktrans %},<br>
+                            {% blocktrans %}Your investment progress rate is <span style="color:#9013fe;font-size:32px;">{{total_progress_percentage}}%</span>.{% endblocktrans %}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-size:15px;font-weight:500;padding-bottom:30px;">
+                            <span id="comment">{{comment|default:""}}<span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-size:18px;font-weight:500;">
+                            <div class="stage_img">
+                                <table style="width:100%;">
+                                    <tr>
+                                        {% for stage in stage_list %}
+                                            <td style="padding:8px 0px 0px;font-size:12px;text-align:center;vertical-align:baseline;">
+                                                <img
+                                                    {% if stage.progress_percentage == 0 %}
+                                                    src="{% static 'management/images/investment/stage_pending_'|add:stage.id|add:'.png' %}"
+                                                    {% else %}
+                                                    src="{% static 'management/images/investment/stage_'|add:stage.id|add:'.png' %}"
+                                                    {% endif %}
+                                                    style="
+                                                        display:inline-block;
+                                                        width:65px;
+                                                        {% if stage.progress_percentage == 0 %}
+                                                        opacity: 0.6;
+                                                        {% elif stage.progress_percentage == 100 %}
+                                                        opacity: 0.55;
+                                                        {% endif %}
+                                                    "
+                                                >
+                                                <br>
+                                                <span
+                                                    style="
+                                                        {% if stage.progress_percentage > 0 %}
+                                                        color:#0acf97;
+                                                        {% if stage.progress_percentage < 100 %}font-weight: 700;{% endif %}
+                                                        {% endif %}
+                                                    "
+                                                >
+                                                    <span style="font-size: 11px;">Stage {{forloop.counter}}</span><br>{{stage.title}}
+                                                </span>
+                                            </td>
+                                            {% if forloop.counter|divisibleby:3 %}</tr><tr>{% endif %}
+                                        {% endfor %}
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size:13px;font-weight:300;padding:30px 0;">
+                            <table style="border-top:1px solid #242424;border-bottom:1px solid #242424;width:100%;">
+                                <col width="110">
+                                <col>
+                                <tr>
+                                    <td style="background:#fafafa;padding:8px 10px;">{% trans "Investment<br/>Product" %}</td>
+                                    <td style="padding:8px 10px;">{{investment_title}}</td>
+                                </tr>
+                                <tr>
+                                    <td style="background:#fafafa;padding:8px 10px;">{% trans "Current<br/>Step" %}</td>
+                                    <td style="padding:8px 10px;">
+                                        <b>{% for stage in stage_list %}{% if stage.id == stage_id %}[Stage {{forloop.counter}}. {{stage_title}}]</b><br>{{step_title}}{% endif %}{% endfor %}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="background:#fafafa;padding:8px 10px;">{% trans "Status" %}</td>
+                                    <td style="padding:8px 10px;">{{status}}</td>
+                                </tr>
+                                <tr>
+                                    <td style="background:#fafafa;padding:8px 10px;">{% trans "URL" %}</td>
+                                    <td style="padding:8px 10px;"><a href="{{site_link}}" target="_blank">{% trans "Direct link" %}</a></td>
+                                </tr>
+                                <tr>
+                                    <td colspan='2' style="padding:15px 10px;border-top:1px solid #eee;">{{description|safe}}</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-size:13px;color:#9013fe;font-weight:700;padding-top:40px;">
+                          {% blocktrans %}Real Estate Management Service by <a href="https://buildblock.io" target="_blank" style="color:#9013fe;text-decoration: none;">BuildBlock</a>{% endblocktrans %}
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>

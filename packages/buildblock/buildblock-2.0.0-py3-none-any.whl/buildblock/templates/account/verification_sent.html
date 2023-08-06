@@ -1,0 +1,31 @@
+{% extends "account/base.html" %}
+
+{% load static i18n %}
+
+{% block title %}{% trans "BuildBlock | Verify Your Email Address" %}{% endblock %}
+
+{% block content %}
+<div class="col-lg-5">
+    <div class="card">
+        <div class="card-header pt-4 pb-4 text-center bg-primary">
+            <a href="{% url 'home' %}">
+                <span><img src="{% static 'landing/images/logo/logo_w_h36.png' %}" alt="" height="24" id="side-main-logo"></span>
+            </a>
+        </div>
+        <div class="card-body p-4">
+            <div class="text-center m-auto">
+                <img src="{% static 'management/images/mail_sent.svg' %}" alt="mail sent image" height="64" />
+                <h4 class="text-dark-50 text-center mt-4 font-weight-bold">{% trans "Verify your email address" %}</h4>
+                <p class="text-muted mb-4">
+                    {% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the sign up process. Please contact us if you do not receive it within a few minutes.{% endblocktrans %}
+                </p>
+            </div>
+
+            <div class="form-group mb-0 text-center">
+                <a href="{% url 'account_login' %}" class="btn btn-primary">{% trans "Back to sign in" %}</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+

@@ -1,0 +1,33 @@
+{% load static %}
+
+{% block app_css %}
+<!-- Datatables css -->
+<link href="{% static 'management/css/vendor/dataTables.bootstrap4.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'management/css/vendor/responsive.bootstrap4.css' %}" rel="stylesheet" type="text/css" />
+{% endblock app_css %}
+
+{% block app_js_bottom %}
+<!-- Datatables js -->
+<script src="{% static 'management/js/vendor/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'management/js/vendor/dataTables.bootstrap4.js' %}"></script>
+<script src="{% static 'management/js/vendor/dataTables.responsive.min.js' %}"></script>
+<script src="{% static 'management/js/vendor/responsive.bootstrap4.min.js' %}"></script>
+
+<!-- Datatable Init js -->
+<script src="{% static 'management/js/pages/demo.datatable-init.js' %}"></script>
+<script>
+$(document).ready(function() {
+    $(".dataTable").each(function(){
+        $(this).DataTable({
+            'paging': false,
+            'pagingType':'simple_numbers',
+            'ordering': true,
+            'info': false,
+            'filter': false,
+            'lengthChange': false,
+            'order': []
+        });
+    })
+});
+</script>
+{% endblock app_js_bottom %}

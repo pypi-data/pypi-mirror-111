@@ -1,0 +1,150 @@
+{% extends "landing/base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "BuildBlock |" %} {{page_title}}{% endblock title %}
+
+{% block content %}
+<div class="banner_section service_banner banner_section_md">
+    <div class="container-fluid">
+        <div class="banner_content text-white">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <h1 class="text-shadow mb-0">{% blocktrans %}Rebuilding <br class="d-inline d-lg-none">Real Estate<br>Investment Experience{% endblocktrans %}</h1>
+                </div>
+            </div>
+            <h5 class="h5 position-absolute mb-0">{% blocktrans %}BuildBlock builds a global real estate investment platform for anyone to invest in US real estate easy and safe.<br><br>
+            From strategy building that suits your investment goal to post-investment report after capital repatriation, BuildBlock will be with you on every step of the way. Moving beyond geographical borders, BuildBlock lowers the existing high barriers to US real estate investment.{% endblocktrans %}</h5>
+        </div>
+    </div>
+</div>
+
+<!-- Service Process Summary -->
+<div class="content_section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                {% blocktrans %}<h2 class="h1 mb-3 mb-lg-4" data-aos-once="true" data-aos="fade-up">Investment Steps<br>Overview</h2>{% endblocktrans %}
+                <h5 class="font-weight-medium mb-4">{% blocktrans %}BuildBlock will guide you through every step of the way in the complicated US investment journey.{% endblocktrans %}</h5>
+            </div>
+            <div class="col-12 col-lg-4 mt-4 mt-lg-0">
+                <div class="service_card_line"></div>
+                <div class="card service_card">
+                    <div class="card-body">
+                        <span class="number">1</span>
+                        <h4>{% trans 'Start Investment' %}</h4>
+                        <p class="font-18">{% trans 'Sign Service Agreement' %}</p>
+                        <p class="font-18">{% trans 'Submit Membership Fee' %}</p>
+                    </div>
+                </div>
+                <div class="card service_card">
+                    <div class="card-body">
+                        <span class="number">2</span>
+                        <h4>{% trans 'Open LLC and Wire Money' %}</h4>
+                        <p class="font-18">{% trans 'Open a US LLC' %}</p>
+                        <p class="font-18">{% trans 'Open a bank account under the LLC’s name (US)' %}</p>
+                        {% blocktrans %}<p class="font-18">Foreign Direct Investment Report Filing</p>
+                        <p class="font-18">Money wiring (KOR to US)</p>{% endblocktrans %}
+                    </div>
+                </div>
+                <div class="card service_card">
+                    <div class="card-body">
+                        <span class="number">3</span>
+                        <h4>{% trans 'Purchase Investment' %}</h4>
+                        <p class="font-18">{% trans 'Select property' %}</p>
+                        <p class="font-18">{% trans 'Submit offer' %}</p>
+                        <p class="font-18">{% trans 'Contract' %}</p>
+                        <p class="font-18">{% trans 'Open Buyer’s escrow account' %}</p>
+                        <p class="font-18">{% blocktrans %}Payment and acquire title<br>(of the property){% endblocktrans %}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 mt-lg-5">
+                <div class="service_card_line d-none d-lg-block"></div>
+                <div class="card service_card">
+                    <div class="card-body">
+                        <span class="number">4</span>
+                        {% blocktrans %}<h4>Management</h4>{% endblocktrans %}
+                        <p class="font-18">{% blocktrans %}Property management and/or remodeling by the Asset Team under direct management of BuildBlock<br><span class="font-16 text-black-50">(May be different depending on the investment strategy)</span>{% endblocktrans %}</p>
+                    </div>
+                </div>
+                <div class="card service_card">
+                    <div class="card-body">
+                        <span class="number">5</span>
+                        <h4>{% trans 'Sell Investment' %}</h4>
+                        <p class="font-18">{% trans 'List the property' %}</p>
+                        <p class="font-18">{% trans 'Host Showing & Open House' %}</p>
+                        <p class="font-18">{% trans 'Collect offers' %}</p>
+                        <p class="font-18">{% trans 'Open Seller’s escrow account' %}</p>
+                        <p class="font-18">{% trans 'Account settlement' %}</p>
+                    </div>
+                </div>
+                <div class="card service_card mb-0">
+                    <div class="card-body">
+                        <span class="number">6</span>
+                        <h4>{% trans 'Share Dividends & Reporting' %}</h4>
+                        <p class="font-18">{% trans 'Divide profit' %}</p>
+                        <p class="font-18">{% trans 'Write final investment report' %}</p>
+                        <p class="font-18">{% blocktrans %}Annual Business Performance Report<br>(Korea EXIM Bank){% endblocktrans %}</p>
+                        <p class="font-18">{% trans 'Post Investment Report for Securities Acquisition (KOR)' %}</p>
+                        <p class="font-18">{% trans 'Tax Filing (US, IRS)' %}</p>
+                        <p class="font-18">{% trans 'Capital Repatriation' %}</p>
+                        <p class="font-18">{% trans 'Tax Filing (KOR, NTS)' %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Service Process -->
+<div class="content_section bg-blue">
+    <div class="container-fluid text-center">
+        <h2 class="h1 mb-4 text-white" data-aos-once="true" data-aos="fade-up">{% blocktrans %}Find Out More<span class="d-none d-lg-inline"> on<br>the Investment Process</span>{% endblocktrans %}</h2>
+        <a href="{% url 'service-process' %}" class="btn btn-white btn-lg">{% trans 'View Details' %}</a>
+    </div>
+</div>
+
+<!-- Service Type -->
+<div class="content_section service_type_section bg-lightgray">
+    <div class="container-fluid">
+        <h2 class="h1 mb-4" data-aos-once="true" data-aos="fade-up">{% blocktrans %}Types of<br>Investment{% endblocktrans %}</h2>
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <div class="card" data-aos-once="true" data-aos="fade-up">
+                    <img class="card-img-top" src="{% static 'landing/images/service/type_1.jpg' %}" alt="">
+                    <div class="card-body">
+                        <h3>{% blocktrans %}Aggressive{% endblocktrans %}</h3>
+                        <h5 class="content font-weight-medium">{% blocktrans %}A short-term investment with the duration of 6 months to 1 year, with the goal of aggressive, short-term gains through a value-add strategy such as FLIP and ADU.{% endblocktrans %}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="card" data-aos-once="true" data-aos="fade-up">
+                    <img class="card-img-top" src="{% static 'landing/images/service/type_2.jpg' %}" alt="">
+                    <div class="card-body">
+                        <h3>{% blocktrans %}Sustainable{% endblocktrans %}</h3>
+                        <h5 class="content font-weight-medium">{% blocktrans %}By reinvesting the profits gained from aggressive investment, the goal is to enjoy the tax benefit and a more sustainable profit.{% endblocktrans %}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="card" data-aos-once="true" data-aos="fade-up">
+                    <img class="card-img-top" src="{% static 'landing/images/service/type_3.jpg' %}" alt="">
+                    <div class="card-body">
+                        <h3>{% blocktrans %}Stable{% endblocktrans %}</h3>
+                        <h5 class="content font-weight-medium">{% blocktrans %}A long-term investment strategy with the minimum duration of three years through a stable rent income and future appreciation in the real estate value.{% endblocktrans %}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact -->
+<div class="content_section landing_contact">
+    <div class="container-fluid text-center">
+        <h2 class="h1 mb-4" data-aos-once="true" data-aos="fade-up">{% blocktrans %}Difficult to Start?<br>Ask Us Anything{% endblocktrans %}</h2>
+        <a href="{% url 'contact' %}" class="btn btn-primary-gradient btn-lg">{% trans 'Contact Us' %}</a>
+    </div>
+</div>
+{% endblock content %}

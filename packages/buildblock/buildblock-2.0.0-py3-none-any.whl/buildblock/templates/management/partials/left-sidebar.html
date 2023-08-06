@@ -1,0 +1,156 @@
+{% load static i18n management_tag %}
+{% get_management_roles as MANAGEMENT_ROLES %}
+
+<!-- ========== Left Sidebar Start ========== -->
+<div class="left-side-menu">
+
+    <div class="slimscroll-menu" id="left-side-menu-container">
+
+        <!-- LOGO -->
+        <a href="{% url 'management:home' %}" class="logo text-center">
+            <span class="logo-lg">
+                <img src="{% static 'landing/images/logo/logo_w_h36.png' %}" alt="" height="22" id="side-main-logo">
+            </span>
+            <span class="logo-sm">
+                <img src="{% static 'management/images/logo/blogo_w_h32.png' %}" alt="" height="22" id="side-sm-main-logo">
+            </span>
+        </a>
+
+        {% if request.session.active_role == MANAGEMENT_ROLES.owner_role %}
+        <!--- Owner Sidemenu -->
+        <ul class="metismenu side-nav">
+            <li class="side-nav-item">
+                <a href="{% url 'management:overview' %}" class="side-nav-link">
+                    <i class="dripicons-view-apps"></i>
+                    <span> Overview </span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="javascript: void(0);" class="side-nav-link">
+                    <i class="dripicons-home"></i>
+                    <span> Products </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <ul class="side-nav-second-level" aria-expanded="false">
+                    <li>
+                        <a href="{% url 'management:product-list' %}">All Products</a>
+                    </li>
+                    {% for product in products %}
+                    <li>
+                        <a href="{% url 'management:product-info' product_code=product.code %}">
+                            {{product.full_address}}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+            <li class="side-nav-item">
+                <a href="{% url 'management:tenant-list' %}" class="side-nav-link">
+                    <i class="dripicons-user-group"></i>
+                    <span> Tenants </span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="{% url 'management:document-list' %}" class="side-nav-link">
+                    <i class="mdi mdi-file-document-outline"></i>
+                    <span> Documents </span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="{% url 'management:transaction' %}" class="side-nav-link">
+                    <i class="dripicons-retweet"></i>
+                    <span> Transactions </span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="{% url 'management:maintenance' %}" class="side-nav-link">
+                    <i class="dripicons-inbox"></i>
+                    <span> Maintenances </span>
+                </a>
+            </li>
+        </ul>
+        {% elif request.session.active_role == MANAGEMENT_ROLES.tenant_role %}
+        <!--- tenant Sidemenu -->
+        <ul class="metismenu side-nav">
+            <li class="side-nav-item">
+                <a href="{% url 'management:house' %}" class="side-nav-link">
+                    <i class="dripicons-home"></i>
+                    <span> House Info </span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="{% url 'management:transaction' %}" class="side-nav-link">
+                    <i class="dripicons-retweet"></i>
+                    <span> Transactions </span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="{% url 'management:maintenance' %}" class="side-nav-link">
+                    <i class="dripicons-inbox"></i>
+                    <span> Maintenances </span>
+                </a>
+            </li>
+        </ul>
+        {% elif request.session.active_role == MANAGEMENT_ROLES.agent_role %}
+        <!--- Agent Side Menu -->
+        <ul class="metismenu side-nav">
+            <li class="side-nav-item">
+                <a href="javascript: void(0);" class="side-nav-link">
+                    <i class="dripicons-home"></i>
+                    <span> Products </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <ul class="side-nav-second-level" aria-expanded="false">
+                    <li>
+                        <a href="{% url 'management:product-list' %}">All Products</a>
+                    </li>
+                    {% for product in products %}
+                    <li>
+                        <a href="{% url 'management:product-info' product_code=product.code %}">
+                            {{product.full_address}}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+            <li class="side-nav-item">
+                <a href="{% url 'management:tenant-list' %}" class="side-nav-link">
+                    <i class="dripicons-user-id"></i>
+                    <span> Tenants </span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="{% url 'management:owner-list' %}" class="side-nav-link">
+                    <i class="dripicons-user-group"></i>
+                    <span> Owners </span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="{% url 'management:document-list' %}" class="side-nav-link">
+                    <i class="mdi mdi-file-document-outline"></i>
+                    <span> Documents </span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="{% url 'management:transaction' %}" class="side-nav-link">
+                    <i class="dripicons-retweet"></i>
+                    <span> Transactions </span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="{% url 'management:maintenance' %}" class="side-nav-link">
+                    <i class="dripicons-inbox"></i>
+                    <span> Maintenances </span>
+                </a>
+            </li>
+        </ul>
+        {% endif %}
+
+
+        <div class="clearfix"></div>
+
+    </div>
+    <!-- Sidebar -left -->
+
+</div>
+<!-- Left Sidebar End -->

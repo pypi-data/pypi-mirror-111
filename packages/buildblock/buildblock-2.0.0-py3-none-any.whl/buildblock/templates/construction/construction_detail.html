@@ -1,0 +1,79 @@
+{% extends "construction/base.html" %}
+{% load static i18n construction_tag humanize %}
+
+{% block page_title %}
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 col-lg-8">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <a href="javascript: void(0);" class="text-center d-block">
+                            <img src="{{construction.main_thumb_url}}" class="img-fluid" alt="Product-img" />
+                        </a>
+                    </div>
+                    <div class="col-lg-9 pt-3 pt-lg-0">
+                        <div class="row">
+                            <div class="col-12 mb-2">
+                                <div class="float-right">
+                                    {% if request.user.is_superuser %}
+                                    <a class="btn btn-sm btn-secondary font-12 mr-1"
+                                       href="{% url 'construction:update' construction.id %}">
+                                        EDIT INFO
+                                    </a>
+                                    {% endif %}
+                                    {% if is_editor %}
+                                    <a class="btn btn-sm btn-warning font-12"
+                                       href="{% url 'construction:zone-list' construction_id=construction.id %}">
+                                        EDIT ZONE
+                                    </a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-8">
+                                <h5 class="font-12 text-muted">PRODUCT</h5>
+                                <p class="font-14">{{construction.full_address}}</p>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <h5 class="font-12 text-muted">CONSTRUCTION METHOD</h5>
+                                <p class="font-14">{% get_construction_method_display method=construction.method %}</p>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <h5 class="font-12 text-muted">CONSTRUCTOR</h5>
+                                <p class="font-14">
+                                    {% for constructor in construction.constructor.all %}
+                                    <span>{{constructor.name}}{% if not forloop.last %}, {% endif %}</span>
+                                    {% endfor %}
+                                </p>
+                            </div>
+                            <div class="col-6 col-lg-4">
+                                <h5 class="font-12 text-muted">PERIOD</h5>
+                                <p class="font-14 mb-0">{{construction.start_date|date:"n. j. Y"}} ~ {{construction.end_date|date:"n. j"}}</p>
+                            </div>
+                            <div class="col-6 col-lg-4">
+                                <h5 class="font-12 text-muted">BUDGET</h5>
+                                <p class="font-14 dollar_sign">{{construction.budget|floatformat:"-2"|intcomma|default:0}}</p>
+                            </div>
+                        </div>
+                        {% comment %}
+                        <div class="row mt-3 text-white">
+                            <div class="col-6">
+                                <h5 class="font-12">WORK DATE</h5>
+                                <p class="mb-0" style="font-size: 40px;">15 <small>days</small></p>
+                            </div>
+                            <div class="col-6">
+                                <h5 class="font-12">예산 사용 현황</h5>
+                                <p class="mb-0" style="font-size: 40px;">74 <small>%</small> <small class="text-muted ml-2 visible_inline_lg">$74,000 / 100,000</small></p>
+                            </div>
+                        </div>
+                        {% endcomment %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

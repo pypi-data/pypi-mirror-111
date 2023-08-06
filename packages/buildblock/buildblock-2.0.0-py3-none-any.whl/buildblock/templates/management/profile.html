@@ -1,0 +1,328 @@
+{% extends "management/base.html" %}
+{% load static i18n humanize mathfilters account_tag management_tag base_tag %}
+
+{% block page_title %}
+{% get_management_roles as MANAGEMENT_ROLES %}
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+{% endblock page_title %}
+
+{% block content %}
+{% get_management_roles as MANAGEMENT_ROLES %}
+<div class="row">
+    <div class="col-xl-4 col-12">
+        <!-- Personal-Information -->
+        <h5 class="page-title text-muted">Account Info.</h5>
+        <div class="card">
+            <div class="card-body">
+                {% has_all_roles service_role_set=service_role_set user_roles=request.user.user_role as HAS_ALL_ROLES_SIGNUP %}
+                {% if not HAS_ALL_ROLES_SIGNUP %}
+                <a href="{% url 'management:signup-choice' %}" class="btn btn-sm btn-outline-primary float-right mb-3">Add Role</a>
+                {% endif %}
+                <h4 class="header-title mt-0 mb-3">{{user.name}} {% if request.session.active_role == MANAGEMENT_ROLES.agent_role %}<span class="badge badge-light font-11 ml-1">{{user.profile_agent.position}}</span>{% endif %}</h4>
+                {% if request.session.active_role == MANAGEMENT_ROLES.tenant_role %}
+                    <!-- tenant residence -->
+                    {% if residence %}
+                    <p class="text-muted font-13 mb-1">
+                        {{residence.product.full_address}}
+                    </p>
+                    <p class="text-muted font-13">
+                        Room {{residence.lease.room_num}}
+                    </p>
+                    {% endif %}
+                {% endif %}
+                <hr/>
+
+                <div class="text-left">
+                    <!-- Common info -->
+                    <p class="text-muted"><strong>Email</strong> <span class="ml-2">{{user.email}}</span></p>
+                    <p class="text-muted"><strong>Mobile</strong><span class="ml-2">{{user.phone_number}}</span></p>
+                    <p class="text-muted"><strong>Nationality</strong> <span class="ml-2">{{user.nationality}}</span></p>
+                    <hr/>
+                    {% if request.session.active_role == MANAGEMENT_ROLES.owner_role %}
+                        <!-- owner profile -->
+                        <p class="text-muted"><strong>Account</strong>
+                            <span class="ml-2">
+                            {% if user.profile_owner.stripe_account %}
+                            Bank Account Connected {% if stripe_dashboard_url %}<a href="{{stripe_dashboard_url}}" target="_blank" rel="noopener noreferrer"><strong> Open Dashboard <i class="mdi mdi-open-in-new text-primary"></i></strong></a>{% endif %}
+                            {% else %}
+                                {% if products %}
+                                <a href="https://connect.stripe.com/express/oauth/authorize?redirect_uri={{request.scheme}}://{{request.META.HTTP_HOST}}/en/payments/token&client_id={{stripe_connect_client_id}}&state={{csrf_token}}&stripe_user[email]={{user.email}}&stripe_user[first_name]={{user.first_name}}&stripe_user[last_name]={{user.last_name}}&stripe_user[phone_number]={{user.phone_number}}" class="btn btn-sm btn-outline-primary"><b>Add Bank Account</b> - <span class="font-12">REQUIRED</span></a>
+                                {% else %}
+                                Unable to activate
+                                <a class="tooltip_help" data-toggle="tooltip" data-html="true" data-placement="right" title="You need an associated property to activate your bank account">
+                                    <i class="mdi mdi-help-circle text-primary"></i>
+                                </a>
+                                {% endif %}
+                            {% endif %}
+                            </span>
+                        </p>
+                        <p class="text-muted"><strong>Address</strong> <span class="ml-2">{{user.profile_owner.full_address}}</span></p>
+                    {% elif request.session.active_role == MANAGEMENT_ROLES.tenant_role %}
+                        <!-- tenant profile -->
+                        <p class="text-muted"><strong>Occupation</strong> <span class="ml-2">{{user.profile_tenant.occupation}}</span></p>
+                        <p class="text-muted"><strong>Credit Score</strong> <span class="ml-2">{{user.profile_tenant.credit_score}}</span></p>
+                        <p class="text-muted"><strong>Emergency Contact</strong> <span class="ml-2">{{user.profile_tenant.emergency_contact}}</span></p>
+                        <hr/>
+                        <p class="text-muted">
+                            <strong>Bank Account</strong>
+                            <a href="{% url 'management:bank-account-registration' %}" class="btn btn-sm btn-outline-primary ml-2">
+                                <b>ADD</b>
+                            </a>
+                        </p>
+                        {% for bank_account in bank_accounts %}
+                        <div class="text-muted clearfix mt-2">
+                            <p class="float-left mb-0"><i class="mdi mdi-bank"></i></p>
+                            <p class="float-left ml-2 mb-0 font-13">
+                                {{bank_account.bank_name}}
+                                *******{{bank_account.account_last4}}
+                                <br>
+                                {{bank_account.account_holder_name}}
+                                {% if bank_account.status == 'verified' %}
+                                <span class="badge badge-success-lighten">Verified</span>
+                                {% else %}
+                                <span class="badge badge-warning-lighten">Verification Pending</span>
+                                <a class="ml-1 font-12" href="#" data-toggle="modal" data-target="#account_verification_{{forloop.counter}}">Verify</a>
+                                {% endif %}
+                            </p>
+
+                            <a href="#" data-toggle="modal" data-target="#account_unlink_{{forloop.counter}}" class="float-right text-muted font-12"><i class="dripicons-trash"></i></a>
+                        </div>
+                        {% endfor %}
+                        {% if not residence.lease.is_auto_paid and has_verified_bank_account %}
+                        <hr/>
+                        <p class="text-muted">
+                            <strong>Autopay</strong>
+                            <button type="button"
+                                    class="btn btn-sm btn-outline-primary ml-2"
+                                    data-toggle="modal"
+                                    data-target="#setup_autopay">SETUP AUTOPAY </button>
+                        </p>
+                        {% elif residence.lease.is_auto_paid and allowed_to_disable_autopay %}
+                        <hr/>
+                        <p class="text-muted">
+                            <strong>Autopay</strong>
+                            <span class="ml-2">{{residence.lease.payment_day|ord}} of every month</span>
+                            <button type="button"
+                                    class="btn btn-sm btn-outline-primary ml-2"
+                                    data-toggle="modal"
+                                    data-target="#disable_autopay">DISABLE AUTOPAY </button>
+                        </p>
+                        {% endif %}
+                    {% endif %}
+                    <p class="text-muted mb-0">
+                        <a href="{% url 'management:profile-update' %}"><span>Change Profile</span></a>
+                        <a href="{% url 'account_change_password' %}"><span class="ml-3">Change Password</span></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Personal-Information -->
+    </div>
+
+    {% if request.session.active_role == MANAGEMENT_ROLES.agent_role %}
+    <!-- agent -->
+    <div class="col-xl-8 col-12">
+        <h5 class="page-title text-muted">Agency Info.</h5>
+        <div class="card">
+            <div class="card-body">
+                <a href="{% url 'management:group-update' agency.detail.id %}" class="btn btn-sm btn-outline-primary float-right mb-3">Edit Info</a>
+                <h3 class="card-title text-dark mb-0">{{agency.name}}</h3>
+                {% if agency.detail.description %}
+                <p class="mt-3 mb-0 font-14">{{agency.detail.description}}</p>
+                {% endif %}
+                <div class="row mt-2">
+                    <div class="col-6 col-lg-4">
+                        <h2 class="m-b-20 mb-0">{{products|length|default:0}} <span class="font-14 text-muted">product(s)</span></h2>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <h2 class="m-b-20 mb-0">{{members|length}} <span class="font-14 text-muted">member(s)</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h5 class="page-title text-muted">Members</h5>
+        <div class="row">
+            {% for member in members %}
+            <div class="col-12 col-xl-6">
+                <div class="card">
+                    <div class="card-body">
+                        {% if member.profile_agent.position %}<span class="badge badge-light font-11 float-right">{{member.profile_agent.position}}</span>{% endif %}
+                        <h5 class="page-title mt-0 mb-3">{{member.name}}</h5>
+                        <p class="text-dark mb-2"><span class="text-muted mr-2">Phone</span> {{member.phone_number}}</p>
+                        <p class="text-dark mb-0"><span class="text-muted mr-2">Email</span> {{member.email}}</p>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12">
+                <div class="card tilebox-one">
+                    <div class="card-body">
+                        <h5 class="card-title mb-0">No Members</h5>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% elif request.session.active_role == MANAGEMENT_ROLES.owner_role %}
+    <!-- owner -->
+    <div class="col-xl-8 col-12">
+        <div class="row">
+            <div class="col-12">
+                <h5 class="page-title text-muted">Summary</h5>
+            </div>
+            {% if products %}
+            <div class="col-md-4">
+                <div class="card tilebox-one">
+                    <div class="card-body">
+                        <h6 class="text-muted text-uppercase mt-0">Product</h6>
+                        <h2 class="m-b-20 mb-0">{{products|length|default:0}} <span class="font-14 text-muted">houses</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card tilebox-one">
+                    <div class="card-body">
+                        <h6 class="text-muted text-uppercase mt-0">Tenants</h6>
+                        <h2 class="m-b-20 mb-0">{{products_overview.num_people_under_lease|default:0}} <span class="font-14 text-muted">/ {{products_overview.max_num_people}}</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card tilebox-one">
+                    <div class="card-body">
+                        <h6 class="text-muted text-uppercase mt-0">Rent</h6>
+                        <h2 class="m-b-20 mb-0 dollar_sign">{{products_overview.rent_under_lease|floatformat:"-2"|intcomma}}</h2>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <div class="col-12">
+                <div class="card tilebox-one">
+                    <div class="card-body">
+                        <h5 class="card-title mb-0">No Products</h5>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+
+        {% if products %}
+        <h5 class="page-title text-muted">Product List</h5>
+        {% for product in products %}
+        <div class="card product_card_s">
+            <div class="card-body">
+                <div class="card-widgets">
+                    <a data-toggle="collapse" href="#cardCollpase_{{forloop.counter}}" role="button" aria-expanded="false" aria-controls="cardCollpase_{{forloop.counter}}" class="collapsed"><i class="mdi mdi-minus"></i></a>
+                </div>
+                <h5 class="card-title mb-0"><a href="{% url 'management:product-info' product_code=product.code %}" class="text-title">{{product.full_address}}</a></h5>
+
+                <div id="cardCollpase_{{forloop.counter}}" class="collapse pt-3">
+                    <span class="pr-3 text-nowrap d-inline-block">
+                        <i class="mdi mdi-users text-muted"></i>
+                        Tenants <b>{{product.num_people_under_lease}} / {{product.max_num_people}}</b>
+                    </span>
+                    <span class="pr-3 text-nowrap d-inline-block">
+                        Rent <b>$ {{product.rent_under_lease|floatformat:"-2"|intcomma}}</b>
+                    </span>
+                    <span class="pr-3 text-nowrap d-inline-block">
+                        Type <b>{{ product.property_type }}</b>
+                    </span>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+    {% elif request.session.active_role == MANAGEMENT_ROLES.tenant_role %}
+    <!-- tenant -->
+    <div class="col-xl-8 col-12">
+        <div class="row">
+            <div class="col-12">
+                <h5 class="page-title text-muted">Summary</h5>
+            </div>
+            {% if residence %}
+            <div class="col-sm-4">
+                <div class="card tilebox-one">
+                    <div class="card-body">
+                        {% if residence.payments.unpaid_amount > 0 %}
+                        <a href="{% url 'management:house' %}" class="btn btn-sm btn-primary float-right mt-3">Payment</a>
+                        {% endif %}
+                        <h6 class="text-muted text-uppercase mt-0">Unpaid</h6>
+                        <h2 class="m-b-20 mb-0 dollar_sign">{{residence.payments.unpaid_amount|intcomma}}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card tilebox-one">
+                    <div class="card-body">
+                        <h6 class="text-muted text-uppercase mt-0">Rent</h6>
+                        <h2 class="m-b-20 mb-0 dollar_sign">{{residence.lease.rent|intcomma}}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card tilebox-one">
+                    <div class="card-body">
+                        <h6 class="text-muted text-uppercase mt-0">Deposit</h6>
+                        <h2 class="m-b-20 mb-0 dollar_sign">{{residence.lease.deposit|intcomma}}</h2>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <div class="col-md-12">
+                <div class="card tilebox-one">
+                    <div class="card-body">
+                        <h5 class="card-title mb-0">Unleased</h5>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        
+        <h5 class="page-title text-muted">Maintenance</h5>
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-centered mb-0">
+                        <thead>
+                            <tr>
+                                <th>TITLE</th>
+                                <th class="text-right">DATE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for maintenance in maintenances %}
+                            <tr>
+                                <td>
+                                    <a href="{% url 'management:maintenance-read' pk=maintenance.id %}" class="text-title">
+                                        {{maintenance.title}}
+                                        <span class="badge {% get_maintenance_status_badge_class status=maintenance.status %}">{{maintenance.get_status_display}}</span>
+                                    </a>
+                                </td>
+                                <td class="text-right">{{maintenance.created_at|date:"M. j. Y."}}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+</div>
+{% endblock content %}
+
+
+{% block modal %}
+{% include 'management/partials/bank_accounts_modal.html' with bank_accounts=bank_accounts %}
+{% include 'management/partials/autopay_setup_modal.html' with residence=residence bank_accounts=bank_accounts %}
+{% endblock modal %}

@@ -1,0 +1,314 @@
+{% extends "management/base.html" %}
+{% load static i18n humanize mathfilters base_tag management_tag javascript_tag %}
+
+{% block page_title %}
+{% get_management_roles as MANAGEMENT_ROLES %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <h4 class="page-title">House Info.</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+    {% if residence %}
+    <div class="col-lg-12 col-xl-6">
+        {% if residence.payments.unpaid_amount > 0 or residence.payments.payment_in_progress_amount > 0 %}
+        <div class="alert alert-primary p-3 payment-button-box">
+            {% if residence.payments.unpaid_amount %}
+            <span class="text-danger float-right mb-3 font-12" style="line-height: 1.1;"><i class="mdi mdi-calendar-alert"></i> {{payment_dday|d_day_format}}</span>
+            {% endif %}
+            <h6 class="text-primary text-uppercase mt-0">Outstanding Balance</h6>
+            <h2 class="mt-1 mb-1 text-primary dollar_sign">
+                {{residence.payments.unpaid_amount|floatformat:"-2"|intcomma}}
+            </h2>
+            {% if residence.payments.payment_in_progress_amount > 0 %}
+            <h4 class="mt-3 mb-0 text-gray-dark">
+                <span class="font-14" style="font-weight:300;">Amount In Progress </span>
+                <span class="dollar_sign ml-1">{{residence.payments.payment_in_progress_amount|floatformat:"-2"|intcomma}}</span>
+            </h4>
+            {% endif %}
+            {% if not residence.lease.is_auto_paid and has_verified_bank_account %}
+            <button type="button"
+                    class="btn btn-sm btn-primary payment-button"
+                    data-toggle="modal"
+                    data-target="#setup_autopay"
+                    {% if residence.payments.unpaid_amount > 0 %}style="margin-right: 100px"{% endif %}>SETUP AUTOPAY</button>
+            {% elif residence.lease.is_auto_paid and allowed_to_disable_autopay %}
+            <button type="button"
+                    class="btn btn-sm btn-primary payment-button"
+                    data-toggle="modal"
+                    data-target="#disable_autopay"
+                    {% if residence.payments.unpaid_amount > 0 %}style="margin-right: 100px"{% endif %}>DISABLE AUTOPAY</button>
+            {% endif %}
+            {% if residence.payments.unpaid_amount > 0 %}
+            <button type="button"
+                    class="btn btn-sm btn-primary dropdown-toggle payment-button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">PAY NOW </button>
+            <div class="dropdown-menu" style="min-width:93px;">
+                <a class="dropdown-item" href="#" onClick="window.elementsModal.toggleElementsModalVisibility();">Card</a>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#paynow_ach">ACH</a>
+            </div>
+            {% endif %}
+        </div>
+        <p class="text-danger">※ The rent may be subject to additional fees depending on the method of payment. For example, credit cards are subject to {{residence.payments.card_payment.fee_rate|default:0|mul:100|floatformat:"0"}}% processing fee.</p>
+        {% endif %}
+        <div class="row">
+            <div class="col-12 col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h6 class="text-muted text-uppercase mt-0">Rent</h6>
+                        <h2 class="m-b-20 mb-0 dollar_sign">{{residence.lease.rent|floatformat:"-2"|intcomma}}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h6 class="text-muted text-uppercase mt-0">Deposit</h6>
+                        <h2 class="m-b-20 mb-0 dollar_sign">{{residence.lease.deposit|floatformat:"-2"|intcomma}}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h6 class="text-muted text-uppercase mt-0">Rent Count</h6>
+                        <h2 class="m-b-20 mb-0">{{residence.payments.rent_count}} <span class="font-14 text-muted">times</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h6 class="text-muted text-uppercase mt-0">Payment Due</h6>
+                        <h2 class="m-b-20 mb-0">{{residence.lease.payment_day|ord}} <span class="font-14 text-muted">of every month</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="header-title mt-0 mb-4">Contract Info.</h4>
+
+                <div class="text-left">
+                    <p class="text-muted"><strong>Start Date</strong> <span class="ml-2">{{residence.lease.start_date|date:"M. j. Y."}}</span></p>
+                    <p class="text-muted"><strong>End Date</strong> <span class="ml-2">{{residence.lease.end_date|date:"M. j. Y."}}</span></p>
+                    <p class="text-muted"><strong>Name</strong><span class="ml-2">{{residence.lease.tenant_name}}</span></p>
+                    <p class="text-muted"><strong>Mobile</strong> <span class="ml-2">{{residence.lease.tenant_phone_number}}</span></p>
+                    <p class="text-muted mb-0"><strong>Email</strong> <span class="ml-2">{{residence.lease.tenant_email}}</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-xl-6">
+        <div class="card">
+            <div class="card-body">
+                <form class="pl-lg-2">
+                    <!-- title -->
+                    <h3 class="mt-0">{{residence.product.full_address}}</h3>
+                    <p class="mb-1">Added Date: {{ residence.product.added_at }}</p>
+                    <p class="mb-1">{{residence.product.num_bedroom|floatformat:"-1"}} beds {{residence.product.num_bathroom|floatformat:"-1"}} baths {{residence.product.sqft|floatformat:"-1"|intcomma}} sqft</p>
+
+                    <!-- description -->
+                    <div class="mt-4">
+                        <h6 class="font-14">Description</h6>
+                        {{residence.product.description|safe}}
+                    </div>
+
+                    <!-- Product information -->
+                    <div class="mt-4">
+                        <h6 class="font-14">Facts and Features</h6>
+                        <div class="product_features">
+                            <i class="mdi mdi-domain"></i>
+                            <h6 class="font-14 mr-1">Type</h6>
+                            <h6 class="text-muted font-14 font-weight-light">{{residence.product.property_type}}</h6>
+                        </div>
+                        <div class="product_features">
+                            <i class="mdi mdi-calendar"></i>
+                            <h6 class="font-14 mr-1">Year Built</h6>
+                            <h6 class="text-muted font-14 font-weight-light">{{residence.product.built_year}}</h6>
+                        </div>
+                        <div class="product_features">
+                            <i class="mdi mdi-thermometer"></i>
+                            <h6 class="font-14 mr-1">Heating</h6>
+                            <h6 class="text-muted font-14 font-weight-light">{{residence.product.amenities.heater}}</h6>
+                        </div>
+                        <div class="product_features">
+                            <i class="mdi mdi-snowflake"></i>
+                            <h6 class="font-14 mr-1">Cooling</h6>
+                            <h6 class="text-muted font-14 font-weight-light">{{residence.product.amenities.cooling}}</h6>
+                        </div>
+                        <div class="product_features">
+                            <i class="mdi mdi-alpha-p-box-outline"></i>
+                            <h6 class="font-14 mr-1">Parking</h6>
+                            <h6 class="text-muted font-14 font-weight-light">
+                                {% if residence.product.num_parking %}
+                                    {{residence.product.num_parking|floatformat:"-1"}} space(s)
+                                {% else %}
+                                    None
+                                {% endif %}
+                            </h6>
+                        </div>
+                        <div class="product_features">
+                            <i class="mdi mdi-view-dashboard-outline"></i>
+                            <h6 class="font-14 mr-1">Lot</h6>
+                            <h6 class="text-muted font-14 font-weight-light">{{residence.product.sqft|floatformat:"-1"|intcomma}} sqft</h6>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+
+        {% if residence.product.map_url %}
+        <div class="card">
+            <div class="card-body">
+                <div class="map_frame" style="height:320px;">
+                    <iframe src="{{residence.product.map_url}}" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    {% else %}
+
+    <div class="col-12">
+        <h6 class="font-14 mr-1">No rental property registered</h6>
+    </div>
+    {% endif %}
+</div>
+
+{% endblock content %}
+
+
+{% block stripe %}
+<script src="https://js.stripe.com/v3/"></script>
+{% if residence.payments.unpaid_amount > 0 %}
+<script>
+    var stripePubKey = {{stripe_pubkey|safe_js_var}};
+    // Card payment create
+    // TODO: use "user.currency" instead of 'usd'
+    window.elementsModal.create({
+        amount: {{residence.payments.card_payment.amount|default:0|mul:100|safe_js_var|floatformat:"0"}},
+        outstandingBalance: {{residence.payments.unpaid_amount|default:0|mul:100|safe_js_var|floatformat:"0"}},
+        fee: {{residence.payments.card_payment.fee|default:0|mul:100|safe_js_var|floatformat:"0"}},
+        feePercent: {{residence.payments.card_payment.fee_rate|default:0|mul:100|safe_js_var|floatformat:"0"}},
+        currency: "usd",
+        businessName: "Buildblock",
+        productName: {{payment_product_name|safe_js_var}},
+        customerEmail: {{user.email|safe_js_var}},
+        customerName: {{user.name|safe_js_var}},
+        userId: {{user.id|safe_js_var}},
+        productId: {{residence.product.id|safe_js_var}},
+        paymentIdentifier: {{payment_identifier|safe_js_var}}
+    });
+    window.elementsModal.toggleElementsModalVisibility();
+</script>
+{% endif %}
+{% endblock stripe %}
+
+
+{% block modal %}
+<!-- ACH Pay Modal -->
+<div class="modal fade" id="paynow_ach" tabindex="-1" role="dialog" aria-labelledby="tosModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 385px;">
+        <div class="modal-content">
+
+            <form method="POST" id="ach_payment" action="{% url 'payments:stripe_ach_charge_view' %}">
+                {% csrf_token %}
+                <input type="hidden" name="amount" value="{{residence.payments.ach_debit_payment.amount|default:0|mul:100|floatformat:"0"}}" >
+                <input type="hidden" name="currency" value="usd" >
+                <input type="hidden" name="product_id" value="{{residence.product.id}}" >
+                <input type="hidden" name="payment_identifier" value="{{payment_identifier}}" >
+                <div class="ElementsModal--top-banner">
+                    <div class="ElementsModal--sales-info">
+                        <div class="ElementsModal--top">
+                            <div class="ElementsModal--company">
+                                ACH PAYMENT
+                            </div>
+                            <button class="ElementsModal--close" data-dismiss="modal">
+                                <span class="font-18" aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="ElementsModal--product ElementsModal--details mb-1">
+                            {{payment_product_name}}
+                        </div>
+                        <div class="ElementsModal--price ElementsModal--details">
+                            $ {{residence.payments.ach_debit_payment.amount|default:0|floatformat:"-2"|intcomma}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ElementsModal--forms">
+                    <div class="ElementsModal--payment-details py-2">
+                        <div class="form-group">
+                            {% for bank_account in bank_accounts %}
+                            <div class="custom-control custom-radio mb-2">
+                                <input type="radio"
+                                    class="custom-control-input"
+                                    name="bank_id"
+                                    id="ach_bank_account_{{forloop.counter}}"
+                                    value="{{bank_account.bank_id}}"
+                                    {% if forloop.first %}required{% endif %}
+                                    {% if bank_account.status != 'verified' %}disabled{% else %}checked{% endif %}>
+                                <label class="custom-control-label font-13" for="ach_bank_account_{{forloop.counter}}" style="padding-top:3px;line-height: 1.6;">
+                                    {{bank_account.bank_name}}
+                                    {% if bank_account.status == 'verified' %}
+                                    <span class="badge badge-success-lighten">Verified</span>
+                                    {% else %}
+                                    <span class="badge badge-warning-lighten">Verification Pending</span>
+                                    <a class="ml-1 font-12" href="#" data-toggle="modal" data-target="#account_verification_{{forloop.counter}}">Verify</a>
+                                    {% endif %}
+                                    <br>
+                                    ******{{bank_account.account_last4}}&nbsp;&nbsp;{{bank_account.account_holder_name}}
+                                </label>
+                            </div>
+                            {% endfor %}
+                            {% if not bank_accounts %}
+                            <div class="text-center">
+                                <p class="text-muted font-12">No accounts registered</p>
+                            </div>
+                            {% endif %}
+                            {% if not has_verified_bank_account %}
+                            <div class="text-center">
+                                <a href="{% url 'management:bank-account-registration' %}" class="btn btn-link">+ Bank Account Registration</a>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% if has_verified_bank_account %}
+                    <div class="ElementsModal--form">
+                        <p class="font-12 text-muted text-center">By paying the rent, you agree to<br>BuildBlock’s <a data-toggle="modal" data-target="#agreement_pay">Terms and Conditions.</a></p>
+                        <button type="submit" class="ElementsModal--pay-button">Pay ${{residence.payments.ach_debit_payment.amount|default:0|floatformat:"-2"|intcomma}}</button>
+                    </div>
+                    <div class="footer ElementsModal--footer-text p-0 pt-2">
+                        <a href="{% url 'management:bank-account-registration' %}" class="btn btn-link">+ Bank Account Registration</a>
+                    </div>
+                    {% else %}
+                    <div class="ElementsModal--form mb-0">
+                        <button type="button" class="btn-block btn btn-light" data-dismiss="modal">Close</button>
+                    </div>
+                    {% endif %}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% include 'management/partials/bank_accounts_modal.html' with bank_accounts=bank_accounts %}
+{% include 'management/partials/autopay_setup_modal.html' with residence=residence bank_accounts=bank_accounts %}
+
+<!--Payment Policy-->
+{% get_current_language as LANGUAGE_CODE %}
+{% get_agreement_by_type_language service_type='management' agreement_type='pay' language=LANGUAGE_CODE as AGREEMENT_PAY %}
+{% include 'management/partials/base_modal.html' with id="agreement_pay" title=AGREEMENT_PAY.title content=AGREEMENT_PAY.content|safe %}
+{% endblock modal %}

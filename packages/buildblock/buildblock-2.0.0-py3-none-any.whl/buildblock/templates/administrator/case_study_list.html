@@ -1,0 +1,66 @@
+{% extends "administrator/base.html" %}
+{% load static i18n humanize base_tag landing_tag %}
+
+{% block title %}{{page_title}}{% endblock %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <a class="btn btn-success mb-2" href="{% url 'administrator:case-study-create-view' %}">ADD CASE STUDY</a>
+            </div>
+
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+    {% for case in case_study_list %}
+    <div class="col-12 col-lg-4">
+        <a href="{% url 'administrator:case-study-update-view' case.id %}">
+            <div class="card news_list_card shadow-lg">
+                <div class="card-body p-0">
+                    {% if case.thumbnail %}
+                    <img class="thumbnail w-100 card-img-top" src="{{case.news_thumbnail_url}}" alt="">
+                    {% endif %}
+                    <div class="news_list_title">
+                        <span class="badge badge-secondary news_lang_badge">{{case.language}}</span>
+                        {% get_case_study_status_badge status=case.status language=LANGUAGE_CODE %}
+                        <p class="font-18 text-dark font-weight-bold mb-2">{{case.title}}</p>
+                        <div class="row">
+                            <div class="col-6 col-lg-4">
+                                <h5 class="font-12 text-muted font-weight-normal">{% trans "PURCHASED PRICE" %}</h5>
+                                <p class="font-18 text-dark dollar_sign mb-0">{{case.purchase_price|filter_safe_money_read_from_db|floatformat:0|intcomma}}</p>
+                            </div>
+                            <div class="col-6 col-lg-4">
+                                <h5 class="font-12 text-muted font-weight-normal">{% trans "SOLD PRICE" %}</h5>
+                                <p class="font-18 text-dark {% if case.selling_price %}dollar_sign {% endif %}mb-0">{% if case.selling_price %}{{case.selling_price|filter_safe_money_read_from_db|floatformat:0|intcomma}}{% else %}-{% endif %}</p>
+                            </div>
+                            <div class="col-6 col-lg-2">
+                                <h5 class="font-12 text-muted font-weight-normal">{% trans "Videos" %}</h5>
+                                <p class="font-18 text-dark mb-0">{% if case.videos %}{{case.videos.all|length}}{% else %}-{% endif %}</p>
+                            </div>
+                            <div class="col-6 col-lg-2">
+                                <h5 class="font-12 text-muted font-weight-normal">{% trans "Photos" %}</h5>
+                                <p class="font-18 text-dark mb-0">{% if case.photos %}{{case.photos.all|length}}{% else %}-{% endif %}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    {% empty %}
+    <div class="col-12 py-5">
+        <p class="text-muted font-14 text-center">No Data</p>
+    </div>
+    {% endfor %}
+</div>
+{% include "base/pagination.html" with paginator=paginator add_css="page_nav_dark" sign_align="end"%}
+{% endblock content %}

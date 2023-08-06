@@ -1,0 +1,185 @@
+{% load static account socialaccount i18n %}
+{% load widget_tweaks crispy_forms_tags %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES_LIST %}
+
+<div class="navbar_thin d-none d-lg-block bg-dark-blue {{nav_color}}">
+    <div class="container-fluid">
+        <div class="clearfix">
+            <ul class="list-unstyled float-left">
+                <li class="pr-2"><a href="{% url 'investment:home' %}" target="_blank">{% trans 'Investment Solution' %}</a></li>
+                <li><a href="{% url 'management:home' %}" target="_blank">{% trans 'Management Solution' %}</a></li>
+            </ul>
+            <ul class="list-unstyled float-right">
+                {% if request.user.is_authenticated %}
+                <li><a href="{% url 'account_logout' %}">{% trans 'Log Out' %}</a></li>
+                {% else %}
+                <li class="pr-2"><a href="{% url 'account_login' %}">{% trans 'Sign In' %}</a></li>
+                <li><a href="{% url 'account_signup' %}">{% trans 'Sign Up' %}</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="navbar-custom topnav-navbar bb_navbar {{nav_color}}">
+    <div class="container-fluid">
+        <a href="{% url 'home' %}" class="topnav-logo">
+            <span class="topnav-logo-lg">
+                <img class="logo_lg_white" src="{% static 'landing/images/logo/logo_w_h36.png' %}" alt="BuildBlock" height="32">
+                <img class="logo_lg_primary" src="{% static 'landing/images/logo/logo_bp_h36.png' %}" alt="BuildBlock" height="32">
+            </span>
+            <span class="topnav-logo-sm">
+                <img src="{% static 'landing/images/logo/logo_bp_h36.png' %}" alt="BuildBlock" height="30">
+            </span>
+        </a>
+        <ul class="list-unstyled topbar-right-menu float-right mb-0">
+            <li class="d-lg-block dropdown">
+                <a href="#" class="nav-link" id="topnav_about" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="0,23">
+                    {% trans "ABOUT" %}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="topnav_about">
+                    <a href="{% url 'about' %}" class="dropdown-item">{% trans "Our Goals" %}</a>
+                    <a href="{% url 'about-history' %}" class="dropdown-item">{% trans "History" %}</a>
+                    <a href="{% url 'about-history' %}#team_section" class="dropdown-item">{% trans "Team" %}</a>
+                    <a href="{% url 'career' %}" class="dropdown-item">{% trans "Career" %}</a>
+                </div>
+            </li>
+            <li class="d-lg-block dropdown">
+                <a href="#" class="nav-link" id="topnav_about" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="0,23">
+                    {% trans "SERVICE" %}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="topnav_about">
+                    <a href="{% url 'service' %}" class="dropdown-item">{% blocktrans %}Overview</a>{% endblocktrans %}
+                    <a href="{% url 'service-process' %}" class="dropdown-item">{% blocktrans %}Process</a>{% endblocktrans %}
+                </div>
+            </li>
+            <li class="d-lg-block">
+                <a href="{% url 'case-study' %}" class="nav-link">
+                    {% trans "INVEST" %}
+                </a>
+            </li>
+            <li class="d-lg-block">
+                <a href="{% url 'news' %}" class="nav-link">
+                    {% trans "NEWS" %}
+                </a>
+            </li>
+            <li class="d-lg-block">
+                <a href="{% url 'contact' %}" class="nav-link">
+                    {% trans "CONTACT" %}
+                </a>
+            </li>
+            <li class="d-lg-block ml-3">
+                {% for lang_code, lang_name in LANGUAGES_LIST %}
+                <a class="nav-link d-inline-block mr-0 nav_lang" href="/{{lang_code}}{{request.get_full_path|slice:'3:'}}">
+                    <img class="lang_img {% if LANGUAGE_CODE != lang_code %}gray{% endif %}"
+                         src="{% static 'landing/images/icon_'|add:lang_code|add:'.png' %}"
+                         alt="{{lang_name}}"
+                         width="24">
+                </a>
+                {% endfor %}
+            </li>
+        </ul>
+        <a class="navbar-toggle" data-toggle="collapse" data-target="#topnav-menu-content">
+            <div class="lines">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="topnav bb_topnav">
+    <div class="container-fluid px-0">
+        <nav class="navbar navbar-dark navbar-expand-lg topnav-menu">
+            <div class="collapse navbar-collapse" id="topnav-menu-content">
+                <ul class="navbar-nav side-nav px-2">
+                    <li class="side-nav-item">
+                        <a href="javascript: void(0);" class="side-nav-link">
+                            <span>{% trans "ABOUT" %}</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="side-nav-second-level" aria-expanded="false">
+                            <li>
+                                <a href="{% url 'about' %}">{% trans "Our Goals" %}</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'about-history' %}">{% trans "History" %}</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'about-history' %}#team_section">{% trans "Team" %}</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'career' %}">{% trans "Career" %}</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="side-nav-item">
+                        <a href="javascript: void(0);" class="side-nav-link">
+                            <span>{% trans "SERVICE" %}</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="side-nav-second-level" aria-expanded="false">
+                            <li>
+                                <a href="{% url 'service' %}">{% blocktrans %}Overview</a>{% endblocktrans %}
+                            </li>
+                            <li>
+                                <a href="{% url 'service-process' %}">{% blocktrans %}Process</a>{% endblocktrans %}
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="side-nav-item">
+                        <a href="{% url 'case-study' %}" class="side-nav-link">
+                            <span>{% trans "INVEST" %}</span>
+                        </a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a href="{% url 'news' %}" class="side-nav-link">
+                            <span>{% trans "NEWS" %}</span>
+                        </a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a href="{% url 'contact' %}" class="side-nav-link">
+                            <span>{% trans "CONTACT" %}</span>
+                        </a>
+                    </li>
+                    <li><hr></li>
+                    <li><span class="side-nav-link pt-0 font-16 opacity-5">SOLUTIONS</span></li>
+                    <li class="side-nav-item">
+                        <a href="{% url 'investment:home' %}" class="side-nav-link">
+                            <span>{% trans "INVESTMENT SOLUTION" %}</span>
+                        </a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a href="{% url 'management:home' %}" class="side-nav-link">
+                            <span>{% trans "MANAGEMENT SOLUTION" %}</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav side-nav bg-dark-blue mt-2">
+                    <li class="side-nav-item side_nav_bottom clearfix">
+                        <div class="left">
+                            {% if request.user.is_authenticated %}
+                            <a href="{% url 'account_logout' %}">{% trans 'Log Out' %}</a>
+                            {% else %}
+                            <a class="mr-2" href="{% url 'account_login' %}">{% trans 'Sign In' %}</a>
+                            <a href="{% url 'account_signup' %}">{% trans 'Sign Up' %}</a>
+                            {% endif %}
+                        </div>
+                        <div class="right">
+                            {% for lang_code, lang_name in LANGUAGES_LIST %}
+                            <a class="d-inline-block {% if not forloop.first %}ml-2{% endif %}"
+                               href="/{{lang_code}}{{request.get_full_path|slice:'3:'}}">
+                                <img class="lang_img {% if LANGUAGE_CODE != lang_code %}gray{% endif %}"
+                                     src="{% static 'landing/images/icon_'|add:lang_code|add:'.png' %}"
+                                     alt="{{lang_name}}"
+                                     width="24">
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>

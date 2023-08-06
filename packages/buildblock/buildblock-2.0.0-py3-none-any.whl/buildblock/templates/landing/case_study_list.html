@@ -1,0 +1,61 @@
+{% extends "landing/base.html" %}
+{% load static i18n humanize base_tag landing_tag %}
+
+{% block title %}{% trans "BuildBlock |" %} {{page_title}}{% endblock title %}
+
+{% block page_title %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <h1 class="page-title text-center text-lg-left">{{page_title}}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock page_title %}
+
+{% block content %}
+<div class="content_section pt-0">
+    <div class="container-fluid">
+        <div class="row">
+            {% for case in case_studies %}
+            <div class="col-12 col-lg-4">
+                <a class="list_card_link" href="{% url 'case-study-read' pk=case.id %}">
+                    <div class="card list_card case_study_list_card shadow-lg">
+                        <div class="card-body p-0">
+                            {% if case.thumbnail %}
+                            <img class="thumbnail w-100 card-img-top" src="{{case.news_thumbnail_url}}" alt="">
+                            {% endif %}
+                            <div class="list_card_title">
+                                {% get_case_study_status_badge status=case.status language=LANGUAGE_CODE %}
+                                <p class="font-20 text-dark font-weight-bold mb-2">{{case.title}}</p>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h5 class="font-12 text-muted mb-1">{% trans "PURCHASED PRICE" %}</h5>
+                                        <p class="font-18 text-dark dollar_sign mb-0">{{case.purchase_price|filter_safe_money_read_from_db|floatformat:0|intcomma}} <span class="hidden_en font-12">({{case.purchase_price|filter_change_dollar_to_100_m_won|floatformat:-1}}억 원)</span></p>
+                                    </div>
+                                    {% if case.selling_price %}
+                                    <div class="col-6 pl-0">
+                                        <h5 class="font-12 text-muted mb-1">{% trans "SOLD PRICE" %}</h5>
+                                        <p class="font-18 dollar_sign mb-0">{{case.selling_price|filter_safe_money_read_from_db|floatformat:0|intcomma}} <span class="hidden_en font-12">({{case.selling_price|filter_change_dollar_to_100_m_won|floatformat:-1}}억 원)</span></p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% empty %}
+            <div class="col-12">
+                <div class="font-12 text-muted text-center py-4">
+                    No Posts
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% include "base/pagination.html" with paginator=paginator %}
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,56 @@
+{% extends "administrator/base.html" %}
+{% load static i18n base_tag %}
+
+{% block title %}{{page_title}}{% endblock %}
+
+{% block page_title %}
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+          <div class="page-title-right">
+              <a class="btn btn-success mb-2" href="{% url 'administrator:landing-video-create' %}">ADD VIDEO</a>
+          </div>
+
+          <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+  {% for video in landing_video %}
+  <div class="col-12 col-lg-4">
+    <div class="card">
+      <div class="card-body">
+        <div class="float-right">
+          <a class="btn btn-sm btn-link text-warning" href="{% url 'administrator:landing-video-update' video.id %}"><i class="dripicons-document-edit"></i></a>
+          <a class="btn btn-sm btn-link text-danger" href="{% url 'administrator:landing-video-delete' video.id %}"><i class="dripicons-trash"></i></a>
+        </div>
+        <div>
+          <h3 class="text-white header-title"><span class="badge badge-light font-12">EN</span></h3>
+          <h4>{{video.title_en}}</h4>
+          <p>{{video.description_en}}</p>
+        </div>
+        <div class="mt-3">
+          <h3 class="text-white header-title"><span class="badge badge-light font-12">KO</span></h3>
+          <h4>{{video.title_ko}}</h4>
+          <p>{{video.description_ko}}</p>
+        </div>
+        <div class="clearfix my-3">
+          <p class="float-left">Ordering : {{video.ordering}}</p>
+          <div class="btn-group float-right">
+            <a class="btn btn-outline-light" href="{{video.playlist_url}}" target="_blank">Playlist Link</a>
+            <a class="btn btn-outline-light" href="{{video.video_url}}" target="_blank">Main Video Link</a>
+          </div>
+        </div>
+        <div class="video-container">
+            <iframe class="landing_video_iframe" src="{{video.video_url}}" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% include "base/pagination.html" with paginator=paginator add_css="page_nav_dark" sign_align="end"%}
+{% endblock content %}

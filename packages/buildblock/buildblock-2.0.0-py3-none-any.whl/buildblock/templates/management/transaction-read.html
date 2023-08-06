@@ -1,0 +1,34 @@
+{% extends "management/base.html" %}
+{% load static i18n humanize mathfilters base_tag %}
+
+{% block page_title %}
+{% endblock page_title %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-lg-4">
+        <div class="text-center py-4">
+            <h4 class="text-uppercase text-primary mt-4 mb-2">Payment<br>{{transaction.status}}</h4>
+            <table class="complete_table table table-border bg-white my-4">
+                <tr>
+                    <td class="text-muted">Payment Date</td>
+                    <td class="font-weight-bold">{{transaction.payment_made_datetime}}</td>
+                </tr>
+                <tr>
+                    <td class="text-muted">Method</td>
+                    <td class="font-weight-bold">{{transaction.get_payment_method_display}}</td>
+                </tr>
+                <tr>
+                    <td class="text-muted">Amount</td>
+                    <td class="font-weight-bold">${{transaction.amount|filter_safe_money_read_from_db|intcomma}}</td>
+                </tr>
+            </table>
+
+            <a class="btn btn-primary mt-3" href="{% url 'management:home' %}">Return Home</a>&nbsp;
+            <a class="btn btn-primary mt-3" href="{% url 'management:transaction' %}">All Transactions</a>
+        </div> <!-- end /.text-center-->
+    </div> <!-- end col-->
+</div>
+
+{% endblock content %}

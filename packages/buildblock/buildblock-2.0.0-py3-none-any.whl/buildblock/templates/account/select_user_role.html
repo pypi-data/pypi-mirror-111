@@ -1,0 +1,35 @@
+{% extends "account/base.html" %}
+{% load static i18n account_tag %}
+
+
+{% block content %}
+<div class="col-lg-5">
+    <div class="card">
+        <div class="card-header pt-4 pb-4 text-center bg-primary">
+            <a href="{% url 'home' %}">
+                <span><img src="{% static 'landing/images/logo/logo_w_h36.png' %}" alt="" height="24" id="side-main-logo"></span>
+            </a>
+        </div>
+        <div class="card-body p-4">
+            <div class="text-center w-75 m-auto">
+                <h4 class="text-dark-50 text-center mt-0 font-weight-bold">{% trans "Select Service Role" %}</h4>
+            </div>
+            <div class="form-group mt-4 mb-0 text-center">
+                {% for role in service_role_set %}
+                {% if role in user.user_role %}
+                <a href="{% url service_app_name|add:':change-role' user_role=role %}">
+                    <button class="btn btn-primary"> {% get_user_role_title role=role %} </button>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block more_action %}
+<div class="col-10 text-center">
+    <p class="text-muted"><a href="{% url service_app_name|add:':profile' %}" class="text-muted ml-1"><b>{% trans "User profile" %}</b></a></p>
+</div>
+{% endblock more_action %}

@@ -1,0 +1,239 @@
+{% extends "construction/base.html" %}
+{% load static i18n humanize base_tag construction_tag mathfilters %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            {% if is_editor %}
+            <div class="page-title-right">
+                <a href="#" data-toggle="modal" data-target="#add_expense_modal_2" data-dismiss="modal" class="btn btn-info btn-rounded mb-3 mr-1"><i class="dripicons-plus"></i> Expense</a>
+                <a href="#" data-toggle="modal" data-target="#add_multi_personnel_expense_modal" data-dismiss="modal" class="btn btn-info btn-rounded mb-3"><i class="dripicons-plus"></i> Multiple Expenses</a>
+            </div>
+            {% endif %}
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+
+{% block content %}
+<form action="{% url 'construction:edit-payment-date' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="hidden" name="return_url" value="{{request.get_full_path}}" required>
+    <div class="row">
+        <div class="col-12 hidden_lg pb-2">
+            {% if is_editor %}
+            <a href="#" data-toggle="modal" data-target="#add_expense_modal_2" class="btn btn-info w-100 mb-1"><i class="dripicons-plus"></i> Expense</a>
+            <a href="#" data-toggle="modal" data-target="#add_multi_personnel_expense_modal" class="btn btn-info w-100"><i class="dripicons-plus"></i> Multiple Expenses</a>
+            {% endif %}
+        </div>
+        <div class="col-12">
+            <div class="table-responsive mb-3">
+                <h5 class="header-title font-weight-light">Pending Expenses</h5>
+                <table class="table table-condensed dataTable table_expense mt-4 w-100" id="table_pending_expense">
+                    <colgroup>
+                        <col width="20">
+                        <col width="140">
+                        <col width="48">
+                        <col width="">
+                        <col width="">
+                        <col width="">
+                        {% if is_editor %}
+                        <col width="200">
+                        {% endif %}
+                    </colgroup>
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="select_all_pending_expenses">
+                                    <label class="custom-control-label" for="select_all_pending_expenses"></label>
+                                </div>
+                            </th>
+                            <th>Date</th>
+                            <th></th>
+                            <th>Worker</th>
+                            <th>Work Hours</th>
+                            <th>Payment</th>
+                            {% if is_editor %}
+                            <th></th>
+                            {% endif %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for expense in expenses_not_paid %}
+                        <tr>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="select_expense[]" id="select_pending_expense_{{forloop.counter}}" value="{{expense.id}}">
+                                    <label class="custom-control-label" for="select_pending_expense_{{forloop.counter}}"></label>
+                                </div>
+                            </td>
+                            <td>{{expense.date|date:'Y-m-d'}}</td>
+                            <td>
+                                {% if expense.attachment %}
+                                <a href="{{expense.attachment.url}}" target="_blank"><i class="mdi mdi-link-variant text-white font-16"></i></a>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <b class="text-white mr-1">{{expense.worker.name}}</b>
+                                {% if expense.description %}
+                                <a class="text-muted ml-1"
+                                    data-container="body"
+                                    data-trigger="hover"
+                                    data-toggle="popover"
+                                    data-placement="bottom"
+                                    data-content="{{expense.description}}">
+                                    <i class="mdi mdi-comment-processing"></i>
+                                </a>
+                                {% endif %}
+                            </td>
+                            <td>{{expense.work_hours}}</td>
+                            <td>
+                                <span class="dollar_sign{% if expense.payment_date %} text-white{% else %} text-muted{% endif %}">{{expense.amount|filter_safe_money_read_from_db|intcomma}}</span>
+                                {% if expense.payment_date %}
+                                <i class="mdi mdi-check-circle ml-1 text-info font-16"></i>
+                                {% endif %}
+                            </td>
+                            {% if is_editor %}
+                            <td class="text-right">
+                                <a class="btn btn-sm btn-link text-muted" href="#" data-toggle="modal" data-target="#update_expense_modal_1" onclick="updatePersonnelExpenseData('{{expense.id}}','{{expense.worker.name}}','{{expense.worker.id}}','{{expense.date|date:'Y-m-d'}}','{{expense.payment_date}}','{{expense.work_hours}}','{{expense.amount}}','{{expense.attachment}}','{{expense.description}}');"><i class="dripicons-document-edit"></i></a>
+                                <a class="btn btn-sm btn-link text-muted" href="#" data-toggle="modal" data-target="#delete_expense_modal" onclick="deleteExpenseData('{{expense.id}}','personnel_expense');"><i class="dripicons-trash"></i></a>
+                            </td>
+                            {% endif %}
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td class="text-center" colspan="100%">No Expenses</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="table-responsive">
+                <h5 class="header-title font-weight-light">All Expenses</h5>
+                <table class="table table-condensed dataTable table_expense mt-4 w-100" id="table_expense">
+                    <colgroup>
+                        <col width="20">
+                        <col width="140">
+                        <col width="48">
+                        <col width="">
+                        <col width="">
+                        <col width="">
+                        {% if is_editor %}
+                        <col width="200">
+                        {% endif %}
+                    </colgroup>
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="select_all_expenses">
+                                    <label class="custom-control-label" for="select_all_expenses"></label>
+                                </div>
+                            </th>
+                            <th>Date</th>
+                            <th></th>
+                            <th>Worker</th>
+                            <th>Work Hours</th>
+                            <th>Payment</th>
+                            {% if is_editor %}
+                            <th></th>
+                            {% endif %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for expense in personnel_expenses %}
+                        <tr>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="select_expense[]" id="select_expense_{{forloop.counter}}" value="{{expense.id}}">
+                                    <label class="custom-control-label" for="select_expense_{{forloop.counter}}"></label>
+                                </div>
+                            </td>
+                            <td>{{expense.date|date:'Y-m-d'}}</td>
+                            <td>
+                                {% if expense.attachment %}
+                                <a href="{{expense.attachment.url}}" target="_blank"><i class="mdi mdi-link-variant text-white font-16"></i></a>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <b class="text-white mr-1">{{expense.worker.name}}</b>
+                                {% if expense.description %}
+                                <a class="text-muted ml-1"
+                                    data-container="body"
+                                    data-trigger="hover"
+                                    data-toggle="popover"
+                                    data-placement="bottom"
+                                    data-content="{{expense.description}}">
+                                    <i class="mdi mdi-comment-processing"></i>
+                                </a>
+                                {% endif %}
+                            </td>
+                            <td>{{expense.work_hours}}</td>
+                            <td>
+                                <span class="dollar_sign{% if expense.payment_date %} text-white{% else %} text-muted{% endif %}">{{expense.amount|filter_safe_money_read_from_db|intcomma}}</span>
+                                {% if expense.payment_date %}
+                                <i class="mdi mdi-check-circle ml-1 text-info font-16"></i>
+                                {% endif %}
+                            </td>
+                            {% if is_editor %}
+                            <td class="text-right">
+                                <a class="btn btn-sm btn-link text-muted" href="#" data-toggle="modal" data-target="#update_expense_modal_1" onclick="updatePersonnelExpenseData('{{expense.id}}','{{expense.worker.name}}','{{expense.worker.id}}','{{expense.date|date:'Y-m-d'}}','{{expense.payment_date}}','{{expense.work_hours}}','{{expense.amount}}','{{expense.attachment}}','{{expense.description}}');"><i class="dripicons-document-edit"></i></a>
+                                <a class="btn btn-sm btn-link text-muted" href="#" data-toggle="modal" data-target="#delete_expense_modal" onclick="deleteExpenseData('{{expense.id}}','personnel_expense');"><i class="dripicons-trash"></i></a>
+                            </td>
+                            {% endif %}
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td class="text-center" colspan="100%">No Expenses</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-12">
+            {% if is_editor %}
+            <input type='submit' class='float-lg-left btn btn-sm btn-secondary' value="CHANGE STATUS TO PAID" />
+            {% endif %}
+        </div>
+    </div>
+</form>
+{% include "base/pagination.html" with paginator=paginator add_css="page_nav_dark" sign_align="end" %}
+{% endblock content %}
+
+{% block modal %}
+{% if is_editor %}
+{% include 'construction/partials/expense_update_modal.html' %}
+{% include 'construction/partials/multi_personnel_expense_modal.html' %}
+{% endif %}
+{% endblock %}
+
+{% block third_party %}
+<script>
+    $(document).ready(function(){
+        $('#select_all_pending_expenses').click(function(){
+            if($("#select_all_pending_expenses").prop("checked")){
+                $('#table_pending_expense').find('input[name="select_expense[]"]').prop('checked', true);
+            } else {
+                $('#table_pending_expense').find('input[name="select_expense[]"]').prop('checked', false);
+            }
+        });
+        $('#select_all_expenses').click(function(){
+            if($("#select_all_expenses").prop("checked")){
+                $('#table_expense').find('input[name="select_expense[]"]').prop('checked', true);
+            } else {
+                $('#table_expense').find('input[name="select_expense[]"]').prop('checked', false);
+            }
+        });
+    });
+</script>
+{% include "base/load_datatable.html" %}
+{% endblock third_party %}

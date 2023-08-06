@@ -1,0 +1,61 @@
+{% extends "administrator/base.html" %}
+{% load static i18n crispy_forms_tags management_tag base_tag %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 col-lg-6">
+        <div class="card manager_payment_detail">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <span class="badge {% get_payment_transfer_status_badge_class status=transfer.status %}">{{transfer.get_status_display}}</span>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-4 border-right border-secondary">
+                        <label class="font-12 text-gray font-weight-light">PRODUCT</label>
+                        <p class="text-white font-16"><span class="text-uppercase font-12">[{{transfer.product.code}}]</span><br>{{transfer.product.full_address}}</p>
+                    </div>
+                    <div class="col-4 border-right border-secondary">
+                        <label class="font-12 text-gray font-weight-light">TENANT</label>
+                        <p class="text-white font-16">{{transfer.tenant.name}}</p>
+                    </div>
+                    <div class="col-4">
+                        <label class="font-12 text-gray font-weight-light">OWNER</label>
+                        <p class="text-white font-16">{{transfer.owner.name}}<br><span class="font-12">{{transfer.destination_account}}</span></p>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-4 border-right border-secondary">
+                        <label class="font-12 text-gray font-weight-light">AMOUNT</label>
+                        <p class="text-white font-16 dollar_sign">{{transfer.amount|filter_safe_money_read_from_db}}</p>
+                    </div>
+                    <div class="col-4 border-right border-secondary">
+                        <label class="font-12 text-gray font-weight-light">APPICATION FEE</label>
+                        <p class="text-white font-16 dollar_sign">{{transfer.application_fee|filter_safe_money_read_from_db}}</p>
+                    </div>
+                    <div class="col-4 border-right border-secondary">
+                        <label class="font-12 text-gray font-weight-light">STATUS</label>
+                        <p class="text-white font-16">{{transfer.get_status_display}}</p>
+                    </div>
+                    <div class="col-4 border-right border-secondary">
+                        <label class="font-12 text-gray font-weight-light">IDENTIFIER</label>
+                        <p class="text-white font-16">{{transfer.identifier}}</p>
+                    </div>
+                    <div class="col-4 border-right border-secondary">
+                        <label class="font-12 text-gray font-weight-light">SOURCE TYPE</label>
+                        <p class="text-white font-16">{{transfer.get_source_type_display}}</p>
+                    </div>
+                    <div class="col-4">
+                        <label class="font-12 text-gray font-weight-light">TRANSFER DATE</label>
+                        <p class="text-white font-16">{{transfer.transfer_datetime|date:"N j. Y P"}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="admin_submit_btn">
+        <a class="btn btn-secondary" href="{% url 'administrator:payment' %}">BACK TO LIST</a>
+    </div>
+</div>
+{% endblock content %}

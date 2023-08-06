@@ -1,0 +1,65 @@
+{% load static i18n %}
+<!-- Zone Update Modal -->
+<div id="edit_zone_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="edit_zone_modal_label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="edit_zone_modal_label">Edit Zone</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <form method="post"
+                  action="{% url 'construction:zone-update' %}"
+                  enctype="multipart/form-data">
+                <div class="modal-body">
+                    {% csrf_token %}
+                    {% autoescape off %}
+                    <input type="hidden" name="return_url" value="{{request.get_full_path}}" required>
+                    <input type="hidden" name="product_code" value="{{construction.product_code}}" required>
+                    <input type="hidden" name="zone_id">
+                    <div class="form-group mb-4">
+                        <p class="font-12 text-muted">EDIT ZONE: <span class="zone_ori_name"></span> </p>
+                        <input type="text" name="zone_name" maxlength="100" class="textinput form-control" required id="edit_zone_name" required>
+                    </div>
+                    {% endautoescape %}
+                </div>
+                <div class="modal-footer" style="justify-content: space-between;">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <input type="submit" class="btn btn-success" value="Save" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Zone Delete Modal -->
+<div id="delete_zone_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="zone_delete" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="zone_delete">Delete Work</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <form method="POST" action="{% url 'construction:zone-delete' %}">
+                {% csrf_token %}
+                <input type="hidden" name="return_url" value="{{request.get_full_path}}" required>
+                <input type="hidden" name="product_code" value="{{construction.product_code}}" required>
+                <input type="hidden" name="zone_id">
+                <div class="modal-body text-center">
+                    {% csrf_token %}
+                    <p class="font-14 my-3"><span class="zone_ori_name"></span>{% blocktrans %} 영역을 삭제하시겠습니까? {% endblocktrans %}</p>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" value="Delete" class='btn btn-danger'/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+function updateZoneData(id, name) {
+    $('input[name="zone_id"]').val(id);
+    $('input[name="zone_name"]').val(name);
+    $('.zone_ori_name').html(name);
+};
+</script>

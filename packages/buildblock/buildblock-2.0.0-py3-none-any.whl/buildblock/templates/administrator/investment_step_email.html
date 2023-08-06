@@ -1,0 +1,65 @@
+{% extends "administrator/base.html" %}
+{% load static i18n crispy_forms_tags base_tag %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 col-lg-8">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <label class="font-12 text-gray font-weight-light">INVESTMENT</label>
+                        <p class="text-white font-16">{{investment.investment_product.title}}</p>
+                    </div>
+                    <div class="col-3 border-left border-secondary">
+                        <label class="font-12 text-gray font-weight-light">INVESTOR</label>
+                        <p class="text-white font-16">{{investment.user.name}} ({{investment.user.email}})</p>
+                        <label class="font-12 text-gray font-weight-light">MANAGER</label>
+                        <p class="text-white font-16 mb-0">{{investment.investment_product.manager.name}} ({{investment.investment_product.manager.email}})</p>
+                    </div>
+                    <div class="col-3 border-left border-secondary">
+                        <label class="font-12 text-gray font-weight-light">AMOUNT</label>
+                        <p class="text-white font-16"><span class="dollar_sign">{{investment.amount|filter_safe_money_read_from_db}}</span></p>
+                        <label class="font-12 text-gray font-weight-light">DATE</label>
+                        <p class="text-white font-16 mb-0">{{investment.investment_product.start_date}} ~ {{investment.investment_product.end_date}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form method='POST' action="{% url 'administrator:investment-step-email-send' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="hidden" name="step_id" value="{{step.id}}">
+    <!-- Example Page -->
+    <div class="row">
+        <div class="col-12 col-lg-8">
+            <div class="card">
+                <div class="card-body" style="color:#000">
+                    {{email_contents|safe}}
+
+                    <div class="form-group mt-3">
+                        <p class="font-12 text-muted">COMMENT (optional)</p>
+                        <textarea name="comment" class="form-control" rows="2"></textarea>
+                    </div>
+                    <div class="text-right admin_submit_btn">
+                        <input type='submit' class='btn btn-success' value='SEND'/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock content %}
+
+{% block third_party %}
+<script>
+$('textarea[name="comment"]').bind('input propertychange', function() {
+    $('span#comment').text($('textarea[name="comment"]').val());
+});
+</script>
+
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+{% endblock third_party %}

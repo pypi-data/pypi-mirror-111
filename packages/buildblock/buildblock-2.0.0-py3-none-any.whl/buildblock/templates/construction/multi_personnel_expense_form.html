@@ -1,0 +1,119 @@
+{% extends "construction/base.html" %}
+{% load static i18n humanize base_tag construction_tag %}
+
+{% block topbar %}
+{% include 'construction/partials/topbar_only_title.html' %}
+{% endblock topbar %}
+
+{% block page_title %}
+<form method="post"
+      action="{% url 'construction:multiple-personnel-expense-save' %}"
+      onsubmit="return checkData()">
+    {% csrf_token %}
+    <input type="hidden" name="return_url" value="{{request.get_full_path}}">
+    <input type="hidden" name="construction_id" value="{{construction.id}}"/>
+    <input type="hidden" name="worker_id" value="{{request.GET.worker_id}}"/>
+    <input type="hidden" name="start_date" value="{{start_date|date:'Y-m-d'}}"/>
+    <input type="hidden" name="end_date" value="{{end_date|date:'Y-m-d'}}"/>
+    <div class="row">
+        <div class="col-12 col-lg-8">
+            <div class="page-title-box">
+                <div class="page-title-right">
+                    <input type="submit" class="btn btn-success btn-rounded mb-3"  value="Save">
+                </div>
+                <h4 class="page-title">{{page_title}}</h4>
+            </div>
+        </div>
+    </div>
+{% endblock page_title %}
+
+
+{% block content %}
+    <div class="row">
+        <div class="col-12 hidden_lg pb-2">
+            <input type="submit" class="btn btn-success w-100"  value="Save">
+        </div>
+        <div class="col-12 col-lg-8" id="table_expense_col">
+            <div class="table-responsive">
+                <table class="table table-condensed table_expense w-100" id="table_expense">
+                    <colgroup>
+                        <col width="110">
+                        <col width="">
+                        <col width="">
+                        <col width="100">
+                    </colgroup>
+                    <thead class="thead-dark">
+                        <tr class="count_tr">
+                            <th>Date</th>
+                            <th>Work Hours</th>
+                            <th class="px-0 px-lg-3">Payment (cent)</th>
+                            <th>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="select_all_expenses">
+                                    <label class="custom-control-label" for="select_all_expenses"></label>
+                                    Paid
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for expense in multi_expenses %}
+                            <tr class="count_tr">
+                                <td>
+                                    <div class="form-group">
+                                        {{expense.date|date:"n / j D"}}
+                                        <input type="hidden" name="{{expense.date|date:'Y-m-d'}}[expense_id]" value="{{expense.expense.id}}"/>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" name="{{expense.date|date:'Y-m-d'}}[work_hours]"  id="work_hours_{{forloop.counter0}}" value="{{expense.expense.work_hours}}" step="1" min="0">
+                                    </div>
+                                </td>
+                                <td class="px-0 px-lg-3">
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" name="{{expense.date|date:'Y-m-d'}}[amount]"  id="amount_{{forloop.counter0}}" value="{{expense.expense.amount}}" min="0">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="{{expense.date|date:'Y-m-d'}}[select_expense]" id="select_expense_{{forloop.counter0}}" value="paid" {% if expense.expense.payment_date %}checked{% endif %}>
+                                        <label class="custom-control-label" for="select_expense_{{forloop.counter0}}"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock content %}
+
+{% block third_party %}
+<script>
+    $(document).ready(function(){
+        $('#select_all_expenses').click(function(){
+            if($("#select_all_expenses").prop("checked")){
+                $('#table_expense').find('input[name*="[select_expense]"]').prop('checked', true);
+            } else {
+                $('#table_expense').find('input[name*="[select_expense]"]').prop('checked', false);
+            }
+        });
+    });
+
+    function checkData(){
+        for(var i=0; i<$('.count_tr').length; i++) {
+            var work_hours = $('#work_hours_'+i).val();
+            var amount = $('#amount_'+i).val();
+            if ((!work_hours.length && amount.length)
+                || (work_hours.length && !amount.length)){
+                    $('#table_expense_col').prepend("<div class='alert alert-danger alert-dismissible bg-danger text-white mx-0 border-0' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>Please enter both <b>'Work hours'</b> and <b>'Payment'</b>.</div>")
+                return false;
+            }
+        }
+    }
+</script>
+{% include "base/load_datatable.html" %}
+{% endblock third_party %}

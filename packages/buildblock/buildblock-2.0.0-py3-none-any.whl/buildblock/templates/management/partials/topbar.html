@@ -1,0 +1,201 @@
+{% load static i18n base_tag account_tag management_tag %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES_LIST %}
+{% get_management_roles as MANAGEMENT_ROLES %}
+{% get_intersection_set user.user_role service_role_set as USER_SERVICE_ROLE_SET %}
+
+<!-- Topbar Start -->
+<div class="navbar-custom">
+    <ul class="list-unstyled topbar-right-menu float-right mb-0">
+        {% if USER_SERVICE_ROLE_SET|length <= 1 %}
+            <img class="logo_sm visible_sm" src="{% static 'landing/images/logo/logo_h36.png' %}" height="22">
+        {% else %}
+            <!-- Role Selection -->
+            <li class="dropdown notification-list topbar-dropdown">
+                <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                    <span class="align-middle d-sm-inline">{% get_user_role_title role=request.session.active_role %}</span> <i class="mdi mdi-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated topbar-dropdown-menu flag_dropdown">
+                    {% for user_role in USER_SERVICE_ROLE_SET %}
+                        {% if user_role != request.session.active_role %}
+                            <a href="{% url 'management:change-role' user_role=user_role %}" class="dropdown-item notify-item">
+                                <span class="align-middle d-sm-inline">{% get_user_role_title role=user_role %}</span>
+                            </a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </li>
+        {% endif %}
+
+        {% comment %}
+        <!-- Language Selection -->
+        <!-- TODO: 언어 지원 가능할 때 open -->
+        <li class="dropdown notification-list topbar-dropdown">
+            <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                {% for lang_code, lang_name in LANGUAGES_LIST %}
+                {% if lang_code in LANGUAGE_CODE %}
+                <img src="{% static 'management/images/flags/'|add:LANGUAGE_CODE|add:'.png'' %}" alt="user-image" class="mr-1" height="16"> <span class="align-middle d-none d-sm-inline">{{lang_name}}</span> <i class="mdi mdi-chevron-down"></i>
+                {% endif %}
+                {% endfor %}
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated topbar-dropdown-menu flag_dropdown">
+                {% for lang_code, lang_name in LANGUAGES_LIST %}
+                {% if lang_code not in LANGUAGE_CODE %}
+                <!-- item-->
+                <a href="/{{lang_code}}{{request.get_full_path|slice:'3:'}}" class="dropdown-item notify-item">
+                    <img src="{% static 'management/images/flags/'|add:lang_code|add:'.png'' %}" alt="user-image" class="mr-1" height="16"> <span class="align-middle d-none d-sm-inline">{{lang_name}}</span>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </li>
+        {% endcomment %}
+
+        {% comment %}
+        <!-- Notice -->
+        <!-- TODO: 지원 가능할 때 open -->
+        <li class="dropdown notification-list">
+            <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                <i class="dripicons-bell noti-icon"></i>
+                <span class="noti-icon-badge"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated dropdown-lg">
+
+                <!-- item-->
+                <div class="dropdown-item noti-title">
+                    <h5 class="m-0">
+                        <span class="float-right">
+                            <a href="javascript: void(0);" class="text-dark">
+                                <small>Clear All</small>
+                            </a>
+                        </span>Notification
+                    </h5>
+                </div>
+
+                <div class="slimscroll" style="max-height: 230px;">
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <div class="notify-icon bg-primary">
+                            <i class="mdi mdi-comment-account-outline"></i>
+                        </div>
+                        <p class="notify-details">Caleb Flakelar commented on Admin
+                            <small class="text-muted">1 min ago</small>
+                        </p>
+                    </a>
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <div class="notify-icon bg-info">
+                            <i class="mdi mdi-account-plus"></i>
+                        </div>
+                        <p class="notify-details">New user registered.
+                            <small class="text-muted">5 hours ago</small>
+                        </p>
+                    </a>
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <div class="notify-icon">
+                            <img src="{% static 'management/images/users/avatar-2.jpg' %}" class="img-fluid rounded-circle" alt="" /> </div>
+                        <p class="notify-details">Cristina Pride</p>
+                        <p class="text-muted mb-0 user-msg">
+                            <small>Hi, How are you? What about our next meeting</small>
+                        </p>
+                    </a>
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <div class="notify-icon bg-primary">
+                            <i class="mdi mdi-comment-account-outline"></i>
+                        </div>
+                        <p class="notify-details">Caleb Flakelar commented on Admin
+                            <small class="text-muted">4 days ago</small>
+                        </p>
+                    </a>
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <div class="notify-icon">
+                            <img src="{% static 'management/images/users/avatar-4.jpg' %}" class="img-fluid rounded-circle" alt="" /> </div>
+                        <p class="notify-details">Karen Robinson</p>
+                        <p class="text-muted mb-0 user-msg">
+                            <small>Wow ! this admin looks good and awesome design</small>
+                        </p>
+                    </a>
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <div class="notify-icon bg-info">
+                            <i class="mdi mdi-heart"></i>
+                        </div>
+                        <p class="notify-details">Carlos Crouch liked
+                            <b>Admin</b>
+                            <small class="text-muted">13 days ago</small>
+                        </p>
+                    </a>
+                </div>
+
+                <!-- All-->
+                <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                    View All
+                </a>
+
+            </div>
+        </li>
+        {% endcomment %}
+
+        <li class="dropdown notification-list">
+            <a class="nav-link dropdown-toggle nav-user arrow-none mr-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="false"
+                aria-expanded="false">
+                <span class="account-user-avatar" style="top:21px;left:19px;">
+                    <i class="mdi mdi-account-circle-outline" style="font-size:26px;"></i>
+                    <!-- <img src="{% static 'management/images/users/avatar-1.jpg' %}" alt="user-image" class="rounded-circle"> -->
+                </span>
+                <span>
+                    <span class="account-user-name">{{user.name}}</span>
+                    <span class="account-position">{% get_user_role_title role=request.session.active_role %}</span>
+                </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
+                <!-- item-->
+                <div class=" dropdown-header noti-title">
+                    <h6 class="text-overflow m-0">Welcome !</h6>
+                </div>
+
+                <!-- item-->
+                <a href="{% url 'management:profile' %}" class="dropdown-item notify-item">
+                    <i class="mdi mdi-account-circle mr-1"></i>
+                    <span>My Profile</span>
+                </a>
+
+                <!-- item-->
+                <a href="{% url 'account_logout' %}" class="dropdown-item notify-item">
+                    <i class="mdi mdi-logout mr-1"></i>
+                    <span>Logout</span>
+                </a>
+
+            </div>
+        </li>
+
+    </ul>
+
+    <button class="button-menu-mobile open-left disable-btn">
+        <i class="mdi mdi-menu"></i>
+    </button>
+    {% comment %}
+    <!-- Search -->
+    <!-- TODO: 지원 가능할 때 open -->
+    <div class="app-search">
+        <form>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search...">
+                <span class="mdi mdi-magnify"></span>
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    {% endcomment %}
+</div>
+<!-- end Topbar -->

@@ -1,0 +1,592 @@
+.btn_extra_lg{
+    padding: 1.5rem 2.5rem;
+    font-size: .95rem;
+    font-weight: 700;
+    border-radius: 36px;
+    transition: transform .3s;
+}
+.btn-rec{
+    border-radius: 0!important;
+}
+.text_black{
+    color: #000;
+}
+.alert{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.form-group .input-group .input-group-text, .form-group .input-group .input-group-append{
+    height: calc(2.2125rem + 2px);
+}
+.form-group .input-group .btn{
+    min-width: 72px;
+}
+.form-group .form-control[type=checkbox]{
+    width: 20px;
+    height: 20px;
+    border-color: #0acf97;
+}
+.form-group .dynamic-array-widget{
+    margin-bottom: 1rem;
+}
+.form-group .dynamic-array-widget > ul{
+    margin-bottom: 0;
+}
+.form-group input.add-array-item{
+    margin-left: 40px;
+}
+.form-group ul{
+    padding-inline-start: 24px;
+}
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	/* padding-top: 30px; */
+	height: 0;
+	overflow: hidden;
+} 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.page_nav_bottom.page_nav_dark .page-item.active .page-link{
+    color: #333;
+    font-weight: 900;
+    background-color: rgba(255, 255, 255, 0.35);
+}
+.page-title-box .page-title.page_title_lg{
+    font-size: 24px;
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+    color: #2b99b9;
+    border-color: #2b99b9;
+    background-color: #2b99b9;
+}
+
+.const_body .content-page{
+    margin-left: 0;
+}.const_body .left-side-menu + .content-page{
+    margin-left: 250px;
+}
+.main_link_card{
+    display: block;
+    margin-bottom: 15px;
+}
+.main_link_card .card{
+    margin-bottom: 0;
+    border: 1px solid #37404a;
+    font-size: 16px;
+}
+.main_link_card:hover .card{
+    border-color: #9013fe;
+}
+.admin_submit_btn{
+    margin-top: 2rem;
+}
+.admin_submit_btn .btn{
+    min-width: 150px;
+}
+.target_list_table_title + div .row .col-sm-12 > div{
+    text-align: right;
+}
+.target_list_table .form-control[type=checkbox]{
+    height: 20px;
+    border-color: #0acf97;
+}
+.target_list_table{
+    border-bottom: 1px solid #e3eaef;
+}
+.target_list_table tbody tr:last-child td{
+    border-bottom: 0;
+}
+.fieldWrapper select.form-control[multiple]{
+    min-height: 150px;
+}
+.fieldWrapper.date_field label{
+    width: 100%;
+}
+.fieldWrapper.date_field select{
+    margin-right: 6px;
+    vertical-align: top;
+}
+.fieldWrapper.date_field select:last-child{
+    margin-right: 0;
+}
+.fieldWrapper .django-ckeditor-widget{
+    display: block!important;
+}
+
+.admin_lease_detail .row > *{
+    margin-bottom: 1.5rem;
+}
+.admin_lease_detail .row p{
+    margin-bottom: 0;
+}
+
+.btn-link i{
+    vertical-align: text-bottom;
+}
+.table tr td .btn-link{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.modal-content{
+    background-color: #343a40;
+}
+.modal-backdrop{
+    background-color: #464f5b;
+}
+
+.news_list_card{
+    background: transparent;
+    box-shadow: none;
+    margin-bottom: 40px;
+    border-radius: 0;
+}
+.news_list_card.card .card-img-top{
+    border-radius: 0;
+}
+.news_list_card .badge{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 85%;
+    border-radius: 0;
+    padding: .5rem .6rem .4rem;
+}
+.news_list_card .badge.news_lang_badge{
+    text-transform: uppercase;
+}
+.news_list_card .badge.news_lang_badge ~ .badge{
+    right: 35px;
+}
+.news_list_title{
+    padding: 1rem;
+}
+
+/* Construction */
+
+/* topbar */
+.const_body .topbar-right-menu .nav-link.arrow-none{
+    background-color: #0acf97;
+    line-height: 70px;
+}
+.const_body .dropdown-menu-right{
+    min-width: 155.13px;
+    padding: .5rem 0;
+    text-align: center;
+}
+.const_body .dropdown-item:hover, .const_body .dropdown-item:focus{
+    color: #fff;
+    background-color: #0acf97;
+}
+.const_body .navbar-custom{
+    position: fixed;
+    top:0;
+    left: 250px;
+    right: 0;
+    margin: 0;
+    min-height: 70px;
+    z-index: 1001;
+}
+.const_body .content-page{
+    padding: 100px 12px 65px;
+}
+.navbar-custom.visible_sm{
+    padding: 0 25px;
+}
+.const_body .side-nav .side-nav-title{
+    padding-left: 40px;
+}
+.const_body .topbar_title h4{
+    margin: 0;
+    line-height: 70px;
+    color: #fff;
+    white-space: pre;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.const_menu_mobile{
+    font-size: 14px;
+    width: fit-content;
+    color: #8391a2;
+    height: 70px;
+    line-height: 70px;
+}
+
+.const_list_filter .btn-secondary:not(:disabled):not(.disabled).active{
+    color: #fff;
+    background-color: #9013FE;
+    border-color: #9013FE;
+}
+.const_card .card-img-top{
+  height: 250px;
+  object-fit: cover;
+}
+.const_card .const_card_action{
+  position: absolute;
+  top: -30px;
+  right: 0;
+  background: #37404a;
+  border-top-left-radius: .25rem;
+}
+.work_picture_card{
+  display: block;
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: #fff;
+  margin-bottom: 30px;
+}
+.work_picture_card img{
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.work_picture_card .badge{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 10px;
+}
+.add_picture_btns .btn-success{
+  cursor: pointer;
+}
+.work_picture_card:hover + .work_picture_hover{
+  display: inline-block;
+}
+.work_picture_hover{
+  position: absolute;
+  right: 15px;
+  bottom: 45px;
+  display: none;
+}
+.zone_badge{
+    font-weight: 500;
+    font-size: 85%;
+    margin-right: 5px;
+}
+.picture_card_col .const_card{
+    background-color: transparent;
+}
+.picture_card_col .const_card .card-body{
+    padding: 1rem 0;
+}
+
+.modal-body .btn{
+  cursor: pointer;
+}
+.modal-body .btn-info.btn-outline-info {
+  color: #fff!important;
+  background-color: #39afd1!important;
+  border-color: #39afd1!important;
+}
+.modal-body .btn-info.btn-outline-info:hover {
+  background-color: #2b99b9!important;
+  border-color: #2991ae!important;
+}
+.search_title_box #pic_date_range{
+    min-width: 200px;
+}
+.search_title_box .form-inline .form-group{
+    margin-bottom: 1rem;
+}
+
+.select2-dropdown, .daterangepicker{
+    z-index: 101051;
+}
+
+/* report */
+.report_list_group .report_list_group_toggle{
+    color: #fff;
+}
+.report_list_group .report_list_group_toggle.collapsed{
+    color: #8391a2;
+}
+.card.report_list_unit{
+    margin-bottom: 10px;
+    overflow: hidden;
+    font-size: .9rem;
+}
+.report_list_unit .header-title{
+    color: #fff;
+    font-size: 16px;
+    text-transform: unset;
+}
+.report_list_unit .badge-info-lighten{
+    background-color: rgba(57,175,209,.5);
+}
+.report_write_btn_wrap{
+    margin: .6rem -1.5rem -1.5rem -1.5rem;
+}
+.report_card h3.header-title{
+    font-size: 1.1rem;
+    color: #fff;
+}
+.report_card i.float-right{
+    font-size: 24px;
+}
+.report_card .category_badge{
+    display: inline-block;
+    margin-right: .5rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.daily_calendar .fc-toolbar h2{
+    font-size: 1rem;
+}
+.daily_calendar .fc-toolbar.fc-header-toolbar{
+    margin-bottom: .5rem;
+}
+.daily_calendar_button{
+    padding-top: 15px;
+    margin-bottom: -80px;
+    z-index: 1;
+}
+.daily_calendar .fc-view{
+    margin-top: 0;
+}
+.daily_calendar.fc td, .daily_calendar.fc th{
+    border-color: #404954;
+}
+.daily_calendar.fc-unthemed td.fc-today{
+    background: #3b4550;
+}
+.daily_calendar.fc-unthemed .fc-disabled-day{
+    background: transparent;
+}
+.daily_calendar .fc-basic-view .fc-body .fc-row{
+    min-height: 130px;
+    max-height: 150px;
+}
+.daily_calendar .fc-day-grid-container{
+    height: fit-content!important;
+}
+.daily_calendar .fc-event{
+    cursor: pointer;
+}
+.daily_calendar .fc-ltr .fc-basic-view .fc-day-top .fc-day-number{
+    float: left;
+}
+.daily_calendar_m .row .col-6:nth-child(2n){
+    padding-left: 5px;
+}
+.daily_calendar_m .row .col-6:nth-child(2n+1){
+    padding-right: 5px;
+}
+.daily_calendar_m .card-body{
+    padding: 1rem;
+}
+.report_daily_works .card{
+    display: inline-block;
+    margin-right: .5rem;
+    margin-bottom: 12px;
+}
+.report_daily_works .card .header-title{
+    margin-bottom: 0;
+    display: inline-block;
+}
+.report_daily_works .card_delete_btn{
+    position: absolute;
+    top: 23px;
+    right: 20px;
+}
+.table_expense.table tbody tr:last-child td{
+    border-bottom: 1px solid #464f5b;
+}
+.table_expense tr td{
+    vertical-align: middle;
+}
+.table_expense tr td .form-group{
+    margin-bottom: 0;
+}
+.report_card .bg-light-lighten{
+    background-color: rgba(222, 226, 230, 0.1) !important;
+}
+.delete_switch input[data-switch] + label{
+    width: 80px;
+}
+.delete_switch input[data-switch]:checked + label:after{
+    left: 57px;
+    background-color: #fff;
+}
+.report_detail_summary .card .mdi{
+    font-size: 60px;
+}
+.multi_expense_check{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+}
+
+.table_weekly tr td:first-child{
+    max-width:fit-content;
+}
+.table_weekly tr th, .table_weekly tr td{
+    width: 12.5%;
+}
+.report_plan_img{
+    max-width: 100%;
+    max-height: 588px;
+    background-color: #fff;
+}
+
+/* Case Study */
+.row.media_list{
+    margin-left: -5px;
+    margin-right: -5px;
+}
+.row.media_list > div{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+@media (min-width: 1200px){
+    .row.row-7{
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+    .row.row-7 .col-xl-1-7{
+      position: relative;
+      width: 100%;
+      padding-right: 5px;
+      padding-left: 5px;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 14.28571%;
+      flex: 0 0 14.28571%;
+      max-width: 14.28571%;
+    }
+}
+@media (min-width: 992px){
+  .hidden_lg{
+      display: none!important;
+  }
+  .visible_lg{
+      display: block;
+  }
+  .visible_inline_lg{
+      display: inline-block;
+  }
+  .card.card_mb_50{
+      margin-bottom: 50px;;
+  }
+}
+
+@media (max-width: 991.98px){
+  .hidden_lg{
+      display: block!important;
+  }
+  .visible_lg{
+      display: none;
+  }
+  .visible_inline_lg{
+      display: none;
+  }
+  .const_body .navbar-custom{
+      left: 0;
+  }
+  .const_body .topbar_title h4{
+      font-size: 1rem;
+  }
+  .const_body .content-page{
+      padding: 90px 0 50px;
+  }
+  .btn-group.admin_submit_btn{
+      width: 100%;
+  }
+  .btn-group.admin_submit_btn .btn{
+      width: 50%;
+      min-width: 50px;
+  }
+  .fieldWrapper.date_field select{
+      margin-right: 2px;
+  }
+  .add_picture_btns{
+      float: none!important;
+      width: 100%;
+  }
+  .work_picture_wrap .row .col-6:nth-child(2n){
+      padding-left: 7px;
+  }
+  .work_picture_wrap .row .col-6:nth-child(2n+1){
+      padding-right: 7px;
+  }
+  .work_picture_card{
+      margin-bottom: 20px;
+  }
+  .picture_card_col .const_card .card-img-top{
+      height: 200px;
+  }
+  .work_list_m.card{
+      margin-bottom: 15px;
+  }
+  .report_list_unit_info h3{
+      font-size: 1.125rem;
+  }
+  .report_daily_works .card{
+      display: block;
+  }
+  .report_detail_summary .card .mdi{
+      font-size: 40px;
+  }
+  .report_detail_summary .card h2{
+      display: inline-block;
+      vertical-align: super;
+      margin-left: 1rem;
+      font-size: 1.5rem;
+  }
+  .report_detail_summary .card.border-left{
+      border-left: 0!important;
+      border-top: 1px solid #464f5b;
+  }
+  .table_expense, .table_weekly{
+      min-width: 992px;
+  }
+}
+@media (max-width: 767.98px){
+    .const_body .navbar-custom{
+        padding: 0 0 0 5px;
+    }
+    .const_body .topbar_title h4{
+        margin-right: 45px;
+    }
+    .navbar-custom .topbar-right-menu .nav-link{
+        padding: 0 1rem;
+    }
+    .page-title-box.search_title_box{
+        position: relative;
+    }
+    .page-title-box.search_title_box .page-title{
+        padding-bottom: 50px;
+    }
+    .page-title-box.search_title_box .page-title-right{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .page-title-box.search_title_box .form-inline > .form-group{
+        flex: auto;
+    }
+    .hidden_sm{
+        display: none!important;
+    }
+    .page-title-box .page-title.const_list_filter{
+        width: 100%;
+        display: inline-flex;
+        margin-bottom: .75rem;
+    }
+}
+@media (min-width: 768px) {
+    .visible_sm{
+        display: none!important;
+    }
+}

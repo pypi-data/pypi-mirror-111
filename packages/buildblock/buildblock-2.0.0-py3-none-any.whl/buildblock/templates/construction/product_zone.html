@@ -1,0 +1,83 @@
+{% extends "construction/base.html" %}
+{% load static i18n humanize %}
+
+{% block topbar %}
+{% include 'construction/partials/topbar_only_title.html' %}
+{% endblock topbar %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 col-lg-4">
+        <form method="post"
+              action="{% url 'construction:zone-create' %}"
+              enctype="multipart/form-data">
+            {% csrf_token %}
+            {% autoescape off %}
+            <input type="hidden" name="product_code" value="{{construction.product_code}}">
+            <input type="hidden" name="return_url" value="{{request.get_full_path}}">
+            <div class="row">
+                <div class="col-12">
+                    <p class="font-12 text-muted">ADD ZONE</p>
+                </div>
+                <div class="col-9 pr-0">
+                    <input type="text" name="zone_name" maxlength="100" class="textinput form-control" required id="edit_id_title" value="">
+                </div>
+                <div class="col-3 pl-0">
+                    <input type="submit" class="btn btn-success btn-block" value="ADD" />
+                </div>
+            </div>
+            <div class="form-group mb-4">
+            </div>
+        </form>
+        {% endautoescape %}
+        <table class="table table-condensed w-100">
+            <colgroup>
+                <col width="">
+                <col width="">
+            </colgroup>
+            <thead class="thead-dark">
+                <tr>
+                  <th colspan="2" class="font-12 text-center text-muted">ZONE LIST</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for zone in construction.zones %}
+                <tr>
+                    <td>{{zone.name}}</td>
+                    <td class="text-right">
+                        {% autoescape off %}
+                        <a class="mr-3 text-warning"
+                           href="#"
+                           data-toggle="modal"
+                           data-target="#edit_zone_modal"
+                           onclick="updateZoneData('{{zone.id}}','{{zone.name}}');">
+                           <i class="dripicons-document-edit"></i>
+                        </a>
+                        <a class="text-danger"
+                           href="#"
+                           data-toggle="modal"
+                           data-target="#delete_zone_modal"
+                           onclick="updateZoneData('{{zone.id}}','{{zone.name}}');">
+                           <i class="dripicons-trash"></i>
+                        </a>
+                        {% endautoescape %}
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td class="text-center" colspan="100%">No Zones</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="col-12 col-lg-8 mt-4 mt-lg-0">
+        <p class="font-12 text-muted">PRODUCT PLAN</p>
+        <img src="{{construction.plan_image_url}}" width="100%">
+    </div>
+</div>
+{% endblock content %}
+
+{% block modal %}
+{% include 'construction/partials/zone_update_modal.html' %}
+{% endblock modal %}

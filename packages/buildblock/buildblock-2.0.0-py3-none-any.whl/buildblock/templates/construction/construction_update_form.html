@@ -1,0 +1,167 @@
+{% extends "construction/base.html" %}
+{% load static i18n crispy_forms_tags %}
+
+{% block sidebar %}
+{% endblock %}
+{% block topbar %}
+<div class="navbar-custom visible_sm">
+    <!-- TODO 나중에 다른 곳에서도 타고 들어오게 되면 링크 수정해야 함 -->
+    <a class="const_menu_mobile text-muted" href="{% url 'construction:info' construction_id=construction.id %}">
+        <i class="mdi mdi-arrow-left"></i> BACK TO LIST
+    </a>
+</div>
+{% endblock %}
+
+{% block page_title %}
+{% endblock page_title %}
+
+{% block content %}
+<form method='POST' enctype='multipart/form-data' class="mt-2">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+            <h4 class="page-title mb-3 text-white">Construction Info. Edit</h4>
+        </div>
+        <div class="col-12 col-lg-8">
+            <div class="card">
+                <div class="card-body">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <div class="row">
+                                <div class="col-3 col-lg-4">
+                                    <label class="font-12" for="{{form.status.id_for_label}}">{{form.status.label}}</label>
+                                    {{form.status}}
+                                </div>
+                                <div class="col-9 col-lg-8 pl-0">
+                                    <label class="font-12" for="{{form.title.id_for_label}}">{{form.title.label}}</label>
+                                    {{form.title}}
+                                </div>
+                                <div class="col-6">
+                                    <label class="font-12" for="{{form.type.id_for_label}}">{{form.type.label}}</label>
+                                    {{form.type}}
+                                </div>
+                                <div class="col-6 pl-0">
+                                    <label class="font-12" for="{{form.method.id_for_label}}">{{form.method.label}}</label>
+                                    {{form.method}}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 fieldWrapper date_field">
+                                    <label class="font-12" for="{{ form.start_date.id_for_label }}">{{form.start_date.label}}</label>
+                                    <div class="d-flex">
+                                        {{form.start_date}}
+                                    </div>
+                                </div>
+                                <div class="col-12 fieldWrapper date_field">
+                                    <label class="font-12" for="{{ form.end_date.id_for_label }}">{{form.end_date.label}}</label>
+                                    <div class="d-flex">
+                                        {{form.end_date}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <label class="font-12" for="{{form.constructor.id_for_label}}">{{form.constructor.label}}</label>
+                                    {{form.constructor}}
+                                </div>
+                                <div class="col-6">
+                                    <label class="font-12" for="{{form.budget.id_for_label}}">{{form.budget.label}}</label>
+                                    {{form.budget}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="mb-4">
+                                <label class="font-12" for="{{form.description.id_for_label}}">{{form.description.label}}</label>
+                                {{form.description}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-8 mt-2">
+            <h4 class="page-title mb-3 text-white">Product Info. Edit</h4>
+        </div>
+        <div class="col-12 col-lg-8">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <label class="font-12" for="{{form.main_image.id_for_label}}">{{form.main_image.label}}</label><br>
+                            {{form.main_image}}
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <label class="font-12" for="{{form.plan_image.id_for_label}}">{{form.plan_image.label}} (optional)</label><br>
+                            {{form.plan_image}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 col-lg-3">
+                            <label class="font-12" for="{{form.address_1.id_for_label}}">{{form.address_1.label}}</label>
+                            {{form.address_1}}
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <label class="font-12" for="{{form.city.id_for_label}}">{{form.city.label}}</label>
+                            {{form.city}}
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <label class="font-12" for="{{form.state.id_for_label}}">{{form.state.label}}</label>
+                            {{form.state}}
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <label class="font-12" for="{{form.zip_code.id_for_label}}">{{form.zip_code.label}}</label>
+                            {{form.zip_code}}
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-6 col-lg-3">
+                            <label class="font-12" for="{{form.property_type.id_for_label}}">{{form.property_type.label}}</label>
+                            {{form.property_type}}
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <label class="font-12" for="{{form.built_year.id_for_label}}">{{form.built_year.label}}</label>
+                            {{form.built_year}}
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <label class="font-12" for="{{form.sqft.id_for_label}}">{{form.sqft.label}}</label>
+                            {{form.sqft}}
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <label class="font-12" for="{{form.washer_dryer.id_for_label}}">{{form.washer_dryer.label}}</label>
+                            {{form.washer_dryer}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 col-lg-3">
+                            <label class="font-12" for="{{form.num_people.id_for_label}}">{{form.num_people.label}}</label>
+                            {{form.num_people}}
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <label class="font-12" for="{{form.num_bedroom.id_for_label}}">{{form.num_bedroom.label}}</label>
+                            {{form.num_bedroom}}
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <label class="font-12" for="{{form.num_bathroom.id_for_label}}">{{form.num_bathroom.label}}</label>
+                            {{form.num_bathroom}}
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <label class="font-12" for="{{form.num_parking.id_for_label}}">{{form.num_parking.label}}</label>
+                            {{form.num_parking}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-8 text-right mt-2">
+            <input type='submit' class='btn btn-success btn-block' value='SAVE ALL' />
+        </div>
+    </div>
+</form>
+{% endblock content %}
+
+{% block third_party %}
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+{% endblock third_party %}

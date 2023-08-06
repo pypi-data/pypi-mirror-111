@@ -1,0 +1,7 @@
+{% load static i18n %}
+<div class="thin_banner_container {% if not landing_thin_banner.image_mobile %}d-none d-lg-block{% endif %}">
+    {% if landing_thin_banner.url %}<a href="{{landing_thin_banner.url}}" target="_blank">{% endif %}
+        <img class="d-lg-block d-none" src="{{landing_thin_banner.image.url}}" alt="{{landing_thin_banner.title}}">
+        {% if landing_thin_banner.image_mobile %}<img class="d-lg-none d-block" src="{{landing_thin_banner.image_mobile.url}}" alt="{{landing_thin_banner.title}}">{% endif %}
+    {% if landing_thin_banner.url %}</a>{% endif %}
+</div>

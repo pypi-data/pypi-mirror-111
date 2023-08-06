@@ -1,0 +1,27 @@
+{% load i18n base_tag %}
+{% get_current_language as LANGUAGE_CODE %}
+
+<!-- Footer Start -->
+<footer class="footer">
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <div class="text-center text-lg-left footer-links">
+                <a class="text-muted" href="{% url 'home' %}" target="_blank">BuildBlock Home</a>
+                <a class="text-muted" data-toggle="modal" data-target="#agreement_tos">Terms of Service</a>
+                <a class="text-muted" data-toggle="modal" data-target="#agreement_pp">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="col-12 col-lg-6 pt-3 pt-lg-0 text-center text-lg-right">
+            Copyright © Build Block Inc. {% now "Y" %}
+        </div>
+    </div>
+</footer>
+<!-- end Footer -->
+
+<!--Term of Service Modal-->
+{% get_agreement_by_type_language service_type='investment' agreement_type='tos' language=LANGUAGE_CODE as AGREEMENT_TOS %}
+{% include 'investment/partials/base_modal.html' with id="agreement_tos" title=AGREEMENT_TOS.title content=AGREEMENT_TOS.content|safe %}
+
+<!--Privacy Policy Modal-->
+{% get_agreement_by_type_language service_type='investment' agreement_type='pp' language=LANGUAGE_CODE as AGREEMENT_PP %}
+{% include 'investment/partials/base_modal.html' with id="agreement_pp" title=AGREEMENT_PP.title content=AGREEMENT_PP.content|safe %}
