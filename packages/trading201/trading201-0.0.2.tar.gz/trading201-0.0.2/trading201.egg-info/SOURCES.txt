@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+trading201/__init__.py
+trading201.egg-info/PKG-INFO
+trading201.egg-info/SOURCES.txt
+trading201.egg-info/dependency_links.txt
+trading201.egg-info/top_level.txt
