@@ -1,0 +1,8 @@
+setup.py
+tango_metrics/__init__.py
+tango_metrics/tango_metrics.py
+tango_metrics.egg-info/PKG-INFO
+tango_metrics.egg-info/SOURCES.txt
+tango_metrics.egg-info/dependency_links.txt
+tango_metrics.egg-info/not-zip-safe
+tango_metrics.egg-info/top_level.txt
