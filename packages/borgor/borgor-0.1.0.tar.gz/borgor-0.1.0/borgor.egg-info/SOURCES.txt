@@ -1,0 +1,12 @@
+README.md
+setup.py
+borg/__init__.py
+borg/beatmap.py
+borg/osuapi.py
+borg/osuapiv2.py
+borg/replay.py
+borg/utils.py
+borgor.egg-info/PKG-INFO
+borgor.egg-info/SOURCES.txt
+borgor.egg-info/dependency_links.txt
+borgor.egg-info/top_level.txt
