@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: cgap-pipeline-utils
+Version: 23.0
+Summary: Collection of utilities for cgap-pipeline
+Home-page: https://github.com/dbmi-bgm/cgap-pipeline
+Author: Michele Berselli, Soo Lee
+Author-email: berselli.michele@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6, <3.8
+Description-Content-Type: text/markdown
+Requires-Dist: dcicutils (>=1.19.0)
+Requires-Dist: magma-suite (>=0.2.1)
+
+## CGAP pipeline utilities
+
+Utilities for cgap-pipeline
+
+For more detailed documentation : https://cgap-pipeline.readthedocs.io/en/latest
+
+
