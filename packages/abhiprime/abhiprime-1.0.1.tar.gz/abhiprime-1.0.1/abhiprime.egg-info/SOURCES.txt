@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+abhiprime/__init__.py
+abhiprime.egg-info/PKG-INFO
+abhiprime.egg-info/SOURCES.txt
+abhiprime.egg-info/dependency_links.txt
+abhiprime.egg-info/requires.txt
+abhiprime.egg-info/top_level.txt
