@@ -1,0 +1,9 @@
+passageidentity/__init__.py,sha256=0LH5ACU-TgG2cGeD18Yf52yhJRbDoYkmI7m9Ykz8zv4,111
+passageidentity/errors.py,sha256=Y53LxyEewdNdWWKVVraIaDadflFihKNlGq-XK9c03Bo,192
+passageidentity/helper.py,sha256=gEzHXehiMnwDJJqBWA2zvnSZyffBsP2xXomLYiRq3VU,1849
+passageidentity/passage.py,sha256=Wwu1lzHqd30K5MpORcODLbRssNBWI_Tp0O5LPLkqA7E,1059
+passage_identity-0.0.4.dist-info/LICENSE.txt,sha256=HgkMAm9S269kwGgUYprEQfSgmbCwIB6rP9b56CvB96Q,1074
+passage_identity-0.0.4.dist-info/METADATA,sha256=nJmWn4nVmqyQXSPZ_e4SZZJkPBvDuH-GFbr2s6uTCXw,1328
+passage_identity-0.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+passage_identity-0.0.4.dist-info/top_level.txt,sha256=hde9IBF7fC1OhosLkR6p1rgXXhoh1u0Ld4c2aEAJjxA,16
+passage_identity-0.0.4.dist-info/RECORD,,
