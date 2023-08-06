@@ -1,0 +1,10 @@
+vcf_creator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vcf_creator/__main__.py,sha256=brUfXfvXZnrzW6xupwlqzpnokPuXbTP5pa6gxBkq7YM,1029
+vcf_creator/vcf.py,sha256=VD8HezcopxtdRqh2wVrHBH1PmSHUaru02kZuB5C_D64,2099
+vcf_creator/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vcf_creator/tests/test_vcf.py,sha256=riWRooPDalLdH02ypuD2Dy3rLp4Pa8IlwuBLD4GEewc,443
+vcf_creator-1.0.5.dist-info/LICENSE,sha256=-zjpRY0f5h8qFyV_m-bs-U3Xv7wDqoNQhtI38Tk27hg,1078
+vcf_creator-1.0.5.dist-info/METADATA,sha256=E9iFBxUe9fKg4b1zfileRmf1aXYDb7Z9UGr156vLOgg,2355
+vcf_creator-1.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+vcf_creator-1.0.5.dist-info/top_level.txt,sha256=DCbcLloOsR6qn0OYi5hEn-5-9YwADqOY846gl5Zk564,12
+vcf_creator-1.0.5.dist-info/RECORD,,
