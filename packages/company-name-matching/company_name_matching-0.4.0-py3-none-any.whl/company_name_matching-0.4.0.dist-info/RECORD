@@ -1,0 +1,11 @@
+company_name_matching/__init__.py,sha256=YhK7DG5d5x02a7C18ORSxD7DXRcEPMGAvlnS49JP_WA,67
+company_name_matching/abbreviations.json,sha256=Xbz1SDhdZbRVYdKPD_eTB5zWGUObyV45Gx5YkUmOPyw,2313
+company_name_matching/elf_company.csv,sha256=4GraCfJyAnscYjM56gfBK1bjMuid2yKJsxJUOx0stCM,199759
+company_name_matching/matching_function.py,sha256=MS8xJfURoNw3m3LRxRaOqFQHSBD6xMCbFRkrrnr1vP4,21290
+company_name_matching/data/abbreviations.json,sha256=Xbz1SDhdZbRVYdKPD_eTB5zWGUObyV45Gx5YkUmOPyw,2313
+company_name_matching/data/elf_company.csv,sha256=4GraCfJyAnscYjM56gfBK1bjMuid2yKJsxJUOx0stCM,199759
+company_name_matching-0.4.0.dist-info/LICENSE,sha256=xZf2nwjVCWzKqcyHfFi-BUIAbMdnA1d-0ajtRjGhmgw,1067
+company_name_matching-0.4.0.dist-info/METADATA,sha256=gVZtQ6YZbpFDvuC-mFTVvJKPe3ivUa8nTxYjin_LgcY,697
+company_name_matching-0.4.0.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+company_name_matching-0.4.0.dist-info/top_level.txt,sha256=DfsaYfYlgP9UWzUi9qUTYdzVy5ixA2d_dblhQitLrbw,22
+company_name_matching-0.4.0.dist-info/RECORD,,
