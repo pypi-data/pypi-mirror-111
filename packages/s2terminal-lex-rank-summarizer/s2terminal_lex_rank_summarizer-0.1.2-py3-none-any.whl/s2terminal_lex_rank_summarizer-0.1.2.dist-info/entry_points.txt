@@ -1,0 +1,3 @@
+[console_scripts]
+lex-rank-summarizer=s2terminal_lex_rank_summarizer.main:main
+
