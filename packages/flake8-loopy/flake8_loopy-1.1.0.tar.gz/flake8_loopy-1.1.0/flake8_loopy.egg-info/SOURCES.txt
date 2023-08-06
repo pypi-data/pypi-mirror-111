@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+flake8_loopy/__init__.py
+flake8_loopy/defs.py
+flake8_loopy/error_codes.py
+flake8_loopy/visitor.py
+flake8_loopy.egg-info/PKG-INFO
+flake8_loopy.egg-info/SOURCES.txt
+flake8_loopy.egg-info/dependency_links.txt
+flake8_loopy.egg-info/entry_points.txt
+flake8_loopy.egg-info/requires.txt
+flake8_loopy.egg-info/top_level.txt
