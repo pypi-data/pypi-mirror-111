@@ -1,0 +1,3 @@
+[console_scripts]
+tourboxneo = tourboxneo.device:main
+
