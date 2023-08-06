@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: antlerinator
+Version: 1!1.0.0
+Summary: ANTLeRinator
+Home-page: https://github.com/renatahodovan/antlerinator
+Author: Renata Hodovan, Akos Kiss
+Author-email: hodovan@inf.u-szeged.hu, akiss@inf.u-szeged.hu
+License: BSD
+Platform: any
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Code Generators
+Requires-Python: !=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7
+Description-Content-Type: text/x-rst
+License-File: LICENSE.rst
+Requires-Dist: inators
+Requires-Dist: setuptools
+
+============
+ANTLeRinator
+============
+
+.. image:: https://img.shields.io/pypi/v/antlerinator?logo=python&logoColor=white
+   :target: https://pypi.org/project/antlerinator/
+.. image:: https://img.shields.io/pypi/l/antlerinator?logo=open-source-initiative&logoColor=white
+   :target: https://pypi.org/project/antlerinator/
+.. image:: https://img.shields.io/github/workflow/status/renatahodovan/antlerinator/main/master?logo=github&logoColor=white
+   :target: https://github.com/renatahodovan/antlerinator/actions
+
+.. start included documentation
+
+*ANTLeRinator* is a Python utility package to help keeping components of
+ANTLR v4 in sync.
+
+
+Requirements
+============
+
+* Python_ ~= 2.7 or >= 3.5
+* pip_
+* Java_ SE >= 7 JRE or JDK (the latter is optional)
+
+.. _Python: https://www.python.org
+.. _pip: https://pip.pypa.io
+.. _Java: https://www.oracle.com/java/
+
+
+Install
+=======
+
+The quick way::
+
+    pip install antlerinator
+
+Alternatively, by cloning the project and performing a local install::
+
+    pip install .
+
+
+Usage
+=====
+
+A common form of *ANTLeRinator*'s usage:
+
+.. code-block:: python
+
+    import antlerinator
+    import argparse
+    import subprocess
+
+    assert antlerinator.__antlr_version__ is not None
+
+    parser = argparse.ArgumentParser()
+    antlerinator.add_antlr_argument(parser)
+    args = parser.parse_args()
+
+    antlerinator.process_antlr_argument(args)
+
+    subprocess.call(['java', '-jar', args.antlr])
+
+Should there be need for downloading the ANTLR v4 tool jar manually, a helper
+script is available::
+
+    antlerinator-download
+
+.. end included documentation
+
+
+Copyright and Licensing
+=======================
+
+Licensed under the BSD 3-Clause License_.
+
+.. _License: LICENSE.rst
+
+
