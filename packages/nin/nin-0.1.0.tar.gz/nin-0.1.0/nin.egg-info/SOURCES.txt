@@ -1,0 +1,15 @@
+LICENSE
+README.rst
+setup.cfg
+setup.py
+nin/__init__.py
+nin/cli.py
+nin/cli_dns.py
+nin/nin.py
+nin.egg-info/PKG-INFO
+nin.egg-info/SOURCES.txt
+nin.egg-info/dependency_links.txt
+nin.egg-info/entry_points.txt
+nin.egg-info/not-zip-safe
+nin.egg-info/requires.txt
+nin.egg-info/top_level.txt
