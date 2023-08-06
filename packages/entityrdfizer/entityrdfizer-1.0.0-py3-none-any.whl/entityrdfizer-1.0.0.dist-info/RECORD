@@ -1,0 +1,13 @@
+entityrdfizer/ABoxGeneration.py,sha256=4NC8UQLnF4uTMI3rbJl7MqLRVDUpv_i2vVaBOPUTIcA,1593
+entityrdfizer/ABoxTemplateCSVFileToRDF.py,sha256=rf1Zk6DuUUGD0V8OHAi9JPW9SPFIND6PAnJX29RHylE,12638
+entityrdfizer/ABoxTemplateCSVFilesToRDF.py,sha256=iYB6qdSkDd3c4F7ooawYL0tQi-ph-pSkY31Zla0twg0,1618
+entityrdfizer/PropertyReader.py,sha256=7y20b2Fc7tCisKvj-6wM_fxpleRw997R2x3moV-lWxU,2539
+entityrdfizer/__init__.py,sha256=auwBT8OdP1CbJG9j56mFknQIMLipqyGtXN_eA24dJag,157
+entityrdfizer/driver.py,sha256=ByOT_uDxIgLNO1r3ZfZpj33EIoLyTedqduqF4UFrrJE,835
+entityrdfizer/conf/EntityRDFizer.properties,sha256=S-fow1bp_TwqQavkBp0JC8S_vU9L_3cwNvgTqPsjUHI,274
+entityrdfizer-1.0.0.dist-info/LICENSE,sha256=55MkzCxLwx76tgHMKPgfTDJe47_USom_l7D670XKPow,1168
+entityrdfizer-1.0.0.dist-info/METADATA,sha256=Hlp7vKenUAmPvScnvE-SXr-RCQHJBChGwK9-TRN4fa0,2952
+entityrdfizer-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+entityrdfizer-1.0.0.dist-info/entry_points.txt,sha256=UhW6SoNHxiDn9fBFxzfFCs_ILPfcx7mg_DXLxd56jYM,55
+entityrdfizer-1.0.0.dist-info/top_level.txt,sha256=MRT8VJpIEtfhNlOTjiQ5WS1gWa7H-pttAWWfIQnPnHI,14
+entityrdfizer-1.0.0.dist-info/RECORD,,
