@@ -1,0 +1,10 @@
+es-automation/MailSender.py,sha256=-BlO98EmEd77MXC-vDcWe-gkwX3k8EHA4hxUU7fe0GY,627
+es-automation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+es-automation/config_examination.py,sha256=CZEEIDxKBzN6BAQCeI6LQwJmljUWPFbrRGbWDgH6f34,1667
+es-automation/es_setup_efk.py,sha256=h6nuzZkoC-ekNe19wqwQ8KLu43d67o2oFy4g3rlFeo0,4794
+es-automation/es_setup_user.py,sha256=bFKo9ahaMqN8EU5uyeBGYatDlYH4YUnd6s-Ce0Ck7oY,4236
+es-automation/main_set_conns.py,sha256=55QFQ6o3kvYEYMopybfJ5CudJBrO1s9_qQ3ifpzfRNg,11858
+ESautomation-0.0.1.dist-info/METADATA,sha256=iEGFpvNp68GLnPG2195JTuUI5leeG3x_saNPvU9bwCg,205
+ESautomation-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ESautomation-0.0.1.dist-info/top_level.txt,sha256=f9-15IMVGyu7W5PUfHGRGDicsB03bfIawpMrACEoL7g,14
+ESautomation-0.0.1.dist-info/RECORD,,
