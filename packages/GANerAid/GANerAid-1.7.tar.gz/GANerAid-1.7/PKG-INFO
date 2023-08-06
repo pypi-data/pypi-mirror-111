@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: GANerAid
+Version: 1.7
+Summary: GAN library to create and validate synthetic tabular data
+Home-page: https://github.com/TeamGenerAid/GANerAid
+Author: TeamGenerAid
+Author-email: generaid.thu@gmail.com
+License: MIT License
+Description: GANerAid is a library meant to create synthetic clinical trials in order to anonymise and augment patient data in the field of medical science. The generated data are of the same statistical properties like as the original input data to reproduce the patient data in the best possible way without copying it.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
