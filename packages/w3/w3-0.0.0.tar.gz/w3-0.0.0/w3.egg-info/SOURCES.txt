@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+w3/__init__.py
+w3.egg-info/PKG-INFO
+w3.egg-info/SOURCES.txt
+w3.egg-info/dependency_links.txt
+w3.egg-info/top_level.txt
