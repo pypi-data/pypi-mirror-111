@@ -1,0 +1,12 @@
+sugarcoat/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sugarcoat/defaults.py,sha256=BqykXA93JzCCRqU8b3hFxVUvaXQbJe4A1NJsZlK6NHU,42
+sugarcoat/endpoints.py,sha256=LF9k80aFy2Fs6fh2uKSKV4WTv6obH9KDZSbdpB9RNbQ,2277
+sugarcoat/request.py,sha256=v8WH4e7u40whVM69LrsA4fu5gQ5y0qzsbcTm8vcpKfc,663
+sugarcoat/sugarcoat.py,sha256=_4BfxbEl7nCokVrp7eBEUWcIFG8EwMFn_7egqguzuIQ,1920
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/support.py,sha256=rKG0hN3WBeLiwy_Zd-T1FpWxFTzE80qI8r1kNCS7bY8,146
+tests/unit.py,sha256=wTJFIq2n19k39wviDheCXq0ByeQ4gc8tvCJa4_DuGKw,2722
+sugarcoat_sdk-1.6.1.dist-info/METADATA,sha256=3uogbjSe8g41mX3Eh_AJoSnvldor82bBY-8CGqkJcLk,4616
+sugarcoat_sdk-1.6.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sugarcoat_sdk-1.6.1.dist-info/top_level.txt,sha256=_FDHx2Xyo46efl6EJ89SMUyUoz8_qo6ADVP-uCrX3Qc,16
+sugarcoat_sdk-1.6.1.dist-info/RECORD,,
