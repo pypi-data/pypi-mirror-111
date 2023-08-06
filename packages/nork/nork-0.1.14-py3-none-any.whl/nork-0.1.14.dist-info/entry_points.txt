@@ -1,0 +1,3 @@
+[console_scripts]
+nork=nork.cli:app
+
