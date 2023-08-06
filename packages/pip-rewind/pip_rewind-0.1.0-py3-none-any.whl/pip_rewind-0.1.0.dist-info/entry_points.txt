@@ -1,0 +1,3 @@
+[console_scripts]
+pip-rewind=pip_rewind.cli:main
+
