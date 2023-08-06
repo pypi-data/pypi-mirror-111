@@ -1,0 +1,3 @@
+[console_scripts]
+yucebio_notifier = yucebio_notifier.commands:cli
+

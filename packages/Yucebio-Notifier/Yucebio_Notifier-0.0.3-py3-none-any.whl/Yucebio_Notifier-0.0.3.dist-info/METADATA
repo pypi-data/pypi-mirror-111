@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: Yucebio-Notifier
+Version: 0.0.3
+Summary: 通用钉钉消息推送工具
+Home-page: UNKNOWN
+Author: huangqingjun
+Author-email: huangqingjun@yucebio.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: icecream
+Requires-Dist: alibabacloud-dingtalk
+Requires-Dist: Yucebio-Config
+
+# 通用消息推送模块
+
+- 支持发送给企业员工钉钉消息 和 钉钉群消息
+- ~~支持发送邮件~~
+
+# 安装
+
+```bash
+# 初始化环境，如通过conda初始化python>=3.8的环境
+conda create -n python3.8 python=3.8
+
+# 安装依赖包
+pip install click icecream alibabacloud-dingtalk
+# 安装
+pip install -i https://test.pypi.org/simple/ Yucebio-Notifier
+```
+
+# Usage
+
+```python
+from yucebio_notifier import Notifier
+
+# dingding, dingding-rebot
+notifier = Notifier(backend='dingding')
+
+notifier.send_message(
+    user,   # 接受人员
+    title,  # 消息主题、标题 或 简短消息
+    markdown,   # markdown格式的复杂格式消息。可以通过 yucebio_notifier.utils.markdown.Markdown 创建
+)
+```
+
+
+# 参考内容
+
+## 钉钉消息
+
+- [Refer]](https://developers.dingtalk.com/document/app/server-api-overview
+
+### 文本消息
+
+```json
+{
+    "msgtype": "text",
+    "content": "一句话消息"
+
+}
+```
+### markdown消息
+```json
+{
+    "msgtype": "markdown",
+    "markdown": {
+        "title": "",
+        "text": "str(Markdown(...))"
+    }
+}
+```
+
+### 配置 `yucebio_notifier config-dingding`
+- corpid        钉钉开发者平台分配给企业的ID
+- corpsecret    钉钉开发者平台分配给企业的Seccrect
+- agent_id      发送消息时使用的微应用的AgentID
+
+
+
