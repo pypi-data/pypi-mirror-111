@@ -1,0 +1,3 @@
+[console_scripts]
+dasladen = dasladen.base:main
+
