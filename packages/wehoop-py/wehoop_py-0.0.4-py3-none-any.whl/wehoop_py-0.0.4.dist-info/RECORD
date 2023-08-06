@@ -1,0 +1,11 @@
+wehoop/__init__.py,sha256=A5GOdfzYonK_mcSmi-mQFlKEpu9Z1w-XXMKda-z5QGw,50
+wehoop/config.py,sha256=YNUE1gbPTaRQt4Eh3ZxOdSktSr62OUpPU1t5D4UL7eI,1196
+wehoop/dl_utils.py,sha256=7xU8m7tf2xRqUYst1l2_6J-90qMwhIcPv_rRak3zH4Q,855
+wehoop/errors.py,sha256=TBwhKC0HxOnMSxNh2k0gCtW0mtGh6ULpUEhG0NOWH9U,91
+wehoop/wbb/__init__.py,sha256=55ezcgva8sYnSTgCEaIGCQPu9ytq-nocN10F8s3vQus,4779
+wehoop/wnba/__init__.py,sha256=WdKp9HXl3eAy08GRI_tvZQYpz7aSOXfwqLXezLASUmw,4673
+wehoop_py-0.0.4.dist-info/LICENSE,sha256=DW3_2yO1Ea0P9o4GqWhOdA7vkiOetmEOsblSON5cVFo,1069
+wehoop_py-0.0.4.dist-info/METADATA,sha256=KqDxpzkaIR3wpju_Vg2LPlC9Q2XaoRrpiJeP4Do7neg,3676
+wehoop_py-0.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+wehoop_py-0.0.4.dist-info/top_level.txt,sha256=VdVuHtU8LHPiOpesMzHaaiPkSJ9rW_O3qOA5bAg-mLs,7
+wehoop_py-0.0.4.dist-info/RECORD,,
