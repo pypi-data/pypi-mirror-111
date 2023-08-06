@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: secyan-gen
+Version: 0.0.1
+Summary: Code parser with secyan_python
+Home-page: UNKNOWN
+Author: Qiwei Li
+Author-email: sirily1997@gmail.com
+License: UNKNOWN
+Platform: any
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools
+Requires-Dist: wheel
+
+# SECYAN Codegen
+
+[![Build and test](https://github.com/sirily11/SECYAN-GEN/actions/workflows/test.yml/badge.svg)](https://github.com/sirily11/SECYAN-GEN/actions/workflows/test.yml)
+
+A code generation project for SECYAN Repo. To run the code, see example/main.py for example.
+
+## Requirements
+- secyan_python
+
+
+
