@@ -1,0 +1,10 @@
+setup.py
+MyPhotos/__init__.py
+MyPhotos.egg-info/PKG-INFO
+MyPhotos.egg-info/SOURCES.txt
+MyPhotos.egg-info/dependency_links.txt
+MyPhotos.egg-info/requires.txt
+MyPhotos.egg-info/top_level.txt
+MyPhotos/data/fbasic.py
+MyPhotos/data/hash.py
+MyPhotos/data/xls.py
