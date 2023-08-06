@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: p-yt-erm
+Version: 0.6b2
+Summary: Easy to use youtube music streamer command line tool written in python3
+Home-page: https://gitlab.com/mocchapi/pyterminal/
+Author: Anne & Lynice
+Maintainer: Alex Technically
+Maintainer-email: alex@2a03.party
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Multimedia :: Sound/Audio :: Players
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-vlc
+Requires-Dist: pafy
+Requires-Dist: pypresence
+Requires-Dist: feedparser
+Requires-Dist: youtube-search-python
+Requires-Dist: youtube-dl
+Requires-Dist: ffpyplayer
+
+
+# pYTerm 0.5
+
+pYTerm is a simple command line/python lib youtube music player using python 3. This is still currently under heavy development and
+features are subject to being changed and things being added. Bugs *will* happen.
+---
+
+## Requirements
+
+* All libraries from `requirements.txt` if using the source code instead of the pip package.
+* Patience
+
+While not required, having VLC Media Player installed is *__highly__* recommended. The new vlc-less audio backend is experimental and unstable, so vlc will be preferred and used automatically if installed. 
+
+---
+
+More details & api documentation over at [the docs](https://pyterm.readthedocs.io/en/latest/index.html)
+
