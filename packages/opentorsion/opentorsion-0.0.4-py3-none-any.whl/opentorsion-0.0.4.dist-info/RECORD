@@ -1,0 +1,15 @@
+opentorsion/__init__.py,sha256=AtYlaV5GHYDyFdxBlyaA63ytSG7LWfZ1b2wXxmNEJxc,253
+opentorsion/assembly.py,sha256=LVAw2jkvxug-sT64iBef3CQDnnQTQVtCdkILauZ_7Ks,7748
+opentorsion/disk_element.py,sha256=JjIUcSuVzzBdFkI5yY4KuZaTYnSiTO_w5bbtAofqtos,1264
+opentorsion/errors.py,sha256=lYSyFTnCora4ShTDvqeMYGWQxBSgZMtdnTC1UWbhY3k,192
+opentorsion/gear_element.py,sha256=3mlp-L6ONLMn7O15eQtDexuGJQYD_U4e5fJjnEXD5aI,1620
+opentorsion/main.py,sha256=i1oGYjN680P5_7LjlDGebTc1pjPEV2ElZ1L5g27dxlY,422
+opentorsion/plots.py,sha256=N8EmddvziaqDlkISPSZRiZUigeAwNS4Wj4DfTC-DeqI,9971
+opentorsion/shaft_element.py,sha256=cSZjlYt8i-cNaZrvLcImeT1vuYccwLfoPzBhHpyXzMQ,2484
+opentorsion/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+opentorsion/tests/tests.py,sha256=WGUjaU8WiJFvSYYeEAjMIe0-S6mZtzZ6rFwNsbEtbSc,5751
+opentorsion-0.0.4.dist-info/LICENSE,sha256=i7gCZM9tjXG_uM_g6Mnd72_nhRHuJIMyfamAGTxqKCc,1082
+opentorsion-0.0.4.dist-info/METADATA,sha256=8jfRD2-98SPdRXUJGNM1xANABbZVaqD_NyG3pM29ofQ,1504
+opentorsion-0.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+opentorsion-0.0.4.dist-info/top_level.txt,sha256=t3gcOmY19w2rUIVkiQw6ygTu_qz7jTbXCs3o2iPVhn0,12
+opentorsion-0.0.4.dist-info/RECORD,,
