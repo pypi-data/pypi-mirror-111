@@ -1,0 +1,6 @@
+README.md
+setup.py
+src/Olles_Little_Data_and_Model_Pack.egg-info/PKG-INFO
+src/Olles_Little_Data_and_Model_Pack.egg-info/SOURCES.txt
+src/Olles_Little_Data_and_Model_Pack.egg-info/dependency_links.txt
+src/Olles_Little_Data_and_Model_Pack.egg-info/top_level.txt
