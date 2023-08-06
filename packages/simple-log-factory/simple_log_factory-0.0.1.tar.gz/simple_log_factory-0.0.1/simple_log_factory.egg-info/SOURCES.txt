@@ -1,0 +1,7 @@
+setup.py
+simple_log_factory/__init__.py
+simple_log_factory/log_factory.py
+simple_log_factory.egg-info/PKG-INFO
+simple_log_factory.egg-info/SOURCES.txt
+simple_log_factory.egg-info/dependency_links.txt
+simple_log_factory.egg-info/top_level.txt
