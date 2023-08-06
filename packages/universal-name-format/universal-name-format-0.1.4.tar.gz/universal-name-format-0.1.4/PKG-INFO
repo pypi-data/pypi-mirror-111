@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: universal-name-format
+Version: 0.1.4
+Summary: UNF: Universal Name Format
+Home-page: https://github.com/k44ng/universal-name-format
+Author: k4ng
+Author-email: yh@k4ng.co
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS
+
+UNKNOWN
+

@@ -1,0 +1,14 @@
+AUTHORS
+LICENSE
+README.md
+setup.py
+universal_name_format/__init__.py
+universal_name_format.egg-info/PKG-INFO
+universal_name_format.egg-info/SOURCES.txt
+universal_name_format.egg-info/dependency_links.txt
+universal_name_format.egg-info/top_level.txt
+universal_name_format/models/__init__.py
+universal_name_format/models/name.py
+universal_name_format/models/orders.py
+universal_name_format/utils/__init__.py
+universal_name_format/utils/converter.py
