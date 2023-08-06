@@ -1,0 +1,18 @@
+healpy
+numba
+toml
+astropy
+
+[:python_version < "3.8"]
+importlib_metadata
+
+[docs]
+sphinx-astropy
+nbsphinx
+sphinx-math-dollar
+pandoc
+ipykernel
+
+[test]
+pytest-astropy
+mpi4py
