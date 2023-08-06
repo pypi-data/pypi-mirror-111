@@ -1,0 +1,11 @@
+wikisearch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wikisearch/article.py,sha256=B1SZXyF_pFU0-w-9d4qUnW1lmA1HwhqktyPi3OA8OHw,335
+wikisearch/wikisearcher.py,sha256=d957cM8QyBl7YA_GPuvlik6-jeRnAJeRpH3qSgT_yNg,3976
+wikisearch/wikiutil/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wikisearch/wikiutil/report.py,sha256=bs_QhXu0oUDjCqCihEthRQGebXkRG7BqvzgHiUDM5Co,502
+wikisearch/wikiutil/wikiutil.py,sha256=Dag9acgWdb1wl691alyT6kuzJHPBrztZve_uyreTTv4,2689
+wikipedia_searcher-0.0.1.dist-info/LICENSE.txt,sha256=6e-kEdZUm15W_eJGzDdg7qrdAuR4jW1x4SJdtNQ2FUk,1062
+wikipedia_searcher-0.0.1.dist-info/METADATA,sha256=QT0kyzAiP_yq15oDoVJO0y-gtQLTNxjRVtLuugQTqjo,527
+wikipedia_searcher-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+wikipedia_searcher-0.0.1.dist-info/top_level.txt,sha256=K3rviPrM26nGDRBMuof0kVweuqLV3RFczOGIwhanKEY,11
+wikipedia_searcher-0.0.1.dist-info/RECORD,,
