@@ -1,0 +1,3 @@
+[console_scripts]
+lazysequence=lazysequence.__main__:main
+
