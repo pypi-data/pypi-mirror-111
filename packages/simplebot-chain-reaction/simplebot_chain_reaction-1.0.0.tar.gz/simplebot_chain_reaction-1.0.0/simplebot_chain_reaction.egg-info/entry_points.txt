@@ -1,0 +1,3 @@
+[simplebot.plugins]
+simplebot_chain_reaction = simplebot_chain_reaction
+
