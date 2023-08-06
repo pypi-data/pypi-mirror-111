@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pyquack
+Version: 0.2.1
+Summary: Simple Python sync/async duckduckgo API wrapper.
+Home-page: https://anand2312.tech/pyquack
+License: MIT
+Author: anand2312
+Author-email: anandkrishna2312@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: async
+Requires-Dist: aiohttp (>=3.7.4,<4.0.0); extra == "async"
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Project-URL: Documentation, https://anand2312.tech/pyquack
+Project-URL: Repository, https://github.com/anand2312/pyquack
