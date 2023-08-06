@@ -1,0 +1,15 @@
+
+[client]
+
+[server]
+pigpio==1.78
+
+[tests]
+build
+mypy==0.812
+pigpio==1.78
+pycodestyle==2.7.0
+pytest==6.2.4
+pytest-cov==2.11.1
+pytest-xdist==2.2.1
+twine
