@@ -1,0 +1,6 @@
+[egg_info.writers]
+openide.yaml = openide:setup
+
+[lookup.default]
+MainLookup = openide.lookups.main_lookup:MainLookup
+

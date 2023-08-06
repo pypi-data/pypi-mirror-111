@@ -1,0 +1,13 @@
+PySide2
+PyYaml
+lookups
+observable
+qtpy
+
+[dev]
+check-manifest
+flake8
+mypy
+pytest
+pytest-cov
+pytest-html

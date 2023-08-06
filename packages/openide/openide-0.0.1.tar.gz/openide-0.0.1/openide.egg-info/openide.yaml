@@ -1,0 +1,5 @@
+services:
+  openide.lookups.global_context:DefaultGlobalContext:
+    service: openide.lookups.global_context:GlobalContext
+  openide.windows.main_window:MainWindow:
+    service: openide.windows.window_manager:WindowManager
