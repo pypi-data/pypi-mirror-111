@@ -1,0 +1,6 @@
+jalalicrontab/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jalalicrontab/schedule.py,sha256=tRCiTUaQ4I28hR1c-bq7O6f401IZZ6q-y-duKhykDbs,4115
+celery_jalalicrontab-1.0.0.dist-info/METADATA,sha256=FXxrnmlb2yurZvUfFBB7bHewDTjXLyaAq5L3duBCg_s,3760
+celery_jalalicrontab-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+celery_jalalicrontab-1.0.0.dist-info/top_level.txt,sha256=SzSIqOtASAGxh5HX0X6iTTqHu4k463rNQoBfclCNCtM,14
+celery_jalalicrontab-1.0.0.dist-info/RECORD,,
