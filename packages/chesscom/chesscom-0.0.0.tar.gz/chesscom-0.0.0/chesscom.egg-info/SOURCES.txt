@@ -1,0 +1,8 @@
+README.md
+setup.py
+chesscom/__init__.py
+chesscom.egg-info/PKG-INFO
+chesscom.egg-info/SOURCES.txt
+chesscom.egg-info/dependency_links.txt
+chesscom.egg-info/requires.txt
+chesscom.egg-info/top_level.txt
