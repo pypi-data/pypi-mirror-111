@@ -1,0 +1,9 @@
+bag_cross_validate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bag_cross_validate/bag_cross_validate.py,sha256=LkyAF_0gtWkEDdaWU87JKjOSNLtWan0YYHOygDW8NMw,30966
+bag_cross_validate/bag_cross_validate_example.py,sha256=_-qFCbsHzBQSf9OXhqu9ygBe391KBAOtc3oCJUMlToU,4187
+bag_cross_validate/bag_cross_validate_test.py,sha256=PTUxqewn_dUiRbnqTBevK7c-DTPs7Jx5XHIHuAgQFYY,16917
+bag_cross_validate-0.0.1.dist-info/LICENSE,sha256=veTcZzDsoZL4SJ6l-1shXvHYRruD11JS4E8AP4DtTeE,1088
+bag_cross_validate-0.0.1.dist-info/METADATA,sha256=PUwSJPLIBIdx-6SPq6XSLz7ZaJ4kIHO_VTZzOaqPErg,6298
+bag_cross_validate-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+bag_cross_validate-0.0.1.dist-info/top_level.txt,sha256=DdOfKuAxBoAjjm3GWFf4UVzEuPD5-Opa6dXzFfdAaDM,19
+bag_cross_validate-0.0.1.dist-info/RECORD,,
