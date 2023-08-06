@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/july/__init__.py
+src/july/colormaps.py
+src/july/helpers.py
+src/july/plot.py
+src/july/rcmod.py
+src/july/utils.py
+src/july.egg-info/PKG-INFO
+src/july.egg-info/SOURCES.txt
+src/july.egg-info/dependency_links.txt
+src/july.egg-info/requires.txt
+src/july.egg-info/top_level.txt
