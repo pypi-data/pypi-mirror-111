@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+example-cfg.ini
+linkify.service
+pyproject.toml
+setup.cfg
+src/NgrokLinkify/__init__.py
+src/NgrokLinkify/__main__.py
+src/NgrokLinkify/linkify.py
+src/NgrokLinkify.egg-info/PKG-INFO
+src/NgrokLinkify.egg-info/SOURCES.txt
+src/NgrokLinkify.egg-info/dependency_links.txt
+src/NgrokLinkify.egg-info/entry_points.txt
+src/NgrokLinkify.egg-info/top_level.txt

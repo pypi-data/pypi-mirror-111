@@ -1,0 +1,3 @@
+[console_scripts]
+linkify = NgrokLinkify.linkify:main
+

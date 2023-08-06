@@ -1,0 +1,13 @@
+[Unit]
+Description=Telegram bot to return URLs
+After=ngrok.service
+PartOf=ngrok.service
+
+[Service]
+type=simple
+User=<user-name>
+ExecStart=/home/abhishek/miniconda3/bin/linkify --config /home/abhishek/linkify.ini
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
