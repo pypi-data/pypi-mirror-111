@@ -1,0 +1,15 @@
+dctap/.gitignore,sha256=cDyX0HLetWXGlPHkVHw7AQ5WaUz1ETIXvERHxWyY77Y,33
+dctap/__init__.py,sha256=dRe9O5Ugt9BDwgXdgQ6X13lFtHxNGjrLYQyMkbewvPs,154
+dctap/cli.py,sha256=SUsFMBLN0SnuzgJjvNVeq8n-QmzhTs_l9TObwv6sPlY,2849
+dctap/config.py,sha256=Cx5r4-z8BLj1H_4SOwE4oZlJCIOxOz_mNJOPKJxSlVg,2820
+dctap/csvreader.py,sha256=fUAzlrPG8jqW-d_V1b4f0lyWVQGqZw3Dt8pRH3bY9zg,10020
+dctap/exceptions.py,sha256=1UiuAEZlnXFzWocN2VbLGLNACSH412lDzdPk-SUDji8,196
+dctap/inspect.py,sha256=l3oLj9hMkC5W6haEvV5rSOAFRbAATeHH5g5Z1qbcVko,1950
+dctap/loggers.py,sha256=_oCpwegtdvt5dySg4ueDThcY0nnQ3LrZUDZjGDe6wMs,1822
+dctap/tapclasses.py,sha256=5o9VaUUlM8bZK1sPPKdp1FnduD-_XJpMK7rM76OHvNk,8771
+dctap/utils.py,sha256=C7ZDIt1jw_6ZcYKvaB7OXkwGCgcwRoEU81Q-LZEV4z4,1705
+dctap-0.2.dist-info/entry_points.txt,sha256=4NN81BijGdYnPE9clVqDoReV2P7NI9D2ztCyJ3vBvSc,39
+dctap-0.2.dist-info/LICENSE,sha256=GBaak9DfD3weHn1YZ02xUsfjeyu8YqAs3g_Kh6nZ73o,1061
+dctap-0.2.dist-info/WHEEL,sha256=o-Q2E8s7BKkCJ1EC2uQdaymZVVu2aUt1e8uTTFpzHVs,81
+dctap-0.2.dist-info/METADATA,sha256=oNHkDUzaEFlHUXaIVGvMZJ0tawXxfhRJ4PHT5fWFp7c,1416
+dctap-0.2.dist-info/RECORD,,
