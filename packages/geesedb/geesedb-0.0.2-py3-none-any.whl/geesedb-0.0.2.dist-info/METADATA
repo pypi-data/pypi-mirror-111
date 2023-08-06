@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: geesedb
+Version: 0.0.2
+Summary: Graph Engine for Exploration and Search over Evolving DataBases
+Home-page: https://github.com/informagi/GeeseDB
+Author: Chris Kamphuis
+Author-email: chris@cs.ru.nl
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: duckdb
+Requires-Dist: numpy
+Requires-Dist: pandas
+
+UNKNOWN
+
+
