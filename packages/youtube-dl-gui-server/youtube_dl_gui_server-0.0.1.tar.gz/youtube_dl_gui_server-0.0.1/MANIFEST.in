@@ -1,0 +1,3 @@
+include requirements.txt
+recursive-include youtube_dl_gui_server/static *
+recursive-include youtube_dl_gui_server/templates *

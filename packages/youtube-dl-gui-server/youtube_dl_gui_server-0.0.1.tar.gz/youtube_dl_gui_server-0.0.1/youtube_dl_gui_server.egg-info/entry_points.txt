@@ -1,0 +1,4 @@
+
+		[console_scripts]
+		youtube-dl-gui-server=youtube_dl_gui_server.main:main
+	
