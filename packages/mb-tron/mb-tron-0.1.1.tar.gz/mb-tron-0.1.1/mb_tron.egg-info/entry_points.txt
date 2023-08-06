@@ -1,0 +1,3 @@
+[console_scripts]
+mb-tron = mb_tron.cli:cli
+
