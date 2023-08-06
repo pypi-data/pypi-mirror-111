@@ -1,0 +1,11 @@
+dfa/__init__.py,sha256=c0HU2R1bz6WuuJYIpcBYcbl6uxWF-THSTMiqs2hYs3k,80
+dfa/dfa.py,sha256=BwKJtTfW3C3eFwublOfZGtwtQm7yswnx4XCOuTskees,3663
+dfa/draw.py,sha256=vxbJXUoz2R1ofAQ-tdGI6Q8Zv3ts48ejoTQD5uxhmw8,649
+dfa/test_dfa.py,sha256=-YPiOMyn0uWq_GDa5LkGXty9W6QHpKY97ROKdcpzzCg,1437
+dfa/test_draw.py,sha256=m136a6LsruwXNr3ziVG3po7DGTO3ys_4Lj5mUU4OtHE,340
+dfa/test_utils.py,sha256=3VJo85GsVQ3cFTpJk_TILNKMD5ZEJZtTxwla0VKeG3s,1619
+dfa/utils.py,sha256=5S_2Eg8O5TeROYqEvTLaalUh6OLtJgHH4DYjHg43JTM,1890
+dfa-2.2.1.dist-info/LICENSE,sha256=TsIcmtcb4ejYUV6d6hxHqCVHR1c-hWgWfv03ZBk9Xto,1082
+dfa-2.2.1.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+dfa-2.2.1.dist-info/METADATA,sha256=PAmk1UPQ29Wy_l89zIAloKZoxFy5Zsgdmqza8sop2cs,9449
+dfa-2.2.1.dist-info/RECORD,,
