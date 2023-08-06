@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+paramak_tfcoil_rectroundcorner/__init__.py
+paramak_tfcoil_rectroundcorner/core.py
+paramak_tfcoil_rectroundcorner/test_module.py
+paramak_tfcoil_rectroundcorner.egg-info/PKG-INFO
+paramak_tfcoil_rectroundcorner.egg-info/SOURCES.txt
+paramak_tfcoil_rectroundcorner.egg-info/dependency_links.txt
+paramak_tfcoil_rectroundcorner.egg-info/top_level.txt
