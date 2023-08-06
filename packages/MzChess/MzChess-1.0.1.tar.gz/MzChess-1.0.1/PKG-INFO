@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: MzChess
+Version: 1.0.1
+Summary: A Chess GUI using PyQt5
+Home-page: https://github.com/ReinhardM-dev/MzChess
+Author: Reinhard Maerz
+License: UNKNOWN
+Description: file: readme.rst
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Development Status :: 4 - Beta
+Classifier: Natural Language :: English
+Classifier: Topic :: Games/Entertainment :: Board Games
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
