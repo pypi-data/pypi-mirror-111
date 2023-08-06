@@ -1,0 +1,14 @@
+[build-system]
+requires = ["flit_core >=2,<4", "pillow"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "quote_maker"
+author = "Sheik S Shajeen Ahamed"
+author-email = "shajeenahmed@gmail.com"
+home-page = "https://github.com/shajeen/Quote-Maker"
+classifiers = [ "License :: OSI Approved :: MIT License",]
+description-file = "readme.md"
+
+[tool.flit.scripts]
+quote-maker = "quote_maker.main:main"
