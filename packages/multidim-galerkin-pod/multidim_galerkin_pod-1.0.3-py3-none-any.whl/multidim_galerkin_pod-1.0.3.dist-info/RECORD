@@ -1,0 +1,10 @@
+multidim_galerkin_pod/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+multidim_galerkin_pod/chaos_expansion_utils.py,sha256=-PRUofs4v-uZr1CboMUVuuc2FO_MTLUt4BKvDvXAq50,1258
+multidim_galerkin_pod/gen_pod_utils.py,sha256=p4CBVtrJFrBKLahZL2a-nemGPE2ccNC-HetSe5dOdFo,25029
+multidim_galerkin_pod/ldfnp_ext_cholmod.py,sha256=tShHYTSnVKQl9UxV4vgdkDzOe5uSuBRt3iog6nBsod8,8285
+multidim_galerkin_pod/mock_ext_cholmod.py,sha256=OefuGlOns4nvf5vim0fngh6ei3wyJp3Eb4PxBLQww7E,1218
+multidim_galerkin_pod/ten_sor_utils.py,sha256=TOUzdfkj6KguCyrPSnjCDkttknMkIEN9HYrBO9glSzA,846
+multidim_galerkin_pod-1.0.3.dist-info/METADATA,sha256=2zhi-WFpBpjnE20NDfzoD_HhxGlzwuC6fhbqjKgdMkA,708
+multidim_galerkin_pod-1.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+multidim_galerkin_pod-1.0.3.dist-info/top_level.txt,sha256=dIOhEz9jKlSqrkS7r-VRLv6wnihnfGh9ePUZJWk6ZOs,22
+multidim_galerkin_pod-1.0.3.dist-info/RECORD,,

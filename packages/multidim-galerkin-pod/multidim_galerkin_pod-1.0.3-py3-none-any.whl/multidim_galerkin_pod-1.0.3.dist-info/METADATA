@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: multidim-galerkin-pod
+Version: 1.0.3
+Summary: Helper/core functions for Galerkin POD in multiple dimensions.
+Home-page: https://github.com/highlando/spacetime_galerkin_pod
+Author: Jan Heiland
+Author-email: jnhlnd@gmail.com
+License: GPLv3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: sadptprj-riclyap-adi
+Requires-Dist: scikit-sparse
+
+Space-Time Galerkin POD
+---
+
+Repo of helper and core functions for space-time Galerkin POD reduction.
+
+
