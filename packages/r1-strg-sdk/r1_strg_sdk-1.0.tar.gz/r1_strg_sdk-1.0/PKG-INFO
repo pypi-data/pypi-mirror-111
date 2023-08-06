@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: r1_strg_sdk
+Version: 1.0
+Summary: ArvanCloud Storage SDK
+Home-page: https://alirezajalili.ir/
+Author: Alireza Jalili
+Author-email: AlirezaJalili@pm.me
+License: MIT
+Download-URL: https://github.com/alireza95jalili/r1_strg_sdk/archive/refs/tags/0.1.tar.gz
+Description: UNKNOWN
+Keywords: swift,arvancloud,storage,sdk
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
