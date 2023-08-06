@@ -1,0 +1,492 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>seiran package &#8212; Seiran 1.6.0 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pyramida.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+    <![endif]-->
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" aria-label="Index" href="genindex.html" />
+    <link rel="search" title="Search" aria-label="Search" href="search.html" />
+    <link rel="next" title="Seiran Quickstart" aria-label="Seiran Quickstart" href="quickstart.html" />
+    <link rel="prev" title="seiran" aria-label="seiran" href="modules.html" />
+  </head><body>
+  <p id="skippy"><a href="#main">Skip to main content</a></p>
+    <nav class="related" id="relbar-top">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Seiran 1.6.0 documentation</a> &#8594;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >seiran</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">seiran package</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="modules.html" title="seiran"
+                aria-label="previous: seiran"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="quickstart.html" title="Seiran Quickstart"
+                aria-label="next: Seiran Quickstart"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+      <main class="body" id="main">
+
+  <div class="section" id="seiran-package">
+<h1>seiran package<a class="headerlink" href="#seiran-package" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-seiran.ff_bkm_import">
+<span id="seiran-ff-bkm-import-module"></span><h2>seiran.ff_bkm_import module<a class="headerlink" href="#module-seiran.ff_bkm_import" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Import bookmarks from Firefox and derivatives: Pale Moon, IceCat,
+Basilisk, Nightly, etc. This is not extremely well-tested. Use at your
+own risk!</p>
+<dl class="py function">
+<dt id="seiran.ff_bkm_import.flattenJson">
+<code class="sig-prename descclassname"><span class="pre">seiran.ff_bkm_import.</span></code><code class="sig-name descname"><span class="pre">flattenJson</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">imported_json</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">list</span><a class="headerlink" href="#seiran.ff_bkm_import.flattenJson" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Flatten out the nested dictionary from a Firefox JSON import.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>imported_json</strong><span class="classifier">dict</span></dt><dd><p>The JSON input to flatten.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>list of dict</dt><dd><p>The JSON flatted out into a format usable by Seiran.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="seiran.ff_bkm_import.formList">
+<code class="sig-prename descclassname"><span class="pre">seiran.ff_bkm_import.</span></code><code class="sig-name descname"><span class="pre">formList</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bookmark_tup</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">list</span><a class="headerlink" href="#seiran.ff_bkm_import.formList" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a tuple of bookmark data into a format Seiran can use.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>bookmark_tup</strong><span class="classifier">tuple</span></dt><dd><p>Raw bookmark data from the imported database.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>list of tuple</dt><dd><p>The title, URL, and date for the bookmark.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="seiran.ff_bkm_import.importDatabase">
+<code class="sig-prename descclassname"><span class="pre">seiran.ff_bkm_import.</span></code><code class="sig-name descname"><span class="pre">importDatabase</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">list</span><a class="headerlink" href="#seiran.ff_bkm_import.importDatabase" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Import a database from a Firefox-type browser profile.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>list</dt><dd><p>The bookmark data converted to Seiran’s internal format.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="seiran.ff_bkm_import.import_ffjson">
+<code class="sig-prename descclassname"><span class="pre">seiran.ff_bkm_import.</span></code><code class="sig-name descname"><span class="pre">import_ffjson</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">list</span><a class="headerlink" href="#seiran.ff_bkm_import.import_ffjson" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Import JSON data from a Firefox-type bookmark backup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>json_path</strong><span class="classifier">str</span></dt><dd><p>Path to the JSON backup file.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>list of tuple</dt><dd><p>Processed bookmarks.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-seiran.onetab_bkm_import">
+<span id="seiran-onetab-bkm-import-module"></span><h2>seiran.onetab_bkm_import module<a class="headerlink" href="#module-seiran.onetab_bkm_import" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Import bookmarks from the OneTab addon.
+This is not extremely well-tested. Use at your own risk!</p>
+<dl class="py function">
+<dt id="seiran.onetab_bkm_import.importFromTxt">
+<code class="sig-prename descclassname"><span class="pre">seiran.onetab_bkm_import.</span></code><code class="sig-name descname"><span class="pre">importFromTxt</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">list</span><a class="headerlink" href="#seiran.onetab_bkm_import.importFromTxt" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Import bookmarks from a plain-text list of titles and URLs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>list of tuple</dt><dd><p>The bookmark data converted to Seiran’s internal format.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-seiran.seiran">
+<span id="seiran-seiran-module"></span><h2>seiran.seiran module<a class="headerlink" href="#module-seiran.seiran" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="seiran.seiran.addBKM">
+<code class="sig-prename descclassname"><span class="pre">seiran.seiran.</span></code><code class="sig-name descname"><span class="pre">addBKM</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">sqlite3.Cursor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conn</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">sqlite3.Connection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">folder</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#seiran.seiran.addBKM" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new bookmark to the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>c</strong><span class="classifier">sqlite3.Cursor</span></dt><dd><p>Cursor of the bookmarks database.</p>
+</dd>
+<dt><strong>conn</strong><span class="classifier">sqlite3.Connection</span></dt><dd><p>Connection to the bookmarks database.</p>
+</dd>
+<dt><strong>title</strong><span class="classifier">str</span></dt><dd><p>The name of the new bookmark.</p>
+</dd>
+<dt><strong>url</strong><span class="classifier">str</span></dt><dd><p>The new bookmark’s Uniform Resource Locator. Must be unique.</p>
+</dd>
+<dt><strong>folder</strong><span class="classifier">str</span></dt><dd><p>A category or folder for the new bookmark.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="seiran.seiran.cleanBKMs">
+<code class="sig-prename descclassname"><span class="pre">seiran.seiran.</span></code><code class="sig-name descname"><span class="pre">cleanBKMs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">sqlite3.Cursor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conn</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">sqlite3.Connection</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#seiran.seiran.cleanBKMs" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Perform basic housekeeping features on the bookmarks database.</p>
+<p>It checks for bookmarks without titles, then adds their U.R.L. as a
+title. It also lists bookmarks that have the same title, which may
+indicate duplicates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>c</strong><span class="classifier">sqlite3.Cursor</span></dt><dd><p>Cursor of the bookmarks database.</p>
+</dd>
+<dt><strong>conn</strong><span class="classifier">sqlite3.Connection</span></dt><dd><p>Connection to the bookmarks database.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="seiran.seiran.delBKM">
+<code class="sig-prename descclassname"><span class="pre">seiran.seiran.</span></code><code class="sig-name descname"><span class="pre">delBKM</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">sqlite3.Cursor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conn</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">sqlite3.Connection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#seiran.seiran.delBKM" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a bookmark from the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>c</strong><span class="classifier">sqlite3.Cursor</span></dt><dd><p>Cursor of the bookmarks database.</p>
+</dd>
+<dt><strong>conn</strong><span class="classifier">sqlite3.Connection</span></dt><dd><p>Connection to the bookmarks database.</p>
+</dd>
+<dt><strong>url</strong><span class="classifier">str</span></dt><dd><p>The U.R.L. of the bookmark to be deleted.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="seiran.seiran.editBKM">
+<code class="sig-prename descclassname"><span class="pre">seiran.seiran.</span></code><code class="sig-name descname"><span class="pre">editBKM</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">sqlite3.Cursor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conn</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">sqlite3.Connection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#seiran.seiran.editBKM" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Edit an existing bookmark.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>c</strong><span class="classifier">sqlite3.Cursor</span></dt><dd><p>Cursor of the bookmarks database.</p>
+</dd>
+<dt><strong>conn</strong><span class="classifier">sqlite3.Connection</span></dt><dd><p>Connection to the bookmarks database.</p>
+</dd>
+<dt><strong>url</strong><span class="classifier">str</span></dt><dd><p>The U.R.L. of the target bookmark.</p>
+</dd>
+<dt><strong>field</strong><span class="classifier">str</span></dt><dd><p>The field to be edited. Can be title or folder.</p>
+</dd>
+<dt><strong>new</strong><span class="classifier">str</span></dt><dd><p>The new value for the edited field.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="seiran.seiran.exportBookmarks">
+<code class="sig-prename descclassname"><span class="pre">seiran.seiran.</span></code><code class="sig-name descname"><span class="pre">exportBookmarks</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">sqlite3.Cursor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fformat</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#seiran.seiran.exportBookmarks" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Export bookmark database to a file in the user data directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>c</strong><span class="classifier">sqlite3.Cursor</span></dt><dd><p>Cursor of the bookmarks database.</p>
+</dd>
+<dt><strong>fformat</strong><span class="classifier">str</span></dt><dd><p>The target output format. Can be txt, html, or json.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="seiran.seiran.getFirefoxBookmarks">
+<code class="sig-prename descclassname"><span class="pre">seiran.seiran.</span></code><code class="sig-name descname"><span class="pre">getFirefoxBookmarks</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">sqlite3.Cursor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conn</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">sqlite3.Connection</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#seiran.seiran.getFirefoxBookmarks" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Import bookmarks from Mozilla-based browsers.</p>
+<p>This is an experimental feature and may cause errors. Please back up
+your bookmark database before use.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>c</strong><span class="classifier">sqlite3.Cursor</span></dt><dd><p>Cursor of the bookmarks database.</p>
+</dd>
+<dt><strong>conn</strong><span class="classifier">sqlite3.Connection</span></dt><dd><p>Connection to the bookmarks database.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="seiran.seiran.getJsonBookmarks">
+<code class="sig-prename descclassname"><span class="pre">seiran.seiran.</span></code><code class="sig-name descname"><span class="pre">getJsonBookmarks</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">sqlite3.Cursor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conn</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">sqlite3.Connection</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#seiran.seiran.getJsonBookmarks" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Import bookmarks from a Seiran JSON export.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>c</strong><span class="classifier">sqlite3.Cursor</span></dt><dd><p>Cursor of the bookmarks database.</p>
+</dd>
+<dt><strong>conn</strong><span class="classifier">sqlite3.Connection</span></dt><dd><p>Connection to the bookmarks database.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="seiran.seiran.getOneTabBookmarks">
+<code class="sig-prename descclassname"><span class="pre">seiran.seiran.</span></code><code class="sig-name descname"><span class="pre">getOneTabBookmarks</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">sqlite3.Cursor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conn</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">sqlite3.Connection</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#seiran.seiran.getOneTabBookmarks" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Import bookmarks from a OneTab text export.</p>
+<p>This is an experimental feature and may cause errors. Please back up
+your bookmark database before use.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>c</strong><span class="classifier">sqlite3.Cursor</span></dt><dd><p>Cursor of the bookmarks database.</p>
+</dd>
+<dt><strong>conn</strong><span class="classifier">sqlite3.Connection</span></dt><dd><p>Connection to the bookmarks database.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="seiran.seiran.getSeiranBookmarks">
+<code class="sig-prename descclassname"><span class="pre">seiran.seiran.</span></code><code class="sig-name descname"><span class="pre">getSeiranBookmarks</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">sqlite3.Cursor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conn</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">sqlite3.Connection</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#seiran.seiran.getSeiranBookmarks" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Import bookmarks from an existing Seiran database.</p>
+<p>This is an experimental feature and may cause errors. Please back up
+your bookmark database before use.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>c</strong><span class="classifier">sqlite3.Cursor</span></dt><dd><p>Cursor of the bookmarks database.</p>
+</dd>
+<dt><strong>conn</strong><span class="classifier">sqlite3.Connection</span></dt><dd><p>Connection to the bookmarks database.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="seiran.seiran.initBookmarks">
+<code class="sig-prename descclassname"><span class="pre">seiran.seiran.</span></code><code class="sig-name descname"><span class="pre">initBookmarks</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">sqlite3.Cursor</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#seiran.seiran.initBookmarks" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a bookmarks database already exists.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>c</strong><span class="classifier">sqlite3.Cursor</span></dt><dd><p>Cursor of the bookmarks database.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="seiran.seiran.installToConfig">
+<code class="sig-prename descclassname"><span class="pre">seiran.seiran.</span></code><code class="sig-name descname"><span class="pre">installToConfig</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">str</span><a class="headerlink" href="#seiran.seiran.installToConfig" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Seiran folder in the user’s data directory, and get the
+path to the bookmarks database within.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>str</dt><dd><p>The path to the active bookmarks.db file.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="seiran.seiran.listBKMs">
+<code class="sig-prename descclassname"><span class="pre">seiran.seiran.</span></code><code class="sig-name descname"><span class="pre">listBKMs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">sqlite3.Cursor</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#seiran.seiran.listBKMs" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>List all bookmarks in the database.</p>
+<p>Spaces are included at the ends of lines such that the output can be
+interpreted as Markdown.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>c</strong><span class="classifier">sqlite3.Cursor</span></dt><dd><p>Cursor of the bookmarks database.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="seiran.seiran.main">
+<code class="sig-prename descclassname"><span class="pre">seiran.seiran.</span></code><code class="sig-name descname"><span class="pre">main</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#seiran.seiran.main" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Set up the database and parse arguments.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="seiran.seiran.oneSearch">
+<code class="sig-prename descclassname"><span class="pre">seiran.seiran.</span></code><code class="sig-name descname"><span class="pre">oneSearch</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">sqlite3.Cursor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">search_term</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#seiran.seiran.oneSearch" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Search a single field in the bookmark database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>c</strong><span class="classifier">sqlite3.Cursor</span></dt><dd><p>Cursor of the bookmarks database.</p>
+</dd>
+<dt><strong>search_term</strong><span class="classifier">str</span></dt><dd><p>The phrase for which to search.</p>
+</dd>
+<dt><strong>column</strong><span class="classifier">str</span></dt><dd><p>The field to search. Can be title, url, folder, or date.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="seiran.seiran.searchAll">
+<code class="sig-prename descclassname"><span class="pre">seiran.seiran.</span></code><code class="sig-name descname"><span class="pre">searchAll</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">sqlite3.Cursor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">search_term</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#seiran.seiran.searchAll" title="Permalink to this definition" aria-label="Permalink to this definition">¶</a></dt>
+<dd><p>Search all fields in the bookmark database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>c</strong><span class="classifier">sqlite3.Cursor</span></dt><dd><p>Cursor of the bookmarks database.</p>
+</dd>
+<dt><strong>search_term</strong><span class="classifier">str</span></dt><dd><p>The phrase for which to search.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-seiran">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-seiran" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Manage bookmarks locally.</p>
+</div>
+</div>
+
+
+      </main>
+      <nav class="sphinxsidebar">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/seiran.svg" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">seiran package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-seiran.ff_bkm_import">seiran.ff_bkm_import module</a></li>
+<li><a class="reference internal" href="#module-seiran.onetab_bkm_import">seiran.onetab_bkm_import module</a></li>
+<li><a class="reference internal" href="#module-seiran.seiran">seiran.seiran module</a></li>
+<li><a class="reference internal" href="#module-seiran">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="modules.html"
+                        title="previous chapter"
+                        aria-label="previous chapter">seiran</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="quickstart.html"
+                        title="next chapter"
+                        aria-label="next chapter">Seiran Quickstart</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/seiran.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+      </nav>
+    <nav class="related" id="relbar-bottom">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Seiran 1.6.0 documentation</a> &#8594;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >seiran</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">seiran package</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="modules.html" title="seiran"
+                aria-label="previous: seiran"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="quickstart.html" title="Seiran Quickstart"
+                aria-label="next: Seiran Quickstart"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+    <footer>
+        &#169; Copyright 2015–2021 gargargarrick.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.2.
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seiran Quickstart &#8212; Seiran 1.6.0 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pyramida.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+    <![endif]-->
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" aria-label="Index" href="genindex.html" />
+    <link rel="search" title="Search" aria-label="Search" href="search.html" />
+    <link rel="next" title="Seiran Changelog" aria-label="Seiran Changelog" href="changelog.html" />
+    <link rel="prev" title="seiran package" aria-label="seiran package" href="seiran.html" />
+  </head><body>
+  <p id="skippy"><a href="#main">Skip to main content</a></p>
+    <nav class="related" id="relbar-top">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Seiran 1.6.0 documentation</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">Seiran Quickstart</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="seiran.html" title="seiran package"
+                aria-label="previous: seiran package"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="changelog.html" title="Seiran Changelog"
+                aria-label="next: Seiran Changelog"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+      <main class="body" id="main">
+
+  <div class="section" id="seiran-quickstart">
+<h1>Seiran Quickstart<a class="headerlink" href="#seiran-quickstart" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h1>
+<div class="section" id="how-to-run">
+<h2>How to run<a class="headerlink" href="#how-to-run" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Install Seiran by your preferred method. Most will probably want to run
+<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">seiran</span></code> from the command line, but you can also install
+from source with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">install</span> <span class="pre">--user</span></code>. However or wherever
+you do it, make sure Seiran’s install location is on your system path,
+so you can use Seiran anywhere just by typing “seiran [command]”.</p>
+<p>Available commands:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>seiran add [a bookmark]
+seiran del[ete a bookmark]
+seiran list [all bookmarks]
+seiran search [bookmarks]
+seiran edit [a bookmark]
+seiran import [bookmarks from various sources]
+seiran export [bookmarks to other formats]
+seiran clean [bookmarks]
+seiran copyright
+seiran help
+</pre></div>
+</div>
+</div>
+<div class="section" id="adding-new-bookmarks">
+<h2>Adding new bookmarks<a class="headerlink" href="#adding-new-bookmarks" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Use <code class="docutils literal notranslate"><span class="pre">add</span></code> to add a single new bookmark to the database. You’ll be
+prompted for its title, URL, and optional “folder”/category. (The date
+of creation will be added automatically.)</p>
+<p>Optional arguments:</p>
+<dl class="option-list">
+<dt><kbd><span class="option">-t</span>, <span class="option">--title</span></kbd></dt>
+<dd><p>A bookmark’s name. Usually appears in &lt;h1&gt; or &lt;title&gt; tags on the
+page.</p>
+</dd>
+<dt><kbd><span class="option">-u</span>, <span class="option">--url</span></kbd></dt>
+<dd><p>A bookmark’s Uniform Resource Locator. Must be unique.</p>
+</dd>
+<dt><kbd><span class="option">-c</span>, <span class="option">--category</span></kbd></dt>
+<dd><p>A bookmark’s category. This is inspired by Firefox’s folders, but you
+can put almost anything here.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="deleting-bookmarks">
+<h2>Deleting bookmarks<a class="headerlink" href="#deleting-bookmarks" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>You can remove a bookmark with the <code class="docutils literal notranslate"><span class="pre">del</span></code> command. Please be careful as
+bookmarks cannot be recovered once they are deleted.</p>
+<p>Optional arguments:</p>
+<dl class="option-list">
+<dt><kbd><span class="option">-u</span>, <span class="option">--url</span></kbd></dt>
+<dd><p>The Universal Resource Locator of the bookmark you want to delete.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="editing-bookmarks">
+<h2>Editing bookmarks<a class="headerlink" href="#editing-bookmarks" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Use <code class="docutils literal notranslate"><span class="pre">edit</span></code> to modify an existing bookmark’s title or category/tag. To
+avoid shenanigans, URLs cannot be edited in Seiran.</p>
+<p>Optional arguments:</p>
+<dl class="option-list">
+<dt><kbd><span class="option">-u</span>, <span class="option">--url</span></kbd></dt>
+<dd><p>The Universal Resource Locator of the bookmark you want to edit. Must
+be unique.</p>
+</dd>
+<dt><kbd><span class="option">-f</span>, <span class="option">--field</span></kbd></dt>
+<dd><p>The column you want to edit. Available arguments are <code class="docutils literal notranslate"><span class="pre">title</span></code> or
+<code class="docutils literal notranslate"><span class="pre">category</span></code>.</p>
+</dd>
+<dt><kbd><span class="option">-n</span>, <span class="option">--new</span></kbd></dt>
+<dd><p>The new value you want an edited field to have.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="listing-bookmarks">
+<h2>Listing bookmarks<a class="headerlink" href="#listing-bookmarks" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>You can see a list of all bookmarks with <code class="docutils literal notranslate"><span class="pre">list</span></code>. This could take a
+while for very large databases.</p>
+</div>
+<div class="section" id="finding-bookmarks">
+<h2>Finding bookmarks<a class="headerlink" href="#finding-bookmarks" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">search</span></code> allows you to find a specific bookmark based on its title,
+URL, date, or category.</p>
+<dl class="option-list">
+<dt><kbd><span class="option">-f</span>, <span class="option">--field</span></kbd></dt>
+<dd><p>The column you want to search. Available arguments are <code class="docutils literal notranslate"><span class="pre">title</span></code>,
+<code class="docutils literal notranslate"><span class="pre">url</span></code>, <code class="docutils literal notranslate"><span class="pre">category</span></code>, <code class="docutils literal notranslate"><span class="pre">date</span></code>, or <code class="docutils literal notranslate"><span class="pre">all</span></code>.</p>
+</dd>
+<dt><kbd><span class="option">-q</span>, <span class="option">--query</span></kbd></dt>
+<dd><p>The term you want to search for.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="exporting-bookmarks">
+<h2>Exporting bookmarks<a class="headerlink" href="#exporting-bookmarks" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>With <code class="docutils literal notranslate"><span class="pre">export</span></code>, you can export your bookmarks to a nicely-formatted,
+timestamped file. Of course, you can easily get a plain CSV with a
+simple SQLite command, so Seiran tries to add a bit of value by making
+its output a bit prettier.</p>
+<p>Available formats for exporting include HTML, TXT, and JSON.</p>
+<p>Optional arguments:</p>
+<dl class="option-list">
+<dt><kbd><span class="option">-x</span>, <span class="option">--exportformat</span></kbd></dt>
+<dd><p>The format you want to export your bookmarks to. Available arguments
+are <code class="docutils literal notranslate"><span class="pre">txt</span></code>, <code class="docutils literal notranslate"><span class="pre">html</span></code>, or <code class="docutils literal notranslate"><span class="pre">json</span></code>.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="importing-bookmarks">
+<h2>Importing bookmarks<a class="headerlink" href="#importing-bookmarks" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Although it’s experimental, you can import a whole bunch of bookmarks at
+once with the <code class="docutils literal notranslate"><span class="pre">import</span></code> command. Make sure to back up your existing
+database before using, just in case.</p>
+<p>When you use the <code class="docutils literal notranslate"><span class="pre">import</span></code> command, you’ll first be prompted to make
+sure you <em>really</em> meant to do that – it could take a long time and add
+quite a large number of bookmarks to your database (and may still have
+bugs as well). If you’re OK with that, type <code class="docutils literal notranslate"><span class="pre">y</span></code> for yes. There is no
+command-line argument to speed this along, just to make sure no
+accidents happen.</p>
+<p>Next, Seiran supports importation from existing Seiran databases,
+Firefox (and derivatives, like IceCat), the
+<a class="reference external" href="https://www.one-tab.com/">OneTab</a> browser add-on, and JSON exported
+from Seiran itself (not arbitrary JSON files). You’ll be asked which one
+you want to import bookmarks from.</p>
+<p>Optional arguments:</p>
+<dl class="option-list">
+<dt><kbd><span class="option">-i</span>, <span class="option">--importformat</span></kbd></dt>
+<dd><p>The system you want to import bookmarks from. Available arguments are
+<code class="docutils literal notranslate"><span class="pre">firefox</span></code>, <code class="docutils literal notranslate"><span class="pre">onetab</span></code>, <code class="docutils literal notranslate"><span class="pre">seiran</span></code>, or <code class="docutils literal notranslate"><span class="pre">json</span></code>.</p>
+</dd>
+</dl>
+<div class="section" id="firefox-et-al">
+<h3>Firefox et al.<a class="headerlink" href="#firefox-et-al" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h3>
+<p>If you exported a bookmarks backup file from Firefox 3.0 onwards, and
+it’s not an HTML document you can view in your browser, it’s probably a
+JSON file. Just enter the path to that file the importation process will
+begin:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ seiran import -i firefox
+seiran by gargargarrick, v.1.6.0.
+Are you sure you want to import bookmarks? It might take a while. Back up your database first! (y/n) &gt; y
+Please enter the path to the Firefox profile directory OR the Firefox bookmarks JSON file from which you wish to import. &gt; bookmarks-2021-02-20.json
+Preparing Firefox JSON bookmarks...
+283 bookmarks loaded from bookmarks-2021-02-20.json.
+[...]
+</pre></div>
+</div>
+<p>You can also import bookmarks directly from Firefox’s browser profile
+directory, if you want. You’ll have to tell Seiran directly where it is;
+this varies enough that it can’t be determined automatically.</p>
+<div class="section" id="pc-browsers">
+<h4>PC browsers<a class="headerlink" href="#pc-browsers" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h4>
+<p>In the browser that you want to import from, either select
+<code class="docutils literal notranslate"><span class="pre">Help</span> <span class="pre">&gt;</span> <span class="pre">Troubleshooting</span> <span class="pre">information</span></code> from the main menu or simply
+navigate to <code class="docutils literal notranslate"><span class="pre">about:support</span></code>. Scroll down to “Profile Folder” and press
+the “Show Folder” button. The profile folder will open up in your file
+manager; copy its path and paste that into Seiran’s prompt.</p>
+<p>Seiran will ask if this is a mobile browser’s profile; say no, and the
+importation process will begin.</p>
+</div>
+<div class="section" id="android-browsers">
+<h4>Android browsers<a class="headerlink" href="#android-browsers" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h4>
+<p>If you have access to an Android browser’s profile (because you copied
+it with an add-on like <a class="reference external" href="https://addons.mozilla.org/en-US/android/addon/copy-profile/">Copy
+Profile</a>
+and ADB, or are running Seiran itself on a rooted mobile device through
+science or magic), just point Seiran to the directory that contains
+<code class="docutils literal notranslate"><span class="pre">browser.db</span></code> (not the file itself).</p>
+<p>Seiran will ask if this is a mobile browser’s profile; say yes, and the
+importation process will begin.</p>
+</div>
+</div>
+<div class="section" id="onetab">
+<h3>OneTab<a class="headerlink" href="#onetab" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h3>
+<p>Save the contents of OneTab’s “Export URLs” into a plain text (.txt)
+file. When prompted by Seiran, copy and paste the path to the export
+file. Then the importation process will begin.</p>
+<p>Caveat: OneTab does not store dates in its export file, so those will
+not be preserved by Seiran. The date that you imported the bookmark will
+be used instead.</p>
+<p>Of course, the file does not literally need to have been exported by
+OneTab. You can also use this mode to import arbitrary plain-text lists
+of bookmarks, as long as each follows the format <code class="docutils literal notranslate"><span class="pre">URL</span> <span class="pre">|</span> <span class="pre">Title</span></code>.</p>
+</div>
+<div class="section" id="seiran">
+<span id="seiran-1"></span><h3>Seiran<a class="headerlink" href="#seiran" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h3>
+<p>If you have another Seiran database and you want to combine it with your
+main one, this function will allow that. It is highly experimental and
+may ruin all the things. I am not responsible if you lose your
+bookmarks; make sure both databases are backed up before you attempt
+this.</p>
+<p>Seiran will prompt you for the <strong>full path</strong> to the database you want to
+import. Provide it and the importation process will begin.</p>
+</div>
+</div>
+<div class="section" id="cleaning-bookmarks">
+<h2>Cleaning bookmarks<a class="headerlink" href="#cleaning-bookmarks" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">seiran</span> <span class="pre">clean</span></code> will look for bookmarks in your database that don’t
+seem to have titles, and add their respective URL as a title instead. It
+will then look for bookmarks that have identical titles (which suggests
+they might be duplicates) and tell you if it finds any.</p>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline" aria-label="Permalink to this headline">¶</a></h2>
+<p>Copyright 2015-2021 Matthew Ellison.</p>
+<p>This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation; either version 3 of the License, or (at your
+option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License along
+with this program; if not, see <a class="reference external" href="http://www.gnu.org/licenses">http://www.gnu.org/licenses</a> or write to:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Free Software Foundation</div>
+<div class="line">51 Franklin Street, Fifth Floor</div>
+<div class="line">Boston, MA 02110-1335</div>
+<div class="line">USA</div>
+</div>
+</div></blockquote>
+</div>
+</div>
+
+
+      </main>
+      <nav class="sphinxsidebar">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/seiran.svg" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Seiran Quickstart</a><ul>
+<li><a class="reference internal" href="#how-to-run">How to run</a></li>
+<li><a class="reference internal" href="#adding-new-bookmarks">Adding new bookmarks</a></li>
+<li><a class="reference internal" href="#deleting-bookmarks">Deleting bookmarks</a></li>
+<li><a class="reference internal" href="#editing-bookmarks">Editing bookmarks</a></li>
+<li><a class="reference internal" href="#listing-bookmarks">Listing bookmarks</a></li>
+<li><a class="reference internal" href="#finding-bookmarks">Finding bookmarks</a></li>
+<li><a class="reference internal" href="#exporting-bookmarks">Exporting bookmarks</a></li>
+<li><a class="reference internal" href="#importing-bookmarks">Importing bookmarks</a><ul>
+<li><a class="reference internal" href="#firefox-et-al">Firefox et al.</a><ul>
+<li><a class="reference internal" href="#pc-browsers">PC browsers</a></li>
+<li><a class="reference internal" href="#android-browsers">Android browsers</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#onetab">OneTab</a></li>
+<li><a class="reference internal" href="#seiran">Seiran</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cleaning-bookmarks">Cleaning bookmarks</a></li>
+<li><a class="reference internal" href="#license">License</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="seiran.html"
+                        title="previous chapter"
+                        aria-label="previous chapter">seiran package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="changelog.html"
+                        title="next chapter"
+                        aria-label="next chapter">Seiran Changelog</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/quickstart.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+      </nav>
+    <nav class="related" id="relbar-bottom">
+        <ul>
+        <li class="nav-item nav-item-0"><a href="index.html">Seiran 1.6.0 documentation</a> &#8594;</li>
+        <li class="nav-item nav-item-this"><a href="">Seiran Quickstart</a></li>
+        </ul>
+        <ul>
+          <li class="right" >
+            <a href="seiran.html" title="seiran package"
+                aria-label="previous: seiran package"
+                >previous</a> |</li>
+          <li class="right" >
+            <a href="changelog.html" title="Seiran Changelog"
+                aria-label="next: Seiran Changelog"
+                >next</a> |</li>
+          <li class="right" >
+            <a href="py-modindex.html" title="Python Module Index"
+                aria-label="modules: Python Module Index"
+                >modules</a> |</li>
+          <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                aria-label="index: General Index"
+                >index</a></li>
+        </ul>
+    </nav>
+    <footer>
+        &#169; Copyright 2015–2021 gargargarrick.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.2.
+    </footer>
+  </body>
+</html>
