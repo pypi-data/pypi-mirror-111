@@ -1,0 +1,17 @@
+ziamath/__init__.py,sha256=uA12_gugNrLGSCmi6azS4VVWjjYLSomDeaF98WsTUhY,97
+ziamath/escape_codes.py,sha256=wF76q-yyWhRvHLOXHIY07YdnA2T-J2nLS30FyOiHDiM,40482
+ziamath/escapes.py,sha256=2p69i8ld3ZNT6mY1rIrlmj8P6gc5oox064b1XIooC_0,738
+ziamath/mathfont.py,sha256=ysdHk1XsJfVLCKbp0IyHK4S3Etgt85d4Kea96P12gpI,750
+ziamath/mathtable.py,sha256=gTztofubt9_spAkn2L21tWioTApeogH6P8pTF5tayXk,21814
+ziamath/nodes.py,sha256=AQcXr0RxdQmn_jxbpR3ATRZgXnzgGxhK9x3IR8iFuHY,45000
+ziamath/operators.py,sha256=Ka0aSHkWTpLbzeLS2qWDzxrremGU8aSpAYbxrr6l-Cw,35497
+ziamath/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ziamath/styles.py,sha256=3SGiLM366EEG01Lm3BP2yuc5n6wO_NqeGaPwDljT2l4,2960
+ziamath/zmath.py,sha256=Py9X5d0na2rHArDEhxsKV_A73Eu8WvAZVYQzU4VJ2Hk,7541
+ziamath/fonts/STIXTwoMath-Regular.ttf,sha256=j0LLGDqFBDpNw_jkGsOCHrJ78XjWis6Sm6Q5UjYiMjw,1517704
+ziamath/fonts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ziamath-0.3.dist-info/LICENSE.txt,sha256=7lPA5JZ2kfei2ankiZ6p9oGiE0mDtgp5rAl7hu3TSSU,1060
+ziamath-0.3.dist-info/METADATA,sha256=YLfvvw0bX79V5pOHA9qWMFJ57zS-VsKtiqWAqSQTfKE,1445
+ziamath-0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ziamath-0.3.dist-info/top_level.txt,sha256=A1TiqzVoPRxorg1CeA7IeT3A7jkLevT03a-eMHAbcro,8
+ziamath-0.3.dist-info/RECORD,,
