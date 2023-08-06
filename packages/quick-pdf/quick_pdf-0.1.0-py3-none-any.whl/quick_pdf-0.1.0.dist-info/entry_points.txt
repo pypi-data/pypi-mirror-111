@@ -1,0 +1,3 @@
+[console_scripts]
+quickpdf_merge=quick_pdf.merge:merge_pdf
+
