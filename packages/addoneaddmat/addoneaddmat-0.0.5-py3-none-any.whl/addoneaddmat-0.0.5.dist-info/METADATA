@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: addoneaddmat
+Version: 0.0.5
+Summary: My first Python package
+Home-page: UNKNOWN
+Author: Wayne Lam
+Author-email: UNKNOWN
+License: UNKNOWN
+Keywords: test,first package
+Platform: UNKNOWN
+Requires-Dist: numpy
+
+Same as regular description
+
+
