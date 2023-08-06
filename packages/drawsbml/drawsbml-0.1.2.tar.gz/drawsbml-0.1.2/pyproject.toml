@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "drawsbml"
+version = "0.1.2"
+description = "Draw Signalling Pathways (SBML) using graphviz"
+authors = ["Dilawar Singh <dilawar.s.rajput@gmail.com>"]
+license = "GPLv3"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+networkx = "^2.5.1"
+python-libsbml = "^5.19.0"
+pydot = "^1.4.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+mypy = "^0.910"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+drawsbml = 'drawsbml.__main__:main'
