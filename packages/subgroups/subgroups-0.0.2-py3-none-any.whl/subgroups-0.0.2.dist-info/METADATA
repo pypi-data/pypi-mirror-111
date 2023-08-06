@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: subgroups
+Version: 0.0.2
+Summary: subgroups is a python library which contains a collection of subgroup discovery algorithms and other data analysis utilities.
+Home-page: https://github.com/antoniolopezmc/subgroups
+Author: Antonio López Martínez-Carrasco
+Author-email: antoniolopezmc1995@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas (>=1.1.3)
+Requires-Dist: bitarray (>=1.6.1)
+
+# subgroups
+
+Python library which contains a collection of subgroup discovery algorithms and other data analysis utilities.
+
+
