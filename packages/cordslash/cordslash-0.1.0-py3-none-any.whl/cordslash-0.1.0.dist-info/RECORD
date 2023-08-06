@@ -1,0 +1,10 @@
+cordslash/__init__.py,sha256=n0sWv0KxehbIwCLYvAc_lUsnmr-r9ATCGQEFJnqdPSM,148
+cordslash/client.py,sha256=nhqVXD082mQKYMEXGhb7r7JYTcz_6jDxCvHvdEf1SAg,2971
+cordslash/command.py,sha256=Ydi3yrHKnENSxUuMib52z1r7q4Qx8WMJdsskcG_3IiM,5068
+cordslash/context.py,sha256=_R9SiFv3yMy0QYPLgjIm5jzLm4Qxl641muoUBRxsLVE,2091
+cordslash/models.py,sha256=obv9KywxUxoXpcPCR3xVa6BK7bxz9K6ZULsnSv6xXBE,165
+cordslash-0.1.0.dist-info/LICENSE,sha256=nbnplUUq_NqJ3aavm_bK5V6kDoga93JRzNfJqg-v4DU,1084
+cordslash-0.1.0.dist-info/METADATA,sha256=fxPXxtYogh2nNbWXqAZ8bFcFYjWa2WQo_KK4y1KdWZ0,1245
+cordslash-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cordslash-0.1.0.dist-info/top_level.txt,sha256=prmBoTjaFBRMkviuw7Hrk894UiqL0W21kVW-FfGoy3E,10
+cordslash-0.1.0.dist-info/RECORD,,
