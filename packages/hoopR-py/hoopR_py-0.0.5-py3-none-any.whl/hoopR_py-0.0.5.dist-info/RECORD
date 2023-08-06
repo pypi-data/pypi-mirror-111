@@ -1,0 +1,11 @@
+hoopR/__init__.py,sha256=jvhsfYoNcWd9sKQxrp1kZFruv-VCp7I11wq8_Eo4pmY,61
+hoopR/config.py,sha256=oqkKesQsvQJgi1-YtjdpQf25PyR8dlx5NJ3ccdkRaeo,1179
+hoopR/dl_utils.py,sha256=7xU8m7tf2xRqUYst1l2_6J-90qMwhIcPv_rRak3zH4Q,855
+hoopR/errors.py,sha256=XiwzDXWGIJropUTRU7rEcpwCBIFSW17ahX1PDcFSEWw,90
+hoopR/mbb.py,sha256=SC7VauBZf3HRknrsPel-skZCgijhNMQ2bJTb0qRi41Y,3702
+hoopR/nba.py,sha256=ZMpncSxc_bhtQL3gxRtxUpvG85t73GYybSrxzTxQ3Sw,3618
+hoopR/schedule.py,sha256=lbKc7s_y_8QEoZiKv-FOg7kBQQQDYOn9QA-S9ZPZgIA,973
+hoopR_py-0.0.5.dist-info/METADATA,sha256=j0adtTUGMghllS91MUzEctPK8-QvgHiXBJF9zA3stYA,3584
+hoopR_py-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+hoopR_py-0.0.5.dist-info/top_level.txt,sha256=IHHxFbcg9317OiYx_42IryCpNw3Ucx5X4zADhPC0p2I,6
+hoopR_py-0.0.5.dist-info/RECORD,,
