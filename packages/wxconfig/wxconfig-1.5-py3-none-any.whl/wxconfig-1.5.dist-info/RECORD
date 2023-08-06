@@ -1,0 +1,10 @@
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_config.py,sha256=QLcZyguTMaEBql6pOkmA_JniXSyWCEskPmHoMaJa9iw,2355
+wxconfig/__init__.py,sha256=aN37aXGw29xffPJ4dVSV69XPxBwBrlf8qUBwubXob64,85
+wxconfig/config.py,sha256=cC2SzR3HAEvn0oTdnU59K4RTwNt4aP2HdJAPsVWz6_I,3721
+wxconfig/wxconfiggui.py,sha256=X-a1x8qwRqTWGERIKjUKW7z1SfKgBb4w2vP47xFuQB8,17295
+wxconfig-1.5.dist-info/LICENSE,sha256=ZTeVcvhzP1NATckIFQm8k-XKsSrU_4UtCAzaxtk6Tn8,1088
+wxconfig-1.5.dist-info/METADATA,sha256=yeaihCkHK6aMBqjkLwMTXkYe50YdGSAvQKEGziDXE9A,4504
+wxconfig-1.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+wxconfig-1.5.dist-info/top_level.txt,sha256=u0DbQAFIrzoqgKwEOJE2fuW8pLUFrhdkByb-T1yeZx4,9
+wxconfig-1.5.dist-info/RECORD,,
