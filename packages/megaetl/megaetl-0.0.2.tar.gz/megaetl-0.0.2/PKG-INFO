@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: megaetl
+Version: 0.0.2
+Summary: Airflow plugins
+Home-page: https://github.com/victorouttes/MegaETL
+Author: Victor Outtes
+Author-email: victor.outtes@gmail.com
+License: MIT
+Download-URL: https://github.com/victorouttes/MegaETL/archive/refs/tags/0.0.2.tar.gz
+Keywords: airflow,plugins
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# MegaETL
+MegaETL - plugins for apache airflow
+
+# Requirements
+* Apache Airflow 1.10.15
+
+
