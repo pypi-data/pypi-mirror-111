@@ -1,0 +1,3 @@
+[console_scripts]
+pytkgui-cli = PyTkGui.cli:main
+

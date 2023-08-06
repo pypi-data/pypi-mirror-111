@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: PyTkGui
+Version: 2021.7.2
+Summary: python mvvm gui framework on tkinter
+Home-page: https://github.com/eseunghwan/PyTkGui
+Author: eseunghwan
+Author-email: shlee0920@naver.com
+License: MIT license
+Keywords: tkinter python mvvm gui
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS.md
+
+# PyTkGui
+<a href="https://pypi.python.org/pypi/PyTkGui"><img src="https://img.shields.io/pypi/v/PyTkGui.svg"></img></a>
+<a href="https://travis-ci.com/eseunghwan/PyTkGui"><img src="https://img.shields.io/travis/eseunghwan/PyTkGui.svg"></img></a>
+
+<br><br>
+
+<img src="https://raw.githubusercontent.com/eseunghwan/PyTkGui/master/tests/test_index.png"></img>
+<img src="https://raw.githubusercontent.com/eseunghwan/PyTkGui/master/tests/test_widgets.png"></img>
+
+<br><br>
+
+# Install
+## using pip(stable)
+```powershell
+pip3 install PyTkGui
+```
+## using git(dev)
+```powershell
+pip3 install https://github.com/eseunghwan/PyTkGui.git
+```
+<br><br>
+
+# Usage
+### create project with cli
+```powershell
+pytkgui-cli init [dest]
+```
+<br>
+
+### run ui
+```powershell
+pytkgui-cli run dev
+```
+<br>
+
+### build project to dest
+```powershell
+pytkgui-cli run build [dest]
+```
+<br><br>
+
+# TODO
+[ ] check for nested loops(3 or more dimension)<br>
+
+
+# History
+
+### 2021.07.02 (2021-07-02)
+- first release
+
+
