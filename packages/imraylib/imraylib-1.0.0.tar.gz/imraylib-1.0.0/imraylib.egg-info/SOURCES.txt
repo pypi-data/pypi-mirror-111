@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+imraylib/__init__.py
+imraylib/raylib_consts.py
+imraylib/renderer.py
+imraylib.egg-info/PKG-INFO
+imraylib.egg-info/SOURCES.txt
+imraylib.egg-info/dependency_links.txt
+imraylib.egg-info/requires.txt
+imraylib.egg-info/top_level.txt
