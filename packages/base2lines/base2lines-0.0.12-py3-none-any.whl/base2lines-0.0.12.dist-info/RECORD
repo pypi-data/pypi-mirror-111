@@ -1,0 +1,9 @@
+baseline/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+baseline/classification.py,sha256=ijkwS3CBy9HnRSmITDw76BQiJdyeblhXbriIIS8rKHI,3203
+baseline/data.py,sha256=odnrBHLwTV4o7BQAJ-mVchXql0dANGaPTAdJ5qKYTmY,560
+baseline/pipeline.py,sha256=QJjvSf6T_kytXQyaUOlIunpjSEuLwF9AUUvuXO3VhgI,2719
+base2lines-0.0.12.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+base2lines-0.0.12.dist-info/METADATA,sha256=kK9Cn4LqhcsxXEYUT8zpnDxYUX1eIWrukyuFFeBGfPg,624
+base2lines-0.0.12.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+base2lines-0.0.12.dist-info/top_level.txt,sha256=S2VL0UNwZrE0mGYfPKFHdNrxBm0HIDa-_68G8MAUJQ4,9
+base2lines-0.0.12.dist-info/RECORD,,
