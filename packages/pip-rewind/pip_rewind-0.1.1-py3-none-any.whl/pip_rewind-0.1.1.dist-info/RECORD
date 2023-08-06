@@ -1,0 +1,8 @@
+pip_rewind/cli.py,sha256=ILZboP6ylt1r0Os4qB3oxggCUpMFgwueh6lxGsNXcws,1530
+pip_rewind/parser.py,sha256=bkaBzV3PVGbCDPPHM_V9Z7iFUq9IPMRkGAOZQB9kM7M,797
+pip_rewind/versions.py,sha256=aQjayNP2p2zlVMJrNqBwDcbIVQzyzp0HQ4Of_USDQ7o,3331
+pip_rewind-0.1.1.dist-info/entry_points.txt,sha256=COZ5bErXlFKIpUmWll49kwshuik6aglroDJ9E9D0wCs,50
+pip_rewind-0.1.1.dist-info/LICENSE,sha256=_BGbbHdLWeqWcNv7qhbAX_bBDD96YBZKESTHYQQwLLk,1060
+pip_rewind-0.1.1.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+pip_rewind-0.1.1.dist-info/METADATA,sha256=qnUrjcR1Oo9J1rE71fx9QFe2M8tR-rFzUBR2i3FlqUg,2593
+pip_rewind-0.1.1.dist-info/RECORD,,
