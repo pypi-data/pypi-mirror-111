@@ -1,0 +1,13 @@
+License
+README.md
+pyproject.toml
+setup.cfg
+etc/eign
+man/prep.1.gz
+src/pnu_prep.egg-info/PKG-INFO
+src/pnu_prep.egg-info/SOURCES.txt
+src/pnu_prep.egg-info/dependency_links.txt
+src/pnu_prep.egg-info/entry_points.txt
+src/pnu_prep.egg-info/top_level.txt
+src/prep/__init__.py
+src/prep/main.py
