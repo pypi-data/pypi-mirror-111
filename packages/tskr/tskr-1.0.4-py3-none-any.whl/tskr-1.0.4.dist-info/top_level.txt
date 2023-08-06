@@ -1,0 +1,3 @@
+tskr
+tskr\_debug_pool_for_develop
+tskr\parts
