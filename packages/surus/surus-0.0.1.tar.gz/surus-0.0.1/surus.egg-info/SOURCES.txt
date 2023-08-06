@@ -1,0 +1,5 @@
+setup.py
+surus.egg-info/PKG-INFO
+surus.egg-info/SOURCES.txt
+surus.egg-info/dependency_links.txt
+surus.egg-info/top_level.txt
