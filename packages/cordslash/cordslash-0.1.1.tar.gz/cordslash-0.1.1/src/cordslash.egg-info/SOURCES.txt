@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/cordslash/__init__.py
+src/cordslash/client.py
+src/cordslash/command.py
+src/cordslash/context.py
+src/cordslash/models.py
+src/cordslash.egg-info/PKG-INFO
+src/cordslash.egg-info/SOURCES.txt
+src/cordslash.egg-info/dependency_links.txt
+src/cordslash.egg-info/top_level.txt
