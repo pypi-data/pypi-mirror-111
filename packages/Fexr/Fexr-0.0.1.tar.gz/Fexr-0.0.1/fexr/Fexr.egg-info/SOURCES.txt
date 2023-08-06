@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+fexr/Fexr.egg-info/PKG-INFO
+fexr/Fexr.egg-info/SOURCES.txt
+fexr/Fexr.egg-info/dependency_links.txt
+fexr/Fexr.egg-info/top_level.txt
+fexr/resources/__init__.py
