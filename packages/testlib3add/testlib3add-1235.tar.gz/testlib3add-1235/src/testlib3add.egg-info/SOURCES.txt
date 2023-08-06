@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+src/mysamplelibrary/Add3.py
+src/mysamplelibrary/Sub3.py
+src/mysamplelibrary/__init__.py
+src/testlib3add.egg-info/PKG-INFO
+src/testlib3add.egg-info/SOURCES.txt
+src/testlib3add.egg-info/dependency_links.txt
+src/testlib3add.egg-info/requires.txt
+src/testlib3add.egg-info/top_level.txt
