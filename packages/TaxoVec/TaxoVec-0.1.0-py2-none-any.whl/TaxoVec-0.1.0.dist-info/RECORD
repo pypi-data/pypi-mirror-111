@@ -1,0 +1,13 @@
+TaxoVec/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+TaxoVec/calculate_IC.py,sha256=LjrCuk6QpD5b9R-46u7a_mkAn3LbYeBWGOujdTKKbVM,893
+TaxoVec/create_card_cache.py,sha256=2IifQx3wO1_QLdUVVbYUgWOes9YMW2vU_Bawpgo5yfo,3692
+TaxoVec/functions.py,sha256=3ywHKVYz1puys97xbnhYg27NPXc3WtWr2W2M-MjKAzg,11007
+TaxoVec/data/card_cache.csv,sha256=Bgjegwl6Ckdx15csH-G1Yhp4gBJnU5OrVKWIBnmMk0c,2548851
+TaxoVec/data/card_cache_star.csv,sha256=HdfS2H2g13kmzZ03lvQCQm-dd1zb_eVLmTfSgrnQJwA,2545779
+TaxoVec/data/dump_prova.csv,sha256=Q_lBdSQMA0Nveg8CebYCQrKQYVZoB6ZIJoEM2Pworks,23872
+TaxoVec/data/information_content_default.csv,sha256=6a1VUuNyA8zJ-D3ZNa5ddaqztqBTWI7OqUxDQH4Fwko,282283782
+TaxoVec/data/prova_IC.csv,sha256=qx2ARQTM-fgdnRgFP21bDIgAnh9riqevK8diXe52vhw,117769
+TaxoVec-0.1.0.dist-info/METADATA,sha256=UFvuN6iJQSBM3kvmZOIVpdSrecfVYepKAvaPPRnFsyM,5170
+TaxoVec-0.1.0.dist-info/WHEEL,sha256=pqI-DBMA-Z6OTNov1nVxs7mwm6Yj2kHZGNp_6krVn1E,92
+TaxoVec-0.1.0.dist-info/top_level.txt,sha256=z50J7NUfc1PpJRs7fXuXOAX-AxNvnrCG-VzfpSqCvNE,8
+TaxoVec-0.1.0.dist-info/RECORD,,
