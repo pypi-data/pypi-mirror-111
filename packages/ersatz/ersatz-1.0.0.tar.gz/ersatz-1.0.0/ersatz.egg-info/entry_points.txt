@@ -1,0 +1,6 @@
+[console_scripts]
+ersatz = ersatz.split:main
+ersatz_preprocess = ersatz.dataset:main
+ersatz_score = ersatz.score:main
+ersatz_train = ersatz.trainer:main
+

@@ -1,0 +1,21 @@
+Metadata-Version: 1.2
+Name: ersatz
+Version: 1.0.0
+Summary: Simple sentence segmentation toolkit for segmenting and scoring
+Home-page: https://github.com/rewicks/ersatz
+Author: Rachel Wicks
+Author-email: rewicks@jhu.edu
+Maintainer-email: rewicks@jhu.edu
+License: Apache License 2.0
+Description: Ersatz is a simple, language-agnostic toolkit for both training sentence segmentation models as well as providing pretrained, high-performing models for sentence segmentation in a multilingual setting.
+Keywords: sentence segmenation, data processing, preprocessing, evaluation, NLP, natural language processing, computational linguistics
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Text Processing
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3
