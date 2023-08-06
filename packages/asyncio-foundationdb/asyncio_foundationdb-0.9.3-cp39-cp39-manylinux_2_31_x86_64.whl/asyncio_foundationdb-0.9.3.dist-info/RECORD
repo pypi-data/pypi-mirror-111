@@ -1,0 +1,11 @@
+build.py,sha256=eT-IeIKBMwoOLBfRgwhigfdIqYAlVgI8g8ddZiLBLm8,394
+fdb_c.h,sha256=hdRXUkyMXNvEBI5r1Bas7pryE4_hE8Rd_toT2kM_do4,37523
+fdb_c2.h,sha256=14ojjsLDY_k-8fGpZK8eRN1FqBb2EAzrAdzdTN9DtrY,37452
+found/__init__.py,sha256=EBy0XQg9KY9oK9ldPhYjLsUBrdUyouvXcD1hyk4ry7g,3207
+found/_fdb.cpython-39-x86_64-linux-gnu.so,sha256=YaQTKvA-J-2-adCF9nYvwWCRfX_YsoG-q7oQjwmfduQ,190304
+found/base.py,sha256=xa5Z6Frnz5-pFcpV5Sil9wm1ToaW4Fv_GRpkO-vFP5A,17943
+found/nstore.py,sha256=Pha65Dohf_iXgqlh9w699QI7rtcmMK0WqukfYNnnKfY,6799
+asyncio_foundationdb-0.9.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+asyncio_foundationdb-0.9.3.dist-info/WHEEL,sha256=f90FVrXAALeD9gWBlT71WrIo89_-KqvqhRPHPiWnXqk,103
+asyncio_foundationdb-0.9.3.dist-info/METADATA,sha256=4ntaNNoWsEXup3PV7zr8hHogPMR5X3S8ZGnrX5JXDSo,1230
+asyncio_foundationdb-0.9.3.dist-info/RECORD,,
