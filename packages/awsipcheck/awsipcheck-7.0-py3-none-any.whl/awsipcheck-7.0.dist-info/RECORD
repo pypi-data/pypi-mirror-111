@@ -1,0 +1,10 @@
+awsipcheck/__init__.py,sha256=8XyorlFz-vUZuqrfDs6I-2QFecljuNYIKG46fNA-FcM,90
+awsipcheck/__main__.py,sha256=eRWMrRcrmfJyOUa84owssQavaU0SDFxGYgF9o6wNZYg,217
+awsipcheck/cli.py,sha256=3K9Z5_4rwoNLdaWvtjkWoQ8FHK6WP-0if--c9epQaIA,1276
+awsipcheck/core.py,sha256=YHgQxGxiOH5jsG9e9YMY3IPStthUoR7fQaNmoo4wCZ8,2700
+awsipcheck-7.0.dist-info/LICENSE,sha256=9K8DIDk1PoOh432XU2Z9XNbI5bXtFHzJ5vLGv43zEPM,1068
+awsipcheck-7.0.dist-info/METADATA,sha256=J9dbd-4-e2C0jFcWuQuRPBoA9iMDhEKXKzYw-aMv3k4,1542
+awsipcheck-7.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+awsipcheck-7.0.dist-info/entry_points.txt,sha256=UF7LbSXoP8UtM3L-dnftPW5i_laAYE7_LUeL9YxaDoQ,57
+awsipcheck-7.0.dist-info/top_level.txt,sha256=s0MxrIQ1axNtmaQIBW2mcyXqigxu3BK9DGpJiWiiJZs,11
+awsipcheck-7.0.dist-info/RECORD,,
