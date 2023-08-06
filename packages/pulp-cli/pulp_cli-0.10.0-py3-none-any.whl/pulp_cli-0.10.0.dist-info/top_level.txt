@@ -1,0 +1,2 @@
+pulpcore
+pytest_pulp_cli
