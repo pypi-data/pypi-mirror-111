@@ -1,0 +1,192 @@
+{% extends "django_msp_sms\base.html" %}
+{% block title %}SMS Masivo{% endblock %}
+
+<!-- CSS Code -->
+{% block style_css %}{% endblock %}
+l<style type="text/css">
+	label
+	{
+		width: 100%;
+	}
+</style>
+<!-- JavaScript Code -->
+{% block js_code %}
+<script type="text/javascript">
+/*$("#buscar").click(function(e){
+
+		if(! $( "#saldo_si" ).hasClass( "hidden" ))
+		{
+			$( "#saldo_si" ).addClass("hidden");
+		}
+		if(! $( "#info" ).hasClass( "hidden" ))
+		{
+			$( "#info" ).addClass("hidden")
+		}
+		if(! $( "#saldo_acreditar" ).hasClass( "hidden" ))
+		{
+			$( "#saldo_acreditar" ).addClass("hidden")
+		}
+		if(! $( "#saldo_no" ).hasClass( "hidden" ))
+		{
+			$( "#saldo_no" ).addClass("hidden")
+		}
+		if(! $( "#cliente_no" ).hasClass( "hidden" ))
+		{
+			$( "#cliente_no" ).addClass("hidden")
+		}
+		var rfc_cliente=$("#rfc_cliente").val();
+		//var rfc_cliente=$("#")
+		$.ajax({
+			url: '/informacion_cliente/',
+			type: 'get',
+			data: {
+				'rfc_cliente': rfc_cliente,
+			},
+			success: function (data) {
+				console.log(data.cliente)
+				console.log(data.ultimo_saldo)
+				console.log(data.fecha)
+				if((data.cliente!="") && (data.ultimo_saldo!="") && (data.fecha!=""))
+				{
+					$("#saldo_si").removeClass("hidden");
+					$("#info").removeClass("hidden");
+					$("#saldo_acreditar").removeClass("hidden");
+					$("#nom_cliente").text(data.cliente);
+					$("#saldo").text(data.ultimo_saldo);
+					$("#fecha").text(data.fecha);
+					$("#credito").text(data.creditos);
+				}
+				else if(data.cliente!="")
+				{
+					$("#saldo_no").removeClass("hidden");
+					$("#info").removeClass("hidden");
+					$("#saldo_acreditar").removeClass("hidden");
+					$("#nom_cliente").text(data.cliente);
+					$("#saldo").text(data.ultimo_saldo);
+					$("#fecha").text(data.fecha);
+					$("#credito").text(data.creditos);
+					
+				}
+				else
+				{
+					$("#cliente_no").removeClass("hidden");
+					$("#nom_cliente").text(data.cliente);
+					$("#saldo").text(data.ultimo_saldo);
+					$("#fecha").text(data.fecha);
+					$("#credito").text(data.creditos);
+
+				}
+			}
+		});
+	});
+$("#agregar").click(function(e){
+	var creditos_dis=parseFloat($("#credito").text());
+	var creditos_ped=parseFloat($("#creditos_ped").val());
+	var rfc_cliente=$("#rfc_cliente").val();
+	console.log(creditos_dis,creditos_ped)
+	if(creditos_ped>creditos_dis)
+	{
+		alert("No se puede acreditar mas saldo que los creditos disponibles");
+	}
+	else
+	{
+		$.ajax({
+			url: '/salida_creditos/',
+			type: 'get',
+			data: {
+				'rfc_cliente': rfc_cliente,
+				'creditos': creditos_ped,
+			},
+			success: function (data) {
+				if(data.mensaje!="")
+				{
+
+					if (data.mensaje!='Ocurrio un error al agregar los creditos contactar con el administrador del sistema')
+					{		
+							debugger
+							$.ajax({
+								url: '/sms/add_creditos/',
+								type: 'get',
+								data: {
+									'creditos': creditos_ped,
+								},
+								success: function (data) {		}
+								});	
+					}
+					alert(data.mensaje)
+					location.reload('/sms/');
+
+				}
+			}
+		});		
+	}
+
+
+
+	});*/
+
+
+</script>
+{% endblock %}
+
+{% block breadcrumb %}{{ block.super }}{% endblock %}
+{% block content %}
+
+<div class="row">
+<!-- 
+<div class="col-md-12" align="center">
+		<input type="text" name="" placeholder="RFC" id="rfc_cliente">
+		<button class="btn btn-succes" id="buscar">Buscar</button>
+	</div>
+	<br>
+	<br>
+	<div class="alert alert-danger hidden" role="alert" align="center" id="cliente_no">
+	  EL CLIENTE NO EXISTE O SU RFC NO COINCIDE CON LA INFORMACION QUE SE TIENE,POR FAVOR CONTACTAR CON EL ADMINISTRADOR DEL SISTEMA
+	</div>
+	<div class="alert alert-warning hidden" role="alert" align="center" id="saldo_no">
+	  EL CLIENTE NO TIENE REGISTROS DE SALDOS ANTERIORES
+	</div>
+	<div class="alert alert-success hidden" role="alert" align="center" id="saldo_si">
+	  ULTIMO REGISTRO DE SALDO DEL CLIENTE
+	</div>
+	<div class="col-md-12 hidden" align="center" id="info">
+		<div class="col-md-4"><label>Nombre Cliente </label><br><span id="nom_cliente"></span></div>
+		<div class="col-md-4"><label>Saldo Anterior </label><br><span id="saldo"></span></div>
+		<div class="col-md-4"><label>Fecha </label><br><span id="fecha"></span></div>
+	</div>
+	<div class="col-md-12 hidden" align="center" id="saldo_acreditar">
+		<br>
+		<br>
+		<div>	
+			<label>Credito Disponible:  </label><span id="credito"></span>
+		</div>
+		<div>			
+			<label>Saldo por acreditar</label><br><input type="text" name="" id="creditos_ped"><br><button class="btn btn-primary" id="agregar">Solicitar saldo</button>	
+		</div>
+</div>
+ -->
+ <div class="col-md-12">
+ <form enctype="multipart/form-data" method="post" >
+
+ 	
+  <p>
+{% csrf_token %}	
+    {{ form.errors }}
+
+    {{form}}
+
+    <input type="submit" value="Enviar datos">
+
+  </p>
+
+</form>
+	{% if mensaje %}
+	<div class="alert alert-warning" role="alert" align="center" id="saldo_no">
+	  {{mensaje}}
+	</div>
+	{%endif%}
+ </div>
+</div>
+
+
+{% endblock %}
