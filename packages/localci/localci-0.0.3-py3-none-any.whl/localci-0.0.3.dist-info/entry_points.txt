@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        localci=localci.__main__:main
+    
