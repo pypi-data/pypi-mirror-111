@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: micro-aes
+Version: 2021.6
+Summary: A pure python implementation of the AES encryption algorithm
+Home-page: https://github.com/Z-40/MicroAES
+Author: Z-40
+Author-email: UNKNOWN
+License: GNU General Public License Version 3.0
+Keywords: AES,cryptography
+Platform: UNKNOWN
+
+UNKNOWN
+
+
