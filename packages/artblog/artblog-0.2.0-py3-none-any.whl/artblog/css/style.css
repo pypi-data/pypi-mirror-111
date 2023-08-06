@@ -1,0 +1,119 @@
+:root {
+  --main-bg-color: #F8F9FA;
+
+  --navbar-bg-color: #324376;
+  --navbar-selected-page: #F5DD90;
+  --navbar-hover: #6096BA;
+  --navbar-text-color: white;
+  --navbar-text-color-when-selected: black;
+
+  --link-text-color: #324376;
+  --link-bg-color-when-hover-active: #F5DD90;
+  --link-text-color-when-hover-active: black;
+  --link-text-color-when-visited: grey;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    padding: 10px;
+    background: var(--main-bg-color);
+    margin: 0;
+  }
+
+img {
+    max-width:95%;
+    height:auto;
+}
+
+ul.navbar-top {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--navbar-bg-color);
+}
+
+ul.navbar-top li a {
+  display: block;
+  color: var(--navbar-text-color);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  float: left;
+}
+
+ul.navbar-top li a.right {float: right;}
+
+ul.navbar-top li a:hover:not(.active) {background-color: var(--navbar-hover);}
+ul.navbar-top li a.active {
+  background-color: var(--navbar-selected-page);
+  color: var(--navbar-text-color-when-selected);
+}
+
+/* Responsive navbar */
+@media screen and (max-width: 576px) {
+  ul.navbar-top li a.right, ul.navbar-top li a {
+    float: none;
+  }
+}
+
+/* Posts styling as title and summary */
+h3.post-title a:link {
+  text-decoration: none;
+  color: var(--link-text-color);
+}
+h3.post-title a:visited {
+  color: var(--link-text-color-when-visited);
+}
+h3.post-title a:hover,
+h3.post-title a:active {
+  background-color: var(--link-bg-color-when-hover-active);
+  color: var(--link-text-color-when-hover-active);
+}
+
+/* p.post-summary {
+  margin-top: -15px;
+} */
+
+/* Post links */
+.row-post {
+  display: flex;
+}
+
+/* Create two columns: image followed by text */
+.column-image {
+  flex: 25%;
+  padding: 10px;
+}
+
+.column-text {
+  flex: 75%;
+  padding: 10px;
+}
+
+img.post-image {
+  width: 250px;
+  height: auto;
+}
+
+img.post-image:hover,
+img.post-image:active {
+  filter: brightness(120%) saturate(120%);
+}
+
+img.logo-image:hover,
+img.logo-image:active {
+  filter: brightness(120%) saturate(120%);
+}
+
+/* Table formatting */
+table, td, th {
+  border: 1px solid black;
+}
+table {
+  border-collapse: collapse;
+}
