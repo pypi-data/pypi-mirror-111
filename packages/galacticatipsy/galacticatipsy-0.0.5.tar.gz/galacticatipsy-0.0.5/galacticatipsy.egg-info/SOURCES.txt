@@ -1,0 +1,10 @@
+README.txt
+setup.py
+galacticatipsy/__init__.py
+galacticatipsy/test1.py
+galacticatipsy/test2.py
+galacticatipsy.egg-info/PKG-INFO
+galacticatipsy.egg-info/SOURCES.txt
+galacticatipsy.egg-info/dependency_links.txt
+galacticatipsy.egg-info/requires.txt
+galacticatipsy.egg-info/top_level.txt
