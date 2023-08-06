@@ -1,0 +1,138 @@
+Metadata-Version: 2.1
+Name: rabbitmq-wrapper
+Version: 1.0.3
+Summary: Facilitate your rabbitmq implementation
+Home-page: https://github.com/shinneider/rabbitmq-wrapper
+Author: Shinneider Libanio da Silva
+Author-email: shinneider-libanio@hotmail.com
+License: MIT
+Keywords: rabbit,rabbitmq,pika,flask,django,queue
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Rabbit MQ Wrapper
+=============================
+
+Create a class to rapid implementation of rabbitmq on your project  
+If you use or like the project, click `Star` and `Watch` to generate metrics and i evaluate project continuity.  
+Obs: Notes this implementatio use [pika](https://pypi.org/project/pika/) as a basis.
+
+# Install:
+
+```
+pip install rabbitmq-wrapper
+```
+
+# Usage:
+1. Import RabbitWrapper Class:
+
+   ```
+   from rabbitmq_wrapper import RabbitWrapper
+   ```
+
+1. Create a configuration dict:
+
+   ```
+   {
+      'ENABLED': True,
+      'USE_EXCHANGE': '',
+
+      # QUEUES
+      'DEFAULT_QUEUE': 'my_queue',
+      'DEADLETTER_QUEUE': 'my_queue_deadletter',  # default is setted to f"DEFAULT_QUEUE_deadletter"
+      'ALLOWED_QUEUES': ['my_queue', 'my_queue_deadletter'],  # default is [DEFAULT_QUEUE, DEADLETTER_QUEUE]
+
+      # CONNECTION
+      'CONNECTION': {
+         # see all parameters on https://pika.readthedocs.io/en/stable/modules/parameters.html#connectionparameters, https://pika.readthedocs.io/en/stable/modules/credentials.html#module-pika.credentials
+         'HOST': '',
+         'PORT': '',
+         'USERNAME': '',
+         'PASSWORD': ''
+      },
+      # if your prefer, you can use url connection
+      'CONNECTION': {
+         'URL': 'amqp://',
+      }
+
+      # Consumers
+      'CONSUMERS': [
+         # See all parameters on https://pika.readthedocs.io/en/stable/modules/channel.html#pika.channel.Channel.basic_consume 
+         # Obs the param "on_message_callback" is replaced by callback and receive string with callback function path
+         {'queue': 'email_service', 'callback': 'app.callbacks.MyReceiver', 'auto_ack': False}
+      ]
+   }
+   ```
+
+1. Instance with settings
+
+   ```
+   RabbitWrapper(config={ ... })
+   # or if your use django, you can put config on settings.py, and pass a name to instance
+   RabbitWrapper(name=MyCustomConfig)
+   # in settings.py:
+   RABBIT_MyCustomConfig = { ... }
+   ```
+
+1. Use Message Receive Wrapper Class:
+
+   ```
+   from rabbitmq_wrapper import CallbackWrapper
+
+   class MyReceiver(CallbackWrapper):
+      NAME = ''  # Name used to instance RabbitWrapper or None
+      CONFIG = None  # Config used to instance RabbitWrapper or None
+      
+      def consume_data(self, raw_msg):
+         # Your logic here.
+         self.msg_ack()
+
+   ```
+
+# Others
+
+1. See custom methods on CallbackWrapper:
+   1. Message ACK
+
+   ```
+   self.msg_ack()
+   ```
+
+   1. Parse data to json
+
+   ```
+   # Obs: Name or Config in class params needed to use param deadletter_on_error
+   self.msg_json_parser(data={}, deadletter_on_error=False, ack_on_error=False)
+   ```
+
+   1. Resend msg to queue
+
+   ```
+   # Obs: Name or Config in class params needed to use this
+   self.msg_resend(self, data, queue=None, json=True) # params: data (data to resend), queue (queue to resend), json (parse data to json).
+   ```
+
+   1. Move msg to deadletter
+   
+   ```
+   # Obs: Name or Config in class params needed to use this
+   self.msg_deadletter(self, data, queue=None, json=True) # params: (data to move), queue (queue to move), json (parse data to json)
+   ```
+
+
