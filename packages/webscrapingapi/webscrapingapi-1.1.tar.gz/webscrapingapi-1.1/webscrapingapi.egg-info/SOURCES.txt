@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+WebScrapingApi/__init__.py
+WebScrapingApi/client.py
+webscrapingapi.egg-info/PKG-INFO
+webscrapingapi.egg-info/SOURCES.txt
+webscrapingapi.egg-info/dependency_links.txt
+webscrapingapi.egg-info/requires.txt
+webscrapingapi.egg-info/top_level.txt
