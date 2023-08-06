@@ -1,0 +1,17 @@
+gtranstomp3/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gtranstomp3/logger.py,sha256=QXzpo-2c-sUI8L0uwbrrqBQBsjYFKhRmRga7lkRSMao,698
+gtranstomp3/main.py,sha256=2fssxCkR5ysbYo-Avgh4m2Ti76V68EEds1H5RW9-m2k,599
+gtranstomp3/utils.py,sha256=ni_7uMoxseLzW3h1GuB3hTFfx0E8gVZIrCOQeHPm9Go,858
+gtranstomp3/pipeline/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gtranstomp3/pipeline/pipeline.py,sha256=hZjaCT1LAnHqtigryUQ9Ng-oC81RGtcfx5Qbj11BYrY,711
+gtranstomp3/pipeline/steps/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gtranstomp3/pipeline/steps/get_sentence.py,sha256=W71V-xhMDnRJcHGTXO5plNwwMwx2FimzYpwnHhfeYFk,1361
+gtranstomp3/pipeline/steps/get_user_input.py,sha256=r3n5SfwnbOAAVYpAMWXre1SqQVxZudyvYeoJlJD3n8A,2240
+gtranstomp3/pipeline/steps/read_files.py,sha256=xv6hi62gonXcviEVzxHsLTyeiU3BYrDNCbVEXNYjkig,308
+gtranstomp3/pipeline/steps/step.py,sha256=XMFdAG80RoCI6ksaHIedy3MGwPiQNc8CHX1VQn-WRCo,247
+gtranstomp3/pipeline/steps/translate_to_mp3.py,sha256=ar0nwxyMEeZXlbpD0zvWiHvChHa8aEMeF9gqPKV3UGo,1265
+gtranstomp3-0.1.0.dist-info/LICENSE,sha256=kb_TBozEubgoqQhkZtyEw49HG3aRj2NKtZBspkruRqA,1068
+gtranstomp3-0.1.0.dist-info/METADATA,sha256=7EIhG2Y0Sh3Z7F9-jH4ap9RNOkiUypBBFqS8eIJZyNE,1791
+gtranstomp3-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+gtranstomp3-0.1.0.dist-info/top_level.txt,sha256=SF6qqs-H36ysjxCinL-4d1WYY1RG_HEKJ4MXFKsYK6A,12
+gtranstomp3-0.1.0.dist-info/RECORD,,
