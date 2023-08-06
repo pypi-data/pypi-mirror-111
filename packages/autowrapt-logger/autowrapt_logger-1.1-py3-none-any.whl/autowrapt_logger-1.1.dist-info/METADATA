@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: autowrapt-logger
+Version: 1.1
+Summary: logging by environment
+Home-page: https://github.com/eunchong/autowrapt-logger
+Author: eunchong
+Author-email: UNKNOWN
+License: BSD
+Platform: UNKNOWN
+Requires-Dist: autowrapt (>=1.0)
+
+UNKNOWN
+
+
