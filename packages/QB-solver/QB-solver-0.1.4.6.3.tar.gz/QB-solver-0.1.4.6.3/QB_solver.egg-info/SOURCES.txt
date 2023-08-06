@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+QB_solver.egg-info/PKG-INFO
+QB_solver.egg-info/SOURCES.txt
+QB_solver.egg-info/dependency_links.txt
+QB_solver.egg-info/entry_points.txt
+QB_solver.egg-info/requires.txt
+QB_solver.egg-info/top_level.txt
+qb-solver/__init__.py
+qb-solver/cubesolver.py
+qb-solver/main.py
+qb-solver/virtualcube.py
+qb-solver/visCube.py
+qb-solver/visHints.py
