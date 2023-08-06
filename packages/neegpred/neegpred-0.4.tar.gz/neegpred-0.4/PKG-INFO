@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: neegpred
+Version: 0.4
+Summary: predicit liking and BDM results from EEG signals
+Home-page: https://github.com/KeshetTadmor/neegpred
+Author: Adi Cohen, Nimrod Leberstein & Keshet Tadmor
+Author-email: nimrodlbr@gmail.com
+License: GNU General Public License v3.0
+Download-URL: https://github.com/KeshetTadmor/neegpred/archive/refs/tags/0.1.tar.gz
+Description: This package is intended to be used by Prof. Dino Levy, It offers a platform to train
+        models that can predict the effect of a given commercial by EEG signal processingand Machine learning
+Keywords: EEG,ML,neuro economy
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
