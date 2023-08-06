@@ -1,0 +1,40 @@
+<div class="{{ css }} show fade" tabindex="-1" role="dialog" aria-hidden="true" data-url="{{ modal_url }}" data-backdrop="static" data-keyboard="false">
+    {% block style %}
+    {% endblock %}
+    <div class="{{ css }}-dialog {{ css }}-{% if size %}{{ size }}{% else %}lg{% endif %}" role="document">
+        <div class="modal-content">
+            <input type="hidden" name="modal_style" value="{{ slug.modalstyle }}">
+            {% block modal_header %}
+                {% if header_title %}
+                    <div class="modal-header">
+                        <span class="modal-title">
+                            {% block header_title %}
+                                {{ header_title }}
+                            {% endblock %}
+                        </span>
+                        {% if not no_header_x %}
+                            <button type="button" data-dismiss="modal">
+                                <i class="fas fa-times pt-1"></i>
+                            </button>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            {% endblock %}
+            <div class="{{ css }}-body">
+                {% block modal_content %}
+                    {{ form }}
+                {% endblock %}
+            </div>
+            {% block footer %}
+                {{ footer }}
+            {% endblock %}
+        </div>
+    </div>
+    {% block javascript %}
+        {% if script %}
+            <script>
+                {{ script }}
+            </script>
+        {% endif %}
+    {% endblock %}
+</div>
