@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: get-random-word
+Version: 0.0.6
+Summary: Random word generator
+Home-page: UNKNOWN
+Author: Kunal Ostwal
+Author-email: <kunaldostwal@gmail.com>
+License: UNKNOWN
+Keywords: python,random word generator,random noun generator
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+
+Generates a random word from a list of over 6000 commonly used nouns from http://www.desiquintans.com/nounlist.  
+Installation  
+pip install get-random-word  
+Usage  
+from get-random-word import get_random  
+
