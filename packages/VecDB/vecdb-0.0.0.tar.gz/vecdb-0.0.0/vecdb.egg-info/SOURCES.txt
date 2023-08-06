@@ -1,0 +1,8 @@
+README.md
+setup.py
+vecdb/__init__.py
+vecdb/main.py
+vecdb.egg-info/PKG-INFO
+vecdb.egg-info/SOURCES.txt
+vecdb.egg-info/dependency_links.txt
+vecdb.egg-info/top_level.txt

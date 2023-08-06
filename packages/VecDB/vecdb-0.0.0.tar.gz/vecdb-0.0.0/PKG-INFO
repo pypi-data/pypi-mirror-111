@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: vecdb
+Version: 0.0.0
+Summary: VecDB
+Home-page: UNKNOWN
+Author: OnSearch Pty Ltd
+Author-email: dev@vecdb.com
+License: Apache
+Description: VecDB
+Keywords: VecDB.
+Platform: UNKNOWN
+Requires-Python: >=3
+Description-Content-Type: text/markdown
