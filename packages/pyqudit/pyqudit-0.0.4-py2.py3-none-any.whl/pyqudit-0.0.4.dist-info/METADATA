@@ -1,0 +1,34 @@
+Metadata-Version: 2.0
+Name: pyqudit
+Version: 0.0.4
+Summary: Test package of Qudit
+Home-page: https://github.com/ordoptimus/pyqudit
+Author: The Quanteam
+Author-email: orodaux@student.sfit.ac.in
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/ordoptimus/pyqudit/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+
+## Qudit [WIP]
+
+PyQudit [0.0.4]
+
+A Python package for using generalised versions of quantum gates for N-dimensions. Enables building circuits on qudit logic.
+
+## To install PyQudit
+cd to/unzipped/package/dir
+python3 setup.py install
+
+## Test package
+import pyqudit.qudit as pq
+
+## Show all package functions
+dir(pq)
+
+
