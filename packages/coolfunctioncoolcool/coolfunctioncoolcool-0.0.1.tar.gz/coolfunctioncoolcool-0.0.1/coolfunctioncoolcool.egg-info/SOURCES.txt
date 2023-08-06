@@ -1,0 +1,8 @@
+setup.py
+TheCoolFunctions/__init__.py
+TheCoolFunctions/function1.py
+TheCoolFunctions/function2.py
+coolfunctioncoolcool.egg-info/PKG-INFO
+coolfunctioncoolcool.egg-info/SOURCES.txt
+coolfunctioncoolcool.egg-info/dependency_links.txt
+coolfunctioncoolcool.egg-info/top_level.txt
