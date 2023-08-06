@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: tournament
+Version: 1.0.0
+Summary: Match service.
+Home-page: https://github.com/softwerks/tournament
+Author: Softwerks
+Author-email: info@softwerks.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aioredis
+Provides-Extra: dev
+Requires-Dist: hupper ; extra == 'dev'
+Provides-Extra: dev-opt
+Requires-Dist: watchdog ; extra == 'dev-opt'
+
+# tournament
+
+
