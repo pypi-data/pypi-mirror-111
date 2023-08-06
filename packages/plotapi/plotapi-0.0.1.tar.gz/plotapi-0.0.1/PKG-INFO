@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: plotapi
+Version: 0.0.1
+Summary: Python package for creating beautiful and interactive diagrams.
+Home-page: https://github.com/shahinrostami/plotapi
+Author: Dr. Shahin Rostami
+Author-email: hello@shahinrostami.com
+License: MIT
+Description: # plotapi
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
