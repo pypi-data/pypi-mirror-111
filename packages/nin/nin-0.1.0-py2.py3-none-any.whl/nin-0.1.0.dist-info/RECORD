@@ -1,0 +1,10 @@
+nin/__init__.py,sha256=SW-02-b8MZ4Tpt1F72kRVfRm5R48G9xWxHXG3P_iGOc,119
+nin/cli.py,sha256=_haw2BZGImKdWSsL7Jer4dgyovUbUDIhKWHjHBoCJZ8,262
+nin/cli_dns.py,sha256=foOVPEdGytS6NYtm6TroJnK7EmJoBJ2dAkbxmds00N4,1086
+nin/nin.py,sha256=h0hwdogXGFqerm-5ZPeT-irPn91pCcQRjiHThXsRzEk,19
+nin-0.1.0.dist-info/LICENSE,sha256=u6hVlrsxlthBlvtCeKnlNPo50g3GVIEw81q_oOSeGGQ,1067
+nin-0.1.0.dist-info/METADATA,sha256=4Q7s3ZtBYD6-q7x3YlJwcjk4YhSGX3-VvS3OaFoQSbk,1514
+nin-0.1.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+nin-0.1.0.dist-info/entry_points.txt,sha256=RqUuZXnL3QgPDweupe0IQHIhVn4idt7HMNqGdPhvyus,38
+nin-0.1.0.dist-info/top_level.txt,sha256=ryPeOPrcSCV03Ug4PuJeKgqUuURCYmuFoOd8-NlXU5s,4
+nin-0.1.0.dist-info/RECORD,,
