@@ -1,0 +1,12 @@
+well_profile/__init__.py,sha256=M-rVkFTg8k1uUsiTdOtqXw0kjaEZxAMVI8yZ8UIJl6U,103
+well_profile/create_trajectory.py,sha256=uFLG1ySfv6Txob5wL_g3InLGEpMNAFur6Gl4HwWaM7E,13721
+well_profile/equations.py,sha256=AWGVmNqrmy83_r4V28GBffX7pXkeh31nnXnOM5dbbsQ,3766
+well_profile/generator.py,sha256=2P3WJnYJ6vEWUXTdxyRXIJDWTTkVKUekdIqe1R6-880,3677
+well_profile/load_trajectory.py,sha256=4ZxbkKYV0xgrKIdCKssXHINzvEeWkI0IwF_tLDDT1nI,9878
+well_profile/plot.py,sha256=lJeRUUU7fWMKPQ1leIK7IoRAw_oWPBvnLfDjFqaHWhE,8532
+well_profile/well.py,sha256=VY9uRCZu0e2ABX603jtPSwEnR_mJgnpCvY3yBu1eN3k,4451
+well_profile-0.6.1b1.dist-info/LICENSE.md,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+well_profile-0.6.1b1.dist-info/METADATA,sha256=4kDxMaVvJbvtaRI5jPS913oyEBoFVu3_sTwVYP9Jwmg,4820
+well_profile-0.6.1b1.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+well_profile-0.6.1b1.dist-info/top_level.txt,sha256=MXCzlcd_3cqF9cESI1QxdtZ4hw_34BH7MXFpgHiA3O0,13
+well_profile-0.6.1b1.dist-info/RECORD,,
