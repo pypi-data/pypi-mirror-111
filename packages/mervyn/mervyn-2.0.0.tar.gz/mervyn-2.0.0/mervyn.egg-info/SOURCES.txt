@@ -1,0 +1,10 @@
+README.md
+mervyn
+pyproject.toml
+setup.py
+mervyn.egg-info/PKG-INFO
+mervyn.egg-info/SOURCES.txt
+mervyn.egg-info/dependency_links.txt
+mervyn.egg-info/not-zip-safe
+mervyn.egg-info/requires.txt
+mervyn.egg-info/top_level.txt
