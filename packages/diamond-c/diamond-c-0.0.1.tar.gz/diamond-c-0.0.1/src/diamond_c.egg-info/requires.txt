@@ -1,0 +1,2 @@
+diamond-d>=0
+diamond-e>=0
