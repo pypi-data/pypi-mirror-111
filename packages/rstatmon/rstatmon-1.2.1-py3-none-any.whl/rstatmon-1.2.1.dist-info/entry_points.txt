@@ -1,0 +1,4 @@
+[console_scripts]
+rstatmon = rstatmon.rstat:main
+rstatmon-setup = rstatmon.db_setup:main
+

@@ -1,0 +1,44 @@
+{
+    "chart": {
+        "temperature": {
+            "yaxes": {
+                "min": 0,
+                "max": 100,
+                "step": 20
+            },
+            "streaming": {
+                "duration": 10000
+            }
+        },
+        "usage": {
+            "yaxes": {
+                "min": 0,
+                "max": 100,
+                "step": 20
+            },
+            "streaming": {
+                "duration": 60000
+            }
+        },
+        "memory": {
+            "yaxes": {
+                "min": 0,
+                "max": 100,
+                "step": 20
+            },
+            "streaming": {
+                "duration": 60000
+            }
+        },
+        "frequency": {
+            "yaxes": {
+                "min": 0,
+                "max": 100,
+                "step": 20
+            },
+            "streaming": {
+                "duration": 10000
+            }
+        }
+    }
+}

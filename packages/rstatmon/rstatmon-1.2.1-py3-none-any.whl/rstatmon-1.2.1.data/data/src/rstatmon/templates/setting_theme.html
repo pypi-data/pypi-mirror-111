@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="column is-5 is-offset-2">
+    <div class="block">
+        <div class="box has-background-grey-dark">
+            <h1 class="title is-2">
+                Switch the theme
+            </h1>
+            <div class="block">
+                <p class="has-text-white is-large">
+                    In this page, you can change the color scheme, font color to emphasis,
+                    background color of the project.
+                </p>
+            </div>
+        <div class="block is-dark">
+            <form id="color_settings" action="/theme" method="POST">
+                <div class="field is-horizontal">
+                    <div class="field-label is-large has-text-{{ session['label_font_color'] }}">
+                        Colors
+                    </div>
+                    <div class="field-body">
+                        <div class="field is-narrow">
+                            <div class="control">
+                                {% if colors %}
+                                <select name="color" id="color" style="width: 150px; height: 35px; font-size: 18px;" value=>
+                                    {% for color in colors %}
+                                    {% if color == session["background_color"] %}
+                                    <option value="{{ color }}" selected>{{ color.capitalize() }}</option>
+                                {% else %}
+                                    <option value="{{ color }}">{{ color.capitalize() }}</option>
+                                {% endif %}
+                                    {% endfor %}
+                                </select>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-large has-text-{{ session['label_font_color'] }}">
+                        Label
+                    </div>
+                    <div class="field-body">
+                        <div class="field is-narrow">
+                            <div class="control">
+                                <select name="label" id="label" style="width: 150px; height: 35px; font-size: 18px;" value=>
+                                    <option value="white" selected>White</option>
+                                    <option value="black">Black</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-large has-text-{{ session['label_font_color'] }}">
+                        Emphasis
+                    </div>
+                    <div class="field-body">
+                        <div class="field is-narrow">
+                            <div class="control">
+                                <select name="emp" id="emp" style="width: 150px; height: 35px; font-size: 18px;" value=>
+                                    <option value="red">red</option>
+                                    <option value="yellow" selected>yellow</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-large has-text-{{ session['label_font_color'] }}">
+                        Theme
+                    </div>
+                    <div class="field-body">
+                        <div class="field is-narrow">
+                            <div class="control">
+                                {% if themes %}
+                                <select name="theme" id="theme" style="width: 150px; height: 35px; font-size: 18px;">
+                                    {% for theme in themes %}
+                                        {% if theme == session["bulmaswatch_theme"] %}
+                                            <option value="{{ theme }}" selected>{{ theme }}</option>
+                                        {% else %}
+                                            <option value="{{ theme }}">{{ theme }}</option>
+                                        {% endif %}
+                                    {% endfor %}
+                                </select>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <button class="button" type="submit">
+                        Update
+                    </button>
+                </div>
+                </form>
+        </div>
+    </div>
+</div>
+
+    {% endblock %}

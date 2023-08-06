@@ -1,0 +1,13 @@
+{
+    "general": {
+        "view": {
+            "color": {
+                "background": "is-dark",
+                "emphasis": "yellow",
+                "graph_background": "#282f2f",
+                "label": "white"
+            },
+            "theme": "flatly"
+        }
+    }
+}

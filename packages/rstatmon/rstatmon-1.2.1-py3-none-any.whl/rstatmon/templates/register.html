@@ -1,0 +1,80 @@
+{% extends "login_template.html" %}
+
+{% block content %}
+<div class="column is-4 is-offset-4">
+    <h3 class="title">
+        Create account
+    </h3>
+    <div class="box">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul class="filed flashes is-block">
+                {% for category, message in messages %}
+                    <div class="notification is-danger">
+                        <li class="is-size-5">
+                            {{ message }}
+                        </li>
+                    </div>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        {% endwith %}
+        <form action="/register" method="POST" name="register_form" id="register_form">
+            <div class="field">
+                <label class="label is-large has-text-left">
+                    User name
+                </label>
+                <div class="control">
+                    <input class="input is-large" type="text" name="username" placeholder="username" maxlength="30">
+                </div>
+                {% if form %}
+                    <div class="control">
+                    {% for error in form.username.errors %}
+                        <span style="color: red;">{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            <div class="field">
+                <label class="label is-large has-text-left">
+                    Password
+                </label>
+                <div class="control">
+                    <input class="input is-large" type="text" name="password" placeholder="password" maxlength="20">
+                </div>
+                {% if form %}
+                    <div class="control">
+                    {% for error in form.password.errors %}
+                        <span style="color: red;">{{ error }}</span>
+                    {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+            <div class="field">
+                <label class="label is-large has-text-left">
+                    Confirmed password
+                </label>
+                <div class="control">
+                    <input class="input is-large" type="text" name="confirm_password" placeholder="confirm_password" maxlength="20">
+                </div>
+            </div>
+            <button class="button is-block is-info is-medium is-fullwidth" type="sumbit" name="submit">
+                Register
+            </button>
+        </form>
+        <div class="field is-grouped">
+            <div class="control">
+                <a href="{{ url_for('login') }}">
+                    <button class="button is-block is-medium is-warning">
+                        Back
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+

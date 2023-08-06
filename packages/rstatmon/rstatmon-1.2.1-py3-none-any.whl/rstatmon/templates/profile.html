@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="column is-8">
+        <div class="block">
+            {% if current_user%}
+            <div class="control title">
+                    Current user
+            </div>
+            <div class="control">
+                <div class="is-size-3">
+                    <p class="has-text-warning">
+                        {{ current_user.username }}
+                    </p>
+                </div>
+            </div>
+                {% endif %}
+        </div>
+            <div class="block">
+                <h1 class="title">
+                    Actions
+                </h1>
+                <div class="tile is-ancestor">
+                    <div class="tile is-3">
+                        <a class="tile link" href="{{ url_for('register') }}">
+                            <div class="tile is-parent">
+                                <div class="tile is-child notification is-primary">
+                                    <p class="title is-size-4">Create account</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="tile is-3">
+                        <a class="tile link" href="{{ url_for('login') }}">
+                            <div class="tile is-parent">
+                                <div class="tile is-child notification is-info">
+                                    <p class="title is-size-4">Login as another user</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="tile is-3">
+                        <a class="tile link" href="{{ url_for('delete') }}">
+                            <div class="tile is-parent">
+                                <div class="tile is-child notification is-danger">
+                                    <p class="title is-size-4">Delete account</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="tile is-3">
+                        <a class="tile link" href="{{ url_for('logout') }}">
+                            <div class="tile is-parent">
+                                <div class="tile is-child notification is-warning has-text-black">
+                                    <p class="title has-text-dark is-size-4">Logout</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+
+    {% endblock %}

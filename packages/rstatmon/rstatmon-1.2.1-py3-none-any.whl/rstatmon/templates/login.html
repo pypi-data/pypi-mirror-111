@@ -1,0 +1,57 @@
+{% extends "login_template.html" %}
+
+{% block content %}
+
+<div class="column is-5 is-offset-4">
+    <h3 class="title">
+        Login
+    </h3>
+    <div class="box">
+        <form action="/login" method="POST" name="login_form">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <ul class="filed flashes is-block">
+                        {% for category, message in messages %}
+                        <div class="notification is-{{ category }}">
+                            <li class="is-size-5">
+                                {{ message }}
+                            </li>
+                        </div>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+            <div class="field">
+              <label class="label is-large has-text-left">User name</label>
+              <div class="control">
+                <input class="input is-medium" type="text" name="username" placeholder="username">
+              </div>
+            </div>
+            <div class="field">
+              <label class="label is is-large has-text-left">Password</label>
+              <div class="control">
+                <input class="input is-medium" type="text" name="password" placeholder="password">
+              </div>
+            </div>
+            <div class="field is-grouped">
+                <button class="button is-block is-info is-fullwidth is-medium" type="sumbit" name="submit">
+                    Login
+                </button>
+            </div>
+        </form>
+        {% if "127" in address %}
+        <div class="field is-grouped">
+            <div class="control">
+                <a href="{{ url_for('register') }}">
+                    <button class="button is-block is-size-5 is-primary">
+                        Sign up
+                    </button>
+                </a>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
+

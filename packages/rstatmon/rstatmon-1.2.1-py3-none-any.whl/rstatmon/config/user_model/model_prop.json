@@ -1,0 +1,25 @@
+{
+    "model": "",
+    "datasets": {
+        "label": "data1",
+        "color": "red"
+    },
+    "label": "user_defined",
+    "xaxes": {
+        "fontsize": 16,
+        "ticksize": 16,
+        "label": "current time"
+    },
+    "yaxes": {
+        "fontsize": 16,
+        "ticksize": 16,
+        "label": "",
+        "min": 0,
+        "max": 100,
+        "step": 20
+    },
+    "streaming": {
+        "refresh": 1000,
+        "duration": 10000
+    }
+}

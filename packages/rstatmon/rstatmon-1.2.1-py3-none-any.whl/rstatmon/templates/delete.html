@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="column is-8">
+    <div class="box has-background-grey-dark">
+        <h1 class="title is-2">
+            Delete account
+        </h1>
+        <div class="block">
+            <p class="has-text-white is-size-4">
+                Select the account to delete.
+            </p>
+        </div>
+        <form action="/delete" method="POST">
+            <div class="field is-grouped is-grouped-centered is-medium">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        <div class="control">
+                            {% for category, message in messages %}
+                                <p class="has-text-warning is-size-4">
+                                    {{ message }}
+                                </p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endwith %}
+                <div class="control">
+                    <div class="select is-size-4">
+                        <select name="user" id="user">
+                            {% if form %}
+                            {% for user in form %}
+                            <option>
+                                {{ user.username }}
+                            </option>
+                            {% endfor %}
+                            {% endif %}
+                        </select>
+                    </div>
+                </div>
+                <div class="control">
+                    <button type="submit" class="button is-danger is-size-4">
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </form>
+        </div>
+</div>
+
+    {% endblock %}

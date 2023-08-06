@@ -1,0 +1,742 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="column is-5 is-offset-2">
+    <div class="block">
+        <div class="box has-background-grey-dark">
+            <h1 class="title is-2 has-text-white">
+                Plot the past data
+            </h1>
+            <div class="block">
+                <p class="has-text-white is-large">
+                    In this page, you can draw the graph from the log. Select
+                    date, click plot button to plot the data.
+                </p>
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div class="block flashes">
+                        {% for category, message in messages %}
+                            <div class="notification is-{{ category }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                {% endwith %}
+            <form id="date_plot" action="/plot_data" method="POST">
+                <div class="columns">
+                    <div class="column is-3">
+                        <div class="field">
+                            <label class="label is-large has-text-{{ session['label_font_color'] }}">
+                                Date
+                            </label>
+                        <input class="input" type="text" id="datepicker" name="date" autocomplete="off" placeholder="Select date" required style="width: 75%;">
+                        </div>
+                    </div>
+                    <div class="column is-3">
+                        <div class="field">
+                            <label class="label is-large has-text-{{ session['label_font_color'] }}">
+                                Start
+                            </label>
+                        <input class="input" type="text" id="start" name="start" value="00:00" required style="width: 75%; text-align: right;">
+                        </div>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-3">
+                        <div class="field">
+                            <label class="label is-large has-text-{{ session['label_font_color'] }}">
+                                Sampling rate
+                            </label>
+                            <input class="input" type="text" id="rate" name="rate" value="1" maxlength="3" required style="width: 75%; text-align: right;">
+                        </div>
+                    </div>
+                    <div class="column is-3">
+                        <div class="field">
+                            <label class="label is-large has-text-{{ session['label_font_color'] }}">
+                                End
+                            </label>
+                        <input class="input" type="text" id="end" name="end" value="24:00" required style="width: 75%; text-align: right;">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label is-large has-text-{{ session['label_font_color'] }}">
+                        Unit
+                    </label>
+                    <select name="unit" id="unit" style="width: 25%; height: 35px; font-size: 18px;">
+                        <option value="hour" selected>hour</option>
+                        <option value="min">min</option>
+                        <option value="second">second</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <button class="button" type="submit">Plot</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% if result %}
+    <section>
+        <div class="container">
+            <div class="content">
+                <h1 class="title">
+                    CPU temperature
+                </h1>
+                    <canvas id="temperature"></canvas>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <h1 class="title">
+                    CPU Usage
+                </h1>
+                    <canvas id="usage"></canvas>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <h1 class="title">
+                    Memory Usage
+                </h1>
+                <canvas id="memory"></canvas>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <h1 class="title">
+                    CPU frequency
+                </h1>
+                <canvas id="frequency"></canvas>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <h1 class="title">
+                    Load Average
+                </h1>
+                <canvas id="loadavg"></canvas>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+<script>
+    {% if date_list %}
+        {% autoescape false %}
+            days = {{ date_list }};
+        {% endautoescape %}
+    {% else %}
+        days = [];
+    {% endif %}
+    $(function() {
+        $('#datepicker').datepicker();
+      });
+    /*
+      The date is selectable if the data exists, otherwise not selectable.
+    */
+    $('#datepicker').datepicker({
+        beforeShowDay: function (date) {
+            const year = date.getFullYear().toString();
+            let month = (date.getMonth() + 1).toString();
+            if (month.length == 1)
+            {
+                month = "0" + month;
+            }
+            const day = date.getDate().toString();
+            let format = year + month + day;
+            if (days.includes(format)) {
+                return [true, '', "exists"];
+            } else {
+                return [false, 'ui-state-disabled', "not exist"];
+            }
+        }
+    });
+</script>
+<script>
+    var chartColors = {
+        red: 'rgb(255, 99, 132)',
+        orange: 'rgb(255, 159, 64)',
+        yellow: 'rgb(255, 205, 86)',
+        green: 'rgb(75, 192, 192)',
+        blue: 'rgb(54, 162, 235)',
+        purple: 'rgb(153, 102, 255)',
+        grey: 'rgb(231,233,237)'
+    };
+    var color = Chart.helpers.color;
+    var canvas = document.getElementById("temperature");
+    var ctx = canvas.getContext('2d');
+    ctx.canvas.height = 150;
+    var chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: {% autoescape false %} {{ result.current_time }} {% endautoescape %},
+            datasets: [
+                {
+                    label: "CPU temperature",
+                    data: {{ result.temperature }},
+                    borderColor: color(chartColors.red).alpha(0.8).rgbString(),
+                    backgroundColor: chartColors.red,
+                    pointBackgroundColor: "white",
+                    pointBorderColor: "white",
+                    fill: false
+                }
+            ]
+        },
+        options: {
+            scales: {
+                xAxes: [
+                    {
+                        scaleLabel: {
+                            display: true,
+                            labelString: "Time",
+                            fontSize: 16,
+                            fontColor: "white"
+                        },
+                        type: "time",
+                        time: {
+                            parser: "YYYY-MM-DD HH:mm:ss",
+                            unit: "hour",
+                            stepSize: 3,
+                            displayFormats: {
+                                hour: "HH:mm"
+                            }
+                        },
+                        ticks: {
+                            min: "{{ result.start }}",
+                            max: "{{ result.end }}",
+                            fontSize: 20,
+                            fontColor: "white",
+                        },
+                        gridLines: {
+                            color: "rgba(255, 255, 255, 0.5)",
+                            lineWidth: 0.75
+                        },
+                                pointLabels: {
+                            fontColor: 'white'
+                        }
+                    }
+                ],
+                yAxes: [
+                    {
+                        scaleLabel: {
+                            display: true,
+                            labelString: "Temperature",
+                            fontSize: 20,
+                            fontColor: "white",
+                        },
+                        ticks: {
+                            min: {{ session["graph"].chart.temperature.yaxes.min }},
+                            max: {{ session["graph"].chart.temperature.yaxes.max }},
+                            fontSize: 18,
+                            stepSize: {{ session["graph"].chart.temperature.yaxes.step }},
+                            fontColor: "white",
+                            showLabelBackdrop: false
+                        },
+                        gridLines: {
+                            color: "rgba(255, 255, 255, 0.5)",
+                            lineWidth: 0.75
+                        },
+                        pointLabels: {
+                            fontColor: 'white'
+                        }
+                    }
+                ]
+            },
+            layout: {
+                padding: {
+                    left: 10,
+                    right: 10,
+                    top: 10,
+                    bottom: 10
+                }
+            },
+            legend: {
+                position: 'top',
+                labels: {
+                    fontColor: 'white',
+                    fontSize: 18,
+                },
+            },
+            plugins: {
+                streaming: false
+            }
+        }
+    });
+    Chart.plugins.register({
+        beforeDraw: function(chartInstance) {
+            var ctx = chartInstance.chart.ctx;
+            ctx.fillStyle = "#282f2f";
+            ctx.fillRect(0, 0, chartInstance.chart.width, chartInstance.chart.height);
+        }
+    })
+
+                var canvas2 = document.getElementById("usage");
+                var ctx2 = canvas2.getContext('2d');
+                ctx2.canvas.height = 150;
+                var chart2 = new Chart(ctx2, {
+                    type: 'line',
+                    data: {
+                        labels: {% autoescape false %} {{ result.current_time }} {% endautoescape %},
+                        datasets: [
+                            {
+                                label: "CPU1",
+                                data: {{ result.usage_cpu1 }},
+                                borderColor: color(chartColors.red).alpha(0.8).rgbString(),
+                                backgroundColor: chartColors.red,
+                                pointBackgroundColor: "white",
+                                pointBorderColor: "white",
+                                fill: false
+                            },
+                            {
+                                label: "CPU2",
+                                data: {{ result.usage_cpu2 }},
+                                borderColor: color(chartColors.blue).alpha(0.8).rgbString(),
+                                backgroundColor: chartColors.blue,
+                                pointBackgroundColor: "white",
+                                pointBorderColor: "white",
+                                fill: false
+                            },
+                            {
+                                label: "CPU3",
+                                data: {{ result.usage_cpu3 }},
+                                borderColor: color(chartColors.yellow).alpha(0.8).rgbString(),
+                                backgroundColor: chartColors.yellow,
+                                pointBackgroundColor: "white",
+                                pointBorderColor: "white",
+                                fill: false
+                            },
+                            {
+                                label: "CPU4",
+                                data: {{ result.usage_cpu4 }},
+                                borderColor: color(chartColors.green).alpha(0.8).rgbString(),
+                                backgroundColor: chartColors.green,
+                                pointBackgroundColor: "white",
+                                pointBorderColor: "white",
+                                fill: false
+                            }
+                        ]
+                    },
+                    options: {
+                        scales: {
+                            xAxes: [
+                                {
+                                    scaleLabel: {
+                                        display: true,
+                                        labelString: "Time",
+                                        fontSize: 16,
+                                        fontColor: "white"
+                                    },
+                                    type: "time",
+                                    time: {
+                                        parser: "YYYY-MM-DD HH:mm:ss",
+                                        unit: "hour",
+                                        stepSize: 3,
+                                        displayFormats: {
+                                            hour: "HH:mm"
+                                        }
+                                    },
+                                    ticks: {
+                                        min: "{{ result.start }}",
+                                        max: "{{ result.end }}",
+                                        fontSize: 20,
+                                        fontColor: "white",
+                                    },
+                                    gridLines: {
+                                        color: "rgba(255, 255, 255, 0.5)",
+                                        lineWidth: 0.75
+                                    },
+                                            pointLabels: {
+                                        fontColor: 'white'
+                                    }
+                                }
+                            ],
+                            yAxes: [
+                                {
+                                    scaleLabel: {
+                                        display: true,
+                                        labelString: "Usage  [%]",
+                                        fontSize: 20,
+                                        fontColor: "white",
+                                    },
+                                    ticks: {
+                                        min: {{ session["graph"].chart.usage.yaxes.min }},
+                                        max: {{ session["graph"].chart.usage.yaxes.max }},
+                                        fontSize: 18,
+                                        stepSize: {{ session["graph"].chart.usage.yaxes.step }},
+                                        fontColor: "white",
+                                        showLabelBackdrop: false
+                                    },
+                                    gridLines: {
+                                        color: "rgba(255, 255, 255, 0.5)",
+                                        lineWidth: 0.75
+                                    },
+                                    pointLabels: {
+                                        fontColor: 'white'
+                                    }
+                                }
+                            ]
+                        },
+                        layout: {
+                            padding: {
+                                left: 10,
+                                right: 10,
+                                top: 10,
+                                bottom: 10
+                            }
+                        },
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                fontColor: 'white',
+                                fontSize: 18,
+                            },
+                        },
+                        plugins: {
+                            streaming: false
+                        }
+                    }
+                });
+
+                var canvas3 = document.getElementById("memory");
+                var ctx3 = canvas3.getContext('2d');
+                ctx3.canvas.height = 150;
+                var chart3 = new Chart(ctx3, {
+                    type: 'line',
+                    data: {
+                        labels: {% autoescape false %} {{ result.current_time }} {% endautoescape %},
+                        datasets: [
+                        {
+                            label: "CPU memory",
+                            data: {{ result.memory_cpu }},
+                            borderColor: color(chartColors.red).alpha(0.8).rgbString(),
+                            backgroundColor: chartColors.red,
+                            pointBackgroundColor: "white",
+                            pointBorderColor: "white",
+                            fill: false
+                        },
+                        {
+                            label: "GPU memory",
+                            data: {{ result.memory_gpu }},
+                            borderColor: color(chartColors.blue).alpha(0.8).rgbString(),
+                            backgroundColor: chartColors.blue,
+                            pointBackgroundColor: "white",
+                            pointBorderColor: "white",
+                            fill: false
+                        },
+                            ]
+                    },
+                    options: {
+                        scales: {
+                            xAxes: [
+                                {
+                                    scaleLabel: {
+                                        display: true,
+                                        labelString: "Time",
+                                        fontSize: 16,
+                                        fontColor: "white"
+                                    },
+                                    type: "time",
+                                    time: {
+                                        parser: "YYYY-MM-DD HH:mm:ss",
+                                        unit: "hour",
+                                        stepSize: 3,
+                                        displayFormats: {
+                                            hour: "HH:mm"
+                                        }
+                                    },
+                                    ticks: {
+                                        min: "{{ result.start }}",
+                                        max: "{{ result.end }}",
+                                        fontSize: 20,
+                                        fontColor: "white",
+                                    },
+                                    gridLines: {
+                                        color: "rgba(255, 255, 255, 0.5)",
+                                        lineWidth: 0.75
+                                    },
+                                            pointLabels: {
+                                        fontColor: 'white'
+                                    }
+                                }
+                            ],
+                            yAxes: [
+                                {
+                                    scaleLabel: {
+                                        display: true,
+                                        labelString: "Memory [MB]",
+                                        fontSize: 20,
+                                        fontColor: "white",
+                                    },
+                                    ticks: {
+                                        min: {{ session["graph"].chart.memory.yaxes.min }},
+                                        max: {{ session["graph"].chart.memory.yaxes.max }},
+                                        fontSize: 18,
+                                        stepSize: {{ session["graph"].chart.memory.yaxes.step }},
+                                        fontColor: "white",
+                                        showLabelBackdrop: false
+                                    },
+                                    gridLines: {
+                                        color: "rgba(255, 255, 255, 0.5)",
+                                        lineWidth: 0.75
+                                    },
+                                    pointLabels: {
+                                        fontColor: 'white'
+                                    }
+                                }
+                            ]
+                        },
+                        layout: {
+                            padding: {
+                                left: 10,
+                                right: 10,
+                                top: 10,
+                                bottom: 10
+                            }
+                        },
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                fontColor: 'white',
+                                fontSize: 18,
+                            },
+                        },
+                        plugins: {
+                            streaming: false
+                        }
+                    }
+                });
+
+                var canvas4 = document.getElementById("frequency");
+                var ctx4 = canvas4.getContext('2d');
+                ctx4.canvas.height = 150;
+                var chart4 = new Chart(ctx4, {
+                    type: 'line',
+                    data: {
+                        labels: {% autoescape false %} {{ result.current_time }} {% endautoescape %},
+                        datasets: [
+                        {
+                            label: "CPU frequency",
+                            data: {{ result.frequency_cpu }},
+                            borderColor: color(chartColors.red).alpha(0.8).rgbString(),
+                            backgroundColor: chartColors.red,
+                            pointBackgroundColor: "white",
+                            pointBorderColor: "white",
+                            fill: false
+                        },
+                        {
+                            label: "GPU memory",
+                            data: {{ result.frequency_core }},
+                            borderColor: color(chartColors.blue).alpha(0.8).rgbString(),
+                            backgroundColor: chartColors.blue,
+                            pointBackgroundColor: "white",
+                            pointBorderColor: "white",
+                            fill: false
+                        },
+                            ]
+                    },
+                    options: {
+                        scales: {
+                            xAxes: [
+                                {
+                                    scaleLabel: {
+                                        display: true,
+                                        labelString: "Time",
+                                        fontSize: 16,
+                                        fontColor: "white"
+                                    },
+                                    type: "time",
+                                    time: {
+                                        parser: "YY-MM-DD HH:mm:ss",
+                                        unit: "hour",
+                                        stepSize: 3,
+                                        displayFormats: {
+                                            hour: "HH:mm"
+                                        }
+                                    },
+                                    ticks: {
+                                        min: "{{ result.start }}",
+                                        max: "{{ result.end }}",
+                                        fontSize: 20,
+                                        fontColor: "white",
+                                    },
+                                    gridLines: {
+                                        color: "rgba(255, 255, 255, 0.5)",
+                                        lineWidth: 0.75
+                                    },
+                                            pointLabels: {
+                                        fontColor: 'white'
+                                    }
+                                }
+                            ],
+                            yAxes: [
+                                {
+                                    scaleLabel: {
+                                        display: true,
+                                        labelString: "Frequency [MHz]",
+                                        fontSize: 20,
+                                        fontColor: "white",
+                                    },
+                                    ticks: {
+                                        min: {{ session["graph"].chart.frequency.yaxes.min }},
+                                        max: {{ session["graph"].chart.frequency.yaxes.max }},
+                                        fontSize: 18,
+                                        stepSize: {{ session["graph"].chart.frequency.yaxes.step }},
+                                        fontColor: "white",
+                                        showLabelBackdrop: false
+                                    },
+                                    gridLines: {
+                                        color: "rgba(255, 255, 255, 0.5)",
+                                        lineWidth: 0.75
+                                    },
+                                    pointLabels: {
+                                        fontColor: 'white'
+                                    }
+                                }
+                            ]
+                        },
+                        layout: {
+                            padding: {
+                                left: 10,
+                                right: 10,
+                                top: 10,
+                                bottom: 10
+                            }
+                        },
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                fontColor: 'white',
+                                fontSize: 18,
+                            },
+                        },
+                        plugins: {
+                            streaming: false
+                        }
+                    }
+                });
+
+                var canvas5 = document.getElementById("loadavg");
+                var ctx5 = canvas5.getContext('2d');
+                ctx5.canvas.height = 150;
+                var chart5 = new Chart(ctx5, {
+                    type: 'line',
+                    data: {
+                        labels: {% autoescape false %} {{ result.current_time }} {% endautoescape %},
+                        datasets: [
+                        {
+                            label: "1 min",
+                            data: {{ result.loadavg_1 }},
+                            borderColor: color(chartColors.red).alpha(0.8).rgbString(),
+                            backgroundColor: chartColors.red,
+                            pointBackgroundColor: "white",
+                            pointBorderColor: "white",
+                            fill: false
+                        },
+                        {
+                            label: "5 min",
+                            data: {{ result.loadavg_5 }},
+                            borderColor: color(chartColors.blue).alpha(0.8).rgbString(),
+                            backgroundColor: chartColors.blue,
+                            pointBackgroundColor: "white",
+                            pointBorderColor: "white",
+                            fill: false
+                        },
+                        {
+                            label: "15 min",
+                            data: {{ result.loadavg_15 }},
+                            borderColor: color(chartColors.yellow).alpha(0.8).rgbString(),
+                            backgroundColor: chartColors.yellow,
+                            pointBackgroundColor: "white",
+                            pointBorderColor: "white",
+                            fill: false
+                        },
+                            ]
+                    },
+                    options: {
+                        scales: {
+                            xAxes: [
+                                {
+                                    scaleLabel: {
+                                        display: true,
+                                        labelString: "Time",
+                                        fontSize: 16,
+                                        fontColor: "white"
+                                    },
+                                    type: "time",
+                                    time: {
+                                        parser: "YYYY-MM-DD HH:mm:ss",
+                                        unit: "hour",
+                                        stepSize: 3,
+                                        displayFormats: {
+                                            hour: "HH:mm"
+                                        }
+                                    },
+                                    ticks: {
+                                        min: "{{ result.start }}",
+                                        max: "{{ result.end }}",
+                                        fontSize: 20,
+                                        fontColor: "white",
+                                    },
+                                    gridLines: {
+                                        color: "rgba(255, 255, 255, 0.5)",
+                                        lineWidth: 0.75
+                                    },
+                                        pointLabels: {
+                                        fontColor: 'white'
+                                    }
+                                }
+                            ],
+                            yAxes: [
+                                {
+                                    scaleLabel: {
+                                        display: true,
+                                        labelString: "Load average",
+                                        fontSize: 20,
+                                        fontColor: "white",
+                                    },
+                                    ticks: {
+                                        min: {{ session["graph"].chart.loadavg.yaxes.min }},
+                                        max: {{ session["graph"].chart.loadavg.yaxes.max }},
+                                        fontSize: 18,
+                                        stepSize: {{ session["graph"].chart.loadavg.yaxes.step }},
+                                        fontColor: "white",
+                                        showLabelBackdrop: false
+                                    },
+                                    gridLines: {
+                                        color: "rgba(255, 255, 255, 0.5)",
+                                        lineWidth: 0.75
+                                    },
+                                    pointLabels: {
+                                        fontColor: 'white'
+                                    }
+                                }
+                            ]
+                        },
+                        layout: {
+                            padding: {
+                                left: 10,
+                                right: 10,
+                                top: 10,
+                                bottom: 10
+                            }
+                        },
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                fontColor: 'white',
+                                fontSize: 18,
+                            },
+                        },
+                        plugins: {
+                            streaming: false
+                        }
+                    }
+                });
+
+</script>
+
+{% endblock %}

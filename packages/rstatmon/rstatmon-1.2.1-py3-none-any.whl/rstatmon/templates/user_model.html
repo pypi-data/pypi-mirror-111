@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="column is-8">
+    <div class="block">
+        <div class="content is-centered is-4">
+                <p class="title has-text-centered">
+                    User model
+                </p>
+                <p class="has-text-centered">
+                    There is no model.
+                </p>
+        </div>
+    </div>
+    <div class="section is-offset-3">
+        <div class="tile is-ancestor has-text-centered">
+            <div class="tile is-parent is-offset-4 is-3">
+                <a class="tile link" href="{{ url_for('add') }}">
+                    <div class="tile is-child notification is-info">
+                        <p class="title is-size-4">Add new model</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

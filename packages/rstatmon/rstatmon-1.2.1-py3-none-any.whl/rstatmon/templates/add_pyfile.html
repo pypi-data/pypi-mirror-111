@@ -1,0 +1,271 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="column is-5 is-offset-2">
+    <div class="box has-background-grey-dark has-text-centered">
+        <div class="block is-dark">
+            <form id="user_add" action="/add_graph" method="POST", enctype="multipart/form-data">
+                <div class="container is-large">
+                    <p class="title has-text-left">
+                        Select graph properties
+                    </p>
+                    <label class="label has-text-white is-large has-text-left">
+                        Model
+                    </label>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                Model name
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <select id="model" name="model" required style="width: 200%; height: 35px;">
+                                        {% for model in model_list %}
+                                        <option value="{{ model }}" name="{{ model }}">
+                                            {{ model }}
+                                        </option>
+                                        {% endfor %}
+                                    </select>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <label class="label has-text-white is-large has-text-left">
+                        datasets
+                    </label>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                label
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="datasets_label" value="data1" maxlength="99">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <label class="label has-text-white is-large has-text-left">
+                        label
+                    </label>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                label
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="label" value="user_defined" maxlength="99">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <label class="label has-text-white is-large has-text-left">
+                        x-axes
+                    </label>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                font size
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="xaxes_fontsize" value="16" maxlength="2">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                tick size
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="xaxes_ticksize" value="16" maxlength="2">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                label
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="xaxes_label" value="current time" maxlength="99">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <label class="label has-text-white is-large has-text-left">
+                        y-axes
+                    </label>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                font size
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="yaxes_fontsize" value="16" maxlength="2">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                tick size
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="yaxes_ticksize" value="16" maxlength="2">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                label
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="yaxes_label" placeholder="label of y-axis" value="" maxlength="99">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                min
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="yaxes_min" value="0" maxlength="6">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                max
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="yaxes_max" value="100" maxlength="6">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                step
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="yaxes_step" value="20" maxlength="6">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <label class="label has-text-white is-large has-text-left">
+                        streaming
+                    </label>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                refresh
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="streaming_refresh" value="1000" maxlength="6">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                duration
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="streaming_duration" value="10000" maxlength="6">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-grouped is-centered">
+                        <div class="field-label is-normal">
+                            {% if msg %}
+                                <label class="label has-text-warning">
+                                    <p class="has-text-warning">
+                                        {{ msg }}
+                                    </p>
+                                </label>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="field is-grouped is-centered">
+                        <div class="field-label is-normal">
+                            {% if msg %}
+                                <label class="label has-text-warning">
+                                    <p class="has-text-warning">
+                                        {{ msg }}
+                                    </p>
+                                </label>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="field-body">
+                        <div class="field is-narrow">
+                            <p class="control">
+                                <button class="button is-normal is-info" type="submit" name="add_submit">
+                                    Submit
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

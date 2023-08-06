@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: rstatmon
+Version: 1.2.1
+Summary: A monitoring tool for raspberry pi
+Home-page: UNKNOWN
+Author: git-oawa
+Author-email: stu123254@gmail.com
+License: UNKNOWN
+Keywords: ["raspberry pi","flask"]
+Platform: UNKNOWN
+Classifier: Framework :: Flask
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: System :: Monitoring
+Requires-Python: >=3.6
+Requires-Dist: wheel (>=0.36.0)
+Requires-Dist: flask (>=1.0)
+Requires-Dist: flask-sqlalchemy (>=2.5.1)
+Requires-Dist: flask-bcrypt (>=0.7.0)
+Requires-Dist: flask-login (>=0.5.0)
+Requires-Dist: flask-wtf (>=0.15.1)
+Requires-Dist: sqlalchemy (>=1.4.15)
+Requires-Dist: mysqlclient (>=2.0.3)
+Requires-Dist: pymysql (>=1.0.2)
+Requires-Dist: uptime (>=3.0.1)
+Requires-Dist: loguru (>=0.5.3)
+Requires-Dist: psutil (>=5.6.2)
+
+Raspi-StatMon
+=============
+
+Raspberry pi Status Monitor (StatMon) is simple web application that allow you to monitor statistic data such as CPU temperature and Usage of Raspberry pi on the graph.You can also add a graph to monitor the data obtained from the external sensor connected to the raspi.
+
+
+See [here](https://git-ogawa.github.io/raspi-statmon/) for installation, usage and more details.
+
+
+![](docs/img/demo.gif)
+
+

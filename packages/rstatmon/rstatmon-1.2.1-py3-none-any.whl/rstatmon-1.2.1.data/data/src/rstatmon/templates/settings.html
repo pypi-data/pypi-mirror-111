@@ -1,0 +1,485 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="column is-5 is-offset-2">
+    <div class="block">
+        <div class="box has-background-grey-dark">
+            <h1 class="title is-2 has-text-{{ session['label_font_color'] }}">
+                Change chart properties
+            </h1>
+            <div class="block">
+                <p class="has-text-white is-large">
+                    In this page, user can change settings of graph in home page.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="box has-background-grey-dark has-text-centered">
+        <div class="block is-dark">
+            <form id="temperature" action="/change_settings" method="POST">
+                <div class="container is-large">
+                    <h2 class="title has-text-left has-text-{{ session['label_font_color'] }}">
+                        CPU temperature
+                    </h2>
+                    <label class="label has-text-white is-large has-text-left">
+                        y-axes
+                    </label>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                min
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="yaxes_min" value="{{ data.chart.temperature.yaxes.min }}" maxlength="5">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                max
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="yaxes_max" value="{{ data.chart.temperature.yaxes.max }}" maxlength="5">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                step
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="yaxes_step" value="{{ data.chart.temperature.yaxes.step }}" maxlength="5">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <label class="label has-text-white is-large has-text-left">
+                        streaming
+                    </label>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                duration
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="streaming_duration" value="{{ data.chart.temperature.streaming.duration }}" maxlength="6">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-grouped">
+                        <div class="field-label is-normal">
+                            {% if msg and msg.temperature %}
+                                <label class="label has-text-warning">
+                                    <p class="has-text-warning">
+                                        {{ msg.temperature }}
+                                    </p>
+                                </label>
+                            {% endif %}
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <button class="button is-normal is-info" type="submit" name="chartType" value="temperature">
+                                        Save
+                                    </button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="box has-background-grey-dark">
+        <div class="block is-dark">
+            <form id="usage" action="/change_settings" method="POST">
+                <div class="container is-large">
+                    <h2 class="title is-3 has-text-{{ session['label_font_color'] }}">
+                            CPU Usage
+                    </h2>
+                    <label class="label has-text-white is-large is-offset-4">
+                        y-axes
+                    </label>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                min
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="yaxes_min" value="{{ data.chart.usage.yaxes.min }}" maxlength="5">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                max
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="yaxes_max" value="{{ data.chart.usage.yaxes.max }}" maxlength="5">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                step
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="yaxes_step" value="{{ data.chart.usage.yaxes.step }}" maxlength="5">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <label class="label has-text-white is-large is-offset-4">
+                        streaming
+                    </label>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                duration
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="streaming_duration" value="{{ data.chart.usage.streaming.duration }}" maxlength="6">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-grouped">
+                        <div class="field-label is-normal">
+                            {% if msg and msg.usage %}
+                                <label class="label has-text-warning">
+                                    <p class="has-text-warning">
+                                        {{ msg.usage }}
+                                    </p>
+                                </label>
+                            {% endif %}
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <button class="button is-normal is-info" type="submit" name="chartType" value="usage">
+                                        Save
+                                    </button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="box has-background-grey-dark">
+        <div class="block is-dark">
+            <form id="memory" action="/change_settings" method="POST">
+                <div class="container is-large">
+                    <h2 class="title has-text-left has-text-{{ session['label_font_color'] }}">
+                        Memory
+                    </h2>
+                    <label class="label has-text-white is-large has-text-left">
+                        y-axes
+                    </label>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                min
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="yaxes_min" value="{{ data.chart.memory.yaxes.min }}" maxlength="5">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                max
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="yaxes_max" value="{{ data.chart.memory.yaxes.max }}" maxlength="5">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                step
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="yaxes_step" value="{{ data.chart.memory.yaxes.step }}" maxlength="5">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <label class="label has-text-white is-large has-text-left">
+                        streaming
+                    </label>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                duration
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="streaming_duration" value="{{ data.chart.memory.streaming.duration }}" maxlength="6">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-grouped">
+                        <div class="field-label is-normal">
+                            {% if msg and msg.memory %}
+                                <label class="label has-text-warning">
+                                    <p class="has-text-warning">
+                                        {{ msg.memory }}
+                                    </p>
+                                </label>
+                            {% endif %}
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <button class="button is-normal is-info" type="submit" name="chartType" value="memory">
+                                        Save
+                                    </button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="box has-background-grey-dark">
+        <div class="block is-dark">
+            <form id="frequency" action="/change_settings" method="POST">
+                <div class="container is-large">
+                    <h2 class="title has-text-left has-text-{{ session['label_font_color'] }}">
+                        frequency
+                    </h2>
+                    <label class="label has-text-white is-large has-text-left">
+                        y-axes
+                    </label>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                min
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="yaxes_min" value="{{ data.chart.frequency.yaxes.min }}" maxlength="5">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                max
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="yaxes_max" value="{{ data.chart.frequency.yaxes.max }}" maxlength="5">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                step
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="yaxes_step" value="{{ data.chart.frequency.yaxes.step }}" maxlength="5">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <label class="label has-text-white is-large has-text-left">
+                        streaming
+                    </label>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                duration
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="streaming_duration" value="{{ data.chart.frequency.streaming.duration }}" maxlength="6">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-grouped">
+                        <div class="field-label is-normal">
+                            {% if msg and msg.frequency %}
+                                <label class="label has-text-warning">
+                                    <p class="has-text-warning">
+                                        {{ msg.frequency }}
+                                    </p>
+                                </label>
+                            {% endif %}
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <button class="button is-normal is-info" type="submit" name="chartType" value="frequency">
+                                        Save
+                                    </button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="box has-background-grey-dark">
+        <div class="block is-dark">
+            <form id="loadavg" action="/change_settings" method="POST">
+                <div class="container is-large">
+                    <h2 class="title has-text-left has-text-{{ session['label_font_color'] }}">
+                        Load average
+                    </h2>
+                    <label class="label has-text-white is-large has-text-left">
+                        y-axes
+                    </label>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                min
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="yaxes_min" value="{{ data.chart.loadavg.yaxes.min }}" maxlength="5">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                max
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="yaxes_max" value="{{ data.chart.loadavg.yaxes.max }}" maxlength="5">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                step
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="yaxes_step" value="{{ data.chart.loadavg.yaxes.step }}" maxlength="5">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <label class="label has-text-white is-large has-text-left">
+                        streaming
+                    </label>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">
+                                duration
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <input type="text" class="input" name="streaming_duration" value="{{ data.chart.loadavg.streaming.duration }}" maxlength="6">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-grouped">
+                        <div class="field-label is-normal">
+                            {% if msg and msg.loadavg %}
+                                <label class="label has-text-warning">
+                                    <p class="has-text-warning">
+                                        {{ msg.loadavg }}
+                                    </p>
+                                </label>
+                            {% endif %}
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <p class="control">
+                                    <button class="button is-normal is-info" type="submit" name="chartType" value="loadavg">
+                                        Save
+                                    </button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    {% endblock %}
