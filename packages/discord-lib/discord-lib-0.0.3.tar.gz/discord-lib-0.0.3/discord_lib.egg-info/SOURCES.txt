@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+discord_lib.egg-info/PKG-INFO
+discord_lib.egg-info/SOURCES.txt
+discord_lib.egg-info/dependency_links.txt
+discord_lib.egg-info/requires.txt
+discord_lib.egg-info/top_level.txt
+discordlib/__init__.py
+discordlib/__main__.py
+discordlib/action.py
+discordlib/client.py
+discordlib/utils.py
