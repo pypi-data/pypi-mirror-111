@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: vakantie
+Version: 0.0.3
+Summary: A Package to get all holidays starting from 2015
+Home-page: UNKNOWN
+Author: Labiba Kanij Rupty
+Author-email: labibakanij@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: pandas
+Requires-Dist: beautifulsoup4
+Requires-Dist: requests
+
+This is a package for fetching holiday information of any country.
+
+### How to
+```
+import vakantie
+holidays = vakantie.Holidays(year=2021, country='Bangladesh')
+print(holidays.get_holidays())
+```
+
+Change Log
+==========
+0.0.1 (29.06.2021)
+-----------
+first release
+==========
+0.0.2 (29.06.2021)
+
