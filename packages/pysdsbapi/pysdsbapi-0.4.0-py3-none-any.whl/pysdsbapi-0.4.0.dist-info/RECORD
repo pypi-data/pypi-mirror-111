@@ -1,0 +1,9 @@
+pysdsbapi/__init__.py,sha256=uQc3jOm_NJKMRN8LDXT4K_F2webwmeDHy_hWj1_23dY,76
+pysdsbapi/bridge.py,sha256=802W95fVZk6j1SxuUUwruUkAbYs422dwt6yIs36W3jY,5746
+pysdsbapi/module.py,sha256=-xWVcP1UkiT3H4Bcc7CzjBhyC4EfGhK4NeopwyqcGBc,565
+pysdsbapi/user.py,sha256=kT7TdcnbDr-P57bFXxjHEJyj0fjSgikwgz2pMtIyRps,262
+pysdsbapi-0.4.0.dist-info/LICENSE,sha256=XyCGph4Zw96paO51o_Feh7EX6VSooUz5uSsHnHc2ljg,1075
+pysdsbapi-0.4.0.dist-info/METADATA,sha256=JmQMd_AcqWJbp-FdGbtbdK69kMI51yE3LgAOOO5thDc,596
+pysdsbapi-0.4.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pysdsbapi-0.4.0.dist-info/top_level.txt,sha256=RFWQpFZCUdBTSM9Oj0XCGu1zjU2EVLWH1XHp3L-0DHY,10
+pysdsbapi-0.4.0.dist-info/RECORD,,
