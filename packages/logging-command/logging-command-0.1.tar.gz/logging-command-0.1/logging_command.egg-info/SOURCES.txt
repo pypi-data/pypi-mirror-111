@@ -1,0 +1,9 @@
+setup.py
+logging2/__init__.py
+logging2/config.py
+logging2/handlers.py
+logging_command.egg-info/PKG-INFO
+logging_command.egg-info/SOURCES.txt
+logging_command.egg-info/dependency_links.txt
+logging_command.egg-info/not-zip-safe
+logging_command.egg-info/top_level.txt
