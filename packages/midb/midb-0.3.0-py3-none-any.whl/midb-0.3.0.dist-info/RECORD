@@ -1,0 +1,16 @@
+midb/__init__.py,sha256=7YUaia4-Q2e-lFTlYISoNhvKtRPHO2-aEieMkMhDpRo,3111
+midb/constants.py,sha256=U54V3v1diV8RgcFZLq_vhxQzV4nPgWJrsqhpz1lUOcI,185
+midb/backend/__init__.py,sha256=KQC1t3CCXGpwvwFmRyaQENxU5iH8-vlzm1zZKDupGJA,10357
+midb/backend/_db_creation_and_validation.py,sha256=GLGTGuSYkOIsAsDYizfUzKjgGI5PF2E7r0EdoQi1_Es,6112
+midb/backend/_serialization.py,sha256=5lwuh9XWoDFCz3IzjKnAA3BfJzpcof12PNt8Dcn6fsE,7303
+midb/persistent_objects/__init__.py,sha256=v7WkVQt4pDLroVaHaZqd1I4CjM284e2hQ3R5PtaMJcE,303
+midb/persistent_objects/_basepersistentobject.py,sha256=9R1YZNk2fpx_7eEzWQ-uLYwDtTvT2qPpylGj0cIL7Qs,15949
+midb/persistent_objects/_pdict.py,sha256=rRj1UbJNgXVl7VBR62wsriQ24J3gKsp4KOS9eaLzv6Y,7784
+midb/persistent_objects/_persistentsequence.py,sha256=47M4jtnaj7hAAIUF_T8Tfa1Y5_bogGU8u_MM1sL0hUY,6452
+midb/persistent_objects/_plist.py,sha256=VeIV9fcvsi0j_K4Wj2eZ501H60pZJp0R1OvF3fCPDiw,8058
+midb/persistent_objects/_ptuple.py,sha256=PwD_0-cF5iiEBB05Lf6H5CM77cibtTryjCd0yuyPTfY,1680
+midb-0.3.0.dist-info/LICENSE,sha256=OhANte-H9aPl6-2OYff2C5KEEK_Ihz8J_TsA5IJsL6Q,1066
+midb-0.3.0.dist-info/METADATA,sha256=9AILB-ZwSqFjOq96kTCf0_Sc3zAqiwXnxaXeYmVhPVY,2000
+midb-0.3.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+midb-0.3.0.dist-info/top_level.txt,sha256=QG1LDSzs5qGBDtO87qdTQqubhwe1CihcZmD8QKa9MHQ,5
+midb-0.3.0.dist-info/RECORD,,
