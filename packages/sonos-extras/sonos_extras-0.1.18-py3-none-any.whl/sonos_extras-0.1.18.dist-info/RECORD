@@ -1,0 +1,12 @@
+sonos_extras/__init__.py,sha256=0RNX2oLiSTLPNy_fwdnSx8fbrGpihHK1Au6zuGhE_70,205
+sonos_extras/module.py,sha256=EMXUNgrR97_SYQsU0qYbIWUAG_QXGQvjfSJrOzFh48g,7048
+sonos_extras/bin/SonosExtrasCLI.py,sha256=yw-Bn9VPoqFS72TJCGWyZyfYB1EYfkPQP0_MTZYBaEc,5602
+sonos_extras/bin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sonos_extras/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sonos_extras/tests/test_cli.py,sha256=bqgjztWYUWRsRlWcskxzdq5rkSAgBzlX04q-QuMxNOo,5590
+sonos_extras/tests/test_module.py,sha256=CPIJ8o_lIcJRbLdiw04uTIkqmPSUWlsFwuc39wTexIY,1495
+sonos_extras-0.1.18.dist-info/METADATA,sha256=oB5KahZOwN8G3tYQ3CSvEMA2tQCA8Zrno8hf1TpwiMk,3649
+sonos_extras-0.1.18.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+sonos_extras-0.1.18.dist-info/entry_points.txt,sha256=TMCG4BNYaCiY6aE1rDpgWW1Ipc4jGlGgslBjFyS02RM,73
+sonos_extras-0.1.18.dist-info/top_level.txt,sha256=uzGKtviKb4MLR25YnaB65siDeTO8jjzHCl0NVKFqO_I,13
+sonos_extras-0.1.18.dist-info/RECORD,,
