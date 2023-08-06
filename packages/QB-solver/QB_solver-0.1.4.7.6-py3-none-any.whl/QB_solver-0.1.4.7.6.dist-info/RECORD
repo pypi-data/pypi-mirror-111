@@ -1,0 +1,11 @@
+qb_solver/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+qb_solver/cubesolver.py,sha256=gCzIVpGU053KFIeYnVnHmlHZWxOzayx5c81aAzfgfCc,5865
+qb_solver/main.py,sha256=REsp3F_C7FFp5rwb56nVxUCP5Zst9M3AbyaJMavtyEU,19194
+qb_solver/virtualcube.py,sha256=C785cjNhu0_hwMy23uTgBl3NZme9YDCzQl4MQad9uZM,5680
+qb_solver/visCube.py,sha256=eQ0v95EeI4QkPb6C5c0pjr8wDeIWFn3z2AXXFolpwXI,31101
+qb_solver/visHints.py,sha256=-ppYN9nAqjcHffXdqrwqfpPOcSSKe1ONTlRiqyyqAvE,11455
+QB_solver-0.1.4.7.6.dist-info/METADATA,sha256=RUIq2ogfZIx-uEfOZ9bDAixA_KOFQv5KnauZSS1VknU,370
+QB_solver-0.1.4.7.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+QB_solver-0.1.4.7.6.dist-info/entry_points.txt,sha256=GhghgkmZUOhdQEViANAR4m7fgUuGyJO11N89XxWKLNA,56
+QB_solver-0.1.4.7.6.dist-info/top_level.txt,sha256=6unrMLmH3FslaeB0bPU95g-SUWYk12HZ2ll0_DshTNE,10
+QB_solver-0.1.4.7.6.dist-info/RECORD,,
