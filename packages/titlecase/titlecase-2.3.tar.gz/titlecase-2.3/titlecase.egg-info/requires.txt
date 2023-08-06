@@ -1,0 +1,6 @@
+
+[regex]
+regex>=2020.4.4
+
+[tests]
+nose>=1.0
