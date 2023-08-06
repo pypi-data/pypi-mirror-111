@@ -1,0 +1,135 @@
+Metadata-Version: 2.1
+Name: fpf
+Version: 0.1.3
+Summary: Filter Paths in Python the easy way
+Home-page: UNKNOWN
+Author: Filipe Spencer Lopes
+Author-email: filipe@spncr.be
+License: UNKNOWN
+Project-URL: github, https://github.com/fslds/fpf
+Project-URL: docs, https://fps.readthedocs.io/
+Project-URL: issue, https://github.com/fslds/fpf/issues
+Keywords: path filter file ignorefile gitignore
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6.8, <4
+Description-Content-Type: text/x-rst
+Requires-Dist: pathspec
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+
+*******************
+File Path Filtering
+*******************
+
+Filter Paths in Python the easy way.
+
+This library aims to provide simple means to filter file paths.
+
+
+The base function: `filter_file_paths`
+######################################
+
+
+`filter_file_paths` takes in three arguments:
+
+* `root_dir`:  the directory to start searching in
+* `path_filter`: a function (`callable`) that should return true for any path/filename encountered that should be kept.
+* `relative_paths`: default set to `True`, resulting in relative paths of matched files (with base `root_dir`).
+    If set to `False`, absolute paths will be returned.
+
+``filename_filter``
+--------------------
+
+``file_path_filter`` can be a simple function:
+
+
+.. code-block:: python
+
+   def filter(filepath):
+      return filepath.lower().endswith('.py'):
+
+   # Or, for those that like to use lambda:
+   lambda x: x.lower().endswith('.py)
+
+
+Applying a filter like like this on a directory should return only python file filepaths.
+Easy enough.
+
+But there are advanced usecases.
+Consider our (simplified) project directory:
+
+
+.. code-block:: console
+
+   .
+   ├── build
+   │   └── lib
+   │       └── fpf
+   │           ├── filters.py
+   │           ├── __init__.py
+   │           ├── logger.py
+   │           └── mixins.py
+   ├── fpf
+   │   ├── filters.py
+   │   ├── __init__.py
+   │   ├── logger.py
+   │   └── mixins.py
+   ├── LICENSE
+   ├── README.md
+   ├── setup.cfg
+   ├── setup.py
+   ├── tests
+   │  ├── __init__.py
+   │  └── test_fpf.py
+   ├── .gitignore
+   └── .travis.yml
+
+Applying the filter, would give us the following result:
+
+.. code-block:: python
+
+   from fpf import file_path_filter
+
+   for path in file_path_filter(root_dir='.', path_filter=filter ):
+      print(path)
+
+
+.. code-block:: console
+
+   build/lib/fpf/__init__.py
+   build/lib/fpf/filters.py
+   ...
+   fpf/__init__.py
+   fpf/filters.py
+   ...
+   tests/__init__.py
+   setup.py
+
+* Q: But what if I am not interested in build artifacts or tests?
+* A: You can add more conditions to ``filter(filepath)``
+* Q: Does that scale?
+* A: No
+* Q: Is a list of exceptions easy to maintain?
+* A: No
+* Q: Is creating a library to deal with these usecases overkill?
+* A: Maybe. But is too late now.
+
+
+Introducing ignore files
+-------------------------
+
+The Git project and their users had the same issue. They solved this with the `.gitignore(pathspec)  file <https://git-scm.com/docs/gitignore>`_.
+
+This library offers some helper classes and functions to apply this to your project.
+
+
+
