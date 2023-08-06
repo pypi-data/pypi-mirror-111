@@ -1,0 +1,13 @@
+[console_scripts]
+elstir = elstir.__main__:cli
+
+[elstir.plugins]
+exclude = elstir.contrib.exclude:Exclude
+search = elstir.contrib.search:SearchPlugin
+
+[elstir.themes]
+berkeley = elstir.themes.berkeley
+elstir = elstir.themes.elstir
+odette = elstir.themes.odette
+readthedocs = elstir.themes.readthedocs
+

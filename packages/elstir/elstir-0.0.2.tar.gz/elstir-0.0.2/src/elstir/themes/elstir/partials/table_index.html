@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block post_content %}
+{% set rows = page|get_children(pages) %}
+<div class="table-responsive">
+<table class="table"><thead> 
+    <tr> 
+        <td scope="col"><h5>Name</h5></td> 
+        <td scope="col"><h5>Description</h5></td> 
+    </tr> 
+    </thead> 
+<tbody>
+{% for row in rows[0].children %}
+{% if row.title != page.title %}
+<tr>
+<td><a href="{{ row.url }}">{{ row.title }}</a></td>
+<td>{{ row.synopsis if row.synopsis else (row.description if row.description else "") }}</td>
+</tr>
+{% endif %}
+{% endfor %}
+</tbody>
+</table>
+{# rows[0].children #}
+</div>
+{% endblock %}
+
