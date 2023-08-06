@@ -1,0 +1,9 @@
+LICENCE
+README.md
+pyproject.toml
+setup.cfg
+src/pisslang/__init__.py
+src/pisslang.egg-info/PKG-INFO
+src/pisslang.egg-info/SOURCES.txt
+src/pisslang.egg-info/dependency_links.txt
+src/pisslang.egg-info/top_level.txt

@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pisslang
+Version: 0.0.0.5
+Summary: # PISSlang Aww, piss ## What is this vile thing? P..
+Home-page: https://github.com/justamirror/PISSlang
+Author: Mirror
+Author-email: eat@mybutt.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/justamirror/PISSlang/issues
+Description: # PISSlang
+        Aww, piss
+        ## What is this vile thing?
+        PISSlang is a joke programming language
+        ## Docs?
+        I just got this up jesus
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
