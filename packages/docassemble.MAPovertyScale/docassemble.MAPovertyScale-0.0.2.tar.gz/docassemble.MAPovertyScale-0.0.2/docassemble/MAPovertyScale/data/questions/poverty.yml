@@ -1,0 +1,10 @@
+---
+comment: |
+  MA Court Poverty Level
+code: |
+  poverty_level_update = "2021"
+  poverty_base = 12880
+  poverty_increment = 4540
+  poverty_multiplier = 1.25 # threshold multiplier. e.g. 2 for 200%
+
+  # See: https://aspe.hhs.gov/poverty-guidelines
