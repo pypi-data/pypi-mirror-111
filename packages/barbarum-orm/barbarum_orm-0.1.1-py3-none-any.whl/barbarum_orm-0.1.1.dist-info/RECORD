@@ -1,0 +1,14 @@
+barbarum_orm/__init__.py,sha256=CGufCbffFAfO1Ph9vCbNX2hroEXgzBBFEs4d6DB_wwI,382
+barbarum_orm/common/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+barbarum_orm/common/database.py,sha256=MVjdqxqr38ypexIz1X5KWhtXl08hJ0kxC1YwQQXoK5k,1392
+barbarum_orm/common/repository.py,sha256=hKIehnMQnklYYo6bQIT3DY6AXS_n5EYfJybBg41Lk2c,3709
+barbarum_orm/common/dialect/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+barbarum_orm/common/dialect/dialect.py,sha256=Lytq_3UAPGk7poDU99ut_irjlrmqwpWDzwTxQ3SG7jY,1076
+barbarum_orm/common/dialect/mysql_dialect.py,sha256=bGLshS5h-bBbqmH1MtSIBV30tnLpIsVL7OcQ-fN89hg,1793
+barbarum_orm/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+barbarum_orm/utils/app_logger.py,sha256=r4d1XTyFQrA1XKzfOPEsTth2d97sczQKbachh19xDOA,1354
+barbarum_orm-0.1.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+barbarum_orm-0.1.1.dist-info/METADATA,sha256=M57NeHAVlW_0l1fZz-gE2sUmTsp5-DPyTCcpQAgaI74,522
+barbarum_orm-0.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+barbarum_orm-0.1.1.dist-info/top_level.txt,sha256=VE9p5jNH77fnSlVsTwPLnKUqxu_D7wfwAPH4Uzt2J1Q,13
+barbarum_orm-0.1.1.dist-info/RECORD,,
