@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: wavelib
+Version: 1.0.0
+Summary: Signal processing utilities for Python/Numpy written in C++
+Home-page: https://github.com/bergkvist/python-wavelib
+Author: Tobias Bergkvist
+Author-email: tobias@bergkv.ist
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: test
