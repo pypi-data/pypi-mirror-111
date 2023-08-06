@@ -1,0 +1,4 @@
+pyinstaller
+requests
+zipp
+urllib3
