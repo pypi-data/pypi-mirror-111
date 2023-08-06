@@ -1,0 +1,10 @@
+found/__init__.py,sha256=EBy0XQg9KY9oK9ldPhYjLsUBrdUyouvXcD1hyk4ry7g,3207
+found/base.py,sha256=GX5c1h8eEfZTC6lBJFJXvoAQ4hmh5h_dmZW9FkAQDIs,17937
+found/build_found.py,sha256=BDotl14wE5JyRvUkx_p-FoHoLyRlwujt-FOHPzO0ytw,393
+found/fdb_c.h,sha256=hdRXUkyMXNvEBI5r1Bas7pryE4_hE8Rd_toT2kM_do4,37523
+found/fdb_c2.h,sha256=14ojjsLDY_k-8fGpZK8eRN1FqBb2EAzrAdzdTN9DtrY,37452
+found/nstore.py,sha256=Pha65Dohf_iXgqlh9w699QI7rtcmMK0WqukfYNnnKfY,6799
+asyncio_foundationdb-0.9.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+asyncio_foundationdb-0.9.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+asyncio_foundationdb-0.9.0.dist-info/METADATA,sha256=5Cmk8rUWb8nPrCPK7FSrk6gTb_gvnPpqxgU-BcONuUY,513
+asyncio_foundationdb-0.9.0.dist-info/RECORD,,
