@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: secretserver
+Version: 0.0.2.0
+Summary: Test package
+Home-page: https://google.com
+Author: John Smith
+Author-email: postmaster@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+Test package
+
