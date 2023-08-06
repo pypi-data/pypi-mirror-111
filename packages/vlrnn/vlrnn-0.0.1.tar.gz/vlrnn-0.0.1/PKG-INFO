@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: vlrnn
+Version: 0.0.1
+Summary: Very Long Recurrent Neural Networks
+Home-page: https://github.com/zalandoresearch/VLRNN
+Author: Roland Vollgraf
+Author-email: roland.vollgraf@zalando.de
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6

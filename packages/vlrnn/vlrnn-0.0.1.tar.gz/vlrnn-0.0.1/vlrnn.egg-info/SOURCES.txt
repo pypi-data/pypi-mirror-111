@@ -1,0 +1,10 @@
+README.md
+setup.py
+vlrnn/__init__.py
+vlrnn/modules.py
+vlrnn/utilities.py
+vlrnn.egg-info/PKG-INFO
+vlrnn.egg-info/SOURCES.txt
+vlrnn.egg-info/dependency_links.txt
+vlrnn.egg-info/requires.txt
+vlrnn.egg-info/top_level.txt
