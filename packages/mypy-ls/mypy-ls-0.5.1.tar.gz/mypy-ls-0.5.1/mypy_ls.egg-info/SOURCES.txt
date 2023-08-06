@@ -1,0 +1,10 @@
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+mypy_ls.egg-info/PKG-INFO
+mypy_ls.egg-info/SOURCES.txt
+mypy_ls.egg-info/dependency_links.txt
+mypy_ls.egg-info/requires.txt
+mypy_ls.egg-info/top_level.txt

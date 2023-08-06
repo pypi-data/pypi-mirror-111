@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: mypy-ls
+Version: 0.5.1
+Summary: Mypy linter for the Python LSP Server
+Home-page: https://github.com/Richardk2n/pylsp-mypy
+Author: Tom van Ommeren, Richard Kellnberger
+License: 'MIT'
+Description: DEPRECATED
+        ==========
+        
+        Use `pylsp-mypy`_ instead!
+        
+        .. _`pylsp-mypy`: https://pypi.org/project/pylsp-mypy/
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
