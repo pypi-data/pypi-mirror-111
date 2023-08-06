@@ -1,0 +1,10 @@
+staticjinja/__init__.py,sha256=0kqFq367SCFqbhEb-cRJpBx-XYNZe6epwqNKGlGdJxs,859
+staticjinja/__main__.py,sha256=ZzrrBI14nQV_ku90s9jNR3gmYGofjKC1wC4j4JxAlT8,84
+staticjinja/cli.py,sha256=zX_EEJP9LbK3wy1VTTiqz3D2LSHzMflV3K3vhZB7Jx4,2134
+staticjinja/reloader.py,sha256=53apdHekuu4tWbz3kWLGONCRqfLbuNrIip-G2O6zNFQ,1800
+staticjinja/staticjinja.py,sha256=Md0XQxOHfjyZZxxDsphRIO_L8HBWhm7WyQSuOV-iYdc,17502
+staticjinja-3.0.0.dist-info/entry_points.txt,sha256=wO2Cy0w9pBnZfg5Fv0YWZec7DkYwngcnGbRI4oMLHhc,52
+staticjinja-3.0.0.dist-info/LICENSE,sha256=oyD35aYhJE2H3OPDexCBhP4tQjgIkpv1SzOeW61rHog,1092
+staticjinja-3.0.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+staticjinja-3.0.0.dist-info/METADATA,sha256=uzFqyfLqqoSPdSm2-6zZn9WOs7Grha814aO98nON90E,4193
+staticjinja-3.0.0.dist-info/RECORD,,
