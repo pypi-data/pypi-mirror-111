@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ntnucourses
+Version: 0.0.2
+Summary: Python package for ntnu courses and codes
+Home-page: https://github.com/Areskiko/NTNU-Emner
+Author: Areskiko
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/Areskiko/NTNU-Emner/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# NTNU Courses
+
+Course-codes taught at NTNU and their names as key-value pairs in a dictionary for simple lookups
+
