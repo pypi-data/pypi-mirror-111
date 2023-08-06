@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: pyCamRecord
+Version: 1.0.5
+Summary: Record by Webcam and save automatically while there is different in screen
+Home-page: https://pypi.org/project/pyCamRecord
+Author: KuoYuan Li
+Author-email: funny4875@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: record webcam,record webcam by difference,cam recording
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
