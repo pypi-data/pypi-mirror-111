@@ -1,0 +1,4 @@
+[console_scripts]
+scimap-mcmicro=scimap.cli._scimap_mcmicro:main
+scimap-merge-h5ad=scimap.cli._scimap_mcmicro:merge
+
