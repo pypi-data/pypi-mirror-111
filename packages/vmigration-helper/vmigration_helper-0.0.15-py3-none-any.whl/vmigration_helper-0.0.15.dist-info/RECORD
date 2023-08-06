@@ -1,0 +1,12 @@
+vmigration_helper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vmigration_helper/apps.py,sha256=2vqpsXgw61L3aJ8SVXrYO60kBqxAkloh915gaO3EeOY,165
+vmigration_helper/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vmigration_helper/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vmigration_helper/management/commands/migration_current_id.py,sha256=bmwSnUmXcmaibwwHM6Uo65Q-ZY6wQYiT_HJaU2MfFpA,1081
+vmigration_helper/management/commands/migration_records.py,sha256=0D4-_885EocY43x2CnPElshCXlQ0P0TcSmr7Rg58wuU,2877
+vmigration_helper/management/commands/migration_rollback.py,sha256=gEzGsFX6owOKDlaRzuDr0J1WA1niO-bIccZovCSAmG0,5299
+vmigration_helper/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vmigration_helper-0.0.15.dist-info/LICENSE,sha256=EMhuJudr5k-Gt25r0MpCSxdO7VlNB4cjjhZqGOogpZc,1063
+vmigration_helper-0.0.15.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+vmigration_helper-0.0.15.dist-info/METADATA,sha256=_44FIpIR1R7ZsajqJ5D2-aT9jzmvRW-saJcEL68f9CM,5448
+vmigration_helper-0.0.15.dist-info/RECORD,,
