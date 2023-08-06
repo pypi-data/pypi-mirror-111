@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: tg-qso-bot
+Version: 1.3.1
+Summary: Simple HAM helper bot written on Python
+Home-page: https://github.com/exepirit/tg-qso-bot
+License: MIT
+Author: exepirit
+Author-email: you@example.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Pyrogram (>=1.2.9,<2.0.0)
+Requires-Dist: beautifulsoup4 (>=4.9.1,<5.0.0)
+Requires-Dist: dynaconf (>=2.2.3,<3.0.0)
+Requires-Dist: requests (>=2.23.0,<3.0.0)
+Requires-Dist: sentry-sdk (>=0.19.5,<0.20.0)
+Project-URL: Repository, https://github.com/exepirit/tg-qso-bot
+Description-Content-Type: text/markdown
+
+# tg-qso-bot
+Simple HAM helper bot written on Python.
+
+## Features
+
+* Get QSO list from [Hamlog](https://hamlog.ru/) by request from Telegram chat.
+
+## Installation
+```shell script
+python3 -m pip install tg-qso-bot
+```
+
+## Configuration
+1. Get `app_id` and `app_hash` from [Telegram Apps](https://my.telegram.org/apps).
+The API key is personal and must be kept secret.
+2. Ask [@botfather](https://t.me/botfather) for bot token.
+3. Put `app_id`, `app_hash` and `bot_token` to file `config/settings.json`. You can
+create copy of this file for editing called `settings.local.json`.
+
+## Usage
+```shell script
+python3 -m tg_qso_bot.bot
+```
+

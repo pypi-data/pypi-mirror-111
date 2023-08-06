@@ -1,0 +1,3 @@
+[console_scripts]
+tg-qso-bot=tg_qso_bot.bot:main
+
