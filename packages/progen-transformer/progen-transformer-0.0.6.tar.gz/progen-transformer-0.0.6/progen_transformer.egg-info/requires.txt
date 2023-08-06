@@ -1,0 +1,15 @@
+biopython
+click
+click-option-group
+cloudpickle
+einops>=0.3
+dagster
+dagit
+dm-haiku
+humanize
+jax
+jaxlib
+omegaconf
+optax
+torch
+tqdm
