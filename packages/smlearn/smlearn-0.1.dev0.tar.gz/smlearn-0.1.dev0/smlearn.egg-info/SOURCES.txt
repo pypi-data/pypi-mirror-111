@@ -1,0 +1,8 @@
+LICENSE
+README.rst
+setup.py
+smlearn.egg-info/PKG-INFO
+smlearn.egg-info/SOURCES.txt
+smlearn.egg-info/dependency_links.txt
+smlearn.egg-info/requires.txt
+smlearn.egg-info/top_level.txt
