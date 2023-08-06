@@ -1,0 +1,17 @@
+LICENCE
+MANIFEST.in
+README.md
+setup.py
+sphinx_term/__init__.py
+sphinx_term/cssterm.py
+sphinx_term.egg-info/PKG-INFO
+sphinx_term.egg-info/SOURCES.txt
+sphinx_term.egg-info/dependency_links.txt
+sphinx_term.egg-info/not-zip-safe
+sphinx_term.egg-info/requires.txt
+sphinx_term.egg-info/top_level.txt
+sphinx_term/_static/README.md
+sphinx_term/_static/cssterm/css/cssterm.css
+sphinx_term/_static/cssterm/scripts/cssterm.js
+sphinx_term/_static/termynal/termynal.css
+sphinx_term/_static/termynal/termynal.min.js
