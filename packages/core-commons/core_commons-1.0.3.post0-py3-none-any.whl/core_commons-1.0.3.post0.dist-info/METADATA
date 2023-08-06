@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: core-commons
+Version: 1.0.3.post0
+Summary: Implements common methods to use in most libraries and scripts for any environment.
+Home-page: UNKNOWN
+Author: The_Crazy_Sys_Admin
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=2.7.5, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*, <4
+Description-Content-Type: text/markdown
+Requires-Dist: PyYaml
+
+
+# Library Commons
+
+This library implements general and common methods and utilities that will be needed on multiple projects, like data validation, or general script configuration.
+
+## Requirements
+
+The requirements for installing and running the project are:
+- An IDE or a code editor of sorts:
+    - IDEs: *PyCharm*
+    - Code editors: *Visual studio Code*, *Notepad++*, *VIM*
+- A *Python* environment with minimum versions 2.7.5 or 3.6
+
+
+## Installation
+
+To install the program locally or on a remote Linux capsule:
+
+1. Download or clone the project from git.
+
+2. Ensure to have a working python environment with the required packages installed. Skip this step if python has access to pip, and the required repositories.
+
+3. With the python environment activated and a console pointing to the root of this project, run the command:
+   ```bash
+   python setup.py install
+   ```
+
+## Configuration
+
+This project has no configuration files or additional configuration.
+
+
