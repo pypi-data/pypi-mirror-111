@@ -1,0 +1,3 @@
+[console_scripts]
+repeatexec = repeatexec:repeate_exec
+
