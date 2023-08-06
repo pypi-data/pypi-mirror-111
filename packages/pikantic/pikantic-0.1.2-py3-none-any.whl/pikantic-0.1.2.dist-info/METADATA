@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: pikantic
+Version: 0.1.2
+Summary: Python library for easy message broker handling using Pydantic
+Home-page: https://github.com/tomgrin10/pikantic
+License: MIT
+Keywords: pika,rabbitmq,amqp,pydantic,fastapi,rabbit,mq
+Author: Tom Gringauz
+Author-email: tomgrin10@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Dist: aio-pika (>=6.8.0,<7.0.0)
+Requires-Dist: pydantic (>=1.8.2,<2.0.0)
+Project-URL: Repository, https://github.com/tomgrin10/pikantic
+Description-Content-Type: text/markdown
+
+# pikantic
+
+[![PyPI](https://img.shields.io/pypi/v/pikantic)](https://pypi.org/project/pikantic/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pikantic)](https://pypi.org/project/pikantic/)
+[![PyPI License](https://img.shields.io/pypi/l/pikantic)](https://pypi.org/project/pikantic/)
+[![Code Style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black/)
+
+Python library for easy message broker handling using Pydantic
+
+### Basic Usage
+
+```python
+import pikantic
+from pydantic import BaseModel
+
+app = pikantic.Pikantic(AMQP_URI)
+
+
+class PersonModel(BaseModel):
+    name: str
+    age: int
+
+
+@app.on_rabbit('test_queue')
+async def handle_message(msg: aio_pika.Message, person: PersonModel):
+    print(msg.body)
+    print(person.age)
+
+
+if __name__ == '__main__':
+    app.run()
+```
+
