@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+numba_plsa/__init__.py
+numba_plsa/corpus.py
+numba_plsa/plsa.py
+numba_plsa/plsa_basic.py
+numba_plsa/plsa_numba.py
+numba_plsa.egg-info/PKG-INFO
+numba_plsa.egg-info/SOURCES.txt
+numba_plsa.egg-info/dependency_links.txt
+numba_plsa.egg-info/requires.txt
+numba_plsa.egg-info/top_level.txt
