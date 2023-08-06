@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: bmkg-data
+Version: 0.1.0
+Summary: BMKG Data Python Wrapper
+Home-page: https://github.com/josefmtd/gee-fwi
+Author: Josef Matondang
+Author-email: admin@josefmtd.com
+License: MIT
+Description: UNKNOWN
+Keywords: earthquake
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8

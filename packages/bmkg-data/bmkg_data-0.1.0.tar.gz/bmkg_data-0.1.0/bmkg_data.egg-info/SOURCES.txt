@@ -1,0 +1,10 @@
+README.md
+setup.py
+bmkg_data/__init__.py
+bmkg_data/earthquake.py
+bmkg_data.egg-info/PKG-INFO
+bmkg_data.egg-info/SOURCES.txt
+bmkg_data.egg-info/dependency_links.txt
+bmkg_data.egg-info/not-zip-safe
+bmkg_data.egg-info/requires.txt
+bmkg_data.egg-info/top_level.txt
