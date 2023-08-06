@@ -1,0 +1,11 @@
+ddf/DirtyDF.py,sha256=2-vW25Bza1eUZDko36KxG0d6J-709kwQYPH_tn9rz0Q,14626
+ddf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ddf/history.py,sha256=uyk8o-ZzcMM139M8MJuafYFk7SIb-j3ymernDxJCUEs,1671
+ddf/latlong.py,sha256=KH3X3Ilo4d_ZVjFyTnV6FlTP3jtpjV3plZjKwJWzxt0,5776
+ddf/samplers.py,sha256=OA0k3o52EGNjGsBiUgcAV507yn423OdJkYTTxbn6P48,6972
+ddf/stainer.py,sha256=egapHfgEKPhPLsy5P_4EqmYgxcGXBF61H2b7CLUChbw,73748
+dirtydf-0.0.22.dist-info/LICENSE,sha256=zZk4kaC-85wL5ZfVQ_VGgyXf6Qzd1HPdKWNecMyolcs,1072
+dirtydf-0.0.22.dist-info/METADATA,sha256=V0xW82xIssp02oP0YkcF3WmsX4vk3tMCR0VuTkzYJOw,1029
+dirtydf-0.0.22.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dirtydf-0.0.22.dist-info/top_level.txt,sha256=Mxn0eFmIGwfMOy2R95TUmP8fepMvy1ydSFh8MgeZfW0,4
+dirtydf-0.0.22.dist-info/RECORD,,

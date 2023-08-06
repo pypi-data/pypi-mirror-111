@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: dirtydf
+Version: 0.0.22
+Summary: A package to dirty datasets
+Home-page: https://github.com/joeltanwr/DirtyDF
+Author: Joel Tan, Justin Lo, Vik Gopal
+Author-email: vik.gopal@nus.edu.sg
+License: MIT
+Platform: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas (>=1.2.1)
+Requires-Dist: statsmodels (>=0.12.1)
+Requires-Dist: scipy (>=1.6.0)
+Requires-Dist: inflection (>=0.5.1)
+Requires-Dist: numpy (>=1.19.5)
+
+## Introduction
+
+This purpose was written to facilitate generation of "similar" datasets based
+on a single dataset. The original intention was to "dirty" a dataset before
+providing it to students for classroom assignments.
+
+There are three classes defined here: DirtyDF, Stainer, and History. 
+
+Stainers Dirty a DataFrame.
+
+Custom stainers can be written to create new stains.
+
+
