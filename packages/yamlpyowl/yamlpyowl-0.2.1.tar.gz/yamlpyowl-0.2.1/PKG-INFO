@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: yamlpyowl
+Version: 0.2.1
+Summary: Experimental YAML-to-OWL converter
+Home-page: https://github.com/cknoll/yamlpyowl
+Author: Carsten Knoll
+Author-email: Carsten.Knoll@tu-dresden.de
+License: GPLv3
+Description: 
+            Experimental YAML-to-OWL converter. Does only cover a fraction of OWL2.
+            
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
