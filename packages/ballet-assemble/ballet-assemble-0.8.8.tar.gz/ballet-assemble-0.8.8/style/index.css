@@ -1,0 +1,21 @@
+/* url to github pull request */
+.assemble-featureSubmittedOkay a:link {
+  text-decoration: underline;
+  color: #1976D2;
+}
+
+/* code block in submit feature? dialog */
+.assemble-featureSubmittedConfirm pre {
+  background-color: rgb(239, 240, 241);
+}
+
+.assemble-githubAuthButtonIcon {
+  color: grey;
+}
+
+.assemble-githubAuthButtonIcon-authenticated {
+  color: black;
+  background-color: var(--jp-success-color2);
+  border-radius: 5px;
+  border: 5px solid var(--jp-success-color2);
+}
