@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+requirements.txt
+setup.cfg
+setup.py
+src/txtwrpr/__init__.py
+src/txtwrpr/txtwrpr.py
+src/txtwrpr.egg-info/PKG-INFO
+src/txtwrpr.egg-info/SOURCES.txt
+src/txtwrpr.egg-info/dependency_links.txt
+src/txtwrpr.egg-info/requires.txt
+src/txtwrpr.egg-info/top_level.txt

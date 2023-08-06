@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: txtwrpr
+Version: 0.0.1
+Summary: Application Utilities for Bright Edge eServices developments.
+Home-page: UNKNOWN
+Author: Hendrik du Toit
+Author-email: hendrik@brightedge.co.za
+License: UNKNOWN
+Description: txtWrpr
+        =======
+        
+        Read fixed length txt files into a structure to manipulate, enrich and export.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
