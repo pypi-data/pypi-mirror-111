@@ -1,0 +1,10 @@
+numpy
+deepspeech
+webrtcvad
+pyaudio
+urllib3
+requests
+padatious
+opencv-contrib-python
+Pillow
+fann2
