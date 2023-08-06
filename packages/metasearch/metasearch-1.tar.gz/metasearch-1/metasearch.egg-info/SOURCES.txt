@@ -1,0 +1,8 @@
+README.md
+setup.py
+metasearch/__init__.py
+metasearch.egg-info/PKG-INFO
+metasearch.egg-info/SOURCES.txt
+metasearch.egg-info/dependency_links.txt
+metasearch.egg-info/requires.txt
+metasearch.egg-info/top_level.txt
