@@ -1,0 +1,12 @@
+ewokscore@ git+https://git@gitlab.esrf.fr/workflow/ewoks/ewokscore.git@main
+pypushflow@ git+https://git@gitlab.esrf.fr/workflow/pypushflow.git@main
+
+[dev]
+black
+flake8
+pytest
+ewokscore[test]@ git+https://git@gitlab.esrf.fr/workflow/ewoks/ewokscore.git@main
+
+[test]
+pytest
+ewokscore[test]@ git+https://git@gitlab.esrf.fr/workflow/ewoks/ewokscore.git@main
