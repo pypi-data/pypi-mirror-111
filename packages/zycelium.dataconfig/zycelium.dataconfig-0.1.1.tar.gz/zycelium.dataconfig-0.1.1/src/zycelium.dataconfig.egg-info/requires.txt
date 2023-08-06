@@ -1,0 +1,6 @@
+click>=8.0
+configobj>=5.0
+
+[devel]
+bump2version>=1.0
+pytest>=6.2
