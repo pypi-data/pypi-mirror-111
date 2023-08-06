@@ -1,0 +1,11 @@
+rsserpent/__init__.py,sha256=OjwkE9BFnZk_SPkwOX6viSLH5Db_K30He7il5IHm6bA,22
+rsserpent/main.py,sha256=LaW1GQY3YWhlWcwzndxNunCr97uIK8uiR_mIoWDF19k,1092
+rsserpent/model/__init__.py,sha256=6Ixo6WsdNdSn53T5d0b2LgluZ-jRf9DG8QVl21wowj8,100
+rsserpent/model/plugin.py,sha256=hX0Wb8_rlpS1k6MbofsC7QnbZFCmVjCM_ZbQGlrgFJY,1753
+rsserpent/model/rss.py,sha256=MT74p-LQyg5NGmKxzan8W38vR46Hx8W5ehB0Kvk3L_M,2759
+rsserpent/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rsserpent/templates/rss.xml.jinja,sha256=OyhhLXrN_Mdf2RCUiYXVf_yDIrldWY1xbeGU2EwinNw,5072
+rsserpent-0.1.0.dist-info/LICENSE,sha256=0dApmfyFI6NjSe9rg_5LwLUbIPm-hvMC8pcxwiK1PCQ,1078
+rsserpent-0.1.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+rsserpent-0.1.0.dist-info/METADATA,sha256=29mF7EOJby3jPpU24eI3v4ahyAwEje4SjBdjS_sLygw,694
+rsserpent-0.1.0.dist-info/RECORD,,
