@@ -1,0 +1,64 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+"""
+@author:        Andreas Kaeberlein
+@copyright:     Copyright 2021
+@credits:       AKAE
+
+@license:       GPLv3
+@maintainer:    Andreas Kaeberlein
+@email:         andreas.kaeberlein@web.de
+
+@file:          atwg-cli
+@date:          2021-01-17
+
+@note           Arbitrary Temperature Waveform Generator
+                  Start:
+                    Linux            'atwg-cli [Arguments]'
+                    Windows          'python3 ./atwg-cli [Arguments]'
+                    Python Anaconda: 'run ./atwg-cli '
+                  Arguments: '--sine --chamber=SIM --minTemp=10 --maxTemp=60 --startTemp=30 --period=1h'
+                  Example: 'atwg-cli --sine --chamber=SIM --minTemp=10 --maxTemp=60 --startTemp=30 --period=1h'              
+"""
+
+
+
+#------------------------------------------------------------------------------
+# Standard
+import sys   # python path handling
+import time  # get current time
+# Self
+from ATWG.ATWG import ATWG   # Waveform generator
+#------------------------------------------------------------------------------
+
+
+
+#------------------------------------------------------------------------------
+if __name__ == '__main__':
+    # init chamber
+    myATWG = ATWG()                                                 # init structure
+    chamberArg, waveArg = myATWG.parse_cli(cliArgs=sys.argv[1:])    # first argument is python file name
+    myATWG.open(chamberArg=chamberArg, waveArg=waveArg)             # init waveformgenertor and open chamber interface
+    myATWG.start();                                                 # start climate chamber
+    tsample = myATWG.cfg_tsample_sec - 1e-3;                        # 1 ms for timer reserved
+    # chamber control loop
+    try:
+        while True:
+            tstart = time.time()    # isochron chamber update
+            myATWG.chamber_update() # chamber update
+            print(myATWG.status())  # ui
+            while True:             # wait for target sample time
+                if ( tstart + tsample < time.time() ):
+                    break
+    except KeyboardInterrupt:
+        # leave loop on CTRL + C
+        print("")
+        print("Info: Program ended normally")
+    except:
+        # abnormal end
+        print("")
+        print("Error: Program ended abnormally")
+    # close generator
+    myATWG.stop()
+    myATWG.close()
+#------------------------------------------------------------------------------
