@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+tests/osc_tri.wav
+tests/osc_tri_unsigned.wav
+wavfile/__init__.py
+wavfile/version.py
+wavfile/wavfile.py
+wavfile/wavfile_base.py
+wavfile/wavread.py
+wavfile/wavwrite.py
+wavfile.egg-info/PKG-INFO
+wavfile.egg-info/SOURCES.txt
+wavfile.egg-info/dependency_links.txt
+wavfile.egg-info/top_level.txt
