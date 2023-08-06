@@ -1,0 +1,17 @@
+crank4py_connector/__init__.py,sha256=bovYuuBfY5AoAq0WJultndCtOblTKm36yRpJSYudH9w,284
+crank4py_connector/config.py,sha256=cp0dH1uFHRa3Swab8DTKH24guQmI2W7sG53FNXktyCU,1822
+crank4py_connector/conn_info_n_ws_client_farm.py,sha256=gvqYD-oRVDrDXD8BednJw-rCO5US9gQPdDWvynbTYB0,1926
+crank4py_connector/connector.py,sha256=qU0faDqc7UCavRJeeTW_aS0uPES278KRKD7rBVLeGeE,4749
+crank4py_connector/connector_socket.py,sha256=mK5JtV_ywki2_mxa1645UDh5bfB0V8oLZ9_mMFsnOGY,14791
+crank4py_connector/intermediate_request.py,sha256=z-EoyYJz1bN9tAovN6XFKpa_bzQdM73RhP1sJQ-hM0c,2365
+crank4py_connector/version.py,sha256=nWBq_MJ-3yH1cN9Py3acooneai4xelksdbks5R6Yq4s,51
+cranker_protocol/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cranker_protocol/protocol.py,sha256=_Kiuf5C_cBn1n-9TeE2app_4gYCyQDFQ6HOrRCMj9kY,6836
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_connector_with_flask.py,sha256=uraCDQX-nwsINi0PY5UcW6H9X66f4WcMlZWfXZ3Jwrk,2023
+util/__init__.py,sha256=EC3TDaIn7tCgr11Ty1dlyL_Xznq7KAcOy_mXaeWzo6U,2686
+crank4py_connector-0.0.5.dist-info/LICENSE,sha256=kJxeWsRVoERlir6ySQDxblUmu-e2Kj2KF8PKQqrc8_Y,1064
+crank4py_connector-0.0.5.dist-info/METADATA,sha256=j9NEcnAV2PWF0sQ5o0gfqOmNUpWpJKP17bbLamH2UIc,2120
+crank4py_connector-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+crank4py_connector-0.0.5.dist-info/top_level.txt,sha256=BGAD8BHwFjrVcXfvxNCmB1uNd2KGUwHm7pwyh1X06UM,46
+crank4py_connector-0.0.5.dist-info/RECORD,,
