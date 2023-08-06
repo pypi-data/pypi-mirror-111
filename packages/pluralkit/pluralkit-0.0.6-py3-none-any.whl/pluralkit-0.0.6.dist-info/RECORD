@@ -1,0 +1,16 @@
+pluralkit/__init__.py,sha256=D1gVzNzMdP-9ddKGsJCWh0wrxmnVe2_POhdAtN2emG4,610
+pluralkit/v1/__init__.py,sha256=p2d4aZ_3Ks0X7cL-CBh7rZdZ44NUDLQ8XswtBNoKzgw,88
+pluralkit/v1/client.py,sha256=Fna3y6FHmFq_mrEiG9RA4OOz4ZaEWjh608uwPJbvAo4,24178
+pluralkit/v1/endpoint.py,sha256=E3yxFYt79VyqvEForFCUFsCdb4joV3Hv00tb_PjAqVY,1355
+pluralkit/v1/errors.py,sha256=6U0_Z-LsdJXFFUx49gLHzI6Leap5BmQWqePsbrufn98,2847
+pluralkit/v1/models.py,sha256=ZaCijBEnElcMfgG5SL29j2jqQmCFXN2D7Bxb1656hWY,33461
+pluralkit/v1/utils.py,sha256=Qv02yawOGXcZukJCQGbvuFPFK7ioizl_ZfdJOS1nM7o,3679
+tests/__init__.py,sha256=WhUrQRwqYz5bo3vT2c895eFtXze8EDsu9QCzIpeFIMc,145
+tests/edit_member.py,sha256=C67vig8MzB1bT2Bq8rCA9oSKpx2_xuunLVynsWa-T4s,2318
+tests/get_system.py,sha256=e1rMMhOYWR2UWNTxGsxmsRsdcWhpzvXvuvY17xhnFao,1072
+tests/list_members.py,sha256=_TRnuhRKSlAWobAkGEfpAl_vDD7QTuL9suACa_DPjU8,1146
+pluralkit-0.0.6.dist-info/LICENSE,sha256=7vDkPK_BFODFbBJCRX5tcjQAGN-kzClEF9usy2_63e4,1068
+pluralkit-0.0.6.dist-info/METADATA,sha256=8WJZs60YbrwFpkGchDPpmvRYt3d9PBFkaCRSqwIEOes,3502
+pluralkit-0.0.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pluralkit-0.0.6.dist-info/top_level.txt,sha256=rW-feykYBoaQI4XvGecn78qPLZcKOvNh4eHvftt02LI,16
+pluralkit-0.0.6.dist-info/RECORD,,
