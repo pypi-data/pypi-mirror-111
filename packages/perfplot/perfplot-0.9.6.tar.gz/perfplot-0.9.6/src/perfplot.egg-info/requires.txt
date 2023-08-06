@@ -1,0 +1,7 @@
+dufte>=0.2.20
+matplotlib
+numpy
+rich
+
+[:python_version < "3.8"]
+importlib_metadata
