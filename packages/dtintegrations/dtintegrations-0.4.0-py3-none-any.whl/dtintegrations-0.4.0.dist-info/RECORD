@@ -1,0 +1,10 @@
+dtintegrations/__init__.py,sha256=4T2phrkfFk1nk3SeG1gFs345bi6sH2LtzTakwcWzOTk,147
+dtintegrations/provider.py,sha256=d2g6XcVUO1rof6xGMHQoR0s4ZyILS7m2teHwDbCcg38,2439
+dtintegrations/request.py,sha256=RDPrXWG6tXD2Lt_Ri1t6628IfyyrjtcY0-xff3wVQCE,1218
+dtintegrations/data_connector/__init__.py,sha256=e7gqF9xzzyDh8nyaX5xamqnLUxmcoOQwkZjBFaCFBA8,73
+dtintegrations/data_connector/http_push.py,sha256=s3jdip2Bw_l4SNRQ-qU3dfQYQ_D-aaQ6G6bht0UgGPg,3790
+dtintegrations-0.4.0.dist-info/LICENSE,sha256=We4q8USJ-Ljpn2Jt-KAjUFMLhcgukZPScGS-Fcy9eYs,1092
+dtintegrations-0.4.0.dist-info/METADATA,sha256=vaahvCO10kduQBuwv5LKe937Xw4GBb0GVfexrnYW2YY,3443
+dtintegrations-0.4.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dtintegrations-0.4.0.dist-info/top_level.txt,sha256=B9tYj_6RrgVbk7JhBn5sfXRXdJIimTC6hS9Gpr871X8,15
+dtintegrations-0.4.0.dist-info/RECORD,,
