@@ -1,0 +1,3 @@
+[console_scripts]
+midani = midani.__main__:main
+
