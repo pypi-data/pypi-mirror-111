@@ -1,0 +1,4 @@
+[console_scripts]
+w2nv = w2nvshellmsg.main:show_msg
+w2nv-init = w2nvshellmsg.main:show_msg
+
