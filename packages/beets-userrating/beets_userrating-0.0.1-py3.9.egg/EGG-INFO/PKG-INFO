@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: beets-userrating
+Version: 0.0.1
+Summary: A plugin for managing user's per-track ratings in the music geek's media organizer
+Home-page: https://github.com/jphautin/beets-userrating
+Author: Jean-Philippe Hautin
+License: GLPv3
+Download-URL: https://github.com/jphautin/beets-userrating.git
+Keywords: beets user rating
+Platform: ALL
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+License-File: LICENSE
+
+UNKNOWN
+
