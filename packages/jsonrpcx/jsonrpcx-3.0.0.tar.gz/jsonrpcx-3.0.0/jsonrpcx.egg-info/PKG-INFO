@@ -1,0 +1,235 @@
+Metadata-Version: 2.1
+Name: jsonrpcx
+Version: 3.0.0
+Summary: A battle tested Python JSON-RPC2.0 library supporting client and server code in sync and async fashion.
+Home-page: https://codeberg.org/_laphilipa/jsonrpcx
+License: ISC
+Keywords: JSON,jsonrpc,rpc
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Topic :: Internet
+Classifier: Topic :: Home Automation
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Networking
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+# Overview
+
+A JSON-RPC 2.0 implementation.
+
+Features:
+- Supports calling JSON-RCP 2.0 servers
+- Build a JSON-RPC server using WSGI and CGI
+- Optionally supports async client and server code
+- Use the JSON-RPC 2.0 with any transport layer by using building blocks
+- Battle tested code because it was alreay used ~10 years in varioius closed source projects
+- Unittests are written for new code and whenever a bug is fixed for older parts
+- Abstracts handling of datetime.datetime() over the RPC
+- Because this is a serious library a GPG signature is uploaded to PIP so the integrity of updates can be easily verified.
+
+Drawbacks:
+- Depnends on libraries to support async and correctly convert Pythons datatime.datetime() to JSON and to ensure timezone information is not swallowed
+- This library is commited not to brake existing code so it can get bloated over time
+
+Features under construction:
+_Note: For features under construction it is open if they will arrive as a separate package or merged in to this one_
+- Code for auto discovery and auto documentation of RPC methods will be open sourced soon
+- A JSON-RPC 2.0 over MQTT is under consideration
+
+# Build clients
+
+## Async
+
+_Note: `acall` does not support a session parameter because it could lead to hard to debug code.
+If for example you have two paralel requests one is logging you in to the server and sets a cookie and the other is calling a method where it already needs to be logged in
+Then it can happen that sometimes it works while other times the login happens after the first request to a resource that requires a login thus withuot the login.
+In the last case the server would return some kind of error message and the develper with a headage.
+If you want to use async requests please only do so with stateless RPC servers or use the sync version instead._
+Note: There currenlty is code to support sessions for `acall` but that will be removed in a future version unless a way to circumvent the problem described above is found.
+
+```python
+    from jsonrpcx import acall
+    import asyncio
+
+    async def main():
+        result1 = await acall("https://yourjsonrpc.online", method="add", params=[1, 2])
+        print(result1)
+
+        result2 = await acall("https://yourjsonrpc.online", method="add", params={a: 1, b: 2})
+        print(result2)
+    
+    if __name__ == "__main__":
+        asyncio.run(main())
+
+```
+
+If you don't want to write the URL over and over again you can do this trick
+```python
+    from jsonrpcx import acall
+    import asyncio
+    from functools import partial
+
+    async def main():
+        rpc = partial(acall "https://yourjsonrpc.online")
+        result = await rpc("add", [2, 2])
+        print(result)
+    
+    if __name__ == "__main__":
+        asyncio.run(main())
+```
+
+
+## Sync
+
+### Call RPC via string
+
+```python
+    from jsonrpcx import call
+    import https
+
+    result1 = call("https://yourjsonrpc.online", method="add", params=[1, 2])
+    print(result1)
+
+    result2 = call("https://yourjsonrpc.online", method="add", params={a: 1, b: 2})
+    print(result2)
+
+    # Generally you should keep JSON-RPC 2.0 servers state less that means not rely on sessions for stuff like authentication
+    # Sessions can be used here but should be threaded as an implementation detail and only used if absolutely necessary
+    # because it will only work as long as httpx is used under the hood
+    # If you do need a session you can do the following
+    session = httpx.Client()
+    result3 = call("https://yourjsonrpc.online", method="add", params=[1, 2], session=session)
+    print(result3)
+```
+
+If you don't want to write the URL over and over again you can do this trick
+```python
+    from jsonrpcx import call
+    from functools import partial
+
+    rpc = partial(call, "https://yourjsonrpc.online")
+    result = rpc("add", [2, 2])
+    print(result)
+```
+
+### Call RPC via proxy object
+
+For legacy reasons `ServiceProxy` exists and will automatically translate a method call on the ServiceProxy object to a method call on the RPC.
+_Because this looks like normal Python code but static code analysis or auto complete can not support the developer here this way of calling an RPC has not made it to the newer async version._
+
+```python
+import jsonrpcx
+
+# The service proxy keeps track of HTTP sessions
+rpc = jsonrpcx.ServiceProxy("https://yourjsonrpc.online")
+rpc.add(1, 2)
+rpc.add(a=1, b=2)
+
+# As a limitation of the JSON-RPC 2.0 protocol this is not possible and would usually trhow an Exception but is dependend on the implementation detail of the server
+rpc.add(1, b=2)
+```
+
+# Build Servers
+
+## ASGI
+ASGI is the asyc version of WSGI.
+
+This is being worked on and will be available in a future release.
+
+## WSGI
+_Note: WSGI does not support async. This is a limitation of WSGI itself not of this library._
+
+    ```py
+    from jsonrpcx import *
+
+    class Service(WSGIServer):
+        def ping(self):
+            return "pong"
+
+        def add(self, val1, val2):
+            return val1 + val2
+
+        def echo(self, var):
+            return var
+
+        def testReturnNone(self):
+            return None
+    
+    # You only need this if you want to overwrite the HTTP headers sent to the client
+    class Delegate(WSGIServerDelegate):
+        def HTMLHeaders(self) -> List[str]:
+            return [("Content-Type", "application/json")]
+
+    def app(environment, start_response):
+        wsgiServer = Service(delegate=Delegate())
+        return wsgiServer.parseRequest(environment, start_response)
+    ```
+
+## CGI
+CGI is the perfect choice for hosting providers that do not support WSGI or ASGI.
+
+### Async
+    ```py
+    from jsonrpcx import *
+    import asyncio
+
+    class Service(AsyncCGIServer):
+        # Will work becasue its marked with the `async` keyword`
+        async def ping(self):
+            return "pong"
+        
+        # This will not work because it is missing the `async` keyword
+        def ping2(self):
+            return "pong"
+    
+
+    # You only need this if you want to overwrite the HTTP headers sent to the client
+    class Delegate(CGIServerDelegate):
+        def HTTPHeader(self):
+            return "Content-Type: application/json"
+    
+    if __name__ == "__main__":
+        service = Service(delegate=Delegate())
+        asyncio.run(service.run())
+    ```
+
+### Sync
+
+    ```py
+    from jsonrpcx import *
+
+    class Service(CGIServer):
+        def ping(self):
+            return "pong"
+    
+    # You only need this if you want to overwrite the HTTP headers sent to the client
+    class Delegate(CGIServerDelegate):
+        def HTTPHeader(self):
+            return "Content-Type: application/json"
+    
+    if __name__ == "__main__":
+        Service(delegate=Delegate())
+    ```
+
+# Setup development
+
+Run `pipenv install`
+
+# Testing
+Run `pipenv run pytest`
+
+# Running the Example server
+```gunicorn exampleserver:app --reload```
+
+
