@@ -1,0 +1,31 @@
+Metadata-Version: 1.1
+Name: Discord.py-Snippets
+Version: 0.0.4
+Summary: A package with discord.py snipets
+Home-page: UNKNOWN
+Author: JustBetterL
+Author-email: palmspops@protonmail.com
+License: MIT
+Description: # Discord.py-Snippets
+        A python package with discord.py snippets
+        
+        
+        =====0.0.1=====
+        Just got started with this project
+        Uploaded: 6/2/21
+        =====0.0.2=====
+        Fixed a typo in setup.py
+        Uploaded: 6/2/21
+        =====0.0.3=====
+        Fixed a typo in setup.py (Again)
+        Uploaded: 6/2/21
+        =====0.0.4=====
+        Fixed formatting in Changelog
+        Uploaded: 6/2/21
+Keywords: discordsnips
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

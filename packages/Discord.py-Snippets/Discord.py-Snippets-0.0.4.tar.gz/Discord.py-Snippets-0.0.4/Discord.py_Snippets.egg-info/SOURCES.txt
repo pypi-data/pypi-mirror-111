@@ -1,0 +1,10 @@
+CL.txt
+MANIFEST.in
+README.md
+setup.py
+Discord.py_Snippets.egg-info/PKG-INFO
+Discord.py_Snippets.egg-info/SOURCES.txt
+Discord.py_Snippets.egg-info/dependency_links.txt
+Discord.py_Snippets.egg-info/requires.txt
+Discord.py_Snippets.egg-info/top_level.txt
+discord.py-snippets/__init__.py
