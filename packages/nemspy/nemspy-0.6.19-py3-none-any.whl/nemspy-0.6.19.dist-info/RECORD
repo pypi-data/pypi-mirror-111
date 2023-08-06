@@ -1,0 +1,16 @@
+nemspy/__init__.py,sha256=j0fSv9XxnwB4y-nxS6IMcYNBBg8rc-1gQKeuIE9qjhQ,38
+nemspy/configuration.py,sha256=c9b1Vio4YwQf4nEnprqTGqzw2MLhX3PLi2IwCZUQ9LU,14920
+nemspy/interface.py,sha256=PlE_1BZPYaUvsclxf31bhY1ta3AvXcgEGrsw9zr6kfA,13358
+nemspy/utilities.py,sha256=54bCesRXyn6mBbxIQXJYwdGiJRiQKGZ5kT30TJjYwtM,4390
+nemspy/model/__init__.py,sha256=cl34cx6J5wy0MWFfbj-ylEIx0sN1F_PzpMcBEzy1lyU,233
+nemspy/model/atmosphere.py,sha256=LYer3ry9f556luWi0C5dNeT0jHBLnF71HPtXRZHST80,1079
+nemspy/model/base.py,sha256=-pjBvs763DyF0MYHRW3k7p1dn1Ajhek1rsoHJUeIWfk,13588
+nemspy/model/hydrology.py,sha256=SLaMM6GjJjHDo8F6zm9qz2oCoAnnRT_PXYt--2ebTBs,552
+nemspy/model/ice.py,sha256=3RoB6MFL5VNflzF0QzvEKctAz4SPw8rxk4IKU0IHt1A,774
+nemspy/model/ocean.py,sha256=wFbtZ5vgwzPTfN-I8LT4s9qlrQ2K2ga5Zz9IQ4ObeoY,803
+nemspy/model/waves.py,sha256=a-e-ArwlMySP3Hg9gglxw5Uo8dttIzVSs6B6V33PRG8,1264
+nemspy-0.6.19.dist-info/LICENSE,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+nemspy-0.6.19.dist-info/METADATA,sha256=S9nqrXrpkMafugXykbfgmtpOnv6LqfM4d-t_54yCcq0,4893
+nemspy-0.6.19.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+nemspy-0.6.19.dist-info/top_level.txt,sha256=-SVJ8pLto9UWlSMJTdhe6CrTJHNX9ca2RHIdwcEYxpo,7
+nemspy-0.6.19.dist-info/RECORD,,
