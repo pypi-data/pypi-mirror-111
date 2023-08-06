@@ -1,0 +1,11 @@
+raclients/__init__.py,sha256=9-KvIeZGViB0SAY6kWGr07sQRs_zla5jkEgChmscJF4,322
+raclients/lora/__init__.py,sha256=DsapCSsSwRkhYk6jjJe8Y2C0uobOWkZ3UCBxQv0nzNA,738
+raclients/lora/modelclient.py,sha256=-fVIian37qVg3cgiXoYcg0_ehoaMexK_8jBgQyzSUj0,4312
+raclients/mo/__init__.py,sha256=DsapCSsSwRkhYk6jjJe8Y2C0uobOWkZ3UCBxQv0nzNA,738
+raclients/mo/modelclient.py,sha256=I66594y66bnb2TylzTG5N7iZYRiFcwSmyxFvaXLJefA,2900
+raclients/modelclientbase.py,sha256=G1qh1GfX91kXu4YJeXI8zUVv8l1078HuKD4U3KEnm-Y,7545
+raclients-0.3.4.dist-info/LICENSES/MPL-2.0.txt,sha256=Xez-I9f_ECXfYKKwVpbPA25xYMNwv4McfGeH_1Y9DOI,15177
+raclients-0.3.4.dist-info/LICENSES/MIT.txt,sha256=uF3NPkU9BZglUsUrX8ngvdbSPG-OhEuYSoivMlcLDMA,1078
+raclients-0.3.4.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+raclients-0.3.4.dist-info/METADATA,sha256=LUU0S9ZMwcg8XefGrvLcnDiVblm5HOneSXsctBNXtnc,1860
+raclients-0.3.4.dist-info/RECORD,,
