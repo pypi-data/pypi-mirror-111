@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.cfg
+setup.py
+scylla/__init__.py
+scylla/_nbdev.py
+scylla/redis.py
+scylla_for_docker.egg-info/PKG-INFO
+scylla_for_docker.egg-info/SOURCES.txt
+scylla_for_docker.egg-info/dependency_links.txt
+scylla_for_docker.egg-info/entry_points.txt
+scylla_for_docker.egg-info/not-zip-safe
+scylla_for_docker.egg-info/requires.txt
+scylla_for_docker.egg-info/top_level.txt
