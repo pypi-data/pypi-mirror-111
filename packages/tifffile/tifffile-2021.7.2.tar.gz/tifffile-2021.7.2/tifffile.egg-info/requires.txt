@@ -1,0 +1,6 @@
+numpy>=1.15.1
+
+[all]
+imagecodecs>=2021.4.28
+matplotlib>=3.2
+lxml
