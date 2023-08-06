@@ -1,0 +1,12 @@
+universal_name_format/__init__.py,sha256=BkQSy1xBkxaJtcXhMTWYrLFsDZKry-bNM2qpafBZAm8,60
+universal_name_format/models/__init__.py,sha256=rEtMjD6TSyC2SHoUUVhpsEu5DETnvDVXauLD9YqNuKQ,23
+universal_name_format/models/name.py,sha256=-b_GXf5VAoKvuk1ilbbTA9FcAAe7730LojtyMYHx46U,5086
+universal_name_format/models/orders.py,sha256=aRadzXN3kLK9Y1kY1Vy3gCKHFDYu3fj12zR1vbvgmlk,82
+universal_name_format/utils/__init__.py,sha256=Jcconog9DTfpjkyihBcQx0idzgSpltQ6-fj-CAXwxME,25
+universal_name_format/utils/converter.py,sha256=UfP_P4W4y7XNbU35-4ISvs5rwlz6Gvn2njB4aYg97Os,974
+universal_name_format-0.1.4.dist-info/AUTHORS,sha256=DdNIblt5jro99xWJPlQNAY4dc605c7aIOfz_6ljYHPI,27
+universal_name_format-0.1.4.dist-info/LICENSE,sha256=fibyZZI12RVr9XktXtDYuxV2O-4m75O9hmZYXKT6GLQ,1061
+universal_name_format-0.1.4.dist-info/METADATA,sha256=HG4am6er6Wqk-eO3zgGMlchYfaF2ZTNP268ISYDGGrg,495
+universal_name_format-0.1.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+universal_name_format-0.1.4.dist-info/top_level.txt,sha256=ScJBf4BeRxiq-TgbeMEuuMGaUOCUv5cPcZm-YmYlx-U,22
+universal_name_format-0.1.4.dist-info/RECORD,,
