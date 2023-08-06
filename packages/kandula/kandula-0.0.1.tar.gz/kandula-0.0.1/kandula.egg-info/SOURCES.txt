@@ -1,0 +1,5 @@
+setup.py
+kandula.egg-info/PKG-INFO
+kandula.egg-info/SOURCES.txt
+kandula.egg-info/dependency_links.txt
+kandula.egg-info/top_level.txt
