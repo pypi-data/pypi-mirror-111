@@ -1,0 +1,14 @@
+numpy
+scipy
+matplotlib
+pandas
+pathos
+setuptools
+wheel
+
+[gurobipy]
+gurobipy
+
+[testing]
+pytest
+pytest-cov
