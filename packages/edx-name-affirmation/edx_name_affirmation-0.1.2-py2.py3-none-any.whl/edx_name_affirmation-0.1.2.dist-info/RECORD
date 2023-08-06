@@ -1,0 +1,15 @@
+edx_name_affirmation/__init__.py,sha256=wYs3r7vb2eji5Hu_cxD1JHMvINw32BiuP2CHStAbb4M,181
+edx_name_affirmation/api.py,sha256=IsDvWBQM72fAfXcO5muP-QtpayBuBbk0a4UghUwjVYQ,8282
+edx_name_affirmation/apps.py,sha256=RNol6wbPwAnknCgzmUPJKzriqZi_q-x8ezGoY-gdJDU,495
+edx_name_affirmation/exceptions.py,sha256=PhM8PScVfdBe_CsOKLzt-IYizKhYJHNd_Vooj2bVPsQ,1100
+edx_name_affirmation/models.py,sha256=oTTL7L_lt9ZiyiqKvRg4IG7z_6JUzL6S32kKV41hmlY,1205
+edx_name_affirmation/serializers.py,sha256=oMghKZJNBpcMXFAagKOiALSd_KtqVINC8W1dEUcNc3Q,1042
+edx_name_affirmation/toggles.py,sha256=bti8erdQCsqxShUwNmfqW2gQ0Zps9Xp0prows4wKh6M,554
+edx_name_affirmation/urls.py,sha256=Z8pyq2SUOZ9mXAPEv_Mz4uuvWeDE1GzsQY5ldf_bfW4,389
+edx_name_affirmation/views.py,sha256=VPSAba-hND6pZfkw6Ea6dgqVntBx8Gw98-1RnEup2QE,3914
+edx_name_affirmation-0.1.2.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+edx_name_affirmation-0.1.2.dist-info/METADATA,sha256=juf8PZqzn2_QKclASCqAinfMNa9obhxz8PiADygFkRc,2617
+edx_name_affirmation-0.1.2.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+edx_name_affirmation-0.1.2.dist-info/entry_points.txt,sha256=P6cKvh0ZBGdCaqNjP5VJiHGm55WF5fCDKfjtlImJ6AY,182
+edx_name_affirmation-0.1.2.dist-info/top_level.txt,sha256=sBaHYebVsKq8u80Rt0JMhsJq_1XgMTEc1BguNw4pFh4,21
+edx_name_affirmation-0.1.2.dist-info/RECORD,,
