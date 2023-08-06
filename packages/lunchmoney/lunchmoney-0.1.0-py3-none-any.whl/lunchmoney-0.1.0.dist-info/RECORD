@@ -1,0 +1,8 @@
+lunchmoney/__init__.py,sha256=vV5uMFssz4wMpzJ7UoQIYl5izNAE1gvq1b119PBwJls,334
+lunchmoney/categories.py,sha256=T15ht8JljT2X8W6rmU5aRvacCAijw6Fw30ukpNENuk4,431
+lunchmoney/client.py,sha256=U3YU5nTZirgjHdNGIIKzy0sIQMPd9q9vbpqF_ooYyE0,6801
+lunchmoney/tags.py,sha256=7V_Pk7GX-O4i_u7m0JceDzD3odP6ak2iYVn7l50wb8g,141
+lunchmoney/transactions.py,sha256=sw0Rs9iVr_doX5kfWXGHqQgrLRVZIN1zqPkSjqBKJ5U,1317
+lunchmoney-0.1.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+lunchmoney-0.1.0.dist-info/METADATA,sha256=tpHwhaVfj8fsKoHxLVGNjfmdv7Gyy-yK6REIePcCjZ0,501
+lunchmoney-0.1.0.dist-info/RECORD,,
