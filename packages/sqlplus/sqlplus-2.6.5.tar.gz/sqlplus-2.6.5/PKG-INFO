@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: sqlplus
+Version: 2.6.5
+Summary: A data wrangling tool
+Home-page: https://github.com/nalssee/sqlplus.git
+Author: nalssee
+Author-email: jinisrolling@gmail.com
+License: MIT
+Description: Data analysis with no hassle of learning pandas or sql
+        
+        [DOCS] (https://sqlplus.readthedocs.io/en/latest/)
+Platform: UNKNOWN

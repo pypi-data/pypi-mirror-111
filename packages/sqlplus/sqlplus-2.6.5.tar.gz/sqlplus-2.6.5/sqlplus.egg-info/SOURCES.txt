@@ -1,0 +1,16 @@
+README.md
+setup.py
+sqlplus/__init__.py
+sqlplus/config.py
+sqlplus/exceptions.py
+sqlplus/logging.py
+sqlplus/sqlplus.py
+sqlplus/util.py
+sqlplus.egg-info/PKG-INFO
+sqlplus.egg-info/SOURCES.txt
+sqlplus.egg-info/dependency_links.txt
+sqlplus.egg-info/not-zip-safe
+sqlplus.egg-info/requires.txt
+sqlplus.egg-info/top_level.txt
+tests/__init__.py
+tests/test_core.py
