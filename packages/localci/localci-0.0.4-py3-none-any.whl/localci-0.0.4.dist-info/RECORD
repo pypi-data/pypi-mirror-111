@@ -1,0 +1,15 @@
+localci/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+localci/__main__.py,sha256=ujNLKattz-mpoZkUNV6DMq54CwVHpAGyEbmkARS2B0g,1287
+localci/cli_utils.py,sha256=y2TL_u0OInRbBnOuuPKdVeUDI3D60gfQs5p-WUWr7qU,637
+localci/git_utils.py,sha256=vj9hsyVnx7JuNvWfxp2gL-6EulIm5gJloTij-swcInI,480
+localci/platform_angular.py,sha256=Q8J0FDheYHGwimdYiXsZworhrlq-pseu2YukvvrwUY8,1358
+localci/platform_interface.py,sha256=GB3pjYk81FY9rlNb_Vylp-cNb1sGaGe4vZ7yAGHZE38,4029
+localci/platform_mvn.py,sha256=MpL-Mf7rLe544XClgFTGrDcLi63cbQy35Lio6McvaKw,1261
+localci/platform_pypi.py,sha256=YuV_7hSVdkuDDf-OGBOL7_M_1gWxRS4Jsmoa0RymxoI,1786
+localci/platform_python.py,sha256=q1vcjyouA_T7M4kGts3kVtZo7aVTDI0tkXcFMzGxkKc,983
+localci/version.py,sha256=-Wqu9UyJphp-2_EahEsqQvkcE0VBhm1-N7D6e5rANdY,22
+localci-0.0.4.dist-info/METADATA,sha256=X6NwADCz5627Sir4FxXN3GseJLMx8M-UjaBjZMGfMHU,902
+localci-0.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+localci-0.0.4.dist-info/entry_points.txt,sha256=0vRMTJDEm3y29ZWIqHij_XAfDNWQL-jsYXhRuEG6tzQ,69
+localci-0.0.4.dist-info/top_level.txt,sha256=TUKImCMy4OB2pRV2d4ExGS2ic3jidzrKHzYifNMD5f0,8
+localci-0.0.4.dist-info/RECORD,,
