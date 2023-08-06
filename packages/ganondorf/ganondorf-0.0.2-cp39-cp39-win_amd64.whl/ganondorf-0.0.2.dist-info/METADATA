@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: ganondorf
+Version: 0.0.2
+Summary: A Gan Medical Image Learning Framework
+Home-page: https://github.com/SagaraBattousai/ganondorf.git
+Author: James Calo
+Author-email: jamesafcalo@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8.*
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: matplotlib
+Requires-Dist: nest-asyncio
+Requires-Dist: numpy
+Requires-Dist: tensorboard
+Requires-Dist: tensorflow
+Requires-Dist: tensorflow-addons
+Requires-Dist: SimpleITK
+Requires-Dist: attrs
+
+UNKNOWN
+
