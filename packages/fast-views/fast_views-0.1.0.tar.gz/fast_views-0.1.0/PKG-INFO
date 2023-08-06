@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: fast-views
+Version: 0.1.0
+Summary: Fast operations on time-unit indexed dataframes
+Author: peder2911
+Author-email: pglandsverk@gmail.com
+Requires-Python: >=3.8,<3.9
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: numpy (>=1.21.0,<2.0.0)
+Requires-Dist: pandas (>=1.2.5,<2.0.0)
