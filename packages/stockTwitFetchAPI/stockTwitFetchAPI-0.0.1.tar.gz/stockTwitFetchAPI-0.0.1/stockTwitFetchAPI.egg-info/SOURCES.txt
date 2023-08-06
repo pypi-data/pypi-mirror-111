@@ -1,0 +1,6 @@
+README.md
+setup.py
+stockTwitFetchAPI.egg-info/PKG-INFO
+stockTwitFetchAPI.egg-info/SOURCES.txt
+stockTwitFetchAPI.egg-info/dependency_links.txt
+stockTwitFetchAPI.egg-info/top_level.txt

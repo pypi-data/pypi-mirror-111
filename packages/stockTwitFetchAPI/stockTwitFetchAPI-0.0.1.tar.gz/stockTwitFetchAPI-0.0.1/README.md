@@ -1,0 +1,1 @@
+This package is an API for fetching posts from stockTwits
