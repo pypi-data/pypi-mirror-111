@@ -1,0 +1,220 @@
+Metadata-Version: 2.1
+Name: koloro
+Version: 0.1.4
+Summary: Koloro - colorful terminal text in Python
+Home-page: https://github.com/ydcjeff/koloro
+Author: Jeff Yang
+Author-email: ydcjeff@gmail.com
+License: MIT
+Download-URL: https://pypi.org/project/koloro/#files
+Project-URL: Documentation, https://github.com/ydcjeff/koloro/#readme
+Project-URL: Source Code, https://github.com/ydcjeff/koloro
+Project-URL: Bug Tracker, https://github.com/ydcjeff/koloro/issues
+Project-URL: Changelog, https://github.com/ydcjeff/koloro/blob/main/CHANGELOG.md
+Keywords: python,cli,terminal,styling,ansi,ansi-colors,colorful
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: black (==21.6b0) ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: pytest-cov ; extra == 'tests'
+Requires-Dist: black (==21.6b0) ; extra == 'tests'
+Requires-Dist: mypy ; extra == 'tests'
+Requires-Dist: isort ; extra == 'tests'
+Requires-Dist: flake8 ; extra == 'tests'
+
+<h1>
+  <span style="color: red;">K</span>
+  <span style="color: lime;">o</span>
+  <span style="color: yellow;">l</span>
+  <span style="color: blue;">o</span>
+  <span style="color: magenta;">r</span>
+  <span style="color: cyan;">o</span>
+</h1>
+
+<p>
+  <a href="https://github.com/ydcjeff/koloro/actions/workflows/ci.yaml" target="_blank" rel="noopener noreferrer"><img src="https://github.com/ydcjeff/koloro/actions/workflows/ci.yaml/badge.svg?branch=main" alt="CI status"></a>
+  <a href="https://pypi.org/pypi/koloro" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/pypi/v/koloro" alt="PyPI version"></a>
+  <a href="https://pypi.org/pypi/koloro" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/pypi/dm/koloro" alt="PyPI - Downloads"></a>
+</p>
+
+> Koloro - colorful terminal text in Python
+
+<img src="https://raw.githubusercontent.com/ydcjeff/koloro/main/.github/preview.png" alt="Koloro preview" width="100%">
+
+## Usage
+
+Install with `pip`:
+
+```sh
+pip install koloro
+```
+
+```py
+import koloro
+
+print(koloro.red(f"Error: something was wrong in {koloro.cyan('main.py')}"))
+```
+
+The following environment variables can be used to disable color output globally:
+
+- Disable settings:
+
+  - `NO_COLOR` (assigning something to `NO_COLOR` disables color output regardless of the value)
+  - `TERM=dumb`
+
+- Enable settings:
+
+  - `FORCE_COLOR` (assigning something to `FORCE_COLOR` enables color output regardless of the value)
+
+Moreover, the `enabled` variable can also be used to toggle color output on and off:
+
+```py
+import koloro
+
+# color output on
+koloro.enabled = True
+print(koloro.cyan("foo"))  # -> "\u001b[36mfoo\u001b[39m"
+
+# color output off
+koloro.enabled = False
+print(koloro.cyan("foo"))  # -> "foo"
+```
+
+Stripping ANSI codes function is also provided:
+
+```py
+import koloro
+
+print(koloro.cyan("foo"))  # -> "\u001b[36mfoo\u001b[39m"
+print(koloro.strip_ansi(koloro.cyan("foo")))  # -> "foo"
+```
+
+There is also functions for ANSI 256 colors output:
+
+```py
+import koloro
+
+# code number 12 from https://en.wikipedia.org/wiki/ANSI_escape_code#8-bit
+print(koloro.ansi256(12)('foo'))  # -> "\u001b[38;5;12mfoo\u001b[0m"
+```
+
+```py
+import koloro
+
+# code number 12 from https://en.wikipedia.org/wiki/ANSI_escape_code#8-bit
+print(koloro.ansi256Bg(12)(koloro.black('foo')))  # -> "\u001b[48;5;12mfoo\u001b[0m"
+```
+
+## API Reference
+
+Below functions require one argument `txt`.
+
+### Modifiers
+
+- `reset`
+- `bold`
+- `dim`
+- `italic`
+- `underline`
+- `inverse`
+- `hidden`
+- `strikethrough`
+
+### Colors
+
+- `black`
+- `red`
+- `green`
+- `yellow`
+- `blue`
+- `magenta`
+- `cyan`
+- `white`
+
+### Background colors
+
+- `bgBlack`
+- `bgRed`
+- `bgGreen`
+- `bgYellow`
+- `bgBlue`
+- `bgMagenta`
+- `bgCyan`
+- `bgWhite`
+
+### Bright colors
+
+- `grey`
+- `brightRed`
+- `brightGreen`
+- `brightYellow`
+- `brightBlue`
+- `brightMagenta`
+- `brightCyan`
+- `brightWhite`
+
+### Bright background colors
+
+- `bgGrey`
+- `bgBrightRed`
+- `bgBrightGreen`
+- `bgBrightYellow`
+- `bgBrightBlue`
+- `bgBrightMagenta`
+- `bgBrightCyan`
+- `bgBrightWhite`
+
+### ANSI 256 colors
+
+- `ansi256`
+
+  - Arguments:
+
+    - `n` (`int`) - color code from ANSI 256
+
+  - Returns:
+    - a function who argument is the text to display color output
+
+- `ansi256Bg`
+
+  - Arguments:
+
+    - `n` (`int`) - color code from ANSI 256
+
+  - Returns:
+    - a function who argument is the text to display color output
+
+- `strip_ansi`
+
+  - Arguments:
+
+    - `string` (`str`) - ANSI colored string
+
+  - Returns:
+    - a string which no ANSI codes
+
+## License
+
+[MIT](./LICENSE)
+
+
