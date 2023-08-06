@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: soft-django-delete
+Version: 0.0.2
+Summary: Django Soft Deletion Package
+Home-page: https://github.com/yucealiosman/soft-delete/
+Author: Ali Osman Yuce
+Author-email: aliosmanyuce@gmail.com
+License: MIT
+Description: This package provides an abstract django model, that allows you to transparently retrieve or delete your objects, without having them deleted from your database.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6

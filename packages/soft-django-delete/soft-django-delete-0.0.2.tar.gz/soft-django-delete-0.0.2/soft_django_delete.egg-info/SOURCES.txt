@@ -1,0 +1,14 @@
+setup.py
+django_soft_delete/admin.py
+django_soft_delete/admin_utils.py
+django_soft_delete/collector.py
+django_soft_delete/deletion.py
+django_soft_delete/managers.py
+django_soft_delete/models.py
+django_soft_delete/querysets.py
+django_soft_delete/utils.py
+soft_django_delete.egg-info/PKG-INFO
+soft_django_delete.egg-info/SOURCES.txt
+soft_django_delete.egg-info/dependency_links.txt
+soft_django_delete.egg-info/requires.txt
+soft_django_delete.egg-info/top_level.txt
