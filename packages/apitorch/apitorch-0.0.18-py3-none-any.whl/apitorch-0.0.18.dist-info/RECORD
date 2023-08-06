@@ -1,0 +1,13 @@
+apitorch/__init__.py,sha256=Wxs2BaRKflZBMAQ8CK4qXM0NDe_okrWm3su_hHJKgRg,370
+apitorch/api_client.py,sha256=brykuVY8W1oWNjUxP0U8qxMbbaHge_5-XjI3e09psng,1817
+apitorch/classifier.py,sha256=O-4Pb8-hx9Pumi8_UM46aadKNFr4VsQMSTXcZFfVIso,1168
+apitorch/errors.py,sha256=0yc9e9DDqE0ZsC3szBfHWor0L6r7mWsVG7hzDlFI8bk,262
+apitorch/ping.py,sha256=sq_Ykyt8QXKbbBMECHWbN6ToAAGVohC6uuCFT1Yj6Pk,382
+apitorch/routes.py,sha256=3svu6pZZSH1VO12uEFq9G37BykBA2r12CXz0ykrmshE,190
+apitorch/statics.py,sha256=V3ZBygmMzmxSj-KA3O784erT36rNjvkpcQpLz-V1gMg,123
+apitorch/training_set.py,sha256=YzGgLnlQG2dEPUZJbYd7a5D8DynJ6MmkRLzUu4y2NZ8,3771
+apitorch/utils.py,sha256=7r5ulgCXbtjcLoX5ymJdwVqNTy_hgUteEpE6jICA7ns,1061
+apitorch-0.0.18.dist-info/METADATA,sha256=2J1AIr0CQscNx7nltgnkt3MKDg_v-KB069PFDVBWbrI,397
+apitorch-0.0.18.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+apitorch-0.0.18.dist-info/top_level.txt,sha256=lweAKbMNxQFYjRXtSVhVte8d1BKRFeGLC4TRlIoOwow,9
+apitorch-0.0.18.dist-info/RECORD,,
