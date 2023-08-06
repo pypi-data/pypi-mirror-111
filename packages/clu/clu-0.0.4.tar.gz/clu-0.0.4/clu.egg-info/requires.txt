@@ -1,0 +1,19 @@
+absl-py
+flax
+jax
+jaxlib
+ml_collections
+numpy
+tensorflow
+tensorflow_datasets
+
+[:python_version < "3.7"]
+dataclasses
+
+[pytorch]
+torch>=1.2.0
+
+[test]
+dm-sonnet
+pytest
+torch>=1.2.0
