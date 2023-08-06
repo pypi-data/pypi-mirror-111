@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: Advanced-Output
+Version: 0.0.1
+Summary: Python高级输出
+Home-page: https://github.com/JudyInRedHat/Advanced_Output
+Author: 翟嘉琳
+Author-email: 1905655735@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+Python高级输出，可以：播放音乐，显示图片，模拟线段运行
+
