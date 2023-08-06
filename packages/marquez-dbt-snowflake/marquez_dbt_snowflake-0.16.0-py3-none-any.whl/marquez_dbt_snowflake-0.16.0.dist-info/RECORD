@@ -1,0 +1,7 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_snowflake_adapter.py,sha256=7Nc_c7lWIjs9etF4m5YYBlJBtZiE0V7lTIEA6Ym6fKM,5961
+tests/utils.py,sha256=862qw8HSy4mkA7zB-OTK2qNFBlsmAhZHs88RWmNE61o,10740
+marquez_dbt_snowflake-0.16.0.dist-info/METADATA,sha256=jo2OmNZ2_eyy8B89CAjodhozRSAlC_iUFV2u0z8hqOI,1889
+marquez_dbt_snowflake-0.16.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+marquez_dbt_snowflake-0.16.0.dist-info/top_level.txt,sha256=EdW7283x-lr_cbuivW8Ij7ANAP-ZJ9sLtILQseEPxXg,6
+marquez_dbt_snowflake-0.16.0.dist-info/RECORD,,
