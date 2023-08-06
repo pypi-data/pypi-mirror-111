@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: capapi
+Version: 0.0.7
+Summary: Capitalism API wrapper in Python
+Home-page: https://github.com/drapespy/CapAPI
+Author: drapes
+Author-email: lildrapesbusiness@gmail.com
+License: MIT
+Keywords: python,capitalism,api wrapper,api,wrapper,capi,capi.py
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.5.3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# CapAPI
+### Short for "Capitalism API for Python"
+
+This is a simple, free-to-use, API wrapper for the [Capitalism Bots API](https://discord.capitalismbot.repl.co/beta/api/v1)
+
+Source Code: https://github.com/drapespy/CapAPI
+
+### Examples
+
+```py
+from capapi import get_user
+
+user = get_user(583745403598405632)
+
+print(user.wallet)
+```
+
