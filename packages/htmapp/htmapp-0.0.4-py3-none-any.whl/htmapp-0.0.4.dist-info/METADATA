@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: htmapp
+Version: 0.0.4
+Summary: How to make a Python package.
+Home-page: https://github.com/lsawade/how_to_make_a_python_package
+Author: Lucas Sawade, Peter Makus
+Author-email: lsawade@princeton.edu
+License: UNKNOWN
+Project-URL: Documentation, https://how-to-make-a-python-package.readthedocs.io/en/latest/
+Project-URL: TravisCI, https://travis-ci.com/github/lsawade/how_to_make_a_python_package
+Keywords: Fun,Education,Learning,Programming
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: py ; extra == 'tests'
+
+# Sample package structure  [![Build Status](https://travis-ci.com/lsawade/how_to_make_a_python_package.svg?branch=master)](https://travis-ci.com/lsawade/how_to_make_a_python_package)[![Documentation Status](https://readthedocs.org/projects/how-to-make-a-python-package/badge/?version=latest)](https://how-to-make-a-python-package.readthedocs.io/en/latest/?badge=latest)
+
+This is a tiny, little package that shows how to easily setup a python 
+package that includes
+
+1. Modularized structure
+2. A simple unittest setup using `.travis.yml`
+3. An easy environment building option via `environment.yml`
+4. Documentation of the code based on sphinx.
+
+With this sample repository and a few instructions you should be good to go 
+to create your own repositories that are simple to distribute and easily 
+reproducible in the future.
+
+## Where do you start?
+
+The simplest way is to take a peak into the documentation which is located 
+here: [Documentation](https://how-to-make-a-python-package.readthedocs.io/en/latest/). 
+There, I will explain and go through the few necessary steps to get you started
+to package your modules.
+
+
+## Installation of this package
+
+A few simple steps:
+
+```bash
+# Create the conda environment and install dependencies
+conda env create -f environment.yml
+
+# Activate the conda environment
+conda activate htmapp
+
+# Install your package
+pip install -e .
+```
+
+The `-e` simply let's you modify the package without having to reinstall it 
+all the time.
+
+
+
+

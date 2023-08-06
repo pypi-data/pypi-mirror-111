@@ -1,0 +1,11 @@
+matpy/__init__.py,sha256=vmXvuTcWq-14L1bKDKe_dnHywjcKCqdjo_aVPDJOFyI,877
+matpy/log_util.py,sha256=bNTgKy3M52Tcfxdwko1DslIKnG7VRZJDNnv7_-74mkg,8149
+matpy/matrixmultiplication.py,sha256=JZeV8MAfmt9e8YNId2qeSV-YOHv2He8_g-DjlTf7FhE,4888
+matpy/bins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+matpy/bins/sample_bin.py,sha256=1nsChl0ILMxs5FD9rqVSCpBtA2zW2S7kEAABSJD-MkI,502
+htmapp-0.0.4.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+htmapp-0.0.4.dist-info/METADATA,sha256=K9tjXZyxgk58D9i_upBS-Rr-5FiOqfeQnn8cp3w8rrs,2459
+htmapp-0.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+htmapp-0.0.4.dist-info/entry_points.txt,sha256=ChE6ibNWNCjeF2XiIb1moRGtVC1Ej1sBlvd1mxIC0bI,59
+htmapp-0.0.4.dist-info/top_level.txt,sha256=r3qs7gnLg1DZQ_NJ-nCYLBgrQQFq5QtxjqeTZYAcrTM,6
+htmapp-0.0.4.dist-info/RECORD,,
