@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: sited_test_py
+Version: 1.3.1
+Summary: SiteD plugin testing tool for Python version.
+Home-page: https://github.com/wistn/sited_test_py
+Author: wistn
+Author-email: wistn@qq.com
+License: Apache Software License
+Description: SiteD plugin testing tool for Python version, for SiteD developers testing their own plugins on computer/desktop platform.
+        
+        [ [README-EN](https://github.com/wistn/sited_test_py/blob/main/sited_test_py/README_EN.md)]
+Keywords: sited,plugin,test,ddcat
+Platform: Windows
+Platform: Linux
+Platform:  MacOS
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7, <4
+Description-Content-Type: text/markdown
