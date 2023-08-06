@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: gematriapy
+Version: 0.2.0
+Summary: Convert number to Hebrew or Hebrew to number
+Home-page: https://github.com/NoamNol/gematriapy
+Author: Noam Nol
+Author-email: noamnol19@gmail.com
+License: MIT
+Description: # gematriapy
+        ![CI](https://github.com/NoamNol/gematriapy/workflows/CI/badge.svg)
+        ![PyPI Deploy](https://github.com/NoamNol/gematriapy/workflows/PyPI%20Deploy/badge.svg)
+        
+        Convert number to Hebrew or Hebrew to number
+        
+        ## Install
+        ```bash
+        pip install gematriapy
+        ```
+        
+        ## Usage
+        **`to_hebrew`**:
+        ```python
+        import gematriapy
+        gematriapy.to_hebrew(3) # => "ג"
+        ```
+        
+        ```python
+        gematriapy.to_hebrew(15) # => "טו"
+        ```
+        
+        ```python
+        gematriapy.to_hebrew(822) # => "תתכב"
+        ```
+        
+        > **NOTE**: Numbers greater than 999 are not supported yet.
+        
+        <br/>
+        
+        **`to_number`**:
+        ```python
+        import gematriapy
+        gematriapy.to_number("ג") # => 3
+        ```
+        
+        ```python
+        gematriapy.to_number("טו") # => 15
+        ```
+        
+        ```python
+        gematriapy.to_number("אבא") # => 4
+        ```
+        
+Keywords: hebrew gematria gematriapy
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
