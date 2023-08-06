@@ -1,0 +1,10 @@
+tenacity
+PyYAML
+
+[test]
+coverage
+flaky
+pytest
+pytest-markdown
+pytest-mock
+pytest-plus
