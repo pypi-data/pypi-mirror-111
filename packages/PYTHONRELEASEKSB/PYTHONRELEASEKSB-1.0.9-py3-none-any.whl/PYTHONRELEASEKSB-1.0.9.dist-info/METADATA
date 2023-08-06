@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: PYTHONRELEASEKSB
+Version: 1.0.9
+Summary: Python release test
+Home-page: https://eu4ng.tistory.com
+Author: ksb98
+Author-email: qkfka9045@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3
+Requires-Dist: requests
+Requires-Dist: pandas
+
+UNKNOWN
+
+
