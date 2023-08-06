@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+python_SQLGrants.egg-info/PKG-INFO
+python_SQLGrants.egg-info/SOURCES.txt
+python_SQLGrants.egg-info/dependency_links.txt
+python_SQLGrants.egg-info/not-zip-safe
+python_SQLGrants.egg-info/top_level.txt
+src/sqlgrants/__init__.py
+src/sqlgrants/base.py
+src/sqlgrants/exceptions.py
