@@ -1,0 +1,9 @@
+csvtea/__init__.py,sha256=IEDVWZyvP5zMQ-moNjE8epQNPAayQ8yFxnpgsgnAYCk,70
+csvtea/adapter.py,sha256=7XXoudr_u1gmMAokH0Iitx137MbcgQpCDZl-qMN6GNo,1382
+csvtea/cells.py,sha256=hoQ1E4Mjzlvgvwr6cQkqRtsDnFa9TRdsNaFuJolx7Yo,4355
+csvtea/csvparser.py,sha256=VL6AGf6REF866Au2dAUoryGulghAlM65qt490C1vPLU,1372
+csvtea/format.py,sha256=YxSRZ5Dk9GWeGN4bXDb_zE3mJlJ46tGcShKIfr9jh4o,2146
+csvtea_elunico-0.4.0.dist-info/METADATA,sha256=6osL8ur1RpwxtpaY8cUFMoHKUM3L20tmTa0mnA9PDKY,880
+csvtea_elunico-0.4.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+csvtea_elunico-0.4.0.dist-info/top_level.txt,sha256=KIlcT2hnDl1Iy8uAvs1IO4psJDnSVQGBBN7QWDqPnn0,7
+csvtea_elunico-0.4.0.dist-info/RECORD,,
