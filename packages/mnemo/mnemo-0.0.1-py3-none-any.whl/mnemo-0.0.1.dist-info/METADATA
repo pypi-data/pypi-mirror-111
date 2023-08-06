@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: mnemo
+Version: 0.0.1
+Summary: Notebook and assistant.
+Home-page: https://github.com/ggirelli/mnemo-assistant
+License: MIT
+Keywords: assistant,notebook,journal,database
+Author: Gabriele Girelli
+Author-email: gigi.ga90@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Database
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Topic :: Office/Business
+Classifier: Topic :: Office/Business :: News/Diary
+Classifier: Topic :: Office/Business :: Scheduling
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Dist: bottle (>=0.12.19,<0.13.0)
+Requires-Dist: click (>=8.0.1,<9.0.0)
+Requires-Dist: passlib (>=1.7.4,<2.0.0)
+Requires-Dist: paste (>=3.5.0,<4.0.0)
+Requires-Dist: rich (>=10.4.0,<11.0.0)
+Requires-Dist: tinydb (>=4.5.0,<5.0.0)
+Project-URL: Repository, https://github.com/ggirelli/mnemo-assistant
+Description-Content-Type: text/markdown
+
+# mnemo-assistant
