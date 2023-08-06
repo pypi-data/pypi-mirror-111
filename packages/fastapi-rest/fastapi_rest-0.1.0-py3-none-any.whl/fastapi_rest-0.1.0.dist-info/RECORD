@@ -1,0 +1,10 @@
+CHANGELOG.md,sha256=rsLDaDo9_mob8e0Kgm3-rDZqTI29IaXBuVJLb0N62ms,49
+LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+README.md,sha256=54RnQC7XvIZ4N-yxI4IPj12zC4lNKAeycq289jEAkX0,2034
+fastapi_rest/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastapi_rest/pagination.py,sha256=MHXSAVRynEtMajjuQ7sM3aCSuiePaVT6PdGkgt5wagQ,351
+fastapi_rest/resource.py,sha256=2q_ZhA3Z5gJQJKe8CxnNZ3vDjjCIKPPZsVtc9FHkitA,3842
+fastapi_rest-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+fastapi_rest-0.1.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+fastapi_rest-0.1.0.dist-info/METADATA,sha256=jMpu6Sx8zQCbcihZXZ5mKW6Oc5GDI3BWEOnB1rz51kU,2816
+fastapi_rest-0.1.0.dist-info/RECORD,,
