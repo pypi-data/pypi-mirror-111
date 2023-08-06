@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/version/__init__.py
+src/version/regress.py
+src/version_regress.egg-info/PKG-INFO
+src/version_regress.egg-info/SOURCES.txt
+src/version_regress.egg-info/dependency_links.txt
+src/version_regress.egg-info/top_level.txt
