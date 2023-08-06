@@ -1,0 +1,10 @@
+transkribus_fixer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+transkribus_fixer/cli.py,sha256=Ddv9J_MhKKqmp6gMNK5OTIY_x-6TZugyPaZKbVb1kd8,749
+transkribus_fixer/fixer.py,sha256=UIm299H7a4A0JaUNG7Y5Rj4l1kcguqPBzb3oZO6qwjY,2791
+transkribus_fixer-0.0.1.dist-info/DESCRIPTION.rst,sha256=QPiM-aaHNI4SHU6xxKe-ssDEs_XuEcEEuM5Q58PA4AY,197
+transkribus_fixer-0.0.1.dist-info/METADATA,sha256=oX17n4eYlkbvaEqjNolZOKBmkxMxPCaluw3Ql23Wvr8,500
+transkribus_fixer-0.0.1.dist-info/RECORD,,
+transkribus_fixer-0.0.1.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+transkribus_fixer-0.0.1.dist-info/entry_points.txt,sha256=DdQGuylMOggRri1NAIxOUkaeZsbtdX4mFXZN7FLvjAA,65
+transkribus_fixer-0.0.1.dist-info/metadata.json,sha256=q_tXXAilQp_HFNZsmLm9afzpZhxVIuD8LaqsGMpBaVA,698
+transkribus_fixer-0.0.1.dist-info/top_level.txt,sha256=JkjXtheusKv4TWSMbX2q8vWsXfwI9RZNTRozAIJ8BDA,18

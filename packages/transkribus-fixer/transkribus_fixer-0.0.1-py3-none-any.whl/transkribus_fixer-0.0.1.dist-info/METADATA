@@ -1,0 +1,32 @@
+Metadata-Version: 2.0
+Name: transkribus-fixer
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: https://github.com/kba/transkribus-fixer
+Author: kba
+Author-email: unixprog@gmail.com
+License: Apache License 2.0
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: lxml
+
+# transkribus-fixer
+
+> Transforms Transkribus' flavor of PAGE-XML to standard PAGE-XML
+
+## Installation
+
+From PyPI:
+
+```
+pip install transkribus_fixer
+```
+
+From repo root:
+
+```
+pip install .
+```
+
+
