@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: binomial-gaussian-distributions-kb
+Version: 1.0.2
+Summary: Binomial and Gaussian distributions
+Home-page: UNKNOWN
+Author: Kenneth Bundy
+Author-email: kennybcuz@gmail.com
+License: UNKNOWN
+Description-Content-Type: text/markdown
+Description: bin-gauss-distributions_kb is a Python library for calculating and visualizing Binomial and Gaussian distributions.  The package calculates the mean, standard deviation, probability density function of a distribution and sums distributions.  The package can read in a distribution from a file.
+Platform: UNKNOWN
