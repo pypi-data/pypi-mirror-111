@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+rabbitmq_wrapper/__init__.py
+rabbitmq_wrapper/rabbitmq.py
+rabbitmq_wrapper.egg-info/PKG-INFO
+rabbitmq_wrapper.egg-info/SOURCES.txt
+rabbitmq_wrapper.egg-info/dependency_links.txt
+rabbitmq_wrapper.egg-info/requires.txt
+rabbitmq_wrapper.egg-info/top_level.txt
