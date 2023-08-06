@@ -1,0 +1,4 @@
+pysodium
+SecureString
+qrcodegen
+zxcvbn-python
