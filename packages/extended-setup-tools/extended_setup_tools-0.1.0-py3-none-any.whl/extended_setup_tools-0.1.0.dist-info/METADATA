@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: extended-setup-tools
+Version: 0.1.0
+Summary: Python tool for helping making shorter and smarter setup.py scripts
+Home-page: https://gitlab.com/Hares-Lab/extended-setup-tools
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: all
+
+# Extended SetupTools
+
+### Usage
+#### `src/__init__.py`
+```python
+from collections import namedtuple
+
+__title__ = 'my-package'
+__author__ = 'Peter Zaitcev / USSX Hares'
+__license__ = 'BSD 2-clause'
+__copyright__ = 'Copyright 2021 Peter Zaitcev'
+__version__ = '0.1.0'
+
+VersionInfo = namedtuple('VersionInfo', 'major minor micro releaselevel serial')
+version_info = VersionInfo(*__version__.split('.'), releaselevel='alpha', serial=0)
+
+__all__ = \
+[
+    'version_info',
+    '__title__',
+    '__author__',
+    '__license__',
+    '__copyright__',
+    '__version__',
+]
+```
+
+#### `setup.py`
+```python
+from extended_setup import ExtendedSetupManager
+ExtendedSetupManager('python_package_name').setup \
+(
+    short_description = "Some short description",
+    classifiers = [ 'Programming Language :: Python :: 3.7' ],
+)
+```
+
+
