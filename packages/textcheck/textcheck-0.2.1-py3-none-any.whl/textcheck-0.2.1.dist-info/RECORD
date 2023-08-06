@@ -1,0 +1,8 @@
+textcheck/__init__.py,sha256=HfjVOrpTnmZ-xVFCYSVmX50EXaBQeJteUHG-PD6iQs8,22
+textcheck/lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+textcheck/lib/spellcheck.py,sha256=xqOySHjlgo-eAX5wfo_zk7x5Izri0AECJND4SeCp314,1184
+textcheck/main.py,sha256=mhN6rUxHedTjSwIWNDuNeFl3-qCdSWDHsXGu1N8YxaY,896
+textcheck-0.2.1.dist-info/entry_points.txt,sha256=qDoq3THDCeA_4WHlfJQ06qOJR9TE_wNJ_LImkrL6VQI,48
+textcheck-0.2.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+textcheck-0.2.1.dist-info/METADATA,sha256=X4jWWC3nfXTL3w0CsBCGJdKHgBkSEJB3gMZRsdNcH-8,2239
+textcheck-0.2.1.dist-info/RECORD,,

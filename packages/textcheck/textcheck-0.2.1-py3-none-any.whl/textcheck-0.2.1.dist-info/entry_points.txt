@@ -1,0 +1,3 @@
+[console_scripts]
+textcheck=textcheck.main:app
+
