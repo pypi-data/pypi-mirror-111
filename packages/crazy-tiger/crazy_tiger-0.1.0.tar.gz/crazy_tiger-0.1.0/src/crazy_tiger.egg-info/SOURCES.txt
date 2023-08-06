@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/crazy_tiger/__init__.py
+src/crazy_tiger/generator.py
+src/crazy_tiger/words.py
+src/crazy_tiger.egg-info/PKG-INFO
+src/crazy_tiger.egg-info/SOURCES.txt
+src/crazy_tiger.egg-info/dependency_links.txt
+src/crazy_tiger.egg-info/top_level.txt
