@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: ppma
+Version: 0.1.3
+Summary: PaddlePaddle Model Analysis.
+Home-page: https://github.com/lmk123568/Paddle_Model_Analysis
+Author: Mike
+Author-email: lmk123568@qq.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+Requires-Dist: rich
+
+📦 Paddle Model Analysis
+=======================
+
+Hi guy，welcome to here！
+
+这是基于飞桨开发的工具包，主要用于对分类任务模型进行分析
+
+Installation
+-----
+
+```bash
+pip install ppma -i https://pypi.python.org/simple
+```
+
+
+
