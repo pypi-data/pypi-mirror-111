@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: DatasetsEvaluator
+Version: 0.0.3
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Brett Kennedy
+Author-email: wm.brett.kennedy@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: openml
+
+UNKNOWN
+
