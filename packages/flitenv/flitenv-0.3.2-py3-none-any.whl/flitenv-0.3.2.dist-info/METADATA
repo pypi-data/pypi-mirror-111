@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: flitenv
+Version: 0.3.2
+Summary: Manage venvs for a flit project
+Home-page: https://github.com/orsinium-labs/flitenv
+License: MIT
+Keywords: flit,venv
+Author: Gram
+Author-email: gram@orsinium.dev
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: flit
+Requires-Dist: dephell-venvs
+Requires-Dist: pip-tools
+Requires-Dist: toml
+Requires-Dist: flake8 ; extra == "lint"
+Requires-Dist: isort ; extra == "lint"
+Requires-Dist: mypy ; extra == "lint"
+Requires-Dist: types-toml ; extra == "lint"
+Requires-Dist: pytest ; extra == "test"
+Provides-Extra: lint
+Provides-Extra: test
+
+# flitenv
+
+Manage venvs for flit project.
+
+## Installation
+
+```bash
+python3 -m pip install flitenv
+```
+
+## Usage
+
+Install deps from `lint` extras into `.venvs/lint`:
+
+```bash
+flitenv lint install
+```
+
+Run `.venvs/lint/bin/flake8`:
+
+```bash
+flitenv lint run flake8
+```
+
