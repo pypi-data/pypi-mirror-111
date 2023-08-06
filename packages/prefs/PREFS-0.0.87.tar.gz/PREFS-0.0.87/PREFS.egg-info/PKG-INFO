@@ -1,0 +1,111 @@
+Metadata-Version: 2.1
+Name: PREFS
+Version: 0.0.87
+Summary: A simple program that writes and reads prefs
+Home-page: https://github.com/Patitotective/PREFS
+Author: Cristobal Riaga
+Author-email: cristobalriaga@gmail.com
+License: MIT
+Keywords: prefs
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+<p align="center">
+  <a href="https://github.com/Patitotective/PREFS/wiki" target="blank">
+  <img src="logo1.png" alt="PREFS logo" /></a>
+</p>
+
+## Why?
+**PREFS's purpose is to facilitate the process of store information, user information (that won't get lost when the program ends).**
+
+## Installation:
+On windows:
+```pip install PREFS```
+
+On Mac and Linux:
+```pip3 install PREFS```
+
+### Store Prefs:
+PREFS writes dictionaries as human readable files and converts it into dictionaries at read time.
+Creates a .txt file in dictionary structure, your will see something like this:
+```
+firstEntry="02/05/2021"
+theme="Dark"
+username="Patitotective"
+age="21"
+```
+
+### Syntaxis:
+First you have to create an instance of the class PREFS (each class is a new file):
+```
+UserPrefs = PREFS.PREFS(prefs = {"firstEntry": today, username": "Patitotective", "theme": "Dark", "age": 21})
+```
+from this you can call two main methods:
+
+```ReadPrefs()```: Returns a dictionary with your prefs.
+
+```WritePrefs()```: Requires two arguments, first the name of the pref that you want to change (if pref exists) or create it if it doesn't, and second the value that will replace the old value.
+
+
+## Documentation
+PREFS documentation can be found at https://github.com/Patitotective/PREFS/wiki with more examples and information.
+
+
+Change Log
+==========
+
+0.0.1 (01/05/2021)
+-------------------
+- First Release
+
+0.0.2 (01/05/2021)
+-------------------
+- Name change
+
+0.0.3 (02/05/2021)
+-------------------
+- Added python interpreter for pref values (using ast library)
+
+0.0.4 (02/05/2021)
+-------------------
+- Now in class PREFS argument prefs you must pass a lambda: function for not execute the function always, only when file is lost.
+
+0.0.45 (02/05/2021)
+-------------------
+- Fixed error with lambda.
+
+0.0.46 (04/05/2021)
+-------------------
+- Now you can choose your prefs ender, line break is predetermined, remember don't put a character that is on your prefs because program fails.
+
+0.0.6 (04/05/2021)
+-------------------
+- Set max split as 1.
+
+0.0.65 (04/05/2021)
+-------------------
+- Added ChangeFilename() function and ReWritePrefs() function.
+
+0.0.80 (05/06/2021)
+-------------------
+- Added dictionary write mode and support path file.
+
+0.0.81 (05/06/2021)
+-------------------
+- Fixed little issues.
+
+0.0.85 (16/06/2021)
+-------------------
+- Fixed path support, fixed ChangeFilename function, added debug parameter.
+
+0.0.86 (17/06/2021)
+-------------------
+- Added docstring.
+
+
