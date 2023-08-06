@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+yxq_stock.egg-info/PKG-INFO
+yxq_stock.egg-info/SOURCES.txt
+yxq_stock.egg-info/dependency_links.txt
+yxq_stock.egg-info/entry_points.txt
+yxq_stock.egg-info/requires.txt
+yxq_stock.egg-info/top_level.txt

@@ -1,0 +1,3 @@
+[console_scripts]
+yxq_stock = yxq_stock:main
+
