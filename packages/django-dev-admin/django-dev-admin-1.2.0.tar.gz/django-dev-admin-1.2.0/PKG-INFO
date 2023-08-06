@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: django-dev-admin
+Version: 1.2.0
+Summary: A Django app to help developers login to any user via django command.
+Home-page: https://github.com/smithkre/django-dev-admin
+Author: Smith Krengkrud
+Author-email: smith.kre@gmail.com
+License: BSD 3
+Description: # Django Dev Admin
+        
+        [![PyPI version](https://badge.fury.io/py/django-dev-admin.svg)](https://badge.fury.io/py/django-dev-admin)
+        
+        This project gives you a middleware that allow you to login to any user via django command.
+        
+        ## Installation
+        
+        1. Install
+        
+        ```
+        pip install django-dev-admin
+        ```
+        
+        2. Add `django_dev_admin` to your `INSTALLED_APPS`
+        
+        ```
+        INSTALLED_APPS = [
+            "django.contrib.admin",
+            "django.contrib.auth",
+            "django.contrib.contenttypes",
+            "django.contrib.sessions",
+            "django.contrib.messages",
+            "django.contrib.staticfiles",
+            ...,
+            "django_dev_admin",
+        ]
+        ```
+        
+        3. Add `django_dev_admin.middleware.DevAdminMiddleware` to your `MIDDLEWARE` after `django.contrib.sessions.middleware.SessionMiddleware`
+        
+        ```
+        MIDDLEWARE = [
+            ...,
+            "django.middleware.security.SecurityMiddleware",
+            "django.contrib.sessions.middleware.SessionMiddleware",
+            "django_dev_admin.middleware.DevAdminMiddleware",
+            ...,
+        ]
+        ```
+        
+        ## Settings
+        
+        If you are not using default development hostname and port. Please put this option in your `settings.py`
+        
+        ```
+        DEFAULT_DEV_SERVER = "http://localhost:8000"
+        ```
+        
+        ## Use command
+        
+        ```
+        python manage.py login_as
+        
+        python manage.py login_as -u <username>
+        ```
+        
+        ## Production
+        
+        Please disable this module in production
+        
+Keywords: django dev admin helper
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Framework :: Django
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
