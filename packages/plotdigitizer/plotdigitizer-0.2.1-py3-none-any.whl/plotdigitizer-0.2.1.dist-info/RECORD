@@ -1,0 +1,10 @@
+plotdigitizer/geometry.py,sha256=2R7BHBVI6QwFIdcPgYsuKPxlMNv2KEfSsAP4V-f_HWs,1888
+plotdigitizer/grid.py,sha256=vwo43vX10YJkdd1lSHb8UWrLKF4M8BJWs4UqPT6rKaU,2206
+plotdigitizer/locate.py,sha256=Sa3apgR-6ficQ8vdlX8vYYavfqG77ZEz-DuaKF9E0F0,2191
+plotdigitizer/plotdigitizer.py,sha256=gWuYdW6iQV3tbsh3ooSf03D-glYiHNqyGqgCJ0twrfQ,10103
+plotdigitizer/trajectory.py,sha256=OcZ6J4_H0-U-KaNW251rmZ7YEBAihqlSQ71H1sjoZiU,2102
+plotdigitizer-0.2.1.dist-info/entry_points.txt,sha256=vgSEuj42-z5OWWoNmVoVdfKMpHI3MyI76LbirLUM1Io,113
+plotdigitizer-0.2.1.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+plotdigitizer-0.2.1.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+plotdigitizer-0.2.1.dist-info/METADATA,sha256=n3xnIQ2NGn0q1lGn9v1uhOIkGD-5akJ80uimQBAHq1M,5651
+plotdigitizer-0.2.1.dist-info/RECORD,,
