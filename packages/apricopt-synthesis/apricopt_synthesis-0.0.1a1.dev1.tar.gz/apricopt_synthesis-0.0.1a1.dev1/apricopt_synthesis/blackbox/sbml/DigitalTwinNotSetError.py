@@ -1,0 +1,2 @@
+class DigitalTwinNotSetError(RuntimeError):
+    pass

@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: apricopt-synthesis
+Version: 0.0.1a1.dev1
+Summary: A python library
+Home-page: http://mclab.di.uniroma1.it
+Author: Marco Esposito
+Author-email: esposito@di.uniroma1.it
+License: UNKNOWN
+Description: # APriCOPT#
+        
+        APriCOPT (Automatic Personalized Combination Therapy Optimizer) is a python library and standalone program for the synthesis of personalized therapies on biological models given as black-boxes, with a focus on SBML models.
+        
+        It requires little to no programming experience, as it uses [PEtab](https://petab.readthedocs.io/en/latest/) for describing the problem and providing all the needed information.
+        
+        APriCOPT natively supports [NOMAD](https://www.gerad.ca/nomad/) for black-box optimization, but any solver can be used by implementing a simple API.
+        
+        ### SBML models
+        
+        If the biological model is described in the SBML format, APriCOPT provides immediate ways to setup the therapy synthesis.
+        
+        Currently, we support the following simulators of SBML models:
+        
+        * COPASI. A state-of-the-art simulator for models of biological processes. We support any level and version of SBML.
+        
+        
+        
+        ### Info ###
+        
+        WIP
+        
+        * Version 0.0.1a1.dev1
+        
+        
+        ### Who do I talk to? ###
+        
+        * Marco Esposito (author) - esposito@di.uniroma1.it
+        * Leonardo Picchiami (author) - picchiami.1643888@studenti.uniroma1.it
+        
+        
+        Copyright (C) 2020-2021  Marco Esposito, Leonardo Picchiami.
+        
+        Distributed under GNU General Public License v3.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
