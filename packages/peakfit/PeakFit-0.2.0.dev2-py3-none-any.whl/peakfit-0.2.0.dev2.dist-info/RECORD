@@ -1,0 +1,15 @@
+peakfit/__init__.py,sha256=kbHgLN_8P9Op9hZKJEKKDcDkPHOHQvyRVGyhNr6cCbw,27
+peakfit/__main__.py,sha256=yUVKjJGfqYR5nYU0bRBKeF8SfRaprJuvJSZbIZA8LOI,126
+peakfit/clustering.py,sha256=cI9K-5HQbSUAY8JO6V3OeP1LBBdsP81qv4d-CmNtcO8,2050
+peakfit/computing.py,sha256=TWHeeylanJlkrMoBspexUQmp9PEAoj5oOrOm7H0--fY,1005
+peakfit/peakfit.py,sha256=Fo8Jm1qFk9zxjl1dgp66lIi4L526MQN5AzTGfKUIDYk,8689
+peakfit/plot_cest.py,sha256=C9CL1LFIppKYT5OKU5YgCxfE1UwyPEbHXc4vFKyRc3k,1949
+peakfit/plot_cpmg.py,sha256=8xme7GoLG3BSeOnie5TGuB4KrNOxSu_qjdWOQS5xkHI,2650
+peakfit/shapes.py,sha256=Nv-wpbFd4rsQSFJ670X1SOzaRHi-DfL36bCSvT2074Y,1720
+peakfit/util.py,sha256=bRrQwcuLdhcMa62CaFg7OoHQKC9e_2cKVFLO6ImTfJo,433
+peakfit/writing.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+peakfit-0.2.0.dev2.dist-info/entry_points.txt,sha256=9hXtyMnGYx_JpPC2-h4vfTRsWlA41zRQR_4hXi1LlQg,114
+peakfit-0.2.0.dev2.dist-info/LICENSE,sha256=s2waR0aKg13okIlOkvXKFw4ke9K_ruR5DyruK_BSPjs,1500
+peakfit-0.2.0.dev2.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+peakfit-0.2.0.dev2.dist-info/METADATA,sha256=UiA4vr2yedVqaUVIXcRobf2QqN98g_COeIdEQpMz_-A,1115
+peakfit-0.2.0.dev2.dist-info/RECORD,,
