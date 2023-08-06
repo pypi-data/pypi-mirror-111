@@ -1,0 +1,46 @@
+# List of folders where posts are stored
+# Content from multiple sources must be unique!
+sources:
+- ~/Documents/exampledata/content1
+- ~/Documents/exampledata/content2
+
+# Folder where pages are stored
+# Must not be in a subfolder where posts are stored
+mainpage_folder: ~/Documents/exampledata/mainpage/
+
+# Menu specifies post categories and their order.
+# Posts that don't match any specified categories will be under "Other"
+menu:
+  - Category One
+  - Category Two
+  - Category Three
+
+# Where to store generated output
+output: ~/Documents/artblog_output
+
+# Logo image acts as the button to return to the main page
+# It will be at the top of every page above the menu
+# Example designed using https://flamingtext.com/ for non-commercial use
+# About 300 pixels wide, and less than 80 pixels in height works well
+logo: ~/Documents/exampledata/logo/example_art_blog.png
+
+# Include image for favicon (image in browser tabs)
+# Example designed using https://favicon.io/favicon-generator/
+# 32x32 pixels seems suitable
+favicon: ~/Documents/exampledata/favicon/favicon-32x32.png
+
+# The "author" will be used for the copyright notice in the footer.
+author: Artsy Fartsy
+
+# The "site_name" is used as part of the tab name.
+site_name: My Awesome Art Blog
+
+# Note: update license.html using https://creativecommons.org/choose/
+#       for something different from CC by 4.0
+
+# Leave this commented to automatically set to the current year
+# copyright_year: 2021
+
+# Important - Once you set this, don't change it (for SEO reasons)
+# You will need to copy the output to the appropriate folder at your hosting site
+base_url: https://myartblog.com
