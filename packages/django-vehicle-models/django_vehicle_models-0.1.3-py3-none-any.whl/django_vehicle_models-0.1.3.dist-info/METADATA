@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: django-vehicle-models
+Version: 0.1.3
+Summary: models for storing in DB
+Author: Lamarmora
+Author-email: scheduleanevent@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
