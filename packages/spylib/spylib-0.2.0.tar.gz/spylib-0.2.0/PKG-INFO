@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: spylib
+Version: 0.2.0
+Summary: A library to facilitate interfacing with Shopify's API
+License: MIT
+Author: Anthony Hillairet
+Author-email: ant@satel.ca
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PyJWT (>=2.1.0,<3.0.0)
+Requires-Dist: fastapi (>=0.65.1,<0.66.0)
+Requires-Dist: httpx (>=0.18.1,<0.19.0)
+Requires-Dist: loguru (>=0.5.3,<0.6.0)
+Requires-Dist: nest-asyncio (>=1.5.1,<2.0.0)
+Requires-Dist: shortuuid (>=1.0.1,<2.0.0)
+Requires-Dist: tenacity (>=7.0.0,<8.0.0)
