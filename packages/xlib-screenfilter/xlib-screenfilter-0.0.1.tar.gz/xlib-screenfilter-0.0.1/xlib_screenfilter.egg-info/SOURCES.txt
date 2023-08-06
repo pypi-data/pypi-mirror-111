@@ -1,0 +1,6 @@
+setup.py
+xlib-screenfilter/__main__.py
+xlib_screenfilter.egg-info/PKG-INFO
+xlib_screenfilter.egg-info/SOURCES.txt
+xlib_screenfilter.egg-info/dependency_links.txt
+xlib_screenfilter.egg-info/top_level.txt

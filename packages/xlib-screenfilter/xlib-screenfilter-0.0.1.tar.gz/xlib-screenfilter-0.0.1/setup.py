@@ -1,0 +1,32 @@
+from setuptools import setup
+'''
+sh sumbit.sh
+    rm dist/*
+    python3 setup.py check
+    python3 setup.py sdist
+    twine upload dist/*
+    pip3 install --upgrade xlib-screenfilter
+    pip3 install --upgrade xlib-screenfilter
+'''
+
+setup(
+    name='xlib-screenfilter',
+    version='0.0.1',
+    description='Python',
+    #url='https://github.com/caph1993/xlib-screenfilter',
+    author='Carlos Pinzón',
+    author_email='caph1993@gmail.com',
+    license='MIT',
+    packages=[
+        'xlib-screenfilter',
+    ],
+    install_requires=[],
+    classifiers=[
+        'Development Status :: 1 - Planning',
+        'Intended Audience :: Science/Research',
+        'License :: OSI Approved :: BSD License',
+        'Operating System :: POSIX :: Linux',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.6',
+    ],
+)
