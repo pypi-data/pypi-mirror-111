@@ -1,0 +1,12 @@
+scutils/__init__.py,sha256=9nDxTgXwzvUFOLENuBQdCbVZTGO2RxDGyc9lUzLmRPE,1322
+scutils/file_utils.py,sha256=Mf9db8WTT3WXPjMwdnTANTfs0mPo_WM303MnvCm3GnM,1355
+scutils/log_utils.py,sha256=vFl6Hzi3qPqfQtjqdcHB6awaH-8RScAm_XrYiNXfEqM,2299
+scutils/singleton.py,sha256=tYm7DacQ8AwC5GkTypo1H-MfDLeQoNYudqnpDj_Rmqg,1985
+scutils/tests/__init__.py,sha256=geiVmsc9iPhOzHUHdCPrdVcoT42GBjMoafy2eT_JloI,1133
+scutils/tests/singleton/__init__.py,sha256=geiVmsc9iPhOzHUHdCPrdVcoT42GBjMoafy2eT_JloI,1133
+scutils/tests/singleton/singleton_test.py,sha256=XTWlCwl1LGFslNGEoWTIAShXVG3osbQlr0j4DyO7mFY,1765
+sc_utilities-0.0.5.dist-info/LICENSE,sha256=cXbz9rqykGAwRK7AtRJJuBioOhncE0mcNu1-R867W64,1078
+sc_utilities-0.0.5.dist-info/METADATA,sha256=yWQVtdQ9dIiVlzih69vHQtWLxxmCLOaFZ4DpXceiWRg,1486
+sc_utilities-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sc_utilities-0.0.5.dist-info/top_level.txt,sha256=ueCWTMyrw2H29klY2FInP-6NZWncSAwL22pL5-TkA8k,8
+sc_utilities-0.0.5.dist-info/RECORD,,
