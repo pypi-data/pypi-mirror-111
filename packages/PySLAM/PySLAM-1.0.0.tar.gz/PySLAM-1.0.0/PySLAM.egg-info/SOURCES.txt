@@ -1,0 +1,13 @@
+LICENSE.md
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+./setup.py
+./slam.py
+PySLAM.egg-info/PKG-INFO
+PySLAM.egg-info/SOURCES.txt
+PySLAM.egg-info/dependency_links.txt
+PySLAM.egg-info/requires.txt
+PySLAM.egg-info/top_level.txt
+bin/PySLAM

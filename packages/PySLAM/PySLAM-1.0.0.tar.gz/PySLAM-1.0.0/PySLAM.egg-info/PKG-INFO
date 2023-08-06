@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: PySLAM
+Version: 1.0.0
+Summary: Python implementation of Source Live Audio Mixer
+Home-page: https://gitlab.com/aw1cks/PySLAM
+Author: Alex Wicks
+Author-email: alex@awicks.io
+License: AGPLv3
+Download-URL: https://gitlab.com/aw1cks/PySLAM
+Keywords: csgo,slam,sourceliveaudiomixer,ffmpeg,dmenu,fzf
+Platform: linux
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Communications :: Chat
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+License-File: LICENSE.md
+
+# PySLAM
+
+CSGO implemenation of SLAM, written in python.
+
+## Example configuration
+
+Configuration file lives under $HOME/.config/slam/config.yaml
+
+Example config as such:
+
+```yaml
+---
+
+music:
+  paths:
+    - /home/alex/Documents/slam
+
+csgo:
+  game: /opt/games/steamapps/common/Counter-Strike Global Offensive
+  user_profile:
+    - /opt/games/steamapps/common/Counter-Strike Global Offensive/csgo/cfg
+```
+
+
