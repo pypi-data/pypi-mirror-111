@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: clustercheck
+Version: 0.1.0
+Summary: check a cluster of services
+Author: erik aronesty
+Author-email: erik@q32.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: pyyaml (>=5.4.1,<6.0.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Requires-Dist: websocket-client (>=1.1.0,<2.0.0)
