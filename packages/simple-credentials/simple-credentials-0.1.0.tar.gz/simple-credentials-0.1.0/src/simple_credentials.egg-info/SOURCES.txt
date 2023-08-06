@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/simple_credentials/__init__.py
+src/simple_credentials/__version__.py
+src/simple_credentials/utils.py
+src/simple_credentials.egg-info/PKG-INFO
+src/simple_credentials.egg-info/SOURCES.txt
+src/simple_credentials.egg-info/dependency_links.txt
+src/simple_credentials.egg-info/top_level.txt
