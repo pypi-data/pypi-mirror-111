@@ -1,0 +1,6 @@
+pretrained_word_embedding/__init__.py,sha256=8Gzrg2quWCFeXvrwJWG9uGYQYqC4QRfCIzsvpU2KFOk,67
+pretrained_word_embedding/pretrained_word_embedding.py,sha256=H91lPgmwXh3jtHT_ITF7iT84T-yV-N0AeGfd-z-euls,696
+pretrained_word_embedding-0.0.1.dist-info/METADATA,sha256=8T5jVXLT-VWYsX_52DGb-juwVBPXr-X8-voQpe8Yx0A,519
+pretrained_word_embedding-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pretrained_word_embedding-0.0.1.dist-info/top_level.txt,sha256=9bqngE9MIGQ5v8ouJvuMZJgQdVaePEKcqbzv5DhpcTk,26
+pretrained_word_embedding-0.0.1.dist-info/RECORD,,
