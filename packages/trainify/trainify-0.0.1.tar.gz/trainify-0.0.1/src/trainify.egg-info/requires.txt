@@ -1,0 +1,6 @@
+tables>=3.6
+tqdm>=4.56
+numpy>=1.19
+pandas>=1.2
+tensorboard>=2.5
+torch>=1.8
