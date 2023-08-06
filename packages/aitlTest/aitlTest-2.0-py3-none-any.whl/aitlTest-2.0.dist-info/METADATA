@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: aitlTest
+Version: 2.0
+Summary: aitl test pkg
+Home-page: UNKNOWN
+Author: juholee_cns
+Author-email: dlwngh1406@gmail.com
+License: UNKNOWN
+Keywords: aitl,pkgtest
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3
+
+UNKNOWN
+
+
