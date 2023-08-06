@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+vidyo/__init__.py
+vidyo.egg-info/PKG-INFO
+vidyo.egg-info/SOURCES.txt
+vidyo.egg-info/dependency_links.txt
+vidyo.egg-info/top_level.txt

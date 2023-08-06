@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: vidyo
+Version: 0.0.0
+Summary: A simple way to get information on YouTube videos, async or otherwise.
+Home-page: https://github.com/parafoxia/vidyo
+Author: Ethan Henderson
+License: BSD-3-Clause
+Project-URL: Documentation, https://vidyo.readthedocs.io/en/latest/
+Project-URL: Source, https://github.com/parafoxia/vidyo
+Project-URL: Bug Tracker, https://github.com/parafoxia/vidyo/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# vidyo
+
+This is currently only a placeholder entry. Do not download this library just yet.
+
+
