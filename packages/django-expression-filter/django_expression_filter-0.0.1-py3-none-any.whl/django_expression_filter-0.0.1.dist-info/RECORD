@@ -1,0 +1,8 @@
+CHANGELOG.rst,sha256=j8kZL6tBCHRjvKK0Z026YUYG1erNOtij_n8Uis-iC7U,198
+LICENSE,sha256=lOyKmpRwJj5AYklZjL-4CY28nFobNULTzGq9hq3ljQ0,728
+expression_filter/__init__.py,sha256=hndFbjKfiwenGv8h1KIGDSqXYRP90CgXETcnvwUrqXg,92
+expression_filter/bypass.py,sha256=FkGNrGF-5UTnGJ7r9OfuvEPoFnburWV51sJTaGZ7LZ4,184
+django_expression_filter-0.0.1.dist-info/LICENSE,sha256=lOyKmpRwJj5AYklZjL-4CY28nFobNULTzGq9hq3ljQ0,728
+django_expression_filter-0.0.1.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+django_expression_filter-0.0.1.dist-info/METADATA,sha256=uaG-VxaNf3l5r-I7UCtNzt6DW_F0Blvoky2yCdz3zIU,3179
+django_expression_filter-0.0.1.dist-info/RECORD,,
