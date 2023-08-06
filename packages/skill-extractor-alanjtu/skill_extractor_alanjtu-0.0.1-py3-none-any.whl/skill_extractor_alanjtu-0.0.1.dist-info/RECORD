@@ -1,0 +1,8 @@
+skill_extractor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+skill_extractor/emsi_skills_full.csv,sha256=iRxpJruuSfmZp6v-OYiFMuxHw_PRZNTjKT9CtwDWDrw,986559
+skill_extractor/match.py,sha256=6IrRnnBl0HDayL-LAnKAtXe07DbfKJAH-A7zBtemjCM,12839
+skill_extractor_alanjtu-0.0.1.dist-info/LICENSE,sha256=nEx-6v3FcwRlSdZ8zvok8FXJ5j-Rd3s6kdw_yXHntEA,1085
+skill_extractor_alanjtu-0.0.1.dist-info/METADATA,sha256=ZPIZGExNblsmabaYexCDRWc1GakPZUIJOVY9nKzcAJw,757
+skill_extractor_alanjtu-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+skill_extractor_alanjtu-0.0.1.dist-info/top_level.txt,sha256=kztmH0OgO_onK02_eV9XB6JvWKFne5vn_kN81ahzTkw,16
+skill_extractor_alanjtu-0.0.1.dist-info/RECORD,,
