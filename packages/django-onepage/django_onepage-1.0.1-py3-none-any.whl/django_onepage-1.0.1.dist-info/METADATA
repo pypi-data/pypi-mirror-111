@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: django-onepage
+Version: 1.0.1
+Summary: Django Onepage Application Management
+Home-page: https://github.com/njnafir/django-onepage
+Author: Nj Nafir
+Author-email: njnafir@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+
+# Django Onepage Application
+
+
