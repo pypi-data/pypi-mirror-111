@@ -1,0 +1,3 @@
+[simplebot.plugins]
+simplebot_reversi = simplebot_reversi
+

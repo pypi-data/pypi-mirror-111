@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: simplebot-reversi
+Version: 1.0.0
+Summary: Reversi (a.k.a Othello) game plugin for SimpleBot
+Home-page: https://github.com/simplebot-org/simplebot_reversi
+Author: The SimpleBot Contributors
+Author-email: adbenitez@nauta.cu
+License: MPL
+Keywords: simplebot plugin deltachat game reversi othello
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Plugins
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Description-Content-Type: text/x-rst
+Requires-Dist: simplebot (>=1.1.1)
+Requires-Dist: SQLAlchemy (>=1.4.20)
+Provides-Extra: test
+Requires-Dist: pytest (>=6.2.4) ; extra == 'test'
+Requires-Dist: requests (>=2.25.1) ; extra == 'test'
+
+Reversi
+=======
+
+.. image:: https://img.shields.io/pypi/v/simplebot_reversi.svg
+   :target: https://pypi.org/project/simplebot_reversi
+
+.. image:: https://img.shields.io/pypi/pyversions/simplebot_reversi.svg
+   :target: https://pypi.org/project/simplebot_reversi
+
+.. image:: https://pepy.tech/badge/simplebot_reversi
+   :target: https://pepy.tech/project/simplebot_reversi
+
+.. image:: https://img.shields.io/pypi/l/simplebot_reversi.svg
+   :target: https://pypi.org/project/simplebot_reversi
+
+.. image:: https://github.com/simplebot-org/simplebot_reversi/actions/workflows/python-ci.yml/badge.svg
+   :target: https://github.com/simplebot-org/simplebot_reversi/actions/workflows/python-ci.yml
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :target: https://github.com/psf/black
+
+A `Reversi <https://en.wikipedia.org/wiki/Reversi>`_ (a.k.a Othello) game plugin for `SimpleBot`_.
+To place a disc in a cell send messages with the cell coordinates like: **a1**, **b3**, etc.
+
+Install
+-------
+
+To install run::
+
+  pip install simplebot-reversi
+
+
+.. _SimpleBot: https://github.com/simplebot-org/simplebot
+
+
