@@ -1,0 +1,4 @@
+click
+torch>=1.6
+torchio
+unet==0.7.7
