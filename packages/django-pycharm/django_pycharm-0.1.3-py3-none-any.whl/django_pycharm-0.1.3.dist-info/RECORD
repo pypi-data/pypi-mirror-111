@@ -1,0 +1,6 @@
+django_pycharm/management/commands/install_pycharm_commands.py,sha256=wV5P6wm2fXrvVZ7QsnOa9oW0WbD4F3mQczKc80k2R3Q,5880
+django_pycharm/management/commands/runscript.py,sha256=rdfj-HL3HnCC8eHiCmLvg_5i2rmru8B_gz_BXSH__yM,643
+django_pycharm-0.1.3.dist-info/LICENSE,sha256=iSC8F7ZL-u3sFcKeRxhvFtB-0qq6mWrvC60iMLJkLNg,1078
+django_pycharm-0.1.3.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+django_pycharm-0.1.3.dist-info/METADATA,sha256=wxzBpKCKtGcr2RWNPaRFC3YCPA0k9DzTiAb2WxARybc,1158
+django_pycharm-0.1.3.dist-info/RECORD,,
