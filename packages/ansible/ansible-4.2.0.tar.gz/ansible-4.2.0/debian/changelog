@@ -1,0 +1,5 @@
+ansible (4.2.0-1) unstable; urgency=medium
+
+  * Ansible 4.2.0 release
+
+ -- Red Hat, Inc. <info@ansible.com>  Wed, 30 Jun 2021 05:59:33 +0000
