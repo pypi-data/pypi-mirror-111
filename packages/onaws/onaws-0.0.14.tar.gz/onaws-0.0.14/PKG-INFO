@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: onaws
+Version: 0.0.14
+Summary: Simple library to check if a hostname belongs to AWS IP space.
+Home-page: https://github.com/amalmurali47/onaws
+Author: Amal Murali
+Author-email: amalmurali47@gmail.com
