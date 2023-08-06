@@ -1,0 +1,11 @@
+reem/__init__.py,sha256=LCgA4lHuuFDBeRU6KC8IcvyuND98OP0mzNBHTv396AQ,246
+reem/connection.py,sha256=hR6-YJIET92aoFkDrhFGtoowyjKcvXuSikgpv0wkNv4,842
+reem/datatypes.py,sha256=YywnHK_5CRu4isgCR_NwbhOL8_RfSkBAJizhJhsL34w,27783
+reem/ships.py,sha256=tUTCqK9YGlrfrlKCBsXR_mCmEOhJyBadiGmw-j4bisQ,4447
+reem/supports.py,sha256=LKAM84A7E1Ooz_rpzDl21DHlQyaTeVe3_Ac5Qsl_oWA,8723
+reem/utilities.py,sha256=6K0T27yJuH854BUeiNAIhLe_Uf1fnb8bKqStqztt8ys,7089
+reem-0.1.1.dist-info/LICENSE.txt,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+reem-0.1.1.dist-info/METADATA,sha256=1ZQrN0zCo2ja9v0-2lScWOAQC9LNpCSnL21j-jbQ7ks,3885
+reem-0.1.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+reem-0.1.1.dist-info/top_level.txt,sha256=Gp26ysUB_1gLR5-HJ2XWvgK7CJzwS7yxcwz8w_V0gMg,5
+reem-0.1.1.dist-info/RECORD,,
