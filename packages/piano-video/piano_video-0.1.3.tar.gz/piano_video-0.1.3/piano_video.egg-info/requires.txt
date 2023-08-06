@@ -1,0 +1,6 @@
+aadraw
+mido
+numpy
+opencv-python
+pillow
+pygame
