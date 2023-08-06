@@ -1,0 +1,3 @@
+[console_scripts]
+hacker-tracker-application = src.hacker_tracker_application.homescreen:main
+
