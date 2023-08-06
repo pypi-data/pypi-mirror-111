@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: sa11y
+Version: 0.0.4
+Summary: The Selenium Accessibility Project
+Home-page: https://github.com/saucelabs/sa11y
+Author: titusfortner
+Author-email: titusfortner@gmail.com
+License: MPL-2.0
+Download-URL: https://github.com/saucelabs/sa11y/archive/v_004.tar.gz
+Description: UNKNOWN
+Keywords: selenium,testing,accessibility,Deque,axe
+Platform: UNKNOWN
