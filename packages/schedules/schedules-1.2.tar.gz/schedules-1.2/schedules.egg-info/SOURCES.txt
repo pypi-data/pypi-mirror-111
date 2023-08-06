@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+schedules/Errors.py
+schedules/__init__.py
+schedules/scheduler.py
+schedules.egg-info/PKG-INFO
+schedules.egg-info/SOURCES.txt
+schedules.egg-info/dependency_links.txt
+schedules.egg-info/top_level.txt
