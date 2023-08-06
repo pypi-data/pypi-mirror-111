@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: dupesearch
+Version: 0.1.10
+Classifiers: Development Status :: 2 - Pre-Alpha
+Classifiers: Intended Audience :: End Users/Desktop
+Classifiers: Operating System :: MacOS
+Classifiers: Operating System :: Microsoft :: Windows
+Classifiers: Operating System :: POSIX :: Linux
+Classifiers: Programming Language :: Python :: 3
+Classifiers: Programming Language :: Python :: 3.7
+Classifiers: Programming Language :: Python :: 3.8
+Classifiers: Programming Language :: Python :: 3.9
+Classifiers: Programming Language :: Python
+Classifiers: Programming Language :: Rust
+Classifiers: Topic :: Utilities
+Requires-Dist: click==8.0.1
+Requires-Dist: rich==10.4.0
+Summary: Remove duplicate files quickly with a simple command line tool
+Author: wookie184 <wookie1840@gmail.com>
+Author-Email: wookie184 <wookie1840@gmail.com>
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# dupesearch
+
+A fast and simple command line tool written in rust and python for finding duplicate files.
+
+## Should I use it?
+
+Probably not, this is still a WIP, it's quite messy, I haven't tested most of it, and was my first time using Rust so I probably did some dodgy stuff.
+
+## How do I use it?
+
+1) Install the `dupesearch` package from pip using your preferred command.
+2) Run `python -m dupesearch -i` and follow the instructions.
+
+## Contributions
+
+If you'd like to make a contribution, feel free to and i'll try to merge it in. If it's not a tiny change please create an issue first, at least to ensure that i'm still active and able to review the changes.
+
+Any issues suggesting improvements are also welcome, although this was just done as a practice project to get started with rust and packaging python projects, so I may not implement every suggestion.
