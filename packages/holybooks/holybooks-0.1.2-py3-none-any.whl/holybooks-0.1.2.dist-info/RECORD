@@ -1,0 +1,13 @@
+hollybooks/__init__.py,sha256=0H6Apz_PHdAoMjYtq2_gOEE-brv6iVjnOtoiU_D2bbg,65
+hollybooks/bible.py,sha256=gixz1WUP_xR1f1gp0nbntFLMpTpHi0viFpvAwpnOzgM,3170
+hollybooks/quran.py,sha256=kGO1eebigLwKub7zElY18lwhcUXXYRxjxRCselpS4wM,8991
+hollybooks/torah.py,sha256=rYXNVyLFDf0OsUPtOFkUe9kvee2vBJYgg1WEaXK-it0,3178
+holybooks/__init__.py,sha256=4uinteshd8OuBT33SZWq4qSsh_nSyCYoJBjTjuAJBR0,62
+holybooks/bible.py,sha256=jpur1MWbGYadPf_pQIuIRt8xOaXFztZhdeyDEnoQspc,3244
+holybooks/quran.py,sha256=Mwj42kq9E-SfrGW2CYSyRrRs-C5pW5rciyWRKCK-qdA,10224
+holybooks/torah.py,sha256=slIDzUixRuVY1f0TcQPp2lsm5tH_XHjPVJtbvXbgAOc,2086
+holybooks-0.1.2.dist-info/LICENCE.txt,sha256=ubFdzyqw4-8rlboUOsXwvW0gj94pNhwdiRbQfS7fkuI,1067
+holybooks-0.1.2.dist-info/METADATA,sha256=LVaeYxejnr-TpJuIcLJ317lgZav2VO-XBHC8-kSRuAs,3074
+holybooks-0.1.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+holybooks-0.1.2.dist-info/top_level.txt,sha256=n_feKWYoiMpGTr9b0P22HsSUgKq76QI8mK2izV6yo1Q,10
+holybooks-0.1.2.dist-info/RECORD,,
