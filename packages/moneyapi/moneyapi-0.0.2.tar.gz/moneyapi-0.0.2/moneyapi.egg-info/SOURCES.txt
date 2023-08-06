@@ -1,0 +1,9 @@
+README.md
+setup.py
+moneyapi/__init__.py
+moneyapi/moneyapi.py
+moneyapi.egg-info/PKG-INFO
+moneyapi.egg-info/SOURCES.txt
+moneyapi.egg-info/dependency_links.txt
+moneyapi.egg-info/requires.txt
+moneyapi.egg-info/top_level.txt
