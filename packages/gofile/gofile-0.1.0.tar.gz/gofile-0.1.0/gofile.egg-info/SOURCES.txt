@@ -1,0 +1,7 @@
+README.md
+setup.py
+gofile.egg-info/PKG-INFO
+gofile.egg-info/SOURCES.txt
+gofile.egg-info/dependency_links.txt
+gofile.egg-info/requires.txt
+gofile.egg-info/top_level.txt
