@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: libzero
+Version: 0.0.5
+Summary: A zero-overhead library for PyTorch users.
+Home-page: https://github.com/Yura52/zero
+Author: Yura52
+Author-email: strausmg@gmail.com
