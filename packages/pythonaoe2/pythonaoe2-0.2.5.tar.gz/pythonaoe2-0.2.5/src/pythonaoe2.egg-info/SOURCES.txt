@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/pythonaoe2/__init__.py
+src/pythonaoe2/aoe2.py
+src/pythonaoe2.egg-info/PKG-INFO
+src/pythonaoe2.egg-info/SOURCES.txt
+src/pythonaoe2.egg-info/dependency_links.txt
+src/pythonaoe2.egg-info/requires.txt
+src/pythonaoe2.egg-info/top_level.txt
+test/test_aoe2.py
