@@ -1,0 +1,11 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/zkeys.py
+src/zkeys.egg-info/PKG-INFO
+src/zkeys.egg-info/SOURCES.txt
+src/zkeys.egg-info/dependency_links.txt
+src/zkeys.egg-info/entry_points.txt
+src/zkeys.egg-info/top_level.txt
