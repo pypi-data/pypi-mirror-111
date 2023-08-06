@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: api-extractor
+Version: 0.1.2
+Summary: Extract Python docstring written in Markdown format
+Home-page: https://github.com/ydcjeff/api-extractor
+Author: Jeff Yang
+Author-email: ydcjeff@gmail.com
+License: MIT
+Download-URL: https://pypi.org/project/api-extractor/#files
+Project-URL: Documentation, https://api-extractor.netlify.app
+Project-URL: Source Code, https://github.com/ydcjeff/api-extractor
+Project-URL: Bug Tracker, https://github.com/ydcjeff/api-extractor/issues
+Project-URL: Changelog, https://github.com/ydcjeff/api-extractor/blob/main/CHANGELOG.md
+Keywords: api,docs,sphinx,extractor,python,markdown,rst
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Documentation
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Typing :: Typed
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: black (==21.6b0) ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: flake8-bugbear ; extra == 'dev'
+Requires-Dist: flake8-comprehensions ; extra == 'dev'
+Requires-Dist: flake8-executable ; extra == 'dev'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: pytest-cov ; extra == 'tests'
+Requires-Dist: black (==21.6b0) ; extra == 'tests'
+Requires-Dist: mypy ; extra == 'tests'
+Requires-Dist: pylint ; extra == 'tests'
+Requires-Dist: isort ; extra == 'tests'
+Requires-Dist: flake8 ; extra == 'tests'
+Requires-Dist: flake8-bugbear ; extra == 'tests'
+Requires-Dist: flake8-comprehensions ; extra == 'tests'
+Requires-Dist: flake8-executable ; extra == 'tests'
+
+# api-extractor
+
+[![ci](https://github.com/ydcjeff/api-extractor/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/ydcjeff/api-extractor/actions/workflows/ci.yaml)
+[![PyPI](https://img.shields.io/pypi/v/api-extractor)](https://pypi.org/project/api-extractor)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/api-extractor)
+
+> Extract Python docstring written in Markdown format.
+
+## Installation
+
+`api-extractor` can be installed with `pip`.
+
+```sh
+pip install api-extractor -U
+```
+
+## Documentation
+
+[Read the Docs for the usage](https://api-extractor.netlify.app).
+
+## Contribution
+
+See [Contributing Guide](./.github/contributing.md).
+
+## License
+
+[MIT](./LICENSE)
+
+
