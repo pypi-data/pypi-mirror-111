@@ -1,0 +1,8 @@
+robot_rock/__init__.py,sha256=lB7KeLZ0vxVV5ZB2Dp8nVy5E9WV_-OcvaBkZF6yoHKM,99
+robot_rock/api.py,sha256=VrVhXc0DMBM7i3C2eCCDiBHlvDHWxXMvoFFSKGBSGJo,3125
+robot_rock/cli.py,sha256=y37pKulDw6v6Gwm9qIFyMrG173A1OzbDA8uy-nF9yhg,951
+robot_rock/db.json,sha256=onh2N8G0h_XK_klje_zmSIek9s1UzhJMeCxch4w_xsk,55
+robot_rock-0.2.0.dist-info/entry_points.txt,sha256=fulH8255zvOZ-4iMBFQSgXMgxepP5SLvJnS7jZ94gwY,45
+robot_rock-0.2.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+robot_rock-0.2.0.dist-info/METADATA,sha256=39kbahyf1EYS-eQuAsiPbx_mNjpjB5lG8PHdk2L9Eg4,2471
+robot_rock-0.2.0.dist-info/RECORD,,
