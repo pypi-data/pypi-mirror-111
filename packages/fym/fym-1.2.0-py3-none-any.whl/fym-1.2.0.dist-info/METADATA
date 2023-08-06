@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: fym
+Version: 1.2.0
+Summary: SNU FDCL Fym: Flight simulator for various purpose
+Home-page: https://github.com/fdcl-nrf/fym
+Author: SNU FDCL
+Author-email: kshoon92@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: numdifftools
+Requires-Dist: h5py
+Requires-Dist: tqdm
+
+# Aerodynamic Simulator for Testing Deep RL Algorithms
+
+For more information, see:
+* [Documentation](https://www.notion.so/nrfteams/FDCL-Fym-Official-893698947633416eb5609a2b9bbc0e27)
+
+## Installation
+
+- Clone the repo and change the directory to it
+  ```
+	git clone https://github.com/fdcl-nrf/fym.git
+	cd fym
+	```
+
+- Install the fym package
+	```
+	pip install -e .
+	```
+
+
