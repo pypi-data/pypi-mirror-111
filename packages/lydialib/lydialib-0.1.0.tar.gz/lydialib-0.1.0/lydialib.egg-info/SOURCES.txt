@@ -1,0 +1,7 @@
+setup.py
+lydialib/__init__.py
+lydialib/lydiamod.py
+lydialib.egg-info/PKG-INFO
+lydialib.egg-info/SOURCES.txt
+lydialib.egg-info/dependency_links.txt
+lydialib.egg-info/top_level.txt
