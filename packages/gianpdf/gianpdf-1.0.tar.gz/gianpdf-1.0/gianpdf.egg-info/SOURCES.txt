@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+gianpdf/__init__.py
+gianpdf/pdf2image.py
+gianpdf/pdf2text.py
+gianpdf.egg-info/PKG-INFO
+gianpdf.egg-info/SOURCES.txt
+gianpdf.egg-info/dependency_links.txt
+gianpdf.egg-info/top_level.txt
