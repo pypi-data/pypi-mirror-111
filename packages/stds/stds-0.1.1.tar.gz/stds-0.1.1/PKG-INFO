@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: stds
+Version: 0.1.1
+Summary: A module for interacting with stdin, stdout and stderr.
+Home-page: https://github.com/4thel00z/std
+License: GPL-3
+Author: 4thel00z
+Author-email: 4thel00z@gmail.com
+Requires-Python: >=3,<4
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
+# stds
+
+## Motivation
+
+This is a small package that provides 3 high-level APIs to interact elegantly with stdin, stdout and stderr:
+
+    - stdin
+    - stderr
+    - stdout
+
+## Usage
+
+You can use it as such:
+
+``` 
+if __name__ == "__main__":
+    stdin | print
+    "This prints out stuff on stdout" | stdout
+    "This prints out stuff on stderr" | stderr
+```
+
