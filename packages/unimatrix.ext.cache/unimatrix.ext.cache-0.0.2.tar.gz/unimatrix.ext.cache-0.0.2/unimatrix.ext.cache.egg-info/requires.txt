@@ -1,0 +1,7 @@
+unimatrix>=0.8.4
+
+[all]
+aioredis
+
+[redis]
+aioredis
