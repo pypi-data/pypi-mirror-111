@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: asyncio-foundationdb
+Version: 0.9.0
+Summary: asyncio drivers for FoundationDB
+License: Apachev2
+Author: Amirouche
+Author-email: amirouche@hyper.dev
+Requires-Python: >=3.9,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: cffi (>=1.14.5,<2.0.0)
+Requires-Dist: foundationdb (>=6.3.16,<7.0.0)
+Requires-Dist: immutables (>=0.15,<0.16)
+Requires-Dist: six (>=1.16.0,<2.0.0)
