@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+./pxy/__init__.py
+./pxy/sub/__init__.py
+./pxy/sub/list_utils.py
+./pxy/sub/version_utils.py
+pxy.egg-info/PKG-INFO
+pxy.egg-info/SOURCES.txt
+pxy.egg-info/dependency_links.txt
+pxy.egg-info/top_level.txt
