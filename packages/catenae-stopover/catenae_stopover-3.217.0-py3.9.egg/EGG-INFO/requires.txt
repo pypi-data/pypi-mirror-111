@@ -1,0 +1,4 @@
+stopover>=1.214.0
+orderedset~=2.0.3
+falcon<4.0.0,>=3.0.0
+safemode
