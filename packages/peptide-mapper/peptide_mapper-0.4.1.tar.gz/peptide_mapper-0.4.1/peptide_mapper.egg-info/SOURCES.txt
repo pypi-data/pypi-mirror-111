@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+peptide_mapper/mapper.py
+peptide_mapper/version.txt
+peptide_mapper.egg-info/PKG-INFO
+peptide_mapper.egg-info/SOURCES.txt
+peptide_mapper.egg-info/dependency_links.txt
+peptide_mapper.egg-info/requires.txt
+peptide_mapper.egg-info/top_level.txt
