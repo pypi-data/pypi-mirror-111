@@ -1,0 +1,15 @@
+README.md
+setup.py
+src/DiscordBotIHK/__init__.py
+src/DiscordBotIHK/Bot/Bot.py
+src/DiscordBotIHK/Bot/Calculator.py
+src/DiscordBotIHK/Bot/DatabaseConnector.py
+src/DiscordBotIHK/Bot/DocumentSender.py
+src/DiscordBotIHK/Bot/Meme.py
+src/DiscordBotIHK/Bot/SendImage.py
+src/DiscordBotIHK/Bot/__init__.py
+src/Discord_Bot_IHK.egg-info/PKG-INFO
+src/Discord_Bot_IHK.egg-info/SOURCES.txt
+src/Discord_Bot_IHK.egg-info/dependency_links.txt
+src/Discord_Bot_IHK.egg-info/requires.txt
+src/Discord_Bot_IHK.egg-info/top_level.txt

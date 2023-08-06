@@ -1,0 +1,1 @@
+Das ist ein Discord Bot für ein Übungsprojekt der IHK.

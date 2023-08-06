@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: Discord_Bot_IHK
+Version: 1.1.9.4
+Summary: A small example package
+Home-page: https://github.com/omit2c/Discord_Bot_IHK/
+Author: Timo Eichelmann
+Author-email: timo.eichelmann@edu.fhdw.de
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/omit2c/Discord_Bot_IHK/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+
+Das ist ein Discord Bot für ein Übungsprojekt der IHK.
+
