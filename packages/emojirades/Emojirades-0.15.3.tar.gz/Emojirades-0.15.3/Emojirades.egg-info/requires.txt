@@ -1,0 +1,11 @@
+requests
+slackclient
+boto3
+Unidecode
+pendulum
+expiringdict
+
+[test]
+boto3
+pytest
+black
