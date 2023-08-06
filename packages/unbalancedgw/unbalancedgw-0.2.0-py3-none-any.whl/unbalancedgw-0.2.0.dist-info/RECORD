@@ -1,0 +1,13 @@
+unbalancedgw/__init__.py,sha256=ORZNNVNBFy501844X0GYfxyTsD5PGA-hYR2Bo10Si-g,437
+unbalancedgw/_batch_utils.py,sha256=n3cd_SlfQlNQAXBUN0COzlBsulexkt_yOYoCl3ZGW6s,21998
+unbalancedgw/_vanilla_utils.py,sha256=h4gneePJTLuMUqx8Wdo6PcDLGRN0EyqccBar4Pt9K-A,20977
+unbalancedgw/batch_stable_ugw_solver.py,sha256=FNKCfRGr5HflwBQFUofB6y-o7EBHm02_Mulif4qBgZQ,5762
+unbalancedgw/utils.py,sha256=9kgH2xsdScR96Lipo1tGGAwYcVV-uRYNFarrdSBG-Rw,1244
+unbalancedgw/vanilla_ugw_solver.py,sha256=5xM2VoT2CHUUgDjZtTxmbMY2K8aTsTiEv9a8bZFYvA4,5654
+unbalancedgw/tests/test_batch_solvers.py,sha256=__YDe2o6pmRCBBqZLgWo9jL5Y4tEmq4uNfFLfaPj34U,3116
+unbalancedgw/tests/test_vanilla_solvers.py,sha256=j7S09ltvwF6lRh4D4p-wek2d454Igh32MCjFf535MdU,2414
+unbalancedgw-0.2.0.dist-info/LICENSE,sha256=hxCVSaYk-ISzrplET8MuyKO3x3IwKnnvVSrHq8ucLHU,1064
+unbalancedgw-0.2.0.dist-info/METADATA,sha256=ob4U_6Z388JgBLg1lBtpvTRbPFkBJ-TNwh9-CX3jKls,388
+unbalancedgw-0.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+unbalancedgw-0.2.0.dist-info/top_level.txt,sha256=14pjIAYbuvStgvDoepn-A5WENJtHGBdfrfaQzKqslYA,13
+unbalancedgw-0.2.0.dist-info/RECORD,,
