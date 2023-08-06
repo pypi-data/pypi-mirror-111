@@ -1,0 +1,12 @@
+vcf_creator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vcf_creator/__main__.py,sha256=Gd4ujbe2xq6qZ_SeNJvgdd-CplXpRjCtTJdsnFInLrM,1184
+vcf_creator/cli.py,sha256=HRZTBe3Ja0fgAcmvjg1Rs1ZaOIX9hkn1d-6ZjQri2jM,1312
+vcf_creator/vcf.py,sha256=8hADgzospzNy38V0Whp4WUx-fueUZM9PAqQQqP_DrUg,2600
+vcf_creator/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vcf_creator/tests/test_vcf.py,sha256=riWRooPDalLdH02ypuD2Dy3rLp4Pa8IlwuBLD4GEewc,443
+vcf_creator-1.0.9.dist-info/LICENSE,sha256=-zjpRY0f5h8qFyV_m-bs-U3Xv7wDqoNQhtI38Tk27hg,1078
+vcf_creator-1.0.9.dist-info/METADATA,sha256=o_-Iu5FX6GOywIWLToSqojbGC2W-Aa4btW5CyambslU,2723
+vcf_creator-1.0.9.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+vcf_creator-1.0.9.dist-info/entry_points.txt,sha256=paWhWQksqPrm9t9ow02vtiReYVXw-bBD5AXZ1B6gz1k,54
+vcf_creator-1.0.9.dist-info/top_level.txt,sha256=DCbcLloOsR6qn0OYi5hEn-5-9YwADqOY846gl5Zk564,12
+vcf_creator-1.0.9.dist-info/RECORD,,
