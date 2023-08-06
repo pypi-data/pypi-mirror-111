@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: helloworldrm
+Version: 0.0.1
+Summary: Say Hello
+Home-page: https://github.com/joseignaciorm/python_package_example
+Author: Nacho
+Author-email: joseignaciorm13@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: dev

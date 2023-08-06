@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/helloworld.py
+src/helloworldrm.egg-info/PKG-INFO
+src/helloworldrm.egg-info/SOURCES.txt
+src/helloworldrm.egg-info/dependency_links.txt
+src/helloworldrm.egg-info/requires.txt
+src/helloworldrm.egg-info/top_level.txt

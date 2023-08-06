@@ -1,0 +1,8 @@
+streamlit
+check-manifest
+
+[dev]
+pytest>=3.7
+tox
+twine
+wheel==0.30.0
