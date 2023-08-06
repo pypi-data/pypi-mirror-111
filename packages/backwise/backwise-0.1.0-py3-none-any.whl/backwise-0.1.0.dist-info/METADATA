@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: backwise
+Version: 0.1.0
+Summary: A Python 3 interface for the Backwise algo-trading software
+Author: khunspoonzi
+Author-email: khunspoonzi@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Unidecode (>=1.2.0,<2.0.0)
+Requires-Dist: arctic (>=1.79.4,<2.0.0)
+Requires-Dist: ccxt (>=1.51.98,<2.0.0)
+Requires-Dist: pandas (==1.0.3)
+Requires-Dist: pytz (>=2021.1,<2022.0)
