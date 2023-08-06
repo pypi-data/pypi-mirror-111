@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: requirements-magic
+Version: 0.0.2a1
+Summary: Validate and coordinate requirements across multiple files
+Home-page: https://gitlab.com/nolash/python-requirements-magic
+Author: Louis Holbrook
+Author-email: dev@holbrook.no
+License: GPL3
+Keywords: python,dependencies
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Requires-Python: >=3.6
+License-File: LICENSE
+
+UNKNOWN
+
