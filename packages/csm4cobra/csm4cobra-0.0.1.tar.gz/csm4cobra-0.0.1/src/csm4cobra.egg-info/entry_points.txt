@@ -1,0 +1,4 @@
+[console_scripts]
+build-csm = csm4cobra.cmds.build_csm:main
+run-insilico-exp = csm4cobra.cmds.run_insilico_experiment:main
+
