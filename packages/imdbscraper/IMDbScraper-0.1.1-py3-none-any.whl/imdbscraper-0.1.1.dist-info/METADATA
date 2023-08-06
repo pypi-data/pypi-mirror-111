@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: imdbscraper
+Version: 0.1.1
+Summary: A web scraper to extract data from IMDb
+Author: Federico García
+Author-email: garciafedericoagustin@gmail.com
+Requires-Python: >=3.7.1,<4.0.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: DateTime (>=4.3,<5.0)
+Requires-Dist: beautifulsoup4 (>=4.9.3,<5.0.0)
+Requires-Dist: html5lib (>=1.1,<2.0)
+Requires-Dist: lxml (>=4.6.3,<5.0.0)
+Requires-Dist: numpy (>=1.21.0,<2.0.0)
+Requires-Dist: pandas (>=1.2.5,<2.0.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
