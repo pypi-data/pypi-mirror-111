@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: python-linq
+Version: 2.0.2
+Summary: Brings LINQ to Python
+Home-page: https://github.com/jakkes/python-linq
+Author: Jakob Stigenberg
+License: UNKNOWN
+Description: # LINQ
+        [![Build Status](http://drone.jakke.se/api/badges/jakkes/python-linq/status.svg)](http://drone.jakke.se/jakkes/python-linq)
+        
+        Provides simple to use LINQ features to Python 3.x.
+        
+        ## Documentation
+        See this link: https://jakkes.github.io/python-linq/
+        
+        ## Installing
+        ### From pip
+        ```bash
+        pip install python-linq
+        ```
+        ### From source
+        ```bash
+        git clone https://github.com/jakkes/python-linq.git
+        cd python-linq
+        pip install -r requirements.txt
+        ```
+        
+        ## Usage
+        1. Import the `Query` class
+        2. Write beautiful queries!
+        ```python
+        >>> from linq import Query
+        >>> x = Query([1, 2, 3]).select(lambda x: x * x + 3).to_list()
+        >>> assert x == [4, 7, 12]
+        ```
+        
+        Distribute heavy queries across multiple processes.
+        ```python
+        >>> import time
+        >>> from linq import DistributedQuery
+        >>> 
+        >>> def heavy_transformation(x: int):
+        >>>     time.sleep(10)
+        >>>     return x**2
+        >>> 
+        >>> def less_than_5(x: int):
+        >>>     return x < 5
+        >>> 
+        >>> x = (
+        >>>     DistributedQuery(range(100), processes=8)
+        >>>     .where(less_than_5)
+        >>>     .select(heavy_transformation)
+        >>>     .to_list()
+        >>> )
+        >>> assert x == [0, 1, 4, 9, 16]
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
