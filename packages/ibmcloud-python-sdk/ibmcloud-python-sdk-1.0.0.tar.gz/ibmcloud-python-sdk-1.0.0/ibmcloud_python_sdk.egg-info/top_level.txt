@@ -1,0 +1,5 @@
+docs
+docsource
+examples
+ibmcloud_python_sdk
+tests
