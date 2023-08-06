@@ -1,0 +1,3 @@
+[console_scripts]
+json2html = json2html:json2html_main
+
