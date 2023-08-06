@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/anonefiles_uploader/__init__.py
+src/anonefiles_uploader/anonfiles.py
+src/anonefiles_uploader/test.py
+src/anonfiles_uploader_SockYeh.egg-info/PKG-INFO
+src/anonfiles_uploader_SockYeh.egg-info/SOURCES.txt
+src/anonfiles_uploader_SockYeh.egg-info/dependency_links.txt
+src/anonfiles_uploader_SockYeh.egg-info/top_level.txt
