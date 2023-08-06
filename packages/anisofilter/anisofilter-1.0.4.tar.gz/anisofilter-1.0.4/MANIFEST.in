@@ -1,0 +1,4 @@
+include src/anisofilter/*
+include tests/*
+include demo/*
+include LICENSE
