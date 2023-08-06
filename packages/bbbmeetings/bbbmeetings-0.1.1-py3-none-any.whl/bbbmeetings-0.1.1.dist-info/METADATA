@@ -1,0 +1,104 @@
+Metadata-Version: 2.1
+Name: bbbmeetings
+Version: 0.1.1
+Summary: A module for reading bbb meetings from bbb servers
+License: GPL-3.0+
+Author: David Huss
+Author-email: david.huss@hfbk-hamburg.de
+Maintainer: David Huss
+Maintainer-email: david.huss@hfbk-hamburg.de
+Requires-Python: >=3.5,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: Free For Educational Use
+Classifier: License :: Free for non-commercial use
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Communications :: Conferencing
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Monitoring
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Requires-Dist: xmltodict (>=0.12.0,<0.13.0)
+Description-Content-Type: text/markdown
+
+# bbbmeetings
+
+A Library that helps with reading information regarding Big Blue Button via the BBB-API. The goal of bbbmeetings is to make it easy to generate stats about one or more BBB-Instances.
+
+It was a non-goal to create a full coverage of the BBB-API, for ending meetings, creating meetings, managing recordings etc.
+
+
+
+## Installation
+
+Via pip
+
+```
+pip install bbbmeetings
+```
+
+
+
+## Usage
+
+First we need to create a BBB Server. To allow the connection with that server you need to know its secret, which can be found using `bbb-conf -- secret` as [mentioned here](https://docs.bigbluebutton.org/admin/bbb-conf.html#--secret). You can create a server like this:
+
+```python
+from bbbmeetings import BBBServer
+server = BBBServer(host="https://bbb.example.org", secret="!#%Random!#$%Fsecret!#$%")
+```
+
+For convenience bbbmeetings offers a way of treating multiple servers as one server:
+
+```python
+from bbbmeetings import BBBServers, BBBServer
+
+# Create a BBBServers Object from multiple BBBServer-Objects
+servers = BBBServers.from_list([
+        BBBServer("https://bbb1.example.org", "!#%Random!#$%Fsecret!#$%"),
+        BBBServer("https://bbb2.example.org", "!#%Random!#$%Fsecret!#$%"),
+        BBBServer("https://bbb3.example.org", "!#%Random!#$%Fsecret!#$%"),
+        BBBServer("https://bbb4.example.org", "!#%Random!#$%Fsecret!#$%"),
+        BBBServer("https://bbb5.example.org", "!#%Random!#$%Fsecret!#$%"),
+    ])
+```
+
+Most methods on `BBBServer` and `BBBServers` are the same, but in the following examples I will use `servers` to showcase how this module may be used:
+
+```python
+# Get a list of meetings running on all servers and print all details about them
+for meeting in servers.meetings:
+    print(meeting)
+```
+
+You can also get some numbers directly (in this case I use python's formatting strings):
+
+```python
+print(f"On all servers there are {servers.people} people in {servers.n_meetings} meetings. {servers.video_active} people have their webcam on, {servers.connected_with_mic} connected with mic. There are {servers.moderators} moderators.")
+```
+
+If you want to have a list of all people in all meetings on all servers run:
+
+```python
+print(f"The names of everyone on all servers are {', '.join([a.name for a in servers.attendees])}")
+```
+
+If you just want a list with the names of Presenters you can run:
+
+```python
+presenter_names = [a.name for a in servers.attendees if a.isPresenter]
+```
+
+Or if you want to know the longest running meeting:
+
+```python
+print(f"Longest running meeting is {servers.longest_duration.name} with a duration of {servers.longest_duration.duration}")
+```
+
+
