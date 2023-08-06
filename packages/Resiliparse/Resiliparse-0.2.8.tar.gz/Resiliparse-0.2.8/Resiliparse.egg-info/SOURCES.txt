@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+Resiliparse.egg-info/PKG-INFO
+Resiliparse.egg-info/SOURCES.txt
+Resiliparse.egg-info/dependency_links.txt
+Resiliparse.egg-info/top_level.txt
+resiliparse/README.md
+resiliparse/__init__.py
+resiliparse/process_guard.cpp
+resiliparse/process_guard.pyx
