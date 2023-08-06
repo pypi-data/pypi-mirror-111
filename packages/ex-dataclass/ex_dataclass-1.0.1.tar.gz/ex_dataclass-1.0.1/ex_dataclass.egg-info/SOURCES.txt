@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+ex_dataclass.egg-info/PKG-INFO
+ex_dataclass.egg-info/SOURCES.txt
+ex_dataclass.egg-info/dependency_links.txt
+ex_dataclass.egg-info/top_level.txt
+test/test_exdataclass_inner.py
+test/test_functional.py
+test/test_type.py
