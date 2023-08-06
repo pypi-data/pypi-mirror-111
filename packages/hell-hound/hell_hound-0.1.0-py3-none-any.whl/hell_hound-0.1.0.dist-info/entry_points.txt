@@ -1,0 +1,3 @@
+[console_scripts]
+hell_hound_cli = hell_hound.main:entry_point
+

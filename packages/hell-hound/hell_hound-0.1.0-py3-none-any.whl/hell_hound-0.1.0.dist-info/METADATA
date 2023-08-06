@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: hell-hound
+Version: 0.1.0
+Summary: Hell Hound provides type checking and other base functionality out of the box and is designed to be non-blocking and easily and widely extensible, allowing for custom validation. It has no dependencies, but has the potential to become yours.
+Home-page: http://CtrlTilde.com/
+Author: Allan
+Author-email: allanice001@gmail.com
+Maintainer: Allan
+Maintainer-email: allanice001@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Documentation
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Installation/Setup
+Classifier: Topic :: System :: Software Distribution
+License-File: LICENSE
+
+README.rst
+
