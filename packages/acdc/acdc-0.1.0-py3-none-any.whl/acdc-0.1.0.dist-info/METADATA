@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: acdc
+Version: 0.1.0
+Summary: Wanna-be fast string search
+License: MIT
+Author: Amirouche
+Author-email: amirouche@hyper.dev
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: memory-profiler (>=0.58.0,<0.59.0)
