@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: textcheck
+Version: 0.2.2
+Summary: Check text files for issues.
+Home-page: https://github.com/stribny/textcheck
+License: MIT
+Keywords: text,spellcheck
+Author: Petr Stribny
+Author-email: petr@stribny.name
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Text Processing
+Requires-Dist: rich
+Requires-Dist: spacy (==2.3.7)
+Requires-Dist: spacy_hunspell (>=0.1.0,<0.2.0)
+Requires-Dist: stackprinter
+Requires-Dist: typer
+Project-URL: Repository, https://github.com/stribny/textcheck
+Description-Content-Type: text/markdown
+
+# textcheck
+
+Run text checks on files from the command line.
+
+```
+┏━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Word    ┃ Alternatives                                    ┃ Context                       ┃
+┡━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ speling │ spieling, spelling, spewing, peeling, splinting │ should be checked for speling │
+└─────────┴─────────────────────────────────────────────────┴───────────────────────────────┘
+```
+## Installation
+
+```
+pip install --user textcheck
+```
+
+Hunspell dictionary files `en_US.dic` and `en_US.aff` need to be placed in `/usr/share/hunspell` directory.
+
+## Limitations
+
+* Only console output for now.
+* Only English language is supported.
+* Only Linux-based systems are supported.
+
+## CLI usage
+
+### `spellcheck`
+
+Example invocation:
+
+```
+textcheck spellcheck ~/spellme.txt --ignore-list=/home/user/ignore_list.txt
+```
+
+Run spellcheck for a set of files. 
+
+Provided ignore list is a file with ignore words on new lines.
+
+**Usage**:
+
+```console
+$ textcheck spellcheck [OPTIONS] FILES...
+```
+
+**Arguments**:
+
+* `FILES...`: The list of files to check
+
+**Options**
+
+* `ignore_list`: Path to the ignore list file.
