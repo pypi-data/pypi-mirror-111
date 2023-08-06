@@ -1,0 +1,15 @@
+compare_form_response_tables.py,sha256=9ZeBBobGTFV0Q5CiXcqq7whNxzvCXrPl5ArSLKc0ac0,6945
+reviewer2/__init__.py,sha256=TXzTMS_VYfQ8TSgB_k-o0gOYn3ruqMNqUCNyi5qcdvk,13232
+reviewer2/__main__.py,sha256=dBclEjAfVaAvgHsOitc49TbPcfsvk1da_mUfhoKxMs0,1549
+reviewer2/data_page.py,sha256=mhPoA04UWPXzypMSjWQBWbF40u9Pa5ZJcXcxgrSAlDc,4366
+reviewer2/main_list.py,sha256=zqWHAemT63zf05TamvbdbMQ-VbyI3dl_tF2JuqORclE,1903
+reviewer2/save.py,sha256=tUMS-o1ROGzjmIY5cgME5DZVkAAcyrZ_sn1eCEEcf14,2793
+reviewer2/utils.py,sha256=6YAEShrOTE9N-hTitvG-rnwrJ2sy0OHAZwhwrLiWTsQ,6023
+reviewer2/icons/favicon.png,sha256=eMTTyV2OkiIBsokUj0wUT6982Y_bVsYW28I0GgiFVfA,3774
+reviewer2/templates/data_page.html,sha256=7mWloBJgQ5sS_pL0VQMfjlERNhWKq1tJWTgn4hcFIxI,15060
+reviewer2/templates/main_list.html,sha256=Jw2MEUCNl9pY6QYjttt_-VcQECA1MSIzz3RfK--Khhc,5776
+reviewer2-0.9.22.dist-info/LICENSE,sha256=XqNpnoPe4XCanXeW_TQR2Blm3ADflhHf94uqvqQoito,1060
+reviewer2-0.9.22.dist-info/METADATA,sha256=WesWHiHAUxUy66AKwLSBZ_vo3MesfH9MwbfMrCdx1kA,5845
+reviewer2-0.9.22.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+reviewer2-0.9.22.dist-info/top_level.txt,sha256=G5vn5QV9vsjcM56x71P7CHW8h6DikVczLC_reKxJ9qE,39
+reviewer2-0.9.22.dist-info/RECORD,,
