@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: Saranya_Sum_Program
+Version: 0.1
+Summary: Addition of two numbers
+Home-page: https://github.com/saranya-sekar/Saranya_Sum_Program/
+Author: Saranya Sekar
+Author-email: saranyatagore@yahoo.com
+License: MIT
+Download-URL: https://github.com/saranya-sekar/Saranya_Sum_Program/archive/refs/tags/v_01.tar.gz
+Description: UNKNOWN
+Keywords: saranya_addition,saranya_sum
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
