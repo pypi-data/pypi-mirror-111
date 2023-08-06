@@ -1,0 +1,12 @@
+psygnal/__init__.cpython-38-darwin.so,sha256=RZprNIrODfu4FnkZiLjAWV5rAnpEQTl6sAMFQ_xNZNA,42992
+psygnal/__init__.py,sha256=88WtVm7vVOHc8VlMC0XNRWqLW2Sp0iIC14ctpSqYryw,574
+psygnal/_signal.cpython-38-darwin.so,sha256=7nleCnEgPm2F4buIGsnzdT2PA6iMNjQbvoetkmGSzJ4,389288
+psygnal/_signal.py,sha256=zXpDw2u_7SWwnIWKYv2bUTepFtpqMIxrf9a9EW046qk,22562
+psygnal/_version.cpython-38-darwin.so,sha256=GSUgU-so57YGzk-iAc3IwR0jr5ws4AuBpgVJ6QdPJCg,39712
+psygnal/_version.py,sha256=xwUxqNB1me5mfO6PXPXd-gWwNTAl_-Idf0ktsITBEpU,142
+psygnal/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+psygnal-0.1.0.dist-info/LICENSE,sha256=uyX2Y2Q7D-WzOUc6EKZVDuadkWenBWSYTR--BsewGpg,1514
+psygnal-0.1.0.dist-info/METADATA,sha256=P7lC54bwySTVR0YmU2JhOO6fTKuwPjN4YEzUGRFdwAw,10500
+psygnal-0.1.0.dist-info/WHEEL,sha256=RA4ju32EWHpO-G1BhxTQ3AwXQWjnnrzYGkM9skoN7_I,109
+psygnal-0.1.0.dist-info/top_level.txt,sha256=WYSfWuaSgSarH4remUGlBDSZyIZZqOZhxjWMAGxpCAE,8
+psygnal-0.1.0.dist-info/RECORD,,
