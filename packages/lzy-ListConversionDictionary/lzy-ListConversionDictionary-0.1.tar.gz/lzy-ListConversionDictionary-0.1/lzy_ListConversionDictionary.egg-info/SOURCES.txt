@@ -1,0 +1,6 @@
+ListConversionDictionary.py
+setup.py
+lzy_ListConversionDictionary.egg-info/PKG-INFO
+lzy_ListConversionDictionary.egg-info/SOURCES.txt
+lzy_ListConversionDictionary.egg-info/dependency_links.txt
+lzy_ListConversionDictionary.egg-info/top_level.txt
