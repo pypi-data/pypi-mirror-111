@@ -1,0 +1,6 @@
+setup.py
+zy_test_pip.egg-info/PKG-INFO
+zy_test_pip.egg-info/SOURCES.txt
+zy_test_pip.egg-info/dependency_links.txt
+zy_test_pip.egg-info/requires.txt
+zy_test_pip.egg-info/top_level.txt
