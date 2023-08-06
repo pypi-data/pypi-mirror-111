@@ -1,0 +1,26 @@
+[project]
+name = "flaggart"
+version = "0.1.0"
+description = "Retrieves place flags and performs useful operations on them"
+authors = ["AlDacMac <alasdairmacgdev@gmail.com>"]
+license = "MIT"
+readme = "./README.md"
+
+[tool.poetry]
+name = "flaggart"
+version = "0.1.0"
+description = "Retrieves place flags and performs useful operations on them"
+authors = ["AlDacMac <alasdairmacgdev@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+wikipedia = "^1.4.0"
+wptools = "^0.4.17"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: flaggart
+Version: 0.1.0
+Summary: Retrieves place flags and performs useful operations on them
+License: MIT
+Author: AlDacMac
+Author-email: alasdairmacgdev@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: wikipedia (>=1.4.0,<2.0.0)
+Requires-Dist: wptools (>=0.4.17,<0.5.0)
