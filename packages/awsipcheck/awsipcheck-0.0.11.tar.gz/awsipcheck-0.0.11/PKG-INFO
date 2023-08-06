@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: awsipcheck
+Version: 0.0.11
+Summary: Simple library to check if a hostname belongs to AWS IP space.
+Home-page: https://github.com/amalmurali47/awsipcheck
+Author: Amal Murali
+Author-email: amalmurali47@gmail.com
