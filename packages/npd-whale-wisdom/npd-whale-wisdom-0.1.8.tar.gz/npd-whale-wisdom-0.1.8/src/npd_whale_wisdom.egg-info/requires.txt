@@ -1,0 +1,5 @@
+pandas
+XlsxWriter
+certifi
+requests
+beautifulsoup4
