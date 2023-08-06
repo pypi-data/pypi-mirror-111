@@ -1,0 +1,4 @@
+[console_scripts]
+ecashaddress = ecashaddress.__main__:main
+ecashconvert = ecashaddress.__main__:convert
+
