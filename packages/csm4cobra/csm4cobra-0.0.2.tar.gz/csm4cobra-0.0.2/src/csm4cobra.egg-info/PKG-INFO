@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: csm4cobra
+Version: 0.0.2
+Summary: Tools and methods for context-specific metabolic modeling
+Home-page: https://github.com/bsc-life/csm4cobra
+Author: Miguel Ponce-de-Leon
+Author-email: miguelponcedeleon@gmail.com
+Maintainer: Miguel Ponce-de-Leon
+Maintainer-email: miguelponcedeleon@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/bsc-life/csm4cobra/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# csm4cobra
+
+A cobrapy-based library for context-specific metabolic modeling
+
+
+
