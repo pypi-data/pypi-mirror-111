@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "instmuse"
+version = "0.1.1"
+description = "Physical instrument library"
+authors = ["ccn <ccn@cuppajoeman.com>"]
+license = "GPL-3.0-only"
+readme = "README.md"
+homepage = "https://gitlab.com/cuppajoeman/instmuse"
+repository = "https://gitlab.com/cuppajoeman/instmuse"
+documentation = "https://instmuse.readthedocs.io/en/latest/"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+insegel = "^1.1.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
