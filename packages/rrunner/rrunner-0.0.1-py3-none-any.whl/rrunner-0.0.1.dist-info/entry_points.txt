@@ -1,0 +1,6 @@
+[console_scripts]
+locusts=rrunner.ext.locust:main_locusts
+rmake=rrunner.cli:main_make_alias
+rrun=rrunner.cli:main_hrun_alias
+rrunner=rrunner.cli:main
+
