@@ -1,0 +1,5 @@
+[console_scripts]
+deepgrp=deepgrp.__main__:main
+parse_rm=deepgrp._scripts.parse_rm:main
+preprocess_sequence=deepgrp._scripts.preprocess_sequence:main
+
