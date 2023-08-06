@@ -1,0 +1,5 @@
+vietnam-number==1.0.3
+pandas==1.2.4
+numpy==1.18.5
+flair==0.8.0.post1
+sklearn
