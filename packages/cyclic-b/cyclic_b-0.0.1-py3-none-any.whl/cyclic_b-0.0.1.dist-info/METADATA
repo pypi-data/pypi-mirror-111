@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: cyclic-b
+Version: 0.0.1
+Summary: A small package to test cyclic dependencies
+Home-page: https://github.com/thibaultduponchelle/cyclic-b
+Author: Thibault Duponchelle
+Author-email: thibault.duponchelle@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/thibaultduponchelle/cyclic-b/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cyclic-a (>=0)
+
+# Cyclic b
+
+A module to test requirements
+
+## Install
+```bash
+$ python3 -m pip install cyclic-b
+```
+
+## Usage 
+```python3
+from cyclic import b
+
+b.b()
+```
+
+OR
+
+```python3
+from cyclic.b import b
+
+b()
+```
+
+
