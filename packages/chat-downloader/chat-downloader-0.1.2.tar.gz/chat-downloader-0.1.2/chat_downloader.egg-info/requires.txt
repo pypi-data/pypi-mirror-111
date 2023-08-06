@@ -1,0 +1,17 @@
+requests
+datetime
+isodate
+regex
+argparse
+docstring-parser
+colorlog
+
+[dev]
+flake8
+twine
+wheel
+tox
+pytest
+sphinx
+sphinx-rtd-theme
+sphinxcontrib-programoutput
