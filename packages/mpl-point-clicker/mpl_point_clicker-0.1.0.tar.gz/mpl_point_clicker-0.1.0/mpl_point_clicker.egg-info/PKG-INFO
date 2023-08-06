@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: mpl-point-clicker
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: https://github.com/ianhi/mpl-point-clicker
+Author: Ian Hunt-Isaak
+Author-email: ianhuntisaak@gmail.com
+License: BSD 3-Clause
+Platform: UNKNOWN
+Provides-Extra: test
+Provides-Extra: doc
+Provides-Extra: dev
+License-File: LICENSE
+
+UNKNOWN
+
