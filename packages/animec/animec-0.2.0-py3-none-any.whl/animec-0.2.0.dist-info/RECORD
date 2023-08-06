@@ -1,0 +1,12 @@
+animec/__init__.py,sha256=mRsFrgMiBVeZcDsVr0PEgGhKpTwyheGdmTdeJb_o7mc,380
+animec/anicore.py,sha256=QFVRGryUxGjdPdMQ1VrDK7bTylQR2iyRQH7JwRMEH6g,7292
+animec/aninews.py,sha256=_OkotL6hY4c1O_6IqzYyQ1GYCNuFCecscGs3O6EZJcw,2002
+animec/errors.py,sha256=g8sI-iyGVtRbU-10OUcbJ7mIs-fB5P4tbtm3fyLeqIA,255
+animec/gs.py,sha256=QEOy3DcXmP9nCCUC7eKId6SFbbTFN7rQXDkC3Gi4Hig,1248
+animec/helpers.py,sha256=NGwe6WBvoQU6laUzqAVm-yklbFXzfgy1hH8leCu37zA,1301
+animec/sagasu.py,sha256=dEHjB4KAFrIqJBijzEDnh6Q886SALamaw7ijy2p2Sx0,4810
+animec-0.2.0.dist-info/LICENSE.txt,sha256=q4v47ZiYt9LQa_0WZki0i1pC_8uFa9yOIyOC1JNGLY8,1057
+animec-0.2.0.dist-info/METADATA,sha256=OCT92w1b0wKvkh0wATQqQsipSh2cAmLjkHxRHsl32XU,3230
+animec-0.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+animec-0.2.0.dist-info/top_level.txt,sha256=u-TjQ0j_bSQdIm0I1cdM64t5vyXCSqgdqnjxf8nD_eI,7
+animec-0.2.0.dist-info/RECORD,,
