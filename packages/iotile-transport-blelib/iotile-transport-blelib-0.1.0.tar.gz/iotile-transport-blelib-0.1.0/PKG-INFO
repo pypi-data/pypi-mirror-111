@@ -1,0 +1,29 @@
+Metadata-Version: 1.2
+Name: iotile-transport-blelib
+Version: 0.1.0
+Summary: IOTile BLE Support Package
+Home-page: http://github.com/iotile/coretools
+Author: Arch Systems
+Author-email: info@archsys.io
+License: LGPLv3
+Description: IOTile BLE Support Library
+        -------------------------------
+        
+        Common bluetoooth interfaces, classes and supporting modules for implementing
+        Bluetooth Low-Energy based DeviceAdapters that can work with a variety of
+        bluetooth hardware.
+        
+        See https://www.arch-iot.com.
+        
+Keywords: iotile,arch,embedded,hardware,firmware
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7,<4

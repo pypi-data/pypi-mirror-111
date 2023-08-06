@@ -1,0 +1,11 @@
+LICENSE.md
+MANIFEST.in
+setup.py
+version.py
+iotile_transport_blelib.egg-info/PKG-INFO
+iotile_transport_blelib.egg-info/SOURCES.txt
+iotile_transport_blelib.egg-info/dependency_links.txt
+iotile_transport_blelib.egg-info/requires.txt
+iotile_transport_blelib.egg-info/top_level.txt
+test/test_iotile_advertisements.py
+test/test_uuid_processing.py
