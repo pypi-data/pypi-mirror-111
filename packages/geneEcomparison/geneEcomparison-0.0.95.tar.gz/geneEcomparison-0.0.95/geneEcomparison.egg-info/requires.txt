@@ -1,0 +1,6 @@
+numpy
+allensdk
+dash
+dash_bootstrap_components
+dash_extensions
+openpyxl
