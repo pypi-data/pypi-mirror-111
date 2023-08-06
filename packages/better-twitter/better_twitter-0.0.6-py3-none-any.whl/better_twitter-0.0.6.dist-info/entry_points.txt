@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        better-twitter=main:cursive_command
+    
