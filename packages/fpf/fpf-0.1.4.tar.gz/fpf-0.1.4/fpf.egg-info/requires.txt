@@ -1,0 +1,7 @@
+pathspec
+
+[dev]
+check-manifest
+
+[test]
+coverage
