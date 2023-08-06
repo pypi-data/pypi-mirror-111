@@ -1,0 +1,10 @@
+vector/__init__.py,sha256=gZIrj0BorEhyiZhGQUe-NgG7fC9Cyt5aQ2zPDjbKJ80,114
+vector/assistive_functions.py,sha256=yd-2GhIqjTKpfcsBXETawPE6hYnWDH--mUghCL7rqp0,678
+vector/color.py,sha256=S8jLj7JqI_R_LUtfmFNTAMneUQrhEfWDILyRSrVmR-c,6206
+vector/vector2d.py,sha256=b-LQsh9fjvw6HuzWGkkwrQk1pkVh7S2t87hHaQXD0-g,4842
+vector/vector3d.py,sha256=CM3FUA3tr45uoegRw-H_QPYcKjveJDvB63VGgEg-YEI,6644
+hamolicious_vector_class-0.6.10.dist-info/LICENSE,sha256=AImqz_ug3bnFPfXg_XuwMbwzQlYuf8GGQlK37mj7vQk,11175
+hamolicious_vector_class-0.6.10.dist-info/METADATA,sha256=fe6vlJiutw6M7QNEQkko38pJNVg-AbVbCkxa2ZWqO7A,1422
+hamolicious_vector_class-0.6.10.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+hamolicious_vector_class-0.6.10.dist-info/top_level.txt,sha256=ZRj01cyzlFAS3cce_lRABtADOan4fu9u0IajYsJOCiU,7
+hamolicious_vector_class-0.6.10.dist-info/RECORD,,
