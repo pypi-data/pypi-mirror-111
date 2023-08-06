@@ -1,0 +1,7 @@
+pyproject.toml
+setup.py
+src/addoneaddmat.egg-info/PKG-INFO
+src/addoneaddmat.egg-info/SOURCES.txt
+src/addoneaddmat.egg-info/dependency_links.txt
+src/addoneaddmat.egg-info/requires.txt
+src/addoneaddmat.egg-info/top_level.txt
