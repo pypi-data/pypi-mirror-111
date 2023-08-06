@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/galerkin-transformer/__init__.py
+src/galerkin-transformer/ft.py
+src/galerkin-transformer/layers.py
+src/galerkin-transformer/model.py
+src/galerkin-transformer/utils.py
+src/galerkin-transformer/utils_ft.py
+src/galerkin_transformer.egg-info/PKG-INFO
+src/galerkin_transformer.egg-info/SOURCES.txt
+src/galerkin_transformer.egg-info/dependency_links.txt
+src/galerkin_transformer.egg-info/top_level.txt
