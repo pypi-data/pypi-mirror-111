@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: pyequihash
+Version: 0.1
+Summary: python bindings for libequihash
+Home-page: https://github.com/stef/equihash/python
+Author: Stefan Marsiske
+Author-email: sphinx@ctrlc.hu
+License: GPLv3
+Description: # pyequihash
+        
+        This is the python bindings for libequihash.
+        
+        ## installation
+        
+        you'll need https://github.com/stef/equihash/
+        which depends on libsodium.
+        a simple `pip install pyequihash` should suffice to install the bindings.
+        
+        ## usage
+        
+        ```python
+        import equihash
+        
+        # input parameters
+        n=102
+        k=5
+        seed="some initial seed"
+        # try to solve the challenge
+        sol = equihash.solve(n, k, seed)
+        # verify the solution
+        print(equihash.verify(n,k,seed,sol))
+        ```
+        
+        ## License
+        
+        GPLv3.0+
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: Security
+Description-Content-Type: text/markdown
