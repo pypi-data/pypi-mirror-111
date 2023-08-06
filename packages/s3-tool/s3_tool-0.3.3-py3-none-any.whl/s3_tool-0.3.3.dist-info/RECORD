@@ -1,0 +1,9 @@
+s3_tool/.env.example,sha256=4vmoc0qxFpX5_ruHoRJYWkROMkHSncM7_HjpN8VCobg,122
+s3_tool/__init__.py,sha256=8KcCYTXH99C2-gCLuPILJvtT9YftRWJsartIx6TQ2ZY,22
+s3_tool/choices/access_types.py,sha256=uXYXKYHQNIyGDZPNpzoTPE1aLCbF02OyizUPLTH_1Io,337
+s3_tool/choices/object_methods.py,sha256=ewn4jz9y3EKxhFlZU58u0Y12u4_JwuhgnKwlyLILg2o,162
+s3_tool/main.py,sha256=jfdxWLFKHMdEFuaI-Ddsiq8gqV1yTIXcAGN6ni8ekxw,20876
+s3_tool-0.3.3.dist-info/entry_points.txt,sha256=x1GS3HYRh9EDEtnJLfXwPd5wNfPOu8-t9RvJLgGd2w4,44
+s3_tool-0.3.3.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+s3_tool-0.3.3.dist-info/METADATA,sha256=_ywwTz-tUtwjLVhqr5C-40yBJyEzZqBD9fdWOtXqSOk,7397
+s3_tool-0.3.3.dist-info/RECORD,,
