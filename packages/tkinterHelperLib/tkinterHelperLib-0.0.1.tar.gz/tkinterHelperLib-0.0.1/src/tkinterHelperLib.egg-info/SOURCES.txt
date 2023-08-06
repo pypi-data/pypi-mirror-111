@@ -1,0 +1,7 @@
+LICENSE.txt
+pyproject.toml
+setup.cfg
+src/tkinterHelperLib.egg-info/PKG-INFO
+src/tkinterHelperLib.egg-info/SOURCES.txt
+src/tkinterHelperLib.egg-info/dependency_links.txt
+src/tkinterHelperLib.egg-info/top_level.txt
