@@ -1,0 +1,14 @@
+.DS_Store
+README.md
+setup.py
+demos/air_passenger.csv
+demos/demo.ipynb
+demos/.ipynb_checkpoints/demo-checkpoint.ipynb
+tsregressor/__init__.py
+tsregressor/models.py
+tsregressor.egg-info/PKG-INFO
+tsregressor.egg-info/SOURCES.txt
+tsregressor.egg-info/dependency_links.txt
+tsregressor.egg-info/top_level.txt
+tsregressor/__pycache__/__init__.cpython-37.pyc
+tsregressor/__pycache__/models.cpython-37.pyc
