@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style>
+
+.link {
+    fill: #7ab8cc;
+    stroke: #7ab8cc;
+    stroke-width: 2px;
+}
+
+.node circle {
+    fill: #ffebcd;
+    stroke: #ffebcd;
+    stroke-width: 12px;
+}
+
+text {
+    fill: crimson;
+    font: 12px sans-serif;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="downloadSVG/downloadSVG.js"></script>
+<script>
+
+// this script derive from http://bl.ocks.org/mbostock/2706022
+
+// http://blog.thomsonreuters.com/index.php/mobile-patent-suits-graphic-of-the-day/
+const links = [{source: 'beeswax', target: 'minerals'}, {source: 'beeswax', target: 'water'}, {source: 'minerals', target: 'nectar'}, {source: 'bees', target: 'figure 8'}, {source: 'bees', target: 'nectar'}, {source: 'figure 8', target: 'sun'}, {source: 'figure 8', target: 'shake'}, {source: 'figure 8', target: 'abdomen'}, {source: 'nectar', target: 'fruit trees'}, {source: 'nectar', target: 'evaporation'}, {source: 'nectar', target: 'hive'}, {source: 'water', target: 'evaporation'}, {source: 'shake', target: 'distance'}, {source: 'distance', target: 'abdomen'}, {source: 'evaporation', target: 'dry'}, {source: 'hive', target: 'house bees'}, {source: 'house bees', target: 'dry'}, {source: 'house bees', target: 'honey'}];
+
+const nodes = {};
+
+// Compute the distinct nodes from the links.
+links.forEach(function(link) {
+  link.source = nodes[link.source] || (nodes[link.source] = {name: link.source});
+  link.target = nodes[link.target] || (nodes[link.target] = {name: link.target});
+});
+
+const width = 500,
+        height = 500;
+
+const force = d3.layout.force()
+        .nodes(d3.values(nodes))
+        .links(links)
+        .size([width, height])
+        .linkDistance(75)
+        .charge(-300)
+        .on("tick", tick)
+        .start();
+
+const svg = d3.select("body").append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+const link = svg.selectAll(".link")
+        .data(force.links())
+        .enter().append("line")
+        .attr("class", "link");
+
+const node = svg.selectAll(".node")
+        .data(force.nodes())
+        .enter().append("g")
+        .attr("class", "node")
+        .on("mouseover", mouseover)
+        .on("mouseout", mouseout)
+        .call(force.drag);
+
+node.append("circle")
+    .attr("r", 10);
+
+node.append("text")
+    .attr("dy", ".2em")
+    .style("text-anchor", "middle")
+    .text(function(d) { return d.name; });
+
+function tick() {
+  link
+      .attr("x1", function(d) { return d.source.x; })
+      .attr("y1", function(d) { return d.source.y; })
+      .attr("x2", function(d) { return d.target.x; })
+      .attr("y2", function(d) { return d.target.y; });
+
+  node
+      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+}
+
+function mouseover() {
+  d3.select(this).select("circle").transition()
+      .duration(750)
+      .attr("r", 16);
+}
+
+function mouseout() {
+  d3.select(this).select("circle").transition()
+      .duration(750)
+      .attr("r", 8);
+}
+
+
+d3.select("body").append("button")
+        .attr("type","button")
+        .attr("class", "downloadButton")
+        .text("Download SVG")
+        .on("click", function() {
+            // download the svg
+            downloadSVG();
+        });
+
+</script>
