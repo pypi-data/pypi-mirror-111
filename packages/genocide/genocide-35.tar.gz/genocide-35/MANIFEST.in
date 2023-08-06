@@ -1,0 +1,3 @@
+include ob.py
+recursive-include bin *
+recursive-include docs *

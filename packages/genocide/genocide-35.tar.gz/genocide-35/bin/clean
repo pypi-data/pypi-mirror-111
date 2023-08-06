@@ -1,0 +1,1 @@
+rm -fR __pycache__ files/*~ .test gcd/*~ gcd/__pycache__ test/__pycache__ test/*~ docs/txt/*~ docs/gcd*.rst docs/gcd.rst docs/gcd.*.rst docs/*~ docs/__pycache__ run run.tar.gz html env env.tar.gz  build dist MANIFEST genocide.egg-info bin/*~ *~
