@@ -1,0 +1,39 @@
+"""Setup script for ddns-manager"""
+
+import os.path
+from setuptools import setup
+
+# The directory containing this file
+HERE = os.path.abspath(os.path.dirname(__file__))
+
+# The text of the README file
+with open(os.path.join(HERE, "README.md")) as fid:
+    README = fid.read()
+
+# This call to setup() does all the work
+setup(
+    name="ddns-manager",
+    version="0.1.0",
+    description="Keep your ddns up to date",
+    long_description=README,
+    long_description_content_type="text/markdown",
+    url="https://github.com/hbontempo-br/ddns-manager",
+    author="hbontempo",
+    author_email="me@hbontempo.dev",
+    license="MIT",
+    classifiers=[
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+    ],
+    packages=["ddns_manager"],
+    include_package_data=True,
+    install_requires=[
+        "click", "PyYAML", "requests", "retry"
+    ],
+    entry_points={
+        "console_scripts": [
+            "ddns_manager=ddns_manager.__main__:cli",
+        ]
+    },
+)

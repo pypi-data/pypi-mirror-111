@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+ddns_manager/__init__.py
+ddns_manager/__main__.py
+ddns_manager/manager.py
+ddns_manager.egg-info/PKG-INFO
+ddns_manager.egg-info/SOURCES.txt
+ddns_manager.egg-info/dependency_links.txt
+ddns_manager.egg-info/entry_points.txt
+ddns_manager.egg-info/requires.txt
+ddns_manager.egg-info/top_level.txt
