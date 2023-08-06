@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: SCALECAST
+Version: 0.1.2
+Summary: A flexible, minimal-code forecasting object meant to be used with loops to forecast many series or to focus on one series for maximum accuracy.
+Home-page: https://github.com/mikekeith52/scalecast
+Author: Michael Keith
+Author-email: mikekeith52@gmail.com
+License: MIT
+Download-URL: https://github.com/mikekeith52/scalecast/archive/refs/tags/0.1.2.tar.gz
+Description: UNKNOWN
+Keywords: FORECAST,SCALE,FLEXIBLE
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
