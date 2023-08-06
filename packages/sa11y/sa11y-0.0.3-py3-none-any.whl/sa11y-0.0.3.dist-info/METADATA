@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: sa11y
+Version: 0.0.3
+Summary: The Selenium Accessibility Project
+License: MPL 2.0
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: flake8 (>=3.9.2,<4.0.0)
+Requires-Dist: pytest (>=6.2.4,<7.0.0)
+Requires-Dist: selenium (==3.141.0)
