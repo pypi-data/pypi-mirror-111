@@ -1,0 +1,9 @@
+pyqtgraph>=0.10.0
+numpy
+numba
+flammkuchen
+pyqt5
+scikit-image
+imageio
+imageio-ffmpeg
+opencv-python-headless
