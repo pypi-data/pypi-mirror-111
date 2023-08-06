@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+mysql_kernel/__init__.py
+mysql_kernel/__main__.py
+mysql_kernel/install.py
+mysql_kernel/kernel.py
+mysql_kernel.egg-info/PKG-INFO
+mysql_kernel.egg-info/SOURCES.txt
+mysql_kernel.egg-info/dependency_links.txt
+mysql_kernel.egg-info/not-zip-safe
+mysql_kernel.egg-info/requires.txt
+mysql_kernel.egg-info/top_level.txt
