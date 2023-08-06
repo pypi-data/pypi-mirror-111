@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: dobro
+Version: 0.4.2
+Summary: [DEPRECATED] Manage DigitalOcean droplets by tag
+Home-page: https://gitlab.com/snoopdouglas/dobro
+Author: Doug Thompson
+Author-email: s-git@dougthompson.co.uk
+License: MIT
+Keywords: digitalocean droplet cli doctl devops
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Development Status :: 7 - Inactive
+Classifier: Topic :: Utilities
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE
+
+[DEPRECATED] Manage DigitalOcean droplets by tag. This is unmaintained.
+
