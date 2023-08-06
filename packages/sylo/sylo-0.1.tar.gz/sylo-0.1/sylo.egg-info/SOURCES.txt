@@ -1,0 +1,14 @@
+README.md
+setup.py
+sylo/__init__.py
+sylo/__main__.py
+sylo/definitions.py
+sylo/messages.py
+sylo/models.py
+sylo/sylo.py
+sylo.egg-info/PKG-INFO
+sylo.egg-info/SOURCES.txt
+sylo.egg-info/dependency_links.txt
+sylo.egg-info/not-zip-safe
+sylo.egg-info/requires.txt
+sylo.egg-info/top_level.txt
