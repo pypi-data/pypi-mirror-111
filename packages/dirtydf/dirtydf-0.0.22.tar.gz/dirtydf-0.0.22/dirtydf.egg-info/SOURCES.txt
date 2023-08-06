@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+ddf/DirtyDF.py
+ddf/__init__.py
+ddf/history.py
+ddf/latlong.py
+ddf/samplers.py
+ddf/stainer.py
+dirtydf.egg-info/PKG-INFO
+dirtydf.egg-info/SOURCES.txt
+dirtydf.egg-info/dependency_links.txt
+dirtydf.egg-info/requires.txt
+dirtydf.egg-info/top_level.txt
