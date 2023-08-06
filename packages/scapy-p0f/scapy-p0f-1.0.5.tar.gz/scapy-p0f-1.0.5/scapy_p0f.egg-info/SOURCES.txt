@@ -1,0 +1,12 @@
+README.md
+setup.py
+scapy_p0f/__init__.py
+scapy_p0f/base_classes.py
+scapy_p0f/consts.py
+scapy_p0f/p0fv3.py
+scapy_p0f/utils.py
+scapy_p0f.egg-info/PKG-INFO
+scapy_p0f.egg-info/SOURCES.txt
+scapy_p0f.egg-info/dependency_links.txt
+scapy_p0f.egg-info/requires.txt
+scapy_p0f.egg-info/top_level.txt
