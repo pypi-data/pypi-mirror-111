@@ -1,0 +1,10 @@
+setup.py
+distributions_spovi/Binomialdistribution.py
+distributions_spovi/Gaussiandistribution.py
+distributions_spovi/Generaldistribution.py
+distributions_spovi/__init__.py
+distributions_spovi.egg-info/PKG-INFO
+distributions_spovi.egg-info/SOURCES.txt
+distributions_spovi.egg-info/dependency_links.txt
+distributions_spovi.egg-info/not-zip-safe
+distributions_spovi.egg-info/top_level.txt
