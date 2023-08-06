@@ -1,0 +1,2 @@
+iotile-core>=5.2
+iotile-sensorgraph>=1.1
