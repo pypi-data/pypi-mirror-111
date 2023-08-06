@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/DatasetsEvaluator/DatasetsEvaluator.py
+src/DatasetsEvaluator/__init__.py
+src/DatasetsEvaluator.egg-info/PKG-INFO
+src/DatasetsEvaluator.egg-info/SOURCES.txt
+src/DatasetsEvaluator.egg-info/dependency_links.txt
+src/DatasetsEvaluator.egg-info/top_level.txt
