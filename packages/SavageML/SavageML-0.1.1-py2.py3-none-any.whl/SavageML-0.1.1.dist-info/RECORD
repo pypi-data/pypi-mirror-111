@@ -1,0 +1,13 @@
+test.py,sha256=Dj5moKu5VSACMbeTv7a516tM_Jzo74p6gcY0LNvaEjk,35
+savageml/__init__.py,sha256=M_2W7yEMHXt70aPftPX2UDFXSYVeWyGqe5ZEI19Oa3A,73
+savageml/test.py,sha256=xZOo8KgP56_xd3ZXBxyflYENAc4lCY5Uj5WxLhYcWRo,55
+savageml/models/__init__.py,sha256=PeT488SZ1pd9pLER-dv2X-ReueKJjXlWFE6RzONBHag,35
+savageml/models/base_model.py,sha256=r6YG95YPddCU34qS5yw4UDUvRzHi5rd3TOQ6TFMV5lM,444
+savageml/simulations/__init__.py,sha256=u8lsyQtptYizGpSlh-lZN6Q7SWi92MQh3wjMoV6dP_4,92
+savageml/simulations/base_simulation.py,sha256=Bc_3aQs7AexUJrbMdHLe7n5r-acljEPyw8CNUYwKOaE,1313
+savageml/simulations/simulation_state.py,sha256=AiAZhjSIqt9hRT934uxPaozMJ73S5OjtZYvofkeUNfc,111
+SavageML-0.1.1.dist-info/LICENSE,sha256=uNKrijdeN8r4AUTbH_bQw7J7yFF87bDAnVwQGxZ4blI,1092
+SavageML-0.1.1.dist-info/METADATA,sha256=mPUJuNalSs9qRA3W9U0co4B7G13EDjSAj6K7n58SloQ,372
+SavageML-0.1.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+SavageML-0.1.1.dist-info/top_level.txt,sha256=cfcPHWBouLUrPC4Wn5ZNY_guTmMJRDNfA-jrow4KoN0,9
+SavageML-0.1.1.dist-info/RECORD,,
