@@ -1,0 +1,11 @@
+<p>path : <span>{{ artifact.path }}</span>, size : <span>{{ artifact.file_size }} byte(s)</span></p>
+<hr/>
+{% if text_content %}
+    <pre>{{text_content}}</pre>
+{% elif image_content %}
+    {% if file_extension in ['jpg', 'jpeg'] %}
+        <img src="data:image/jpeg;base64,{{ image_content | safe }}" alt="an artifact image"/>
+    {% elif file_extension in ['png'] %}
+        <img src="data:image/png;base64,{{ image_content | safe }}" alt="an artifact image"/>
+    {% endif %}
+{% endif %}
