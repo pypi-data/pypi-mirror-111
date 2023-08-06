@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: obsinfo
+Version: 0.109
+Summary: Tools for documenting ocean bottom seismometer experiments and creating metadata
+Home-page: https://gitlab.com/resif/obsinfo/-/tree/v0.109/obsinfo
+Author: Wayne Crawford
+Author-email: crawford@ipgp.fr
+License: UNKNOWN
+Keywords: seismology OBS
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3
+Description-Content-Type: text/x-rst; charset=UTF-8
+License-File: LICENSE.txt
+
+file:README.rst
+
