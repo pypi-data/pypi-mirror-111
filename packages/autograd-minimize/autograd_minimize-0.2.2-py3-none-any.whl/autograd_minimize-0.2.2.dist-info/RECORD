@@ -1,0 +1,10 @@
+autograd_minimize/__init__.py,sha256=RCybfvM5sKi0B41sTPRHkXQNV-BE0RVwiIFnld1_xzM,60
+autograd_minimize/base_wrapper.py,sha256=hKG9XjHKRVarWm4IOLhVd5nv5H6NGLNX3j0ed3dYjRs,7256
+autograd_minimize/scipy_minimize.py,sha256=-gznjJfDLV9RWjnJH232qAulnJZ1ZM-YKTrSBHwu9aw,5753
+autograd_minimize/tf_wrapper.py,sha256=U3-ij6JhpLpYPa5mVc-PIqcIRo-iWqi4v-zEJrYLed0,7722
+autograd_minimize/torch_wrapper.py,sha256=G9Stgi8W-Wdo5pQceeBvFz-Yqhrt5z8UHhXclycnYKE,8211
+autograd_minimize-0.2.2.dist-info/LICENSE,sha256=8u4mr0bw8uqmZ-qJ3WmsB7v5-gIdbIScJFv-QIhwPfc,1067
+autograd_minimize-0.2.2.dist-info/METADATA,sha256=7zyWz8fI3r2_vpw4kXisVOH6pFixsm22f8uj785gh6Y,4809
+autograd_minimize-0.2.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+autograd_minimize-0.2.2.dist-info/top_level.txt,sha256=twLp0rLvNaCv9JHwYNY0EzIgQvPyXAm0AGr8ElnyGoI,18
+autograd_minimize-0.2.2.dist-info/RECORD,,
