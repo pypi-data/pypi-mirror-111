@@ -1,0 +1,6 @@
+sty>=1.0.0rc1
+colour>=0.1.5
+
+[devel]
+bump2version>=1.0
+pytest>=6.2
