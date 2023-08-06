@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: platyquest
+Version: 1.0.1
+Summary: This platyquest is a part of platypy which helps in quests creation.
+Home-page: UNKNOWN
+Author: Python Rohan
+Author-email: rohan9878787@gmail.com
+License: UNKNOWN
+Keywords: python,platyquest,questions,question,quest,quiz
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+
+# Platyquest - A module
+
+
+
+To install platyquest <code><strong>Pip installl platyquest</strong></code>
+
+
+
+<h1>To create questions</h1>
+
+This module <code><strong>platyquests</strong></code> will help you to create quiz and make questions
+
+very fast because people would sometimes make many questions in 50 lines of code but this submodule will take 1 line and 
+
+to install it type this command:
+
+<br>
+
+<code><strong>Pip install platyquest</strong></code>
+
+
+
+to import it in your project:
+
+
+
+><strong>from platyquest import *</strong>
+
+
+
+for making 5 question at a time:
+
+
+
+> <strong>createquiz() <-- fill the important requirements</strong>
+
+
+
+for making a single question:
+
+> <strong>question() <-- fill the requirements</strong>
+
+
+
+you can find it n platypy also as <strong>platypy.createquestionsandanswers.</strong>
+
+
+
+you can find the basics in my channel:
+
+
+
+<a href = "https://www.youtube.com/channel/UCsP5fIAdguQF0muRke5J3zg">https://www.youtube.com/channel/UCsP5fIAdguQF0muRke5J3zg </a>
+
