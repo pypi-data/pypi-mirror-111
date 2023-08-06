@@ -1,0 +1,9 @@
+[build-system]
+requires = [
+    "lxml==4.6.3",
+
+    "beautifulsoup4>=4.9.3",
+    "setuptools>=42",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"

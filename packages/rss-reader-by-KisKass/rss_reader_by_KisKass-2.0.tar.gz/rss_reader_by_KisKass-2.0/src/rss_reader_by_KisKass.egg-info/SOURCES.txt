@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+src/mypackage/__init__.py
+src/mypackage/main.py
+src/rss_reader_by_KisKass.egg-info/PKG-INFO
+src/rss_reader_by_KisKass.egg-info/SOURCES.txt
+src/rss_reader_by_KisKass.egg-info/dependency_links.txt
+src/rss_reader_by_KisKass.egg-info/entry_points.txt
+src/rss_reader_by_KisKass.egg-info/requires.txt
+src/rss_reader_by_KisKass.egg-info/top_level.txt
