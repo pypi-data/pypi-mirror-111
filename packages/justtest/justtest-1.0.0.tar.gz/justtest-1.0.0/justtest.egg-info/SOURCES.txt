@@ -1,0 +1,6 @@
+README.md
+setup.py
+justtest.egg-info/PKG-INFO
+justtest.egg-info/SOURCES.txt
+justtest.egg-info/dependency_links.txt
+justtest.egg-info/top_level.txt
