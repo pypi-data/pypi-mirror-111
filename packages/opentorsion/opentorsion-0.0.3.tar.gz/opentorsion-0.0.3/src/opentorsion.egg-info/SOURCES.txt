@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/opentorsion/__init__.py
+src/opentorsion/assembly.py
+src/opentorsion/disk_element.py
+src/opentorsion/errors.py
+src/opentorsion/gear_element.py
+src/opentorsion/main.py
+src/opentorsion/plots.py
+src/opentorsion/shaft_element.py
+src/opentorsion.egg-info/PKG-INFO
+src/opentorsion.egg-info/SOURCES.txt
+src/opentorsion.egg-info/dependency_links.txt
+src/opentorsion.egg-info/requires.txt
+src/opentorsion.egg-info/top_level.txt
