@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: proc-monitoring
+Version: 1.0.1
+Summary: Implements methods and models for remote monitoring with Kafka and Grafana.
+Home-page: UNKNOWN
+Author: Plexus Tech
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=2.7.5, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*, <4
+Description-Content-Type: text/markdown
+Requires-Dist: PyYaml
+Requires-Dist: requests
+Requires-Dist: paramiko
+Requires-Dist: kafka-python
+Requires-Dist: core-commons (<2,>=1.0.2)
+Provides-Extra: windows_socket_inet
+Requires-Dist: win-inet-pton ; extra == 'windows_socket_inet'
+
+
+# Library monitoring
+
+This project is a single package module that takes care of sending monitoring data of any device device to a Kafka system that will be later measured and displayed on a Grafana dashboard. It works by instantiating parallel monitoring nodes that gather data from different sources.
+
+## Requirements
+
+The requirements for installing and running the project are:
+- An IDE or a code editor of sorts:
+    - IDEs: *PyCharm*
+    - Code editors: *Visual studio Code*, *Notepad++*, *VIM*
+- A *Python* environment with minimum versions 2.7.5 and 3.6 with the packages:
+    - `PyYAML`
+    - `requests`
+    - `paramiko`
+    - `kafka-python`
+    - `library-commons`
+- If developing on windows, also install the packages:
+    - `win-inet-python`
+- Optionally, if required to run a local Kafka deployment, a Docker build with images:
+    - `confluentinc/cp-zookeeper`
+    - `confluentinc/cp-kafka`
+
+## Installation
+
+To install the program locally or on a remote Linux capsule:
+
+1. Download or clone the project from git.
+2. Ensure to have a working python environment with the required packages installed.
+3. Setup the `monitoring` package as a source, either by installing it on the generated python environment, or by setting the monitoring root folder as a python source in the used IDE.
+4. Modify the `configuration.yaml` file to deploy the desired nodes as specified in the **Configuration** section.
+5. Launch the installed script `execute_monitoring` generated at the virtual environment, or launch the `executor.py` file from the `scripts` package if working from an IDE.
+6. Optionally, setup a service to launch and keep the monitoring job healthy, running in the background gathering metrics.
+
+> You can install docker and run the command `docker-compose up` on the docker folder to create and launch a DEV Kafka server for the program to send data to.
+
+## Configuration
+
+The command line arguments for all scripts are:
+
+- `-cf`/`--config-file`: Describes the nodes launched on execution, and their configuration.
+- `-w`/`--whatif`: If set, the script will execute normally but won't change any persistent data.
+- `-i`/`--info`: If set, will output the general script steps and information.
+- `-d`/`--debug`: If set, will increase the action logging verbosity, usually only used for debugging.
+- `-h`/`--help`: Show the help message of the script and exit.
+
+This file is divided into 2 main items, nodes and key arguments:
+
+- **Nodes:** In this section the nodes are declared and configured. To add a node simply add an entry to the list of nodes, with the parameter `type` specifying the full name of the node class that should be instantiated, and the parameter `args` specifying the dictionary of arguments that will be passed to the class. Each node should be documented in the docs folder.
+
+- **Key Arguments:** In this section, the key arguments are created. Future versions will encode and secure this file, since it may contain important information. Currently only the key `connections` is implemented.
+
+> Any keyword argument, like `conn`/`connections` set in the **Nodes** section will be replaced by the corresponding item from the **Key Arguments** section. 
+
+> Nodes from other libraries or the project itself will be automatically gathered by the executor as long as they are in a `nodes` folder in a package.
+
+
