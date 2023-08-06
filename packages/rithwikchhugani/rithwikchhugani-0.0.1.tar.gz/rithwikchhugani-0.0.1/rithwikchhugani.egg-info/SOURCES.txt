@@ -1,0 +1,7 @@
+setup.py
+libname/__init__.py
+libname/hello.py
+rithwikchhugani.egg-info/PKG-INFO
+rithwikchhugani.egg-info/SOURCES.txt
+rithwikchhugani.egg-info/dependency_links.txt
+rithwikchhugani.egg-info/top_level.txt
