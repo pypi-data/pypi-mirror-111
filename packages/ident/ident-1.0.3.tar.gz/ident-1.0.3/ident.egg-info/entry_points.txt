@@ -1,0 +1,4 @@
+[console_scripts]
+ident = ident.cli:verify
+verify = ident.commands.verify:main
+
