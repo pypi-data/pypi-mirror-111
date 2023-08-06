@@ -1,0 +1,3 @@
+[console_scripts]
+oscsim = oscsim.run:main
+
