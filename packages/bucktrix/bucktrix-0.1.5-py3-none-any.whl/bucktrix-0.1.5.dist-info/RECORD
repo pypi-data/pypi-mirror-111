@@ -1,0 +1,9 @@
+bucktrix/__main__.py,sha256=zz5oUmws41RKDszZg_nzL_0m3wImeRVVXU82h_AZGJw,1955
+bucktrix/callback.py,sha256=tWUUUq2SaksVULKtwEvc2jL7s1sHAHw9xGkZQzUm8Vc,3018
+bucktrix/config.py,sha256=PmyRrzDyRRs8awdDosSWP2CeMTAS2VvA4DjgBsASYhQ,5795
+bucktrix/conn.py,sha256=137MWVi1UDTZzM2zxfeMX7P_l5O-2ThkmnBKPPTVEBE,1360
+bucktrix/task.py,sha256=69vSUvcFtHydbt1MRqiUmu2G2f3k5rBUiuLSbEoC7Jc,474
+bucktrix-0.1.5.dist-info/LICENSE,sha256=MQeC4avUPE3mIXxRPjKL3fmZ05MC1nxuBbEKWZWYJ68,15174
+bucktrix-0.1.5.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+bucktrix-0.1.5.dist-info/METADATA,sha256=gwhjJzY6oV4t-NM6fZ9QWFIEkrt6qI1N6qB7jTChv2M,446
+bucktrix-0.1.5.dist-info/RECORD,,
