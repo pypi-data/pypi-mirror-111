@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: fpiper
+Version: 0.0.1
+Summary: A small library providing functional wrappers over Optional and Iterable
+License: MIT
+Author: Vladimir Okhotnikov
+Author-email: vokhotnikov@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
+When coming from a functional background, it is normal to miss common
+_chainable_ combinators for container types, namely:
+
+- `map`|`fmap`
+- `filter`|`where`
+- `flatMap`|`bind`|`collect`
+
+This library contains simple wrappers for `Optional` and `Iterable` Python
+values which provide just that.
+
+The library is currently in very experimental stage, use at your own risk.
+
+An example:
+
+```
+  from fpiper import pipe, pipeOpt
+
+  x = pipe(myList).filter(lambda x: x > 0).flatMap(lambda x: x*2).run()
+  y = pipeOpt(loadCustomer).flatMap(validateCustomer).map(submitCustomer).run()
+```
+
+
