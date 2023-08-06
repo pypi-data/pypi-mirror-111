@@ -1,0 +1,116 @@
+# infuradj
+`infuradj` is a Python library that is used for sending transactions to Ethereum network via Infura.io.
+
+## Install
+
+To install the library you can do:
+
+```
+pip install infuradj
+```
+
+or 
+
+```
+pip install git+https://github.com/dastanbeksamatov/django-infura.git
+```
+
+## Credentials and authorization keys
+
+It is recommended to store your private keys, project ids as an environment variable rather than using it directly. For that we can use `python-decouple` package:
+```bash
+pip install python-decouple
+```
+Then you will have to create a file named `.env` inside the root directory of the project or in any place where you are calling `infuradj` functions:
+
+```bash
+touch .env
+```
+Inside the `.env` file place your keys like this (following values are for demo purposes):
+
+```env
+PRIVATE_KEY="0x454b8f49fdd53a57d556d2f445149a47902257409c0789e6f2e45ada0b8cd793"
+KOVAN_ID="6872e87746174c819fcca0b3ff2b3272"
+POLYGON_ID="fc8295815e4f4ab4a17e2719353cfef1"
+PUBLIC_KEY="0xe36bb11402231eBD171D5F459f095F9A248f0122"
+```
+
+`python-decouple` automatically loads the environemnt variables and it's usage in `python` files are demonstrated below in examples section.
+
+## Examples
+
+Some usage examples of the library:
+
+```python
+# decouple package is used for loading environment variables
+from decouple import config
+from infuradj import send_tx, get_tx_details
+
+"""
+You have to have funds for gas fees in Kovan network
+"""
+tx_hash = send_tx(
+    config('PUBLIC_KEY'),
+    "some message",
+    config('KOVAN_ID'),
+    config('PRIVATE_KEY'),
+    'kovan'
+    )
+print(tx_hash)
+
+"""
+You have to have funds for gas fees in Polygon network to send the transaction
+"""
+poly_hash = send_tx(
+    config('PUBLIC_KEY'),
+    "polygon message",
+    config('POLYGON_ID'),
+    config('PRIVATE_KEY'),
+    'polygon-mainnet'
+    )
+print(poly_hash)
+
+"""
+Gets details about transaction by hash
+For example, you can use it to get the input of the transaction, blockNumber, etc.
+"""
+details = get_tx_details(    "0x3d6cb7e4dd0df34a11786be638b3b975e09f549b688a6a4ff994fef5a026b35b",
+    'kovan',
+    config('KOVAN_ID')
+)
+data = bytes.fromhex(details.get('input')[2:]).decode()
+print("tx input: ".format(data)) 
+# tx input: some message
+
+"""
+NETWORK_IDS is a map of network name to its chain_id
+"""
+print("networks: {}".format(NETWORK_IDS.keys()))
+# networks: dict_keys(['mainnet', 'kovan', 'rinkeby', 'goerli', 'ropsten', 'polygon-mainnet'])
+```
+
+## API
+### `send_tx(to, message, project_id, private_key, network, value=0, gas=90000)`
+  Main exposed function that prepares the transaction and sends it to `infura.io` networks
+- `to: string` - account to sent to
+- `message: string` - data to append to tx
+- `project_id: string` - `infura` project id
+- `private_key: string` - account private keys for signing the tx
+- `network: string` - eth network (mainnet, polygon, kovan, etc.)
+- `value: integer` - amount to send (defaults to 0)
+- `gas: integer` - gas to spend (defaults to 90000)
+
+### `get_tx_details(tx_hash, network, project_id)`
+
+Gets transaction details using the given hash. If tx is not mined yet or in a wrong format it raises `NotFound` exception
+- `tx_hash: string` - hash of the transaction
+- `project_id: string` - `infura` project id
+- `network: string` - eth network (mainnet, polygon, kovan, etc.)
+
+### NETWORK_IDS
+Constant of map type that maps network name to its respective `chain_id`
+
+## Issues
+
+If you have any issues or bugs with the project, feel free to open an issue.
+
