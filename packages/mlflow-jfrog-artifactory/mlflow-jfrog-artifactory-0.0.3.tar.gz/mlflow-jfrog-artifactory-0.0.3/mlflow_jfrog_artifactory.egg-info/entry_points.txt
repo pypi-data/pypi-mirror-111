@@ -1,0 +1,3 @@
+[mlflow.artifact_repository]
+artifactory=mlflow_artifactory.store.artifact.jfrog_artifact_repository:JFrogArtifactRepository
+
