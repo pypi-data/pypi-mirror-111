@@ -1,0 +1,13 @@
+README.md
+setup.py
+multidim_galerkin_pod/__init__.py
+multidim_galerkin_pod/chaos_expansion_utils.py
+multidim_galerkin_pod/gen_pod_utils.py
+multidim_galerkin_pod/ldfnp_ext_cholmod.py
+multidim_galerkin_pod/mock_ext_cholmod.py
+multidim_galerkin_pod/ten_sor_utils.py
+multidim_galerkin_pod.egg-info/PKG-INFO
+multidim_galerkin_pod.egg-info/SOURCES.txt
+multidim_galerkin_pod.egg-info/dependency_links.txt
+multidim_galerkin_pod.egg-info/requires.txt
+multidim_galerkin_pod.egg-info/top_level.txt
