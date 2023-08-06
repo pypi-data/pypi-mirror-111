@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: demod
+Version: 0.2.post1
+Summary: Domestic Energy Demand Modelling Library
+Home-page: https://github.com/epfl-herus/demod
+Author: Matteo Barsanti, Lionel Constantin, HERUS, Ecole Polytechnique Fédérale de Lausanne
+Author-email: demod@groupes.epfl.ch
+License: GNU General Public License v3 (GPLv3)
+Project-URL: Documentation, https://demod.readthedocs.io/
+Keywords: energy,demand,simulation,modelling,load,electricity,power,appliance,heating,household,DSM,dataset
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy (>=1.19)
+Requires-Dist: scipy (>=1.4)
+Requires-Dist: pandas (>=1.2)
+Requires-Dist: matplotlib (>=3.4)
+
+# Demod
+
+## _Domestic Energy Demand Modelling Library_
+
+Demod is a Python library for assembling bottom-up domestic
+energy demand models.
+
+## Documentation
+
+[![Documentation Status](https://readthedocs.org/projects/demod/badge/?version=latest)](https://demod.readthedocs.io/en/latest/?badge=latest)
+
+Available at https://demod.readthedocs.io/
+
+## Installation
+
+```sh
+pip install demod
+```
+
+Source code: [GitHub Repository](https://github.com/epfl-herus/demod)
+
+## Dependencies
+* [numpy](https://numpy.org/)
+* [pandas](https://pandas.pydata.org/)
+* [scipy](https://www.scipy.org/)
+* [openpyxl](https://openpyxl.readthedocs.io/en/stable/)
+* [matplotlib](https://matplotlib.org/)
+
+## Licence
+
+[GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)
+
+## About
+
+This repository is managed by
+[HERUS lab](https://www.epfl.ch/labs/herus/) from
+[EPFL : École Polytechnique Fédérale de Lausanne](https://www.epfl.ch/en/).
+
+Please report bugs and ideas for improvement to
+our team: demod@groupes.epfl.ch .
+
+
