@@ -1,0 +1,3 @@
+[console_scripts]
+gsbatch_topng = gsbatch.cli.gsbatch_topng:main
+
