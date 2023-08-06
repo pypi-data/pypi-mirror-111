@@ -1,0 +1,16 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.md
+main.py
+pyproject.toml
+setup.py
+hollybooks/__init__.py
+hollybooks/bible.py
+hollybooks/quran.py
+hollybooks/torah.py
+hollybooks.egg-info/PKG-INFO
+hollybooks.egg-info/SOURCES.txt
+hollybooks.egg-info/dependency_links.txt
+hollybooks.egg-info/requires.txt
+hollybooks.egg-info/top_level.txt

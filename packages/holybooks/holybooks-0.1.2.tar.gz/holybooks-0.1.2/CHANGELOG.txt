@@ -1,0 +1,30 @@
+Change Log
+==========
+
+0.0.1 (27/06/2021)
+-------------------
+- First Release
+
+0.0.2 (27/06/2021)
+-------------------
+- Second Release
+
+0.0.3 (27/06/2021)
+-------------------
+- Third Release
+
+0.0.5 (28/06/2021)
+-------------------
+- Fix some bug
+
+0.0.7 (28/06/2021)
+-------------------
+- Fix more bug
+
+0.1.0 (28/06/2021)
+-------------------
+- The first release where you can actually download it with pip install -U hollybooks
+
+0.1.2 (29/06/2021)
+-------------------
+- Fix the the class name because some class from bible.py and torah.py is the same. 
