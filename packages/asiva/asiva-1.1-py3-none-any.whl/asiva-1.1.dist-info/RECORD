@@ -1,0 +1,16 @@
+asiva/__init__.py,sha256=QcY0T9gurvEkLq0TAO_uLrHolMhv2hNwCcuEPJ4di-E,143
+asiva/asiva.ipynb,sha256=t9X-dhwd83gYURXdnhMxF-yysOiz1DauxOGrFUWouFA,78911
+asiva/logo.png,sha256=Xh44LrylpFGOtqGsLXe-do4k9UO9yESPCADlzdLNOXs,524108
+asiva/examples/dateobs.csv,sha256=3KQO3guxzpNjzWhpTK3WR32G6FGA57HDet5RQ19cKSc,11821
+asiva/examples/ensemble.csv,sha256=QWHKEUgTuXMgINbeQkpeKN97F6lWG6oXebg4FkVPXrs,3546436
+asiva/features/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+asiva/features/allFeatures.py,sha256=80c-tDXD_x79O3eQNgsOk_6RrCwhOvxcdQmE_oOz5sk,9733
+asiva/features/modelFeatures.py,sha256=qrtmvlDfWlc30piSvegX12YlpY4t4XVc4etljPUHITE,2359
+asiva/features/utils.py,sha256=nbYQ6-ojKNszlv8uXBwEbzoYOa4i6P-_IuIBTnInQs4,549
+asiva/model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+asiva/model/assets.py,sha256=eEmFK_NAXR6g01gB5mJEHnJe_1ELI7Az9Kxl7QzpkHk,569
+asiva-1.1.dist-info/LICENSE,sha256=oozMd0pABx3jb8fzOTIsp9aygpT-lmKtayMb3Src3hQ,1064
+asiva-1.1.dist-info/METADATA,sha256=560wsx6p5Xgdi-LYAJ1jmNxoc-aW9tQfxOycuQckW6k,3195
+asiva-1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+asiva-1.1.dist-info/top_level.txt,sha256=eIb4ae251DcNGJE6j4TTeXHRGMPVAuN5hdmsctLy0_o,6
+asiva-1.1.dist-info/RECORD,,
