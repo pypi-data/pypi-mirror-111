@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/pysbml4j/Configuration.py
+src/pysbml4j/Network.py
+src/pysbml4j/Sbml4j.py
+src/pysbml4j/__init__.py
+src/pysbml4j.egg-info/PKG-INFO
+src/pysbml4j.egg-info/SOURCES.txt
+src/pysbml4j.egg-info/dependency_links.txt
+src/pysbml4j.egg-info/requires.txt
+src/pysbml4j.egg-info/top_level.txt
