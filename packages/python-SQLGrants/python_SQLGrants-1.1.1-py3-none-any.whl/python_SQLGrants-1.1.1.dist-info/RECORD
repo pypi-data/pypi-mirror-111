@@ -1,0 +1,8 @@
+sqlgrants/__init__.py,sha256=oZUv7-JZ63ffy5WiVb7evZp8UuOVcnWcS9r_uOS3c6A,57
+sqlgrants/base.py,sha256=nXgpSP9OU9o8xtuNSqYe359XAk6-gqswem--LdVCKlM,2006
+sqlgrants/exceptions.py,sha256=dDsmuicb_57ta6RvLFN_GNnxeI0pOoX24hWyHyNmE3U,420
+python_SQLGrants-1.1.1.dist-info/LICENSE,sha256=323rX8f115HOMRHCQ604sTmZXYdzjFEsVcG9PVjKNnY,1071
+python_SQLGrants-1.1.1.dist-info/METADATA,sha256=Rud_d9xcgX6v1kJFtYs-dJrfQzEMzJV-5nCulxK5SsI,1789
+python_SQLGrants-1.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+python_SQLGrants-1.1.1.dist-info/top_level.txt,sha256=Q9rRC0Qzdp3aKu0rT7JIkaxEVpxhnQwY9n-cX-zNZ70,10
+python_SQLGrants-1.1.1.dist-info/RECORD,,
