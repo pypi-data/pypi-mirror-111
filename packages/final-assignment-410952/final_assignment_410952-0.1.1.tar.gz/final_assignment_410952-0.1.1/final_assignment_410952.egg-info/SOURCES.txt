@@ -1,0 +1,9 @@
+README.md
+setup.py
+final_assignment_410952/__init__.py
+final_assignment_410952/myfunctions.py
+final_assignment_410952.egg-info/PKG-INFO
+final_assignment_410952.egg-info/SOURCES.txt
+final_assignment_410952.egg-info/dependency_links.txt
+final_assignment_410952.egg-info/requires.txt
+final_assignment_410952.egg-info/top_level.txt
