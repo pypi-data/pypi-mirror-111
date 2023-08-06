@@ -1,0 +1,15 @@
+googlesearch/LICENSE,sha256=aZWK0g5T5Q96oJMyB9PnsnmxzdiS5NqT2lcU5c17ymU,1069
+googlesearch/__init__.py,sha256=M5meTXLBp3CwV5RIEpQMkDgJB339xuUMkSOMjCRu8Do,565
+googlesearch/__main__.py,sha256=mDq_b_coMy6zFCXCJ6NiJ7jOciNfti0H7kFPAWjylrw,3852
+googlesearch/constants.py,sha256=pY3mR7hoSt30q1ekJekWOXf58SfJONi7aKFEhUocJKs,620
+googlesearch/exceptions.py,sha256=3hT_Ba2yIiO2XmaFUc09eSXxky7lon5lGWvPp0S3PzY,925
+googlesearch/googlesearch.py,sha256=A3zkHKbTCqNNUwX74XQslts7hj9P6SseZdbmb0g-lU0,4723
+googlesearch/models.py,sha256=iFpmO5_m7TLI6Qm4IrJksVfok-8phhzhdNLhIi3sNJg,1054
+googlesearch/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+googlesearch/utils/cleanup.py,sha256=UIwK01VYhfkM479jrQqrFrMD4iUz7hTtg7REotazLXo,232
+python_googlesearch-1.0.0.dist-info/LICENSE,sha256=aZWK0g5T5Q96oJMyB9PnsnmxzdiS5NqT2lcU5c17ymU,1069
+python_googlesearch-1.0.0.dist-info/METADATA,sha256=A-NMGNSO9IyWNlFTZVNV6TPue8DxF8hJdWBwLZCwjao,7804
+python_googlesearch-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+python_googlesearch-1.0.0.dist-info/entry_points.txt,sha256=4bSk1YXh41SATEARmRQYE_LR3TnTLJuXMgcgG1iYjtI,61
+python_googlesearch-1.0.0.dist-info/top_level.txt,sha256=QwrZIp2fe23UtbZ72VzI-n8e4tkCJ7zuT5dK5z84Nws,13
+python_googlesearch-1.0.0.dist-info/RECORD,,
