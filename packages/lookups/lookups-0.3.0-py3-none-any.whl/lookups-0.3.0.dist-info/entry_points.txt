@@ -1,0 +1,22 @@
+[lookups.test_default_empty_entry_point_group]
+
+
+[lookups.test_default_lookup]
+a_lookup = tests.test_lookup_default:DefaultLookup
+
+[lookups.test_default_lookup_lookup_provider]
+a_lookup = tests.test_lookup_default:DefaultLookupLookupProvider
+
+[lookups.test_default_lookup_provider]
+a_lookup = tests.test_lookup_default:DefaulLookupProvider
+
+[lookups.test_default_no_lookup]
+child = tests.tools:TestChildObject
+other = tests.tools:TestOtherObject
+parent = tests.tools:TestParentObject
+
+[lookups.test_entry_point]
+child = tests.tools:TestChildObject
+other = tests.tools:TestOtherObject
+parent = tests.tools:TestParentObject
+
