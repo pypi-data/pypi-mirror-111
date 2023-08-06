@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: markon
+Version: 1.0.0
+Summary: Simple CTMC solver for Python
+Home-page: http://gitlab.com/fredrikh/markon
+Author: Fredrik Bakkevig Haugli
+Author-email: fredrik.haugli@gmail.com
+License: MIT
+Project-URL: Bug Reports, https://gitlab.com/fredrikh/markon/-/issues
+Project-URL: Source, https://gitlab.com/fredrikh/markon/
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sympy
+
+# Markon
+## Continous Time Markov Chain solver for Python
+
+Markon is a small Python utility for performing analytic solution of CTMCs. Both quantitative and
+symbolic analysis is possible.
+
+Example:
+```python
+from markon import solve_ctmc
+
+# Define a CTMC as a dict of state-tuples (from_state, to_state) to a transition rate
+t = {('up', 'down'): 1,  # Transition rate from 'up' to 'down' is 1
+     ('down', 'up'): 5}  # Transition rate from 'down' to 'up' is 5
+
+# Obtain steady state probabilities
+p = solve_ctmc(t)
+print(p)
+```
+
+will output
+```sh
+{'down': 1/6, 'up': 5/6}
+```
+
+Individual state probabilities can be obtained, both in exact form or as a single rounded float:
+```python
+print(p['up'])
+print(float(p['up']))
+```
+will output
+```sh
+5/6
+0.8333333333333334
+```
+
+General symbolic analysis can also be done via [Sympy](https://www.sympy.org/):
+
+```python
+from markon import solve_ctmc
+import sympy
+
+# Define Sympy symbols
+l, m = sympy.symbols('l, m')
+
+t = {('up', 'down'): l,
+     ('down', 'up'): m}
+
+# Obtain steady state probabilities with defined order
+p = solve_ctmc(t, ['up', 'down'])
+print(p)
+```
+
+will output
+```sh
+{'up': m/(l + m), 'down': l/(l + m)}
+```
+
+
+We can then use Sympy functionality to substitute values
+
+```python
+values = [(l, 1), (m,5)]
+print(p['up'].subs(values))
+```
+
+will output
+```sh
+5/6
+```
+
+Refer to the [Sympy documentation](https://docs.sympy.org/) for more on how to enable nice formatting of expressions, output to Latex, etc.
+
+
