@@ -1,0 +1,11 @@
+gfxinfo/__init__.py,sha256=2vYS-dETfCNasXEc11Fo6OJwcjp6Y5pPvMJ7lC1FXdE,614
+gfxinfo/__main__.py,sha256=ak8HbRpmuqo8n2wOqIZCms3xUAYD2SyweHj9Za1ejtE,942
+gfxinfo/amdgpu.py,sha256=RyDh-MALJgeZD2T2nPw2VlYMmZtHUV55BvIGnFMSTUU,7919
+gfxinfo/gfxinfo_vulkan.py,sha256=jalfUi57HA-qCLM__kdIBGxGocUx68KvgnaFMdxkaxk,9226
+gfxinfo/intel.py,sha256=nFXdF4ouufBuPF2rK6y_wQv1kJg6feBMrsdBihwY7I8,729
+gfxinfo/virt.py,sha256=ful3xr-Z3fXVxtsQlkKHkpcCO9zwo1Cgj_36aYprpig,876
+gfxinfo_mupuf-0.0.5.dist-info/LICENSE,sha256=0xHp_As_zhrb4WdfRykeuwOZwOGbWsiIPd1QxxSXSCs,1061
+gfxinfo_mupuf-0.0.5.dist-info/METADATA,sha256=B1tBTj_JnwQ3wywtxfFBeOmJw4ymGyIcUwELnMfL__0,1026
+gfxinfo_mupuf-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+gfxinfo_mupuf-0.0.5.dist-info/top_level.txt,sha256=V-KRcsaH2LeuhyIaSwlmvbOLWXRnY6mx0Q2H9CSWV7U,8
+gfxinfo_mupuf-0.0.5.dist-info/RECORD,,
