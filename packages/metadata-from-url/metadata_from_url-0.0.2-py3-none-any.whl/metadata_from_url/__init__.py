@@ -1,0 +1,1 @@
+from metadata_from_url.extractor import metadata
