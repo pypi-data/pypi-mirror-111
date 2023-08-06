@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: blobject
+Version: 0.0.1a1
+Summary: Deployment test.
+Home-page: https://github.com/thesketh/upcoming-project
+Author: Travis Hesketh (Aire Logic Ltd.)
+Author-email: travis.hesketh@airelogic.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Typing :: Typed
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Deployment test.
+
+
