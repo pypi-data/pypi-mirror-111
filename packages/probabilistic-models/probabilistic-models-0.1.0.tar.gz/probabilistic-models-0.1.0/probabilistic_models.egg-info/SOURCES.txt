@@ -1,0 +1,16 @@
+LICENCE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+probabilistic-models/__init__.py
+probabilistic-models/core.py
+probabilistic_models.egg-info/PKG-INFO
+probabilistic_models.egg-info/SOURCES.txt
+probabilistic_models.egg-info/dependency_links.txt
+probabilistic_models.egg-info/requires.txt
+probabilistic_models.egg-info/top_level.txt
+tests/__init__.py
+tests/test_example.py
+tests/util.py
