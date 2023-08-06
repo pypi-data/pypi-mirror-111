@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: example_python_package_billingsley
+Version: 0.0.3
+Summary: Example python package
+Home-page: https://github.com/billingsley-john/example_python_package
+Author: billingsley-john-testing
+Author-email: jhnbllngsly@gmail.com
+License: UNKNOWN
+Description: # example_python_package
+        Example repository showing how to make a python package, implement testing and deploy on pypi
+        
+Platform: UNKNOWN
