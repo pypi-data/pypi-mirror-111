@@ -1,0 +1,10 @@
+pyquack/__init__.py,sha256=Rxreb76aMmta227__xn29ja4TDVE0srD66JBdAoW994,1268
+pyquack/_async/__init__.py,sha256=IHCC6WFrajS4V09GpsURVj2UH55LRQ1FBVuOU-Mpq1U,1159
+pyquack/_async/client.py,sha256=czzIW8scnarUlmzzbTIUgWTuOhEeyLSwDOwfwxWY3Rg,3138
+pyquack/response.py,sha256=8nEnz45zE1Q3LWjwDpKb7YehZGmrFFqZ4YRNG2zSr60,4162
+pyquack/sync/__init__.py,sha256=dQhGR1XzePsDv4GM6TKi3BQ-p3q586y4ABQoAvRxPbg,1149
+pyquack/sync/client.py,sha256=Kn0WuW2rlrwC8xt_MRBWRpAN5VmCcWf0ntXblmQzJ1Y,2721
+pyquack-0.1.0.dist-info/LICENSE,sha256=aY0aZxpunWIhq7CBYKBI4J5SCg8RUA1Rx_IzlvJKWW0,1078
+pyquack-0.1.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+pyquack-0.1.0.dist-info/METADATA,sha256=JWbWW3ueu0tbSZRfafGejgKju9UAjo5MuWXZOBMnZDc,689
+pyquack-0.1.0.dist-info/RECORD,,
