@@ -1,0 +1,20 @@
+[
+  {
+    "tyyppi": "muutos",
+    "tunnus": "111fe4cd0cb6a1b51f1e442d626231873b9c5dbd",
+    "versio": "0.1.1",
+    "kuvaus": "Lis\u00e4tty `oikeus_vaaditaan`-luokkametodi"
+  },
+  {
+    "tyyppi": "julkaisu",
+    "tunnus": "408dab791ca2df3b72d76f558040f70fed781329",
+    "versio": "0.1",
+    "kuvaus": "Versio 0.1"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "ba42d7c04bc25f5571b9bec2f6acf5e8174e369f",
+    "versio": "0.1",
+    "kuvaus": "Alustava toteutus"
+  }
+]
