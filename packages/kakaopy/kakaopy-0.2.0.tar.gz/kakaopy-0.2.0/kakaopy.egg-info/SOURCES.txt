@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+kakaopy/__init__.py
+kakaopy/kakaopy.py
+kakaopy.egg-info/PKG-INFO
+kakaopy.egg-info/SOURCES.txt
+kakaopy.egg-info/dependency_links.txt
+kakaopy.egg-info/not-zip-safe
+kakaopy.egg-info/top_level.txt
