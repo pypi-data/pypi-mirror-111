@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/Allelica_pkg_Nico.4D.egg-info/PKG-INFO
+src/Allelica_pkg_Nico.4D.egg-info/SOURCES.txt
+src/Allelica_pkg_Nico.4D.egg-info/dependency_links.txt
+src/Allelica_pkg_Nico.4D.egg-info/requires.txt
+src/Allelica_pkg_Nico.4D.egg-info/top_level.txt
+src/allelica_lib/__init__.py
+src/allelica_lib/parse.py
