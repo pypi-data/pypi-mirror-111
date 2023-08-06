@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: argschema
+Version: 3.0.1
+Summary: "a wrapper for setting up modules that can have parameters specified by command line arguments, json_files, or dictionary objects. Providing a common wrapper for data processing modules."
+Home-page: https://github.com/AllenInstitute/argschema
+Author-email: forrestc@alleninstitute.org
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: testing
+Provides-Extra: windows
