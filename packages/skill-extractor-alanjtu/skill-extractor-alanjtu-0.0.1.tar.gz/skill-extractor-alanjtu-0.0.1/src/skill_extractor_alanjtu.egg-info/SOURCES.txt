@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/skill_extractor/__init__.py
+src/skill_extractor/emsi_skills_full.csv
+src/skill_extractor/match.py
+src/skill_extractor_alanjtu.egg-info/PKG-INFO
+src/skill_extractor_alanjtu.egg-info/SOURCES.txt
+src/skill_extractor_alanjtu.egg-info/dependency_links.txt
+src/skill_extractor_alanjtu.egg-info/top_level.txt
