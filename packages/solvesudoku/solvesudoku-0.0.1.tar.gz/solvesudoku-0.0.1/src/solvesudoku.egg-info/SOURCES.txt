@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/solvesudoku/__init__.py
+src/solvesudoku.egg-info/PKG-INFO
+src/solvesudoku.egg-info/SOURCES.txt
+src/solvesudoku.egg-info/dependency_links.txt
+src/solvesudoku.egg-info/top_level.txt
