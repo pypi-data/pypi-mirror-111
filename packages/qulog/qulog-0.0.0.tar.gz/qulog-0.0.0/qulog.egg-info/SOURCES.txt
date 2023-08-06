@@ -1,0 +1,12 @@
+AUTHORS
+ChangeLog
+setup.cfg
+setup.py
+qulog/__init__.py
+qulog.egg-info/PKG-INFO
+qulog.egg-info/SOURCES.txt
+qulog.egg-info/dependency_links.txt
+qulog.egg-info/not-zip-safe
+qulog.egg-info/pbr.json
+qulog.egg-info/requires.txt
+qulog.egg-info/top_level.txt
