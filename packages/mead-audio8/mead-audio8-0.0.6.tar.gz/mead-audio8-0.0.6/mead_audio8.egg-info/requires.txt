@@ -1,0 +1,17 @@
+numpy
+editdistance
+mead-baseline
+six
+soundfile
+
+[ctcdecode]
+ctcdecode
+
+[scipy]
+scipy
+
+[test]
+pytest
+mock
+contextdecorator
+pytest-forked
