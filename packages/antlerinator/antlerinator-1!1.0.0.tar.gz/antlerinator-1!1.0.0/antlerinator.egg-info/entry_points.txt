@@ -1,0 +1,3 @@
+[console_scripts]
+antlerinator-download = antlerinator.download:execute
+
