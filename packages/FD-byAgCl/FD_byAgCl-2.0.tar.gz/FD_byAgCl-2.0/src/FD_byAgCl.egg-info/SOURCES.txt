@@ -1,0 +1,13 @@
+setup.py
+src/FD_byAgCl.egg-info/DBConnection.py
+src/FD_byAgCl.egg-info/Downloader.py
+src/FD_byAgCl.egg-info/PKG-INFO
+src/FD_byAgCl.egg-info/Request_Receiver.py
+src/FD_byAgCl.egg-info/SOURCES.txt
+src/FD_byAgCl.egg-info/__init__.py
+src/FD_byAgCl.egg-info/dependency_links.txt
+src/FD_byAgCl.egg-info/main.py
+src/FD_byAgCl.egg-info/pyvenv.cfg
+src/FD_byAgCl.egg-info/setup.py
+src/FD_byAgCl.egg-info/top_level.txt
+src/FD_byAgCl.egg-info/url_src.txt
