@@ -1,0 +1,4 @@
+[console_scripts]
+cmpp = createmypypackage:main
+createmypypackage = createmypypackage:main
+
