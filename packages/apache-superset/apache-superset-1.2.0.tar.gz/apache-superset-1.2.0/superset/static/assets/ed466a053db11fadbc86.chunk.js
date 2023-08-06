@@ -1,0 +1,6 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[77],{4525:function(t,e,n){"use strict";n.d(e,"b",(function(){return u})),n.d(e,"a",(function(){return c}));var a=n(47),l=n(17);const u=a.j.div`
+  height: ${({height:t})=>t};
+  width: ${({width:t})=>t};
+`,c=Object(a.j)(l.s)`
+  width: 100%;
+`},4884:function(t,e,n){"use strict";n.r(e),n.d(e,"default",(function(){return O}));n(40);var a=n(11),l=n.n(a),u=n(33),c=n.n(u),o=n(78),i=n.n(o),r=n(431),s=n(207),h=n(14),f=n(0),d=n(17),b=n(4525),j=n(1);const{Option:w}=d.s;function O(t){var e;const{data:n,formData:a,height:u,width:o,setDataMask:d,filterState:O}=t,{defaultValue:g,inputRef:p}=a,[v,m]=Object(f.useState)(null!=g?g:[]),k=t=>{const e=Object(r.a)(t);m(e);const n={};e.length&&(n.granularity_sqla=e[0]),d({extraFormData:n,filterState:{value:e.length?e:null}})};Object(f.useEffect)(()=>{var t;k(null!=(t=O.value)?t:null)},[i()(O.value)]),Object(f.useEffect)(()=>{k(null!=g?g:null)},[i()(g)]);const y=c()(e=n||[]).call(e,t=>t.dtype===s.a.TEMPORAL),D=0===y.length?Object(h.e)("No time columns"):Object(h.f)("%s option","%s options",y.length,y.length);return Object(j.h)(b.b,{height:u,width:o},Object(j.h)(b.a,{allowClear:!0,value:v,placeholder:D,onChange:k,ref:p},l()(y).call(y,t=>{const{column_name:e,verbose_name:n}=t;return Object(j.h)(w,{key:e,value:e},null!=n?n:e)})))}}}]);
