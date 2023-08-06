@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+csm4cobra.egg-info/PKG-INFO
+csm4cobra.egg-info/SOURCES.txt
+csm4cobra.egg-info/dependency_links.txt
+csm4cobra.egg-info/entry_points.txt
+csm4cobra.egg-info/requires.txt
+csm4cobra.egg-info/top_level.txt
