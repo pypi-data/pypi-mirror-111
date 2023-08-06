@@ -1,0 +1,12 @@
+inferrd/__init__.py,sha256=8xXs76AsWEjPOMCGTta4SdWa5CNCStdRVc-M5-aCRdg,6570
+inferrd/__main__.py,sha256=In1HjRWqV8NxXl0aOY7fXWdj4Sw8WFY71EXmngej3gA,1104
+inferrd/commandline.py,sha256=In1HjRWqV8NxXl0aOY7fXWdj4Sw8WFY71EXmngej3gA,1104
+inferrd/deploy.py,sha256=qaMvdZ8-sSrTxni4tM1c1AIBwh9MKLGW9TH6kvdzbzA,1207
+inferrd/serve.py,sha256=pdfdTFwSganPKYWvuvYiv4Q80_Nfta5I21aKm5jnV50,1218
+inferrd/utils.py,sha256=voYvhJcSVO0402v-RQUgmLb-yic53b4wOofFvRZ_IKk,2428
+inferrd-0.1.33.dist-info/LICENCE.txt,sha256=0aFZS9MJJsA1MntHDxad0IswkstTVHypznnKOBN2lLE,1046
+inferrd-0.1.33.dist-info/METADATA,sha256=ZlfP2DiwEDE6t2y9abzlS1k51zpwX7Nk2KL9vZRVd-I,1398
+inferrd-0.1.33.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+inferrd-0.1.33.dist-info/entry_points.txt,sha256=al8Km3LipzJ2-7UbBeeHTqLI3R04TigXfeA9ssQawxw,54
+inferrd-0.1.33.dist-info/top_level.txt,sha256=PgMPyjLO-RFsIO7dzjDIfFU6jiEHu7fwyeloFJi8XW4,8
+inferrd-0.1.33.dist-info/RECORD,,
