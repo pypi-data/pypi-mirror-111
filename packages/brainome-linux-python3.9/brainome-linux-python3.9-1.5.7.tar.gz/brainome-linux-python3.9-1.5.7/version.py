@@ -1,0 +1,4 @@
+BTC_FULL_VERSION = "v1.005-7-prod"
+BTC_SHORT_VERSION = "latest"
+BTC_STAGE = "prod"
+BTC_PEP = "1.005.7"
