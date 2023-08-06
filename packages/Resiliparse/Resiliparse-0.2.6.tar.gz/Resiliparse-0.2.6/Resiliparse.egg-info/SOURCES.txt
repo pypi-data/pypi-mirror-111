@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+Resiliparse.egg-info/PKG-INFO
+Resiliparse.egg-info/SOURCES.txt
+Resiliparse.egg-info/dependency_links.txt
+Resiliparse.egg-info/top_level.txt
+fastwarc/stream_io.pxd
+fastwarc/stream_io.pyx
+fastwarc/tools.pyx
+fastwarc/warc.pxd
+fastwarc/warc.pyx
+resiliparse/__init__.py
+resiliparse/process_guard.cpp
