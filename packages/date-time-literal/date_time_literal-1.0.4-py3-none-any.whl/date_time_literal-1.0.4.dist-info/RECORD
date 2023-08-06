@@ -1,0 +1,11 @@
+date_time_literal/__init__.py,sha256=rktBsr4wKlfwr-b_TKM1cmyv1ayFy8IJGAYLGfVaCog,49
+date_time_literal/classes.py,sha256=DIvFLjfHZO1cslLw985eaAUq8rhK6hsse3vaQ0dJ3s0,6246
+date_time_literal/difference.py,sha256=A8Jd15qH9d5UCbKaWk9X6vDvQcoFgwWunMfWfvmPpHk,2506
+date_time_literal/functions.py,sha256=A8Jd15qH9d5UCbKaWk9X6vDvQcoFgwWunMfWfvmPpHk,2506
+date_time_literal/literal.py,sha256=DIvFLjfHZO1cslLw985eaAUq8rhK6hsse3vaQ0dJ3s0,6246
+date_time_literal/main.py,sha256=JJZXm3yhcr4zFwEpykNKKw4KKB-xiPRtNcNb4OxBilQ,484
+date_time_literal-1.0.4.dist-info/LICENSE,sha256=CMdL1xwHE0sZ1dDVm9yT_4rURVt7lWHbwIgrY5L9TG8,1062
+date_time_literal-1.0.4.dist-info/METADATA,sha256=6vR6yuYaPHgbrZJeec2q3q-oxMEyU9lOx7ErbsivysE,2850
+date_time_literal-1.0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+date_time_literal-1.0.4.dist-info/top_level.txt,sha256=GOTKJRyJtCRZKSTyJM2Kdk6hEnCznjCjccSpmA-ehLM,18
+date_time_literal-1.0.4.dist-info/RECORD,,
