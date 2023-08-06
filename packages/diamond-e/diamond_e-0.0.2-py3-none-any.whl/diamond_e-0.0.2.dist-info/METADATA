@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: diamond-e
+Version: 0.0.2
+Summary: A small package to test diamond dependencies
+Home-page: https://github.com/thibaultduponchelle/diamond-e
+Author: Thibault Duponchelle
+Author-email: thibault.duponchelle@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/thibaultduponchelle/diamond-e/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: diamond-f (>=2.0)
+
+# Diamond E
+
+A module to test diamond dependencies
+
+## Install
+```bash
+$ python3 -m pip install diamond-e
+```
+
+## Usage 
+```python3
+from diamond import e
+
+e.e()
+```
+
+OR
+
+```python3
+from diamond.e import e
+
+e()
+```
+
+
