@@ -1,0 +1,9 @@
+aioshumway/__init__.py,sha256=Z9LH5pkTXRiiYs1aJ9hGzHI7FbT1RBVuhSUL7hly0j4,4911
+tests/__init__.py,sha256=-f1fKIvZPKTrcqAvboWOhyPB8oL47HcD9RhyqfsGeUI,596
+tests/unit/__init__.py,sha256=-f1fKIvZPKTrcqAvboWOhyPB8oL47HcD9RhyqfsGeUI,596
+tests/unit/test_aioshumway.py,sha256=ZrLD5DkSG5qEa_Z03lyBXLPXudwwmlpwJyoZ5t5tRMY,6667
+aioshumway-1.0.1.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+aioshumway-1.0.1.dist-info/METADATA,sha256=R-NdJwnbC5CihGjJGaYZvdN1NtNORq91RFU_DClGMHU,965
+aioshumway-1.0.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+aioshumway-1.0.1.dist-info/top_level.txt,sha256=8khr94puy3QN0Bkr7A3TwmiGYAOsfTpUOlQPJNxrnfU,17
+aioshumway-1.0.1.dist-info/RECORD,,
