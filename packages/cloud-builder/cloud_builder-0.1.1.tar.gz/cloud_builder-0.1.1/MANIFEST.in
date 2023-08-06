@@ -1,0 +1,20 @@
+# Manifest describing source package contents
+
+graft cloud_builder/message_broker
+graft systemd
+graft sysconfig
+graft package
+
+include Makefile
+include README.rst
+include LICENSE
+include tox.ini
+include .bumpversion.cfg
+include .virtualenv.requirements.txt
+include .virtualenv.dev-requirements.txt
+
+#include .coverage*
+
+#recursive-include doc/build/man *
+
+global-exclude *.py[cod] __pycache__
