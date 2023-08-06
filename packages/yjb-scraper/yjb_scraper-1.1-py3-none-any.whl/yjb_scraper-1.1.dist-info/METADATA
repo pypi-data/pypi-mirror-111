@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: yjb-scraper
+Version: 1.1
+Summary: YJB Dev
+Home-page: https://github.com/yjb-alevo/python-fun
+Author: yJb
+Author-email: officialkrythex@gmail.com
+License: UNKNOWN
+Keywords: yjb
+Platform: UNKNOWN
+Requires-Dist: tqdm
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+
+UNKNOWN
+
+
