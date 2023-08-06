@@ -1,0 +1,32 @@
+Metadata-Version: 1.1
+Name: markupFor3DSlicer
+Version: 0.1
+Summary: Librairie de création de Markup pour 3D SLicer.
+Home-page: UNKNOWN
+Author: Guillaume ROCHE
+Author-email: g.roche1712@protonmail.com
+License: MIT
+Description: Librairie que renvoit un simple dictionnaire comportant la mise en page
+        qui lui permet d'Ãªtre lu par 3D Slicer en temps que fichier markup.
+        
+        Fonctions :
+        
+        line(x,y,z,vectX,vectY,vectZ,norme,name)
+            --> x,y,z : position de dÃ©part
+            --> vectX,vectY,vectZ : position d'arriver
+            --> norme : taille de la ligne
+            --> name : nom de la ligne
+        
+        Change Log
+        ==========
+        
+        0.1 (05/07/2021)
+        ----------------
+        - First Release : Ajout de la fonction line(x,y,z,vectX,vectY,vectZ,norme,name) permÃ¨tant de crÃ©er un ligne Markup.
+Keywords: markup
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
