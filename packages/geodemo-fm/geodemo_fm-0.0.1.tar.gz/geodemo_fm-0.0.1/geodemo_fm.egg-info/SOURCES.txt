@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+geodemo_fm/__init__.py
+geodemo_fm/geodemo_fm.py
+geodemo_fm.egg-info/PKG-INFO
+geodemo_fm.egg-info/SOURCES.txt
+geodemo_fm.egg-info/dependency_links.txt
+geodemo_fm.egg-info/not-zip-safe
+geodemo_fm.egg-info/top_level.txt
