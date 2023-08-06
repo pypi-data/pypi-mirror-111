@@ -1,0 +1,16 @@
+scicomap/__init__.py,sha256=rHo24-wZEz5Z7EyVXPKpBXbxpZ_nQlrpAqRP008KrNs,355
+scicomap/cblind.py,sha256=YIBJENAW5MP9waRO1N0NgSuanvzH19m1lhnQUKXhFg8,6750
+scicomap/cmath.py,sha256=y7xZs-IW0mdAaqpJf8jHVvbX7iQM8rvRyuCFRnvDgMI,17162
+scicomap/datasets.py,sha256=rz3liSiKZFah2lXM8V62twAURdDKFHJi1HllO8D18uk,1686
+scicomap/scicomap.py,sha256=7Enrae99P_Tsn4ZJI9xRVEJ_GX5a9wx3VbnvDka6HAU,50146
+scicomap/utils.py,sha256=LqYJIaZZGw7vxAle5fWjkDq55hjyC9v2tXrePQsWrU8,10006
+scicomap/data/grmhd.png,sha256=Ml6qwrG9I_M1qjrPXcFl2rBcpWpsLbZe8cnCyOCMZQw,83066
+scicomap/data/jacksboro_fault_dem.npz,sha256=1JP1CjPoKkQgSUxU0fyhU50Xe9wnqxkLxf5ukvYvtjc,174061
+scicomap/data/s1045.ima.gz,sha256=MrQk1k9it-ccsk0p_VOTitVmTWCAVaZ6srKvQ2n4uJ4,33229
+scicomap/data/tng.jpg,sha256=-L-kUIetTjtVHKfpam-z6wHpews7IFQPbznvfh3GTnA,803731
+scicomap/data/vortex.jpg,sha256=7mepALq_fh5Y2pPtCAkGZCoKgQiL29xg3TMW50Ge-cY,1019152
+scicomap-0.4.1.dist-info/LICENSE.md,sha256=n48nrmGgLGsX_1bcdY2nz5-rkXtVH3p8U67AXUw0kWQ,1091
+scicomap-0.4.1.dist-info/METADATA,sha256=SSwdrpSVxRzn2HJ0X4vzd0ATDdWNmLyMhvu9iXhQaBQ,16822
+scicomap-0.4.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+scicomap-0.4.1.dist-info/top_level.txt,sha256=C0SsHcHtRMC75km9kwhiYXxpzEH3HGsQHBJo3-F2FhY,9
+scicomap-0.4.1.dist-info/RECORD,,
