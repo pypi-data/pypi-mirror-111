@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+sidebar/jet_sidebar.egg-info/PKG-INFO
+sidebar/jet_sidebar.egg-info/SOURCES.txt
+sidebar/jet_sidebar.egg-info/dependency_links.txt
+sidebar/jet_sidebar.egg-info/not-zip-safe
+sidebar/jet_sidebar.egg-info/top_level.txt
