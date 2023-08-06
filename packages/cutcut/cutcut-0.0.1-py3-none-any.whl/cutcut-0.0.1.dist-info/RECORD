@@ -1,0 +1,11 @@
+cutcut/__init__.py,sha256=_ApJ9QwxYlyUSK3FnXMVIMXsLbMI6Tcom4Ig5fmgXB8,6482
+cutcut/data/tag.txt,sha256=ivir1OaziTkvaPuRveR2gnuEaemGg7kYyrGDxuJ-G70,31
+cutcut/data/vocab.txt,sha256=Nm_isTGMd0_Si96ljbz71taurjE_3NkGPRcM3GAv1Ro,109534
+cutcut/savedModel/saved_model.pb,sha256=K-QQaPNWeMbhnqYAHQ7C1WR6l0TgmW_IOrplVpoFB9I,5697267
+cutcut/savedModel/variables/variables.data-00000-of-00001,sha256=6P8w3y91YGJDmGPGU27rSm6VFa0Nk76iMDNTmoGWmbU,16362091
+cutcut/savedModel/variables/variables.index,sha256=TF4jtHnXYO2dqqIXnSjnpgPYjNGs2dLAatE8TzHzRMk,1608
+cutcut-0.0.1.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+cutcut-0.0.1.dist-info/METADATA,sha256=99Z55COMb4oqfhy9stv42Sx6LwINcpkjZJS36Nepzgg,1334
+cutcut-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cutcut-0.0.1.dist-info/top_level.txt,sha256=dc0CLvLz3e-O9Ur8UH4MMxMPC5oh8x68C_SRPwyk33k,7
+cutcut-0.0.1.dist-info/RECORD,,
