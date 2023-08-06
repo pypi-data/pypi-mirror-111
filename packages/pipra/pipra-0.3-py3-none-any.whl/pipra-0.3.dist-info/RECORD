@@ -1,0 +1,10 @@
+pipra/__init__.py,sha256=fHyVNA7NIQjZQ1yj7MCDumXWc3dwPKQs8s0tkTC8tys,25
+pipra/floodfill.py,sha256=0ZXhvQfZQpMdW8hyNxzn1R70FmyFie0BSjboNAEhk8c,2770
+pipra/grabcut.py,sha256=JLZ1QOyPDb4dK0MPcviP5ZZR_6Z2gfLdx-kNRqriRAQ,1233
+pipra/pipra.py,sha256=gfrZ7M0tl5y4r77bHqvZsZe4-CaT5XILNVuQPj_4QxM,35417
+pipra-0.3.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+pipra-0.3.dist-info/METADATA,sha256=gDhzqdccLUtow84Agsjv4iFqP-F5Vw36N09QK6cfjKQ,4268
+pipra-0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pipra-0.3.dist-info/entry_points.txt,sha256=oXrhegek-2JB_VwJ-JOYW9k4L5HdzvYWakLpOAFjgdw,44
+pipra-0.3.dist-info/top_level.txt,sha256=eHtJMZjpRfW8a9xquWSYXN5uzDQSIOmSwRmropdlrPQ,6
+pipra-0.3.dist-info/RECORD,,
