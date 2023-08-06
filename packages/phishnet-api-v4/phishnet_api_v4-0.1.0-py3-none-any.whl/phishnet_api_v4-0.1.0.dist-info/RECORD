@@ -1,0 +1,10 @@
+phishnet_api_v4/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+phishnet_api_v4/api_client.py,sha256=dfPl_89OaadQtm3ONdn1RrPJ8zFevDTonn52I4JK4-Y,21694
+phishnet_api_v4/decorators.py,sha256=py2ZP1_OR5bQHOOmmVFqBCy2cWmsoKQJSN4tQAL2Lqw,1060
+phishnet_api_v4/exceptions.py,sha256=za_GsSAiUbgaWwSbN8_r4oCKioQauPUZSAGCwh08P6U,508
+phishnet_api_v4/settings.py,sha256=b2xBnNSFEAZTXOcp-8fz2o_DJUY2_JrVzmhVn-tsSIQ,651
+phishnet_api_v4/validators.py,sha256=C30jSgLA8PMFnGiKKVx99IcQPmW3Wfdm_ctUNh_OjPA,3366
+phishnet_api_v4-0.1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+phishnet_api_v4-0.1.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+phishnet_api_v4-0.1.0.dist-info/METADATA,sha256=h3kH22YRkCLvnB6Y8DG_kIDJxLkiqBxLkA5TiujIoG8,478
+phishnet_api_v4-0.1.0.dist-info/RECORD,,
