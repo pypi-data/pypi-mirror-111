@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: upn2sepa
+Version: 1.0.0
+Summary: UPN QR to SEPA QR converter.
+Home-page: UNKNOWN
+Author: Jan Zmazek
+Author-email: UNKNOWN
+License: MIT license
+Platform: UNKNOWN
+Requires-Dist: Pillow
+Requires-Dist: pyzbar
+Requires-Dist: segno
+
+UNKNOWN
+
+
