@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: pyprof
+Version: 0.0.3
+Summary: This package focus on build time profiler for python functions and snippets.
+Home-page: https://github.com/lizeyan/pyprof
+Author: Zeyan Li
+Author-email: li_zeyan@icloud.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/lizeyan/pyprof/issues
+Project-URL: Source Code, https://github.com/lizeyan/pyprof
+Project-URL: Documentation, https://pyprof.lizeyan.me
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (~=1.19.5)
+Requires-Dist: pyprof (~=0.0.0)
+Requires-Dist: setuptools (~=49.2.1)
+
+# PyProf
+![Build Status](https://github.com/lizeyan/pyprof/actions/workflows/pythonpackage.yml/badge.svg)
+![Coverage](https://coveralls.io/repos/github/lizeyan/pyprof/badge.svg?branch=dev&t=VBgxyx)
+
+
