@@ -1,0 +1,8 @@
+gianpdf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gianpdf/pdf2image.py,sha256=ni5dtWRUDWJQQL0Ur26V50Ydm-anncQ5muYftYPthlI,38
+gianpdf/pdf2text.py,sha256=xmfxadNpS_ggZxbP-K6_5ONlw_Z9_jntoit2ACBW0pA,36
+gianpdf-1.0.dist-info/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+gianpdf-1.0.dist-info/METADATA,sha256=sH9vHUuGaD0-Kv2wMwYXf3D4koOQGDkqRySBScATBMQ,184
+gianpdf-1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+gianpdf-1.0.dist-info/top_level.txt,sha256=_jCvKjBJRQ-g3OP6u1hTg9ANIAjhPtXxqAPb7dW4xUU,8
+gianpdf-1.0.dist-info/RECORD,,
