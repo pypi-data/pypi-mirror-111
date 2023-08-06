@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+awsipcheck/__init__.py
+awsipcheck/__main__.py
+awsipcheck/cli.py
+awsipcheck/core.py
+awsipcheck.egg-info/PKG-INFO
+awsipcheck.egg-info/SOURCES.txt
+awsipcheck.egg-info/dependency_links.txt
+awsipcheck.egg-info/entry_points.txt
+awsipcheck.egg-info/requires.txt
+awsipcheck.egg-info/top_level.txt

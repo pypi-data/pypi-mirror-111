@@ -1,0 +1,3 @@
+[console_scripts]
+awsipcheck = awsipcheck:__main__.main
+
