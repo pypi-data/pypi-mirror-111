@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: capsule-vacuum-vessel
+Version: 0.0.2
+Summary: Package includes a function which returns from 3 given parameters, the coordinates for a capsule vacuum vessel.
+Home-page: https://github.com/Blitan/capsule_vacuum_vessel
+Author: Keir
+Author-email: keirhearn@gmail.com
+License: MIT
+Platform: UNKNOWN
+
+UNKNOWN
+
+
