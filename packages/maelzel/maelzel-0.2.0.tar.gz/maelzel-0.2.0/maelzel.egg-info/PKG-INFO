@@ -1,0 +1,38 @@
+Metadata-Version: 1.2
+Name: maelzel
+Version: 0.2.0
+Summary: Utilities for sound, music notation, acoustics, etc
+Home-page: https://github.com/gesellkammer/maelzel
+Author: Eduardo Moguillansky
+Author-email: eduardo.moguillansky@gmail.com
+License: BSD
+Description: maelzel
+        =======
+        
+        A set of modules for computer music
+        
+        - music: music representation, algorithmic music, etc
+        - scoring: music representation, quantization
+        - midi: read/write midi files, general midi
+        - snd: read/write soundfiles, process samples, apply filters, fades, etc.
+        - ext: wrappers around external software, like sonic-visualizer, audacity, reaper
+        - acoustics: formulas for helmholtz resonators, speed of sound, etc.
+        
+        External Dependencies
+        ---------------------
+        
+        - csound (>= 6.15)
+        - csound-plugins (https://github.com/csound-plugins/csound-plugins)
+        
+        Installation
+        ------------
+        
+        ::
+        
+            pip install maelzel
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.8
