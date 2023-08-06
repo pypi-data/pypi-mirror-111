@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: genbu
+Version: 0.2.1
+Summary: Create CLIs using parser combinators and type hints
+Home-page: https://github.com/lggruspe/genbu
+Author: Levi Gruspe
+Author-email: mail.levig@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+genbu
+=====
+
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/lggruspe/genbu/Python%20package)
+[![PyPI](https://img.shields.io/pypi/v/genbu)](https://pypi.org/project/genbu/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/genbu)](https://pypi.org/project/genbu/)
+[![GitHub](https://img.shields.io/github/license/lggruspe/genbu)](./LICENSE)
+
+Genbu is a library for creating composable command-line interfaces.
+
+Features
+--------
+
+- Infer shell arguments parser from type hints.
+- Override inferred parsers using shell parser combinators.
+- Compose command-line interfaces declaratively (subcommands).
+- Dispatch automatically to the appropriate command callback.
+- Generate usage messages by using `genbu.usage`.
+
+Install
+-------
+
+```bash
+pip install genbu
+```
+
+Usage
+-----
+
+```python
+# hello.py
+from genbu import Genbu
+
+print(Genbu(lambda name: f"Hello, {name}!").run())
+# Usage example: python hello.py --name "world"
+```
+
+See [examples](./examples/).
+
+License
+-------
+
+[MIT](./LICENSE)
+
+
