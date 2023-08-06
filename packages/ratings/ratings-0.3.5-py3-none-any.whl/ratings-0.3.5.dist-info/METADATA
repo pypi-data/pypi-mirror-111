@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: ratings
+Version: 0.3.5
+Summary: contests
+Home-page: https://github.com/microprediction/ratings
+Author: microprediction
+Author-email: pcotton@intechinvestments.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: wheel
+Requires-Dist: pathlib
+Requires-Dist: numpy (>=1.16.5)
+Requires-Dist: winning
+Requires-Dist: pandas
+Requires-Dist: stochastic
+
+# ratings
+
+
+
