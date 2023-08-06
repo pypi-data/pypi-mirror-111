@@ -1,0 +1,10 @@
+bahamut_ani_stat/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bahamut_ani_stat/bahamut_ani_stat.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bahamut_ani_stat/config.py,sha256=o3y2kfk6RoQ52_kzikeuA8uHVNqhBKGQ-Co02uT1_a4,20
+bahamut_ani_stat/parser/data_types.py,sha256=0neFQGBwgP1dPXn1SO59rlTevErz3ttlqQ0uyG8pj54,991
+bahamut_ani_stat/parser/parser.py,sha256=vnO4GLVy1A5TPUDtrZt8M5QUWYUlHTw0vPY5CKyzfME,8436
+bahamut_ani_stat/parser/urls.py,sha256=46Sn5WD7IwTtdBb-ZxvAkPsINSxcagqiKPB3mq9O0aU,452
+bahamut_ani_stat-0.2.0.dist-info/LICENSE,sha256=9N85GvGTSLLE1-FzXQDttnfzkSZwbis-yX5Lu-4TjjA,1065
+bahamut_ani_stat-0.2.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+bahamut_ani_stat-0.2.0.dist-info/METADATA,sha256=KjuzDh-GhYYZ2I5bnuk06yt4xwQI9Bifu6c2ejBH5KI,2179
+bahamut_ani_stat-0.2.0.dist-info/RECORD,,
