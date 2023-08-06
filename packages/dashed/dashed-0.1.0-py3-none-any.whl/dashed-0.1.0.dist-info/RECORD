@@ -1,0 +1,10 @@
+dashed/__init__.py,sha256=GVu-dX9kX5UP2hFGPnpaXWDdWFd5_f76zuol-C8T888,1037
+dashed/__main__.py,sha256=_OnP3g0lbtBEjtxCrQm3izoZQM70sJvm9Aa9YWFceWk,2146
+dashed/discord.py,sha256=kxxusscmmcCnCmhZgjkkDEkXObf3O6xg57pZD-d4T-Q,3776
+dashed/interaction.py,sha256=5kwSTIdlYOWXAX7H9SsFq_NMJEbzOOHNHv_9NXs8FlE,1337
+dashed/loader.py,sha256=89Jsj-vQq2OcU1FwWPJpD-vuKoRhVpZ-Kh7aQBllF4U,750
+dashed/module.py,sha256=F_lpPVEOT5xeSa5q9fork0LjUubqPeYyadza_GE5GSw,2003
+dashed/server.py,sha256=y5-PGWF04zL2Q6ZFRuAm72XgdGSgAClK60uxOS6rCYs,2103
+dashed-0.1.0.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+dashed-0.1.0.dist-info/METADATA,sha256=g_j6szVxCIDh3EHvUJPKkTQ3c5zvraNyIFmHdKSX_Y0,406
+dashed-0.1.0.dist-info/RECORD,,
