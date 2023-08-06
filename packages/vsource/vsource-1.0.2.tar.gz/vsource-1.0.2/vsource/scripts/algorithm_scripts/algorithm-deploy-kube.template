@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {}
+  labels:
+    app:  {}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app:  {}
+  template:
+    metadata:
+      labels:
+        app:  {}
+    spec:
+      # nodeName: k-tx-node1
+      containers:
+      - name:  {}
+        image: 120.26.143.61:10020/service/{}:latest
+        env:
+          - name: REDIS_HOST
+            value: '120.26.143.61'
+          - name: REDIS_PORT
+            value: '13121'
+          - name: KAFKA_HOST
+            value: '120.26.143.61:9092'
+          - name: STORAGE_HOST
+            value: 'http://120.26.143.61:13402'
+          - name: ALGORITHM_NAME
+            value: '{}'
+        imagePullPolicy: IfNotPresent
