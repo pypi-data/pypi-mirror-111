@@ -1,0 +1,6 @@
+numpy
+pandas
+opencv-python
+PyQt5==5.12
+pyqtgraph
+pyqtwebengine==5.12
