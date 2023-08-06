@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: finnish-media-scrapers
+Version: 1.0.2
+Summary: Scrapers for extracting articles from Finnish journalistic media websites.
+License: MIT
+Author: Human Sciences - Computing Interaction Research Group
+Author-email: eetu.makela@helsinki.fi
+Requires-Python: >=3.7.1,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: attrs (>=21.2.0,<22.0.0)
+Requires-Dist: beautifulsoup4 (>=4.9.3,<5.0.0)
+Requires-Dist: lxml (>=4.6.3,<5.0.0)
