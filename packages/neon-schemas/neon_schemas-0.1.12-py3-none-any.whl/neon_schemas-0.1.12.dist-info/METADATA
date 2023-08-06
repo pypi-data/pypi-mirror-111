@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: neon-schemas
+Version: 0.1.12
+Summary: Schemas for Neon Law
+License: Apache-2.0
+Author: neon law
+Author-email: support@neonlaw.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: avro (>=1.10.2,<2.0.0)
