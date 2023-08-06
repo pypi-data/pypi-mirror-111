@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "nork"
+version = "0.1.13"
+description = "CLI for open source PaaS and framework."
+authors = ["NORK <support@nork.sh>"]
+readme = "README.md"
+repository = "https://github.com/getnork/cli"
+homepage = "https://nork.sh"
+documentation = "https://docs.nork.sh/cli"
+classifiers = [
+    "Topic :: Internet",
+    "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
+    "Topic :: Internet :: WWW/HTTP",
+
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development",
+
+    "Typing :: Typed",
+    
+    "Development Status :: 3 - Alpha",
+    
+    "Environment :: Console",
+    "Environment :: Web Environment",
+    
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
+
+[tool.poetry.scripts]
+nork = "nork.cli:app"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+typer = {extras = ["all"], version = "^0.3.2"}
+fastapi = {extras = ["all"], version = "^0.65.2", optional = true}
+toml = "^0.10.2"
+fnc = "^0.5.2"
+python-dotenv = "^0.18.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+autopep8 = "^1.5.7"
+
+[tool.poetry.extras]
+framework = ["fastapi"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

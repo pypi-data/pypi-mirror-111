@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: nork
+Version: 0.1.13
+Summary: CLI for open source PaaS and framework.
+Home-page: https://nork.sh
+Author: NORK
+Author-email: support@nork.sh
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+Provides-Extra: framework
+Requires-Dist: fastapi[all] (>=0.65.2,<0.66.0); extra == "framework"
+Requires-Dist: fnc (>=0.5.2,<0.6.0)
+Requires-Dist: python-dotenv (>=0.18.0,<0.19.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Requires-Dist: typer[all] (>=0.3.2,<0.4.0)
+Project-URL: Documentation, https://docs.nork.sh/cli
+Project-URL: Repository, https://github.com/getnork/cli
+Description-Content-Type: text/markdown
+
+# NOR/K
+CLI for open source PaaS and framework.
+
+## Installation
+Installation is automated with the following command:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://nork.link/CLI-install)"
+```
+
