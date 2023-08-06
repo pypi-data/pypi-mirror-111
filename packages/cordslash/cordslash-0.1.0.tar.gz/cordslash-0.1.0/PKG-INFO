@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: cordslash
+Version: 0.1.0
+Summary: A small slash commands wrapper for discord
+Home-page: https://github.com/an-dyy/cordslash
+Author: an-dyy
+Author-email: yrisxl@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/an-dyy/cordslash/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Slice
+cordslash is a *WIP* discord slash commands wrapper, that is built on the [corded](https://github.com/vcokltfre/Corded) framework by vcokltfre.
+Expect more changes/features to be added in the future, currently undocumented but will be soon
+*PR's are welcome*
+
+**MAKE SURE TO INSTALL CORDED OTHERWISE USE THE POETRY ENV**
+
+# example.py
+
+```py
+import corded
+import cordslash
+
+intents = corded.Intents.default()
+intents.guild_members = True
+
+bot = cordClient(token="BOT_TOKEN", app_id=BOT_ID, intents=intents)
+
+@bot.command(name="wave", guild_ids=[12345678910], description="Say hello to a user")
+async def wave(ctx: Context, user: User) -> None:
+    await ctx.send(f":wave: <@{user}>!")
+
+bot.start()
+```
+

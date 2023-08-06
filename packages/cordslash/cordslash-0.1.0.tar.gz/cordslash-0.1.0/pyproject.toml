@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "slice"
+version = "0.1.0"
+description = "A slash commands wrapper for discord made using the corded framework"
+authors = ["an-dyy <yrisxl@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+corded = {git = "https://github.com/vcokltfre/Corded"}
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
