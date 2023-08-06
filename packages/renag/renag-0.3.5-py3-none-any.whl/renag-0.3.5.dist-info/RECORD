@@ -1,0 +1,12 @@
+renag/__init__.py,sha256=9bWHOGDwbJ46UTouq7dNI7qyGFjdUpC3F08CKtT_rLA,384
+renag/__main__.py,sha256=udHy8hzDw4aMiRc0HB0ca-mhFgqByi8FxVBdKTvVGOo,7300
+renag/complainer.py,sha256=FIvlgS2-yzORxS_2VXsFC9jlMH8i1OCytoqI9m4H28s,2682
+renag/complaint.py,sha256=eW4G8qG3EOPimbpsESfIToUxcOUg3VzC-TsraxoEnHE,9506
+renag/custom_types.py,sha256=iwlzcsmeu0n-zNcgFBxR0PsTC6UZRrBMewkBiEgl5uc,1067
+renag/tests/test_utils.py,sha256=_UbmNt94LLWTzr_j-mgglyd7a2EKF4SrF-tqAb2NXFM,474
+renag/utils.py,sha256=36HjnGba6---b_u8WkjsISwhaw241BMtENAtJnOyucw,2213
+renag-0.3.5.dist-info/entry_points.txt,sha256=tmSEP_b1xXCSFy-lvCd1GDH-eGpsS-gB4g16hLZ_VMg,45
+renag-0.3.5.dist-info/LICENSE,sha256=r-WfJ278YJ_7lF14e8WoecC7C0ebvK02xXkUeLyd5ZI,1067
+renag-0.3.5.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+renag-0.3.5.dist-info/METADATA,sha256=i83Pst9j5RztfY5u0bfLXVGcOJA5EcNzv2U5y9Gf24g,520
+renag-0.3.5.dist-info/RECORD,,
