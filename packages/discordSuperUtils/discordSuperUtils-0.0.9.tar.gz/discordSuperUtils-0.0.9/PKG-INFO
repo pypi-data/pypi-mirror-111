@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: discordSuperUtils
+Version: 0.0.9
+Summary: Discord Bot Development made easy!
+Home-page: https://github.com/koyashie07/discord-super-utils
+Author: koyashie07 and adam7100
+Author-email: UNKNOWN
+License: MIT
+Download-URL: https://github.com/koyashie07/discord-super-utils/archive/refs/tags/v0.0.9.tar.gz
+Description: UNKNOWN
+Keywords: discord,easy,discord.py,music,download,links,images,videos,audio,bot
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
