@@ -1,0 +1,12 @@
+xgboost_distribution/__init__.py,sha256=kZ7BCj5xelpd0uymner7VshpRPHKe_4ZC_GsiO2JPyc,641
+xgboost_distribution/model.py,sha256=zjTjoK5rnRSsf5TA2Qg2eUB4wzzHmngXIyuVn1JHkm0,9196
+xgboost_distribution/distributions/__init__.py,sha256=6yaiDUIv0bQBH7dEjPu5L494PqqRipdQ4416eUMQTo8,1420
+xgboost_distribution/distributions/base.py,sha256=cll5fggxXpp8U_-tvw0FMH82YtecBS6Bl-v9k1PqS8E,847
+xgboost_distribution/distributions/lognormal.py,sha256=SuzrEv-tVjohKyVVH4EgJEPGGXxgsCL_AoFKGnT5TIA,1815
+xgboost_distribution/distributions/normal.py,sha256=ZVvElBWekYj7FsL4qZWC81q-G0YZPL9Unk11VCrFFpQ,2066
+xgboost_distribution-0.1.1.dist-info/AUTHORS.rst,sha256=5c4HgATnO85JVSfVerg-ykxY5WgstT9TP8yamMU73eM,92
+xgboost_distribution-0.1.1.dist-info/LICENSE.txt,sha256=rMBvibJwKsfIUsSFLf0YykFiNVrAwTLj-UKMR_9LEHg,1085
+xgboost_distribution-0.1.1.dist-info/METADATA,sha256=UZ7c4owdefv2kRNoxWoHQ6_ped0fQ6HIz2udnVQ3Too,5759
+xgboost_distribution-0.1.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+xgboost_distribution-0.1.1.dist-info/top_level.txt,sha256=ShD4EaG5zNIKKWUeKgMX5iBylihHnfu5pMlRnplgMug,21
+xgboost_distribution-0.1.1.dist-info/RECORD,,
