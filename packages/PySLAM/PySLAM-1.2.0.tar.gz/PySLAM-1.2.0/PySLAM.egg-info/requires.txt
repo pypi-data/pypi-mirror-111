@@ -1,0 +1,5 @@
+dynmen
+pydub
+pyxdg
+pyyaml
+traitlets
