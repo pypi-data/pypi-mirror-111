@@ -1,0 +1,12 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+aksascii/__init__.py
+aksascii/ascii_file.py
+aksascii.egg-info/PKG-INFO
+aksascii.egg-info/SOURCES.txt
+aksascii.egg-info/dependency_links.txt
+aksascii.egg-info/requires.txt
+aksascii.egg-info/top_level.txt

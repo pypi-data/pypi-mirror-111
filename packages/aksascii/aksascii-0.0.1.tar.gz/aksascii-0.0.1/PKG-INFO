@@ -1,0 +1,37 @@
+Metadata-Version: 1.1
+Name: aksascii
+Version: 0.0.1
+Summary: Based of huffman compression
+Home-page: UNKNOWN
+Author: Akshay Kumar
+Author-email: akshaykrsingh490@gmail.com
+License: MIT
+Description: This is a light image processing library which can be used to convert images to ascii art.
+        The code base is implemeted and maintained by Akshay Kumar Singh.
+        
+        Procedure:
+        
+        1. pip3 install aksascii
+        2. import aksascii
+        3. from aksascii import ascii_convert
+        
+        
+        You are good to go.
+        
+        Change Log
+        ==========
+        
+        0.0.1 (30/06/2021)
+        ------------------
+        
+        - First Release
+Keywords: compression
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
