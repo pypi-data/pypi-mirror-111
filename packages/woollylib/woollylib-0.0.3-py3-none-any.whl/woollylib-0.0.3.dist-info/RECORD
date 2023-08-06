@@ -1,0 +1,11 @@
+woollylib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+woollylib/backpropagation.py,sha256=11B9bQiakzj7IOsGqAw0S6kas_GOfkA4GL-Zb0S3JqQ,11546
+woollylib/dataset.py,sha256=vs3Wy29l1QRotZCm11yTZEaAtSturm7hPGhknrOjo5w,10248
+woollylib/main.py,sha256=fFI9-K6eF0-rhdKoPjWoPFD4meKFJqEP0wSfhd2oToI,3837
+woollylib/scheduler.py,sha256=imQpkD42svzIPwt6dbukpoToYORxHzODh0a5hIzdjg4,2805
+woollylib/training.py,sha256=PGMQ4mjec5m6so41LnoJ8nVde83fqNGNdMaYZNdCpVA,5192
+woollylib-0.0.3.dist-info/LICENSE,sha256=WuSz4UXDvikuM6ubp58bLzZ-rWs8PTisvN3RNAqBqmU,1051
+woollylib-0.0.3.dist-info/METADATA,sha256=EL9UhxdGtwv_xN6GvQVwt_QwrTLCmJGA7pkHSlmOLQw,2090
+woollylib-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+woollylib-0.0.3.dist-info/top_level.txt,sha256=oN6XhXQZU498htFmb3_d2tUDV71nexEKwPa_aeHCzZ8,10
+woollylib-0.0.3.dist-info/RECORD,,
