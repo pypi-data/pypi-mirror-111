@@ -1,0 +1,5 @@
+tk
+python-vlc
+Pillow
+mediapipe
+numpy
