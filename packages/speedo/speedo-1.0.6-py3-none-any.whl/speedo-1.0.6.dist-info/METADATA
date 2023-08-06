@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: speedo
+Version: 1.0.6
+Summary: analyse and illustrate data and equation
+Home-page: https://github.com/messizqin/speedo/
+Author: Messiz YiQi Qin
+Author-email: messizqin@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+
+# [speedo](http://www.speedo-py.com)
+analyse and illustrate data and equation
+
+
+
