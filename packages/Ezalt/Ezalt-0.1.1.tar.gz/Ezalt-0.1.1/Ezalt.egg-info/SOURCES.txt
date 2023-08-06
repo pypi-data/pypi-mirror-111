@@ -1,0 +1,12 @@
+LICENSE.txt
+README.rst
+setup.cfg
+setup.py
+Ezalt/Ezalt.py
+Ezalt/__init__.py
+Ezalt/__main__.py
+Ezalt.egg-info/PKG-INFO
+Ezalt.egg-info/SOURCES.txt
+Ezalt.egg-info/dependency_links.txt
+Ezalt.egg-info/requires.txt
+Ezalt.egg-info/top_level.txt

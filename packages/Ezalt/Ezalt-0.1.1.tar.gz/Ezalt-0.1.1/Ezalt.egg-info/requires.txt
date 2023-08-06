@@ -1,0 +1,8 @@
+peppercorn
+datetime
+
+[dev]
+check-manifest
+
+[test]
+coverage
