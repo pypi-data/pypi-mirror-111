@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/pysellure/__init__.py
+src/pysellure/lib.py
+src/pysellure.egg-info/PKG-INFO
+src/pysellure.egg-info/SOURCES.txt
+src/pysellure.egg-info/dependency_links.txt
+src/pysellure.egg-info/top_level.txt
