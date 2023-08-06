@@ -1,0 +1,11 @@
+sqlify/__init__.py,sha256=T3ne3oVRnIRpSQ72vkNTSlBXg19NsibC0OS2BUos9XA,393
+sqlify/builder.py,sha256=npxxwT-jq-J-XGLvb3mbJdvRRxoKcjqEmthtgZvvNQE,9292
+sqlify/dbms.py,sha256=Ys49TUGv6nYcwSvu3G7ZPiQGYswz6fZZRBlPn8Ia8yo,794
+sqlify/pool.py,sha256=Kfy54NkfvllLOJLwH96cVaUca4_sEMfq8Ikly4-Ife8,8336
+tests/__init__.py,sha256=MqBH3xQ5W7tE5B5VmapVKw1k9hQ41lKw5Ry5FYKHPcU,53
+tests/main.py,sha256=-r4qYl58QFD8c9TPQqrwjSiKtLV5hqNHRqcSSZYFZcw,5536
+sqlify-0.3.0.dist-info/LICENSE,sha256=H3eL0FqcvyJzOZ1ZJg98bCzAKSvGlTWiS8ZuGL56RVE,1500
+sqlify-0.3.0.dist-info/METADATA,sha256=Z3T6YnYrSDDVSu9PH8Lnwddz3lsY_Cf57u-FBqhDZHQ,11641
+sqlify-0.3.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sqlify-0.3.0.dist-info/top_level.txt,sha256=hq_qBL-6QybhD1XulmJgDeV4Nu2pgmHodFbnjnRHFlI,13
+sqlify-0.3.0.dist-info/RECORD,,
