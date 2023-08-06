@@ -1,0 +1,13 @@
+kepler_apertures/EXBAMachine.py,sha256=gP5PT79XrVLxO4bykBU-gpu9VOAm6RqrMfYrADG4ULg,34047
+kepler_apertures/KeplerFFI.py,sha256=IwQYwaU33gIxdeBAxLl7OXIq4LRJHt6JzG-Nmzpu5kc,48555
+kepler_apertures/KeplerPRF.py,sha256=rAszcXqSarHUEfnraM_7OVElBsDSO5xh2zc1a1nxf8A,20742
+kepler_apertures/__init__.py,sha256=oI81FxbAcsQcQtZtw1FwYILnafugsYpwrSa-C4-fm_8,446
+kepler_apertures/data/exba_tpfs_info.csv,sha256=ZXo7orAObqQLzG94zWu3rrpsDGNdWZeQ3JuvPwgGTeI,288267
+kepler_apertures/data/ffi_prf_models_v0.1.0.csv,sha256=Kp7stesMCcP8D68p60NmiS2cZRmOP8Ak_8xsUmGV234,1941428
+kepler_apertures/data/ffi_prf_models_v0.1.0.fits,sha256=_1zzolmpGBn8fNHxJRYr8ydSyVFD4gGKgOHoVNAWB0s,1019520
+kepler_apertures/utils.py,sha256=bFv5u6SfqYsEEWKRNZESHuZ7rlPfkyYxyTzmOYY8ka8,12108
+kepler_apertures/version.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+kepler_apertures-0.1.0.dist-info/LICENSE,sha256=YIurXE5uHFo-DHYozgDPSlhTHedYReVaCkffFMkuumQ,1105
+kepler_apertures-0.1.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+kepler_apertures-0.1.0.dist-info/METADATA,sha256=DJ-nwLoXB9CJABfgyfSfsKFtnG51YGI-oJfgnbmfuQY,2583
+kepler_apertures-0.1.0.dist-info/RECORD,,
