@@ -1,0 +1,9 @@
+simplebot_connect4/__init__.py,sha256=0CVh5Cu7p2k5Ne08Mn5p8-ppIO27wqmR33scHMGTNxs,8208
+simplebot_connect4/connect4.py,sha256=a4HPDI5RiVoKaTGx0KYKMffeaihf-_aGBam9UTOouXE,3171
+simplebot_connect4/orm.py,sha256=sUrxxtw9eTgPF2DS9NAof-ozxznqwYhzSccCfKOf5cA,1475
+simplebot_connect4-1.0.0.dist-info/LICENSE,sha256=-rPda9qyJvHAhjCx3ZF-Efy07F4eAg4sFvg6ChOGPoU,16726
+simplebot_connect4-1.0.0.dist-info/METADATA,sha256=09_ZGU-GmNYeSW9DWAGbUY_ghzcj4hoSLlD7frCW-0Y,2013
+simplebot_connect4-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+simplebot_connect4-1.0.0.dist-info/entry_points.txt,sha256=zttx_q8lJtzmgkQEQSqwCTWPKCTkTZ_BwnKF5eSfPU0,61
+simplebot_connect4-1.0.0.dist-info/top_level.txt,sha256=P8UC40k21-_3CtNE33NV5xy5F8DWeaDBngVlWmGbNUc,19
+simplebot_connect4-1.0.0.dist-info/RECORD,,

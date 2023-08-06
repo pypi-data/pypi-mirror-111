@@ -1,0 +1,3 @@
+[simplebot.plugins]
+simplebot_connect4 = simplebot_connect4
+
