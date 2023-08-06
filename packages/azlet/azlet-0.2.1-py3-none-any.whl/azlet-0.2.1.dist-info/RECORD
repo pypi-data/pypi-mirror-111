@@ -1,0 +1,10 @@
+azlet/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+azlet/__main__.py,sha256=_pVV0MbCL1MEaMyMZbrzlmcipfOxw1yuo_4ywFMjmME,3137
+azlet/azertbot.py,sha256=kvD2bYzfkiWI4xuxN819386cH8RTMrhFPcKywbZjoBc,4614
+azlet/dns_providers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+azlet/dns_providers/azuredns.py,sha256=VKg7dR6nld2KDq2NzqfKopxNuPlmOBzxlBBJ5QjCTKY,1278
+azlet-0.2.1.dist-info/LICENSE,sha256=LJgJCotznc_etFlWeugryAAbeJo9B0VPp03NhtMwr4I,1094
+azlet-0.2.1.dist-info/METADATA,sha256=gHxizIo63ppx69lYmuZoGt09xvp6Ez1HqSU8p52li_A,2537
+azlet-0.2.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+azlet-0.2.1.dist-info/top_level.txt,sha256=u3Ch8fAU22vpINQTQFoi-PKGLqjqwkDJpYn_vJ61O8A,6
+azlet-0.2.1.dist-info/RECORD,,
