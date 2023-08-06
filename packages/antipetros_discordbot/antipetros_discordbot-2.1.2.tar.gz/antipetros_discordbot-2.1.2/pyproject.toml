@@ -1,0 +1,152 @@
+[build-system]
+build-backend = "flit_core.buildapi"
+requires = ["flit_core ==2,<4"]
+
+# region [flit]
+
+[tool.flit.metadata]
+author = "antistasi_tools"
+classifiers = ["License :: OSI Approved :: MIT License"]
+description-file = "README.md"
+home-page = "https://github.com/Giddius/Antipetros_Discord_Bot"
+license = "MIT"
+module = "antipetros_discordbot"
+requires = [
+    "Jinja2>=3.0.0",
+    "discord.py==1.7.1",
+    "Markdown==3.3.4",
+    "Pillow==8.2.0",
+    "PyGithub==1.54.1",
+    "Pygments==2.8.1",
+    "WeasyPrint==52.5",
+    "aiodav==0.1.4",
+    "aiohttp==3.7.4.post0",
+    "aiosqlite==0.17.0",
+    "antistasi_template_checker==0.1.1",
+    "arrow==1.0.3",
+    "async_property==0.2.1",
+    "asyncstdlib==3.9.1",
+    "beautifulsoup4==4.9.3",
+    "click==7.1.2",
+    "colormap==1.0.3",
+    "cryptography==3.4.7",
+    "dateparser==1.0.0",
+    "dpytest==0.0.23",
+    "emoji==1.2.0",
+    "ftfy==6.0.1",
+    "rapidfuzz==1.4.1",
+    "gidappdata==0.1.17",
+    "gidconfig==0.2.14",
+    "gidlogger==0.1.33",
+    "googletrans==4.0.0rc1",
+    "humanize==3.4.1",
+    "icecream==2.1.0",
+    "imgkit==1.2.2",
+    "inflect==5.3.0",
+    "marshmallow==3.11.1",
+    "matplotlib==3.4.1",
+    "natsort==7.1.1",
+    "psutil==5.8.0",
+    "pyfiglet==0.8.post1",
+    "pyparsing==2.4.7",
+    "python-youtube==0.8.1",
+    "python_a2s==1.3.0",
+    "python_dotenv",
+    "pytz==2021.1",
+    "rich==10.1.0",
+    "sortedcontainers==2.3.0",
+    "sqflint==0.3.2",
+    "validator_collection==1.5.0",
+    "watchgod==0.7",
+    "webdavclient3==3.14.5",
+    "discord-ext-ipc==2.0.0",
+    "discord-flags==2.1.1",
+    "discord-ext-ipc==2.0.0",
+    "easydev==0.11.0",
+]
+
+requires-python = ">=3.9"
+
+[tools.flit.metadata.requires-extra]
+uvloop = ["uvloop==0.15.2"]
+
+[tool.flit.scripts]
+antipetrosbot = "antipetros_discordbot.__main__:cli"
+
+
+[tool.flit.sdist]
+exclude = [
+    "antipetros_discordbot/init_userdata/data_pack",
+    "antipetros_discordbot/init_userdata/*.trigger",
+    "antipetros_discordbot/dev_tools_and_scripts",
+    "misc",
+    "temp",
+    "docs",
+    "tools",
+    ".pydeps",
+    ".isort.cfg",
+    "tests",
+    ".gitattributes",
+    ".gitignore",
+    ".editorconfig",
+    "antipetros_discordbot/utility/gidsql/_utils.archive",
+    "designer_files",
+    "art",
+    "dev_tools_and_scripts",
+    "pytest_coverage",
+    "antipetros_website",
+]
+
+# endregion [flit]
+# region [autopep8]
+[tool.autopep8]
+ignore = ["E402", "E501"]
+max-line-length = 250
+
+# endregion [autopep8]
+# region [isort]
+[tool.isort]
+balanced_wrapping = true
+ensure_newline_before_comments = true
+group_by_package = true
+import_heading_firstparty = "* Local Imports --------------------------------------------------------------------------------------->"
+import_heading_gid = "* Gid Imports ----------------------------------------------------------------------------------------->"
+import_heading_pyqt = "* PyQt5 Imports --------------------------------------------------------------------------------------->"
+import_heading_stdlib = "* Standard Library Imports ---------------------------------------------------------------------------->"
+import_heading_thirdparty = "* Third Party Imports --------------------------------------------------------------------------------->"
+known_gid = ["gidtools", "gidlogger", "gidqtutils", "gidviewmodels"]
+known_pyqt = ["PyQt5"]
+length_sort = true
+line_length = 200
+lines_after_imports = 1
+sections = [
+    "FUTURE",
+    "STDLIB",
+    "THIRDPARTY",
+    "PYQT",
+    "GID",
+    "FIRSTPARTY",
+    "LOCALFOLDER",
+]
+
+# endregion [isort]
+# region [pytest]
+[tool.pytest.ini_options]
+addopts = "-rP -vv --durations=0 --show-capture=all --color=auto --code-highlight=yes"
+
+# endregion [pytest]
+# region [gidvenv]
+[tool.gidvenv.base_venv_settings]
+clear = true
+symlinks = true
+system_site_packages = false
+with_pip = false
+# prompt=
+upgrade_deps = false
+
+[tool.gidvenv.settings]
+extra_install_instructions = []
+manipulate_script = true
+pyclean_before = true
+verbose = false
+# endregion [gidvenv]
