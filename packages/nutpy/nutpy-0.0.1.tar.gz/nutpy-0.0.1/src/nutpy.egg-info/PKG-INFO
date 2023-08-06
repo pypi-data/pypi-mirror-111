@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: nutpy
+Version: 0.0.1
+Summary: A package for space telescopes analysis
+Home-page: https://gitlab.com/juan.b/nutpy
+Author: Juan Bermejo
+Author-email: juan.bermejo@upm.es
+License: UNKNOWN
+Project-URL: Bug Tracker, https://gitlab.com/juan.b/nutpy/-/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# nutpy
+
+Set of tools to study how space-telescopes with spin-precession scan strategies observe the sky.
+
