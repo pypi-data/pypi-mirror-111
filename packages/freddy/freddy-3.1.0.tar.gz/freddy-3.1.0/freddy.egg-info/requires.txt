@@ -1,0 +1,6 @@
+rstr
+
+[test]
+pytest
+jsonschema
+pydantic
