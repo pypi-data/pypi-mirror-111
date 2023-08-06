@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+scimage/__init__.py
+scimage/characterization.py
+scimage/file_functions.py
+scimage/identification.py
+scimage/plot_functions.py
+scimage.egg-info/PKG-INFO
+scimage.egg-info/SOURCES.txt
+scimage.egg-info/dependency_links.txt
+scimage.egg-info/requires.txt
+scimage.egg-info/top_level.txt
