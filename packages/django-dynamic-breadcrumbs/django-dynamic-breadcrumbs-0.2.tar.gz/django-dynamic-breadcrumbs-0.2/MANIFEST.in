@@ -1,0 +1,4 @@
+include LICENSE
+include README.me
+recursive-include dynamic_breadcrumbs/templates *
+recursive-include docs *
