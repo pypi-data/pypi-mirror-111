@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: hwtBuildsystem
+Version: 0.1
+Summary: buildsystem for for HWToolkit (hwt, the fpga devel. library)
+Home-page: https://github.com/Nic30/hwtBuildsystem
+Author: Michal Orsak
+Author-email: Nic30original@gmail.com
+License: MIT
+Platform: UNKNOWN
+License-File: LICENSE
+
+UNKNOWN
+
