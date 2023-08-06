@@ -1,0 +1,11 @@
+cross_sysroot/__init__.py,sha256=zuoYlprKNTcM4MputVH5uWNslggpD_g50uchjVLk2us,124
+cross_sysroot/cross_gcc.py,sha256=Mn4ndEipwC0AW-qoEunIsvZPAnIalALLE2rPBeVDA7Q,1597
+cross_sysroot/cross_sysroot.py,sha256=Zr727DmlpudjV8UP2mMXNOooUjMDNiw32pPx3YiskjI,3920
+cross_sysroot/fixup_sysroot.py,sha256=uTJCMJhlVRf0J3tcmIh-JU6IDcGCXSlGKCXz6v0xTx4,1986
+cross_sysroot/package_database.py,sha256=UgC2CTEJ9nlQbk0pVm9Ft8DLbpseOZAeqCvMCGwayGQ,8250
+cross_sysroot-0.3.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+cross_sysroot-0.3.dist-info/METADATA,sha256=AoqJQi3OUuNXwRdH4IjIuCjvFHq2kOM3Zwk4r8Kc9WQ,4885
+cross_sysroot-0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cross_sysroot-0.3.dist-info/entry_points.txt,sha256=ksGtNCqc-GS-jRMx2B97FvdkqE_RHHZ94Nhun8MJg1s,87
+cross_sysroot-0.3.dist-info/top_level.txt,sha256=1Ght9ozXNFsk7bF2arpWyWtZgkCD0BTsJCz29BJl3mw,14
+cross_sysroot-0.3.dist-info/RECORD,,
