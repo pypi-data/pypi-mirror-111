@@ -1,0 +1,10 @@
+jebus/__init__.py,sha256=RW6Dpug8z8F_QKuZqB6ih45XkOtw7PU08DR_mAWToQc,50
+jebus/add.py,sha256=1ongTsNyVSjGzqC0GoR1wPQsaXFo8OwfrD9pIP9-pPk,44
+jebus/subtract.py,sha256=9dCaoJR24tL1OlXFmqHEptqCthvjtRpl23acKfMmkT8,49
+jebus/extras/__init__.py,sha256=XTHSCT_9-eDje28KOeDfsIs7CxiDvs6YAAYXGBrWiEE,58
+jebus/extras/divide.py,sha256=WmXtK2m6-rKoIqrToKfLj4Z5az4SEi9cI0TTQguef-w,47
+jebus/extras/multiply.py,sha256=N68aLPQm2gB8CvpfVehIEpKwQpW3UxqMMKeRHOcZ81A,49
+jebus-0.0.1.dist-info/METADATA,sha256=VdofL08yxuOdTdBa1wbPKfmKN-nCrdVuFCf1HJEnZW4,469
+jebus-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+jebus-0.0.1.dist-info/top_level.txt,sha256=58rS1BhAj7mXcJt6IGG1yp-mmhv7rWyv6p_jfjGMvIw,6
+jebus-0.0.1.dist-info/RECORD,,
