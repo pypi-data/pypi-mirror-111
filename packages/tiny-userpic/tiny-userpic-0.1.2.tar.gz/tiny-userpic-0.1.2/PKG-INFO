@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: tiny-userpic
+Version: 0.1.2
+Summary: A small Python module for userpics creation
+Home-page: https://github.com/shpaker/tiny-userpic
+Author: Aleksandr Shpak
+Author-email: shpaker@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: CairoSVG (>=2.5.2,<3.0.0)
+Requires-Dist: typer (>=0.3.2,<0.4.0)
+Project-URL: Repository, https://github.com/shpaker/tiny-userpic
+Description-Content-Type: text/markdown
+
+# Userpic Generator
+
+## Installation
+
+```bash
+pip install tiny-userpic
+```
+
+## Usage
+
+```bash
+python -m userpic --output img.png
+```
+
+or
+
+```python
+from userpic import make_userpic
+data = make_userpic(
+    cells_count=7,
+    cell_size=32,
+    offset=16,
+    data_format="svg",
+)
+with open("output.svg", "wb") as file:
+    file.write(data)
+```
+
