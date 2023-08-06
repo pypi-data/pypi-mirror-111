@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: asyncio-foundationdb
+Version: 0.9.3
+Summary: asyncio drivers for FoundationDB
+License: Apachev2
+Author: Amirouche
+Author-email: amirouche@hyper.dev
+Requires-Python: >=3.9,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: cffi (>=1.14.5,<2.0.0)
+Requires-Dist: foundationdb (>=6.3.16,<7.0.0)
+Requires-Dist: immutables (>=0.15,<0.16)
+Requires-Dist: six (>=1.16.0,<2.0.0)
+Description-Content-Type: text/markdown
+
+# [asyncio-foundationdb](https://github.com/amirouche/asyncio-foundationdb/)
+
+*early draft*
+
+asyncio drivers for foundationdb tested with CPython 3.9
+
+```
+pip install asyncio-foundationdb
+```
+
+```python
+> import found
+> found.api_version(630)
+> db = await found.open()
+> await db.get(b'hello')
+> await db.set(b'hello', b'world')
+> await tr.get(b'hello')
+b'world'
+```
+
+## ChangeLog
+
+### v0.9.x
+
+- feature: bump to foundationdb 6.3.15 client API
+- feature: add hooks and states
+
+### v0.8.0
+
+- breaking change: replace ``get_rangefoo`` with ``rangefoo`` as async generator
+- new: add short syntax for querying `Nstore.query(tr, patterns)`
+- chore: remove pipenv, and pre-commit
+
