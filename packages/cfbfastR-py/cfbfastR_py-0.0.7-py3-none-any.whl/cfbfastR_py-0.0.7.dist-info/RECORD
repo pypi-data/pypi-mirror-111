@@ -1,0 +1,10 @@
+cfbfastR/__init__.py,sha256=jStaS3wPdlkIcXqVd10OBBeyO3drDZPg_wHNGEo2ZPY,28
+cfbfastR/config.py,sha256=rGIwlE9frmUZk_WFhGC_m1JMBorZ579xX7aPmCJd4Rk,631
+cfbfastR/dl_utils.py,sha256=7xU8m7tf2xRqUYst1l2_6J-90qMwhIcPv_rRak3zH4Q,855
+cfbfastR/errors.py,sha256=1dN8dgwmHGuvjMIu8aARkFKNk5FhF1pGMdkAM8B44m4,93
+cfbfastR/cfb/__init__.py,sha256=vKbSbN7MCrL39v_D4seYFwyK7Y_X3mgT4LMvI8hKDEo,5208
+cfbfastR/cfb/pbp.py,sha256=LDPt8Cstldm8MkVMsRLEKZpc7d5QHLyOn-tNdJ5Bd8c,214829
+cfbfastR_py-0.0.7.dist-info/METADATA,sha256=V0YjqnlobuQkM3uuf5lNizEK4MqlGJdxIVOccV45Z1w,3932
+cfbfastR_py-0.0.7.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cfbfastR_py-0.0.7.dist-info/top_level.txt,sha256=M5AWuuRvkMNY2_ElM1h1H7ZWOxCuNFZ1REtYjhkEIUE,9
+cfbfastR_py-0.0.7.dist-info/RECORD,,
