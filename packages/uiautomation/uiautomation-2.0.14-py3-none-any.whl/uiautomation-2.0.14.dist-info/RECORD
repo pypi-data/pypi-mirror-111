@@ -1,0 +1,11 @@
+uiautomation/__init__.py,sha256=CGK0nDGraSGVTlMmV34QSpoIyq9U16vxS0lXeGLwoaM,101
+uiautomation/uiautomation.py,sha256=ylIDkG3_sppCBbF_RZuJLJ-p21ELzoIhUr83Dhr-3mE,392521
+uiautomation/version.py,sha256=6OSUIDxpfO2kbG-S0kMwklMqXZga9x650F2YvES8t3E,20
+uiautomation/bin/UIAutomationClient_VC140_X64.dll,sha256=7nt9QbL94ADQK7BM3EBXcvn8dagXzEZ7mI0ydAv6Dzk,101888
+uiautomation/bin/UIAutomationClient_VC140_X86.dll,sha256=qunExbVLetZVHeLk2_B0AnO2BgZ5s2RVBMOXkpOUcno,84480
+uiautomation-2.0.14.data/scripts/automation.py,sha256=-Gw_o_c-lnQhKdYNN7UNRqfoRutET77c_ssCT4U3-3k,4746
+uiautomation-2.0.14.dist-info/LICENSE,sha256=fDYXKwn6sXZyAjK-hThMsdXMZO5A3Q9Q0zW6BKo9cfs,11537
+uiautomation-2.0.14.dist-info/METADATA,sha256=cYUKzHUpOg8jXSTntxcl6SLfQHZoH8F0nbORWdm60ao,695
+uiautomation-2.0.14.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+uiautomation-2.0.14.dist-info/top_level.txt,sha256=XAA4nCZEKrHlEduVpO-0h_Zbp45jT9A0-T-392SBn24,13
+uiautomation-2.0.14.dist-info/RECORD,,
