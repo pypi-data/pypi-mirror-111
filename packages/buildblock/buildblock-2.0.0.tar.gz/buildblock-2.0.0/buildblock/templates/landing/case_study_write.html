@@ -1,0 +1,43 @@
+{% extends "landing/base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "BuildBlock |" %} {{page_title}}{% endblock title %}
+
+{% block page_title %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <div class="page-title-right">
+                    <button type="button" class="btn btn-success" onclick="this.disabled=true;$('#case_study_form').submit();">{% trans "Post" %}</button>
+                </div>
+
+                <h3 class="page-title text-center text-lg-left bb_h3">{% trans "Write Post" %}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock page_title %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <form method='POST' id="case_study_form" enctype='multipart/form-data'>
+                        {% csrf_token %}
+                        {{form.as_p}}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block third_party %}
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+{% endblock third_party %}

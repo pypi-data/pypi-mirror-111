@@ -1,0 +1,107 @@
+{% extends "management/base.html" %}
+{% load static i18n base_tag humanize management_tag %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 hidden_lg">
+        {% for owner in owners %}
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="header-title mb-3 font-18">
+                            <a href="{% url 'management:owner-detail' owner.id %}" class="text-dark">{{owner.name}}</a>
+                        </h3>
+                    </div>
+                    <div class="col-5 pr-0">
+                        <h6 class="font-12 mt-0">Total Balance</h6>
+                        <h4 class="dollar_sign mb-2">{{owner.total_balance_amount|floatformat:"-2"|intcomma|default:0}}</h4>
+                    </div>
+                    <div class="col-7">
+                        <h6 class="font-12 mt-0">Payout Available Balance</h6>
+                        <h4 class="dollar_sign mb-2">{{owner.available_balance_amount|floatformat:"-2"|intcomma|default:0}}</h4>
+                    </div>
+                    {% for product in owner.products %}
+                    <div class="col-12">
+                        <hr>
+                        <a href="{% url 'management:product-info' product_code=product.code %}" class="text-title">
+                            <p class="mb-1">{% get_product_status_badge product=product %}</p>
+                            <h5 class="card-title mb-3">{{product.full_address}}</h5>
+                            <div class="clearfix">
+                                <p class="float-left mb-0"><strong>Tenants</strong> <span class="ml-1">{{product.num_people_under_lease}} person(s)</span></p>
+                                <p class="float-right mb-0"><strong>Rent</strong> <span class="ml-1 dollar_sign">{{product.rent_under_lease|floatformat:"-2"|intcomma}}</span></p>
+                            </div>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% for owner in owners %}
+    <div class="col-lg-12 visible_lg">
+        <div class="card">
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-12 col-xl-6">
+                        <h3 class="float-lg-left header-title mb-3 font-18">
+                            <a href="{% url 'management:owner-detail' owner.id %}" class="text-dark">{{owner.name}}</a>
+                        </h3>
+                    </div>
+                    <div class="col-6 col-xl-3">
+                        <h6 class="font-12 mt-0">Total Balance</h6>
+                        <h4 class="dollar_sign mb-2 mb-md-0">{{owner.total_balance_amount|floatformat:"-2"|intcomma|default:0}}</h4>
+                    </div>
+                    <div class="col-6 col-xl-3">
+                        <h6 class="font-12 mt-0">Payout Available Balance</h6>
+                        <h4 class="dollar_sign mb-0">{{owner.available_balance_amount|floatformat:"-2"|intcomma|default:0}}</h4>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover w-100 mb-0">
+                        <colgroup>
+                            <col>
+                            <col style="width:fit-content;">
+                            <col width="120">
+                            <col width="150">
+                            <col width="150">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th class="text-center">Status</th>
+                                <th class="text-center">Tenants</th>
+                                <th class="text-right">Rent</th>
+                                <th class="text-right">Deposit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for product in owner.products %}
+                            <tr {% if lease.status == 'COMPLETE' %}class="opacity-5"{% endif %}>
+                                <td>
+                                    <a href="{% url 'management:product-info' product_code=product.code %}" class="text-title">
+                                      {{product.full_address}}
+                                    </a>
+                                </td>
+                                <td class="text-center">{% get_product_status_badge product=product %}</td>
+                                <td class="text-center">{{product.num_people_under_lease}} person(s)</td>
+                                <td class="text-right"><span class="dollar_sign">{{product.rent_under_lease|floatformat:"-2"|intcomma}}</span></td>
+                                <td class="text-right"><span class="dollar_sign">{{product.deposit_under_lease|floatformat:"-2"|intcomma}}</span></td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td class="text-center text-muted font-11 py-3" colspan="100%">No Products</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}
+

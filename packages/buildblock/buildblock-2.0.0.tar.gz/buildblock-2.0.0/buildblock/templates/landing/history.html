@@ -1,0 +1,114 @@
+{% extends "landing/base.html" %}
+{% load staticfiles i18n %}
+
+{% block title %}{% trans "BuildBlock |" %} {{page_title}}{% endblock title %}
+
+{% block content %}
+<div class="banner_section about_banner">
+    <div class="banner_content">
+        <div class="container-fluid">
+            <h1 class="text-center text-white text-shadow mb-0">{{page_title}}</h1>
+        </div>
+    </div>
+</div>
+
+<!-- history -->
+<div class="content_section">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-9" data-aos="fade-left" data-aos-duration="600">
+                <table class="history_table w-auto mx-auto">
+                    {% for history in history_group %}
+                    <tr>
+                        <td class="history_time" colspan="2">
+                            <p class="mb-0">{{history.date_display}}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="history_sub">
+                            {% for content in history.content_by_date  %}
+                            <p class="font-20{% if content.subtitle %} mb-1{% endif %}">{{content.title}}</p>
+                            {% if content.subtitle %}<span class="font-16">{{content.subtitle}}</span>{% endif %}
+                            {% endfor %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- team -->
+<div class="content_section bg-lightgray py-4" id="team_section">
+    <div class="container-fluid">
+        <h2 class="goal_title text-center mb-0">{% trans 'Our Team' %}</h2>
+    </div>
+</div>
+<div class="content_section">
+    <div class="container-fluid">
+        {% for team in team_group %}
+        {% if team.members|length != 0 %}
+        <div class="row" data-aos="fade-up">                
+            <div class="col-12 col-lg-6">
+                <div class="card team_title_card bg-dark">
+                    <div class="card-body">
+                        <h5 class="mb-0 text-white font-weight-normal">{{team.department}}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" data-aos="fade-up" style="margin-bottom: 50px;">
+            {% for member in team.members %}
+            <div class="col-12 col-lg-6">
+                <div class="card member_card shadow-lg"
+                     onclick="teamFunction(this.id)" 
+                     id="team_{{member.id}}">
+                    <div class="card-body">
+                        <img class="position-absolute" src="{{member.profile_image.url}}" alt="">
+                        <p class="name font-20">{{member.name}}</p>
+                        <p class="position font-16">{{member.position}}</p>
+                        <div class="more" id="more_team_{{member.id}}">
+                            {% if member.education %}
+                            <ul class="education">
+                                {% for education in member.education %}
+                                    <li>{{education}}</li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                            {% if member.work_experience %}
+                            <ul class="work_experience">
+                                {% if member.education %}<li class="divider"></li>{% endif %}
+                                {% for work_experience in member.work_experience %}
+                                    <li>{{work_experience}}</li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                            {% if member.description %}
+                            <div class="description mt-4 mb-2">{{member.description|safe}}</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
+
+{% block third_party %}
+<script>
+    // Team Card
+    function teamFunction(team_id){
+        var more_team = 'more_' + team_id;
+
+        var element = document.getElementById(more_team);
+        $('.more').not('#' + more_team).removeClass("active");
+        element.classList.toggle("active");
+    }
+</script>
+{% endblock third_party %}

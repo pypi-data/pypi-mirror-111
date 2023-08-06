@@ -1,0 +1,53 @@
+{% extends "landing/base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "BuildBlock |" %} {{page_title}}{% endblock title %}
+
+{% block navbar %}
+{% include 'landing/partials/nav.html' with nav_color="nav_white" %}
+{% endblock navbar %}
+
+{% block content %}
+<div class="banner_section about_banner banner_section_lg">
+    <div class="container-fluid">
+        <div class="banner_content text-white">
+            <div class="row">
+                <div class="col-12 col-lg-10">
+                    <h1 class="text-shadow mb-0">{% blocktrans %}Building Healthy <br class="d-inline d-lg-none">Global Real Estate<br>Investment Value{% endblocktrans %}</h1>
+                </div>
+            </div>
+            <h5 class="h5 position-absolute mb-0">{% blocktrans %}BuildBlock lowers the entry barrier to the overseas real estate investment with the goal of creating a global real estate investment platform for anyone to invest in the US real estate safe and easy.<br><br>Equipped with the top expertise in the market and technology that makes cross-border investment safe, BuildBlock is ready to commence the new era of “Global Real Estate Investment Market” where individuals can directly purchase, manage, and sell their properties anywhere in the world.{% endblocktrans %}</h5>
+        </div>
+    </div>
+</div>
+
+<div class="content_section goal_title_section bg-lightgray py-4">
+    <div class="container-fluid">
+        <h2 class="goal_title text-center mb-0">Three Building Goals</h2>
+    </div>
+</div>
+
+<div class="content_section goal_section">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-10 col-lg-8">
+                <div class="goal_card">
+                    <img src="{% static 'landing/images/quo.png' %}" alt="" class="position-absolute">
+                    <h3 class="text-blue font-weight-medium" data-aos-once="true" data-aos="fade-right" data-aos-duration="700">{% blocktrans %}<span>Building Opportunities</span><br>of Foreign Real Estate Investment{% endblocktrans %}</h3>
+                    <h5>{% blocktrans %}BuildBlock solves the challenges of cross-border investment and opens door to individuals to reap the benefits of international investments.<br><br>Aspiring to be the center of global investment, BuildBlock will move beyond an investment channel that bridges Korean and the United States by bringing innovation to the global real estate market.{% endblocktrans %}</h5>
+                </div>
+                <div class="goal_card">
+                    <img src="{% static 'landing/images/quo.png' %}" alt="" class="position-absolute">
+                    <h3 class="text-blue font-weight-medium" data-aos-once="true" data-aos="fade-right" data-aos-duration="700">{% blocktrans %}<span>Building Trust</span><br>with Clients{% endblocktrans %}</h3>
+                    <h5>{% blocktrans %}9,576km is the distance between Seoul and Los Angeles.<br>We will build trust with our clients as we accompany the challenging journey of international real estate investment. In addition to the local expertise, Build Block’s goal is to communicate transparently with our clients by leveraging various financial technologies such as AI.{% endblocktrans %}</h5>
+                </div>
+                <div class="goal_card">
+                    <img src="{% static 'landing/images/quo.png' %}" alt="" class="position-absolute">
+                    <h3 class="text-blue font-weight-medium" data-aos-once="true" data-aos="fade-right" data-aos-duration="700">{% blocktrans %}<span>Building Directly</span><br>with BuildBlock{% endblocktrans %}</h3>
+                    <h5>{% blocktrans %}BuildBlock will directly manage our clients’ properties.<br>We are more than just connecting US real estate brokers and Korean clients; we are in direct charge of the entire process, ranging from finding the right properties to the tenant management.<br><br>In addition, BuildBlock Team consists of licensed experts and a vast contractor network to build or remodel the local properties. Clients can trust BuildBlock when it comes to executing more aggressive strategies such as FLIP and ADU.{% endblocktrans %}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

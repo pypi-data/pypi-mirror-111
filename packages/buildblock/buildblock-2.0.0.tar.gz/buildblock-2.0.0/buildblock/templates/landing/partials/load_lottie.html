@@ -1,0 +1,12 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie.js"></script>
+<script>
+    $('.animation_svg').each(function() {
+        bodymovin.loadAnimation({
+            container: this,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: $(this).attr("data-src")
+        });
+    });
+</script>

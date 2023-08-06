@@ -1,0 +1,40 @@
+{% load static i18n humanize %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES_LIST %}
+
+<nav class="navbar navbar-expand {{home_nav}}">
+    <div class="navbar-collapse justify-content-center px_15">
+        <a href="{% url 'home' %}" class="navbar-brand mr-auto">
+            <img class="navbar_brand_w" src="{% static 'investment/images/logo/logo_w_h32.png' %}" alt="">
+            <img class="navbar_brand_pp" src="{% static 'investment/images/logo/logo_pp_h32.png' %}" alt="">
+        </a>
+
+        <!-- main menu -->
+        <div class="nav_center fs_20 fw_medium">
+            <a class="nav_center_link" href="{% url 'product:product-list' %}">INVEST</a>
+            <a class="nav_center_link" href="">MARKET</a>
+            <a class="nav_center_link" href="">TRACK</a>
+            {% comment %} TODO: 임시 management페이지(나중에 삭제 혹은 위치 변경) {% endcomment %}
+            <a class="nav_center_link" href="{% url 'management:profile' %}">MANAGEMENT</a>
+        </div>
+
+        <!-- account menu -->
+        <ul class="navbar-nav fs_20 fw_light">
+            {% if request.user.is_authenticated %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'users:home' %}">MyBoard</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'account_logout' %}">LogOut</a></li>
+            {% else %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'account_login' %}">SignIn</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'account_signup' %}">SignUp</a></li>
+            {% endif %}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle nav_link_lang" href="#" id="dropdown_lang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{LANGUAGE_CODE|upper}}</a>
+                <div class="dropdown-menu menu_lang fs_16" aria-labelledby="dropdown_lang">
+                    {% for lang_code, lang_name in LANGUAGES_LIST %}
+                    <a class="dropdown-item" href="">{{lang_code|upper}}</a>
+                    {% endfor %}
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>

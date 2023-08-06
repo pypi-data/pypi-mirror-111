@@ -1,0 +1,92 @@
+{% extends "administrator/base.html" %}
+{% load static i18n base_tag humanize %}
+
+{% block title %}{{page_title}}{% endblock %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<form method='POST' enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-12 col-lg-8">
+            <div class="card">
+                <div class="card-body">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="text-right admin_submit_btn">
+                      <input type='submit' class='btn btn-success' value='SAVE' />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="row">
+    <div class="col-12">
+        Total: {{total}} | Count: {{count}}
+        <table class="table table-condensed dataTable w-100">
+            <colgroup>
+                <col width="400">
+                <col width="400">
+                <col width="100">
+                <col width="150">
+                <col width="200">
+            </colgroup>
+            <thead class="thead-dark">
+                <tr>
+                  <th>Info</th>
+                  <th>Address<br>Link</th>
+                  <th>Direction</th>
+                  <th>List Date<br>Last Update Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for property in properties %}
+                <tr>
+                    <td>
+                        <a href="{{property.detail_link}}">
+                            Property Id: {{property.id}}<br>
+                            Status: {{property.status}}<br>
+                            List Price: <span class="dollar_sign">{{property.list_price|intcomma}}</span>
+                            <img src="{{property.images.0.href}}" width="100%"/><br>
+                        </a>
+                    </td>
+                    <td>
+                        {{property.full_address}}<br>
+                        {{property.type}} {{property.beds}} beds | {{property.baths}} bath
+                    </td>
+                    <td>
+                        {% for direction in property.address.direction_from_offices %}
+                        <a href="{{direction.map_url}}" target="_blank">
+                        {{direction.origin}}:
+                        {{direction.distance|filter_convert_feet_to_miles|floatformat:"-1"}} mi |
+                        {{direction.duration|filter_convert_second_to_minute}} mins
+                        </a><br>
+                        {% endfor %}
+                    </td>
+                    <td>
+                        {{property.list_date}}
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td class="text-center" colspan="100%">No Products</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% include "base/pagination.html" with paginator=paginator add_css="page_nav_dark" sign_align="end"%}
+{% endblock content %}

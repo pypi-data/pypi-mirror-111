@@ -1,0 +1,67 @@
+{% extends "administrator/base.html" %}
+{% load static i18n base_tag %}
+
+{% block title %}{% trans 'LEASE LIST' %}{% endblock %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <a class="btn btn-success mb-2" href="{% url 'administrator:property-filter-create' info_origin=info_origin %}">CREATE FILTER</a>
+            </div>
+
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+  <div class="col-12">
+    <table class="table table-condensed dataTable w-100">
+      <colgroup>
+        <col width="">
+        <col width="">
+        <col width="">
+        <col width="">
+        <col width="">
+        <col width="170">
+      </colgroup>
+      <thead class="thead-dark">
+        <tr>
+          <th>Title</th>
+          <th>Status</th>
+          <th>Emails</th>
+          <th>Last Sent</th>
+          <th>Modified Date</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+          {% for filter in filters %}
+          <tr>
+            <td>{{filter.title}}</td>
+            <td>{{filter.status}}</td>
+            <td>{{filter.emails}}</td>
+            <td>{{filter.last_sent}}</td>
+            <td>{{filter.modified_at}}</td>
+            <td>
+              <a class="btn btn-sm btn-link text-warning" href="{% url 'administrator:property-filter-update'  info_origin=info_origin filter_id=filter.id %}"><i class="dripicons-document-edit"></i></a>
+              <a class="btn btn-sm btn-link text-danger" href="{% url 'administrator:property-filter-delete'  info_origin=info_origin filter_id=filter.id %}"><i class="dripicons-trash"></i></a>
+            </td>
+          </tr>
+          {% empty %}
+            <tr>
+                <td class="text-center" colspan="100%">No Data</td>
+            </tr>
+          {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% include "base/pagination.html" with paginator=paginator add_css="page_nav_dark" sign_align="end"%}
+{% endblock content %}

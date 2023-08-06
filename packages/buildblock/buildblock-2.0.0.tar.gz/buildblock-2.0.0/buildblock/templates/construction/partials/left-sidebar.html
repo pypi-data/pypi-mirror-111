@@ -1,0 +1,112 @@
+{% load static i18n %}
+
+<!-- ========== Left Sidebar Start ========== -->
+<div class="left-side-menu">
+
+    <div class="slimscroll-menu" id="left-side-menu-container">
+
+        <!-- LOGO -->
+        <a href="{% url 'construction:home' %}" class="logo text-center">
+            <span class="logo-lg">
+                <img src="{% static 'landing/images/logo/logo_w_h36.png' %}" alt="" height="22" id="side-main-logo" style="opacity: 0.3;">
+            </span>
+            <span class="logo-sm">
+                <img src="{% static 'landing/images/logo/logo_w_h32.png' %}" alt="" height="22" id="side-sm-main-logo" style="opacity: 0.3;">
+            </span>
+        </a>
+
+        <!--- tenant Sidemenu -->
+        <ul class="metismenu side-nav pt-3">
+            <!-- <li class="side-nav-item side-nav-title pb-3">{{construction.title}}</li> -->
+            <li class="side-nav-item">
+                <a href="{% url 'construction:info' construction_id=construction.id %}" class="side-nav-link">
+                    <i class="mdi mdi-home"></i>
+                    <span>OVERVIEW</span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="{% url 'construction:work-list' construction_id=construction.id %}" class="side-nav-link">
+                    <i class="mdi mdi-progress-wrench"></i>
+                    <span>WORKS</span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="javascript: void(0);" class="side-nav-link">
+                    <i class="mdi mdi-cash"></i>
+                    <span>EXPENSES</span>
+                </a>
+                <ul class="side-nav-second-level" aria-expanded="false">
+                    <li>
+                        <a href="{% url 'construction:personnel-expense-list' construction_id=construction.id %}">Personnel</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'construction:expense-list' construction_id=construction.id %}">Materials & Extra</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'construction:outsourcing-expense-list' construction_id=construction.id %}">Outsourcing</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="side-nav-item">
+                <a href="{% url 'construction:picture-list' construction_id=construction.id %}" class="side-nav-link">
+                    <i class="mdi mdi-image"></i>
+                    <span>PICTURES</span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="{% url 'construction:worker-list' construction_id=construction.id %}" class="side-nav-link">
+                    <i class="mdi mdi-worker"></i>
+                    <span>WORKERS</span>
+                </a>
+            </li>
+            <li class="side-nav-item side-nav-title pt-4">REPORT</li>
+            {% if construction.method == 'DIRECT_MANAGEMENT' %}
+            <li class="side-nav-item">
+                <a href="{% url 'construction:daily-report-list' construction_id=construction.id %}" class="side-nav-link">
+                    <i class="dripicons-dot"></i>
+                    <span>DAILY REPORT</span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="{% url 'construction:weekly-report-list' construction_id=construction.id %}" class="side-nav-link">
+                    <i class="dripicons-dot"></i>
+                    <span>WEEKLY REPORT</span>
+                </a>
+            </li>
+            {% else %}
+            <li class="side-nav-item">
+                <a href="#" class="side-nav-link">
+                    <i class="dripicons-dot"></i>
+                    <span>CUSTOM REPORT</span>
+                </a>
+            </li>
+            {% endif %}
+            <li class="side-nav-item">
+                <a href="" class="side-nav-link">
+                    <i class="dripicons-dot"></i>
+                    <span>FINAL REPORT</span>
+                </a>
+            </li>
+            <li class="side-nav-item side-nav-title pt-5" style="pointer-events: initial;">
+                <a href="{% url 'construction:home' %}" class="text-muted">
+                    <span style="text-decoration: underline;">ALL CONSTRUCTIONS</span>
+                </a>
+            </li>
+            {% if request.user.is_superuser %}
+            <li class="side-nav-item side-nav-title" style="pointer-events: initial;">
+                <a href="{% url 'administrator:administrator_menu' %}" class="text-muted">
+                    <span style="text-decoration: underline;">MANAGER HOME</span>
+                </a>
+            </li>
+            {% endif %}
+            <li class="side-nav-item side-nav-title" style="pointer-events: initial;">
+                <a href="{% url 'home' %}" class="text-muted">
+                    <span style="text-decoration: underline;">BUILDBLOCK HOME</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="clearfix"></div>
+
+    </div>
+</div>

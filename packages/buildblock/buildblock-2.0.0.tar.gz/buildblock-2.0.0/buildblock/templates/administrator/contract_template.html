@@ -1,0 +1,54 @@
+{% extends "administrator/base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans 'LEASE LIST' %}{% endblock title %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <a class="btn btn-success mb-2" href="{% url 'administrator:contract-template-create' %}">CREATE E-SIGNATURE CONTRACT TEMPLATE</a>
+            </div>
+
+            <h4 class="page-title">E-SIGNATURE TEMPLATE LIST</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+  <div class="col-12">
+    <table class="table table-condensed dataTable w-100">
+      <colgroup>
+        <col width="">
+        <col width="170">
+      </colgroup>
+      <thead class="thead-dark">
+        <tr>
+          <th>Template</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+          {% for template in templates|dictsort:"id" %}
+          <tr>
+            <td>{{template.title}}</td>
+            <td>
+              <a class="btn btn-sm btn-link text-warning" href="{% url 'administrator:contract-template-update' template.id %}"><i class="dripicons-document-edit"></i></a>
+              <a class="btn btn-sm btn-link text-danger" href="{% url 'administrator:contract-template-delete' template.id %}"><i class="dripicons-trash"></i></a>
+            </td>
+          </tr>
+          {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock content %}
+
+{% block third_party %}
+{% include "base/load_datatable.html" %}
+{% endblock third_party %}

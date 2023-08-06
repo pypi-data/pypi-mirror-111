@@ -1,0 +1,222 @@
+{% extends "construction/base.html" %}
+{% load static i18n humanize base_tag %}
+
+{% block topbar %}
+{% include 'construction/partials/topbar_only_title.html' %}
+{% endblock topbar %}
+
+{% block page_title %}
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box text-center">
+            <p class="font-12" style="margin-bottom: -1rem;">WEEKLY REPORT</p>
+            <h4 class="page-title text-center page_title_lg">{{report.start_date|date:'Y.n.j'}} - {{report.end_date|date:'n.j'}}</h4>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <!-- summary -->
+    <div class="col-12 col-xl-4">
+        <div class="card report_card">
+            <div class="card-body">
+                <h3 class="header-title"><div class="category_badge bg-dark"></div> Summary</h3>
+
+                <div class="row mt-4 report_detail_summary">
+                    <div class="col-12 text-center">
+                        <div class="card shadow-none m-0">
+                            <div class="card-body text-center text-warning">
+                                <i class="mdi mdi-progress-wrench"></i>
+                                <h2>
+                                    {% if works %}
+                                    {{works|length}} {% if works|length == 1 %}work{% else %}works{% endif %}
+                                    {% else %}
+                                    -
+                                    {% endif %}
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center">
+                        <div class="card shadow-none m-0 border-top">
+                            <div class="card-body text-center text-info">
+                                <i class="mdi mdi-worker"></i>
+                                <h2>
+                                    {% if personnel_expenses %}
+                                    {{personnel_expenses|length}} {% if personnel_expenses|length == 1 %}worker{% else %}workers{% endif %}
+                                    {% else %}
+                                    -
+                                    {% endif %}
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center">
+                        <div class="card shadow-none m-0 border-top">
+                            <div class="card-body text-center text-danger">
+                                <i class="mdi mdi-cash-multiple"></i>
+                                {% if personnel_expense_sum|add:expense_sum != 0 %}
+                                <h2 class="dollar_sign">
+                                    {{personnel_expense_sum|add:expense_sum|filter_safe_money_read_from_db|intcomma}}
+                                </h2>
+                                {% else %}
+                                <h2>
+                                -
+                                </h2>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- plan -->
+    <div class="col-12 col-xl-8">
+        <div class="card report_card">
+            <div class="card-body">
+                <h3 class="header-title"><div class="category_badge bg-dark"></div> House Plan</h3>
+                <img src="{{construction.plan_image_url}}" class="mt-3 report_plan_img">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <!-- works -->
+        <div class="card report_card">
+            <div class="card-body">
+                <i class="float-right mdi mdi-progress-wrench"></i>
+                <h3 class="header-title"><div class="category_badge bg-warning"></div> Works</h3>
+
+                <div class="report_daily_works mt-4">
+                    {% for work in works %}
+                    <div class="card bg-light-lighten">
+                        <div class="card-body px-3 py-2">
+                            <h4 class="header-title text-white">{{work.title}}</h4>
+                            <div class="d-lg-inline-block font-13">
+                                <span class="px-1">{{work.type.title}} /</span>
+                                {% for zone in work.zone_list %}
+                                <span>{{zone.name}}{% if not forloop.last %}, {% endif %}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <div class="report_detail_table">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table_weekly text-center mb-0">
+                                <thead>
+                                    <tr>
+                                        {% for date in date_range  %}
+                                        <th>{{date|date:'m/d D'}}</th>
+                                        {% endfor %}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for work in works %}
+                                    <tr>
+                                        {% for date in date_range %}
+                                        <td {% if date in work.work_date %}class="bg-warning-lighten text-white"{% endif %}>
+                                            {% if date in work.work_date %}
+                                            <!-- TODO -->
+                                            <!-- <span class="badge badge-light mr-1">{{work.work_date_index}}일차</span> -->
+                                            {{work.title}}
+                                            {% endif %}
+                                        </td>
+                                        {% endfor %}
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                                <tfoot>
+                                    <tr class="font-18 text-white bg-light-lighten">
+                                        {% for expense_data in expense_data_day %}
+                                        <td {% if expense_data.per_ex_day %}class="bg-warning text-black-50 font-weight-bold"{% endif %}>
+                                            {% if expense_data.per_ex_day %}
+                                            <p class="font-14 mb-1">{{expense_data.per_ex_day|length}} {% if expense_data.per_ex_day|length == 1 %}worker{% else %}workers{% endif %}</p>
+                                            <p class="font-14 dollar_sign mb-0">{{expense_data.per_ex_sum|filter_safe_money_read_from_db|intcomma}}</p>
+                                            {% endif %}
+                                        </td>
+                                        {% endfor %}
+                                    </tr>
+                                    <tr class="font-18 bg-light-lighten font-weight-bold">
+                                        <td colspan="4" class="text-left text-muted">TOTAL</td>
+                                        <td colspan="4" class="dollar_sign text-right text-white">
+                                            <span class="mr-2">{{personnel_expenses|length}} {% if personnel_expenses|length == 1 %}worker{% else %}workers{% endif %}</span>
+                                            <span class="dollar_sign">{{personnel_expense_sum|filter_safe_money_read_from_db|intcomma}}</span>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- expense -->
+        <div class="card report_card">
+            <div class="card-body">
+                <i class="float-right mdi mdi-cash-multiple"></i>
+                <h3 class="header-title"><div class="category_badge bg-danger"></div> Expense</h3>
+
+                <div class="report_daily_works mt-4">
+                    <div class="report_detail_table">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table_weekly text-center mb-0">
+                                <thead>
+                                    <tr>
+                                        {% for date in date_range  %}
+                                        <th>{{date|date:'m/d D'}}</th>
+                                        {% endfor %}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% if expense_sum != 0 %} 
+                                    <tr>
+                                        {% for expense_data in expense_data_day %}
+                                        <td {% if expense_data.ex_day %}class="bg-danger text-white"{% endif %}>
+                                            {% if expense_data.ex_day %}
+                                            <p class="font-14 mb-1">{{expense_data.ex_day|length}} {% if expense_data.ex_day|length == 1 %}item{% else %}items{% endif %}</p>
+                                            <p class="font-14 dollar_sign mb-0">{{expense_data.ex_sum|filter_safe_money_read_from_db|intcomma}}</p>
+                                            {% endif %}
+                                        </td>
+                                        {% endfor %}
+                                    </tr>
+                                    {% endif %}
+                                </tbody>
+                                <tfoot>
+                                    <tr class="font-18 bg-light-lighten font-weight-bold">
+                                        <td colspan="4" class="text-left text-muted">TOTAL</td>
+                                        <td colspan="4" class="dollar_sign text-right text-white">{{expense_sum|filter_safe_money_read_from_db|intcomma}}</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- report content -->
+        <div class="card report_card">
+            <div class="card-body">
+                <h3 class="header-title"><div class="category_badge bg-secondary"></div> Description</h3>
+                <form action="." method="POST" class="mt-3">
+                    {% csrf_token %}
+                    <div class="fieldWrapper">
+                        {{form.content}}
+                    </div>
+                    <div class="admin_submit_btn text-center">
+                        <a href="{% url 'construction:daily-report-list' construction_id=construction.id %}" class="btn btn-secondary mr-2 hidden_sm">BACK TO LIST</a>
+                        <input type='submit' class='btn btn-success' value='SAVE' />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

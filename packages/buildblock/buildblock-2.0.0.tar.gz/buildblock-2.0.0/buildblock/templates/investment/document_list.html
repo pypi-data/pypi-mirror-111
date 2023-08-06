@@ -1,0 +1,111 @@
+{% extends service_app_name|add:"/base.html" %}
+{% load static i18n base_tag humanize management_tag %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <h4 class="page-title">
+                <div class="hidden_sm d-inline-block mr-1">
+                    <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {% get_investment_product_title_by_id id=request.GET.investment_product %}
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-left" style="line-height:24px;">
+                        <a class="dropdown-item" href="?investment_product=">All</a>
+                        <div class="dropdown-divider"></div>
+                        {% for investment_product in investment_products %}
+                        <a class="dropdown-item" href="?investment_product={{investment_product.id}}">{{investment_product.title}}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+                Documents
+            </h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="document_list">
+            <div class="hidden_sm table-responsive">
+                <table class="table table-centered mb-0 docu_table">
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col width="200">
+                        <col width="100">
+                        <col width="100">
+                    </colgroup>
+                    <thead class="thead-light">
+                        <tr>
+                            <th>TITLE</th>
+                            <th>INVESTMENT PRODUCT</th>
+                            <th>CREATED DATE</th>
+                            <th>STATUS</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for document in documents %}
+                        <tr>
+                            <td>{{document.title}}</td>
+                            <td>{{document.investment_product_title}}</td>
+                            <td>{{document.created_at|date:"N j. Y"}}</td>
+                            <td>{{document.status|get_contract_status_badge}}</td>
+                            <td>
+                                {% if document.document_name %}
+                                <a href="{% url 'investment:document-download' document.id %}" target="_blank" class="btn btn-sm btn-primary">VIEW</a>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <!-- Empty -->
+                        <tr>
+                            <td colspan="100%" class="font-12 text-muted text-center py-4">
+                                No Contract
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="visible_sm table-responsive">
+                <table class="table table-centered mb-0 docu_table_m">
+                    {% for document in documents %}
+                    <tr>
+                        <td class="px-0">
+                            <div>
+                                <h6 class="bb_h6 font-weight-300 text-muted">{{document.investment_product}}</h6>
+                                <h3 class="font-weight-bold font-15 mt-1">{{document.status|get_contract_status_badge}} {{document.title}}</h3>
+                            </div>
+                            <div class="row mx-0">
+                                <div class="col-8 pl-0">
+                                    <h4 class="font-13 font-weight-bold mb-0"><h6 class="font-10 d-inline-block mb-0">CREATED</h6> {{document.created_at|date:"N j. Y"}}</h4>
+                                </div>
+                                <div class="col-4 pr-0 align-self-end text-right">
+                                    {% if document.document_name %}
+                                    <a href="{% url 'investment:document-download' document.id %}" target="_blank" class="btn btn-sm btn-primary">VIEW</a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <!-- Empty -->
+                    <tr>
+                        <td class="font-12 text-muted text-center py-4">
+                            No Documents
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            {% include "base/pagination.html" with paginator=paginator %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

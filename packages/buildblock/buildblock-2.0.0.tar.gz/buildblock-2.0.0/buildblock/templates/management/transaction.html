@@ -1,0 +1,188 @@
+{% extends "management/base.html" %}
+{% load static i18n humanize mathfilters base_tag management_tag javascript_tag %}
+
+{% block page_title %}
+{% get_management_roles as MANAGEMENT_ROLES %}
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <h4 class="page-title">
+                {{page_title}}
+            </h4>
+        </div>
+    </div>
+</div>
+{% endblock page_title %}
+
+{% block content %}
+{% get_management_roles as MANAGEMENT_ROLES %}
+{% with active_role=request.session.active_role %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row justify-content-between transaction_filter">
+                    <div class="col-12 col-lg-6">
+                        <div class="btn-group mb-1 mt-lg-0">
+                            <a href="?{% get_param_replace status='' page=1 %}" class="btn btn-light{% if request.GET.status != 'PENDING' and request.GET.status != 'COMPLETE' %} active{% endif %}">All</a>
+                            <a href="?{% get_param_replace status='PENDING' page=1 %}" class="btn btn-light{% if request.GET.status == 'PENDING' %} active{% endif %}">Outstanding</a>
+                            <a href="?{% get_param_replace status='COMPLETE' page=1 %}" class="btn btn-light{% if request.GET.status == 'COMPLETE' %} active{% endif %}">Complete</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 text-right">
+                        {% if products %}
+                        <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{selected_product_filter|default:'All Products'}}
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right" style="line-height:24px;">
+                            <a class="dropdown-item" href="?">All Products</a>
+                            <div class="dropdown-divider"></div>
+                            {% for product in products %}
+                            <a class="dropdown-item" href="?product={{product.id}}">{{product.full_address}}</a>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                        {% if residence.payments.unpaid_amount > 0 %}
+                        <a href="{% url 'management:house' %}" class="btn btn-danger balance_btn">
+                            <span class="mr-2 font-12">Outstanding Balance</span>
+                            <span class="dollar_sign font-weight-bold">{{residence.payments.unpaid_amount|floatformat:"-2"|intcomma}}</span>
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="table-responsive">
+                            <table class="table transaction_table hidden_sm mt-3 mb-0 text-right">
+                                <colgroup>
+                                    <col style="width: fit-content;">
+                                    <col>
+                                    {% if active_role != MANAGEMENT_ROLES.tenant_role %}
+                                    <col width="150">
+                                    {% endif %}
+                                    <col width="150">
+                                    <col width="100">
+                                    <col width="150">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th class="text-left">STATUS</th>
+                                        <th class="text-left">TRANSACTION</th>
+                                        {% if active_role != MANAGEMENT_ROLES.tenant_role %}
+                                        <th>TENANT</th>
+                                        {% endif %}
+                                        <th>DATE</th>
+                                        <th>METHOD</th>
+                                        <th class="text-right">AMOUNT</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                    {% for transaction in transactions %}
+                                    <tr {% if not transaction.payment_made_datetime %}class="bg-lightgray"{% endif %}>
+                                        <td class="text-left font-12 transaction_badge_td">
+                                            <span class="badge badge-light">
+                                                {% get_payment_status_title payment=transaction role=active_role %}
+                                            </span>
+                                            {% get_payment_overdue_badge payment=transaction %}
+                                        </td>
+                                        <td class="text-left">
+                                            {% get_payment_description payment=transaction %}
+                                            {% if active_role == MANAGEMENT_ROLES.owner_role or active_role == MANAGEMENT_ROLES.agent_role %}
+                                            {% if transaction.status == 'PENDING' %}
+                                            <a href="{% url 'management:transaction-update' transaction.id %}" class="font-11 btn btn-sm btn-outline-success py-0 px-1 ml-1">Change to Paid</a>
+                                            {% endif %}
+                                            {% endif %}
+                                        </td>
+                                        {% if active_role != MANAGEMENT_ROLES.tenant_role %}
+                                        <td>{{transaction.tenant.name}}</td>
+                                        {% endif %}
+                                        <td class="font-12">
+                                            {% if transaction.payment_made_datetime %}
+                                            {{transaction.payment_made_datetime|date:'N j. Y'}}
+                                            {% elif transaction.due_date %}
+                                            <span class="text-muted">Due {{transaction.due_date|date:'N j. Y'}}</span>
+                                            {% endif %}
+                                        </td>
+                                        <td class="font-12">{% if transaction.get_payment_method_display %}{{transaction.get_payment_method_display}}{% endif %}</td>
+                                        <td class="{% if transaction.payment_made_datetime %}text-info{% else %}text-dark{% endif %} font-weight-bold dollar_sign">
+                                            {{transaction.amount|filter_safe_money_read_from_db|floatformat:"-2"|intcomma}}                                            
+                                        </td>                                        
+                                      </tr>
+                                    {% empty %}
+                                    <!-- No Transactions -->
+                                    <tr>
+                                        <td colspan="100%" class="font-12 text-muted text-center py-4">No Transactions</td>
+                                    </tr>
+                                    {% endfor %}
+
+                                </tbody>
+                            </table>
+
+                            <table class="transaction_table visible_sm_table table mt-2 mb-0">
+                                <tbody>
+                                {% for transaction in transactions %}
+                                <tr>
+                                    <td class="transaction_unit">
+                                        <div class="text-left mb-2">
+                                            <p class="font-10 mb-0 mt-1">
+                                                <span class="badge badge-light">
+                                                    {% get_payment_status_title payment=transaction role=active_role %} 
+                                                </span>
+                                                {% get_payment_overdue_badge payment=transaction %}
+                                                {% if active_role == MANAGEMENT_ROLES.owner_role or active_role == MANAGEMENT_ROLES.agent_role %}
+                                                {% if transaction.status == 'PENDING' %}
+                                                <a href="{% url 'management:transaction-update' transaction.id %}" class="float-right font-10 btn btn-sm btn-outline-success py-0 px-1">Change to Paid</a>
+                                                {% endif %}
+                                                {% endif %}
+                                            </p>
+                                        </div>
+                                        <h4 class="mt-1 font-14">
+                                            {% get_payment_description payment=transaction %}
+                                            {% if active_role != MANAGEMENT_ROLES.tenant_role %}
+                                            <span class="text-muted d-inline-block ml-1">{{transaction.tenant.name}}</span>
+                                            {% endif %}
+                                        </h4>
+                                        <div class="clearfix mt-2">
+                                            <div class="float-left">
+                                                <p class="font-11 mb-0 mt-1">
+                                                    {% if transaction.payment_made_datetime %}
+                                                    {{transaction.payment_made_datetime|date:'N j. Y'}}
+                                                    {% elif transaction.due_date %}
+                                                    <span class="text-light">Due {{transaction.due_date|date:'N j. Y'}}</span>
+                                                    {% endif %}
+                                                </p>
+                                            </div>
+                                            <div class="float-right">
+                                                <h3 class="dollar_sign {% if transaction.payment_made_datetime %}text-info{% else %}text-dark{% endif %} my-0">{{transaction.amount|filter_safe_money_read_from_db|floatformat:"-2"|intcomma}}</h3>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% empty %}
+                                <!-- No Transactions -->
+                                <tr>
+                                    <td class="font-12 text-muted text-center py-4" colspan="100%">No Transactions</td>
+                                </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                {% include "base/pagination.html" with paginator=paginator %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endwith %}
+{% endblock content %}
+
+
+{% block modal %}
+<!--Payment Policy-->
+{% get_current_language as LANGUAGE_CODE %}
+{% get_agreement_by_type_language service_type='management' agreement_type='pay' language=LANGUAGE_CODE as AGREEMENT_PAY %}
+{% include 'management/partials/base_modal.html' with id="agreement_pay" title=AGREEMENT_PAY.title content=AGREEMENT_PAY.content|safe %}
+{% endblock modal %}

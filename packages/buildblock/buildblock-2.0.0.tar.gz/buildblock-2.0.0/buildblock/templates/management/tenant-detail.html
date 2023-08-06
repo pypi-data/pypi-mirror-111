@@ -1,0 +1,236 @@
+{% extends "management/base.html" %}
+{% load static i18n humanize base_tag management_tag %}
+
+{% block page_title %}
+{% get_management_roles as MANAGEMENT_ROLES %}
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <h4 class="page-title">Tenant Profile</h4>
+        </div>
+    </div>
+</div>
+{% endblock page_title %}
+
+{% block content %}
+{% get_management_roles as MANAGEMENT_ROLES %}
+{% with active_role=request.session.active_role %}
+<div class="row">
+    <div class="col-xl-4 col-lg-12">
+        <!-- Personal-Information -->
+        <div class="card">
+            <div class="card-body">
+                <div class="card-widgets">
+                    {% get_lease_status_badge status=lease.status %}
+                </div>
+                <h4 class="header-title mt-0 mb-3">{{tenant.name}}</h4>
+                <!-- tenant residence -->
+                <p class="text-muted font-13 mb-1">
+                    {{product.full_address}}
+                </p>
+                <p class="text-muted font-13">
+                    Room {{lease.room_num}}
+                </p>
+                <hr/>
+
+                <div class="text-left">
+                    <!-- Common info -->
+                    <p class="text-muted"><strong>Email</strong> <span class="ml-2">{{tenant.email}}</span></p>
+                    <p class="text-muted"><strong>Mobile</strong><span class="ml-2">{{tenant.phone_number}}</span></p>
+                    <p class="text-muted"><strong>Nationality</strong> <span class="ml-2">{{tenant.nationality}}</span></p>
+                    <!-- tenant profile -->
+                    <p class="text-muted"><strong>Occupation</strong> <span class="ml-2">{{tenant.profile_tenant.occupation}}</span></p>
+                    <p class="text-muted"><strong>Credit Score</strong> <span class="ml-2">{{tenant.profile_tenant.credit_score}}</span></p>
+                    <p class="text-muted"><strong>Emergency Contact</strong> <span class="ml-2">{{tenant.profile_tenant.emergency_contact}}</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-8 col-lg-12">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card tilebox-one">
+                    <div class="card-body">
+                        <h6 class="text-muted text-uppercase mt-0">Rent</h6>
+                        <h2 class="m-b-20 mb-0 dollar_sign">{{lease.rent|intcomma|default:0}}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card tilebox-one">
+                    <div class="card-body">
+                        <h6 class="text-muted text-uppercase mt-0">Deposit</h6>
+                        <h2 class="m-b-20 mb-0 dollar_sign">{{lease.deposit|intcomma|default:0}}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card tilebox-one">
+                    <div class="card-body">
+                        <h6 class="text-muted text-uppercase mt-0">Rent Count</h6>
+                        <h2 class="m-b-20 mb-0">{{rent_count|default:0}} <span class="font-14 text-muted">times</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix">
+            {% if more_transactions %}
+            <a href="{% url 'management:transaction' %}" class="btn btn-sm btn-primary float-right mb-2">View All</a>
+            {% endif %}
+            <h5 class="page-title text-muted">Recent Transactions</h5>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table transaction_table hidden_sm mb-0 text-right">
+                        <colgroup>
+                            <col style="width: fit-content;">
+                            <col>
+                            <col width="150">
+                            <col width="150">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="text-left">STATUS</th>
+                                <th class="text-left">TRANSACTION</th>
+                                <th>DATE</th>
+                                <th class="text-right">AMOUNT</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            {% for transaction in transactions %}
+                            <tr {% if not transaction.payment_made_datetime %}class="bg-lightgray"{% endif %}>
+                                <td class="font-12 text-left transaction_badge_td">
+                                    <span class="badge badge-light">{% get_payment_status_title payment=transaction role=active_role %}</span>
+                                    {% get_payment_overdue_badge payment=transaction %}
+                                </td>
+                                <td class="text-left">
+                                    {% get_payment_description payment=transaction %}
+                                    {% if active_role == MANAGEMENT_ROLES.owner_role or active_role == MANAGEMENT_ROLES.agent_role %}
+                                    {% if transaction.status == 'PENDING' %}
+                                    <a href="{% url 'management:transaction-update' transaction.id %}" class="font-11 btn btn-sm btn-outline-success py-0 px-1 ml-1">Change to Paid</a>
+                                    {% endif %}
+                                    {% endif %}
+                                </td>
+                                <td class="font-12">
+                                    {% if transaction.payment_made_datetime %}
+                                    {{transaction.payment_made_datetime|date:'N j. Y'}}
+                                    {% elif transaction.due_date %}
+                                    <span class="text-muted">Due {{transaction.due_date|date:'N j. Y'}}</span>
+                                    {% endif %}
+                                </td>
+                                <td class="{% if transaction.payment_made_datetime %}text-info{% else %}text-dark{% endif %} font-weight-bold dollar_sign">{{transaction.amount|filter_safe_money_read_from_db|floatformat:"-2"|intcomma}}</td>
+                              </tr>
+                            {% endfor %}
+                            <tr onClick="location.href='{% url 'management:transaction-create' lease.id %}'" style="cursor:pointer;">
+                                <td colspan="100%" class="text-success text-center">Create Payment <i class="mdi mdi-plus"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="transaction_table visible_sm_table table mb-0">
+                        <tbody>
+                        {% for transaction in transactions %}
+                        <tr>
+                            <td class="transaction_unit">
+                                <div class="text-left mb-2">
+                                    <p class="font-10 mb-0 mt-1">
+                                        <span class="badge badge-light">{% get_payment_status_title payment=transaction role=active_role %}</span>
+                                        {% get_payment_overdue_badge payment=transaction %}
+                                        {% if active_role == MANAGEMENT_ROLES.owner_role or active_role == MANAGEMENT_ROLES.agent_role %}
+                                        {% if transaction.status == 'PENDING' %}
+                                        <a href="{% url 'management:transaction-update' transaction.id %}" class="float-right font-10 btn btn-sm btn-outline-success py-0 px-1">Change to Paid</a>
+                                        {% endif %}
+                                        {% endif %}
+                                    </p>
+                                </div>
+                                <h4 class="mt-1 font-14">
+                                    {% get_payment_description payment=transaction %}
+                                </h4>
+                                <div class="clearfix mt-2">
+                                    <div class="float-left">
+                                        <p class="font-11 mb-0 mt-1">
+                                            {% if transaction.payment_made_datetime %}
+                                            {{transaction.payment_made_datetime|date:'N j. Y'}}
+                                            {% elif transaction.due_date %}
+                                            <span class="text-light">Due {{transaction.due_date|date:'N j. Y'}}</span>
+                                            {% endif %}
+                                        </p>
+                                    </div>
+                                    <div class="float-right">
+                                        <h3 class="dollar_sign {% if transaction.payment_made_datetime %}text-info{% else %}text-dark{% endif %} my-0">{{transaction.amount|filter_safe_money_read_from_db|floatformat:"-2"|intcomma}}</h3>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        <tr onClick="location.href='{% url 'management:transaction-create' lease.id %}'" style="cursor:pointer;">
+                            <td class="text-success text-center">Create Payment <i class="mdi mdi-plus"></i></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <h5 class="page-title text-muted">Maintenance</h5>
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-centered hidden_sm mb-0">
+                        <thead>
+                            <tr>
+                                <th>TITLE</th>
+                                <th class="text-right">DATE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for maintenance in maintenances %}
+                        <tr>
+                            <td>
+                                <a href="{% url 'management:maintenance-read' pk=maintenance.id %}" class="text-title">
+                                    {{maintenance.title}}
+                                    <span class="badge {% get_maintenance_status_badge_class status=maintenance.status %}">{{maintenance.get_status_display}}</span>
+                                </a>
+                            </td>
+                            <td class="text-right">{{maintenance.created_at|date:"M. j. Y."}}</td>
+                        </tr>
+                        {% empty %}
+                        <!-- Empty -->
+                        <tr>
+                            <td colspan="100%" class="font-12 text-muted text-center py-4">No Posts</td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+                    <table class="maintenance_list_m visible_sm_table table mb-0">
+                        <tbody>
+                        {% for maintenance in maintenances %}
+                        <tr>
+                            <td>
+                                <div class="clearfix mb-2">
+                                    <div class="float-left">
+                                        <span class="badge {% get_maintenance_status_badge_class status=maintenance.status %}">{{ maintenance.get_status_display }}</span>
+                                    </div>
+                                    <div class="float-right">
+                                        <h3 class="text-muted font-weight-light font-12 mt-1 mb-0">{{maintenance.created_at|date:"M. j. Y."}}</h3>
+                                    </div>
+                                </div>
+                                <a href="{% url 'management:maintenance-read' pk=maintenance.id %}" class="text-body {% if not maintenance.is_read %}font-weight-bold{% endif %}">{{maintenance.title}}</a>
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <!-- Empty -->
+                        <tr>
+                            <td class="font-12 text-muted text-center py-4">No Posts</td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endwith %}
+{% endblock content %}

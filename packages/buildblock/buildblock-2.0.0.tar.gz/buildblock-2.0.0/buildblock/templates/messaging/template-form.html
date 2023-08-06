@@ -1,0 +1,101 @@
+{% extends "messaging/base.html" %}
+{% load static i18n crispy_forms_tags administrator_tag %}
+
+{% block title %}{% trans 'BUILDBLOCK MANAGER' %}{% endblock title %}
+
+{% block page_title %}
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+{% endblock page_title %}
+
+{% block content %}
+{% get_template_category_list as TEMPLATE_CATEGORY_LIST %}
+<form class="message_template_form" method="post" action="{% url 'messaging:template-upsert' %}">
+    {% csrf_token %}
+    <input type="hidden" name="return_url" value="{{request.get_full_path}}">
+    <input type="hidden" name="template_id" value="{{template.id}}">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-9">
+                            <div class="form-group mb-4">
+                                <p class="font-12 text-muted">CATEGORY</p>
+                                <select class="form-control" name="category">
+                                    {% for value, display in TEMPLATE_CATEGORY_LIST %}
+                                    <option value="{{value}}" {% if template.category == value %}selected{% endif %}>{{display}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-group mb-4">
+                                <p class="font-12 text-muted">IS ACTIVE</p>
+                                <div class="custom-control custom-checkbox pl-0">
+                                    <input type="checkbox" id="template_is_active" {% if template.is_active == True %}checked{% endif %} data-switch="success" name="is_active"/>
+                                    <label for="template_is_active" data-on-label="Yes" data-off-label="No"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group mb-4">
+                                <p class="font-12 text-muted">TITLE</p>
+                                <input type="text" class="form-control" name="title" value="{{template.title}}" required>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group mb-0">
+                                <p class="font-12 text-muted">DESCRIPTION</p>
+                                <textarea name="description" class="form-control" rows="3">{{template.description}}</textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-5">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-group mb-0">
+                        <p class="font-12 text-muted">CONTENT</p>
+                        <textarea id="message_content" name="content" class="form-control template_textarea">{{template_content}}</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="text-left">
+                <input type="submit" class="btn btn-success" value="SAVE">
+                <a class="btn btn-light ml-1" href="{% url 'messaging:template-list' %}">CANCEL</a>
+            </div>
+        </div>
+        <div class="col-12 col-lg-7">
+            <div class="card">
+                <div class="card-body">
+                    <p class="font-12 text-muted">PREVIEW</p>
+                    <div id="message_preview"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock content %}
+{% block third_party %}
+<script>
+    $(document).ready(function(){
+        $('.content > .container-fluid').css("max-width","1500px")
+
+        message_content_val = $('textarea[name=content]').val()
+        $('#message_preview').html(message_content_val);
+    })
+
+    var message_content = document.getElementById('message_content');
+    message_content.onkeyup = message_content.onkeypress = function(){
+        document.getElementById('message_preview').innerHTML = this.value;
+    }
+</script>
+{% endblock %}

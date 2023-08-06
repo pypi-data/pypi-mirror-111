@@ -1,0 +1,130 @@
+{% extends "construction/base.html" %}
+{% load static i18n humanize construction_tag %}
+
+{% block topbar %}
+{% include 'construction/partials/topbar_only_title.html' %}
+{% endblock topbar %}
+
+{% block page_title %}
+<div class="row">
+    <div class="col-12 col-lg-8">
+        <div class="page-title-box">
+            {% if is_editor %}
+            <div class="page-title-right">
+                <a class="btn btn-sm btn-link text-warning" href="#" data-toggle="modal" data-target="#edit_work_modal" onclick="updateWorkData('{{work.id}}','{{work.title}}','{{work.type_id}}','{{work.zone_ids}}');"><i class="dripicons-document-edit"></i></a>
+                <a class="btn btn-sm btn-link text-danger" href="#" data-toggle="modal" data-target="#delete_work_modal" onclick="deleteWorkData('{{work.id}}');"><i class="dripicons-trash"></i></a>
+            </div>
+            {% endif %}
+            <h4 class="page-title">{{work.title}}</h4>
+        </div>
+    </div>
+</div>
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 col-lg-8">
+        <div class="card card_mb_50">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-6 col-lg-3 border-right border-secondary">
+                                <label class="font-12 text-gray font-weight-light">TYPE</label>
+                                <p class="text-white font-16 mb-0"><span class="zone_badge badge badge-info mr-1 text_black">{{work.type}}</span></p>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <label class="font-12 text-gray font-weight-light">WORK DATE</label>
+                                <p class="text-white font-16 mb-0">
+                                    {% if work.work_date %}
+                                    {{work.work_date|length}} {% if work.work_date|length == 1 %}day{% else %}days{% endif %}
+                                    {% else %}
+                                    -
+                                    {% endif %}
+                                    {% if is_editor %}
+                                    <a class="badge badge-secondary ml-2" href="#" data-toggle="modal" data-target="#add_work_date_modal" onclick="addWorkDate('{{work.id}}','{% for date in work.work_date %}{{date|date:'Y. m. d'}}{% if not forloop.last %}, {% endif %}{% empty %}-{% endfor %}');"><i class="mdi mdi-plus"></i></a>
+                                    {% endif %}
+                                </p>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <label class="font-12 text-gray font-weight-light">ZONE</label>
+                                <p class="text-white font-16 mb-0">
+                                {% for zone in work.zone_list %}<span class="zone_badge badge badge-secondary">{{zone.name}}</span>{% empty %} - {% endfor %}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-lg-8">
+        <p class="text-white font-16 float-lg-left">PICTURES</p>
+        {% if is_editor %}
+        <form class="add_picture_btns float-right btn-group"
+              method="post"
+              action="{% url 'construction:picture-create' %}"
+              enctype="multipart/form-data">
+            {% csrf_token %}
+            <label class="btn btn-sm btn-link font-12 text-muted d-none d-lg-inline-block">ADD PICTURE</label>
+            <input type="hidden" name="work_id" value="{{work.id}}">
+            <input type="hidden" name="return_url" value="{{request.get_full_path}}">
+            <input type="hidden" name="status">
+            <label for="add_picture_before" class="mr-1 btn btn-sm btn-light font-12 pointer-event">+ BEFORE</label>
+            <input type="file" name="picture" id="add_picture_before" data-status="BEFORE" class="d-none">
+            <label for="add_picture_progress" class="mr-1 btn btn-sm btn-warning font-12 pointer-event">+ IN-PROGRESS</label>
+            <input type="file" name="picture" id="add_picture_progress" data-status="IN_PROGRESS" class="d-none">
+            <label for="add_picture_after" class="btn btn-sm btn-success font-12 pointer-event">+ AFTER</label>
+            <input type="file" name="picture" id="add_picture_after" data-status="AFTER" class="d-none">
+        </form>
+        {% endif %}
+    </div>
+    <div class="col-12 col-lg-8 work_picture_wrap mt-2">
+        <div class="row">
+            {% for picture in pictures %}
+            <div class="col-6 col-lg-4 col-xl-3">
+                <a class="work_picture_card" href="#" data-toggle="modal" data-target="#edit_picture_modal" onclick="changeModalData('{{picture.id}}','{{picture.image_url}}','{{picture.status}}','{{picture.description|safe}}');">
+                    <img src="{{picture.thumb_url}}" alt="">
+                    {% get_picture_status_badge status=picture.status %}
+                </a>
+            </div>
+            {% empty %}
+            <div class="col-12 py-4 text-center font-12 text-muted">
+                No Pictures
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block modal %}
+{% include 'construction/partials/picture_update_modal.html' %}
+
+{% if is_editor %}
+{% include 'construction/partials/work_update_modal.html' %}
+{% include 'construction/partials/add_work_date_modal.html' %}
+{% endif %}
+
+<script>
+function changeModalData(id, image_url, status, description) {
+    $('#pic_modal_img').prop("src", image_url);
+
+    var update_form = $('#edit_picture_modal form');
+    update_form.find('input[name="picture_id"]').val(id);
+    update_form.find('select[name="status"]').val(status);
+    update_form.find('textarea[name="description"]').val(description);
+
+    var delete_form = $('#delete_picture_modal form');
+    delete_form.find('input[name="picture_id"]').val(id);
+}
+$(document).ready(function(){
+    $('.add_picture_btns>input[name="picture"]').change(function(){
+        var form = $(this).parent('form')
+        form.children('input[name="status"]').val($(this).data('status'));
+        form.submit();
+    });
+});
+</script>
+{% endblock modal %}

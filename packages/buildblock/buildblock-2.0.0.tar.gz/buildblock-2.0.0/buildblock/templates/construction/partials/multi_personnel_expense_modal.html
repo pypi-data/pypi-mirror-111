@@ -1,0 +1,42 @@
+{% load static i18n base_tag construction_tag %}
+{% get_worker_list as WORKER_LIST %}
+<div id="add_multi_personnel_expense_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="add_multiple_personnel_expense_label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="add_multiple_personnel_expense_label">Select Worker and Date</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <form method="get"
+                  action="{% url 'construction:multiple-personnel-expense-form' construction_id=construction.id %}">
+                <div class="modal-body">
+                    <div class="form-group mb-3">
+                        <select class="form-control select2" data-toggle="select2" name="worker_id" required>
+                            <option>Select Worker</option>
+                            {% for worker in WORKER_LIST %}
+                            <option value="{{worker.id}}">{{worker.name}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group mb-0">
+                        <div id="reportrange"
+                             class="form-control date"
+                             data-toggle="date-picker-custom-range"
+                             data-target-display="#add_multi_datedisplay"
+                             data-target-startdate="#add_multi_startdate"
+                             data-target-enddate="#add_multi_enddate"
+                             data-cancel-class="btn-light">
+                            <i class="mdi mdi-calendar"></i>&nbsp;
+                            <span id="add_multi_datedisplay">Select Date Range</span>
+                            <input type="hidden" id="add_multi_startdate" name="start_date" value="{{request.GET.start_date|parse_date|date:'Y-m-d'}}" required>
+                            <input type="hidden" id="add_multi_enddate" name="end_date" value="{{request.GET.end_date|parse_date|date:'Y-m-d'}}" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type='submit' class='btn btn-success' value='Next' />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

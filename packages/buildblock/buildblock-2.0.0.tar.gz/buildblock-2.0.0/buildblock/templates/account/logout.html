@@ -1,0 +1,35 @@
+{% extends "account/base.html" %}
+
+{% load static i18n %}
+
+{% block title %}{% trans "BuildBlock | Sign Out" %}{% endblock %}
+
+
+{% block content %}
+<div class="col-lg-5">
+    <div class="card">
+        <div class="card-header pt-4 pb-4 text-center bg-primary">
+            <a href="{% url 'home' %}">
+                <span><img src="{% static 'landing/images/logo/logo_w_h36.png' %}" alt="" height="24" id="side-main-logo"></span>
+            </a>
+        </div>
+        <div class="card-body p-4">
+          <div class="text-center w-75 m-auto">
+              <h4 class="text-dark-50 text-center mt-0 font-weight-bold">{% trans "Sign out" %}</h4>
+              <p class="text-muted mb-3">{% trans 'Are you sure you want to sign out?' %}</p>
+          </div>
+
+          <form method="post" action="{% url 'account_logout' %}" class="mt-4">
+            {% csrf_token %}
+            {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+            {% endif %}
+
+            <div class="form-group mb-0 text-center">
+                <button class="btn btn-primary btn-block" type="submit">{% trans 'Sign Out' %}</button>
+            </div>
+          </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}

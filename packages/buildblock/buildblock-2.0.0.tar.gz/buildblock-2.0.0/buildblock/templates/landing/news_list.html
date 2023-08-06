@@ -1,0 +1,56 @@
+{% extends "landing/base.html" %}
+{% load static i18n base_tag management_tag %}
+
+{% block title %}{% trans "BuildBlock |" %} {{page_title}}{% endblock title %}
+
+{% block page_title %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <h1 class="page-title text-center text-lg-left">{{page_title}}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock page_title %}
+
+{% block content %}
+<div class="content_section pt-0">
+    <div class="container-fluid">
+        <div class="row">
+            {% for news in news_list %}
+            <div class="col-12 col-lg-4">
+                <a class="list_card_link" href="{% url 'news-read' pk=news.id %}">
+                    <div class="card list_card news_list_card">
+                        <div class="card-body p-0">
+                            {% if news.thumbnail %}
+                            <div style="overflow: hidden;">
+                                <img class="thumbnail w-100 card-img-top" src="{{news.news_thumbnail_url}}" alt="">
+                            </div>
+                            {% endif %}
+                            <div class="py-2">
+                                <p class="font-20 font-weight-medium mb-2 text-dark">{{news.title}}</p>
+                                <p class="font-12 mb-0">
+                                    {% if news.writer %}
+                                    <span class="d-inline-block mr-1 text-dark font-weight-medium">{{news.writer}}</span>
+                                    {% endif %}
+                                    <span class="d-inline-block text-muted">{{news.report_date}}</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% empty %}
+            <div class="col-12">
+                <div class="font-12 text-muted text-center py-4">
+                    No Posts
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% include "base/pagination.html" with paginator=paginator %}
+    </div>
+</div>
+{% endblock content %}

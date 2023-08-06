@@ -1,0 +1,300 @@
+{% extends "administrator/base_form.html" %}
+{% load static i18n crispy_forms_tags base_tag administrator_tag %}
+
+{% block title %}{{page_title}}{% endblock %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <input id="case_study_form_submit" type="submit" class="btn btn-success mb-2" value="SAVE" />
+                {% if case_study.id %}
+                <a class="btn btn-danger mb-2" href="{% url 'administrator:case-study-delete' case_study.id %}">DELETE</a>
+                {% endif %}
+            </div>
+
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 col-lg-8">
+        <form class="case_study_form" action="." method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="hidden" name="case_study_id" value="{{case_study.id}}">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6 col-lg-4">
+                            <div class="form-group">
+                                <label class="font-12" for="id_language">LANGUAGE</label>
+                                {{form.language}}
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-4">
+                            <div class="form-group">
+                                <label class="font-12" for="id_status">STATUS</label>
+                                {{form.status}}
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label class="font-12" for="id_report_date">REPORT DATE</label>
+                                <input type="date" class="form-control mb-2 date" name="report_date" id="id_report_date" data-toggle="date-picker" data-single-date-picker="true" value="{{case_study.report_date}}" required>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="font-12" for="id_title">TITLE</label>
+                                {{form.title}}
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label class="font-12" for="id_purchase_price">PURCHASE PRICE</label>
+                                {{form.purchase_price}}
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label class="font-12" for="id_selling_price">SELLING PRICE</label>
+                                {{form.selling_price}}
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="font-12" for="id_content">CONTENT</label>
+                                {{form.content}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-5">
+                            <div class="form-group">
+                                <label class="font-12 d-block" for="id_thumbnail">THUMBNAIL</label>
+                                {{form.thumbnail}}
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="form-group">
+                                <label class="font-12" for="id_map_url">MAP(URL)</label>
+                                {{form.map_url}}
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-lg-3">
+                            <p class="font-12">POSTING OPTION</p>
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" name="headline" class="custom-control-input mb-2" id="id_headline" {% if case_study.headline %}checked{% endif %}>
+                                    <label class="font-12 custom-control-label" for="id_headline">HEADLINE</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" name="is_private" class="custom-control-input mb-2" id="id_is_private" {% if case_study.is_private %}checked{% endif %}>
+                                    <label class="font-12 custom-control-label" for="id_is_private">PRIVATE</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-12 col-lg-4">
+        <div class="card" id="case_card_video">
+            <div class="card-body">
+                <div class="form-group mb-0">
+                    <label class="font-12">VIDEOS(URL)</label>
+                    <form id="video_form">
+                        <input type="hidden" name="case_product" value="{{case_study.id}}">
+                        {% csrf_token %}
+                        <div class="input-group">
+                            <input type="text" class="form-control mb-1" name="url" id="id_video_url" placeholder="enter video url">
+                            <div class="input-group-append">
+                                <input class="btn btn-success" type="submit" value="Add">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row media_list mt-1" id="video_list">
+                        {% for video in videos %}
+                        <div class="col-6 video_unit_{{video.id}} pt-2">
+                            <div class="video-container">
+                                <iframe src="{{video.url}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <a class="btn btn-secondary btn-sm btn-block" onclick="mediaDelete('video','{{video.id}}');">Delete</a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" id="case_card_before_photo">
+            <div class="card-body">
+                <div class="form-group mb-0">
+                    <label class="font-12">PHOTOS(BEFORE)</label>
+                    <form class="mt-1" id="before_photo_form">
+                        <input type="hidden" name="case_product" value="{{case_study.id}}">
+                        <input type="hidden" name="status" value="BEFORE">
+                        {% csrf_token %}
+                        <div class="input-group">
+                            <input type="file" class="form-control mb-1" name="photo" id="id_before_photo">
+                            <div class="input-group-append">
+                                <input class="btn btn-success" type="submit" value="Add">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row media_list mt-1" id="before_photo_list">
+                        {% for photo in before_photos %}
+                        <div class="col-4 photo_unit_{{photo.id}} pt-2">
+                            <img src="{{photo.thumbnail_image_url}}" alt="" width="100%">
+                            <a class="btn btn-secondary btn-sm btn-block" onclick="mediaDelete('photo','{{photo.id}}');">Delete</a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" id="case_card_after_photo">
+            <div class="card-body">
+                <div class="form-group mb-0">
+                    <label class="font-12">PHOTOS(AFTER)</label>
+                    <form class="mt-1" id="after_photo_form">
+                        <input type="hidden" name="case_product" value="{{case_study.id}}">
+                        <input type="hidden" name="status" value="AFTER">
+                        {% csrf_token %}
+                        <div class="input-group">
+                            <input type="file" class="form-control mb-1" name="photo" id="id_after_photo">
+                            <div class="input-group-append">
+                                <input class="btn btn-success" type="submit" value="Add">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row media_list mt-1" id="after_photo_list">
+                        {% for photo in after_photos %}
+                        <div class="col-4 photo_unit_{{photo.id}} pt-2">
+                            <img src="{{photo.thumbnail_image_url}}" alt="" width="100%">
+                            <a class="btn btn-secondary btn-sm btn-block" onclick="mediaDelete('photo','{{photo.id}}');">Delete</a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block third_party %}
+<!-- Video/photo ajax script -->
+<script>
+    // Creat case study video object using ajax
+    $('#video_form').submit(function(e){
+        e.preventDefault();
+        var form = $(this)[0];
+        var data = new FormData(form);
+        $.ajax({
+            type: 'POST',
+            url: "{% url 'administrator:case-study-video-create' %}",
+            data: data,
+            dataType: 'json',
+            success: function(response){
+                if(response.error){
+                    alert(response.error);
+                } else{
+                    $('#video_list').append(
+                        '<div class="col-6 video_unit_'+ response.id +' pt-2">'+
+                            '<div class="video-container">'+
+                                '<iframe src="'+ response.url +'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'+
+                            '</div>'+
+                            '<a class="btn btn-secondary btn-sm btn-block" onclick="mediaDelete(\'video\', \''+ response.id +'\');">Delete</a>'+
+                        '</div>'
+                    )
+                }
+            },
+            error: function(response){
+                alert('Error has occurred while creating item.');
+            },
+            cache: false,
+            processData: false,
+            contentType: false,
+        })
+    })
+
+    // Creat case study photo object using ajax
+    var photo_status = ['before', 'after']
+    $.each(photo_status, function(index, item){
+        $('#' + item + '_photo_form').submit(function(e){
+            e.preventDefault();
+            var form = $(this)[0];
+            var data = new FormData(form);
+            $.ajax({
+                type: 'POST',
+                url: "{% url 'administrator:case-study-photo-create' %}",
+                enctype: 'multipart/form-data',
+                data: data,
+                dataType: 'json',
+                success: function(response){
+                    if(response.error){
+                        alert(response.error);
+                    } else{
+                        $('#' + item + '_photo_list').append(
+                            '<div class="col-4 photo_unit_'+ response.id +' pt-2">'+
+                                '<img src="'+ response.thumbnail +'" alt="" width="100%">'+
+                                '<a class="btn btn-secondary btn-sm btn-block" onclick="mediaDelete(\'photo\', \''+ response.id +'\');">Delete</a>'+
+                            '</div>'
+                        )
+                    }
+                },
+                error: function(response){
+                    alert('Error has occurred while creating item.');
+                },
+                cache: false,
+                processData: false,
+                contentType: false,
+            })
+        })
+    });
+
+    // Delete case study video/photo object using ajax
+    function mediaDelete(type, value){
+        var delete_warning = confirm("Are you sure you want to remove the item?");
+        if(delete_warning){
+            $.ajax({
+                type: "POST",
+                url: "{% url 'administrator:case-study-media-delete' %}",
+                dataType: "json",
+                data: {
+                    'media_type': type,
+                    'media_id': value,
+                    'csrfmiddlewaretoken': '{{csrf_token}}',
+                },
+                success: function(response){
+                    if(response.error){
+                        alert(response.error);
+                    } else{
+                        $('.'+ response.media_type +'_unit_' + response.media_id).hide();
+                    }
+                },
+                error: function(){
+                    alert('Error has occurred while deleting item.');
+                }
+            });
+        }
+    }
+</script>
+<script>
+    $('#case_study_form_submit').click(function(){
+        $('.case_study_form').submit();
+    });
+</script>
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+{% endblock third_party %}

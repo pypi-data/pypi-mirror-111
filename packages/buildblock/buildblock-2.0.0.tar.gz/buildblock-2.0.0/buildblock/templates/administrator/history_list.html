@@ -1,0 +1,60 @@
+{% extends "administrator/base.html" %}
+{% load static i18n %}
+
+{% block title %}{{page_title}}{% endblock %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <a class="btn btn-success mb-2" href="{% url 'administrator:history-create' %}">CREATE HISTORY</a>
+            </div>
+
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+  <div class="col-12">
+    <table class="table table-condensed w-100">
+      <colgroup>
+        <col width="100">
+        <col width="">
+        <col width="">
+        <col width="120">
+      </colgroup>
+      <thead class="thead-dark">
+        <tr>
+          <th>Date</th>
+          <th>Title</th>
+          <th>Subtitle</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for history in history_list %}
+          <tr>
+            <td>{{history.date_display}}</td>
+            <td><a class="text-white" href="{% url 'administrator:history-update' history.id %}">{{history.title}}</a></td>
+            <td>{% if history.subtitle %}{{history.subtitle}}{% else %}-{% endif %}</td>
+            <td>
+              <a class="btn btn-sm btn-link text-warning" href="{% url 'administrator:history-update' history.id %}"><i class="dripicons-document-edit"></i></a>
+              <a class="btn btn-sm btn-link text-danger" href="{% url 'administrator:history-delete' history.id %}"><i class="dripicons-trash"></i></a>
+            </td>
+          </tr>
+        {% empty %}
+          <tr>
+              <td class="text-center" colspan="100%">No Data</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock content %}

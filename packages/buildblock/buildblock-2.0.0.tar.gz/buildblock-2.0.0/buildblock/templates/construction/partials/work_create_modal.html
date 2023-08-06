@@ -1,0 +1,50 @@
+{% load static i18n construction_tag %}
+{% get_work_type_list as WORK_TYPE_LIST %}
+
+<!-- Work Create Modal -->
+<div id="add_work_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="add_work_modal_label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="add_work_modal_label">Add Work</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <form method="post"
+                  action="{% url 'construction:work-create' %}"
+                  enctype="multipart/form-data">
+                {% csrf_token %}
+                {% autoescape off %}
+                <input type="hidden" name="return_url" value="{{request.get_full_path}}" required>
+                <input type="hidden" name="construction_id" value="{{construction.id}}" required>
+                <div class="modal-body">
+                    <div class="form-group mb-4">
+                        <p class="font-12 text-muted">WORK TITLE</p>
+                        <input type="text" name="title" maxlength="100" class="textinput form-control" required id="id_title" value="">
+                    </div>
+                    <div class="form-group mb-4">
+                        <p class="font-12 text-muted">WORK TYPE</p>
+                        <select name="work_type" id="work_type" class="form-control" required>
+                            {% for work_type in WORK_TYPE_LIST %}
+                            <option value="{{work_type.id}}">{{work_type.title}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <p class="font-12 text-muted">ZONE</p>
+                        {% for zone in construction.zones %}
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="zone_{{zone.id}}" name="zone[]" value="{{zone.id}}">
+                            <label class="custom-control-label" for="zone_{{zone.id}}">{{zone.name}}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="modal-footer" style="justify-content: space-between;">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <input type='submit' class='btn btn-success' value='Save' />
+                </div>
+                {% endautoescape %}
+            </form>
+        </div>
+    </div>
+</div>

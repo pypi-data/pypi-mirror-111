@@ -1,0 +1,78 @@
+{% load static i18n %}
+<div id="add_pic_modal_1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="add_pic_modal_label_1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="add_pic_modal_label_1">Select Work</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                {% for work in construction.works %}
+                <a href="#" data-toggle="modal" data-target="#add_pic_modal_2" data-dismiss="modal" onclick="changeModalWork('{{work.id}}');" class="btn btn-sm btn-rec btn-secondary mr-1 mb-2">{{work.title}}</a>
+                {% empty %}
+                <p class="mb-0 py-3 font-12 text-muted text-center">Please add work first</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="add_pic_modal_2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="add_pic_modal_label_2" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="add_pic_modal_label_2">Select Status</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <form method="post"
+                  action="{% url 'construction:picture-create' %}"
+                  enctype="multipart/form-data">
+                {% csrf_token %}
+                {% autoescape off %}
+                <input type="hidden" name="work_id">
+                <input type="hidden" name="return_url" value="{{request.get_full_path}}">
+                <input type="hidden" name="status">
+                <div class="modal-body">
+                    <div class="btn-group w-100">
+                        <label for="add_pic_modal_before" class="btn btn-outline-info font-12">+ BEFORE</label>
+                        <input type="radio" name="select_status" id="add_pic_modal_before" data-status="BEFORE" class="d-none">
+                        <label for="add_pic_modal_progress" class="btn btn-outline-info font-12">+ IN PROGRESS</label>
+                        <input type="radio" name="select_status" id="add_pic_modal_progress" data-status="IN_PROGRESS" class="d-none">
+                        <label for="add_pic_modal_after" class="btn btn-outline-info font-12">+ AFTER</label>
+                        <input type="radio" name="select_status" id="add_pic_modal_after" data-status="AFTER" class="d-none">
+                    </div>
+                </div>
+                <div class="modal-footer" style="justify-content: space-between;">
+                    <button type="button" class="btn btn-secondary" data-target="#add_pic_modal_1" data-toggle="modal" data-dismiss="modal">Previous</button>
+                    <label for="upload_file" class="btn btn-success">Picture Upload</label>
+                    <input type="file" name="picture" class="d-none" id="upload_file">
+                </div> 
+                {% endautoescape %}
+            </form>
+        </div>
+    </div>
+</div>
+
+{% block third_party %}
+<script>
+function changeModalWork(id){
+    var second_form = $('#add_pic_modal_2 form');
+    second_form.find('input[name="work_id"]').val(id);
+}
+
+$(document).ready(function(){
+    $('#add_pic_modal_2').find('input[name="select_status"]').change(function(){
+        var id = this.id;
+        var form = $('#add_pic_modal_2 form');
+        
+        $('label[for^="add_pic_modal_"]').removeClass('btn-info');
+        $('label[for='+id+']').addClass('btn-info');
+
+        form.children('input[name="status"]').val($(this).data('status'));
+    });
+    $('#add_pic_modal_2').find('input[name="picture"]').change(function(){
+        $('#add_pic_modal_2 form').submit();
+    });
+});
+</script>
+{% endblock third_party %}

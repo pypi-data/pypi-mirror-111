@@ -1,0 +1,40 @@
+{% extends "messaging/base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans 'BUILDBLOCK MANAGER' %}{% endblock title %}
+
+{% block page_title %}
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <a class="btn btn-success btn-rounded" href="{% url 'messaging:template-create-view' %}">Create Template</a>
+            </div>
+
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        {% for template in templates %}
+        <div class="card message_template_card">
+            <div class="card-body">
+                <div class="float-right">
+                    {% if template.is_active == True %}<a href="{% url 'messaging:render-message' pk=template.id %}" class="btn btn-primary btn-sm mr-1">Send Message</a>{% endif %}
+                    <a href="{% url 'messaging:template-update-view' pk=template.id %}" class="btn btn-link btn-sm">Edit Template</a>
+                </div>
+                <h4 class="text-{% if template.is_active == True %}dark{% else %}muted{% endif %} m-0"><span class="badge badge-light mr-1">{{template.category}}</span> {{template.title}}</h4>
+            </div>
+        </div>
+        {% empty %}
+        <div class="py-5">
+            <p class="text-muted font-14 text-center">No Templates</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

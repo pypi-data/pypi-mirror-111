@@ -1,0 +1,64 @@
+{% extends "administrator/base.html" %}
+{% load static i18n base_tag %}
+
+{% block title %}{{page_title}}{% endblock %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <table class="table table-condensed dataTable w-100">
+            <colgroup>
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+            </colgroup>
+            <thead class="thead-dark">
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Address</th>
+                  <th>Product</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for investor in investors|dictsortreversed:"id" %}
+                <tr>
+                  <td>{{investor.id}}</td>
+                  <td><a class="text-body" href="{% url 'administrator:investor-detail' investor.id %}">{{investor.name}}</a></td>
+                  <td>{{investor.email}}</td>
+                  <td>{{investor.phone}}</td>
+                  <td>{{investor.address}}</td>
+                  <td>{{investor.num_investment}}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td class="text-center" colspan="100%">No Investors</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% include "base/pagination.html" with paginator=paginator add_css="page_nav_dark" sign_align="end"%}
+{% endblock content %}
+
+{% block third_party %}
+{% include "base/load_datatable.html" %}
+{% endblock third_party %}

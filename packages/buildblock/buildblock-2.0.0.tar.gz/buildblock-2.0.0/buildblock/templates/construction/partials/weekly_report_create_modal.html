@@ -1,0 +1,62 @@
+{% load static i18n base_tag construction_tag %}
+<div id="add_weekly_report_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="add_weekly_report_label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="add_weekly_report_label">Select Date Range</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <form method="POST"
+                  action="{% url 'construction:weekly-report-create' %}">
+                  {% csrf_token %}
+                  <input type="hidden" name="construction_id" value="{{construction.id}}"/>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-5 pr-0">
+                            <p class="font-12 text-muted mb-1">Start</p>
+                            <p id="text_weekly_startdate" class="mb-0" style="padding: 0.5rem 0;">----. --. --</p>
+                        </div>
+                        <div class="col-1 px-0 text-center font-18 font-weight-bold" style="padding-top: 30px;">~</div>
+                        <div class="col-6 pl-0">
+                            <p class="font-12 text-muted mb-1">End</p>
+                            <input type="date"
+                                   name="end_date"
+                                   class="form-control date"
+                                   id="select_weekly_enddate"
+                                   data-toggle="date-picker"
+                                   data-single-date-picker="true"
+                                   required>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type='submit' class='btn btn-success' value='Next' />
+                </div> 
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+function formatDate(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) 
+        month = '0' + month;
+    if (day.length < 2) 
+        day = '0' + day;
+    return [year, month, day].join('. ');
+}
+$(document).ready(function(){
+    $('#select_weekly_enddate').change(function(){
+        console.log($(this).val())
+        var endDate = new Date($(this).val());
+        var startDateTimestamp = endDate.setDate(endDate.getDate()-6);
+        var startDateDisplay = formatDate(startDateTimestamp)
+        $("#text_weekly_startdate").html(startDateDisplay);
+    });
+});
+</script>

@@ -1,0 +1,109 @@
+{% extends "management/base.html" %}
+{% load static i18n base_tag management_tag crispy_forms_tags %}
+
+{% block page_title %}
+{% get_management_roles as MANAGEMENT_ROLES %}
+
+<!-- start page title -- resolved상태일때 집주인에게만 보이게 -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <form action="{% url 'management:maintenance-change-to-resolved' %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="maintenance_id" value="{{maintenance.id}}">
+                <input type="hidden" name="maintenance_status" value="{{maintenance.status}}">
+                <div class="page-title-right btn-group">
+                    {% if request.session.active_role in maintenance_status_changeable_roles %}
+                    <button  type="submit" class="btn btn-primary">
+                        {% get_maintenance_resolved_button_text status=maintenance.status %}
+                    </button>
+                    {% endif %}
+                </div>
+                <div class="page-title-right btn-group">
+                    {% if request.user == maintenance.tenant %}
+                    <a class="btn btn-success mb-3" href="{% url 'management:maintenance-edit' pk=maintenance.id %}">EDIT</a>
+                    {% endif %}
+                </div>
+
+                <h4 class="page-title">Read Maintenance</h4>
+
+                <div class="page-title-right-xs page-title-right-relative">
+                    {% if request.session.active_role == MANAGEMENT_ROLES.owner_role %}
+                    <button  type="submit" class="btn btn-success btn-rounded font-12">
+                        {% get_maintenance_resolved_button_text status=maintenance.status %}
+                    </button>
+                    {% endif %}
+                    {% if request.user == maintenance.tenant %}
+                    <a class="btn btn-success btn_circle" href="{% url 'management:maintenance-edit' pk=maintenance.id %}"><i class="mdi mdi-pencil-plus-outline"></i></a>
+                    {% endif %}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<!-- ADD COMMENT DETAIL VIEW (READ)-->
+
+<div class="row">
+    <div class="col-12">
+        <div class="card maintenance_read bg-lightgray">
+            <div class="card-body">
+
+                <h4 class="header-title font-18">
+                    {{maintenance.title}}
+                    <span class="badge {% get_maintenance_status_badge_class status=maintenance.status %}">{{ maintenance.get_status_display }}</span>
+                </h4>
+
+                <p class="text-muted font-14 mb-3">
+                    <span>{{maintenance.tenant.name}}</span>&nbsp;&nbsp;&nbsp;
+                    <span>{{maintenance.created_at}}</span>
+                    <br>
+                    <span>{{product.full_address}}</span>
+                </p>
+                <div class="font-14">
+                    <div class="mb-0 text-body">{{maintenance.content|safe}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <h5 class="page-title text-muted">Comments</h5>
+        <form id="form_comment_delete" method="post" action="{% url 'management:maintenance-comment-delete' %}">
+            {% csrf_token %}
+            <input type="hidden" name="maintenance_id" value="{{maintenance.id}}">
+            <input type="hidden" name="comment_created_at" id="comment_delete_created_at">
+        </form>
+        {% for comment_created_at, comment_data in maintenance.comments.items %}
+        <div class="card maintenance_comment">
+            <div class="card-body">
+                <p class="text-muted font-14 float-right">
+                    <span>{{comment_created_at|parse_date|date:'N j. Y. P '}}</span>
+                    {% if request.user.id == comment_data.writer %}
+                    <br><a onclick="$('#comment_delete_created_at').val('{{comment_created_at}}');$('#form_comment_delete').submit()"><span>delete</span></a>
+                    {% endif %}
+                </p>
+                <h4 class="header-title mb-2">{% get_user_name_by_id id=comment_data.writer %}</h4>
+                <div class="mb-0 text-body">{{comment_data.content}}</div>
+            </div>
+        </div>
+        {% endfor %}
+
+        <div class="card maintenance_comment_write">
+            <div class="card-body">
+                <button type="submit" class="btn btn-success btn-sm float-right"  onclick="this.disabled=true;$('#comment_form').submit();">POST</button>
+                <h4 class="header-title mb-3" style="opacity:.4;">Add Comment</h4>
+                <form id="comment_form" method="post" action="{% url 'management:maintenance-comment-add' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="maintenance_id" value="{{maintenance.id}}">
+                    <textarea id="comment_content" name="comment_content" class="form-control" required></textarea>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

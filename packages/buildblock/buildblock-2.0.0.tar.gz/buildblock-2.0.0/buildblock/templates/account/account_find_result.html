@@ -1,0 +1,31 @@
+{% extends "account/base.html" %}
+
+{% load static i18n account crispy_forms_tags %}
+
+{% block title %}{% trans "BuildBlock | Forgot email" %}{% endblock %}
+
+
+{% block content %}
+<div class="col-lg-5">
+  <div class="card">
+      <div class="card-header pt-4 pb-4 text-center bg-primary">
+          <a href="#">
+              <span><img src="{% static 'landing/images/logo/logo_w_h36.png' %}" alt="" height="24" id="side-main-logo"></span>
+          </a>
+      </div>                            
+      <div class="card-body p-4">
+        <div class="text-center w-75 m-auto">
+            <h4 class="text-dark-50 text-center mt-0 font-weight-bold">{% trans "Account Availability" %}</h4>
+            <p class="text-muted mb-3">{% trans "We have an account linked to this email." %}</p>
+            <p class="text-primary mb-4">{{username_half}}<span style="font-style: italic;">{{username_x}}</span>@{{domain}}</p>
+      
+            <br><br>
+            <p class="text-muted">{% blocktrans %}If you have difficulties finding your account or need additional help, please contact BuildBlock Customer Center (help@buildblock.io).{% endblocktrans %}</p>
+        </div>
+      </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+

@@ -1,0 +1,52 @@
+{% extends service_app_name|add:"/base.html" %}
+{% load static i18n humanize account_tag base_tag %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+{% get_service_user_roles as SERVICE_USER_ROLES %}
+<div class="row">
+    <div class="col-xl-4 col-lg-12">
+        <!-- Personal-Information -->
+        <div class="card">
+            <div class="card-body">
+                {% has_all_roles service_role_set=service_role_set user_roles=request.user.user_role as HAS_ALL_ROLES_SIGNUP %}
+                {% if not HAS_ALL_ROLES_SIGNUP %}
+                <a href="{% url 'investment:signup-choice' %}" class="btn btn-sm btn-outline-primary float-right mb-3">Add Role</a>
+                {% endif %}
+                <h4 class="header-title mt-0 mb-3">{{user.name}}</h4>
+                <hr/>
+
+                <div class="text-left">
+                    <!-- Common info -->
+                    <p class="text-muted"><strong>Email</strong> <span class="ml-2">{{user.email}}</span></p>
+                    <p class="text-muted"><strong>Mobile</strong><span class="ml-2">{{user.phone_number}}</span></p>
+                    <p class="text-muted"><strong>Nationality</strong> <span class="ml-2">{{user.nationality}}</span></p>
+                    <hr/>
+                    {% if request.session.active_role == SERVICE_USER_ROLES.agent_role %}
+                    <!-- agent profile -->
+                    <p class="text-muted"><strong>Address</strong> <span class="ml-2">{{user.profile_agent.full_address}}</span></p>
+                    {% endif %}
+                    <hr/>
+                    <p class="text-muted mb-0">
+                        <a href="{% url 'investment:profile-update' %}"><span>Change Profile</span></a>
+                        <a href="{% url 'account_change_password' %}"><span class="ml-3">Change Password</span></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Personal-Information -->
+    </div> <!-- end col-->
+
+</div>
+{% endblock content %}

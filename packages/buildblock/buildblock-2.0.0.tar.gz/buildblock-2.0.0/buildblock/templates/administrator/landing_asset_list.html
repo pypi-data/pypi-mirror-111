@@ -1,0 +1,230 @@
+{% extends "administrator/base.html" %}
+{% load static i18n base_tag administrator_tag %}
+
+{% block title %}{{page_title}}{% endblock %}
+
+{% block page_title %}
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+          <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+{% endblock page_title %}
+
+{% block content %}
+<!-- Landing Carousel -->
+<div class="row">
+  <div class="col-12">
+      <div class="float-right">
+          <a href="{% url 'administrator:landing-carousel-create' %}" class="btn btn-sm btn-success font-12"><i class="dripicons-plus mr-1"></i> ADD CAROUSEL</a>
+      </div>
+      <p class="text-white font-16">
+          Carousels
+      </p>
+  </div>
+  {% for carousel in carousels %}
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12 col-lg-4">
+            <div class="float-right">
+              <a class="btn btn-sm btn-link text-warning" href="{% url 'administrator:landing-carousel-update' carousel.id %}"><i class="dripicons-document-edit"></i></a>
+              <a class="btn btn-sm btn-link text-danger" href="{% url 'administrator:landing-carousel-delete' carousel.id %}"><i class="dripicons-trash"></i></a>
+            </div>
+            {% get_landing_asset_active_badge carousel.start_date carousel.end_date carousel.is_active %}
+            <div class="mt-2">
+              <p class="mb-1">Date : {{carousel.start_date}} - {{carousel.end_date}}</p>
+              <p>Ordering : {{carousel.ordering}}
+            </div>
+          </div>
+          {% if carousel.title_en %}
+          <div class="col-12 col-lg-4">
+            <div class="mt-3 mt-lg-0">
+              <h3 class="text-white header-title"><span class="badge badge-light">EN</span></h3>
+              <h4>{{carousel.title_en}}</h4>
+              {% if carousel.description_en %}<p>{{carousel.description_en}}</p>{% endif %}
+              {% if carousel.button_url %}
+              <p>Button : <a class="text-muted" href="{{carousel.button_url}}" target="_blank">{{carousel.button_title_en}}</a></p>
+              {% endif %}
+              <div class="btn-group">
+                <a class="btn btn-sm btn-outline-light" href="{{carousel.image_en.url}}" target="_blank">PC Image</a>
+                {% if carousel.image_mobile_en %}
+                <a class="btn btn-sm btn-outline-light" href="{{carousel.image_mobile_en.url}}" target="_blank">Mobile Image</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          {% if carousel.title_ko %}
+          <div class="col-12 col-lg-4">
+            <div class="mt-3 mt-lg-0">
+              <h3 class="text-white header-title"><span class="badge badge-light">KO</span></h3>
+              <h4>{{carousel.title_ko}}</h4>
+              {% if carousel.description_ko %}{{carousel.description_ko}}</p>{% endif %}
+              {% if carousel.button_url %}
+              <p>Button : <a class="text-muted" href="{{carousel.button_url}}" target="_blank">{{carousel.button_title_ko}}</a></p>
+              {% endif %}
+              <div class="btn-group">
+                <a class="btn btn-sm btn-outline-light" href="{{carousel.image_ko.url}}" target="_blank">PC Image</a>
+                {% if carousel.image_mobile_ko %}
+                <a class="btn btn-sm btn-outline-light" href="{{carousel.image_mobile_ko.url}}" target="_blank">Mobile Image</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% empty %}
+  <div class="col-12">
+      <p class="text-center text-muted py-4">No Carousels</p>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Landing Popup -->
+<div class="row mt-4">
+  <div class="col-12">
+      <div class="float-right">
+          <a href="{% url 'administrator:landing-popup-create' %}" class="btn btn-sm btn-success font-12"><i class="dripicons-plus mr-1"></i> ADD POPUP</a>
+      </div>
+      <p class="text-white font-16">
+          Popups
+      </p>
+  </div>
+  {% for popup in popups %}
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12 col-lg-4">
+            <div class="float-right">
+              <a class="btn btn-sm btn-link text-warning" href="{% url 'administrator:landing-popup-update' popup.id %}"><i class="dripicons-document-edit"></i></a>
+              <a class="btn btn-sm btn-link text-danger" href="{% url 'administrator:landing-popup-delete' popup.id %}"><i class="dripicons-trash"></i></a>
+            </div>
+            {% get_landing_asset_active_badge popup.start_date popup.end_date popup.is_active %}
+            <div class="mt-2">
+              <p class="mb-1">Date : {{popup.start_date}} - {{popup.end_date}}</p>
+            </div>
+          </div>
+          {% if popup.title_en %}
+          <div class="col-12 col-lg-4">
+            <div class="mt-3 mt-lg-0">
+              <h3 class="text-white header-title"><span class="badge badge-light">EN</span></h3>
+              <h4>{{popup.title_en}}</h4>
+              {% if popup.url %}
+              <p>Link : <a class="text-muted" href="{{popup.url}}" target="_blank">{{popup.url}}</a></p>
+              {% endif %}
+              <div class="btn-group">
+                <a class="btn btn-sm btn-outline-light" href="{{popup.image_en.url}}" target="_blank">PC Image</a>
+                {% if popup.image_mobile_en %}
+                <a class="btn btn-sm btn-outline-light" href="{{popup.image_mobile_en.url}}" target="_blank">Mobile Image</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          {% if popup.title_ko %}
+          <div class="col-12 col-lg-4">
+            <div class="mt-3 mt-lg-0">
+              <h3 class="text-white header-title"><span class="badge badge-light">KO</span></h3>
+              <h4>{{popup.title_ko}}</h4>
+              {% if popup.url %}
+              <p>Link : <a class="text-muted" href="{{popup.url}}" target="_blank">{{popup.url}}</a></p>
+              {% endif %}
+              <div class="btn-group">
+                <a class="btn btn-sm btn-outline-light" href="{{popup.image_ko.url}}" target="_blank">PC Image</a>
+                {% if popup.image_mobile_ko %}
+                <a class="btn btn-sm btn-outline-light" href="{{popup.image_mobile_ko.url}}" target="_blank">Mobile Image</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% empty %}
+  <div class="col-12">
+      <p class="text-center text-muted py-4">No Popups</p>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Landing Thin Banner -->
+<div class="row mt-4">
+  <div class="col-12">
+      <div class="float-right">
+          <a href="{% url 'administrator:landing-thinbanner-create' %}" class="btn btn-sm btn-success font-12"><i class="dripicons-plus mr-1"></i> ADD POPUP</a>
+      </div>
+      <p class="text-white font-16">
+          Thin Banners
+      </p>
+  </div>
+  {% for thinbanner in thinbanners %}
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12 col-lg-4">
+            <div class="float-right">
+              <a class="btn btn-sm btn-link text-warning" href="{% url 'administrator:landing-thinbanner-update' thinbanner.id %}"><i class="dripicons-document-edit"></i></a>
+              <a class="btn btn-sm btn-link text-danger" href="{% url 'administrator:landing-thinbanner-delete' thinbanner.id %}"><i class="dripicons-trash"></i></a>
+            </div>
+            {% get_landing_asset_active_badge thinbanner.start_date thinbanner.end_date thinbanner.is_active %}
+            <div class="mt-2">
+              <p class="mb-1">Date : {{thinbanner.start_date}} - {{thinbanner.end_date}}</p>
+            </div>
+          </div>
+          {% if thinbanner.title_en %}
+          <div class="col-12 col-lg-4">
+            <div class="mt-3 mt-lg-0">
+              <h3 class="text-white header-title"><span class="badge badge-light">EN</span></h3>
+              <h4>{{thinbanner.title_en}}</h4>
+              {% if thinbanner.url %}
+              <p>Link : <a class="text-muted" href="{{thinbanner.url}}" target="_blank">{{thinbanner.url}}</a></p>
+              {% endif %}
+              <div class="btn-group">
+                <a class="btn btn-sm btn-outline-light" href="{{thinbanner.image_en.url}}" target="_blank">PC Image</a>
+                {% if thinbanner.image_mobile_en %}
+                <a class="btn btn-sm btn-outline-light" href="{{thinbanner.image_mobile_en.url}}" target="_blank">Mobile Image</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          {% if thinbanner.title_ko %}
+          <div class="col-12 col-lg-4">
+            <div class="mt-3 mt-lg-0">
+              <h3 class="text-white header-title"><span class="badge badge-light">KO</span></h3>
+              <h4>{{thinbanner.title_ko}}</h4>
+              {% if thinbanner.url %}
+              <p>Link : <a class="text-muted" href="{{thinbanner.url}}" target="_blank">{{thinbanner.url}}</a></p>
+              {% endif %}
+              <div class="btn-group">
+                <a class="btn btn-sm btn-outline-light" href="{{thinbanner.image_ko.url}}" target="_blank">PC Image</a>
+                {% if thinbanner.image_mobile_ko %}
+                <a class="btn btn-sm btn-outline-light" href="{{thinbanner.image_mobile_ko.url}}" target="_blank">Mobile Image</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% empty %}
+  <div class="col-12">
+      <p class="text-center text-muted py-4">No Thin Banners</p>
+  </div>
+  {% endfor %}
+</div>
+{% include "base/pagination.html" with paginator=paginator add_css="page_nav_dark" sign_align="end"%}
+{% endblock content %}

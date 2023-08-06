@@ -1,0 +1,53 @@
+{% extends "administrator/base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans 'SEND EMAIL' %}{% endblock %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <h4 class="page-title">SEND TO GROUP</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<form action="{% url 'administrator:email-message-send' %}"
+      method="post"
+      autocomplete="on"
+      class="w-100"
+      onsubmit="return ((confirm('단체 메일을 발송하겠습니까?')) ? true : false)">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-12 col-lg-8">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-group">
+                        <h6 class="text-muted">RECIPIENT</h6>
+                        <input type="text" name="recipient_title" class="textinput form-control mb-2" value="{{recipient_title}}" disabled>
+                        {% for recipient in recipients %}
+                        <input type="hidden" name="email_recipient" value="{{recipient.email}}">
+                        {% endfor %}
+                    </div>
+                    <div class="form-group">
+                        <h6 class="text-muted">TITLE</h6>
+                        <input type="text" name="email_title" class="textinput form-control mb-2" placeholder="제목 앞에 항상 [BuildBlock]이 자동으로 붙음" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <h6 class="text-muted">MESSAGE</h6>
+                        <textarea class="form-control" name="email_message" id="" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <div class="text-right admin_submit_btn">
+                      <input type='submit' class='btn btn-success' value='SEND'/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock content %}

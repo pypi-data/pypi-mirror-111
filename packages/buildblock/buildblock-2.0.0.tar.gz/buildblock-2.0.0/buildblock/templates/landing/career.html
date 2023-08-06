@@ -1,0 +1,132 @@
+{% extends "landing/base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "BuildBlock |" %} {{page_title}}{% endblock title %}
+
+{% block content %}
+<div class="banner_section career_banner">
+</div>
+
+<div class="content_section pt-lg-0">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-7 text-center">
+                <img src="{% static 'landing/images/logo/logo_b_pp.png' %}" alt="" width="80">
+                <h1 class="h3 mt-4">
+                    {% blocktrans %}BuildBlock aspires<br>to be the hub of global real estate.{% endblocktrans %}
+                </h1>
+            </div>
+            <div class="col-12 col-lg-7">
+                <h5 class="h5 pt-4">
+                    {% blocktrans %}We are on our way to make a world where individuals can safely and easily make cross-border real estate investments. We are a team of top-tier global real estate, architecture, and tech experts to shorten the market growth.{% endblocktrans %}<br><br>
+                    {% blocktrans %}Our goal is simple.{% endblocktrans %}<br>
+                    {% blocktrans %}Annual growth of 300 percent. We are looking for new talents who will be pioneering the journey to success with us. The company will support in every way to encourage the growth of our team and the company.{% endblocktrans %}
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content_section career_section bg-lightgray">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-9">
+                <div class="row justify-content-lg-center">
+                    <div class="col-12 text-center">
+                        <h3 class="h3 mb-4 pb-lg-4">
+                            {% blocktrans %}We are looking for talents<br>with the following characteristics{% endblocktrans %}
+                        </h3>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="shadow-lg p-3 h-100">
+                            <h4 class="h4 mb-2">
+                                <span class="num">01.</span><br>{% blocktrans %}The company’s growth means <br>your growth{% endblocktrans %}
+                            </h4>
+                            <h5 class="h5 mt-3 mb-0">
+                                {% blocktrans %}
+                                We are creating a business that never existed before. Our business would encompass different keywords, such as global, real estate, architecture, finance, fintech, realtor, execution, and so forth.<br>
+                                BuildBlock will emerge as the best in such a value chain. We want to work with someone who can grow with us.
+                                {% endblocktrans %}
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 mt-4 mt-lg-0">
+                        <div class="shadow-lg p-3 h-100">
+                            <h4 class="h4 mb-2">
+                                <span class="num">02.</span><br>{% blocktrans %}Action before words,<br>performance before process{% endblocktrans %}
+                            </h4>
+                            <h5 class="h5 mt-3 mb-0">
+                                {% blocktrans %}
+                                The biggest value that the company can give us is the fruit of success that we all created together.<br>
+                                It’s important to give our best, but we are looking for someone who can bring meaningful results together.
+                                {% endblocktrans %}
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 mt-4">
+                        <div class="shadow-lg p-3 h-100">
+                            <h4 class="h4 mb-2">
+                                <span class="num">03.</span><br>{% blocktrans %}Confident{% endblocktrans %}
+                            </h4>
+                            <h5 class="h5 mt-3 mb-0">
+                                {% blocktrans %}
+                                Confidence can mean a lot of things.<br>
+                                Did you tell the truth? Can you be responsible for actions? Can you always give your best?<br>
+                                We want to work with someone who can stand confidently among the team members.
+                                {% endblocktrans %}
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 mt-4">
+                        <div class="shadow-lg p-3 h-100">
+                            <h4 class="h4 mb-2">
+                                <span class="num">04.</span><br>{% blocktrans %}Global talent{% endblocktrans %}
+                            </h4>
+                            <h5 class="h5 mt-3 mb-0">
+                                {% blocktrans %}
+                                BuildBlock aspires to be the global hub for real estate investment.
+                                We are looking for people who are not afraid to go global with us.
+                                {% endblocktrans %}
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if news_list %}
+<div class="content_section">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-9">
+                <div class="page-title-box">
+                    {% if request.user.is_superuser %}
+                    <div class="page-title-right mt-0">
+                        <a class="btn btn-success btn-sm" href="{% url 'news-write' %}">WRITE</a>
+                    </div>
+                    {% endif %}
+                    <h2 class="h2 text-center text-lg-left">{% trans "Jobs" %}</h2>
+                </div>
+
+                <table class="table table-hover mt-3 mb-0">
+                    <thead>
+                        <tr>
+                            <th>{% trans "Title" %}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for news in news_list %}
+                        <tr onClick="location.href='{% url 'news-read' pk=news.id %}'" style="cursor:pointer;">
+                            <td>{{news.title}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock content %}

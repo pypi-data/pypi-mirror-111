@@ -1,0 +1,38 @@
+<!-- add work date modal -->
+<div id="add_work_date_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="add_work_date_label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <form action="{% url 'construction:add-work-date' %}" method="POST">
+            {% csrf_token %}
+                <input type="hidden" name="return_url" value="{{request.get_full_path}}">
+                <input type="hidden" name="work_id">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="add_work_date_label">Add work date</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <p class="font-12 text-white mb-1">Workdays so far</p>
+                        <input class="form-control" type="text" name="add_work_date_list" readonly>
+                    </div>
+                    <div class="form-group mb-0">
+                        <p class="font-12 text-white mb-1">Select date you worked</p>
+                        <input type="date" class="form-control date" data-toggle="date-picker" data-single-date-picker="true" name="work_date" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" value="Add" class='btn btn-success'/>
+                </div> 
+                <div class="modal-footer">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    function addWorkDate(id, work_date) {
+        var update_form = $('#add_work_date_modal form');
+        update_form.find('input[name="work_id"]').val(id);
+        update_form.find('input[name="add_work_date_list"]').val(work_date);
+    };
+</script>

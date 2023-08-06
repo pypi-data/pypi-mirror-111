@@ -1,0 +1,30 @@
+{% extends "account/email/email_confirmation_message_base.html" %}
+
+{% load account %}
+{% load static i18n %}
+{% user_display user as user_display %}
+
+{% block email_content %}
+    <tr>
+        <td style="padding-bottom:30px;font-weight:700;font-size:32px;">
+            {% trans "Account registration confirmation" %}<br>
+        </td>
+    </tr>
+    <tr>
+        <td style="padding-bottom:30px;font-size:16px;font-weight:500;">
+            {% blocktrans %}Hello {{user}}</span>,<br>
+            Thank you for your registration for BuildBlock.{% endblocktrans %}
+        </td>
+    </tr>
+    {% autoescape off %}
+    <tr>
+        <td style="font-size:14px;font-weight:300;">
+            {% blocktrans %}You’re almost done!<br>
+            Tap the email verification link below to finish setting up your account:{% endblocktrans %}<br>
+            <a href="{{ activate_url }}" style="margin-bottom:10px;display:inline-block;background-color:#9013fe;color:#fff;text-align: center;vertical-align: middle;padding:8px 15px;font-size:.875rem;line-height:1.5;text-decoration:none;font-weight:500;">{% trans "Verify My Account" %}</a><br>
+            {% blocktrans %}If the button above does not work or appear, please use the url address below to verify your account.{% endblocktrans %}<br><br>
+            <a href="{{ activate_url }}" target="_blank" style="font-size:11px;color:#999;text-decoration:none;">{{ activate_url }}</a>
+        </td>
+    </tr>
+    {% endautoescape %}
+{% endblock email_content %}

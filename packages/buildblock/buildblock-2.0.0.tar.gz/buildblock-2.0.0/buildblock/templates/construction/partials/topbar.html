@@ -1,0 +1,43 @@
+{% load static i18n %}
+
+<div class="navbar-custom">
+    {% if is_editor %}
+    <ul class="list-unstyled topbar-right-menu float-right mb-0">
+        <li class="dropdown notification-list">
+            <a class="nav-link dropdown-toggle arrow-none m-0 px-md-3 text-white font-15"
+               href="#" role="button"
+               data-toggle="dropdown"
+               aria-haspopup="false"
+               aria-expanded="false">
+                <i class="dripicons-plus mr-0 mr-lg-1"></i>
+                <span class="font-weight-bold hidden_sm">
+                    ADD ITEMS
+                </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated topbar-dropdown-menu">
+                <a href="#" class="dropdown-item notify-item" data-toggle="modal" data-target="#add_expense_modal_1">
+                    <span>Today's Expense</span>
+                </a>
+                <a href="#" class="dropdown-item notify-item" data-toggle="modal" data-target="#add_work_modal">
+                    <span>Add Works</span>
+                </a>
+                <a href="#" class="dropdown-item notify-item" data-toggle="modal" data-target="#add_pic_modal_1">
+                    <span>Add Pictures</span>
+                </a>
+            </div>
+        </li>
+    </ul>
+    {% endif %}
+    <button class="button-menu-mobile open-right disable-btn">
+        <i class="mdi mdi-menu"></i>
+    </button>
+    <div class="topbar_title">
+        <h4>{{construction.title}}</h4>
+    </div>
+</div>
+
+{% if is_editor %}
+{% include 'construction/partials/expense_create_modal.html' %}
+{% include 'construction/partials/work_create_modal.html' %}
+{% include 'construction/partials/picture_form_modal.html' %}
+{% endif %}

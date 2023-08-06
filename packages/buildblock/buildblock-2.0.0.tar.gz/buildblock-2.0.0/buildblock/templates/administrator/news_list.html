@@ -1,0 +1,70 @@
+{% extends "administrator/base.html" %}
+{% load static i18n base_tag %}
+
+{% block title %}{{page_title}}{% endblock %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <a class="btn btn-success mb-2" href="{% url 'administrator:news-create' %}">WRITE NEWS</a>
+            </div>
+
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+  <div class="col-12">
+    <table class="table table-condensed w-100">
+      <colgroup>
+        <col width="100">
+        <col width="70">
+        <col width="">
+        <col width="">
+        <col width="">
+        <col width="70">
+        <col width="120">
+      </colgroup>
+      <thead class="thead-dark">
+        <tr>
+          <th>Category</th>
+          <th>Language</th>
+          <th>Title</th>
+          <th>Writer</th>
+          <th>Report Date</th>
+          <th>Headline</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for news in news_list %}
+          <tr>
+            <td>{{news.news_category}}</td>
+            <td>{{news.language}}</td>
+            <td><a class="text-white" href="{% url 'administrator:news-update' news.id %}">{{news.title}}</a></td>
+            <td>{% if news.writer %}{{news.writer}}{% endif %}</td>
+            <td>{{news.report_date}}</td>
+            <td>{% if news.headline %}<i class="dripicons-checkmark text-success"></i>{% endif %}</td>
+            <td>
+              <a class="btn btn-sm btn-link text-warning" href="{% url 'administrator:news-update' news.id %}"><i class="dripicons-document-edit"></i></a>
+              <a class="btn btn-sm btn-link text-danger" href="{% url 'administrator:news-delete' news.id %}"><i class="dripicons-trash"></i></a>
+            </td>
+          </tr>
+        {% empty %}
+          <tr>
+              <td class="text-center" colspan="100%">No Data</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% include "base/pagination.html" with paginator=paginator add_css="page_nav_dark" sign_align="end"%}
+{% endblock content %}

@@ -1,0 +1,106 @@
+{% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}{% trans 'CONSTRUCTION MANAGER' %}{% endblock %}</title>
+    <meta name="description" content="BuildBlock Administrator">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="author" content="BuildBlock" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="{% static 'base/favi/favicon.ico' %}">
+    <!-- External CSS -->
+
+    <!-- Main CSS -->
+    {% block main_css %}
+    <link href="{% static 'base/css/icons.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'management/css/app-dark.css' %}" rel="stylesheet" type="text/css" id="main-style-container" />
+    <link href="{% static 'management/css/add.css' %}" rel="stylesheet" type="text/css" id="main-style-container" />
+    <link href="{% static 'administrator/css/add_admin.css' %}" rel="stylesheet" type="text/css" id="main-style-container" />
+    {% endblock main_css %}
+
+    <!-- App CSS -->
+    {% block app_css %}{% endblock app_css %}
+
+    <!-- External JS Top -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- Search & Analytics -->
+    {% block analytics_head %}
+    {% include "base/analytics_head.html" %}
+    {% endblock analytics_head %}
+  </head>
+  <body class="loading const_body">
+    <!-- Search & Analytics -->
+    {% block analytics_body %}
+    {% include "base/analytics_body.html" %}
+    {% endblock analytics_body %}
+
+    <div class="wrapper">
+        {% block sidebar %}
+        {% include 'construction/partials/left-sidebar.html' %}
+        {% endblock sidebar %}
+
+        <div class="content-page">
+            <div class="content">
+                <div>
+                    {% block topbar %}
+                    {% include 'construction/partials/topbar.html' %}
+                    {% endblock topbar %}
+                </div>
+
+                {% if messages %}
+                    {% include "management/messages.html" with messages=messages %}
+                {% endif %}
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+                    <!-- start page title -->
+                    {% block page_title %}
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box">
+                                <h4 class="page-title">{{page_title}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+                    {% endblock page_title %}
+                    <!-- end page title -->
+
+                    {% block content %}{% endblock content %}
+                </div>
+                <!-- container -->
+
+            </div>
+            <!-- content -->
+        </div>
+    </div>
+
+    <!-- Modal -->
+    {% block modal %}{% endblock modal %}
+
+    <!-- bundle -->
+    <script src="{% static 'management/js/app.js' %}"></script>
+    {% block bundle %}{% endblock bundle %}
+
+    <!-- third party js -->
+    <script src="{% static 'management/js/vendor/Chart.bundle.min.js' %}"></script>
+    <script src="{% static 'management/js/vendor/jquery-jvectormap-1.2.2.min.js' %}"></script>
+    <script src="{% static 'management/js/vendor/jquery-jvectormap-world-mill-en.js' %}"></script>
+
+    {% block third_party %}{% endblock third_party %}
+    <!-- third party js ends -->
+
+    {% block app_js_bottom %}
+    {% endblock app_js_bottom %}
+
+    <!-- demo app -->
+    <script src="{% static 'management/js/pages/demo.dashboard.js' %}"></script>
+    <!-- end demo js-->
+  </body>
+</html>

@@ -1,0 +1,412 @@
+{% extends "management/base.html" %}
+{% load static i18n humanize mathfilters base_tag management_tag %}
+
+{% block page_title %}
+{% get_management_roles as MANAGEMENT_ROLES %}
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            {% if request.session.active_role == MANAGEMENT_ROLES.agent_role %}
+                <div class="page-title-right">
+                    <a href="{% url 'management:product-update' pk=product.id %}"><button type="button" class="btn btn-success">Edit</button></a>
+                </div>
+            {% endif %}
+
+            <h4 class="page-title">Product Info.</h4>
+
+            {% if request.session.active_role == MANAGEMENT_ROLES.agent_role %}
+            <div class="page-title-right-xs">
+                <a href="{% url 'management:product-update' pk=product.id %}" class="btn btn-success btn-rounded"><i class="mdi mdi-square-edit-outline"></i></a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock page_title %}
+
+{% block content %}
+{% get_management_roles as MANAGEMENT_ROLES %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <!-- Product image -->
+                        <div id="carouselExampleIndicators" class="carousel slide product_img_slide" data-ride="carousel">
+                            {% if product.product_images|length > 1 %}
+                            <ol class="carousel-indicators">
+                                {% for product_image in product.product_images %}
+                                <li class="{% if forloop.first %}active{% endif %}"
+                                    data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter}}"></li>
+                                {% endfor %}
+                            </ol>
+                            {% endif %}
+                            <div class="carousel-inner" role="listbox">
+                                {% for product_image in product.product_images %}
+                                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                                    <a href="#" data-toggle="modal" data-target="#product_img_modal"
+                                       onclick="changeModalImage('{{product_image.title}}','{{product_image.original_image_url}}');">
+                                        <img class="d-block img-fluid" src="{{product_image.thumbnail_image_url}}" alt="{{product_image.title}}">
+                                    </a>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <form class="pl-lg-2">
+                            <!-- status -->
+                            <div class="mb-2">
+                                <h4 class="font-14"><span class="badge badge-dark">{{product.agency.name}}</span> {% get_product_status_badge product=product %}</h4>
+                            </div>
+
+                            <!-- title -->
+                            <h3 class="mt-0 mb-3">{{ product.full_address }}</h3>
+                            <p class="mb-1">Added Date: {{ product.added_at }}</p>
+                            <p class="mb-1">
+                                <span class="mr-1">{{ product.num_bedroom|floatformat:0 }} bed{% if not product.num_bedroom.length == 1 %}s{% endif %}</span>
+                                <span class="mr-1">{{ product.num_bathroom|floatformat:0 }} bath{% if not product.num_bedroom.length == 1 %}s{% endif %}</span>
+                                <span>{{ product.sqft|floatformat:"-2"|intcomma }}sqft</span>
+                            </p>
+
+                            {% if request.session.active_role == MANAGEMENT_ROLES.agent_role %}
+                            <!-- owners -->
+                            <div class="mt-4">
+                                <h6 class="font-14">Owners</h6>
+                                <p>
+                                    {% for owner in product.owners %}
+                                    <a href="{% url 'management:owner-detail' owner.id %}" class="text-dark">{{owner.name}}</a>
+                                    {% if not forloop.last %}, {% endif %}
+                                    {% endfor %}
+                                </p>
+                            </div>
+                            {% endif %}
+
+                            <!-- description -->
+                            <div class="mt-4">
+                                <h6 class="font-14">Description</h6>
+                                <p>{{ product.description|safe }}</p>
+                            </div>
+
+                            <!-- rent info -->
+                            <div class="mt-4">
+                                <div class="row">
+                                    {% if request.session.active_role == MANAGEMENT_ROLES.owner_role and product.owners.count > 1 %}
+                                    <div class="col-6 col-lg-4 col-xl-2">
+                                        <h6 class="font-14">Owners</h6>
+                                        <h3>{{product.owners.count}} <small class="text-muted">people</small></h3>
+                                    </div>
+                                    {% endif %}
+                                    {% if product.status == 'INVESTMENT' and investment %}
+                                    <div class="col-6 col-lg-4 col-xl-2">
+                                        <h6 class="font-14">Amount</h6>
+                                        <h3 class="dollar_sign">{{investment.amount|filter_safe_money_read_from_db|floatformat:"-2"|intcomma}}</h3>
+                                    </div>
+                                    <div class="col-6 col-lg-4 col-xl-2">
+                                        <h6 class="font-14">Investors</h6>
+                                        <h3>{{investment.investment_product.investments.count}} <small class="text-muted">people</small></h3>
+                                    </div>
+                                    {% else %}
+                                    <div class="col-6 col-lg-4 col-xl-2">
+                                        <h6 class="font-14">Tenants</h6>
+                                        <h3>{{ product.num_people_under_lease }} / {{ product.max_num_people }} <small class="text-muted">people</small></h3>
+                                    </div>
+                                    <div class="col-6 col-lg-4 col-xl-2">
+                                        <h6 class="font-14">Rent</h6>
+                                        <h3 class="dollar_sign">{{ product.rent_under_lease|floatformat:"-2"|intcomma }}</h3>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            <!-- Product information -->
+                            <div class="mt-4">
+                                <h6 class="font-14">Facts and Features</h6>
+                                <div class="product_features">
+                                    <i class="mdi mdi-domain"></i>
+                                    <h6 class="font-14 mr-1">Type</h6>
+                                    <h6 class="text-muted font-14 font-weight-light">{{ product.property_type }}</h6>
+                                </div>
+                                <div class="product_features">
+                                    <i class="mdi mdi-calendar"></i>
+                                    <h6 class="font-14 mr-1">Year Built</h6>
+                                    <h6 class="text-muted font-14 font-weight-light">{{ product.built_year }}</h6>
+                                </div>
+                                {% if product.amenities.heater %}
+                                    <div class="product_features">
+                                        <i class="mdi mdi-thermometer"></i>
+                                        <h6 class="font-14 mr-1">Heating</h6>
+                                        <h6 class="text-muted font-14 font-weight-light">{{ product.amenities.heater }}</h6>
+                                    </div>
+                                {% endif %}
+                                {% if product.amenities.cooling %}
+                                    <div class="product_features">
+                                        <i class="mdi mdi-snowflake"></i>
+                                        <h6 class="font-14 mr-1">Cooling</h6>
+                                        <h6 class="text-muted font-14 font-weight-light">{{ product.amenities.cooling }}</h6>
+                                    </div>
+                                {% endif %}
+                                <div class="product_features">
+                                    <i class="mdi mdi-alpha-p-box-outline"></i>
+                                    <h6 class="font-14 mr-1">Parking</h6>
+                                    <h6 class="text-muted font-14 font-weight-light">{{ product.num_parking|floatformat:"0" }} space(s)</h6>
+                                </div>
+                                {% if product.amenities.lot_sqft > 0 %}
+                                <div class="product_features">
+                                    <i class="mdi mdi-view-dashboard-outline"></i>
+                                    <h6 class="font-14 mr-1">Lot</h6>
+                                    <h6 class="text-muted font-14 font-weight-light">{{ product.lot_sqft|floatformat:"-2"|intcomma }} sqft</h6>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    {% if product.status == 'INVESTMENT' and stage_list %}
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="float-lg-left header-title mb-3">Investment Steps</h4>
+                {% include "investment/partials/investment_step_module.html" with stage_list=stage_list investment_id=investment.id %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="col-xl-6 col-lg-12">
+        {% if product.map_url %}
+        <div class="card">
+            <div class="card-body">
+                <h4 class="header-title mb-3">Markers Google Map</h4>
+                <div class="map_frame" style="height:320px;">
+                    <iframe src="{{ product.map_url }}" width="100%" height="320" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <!-- <div id="gmaps-markers" class="gmaps"></div> -->
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="card">
+            <div class="card-body">
+                <h4 class="header-title mb-3">Monthly Income</h4>
+                <div class="chartjs-chart" style="height: 320px;">
+                    <canvas id="income-chart"></canvas>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6 col-lg-12">
+        {% if product.plan_image_url %}
+        <div class="card">
+            <div class="card-body">
+                <h4 class="header-title mb-3">House Plan</h4>
+                <img src="{{ product.plan_image_url }}" alt="" class="w-75 d-block m-auto">
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="card">
+            <div class="card-body">
+                <a href="{% url 'management:tenant-list' %}" class="btn btn-sm btn-primary float-right mb-1 font-10">More Info</a>
+                <h4 class="header-title mb-3">Tenant List</h4>
+                <table class="table table-centered w-100 mb-0 visible_table_lg" id="products-datatable">
+                    <thead>
+                        <tr>
+                            <th>Room</th>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Rent</th>
+                            <th>Deposit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for lease in leases %}
+                        <tr>
+                            <td>
+                                {{ lease.room_num }}
+                            </td>
+                            <td>
+                                {{ lease.tenant_name }}
+                                <span class="font-10 badge {% get_lease_status_badge_class status=lease.status %}">{{lease.status}}</span>
+                            </td>
+                            <td>
+                                {{ lease.tenant_phone_number }}
+                            </td>
+                            <td>
+                                <span class="dollar_sign">{{ lease.rent|floatformat:"-2"|intcomma }}</span>
+                            </td>
+                            <td>
+                                <span class="dollar_sign">{{ lease.deposit|floatformat:"-2"|intcomma }}</span>
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <!-- Empty -->
+                        <tr>
+                            <td colspan="5" class="font-12 text-muted text-center py-3">
+                                No Tenants
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                <table class="maintenance_list_m hidden_lg table mb-0">
+                    <tbody>
+                        {% for lease in leases %}
+                        <tr {% if lease.status == 'COMPLETE' %}class="opacity-5"{% endif %}>
+                            <td class="px-0">
+                                <a href="{% url 'management:tenant-detail' lease.id %}" class="text-title">
+                                    <p class="mb-2">
+                                        <span class="badge badge-dark">Room {{ lease.room_num }}</span>
+                                        {% get_lease_status_badge status=lease.status %}
+                                    </p>
+                                    <h5 class="card-title mb-2">{{ lease.tenant_name }}</h5>
+                                    <p class="mb-1"><strong>Phone</strong> <span class="ml-1">{{ lease.tenant_phone_number }}</span></p>
+                                    <p class="mb-0 mr-3 d-inline-block"><strong>Rent</strong> <span class="ml-1 dollar_sign">{{ lease.rent|floatformat:"-2"|intcomma }}</span></p>
+                                    <p class="mb-0 d-inline-block"><strong>Rent Count</strong> <span class="ml-1">{{lease.num_paid_rents}}</span></p>
+                                </a>
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td class="font-12 text-muted text-center py-4">
+                                No Tenants
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                    <a href="{% url 'management:maintenance' %}" class="btn btn-sm btn-primary float-right mb-1 font-10">All Post</a>
+                <h4 class="header-title mb-3">Maintenance List</h4>
+                <div class="table-responsive">
+                    <table class="table table-hover table-centered mb-0 visible_table_lg">
+                        <colgroup>
+                            <col>
+                            <col width="150">
+                            <col width="150">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>TITLE</th>
+                                <th class="text-right">WRITER</th>
+                                <th class="text-right">DATE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for maintenance in maintenances %}
+                            <tr>
+                                <td><a class="text-dark" href="{% url 'management:maintenance-read' pk=maintenance.id %}">{{maintenance.title}}</a></td>
+                                <td class="text-right">{{maintenance.tenant.name}}</td>
+                                <td class="text-right">{{maintenance.created_at|date:"M. j. Y."}}</td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="3" class="font-12 text-muted text-center py-3">
+                                    No Posts
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                    <table class="maintenance_list_m hidden_lg table mb-0">
+                        <tbody>
+                        {% for maintenance in maintenances %}
+                        <tr>
+                            <td>
+                                <span class="font-10 badge {% get_maintenance_status_badge_class status=maintenance.status %}">{{ maintenance.get_status_display }}</span>
+                                <a href="{% url 'management:maintenance-read' pk=maintenance.id %}" class="text-dark {% if not maintenance.is_read %}font-weight-bold{% endif %}">{{maintenance.title}}</a>
+                                <div class="clearfix mt-2">
+                                    <div class="float-left">
+                                        <p class="font-12 mb-0 mt-1 font-weight-bold">{{maintenance.tenant.name}}</p>
+                                    </div>
+                                    <div class="float-right">
+                                        <h3 class="text-muted font-weight-light font-12 mt-1 mb-0">{{maintenance.created_at|date:"M. j. Y."}}</h3>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <!-- Empty -->
+                        <tr>
+                            <td class="font-12 text-muted text-center py-4">No Posts</td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                    {{rent_payment}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
+
+{% block modal %}
+<!-- Investment Step Modal -->
+{% for stage in stage_list %}
+    {% for step in stage.steps %}
+        {% if step.description or step.contract.count > 0 or request.user.is_superuser %}
+            {% include "investment/partials/investment_step_modal.html" with step=step %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+
+<div class="modal fade" id="product_img_modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal_img_title">Image Title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body modal_inner_img_full">
+                <img id="modal_img_content" class="d-block img-fluid" alt="Image" width="100%">
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+function changeModalImage(title, src) {
+    document.getElementById("modal_img_title").innerHTML = title;
+    document.getElementById("modal_img_content").src = src;
+}
+</script>
+{% endblock modal %}
+
+{% block third_party %}
+<!-- third party js -->
+<script src="{% static 'management/js/vendor/Chart.bundle.min.js' %}"></script>
+<!-- Income Chart Js -->
+<script>
+    var mainDataLabel = "Income ($)";
+    var chartLabels = {{income_chart_label|safe}};
+    var chartDataset = {{income_chart_data}};
+    var chartStep = {{income_chart_step}};
+</script>
+<script src="{% static 'management/js/income.chartjs.js' %}"></script>
+{% endblock third_party %}

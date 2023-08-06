@@ -1,0 +1,119 @@
+{% load static i18n construction_tag %}
+{% get_worker_role_list as WORKER_ROLE_LIST %}
+{% get_worker_speciality_list as WORKER_SPECIALITY_LIST %}
+
+<!-- Worker Update Modal -->
+<div id="edit_worker_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="edit_worker_modal_label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="edit_worker_modal_label">Edit Worker</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <form method="post"
+                  action="{% url 'construction:worker-update' %}"
+                  enctype="multipart/form-data">
+                {% csrf_token %}
+                {% autoescape off %}
+                <input type="hidden" name="return_url" value="{{request.get_full_path}}" required>
+                <input type="hidden" name="worker_id" required>
+                <div class="modal-body">
+                    <div class="form-group mb-4">
+                        <p class="font-12 text-muted">NAME</p>
+                        <input type="text" name="name" maxlength="100" class="form-control" id="edit_worker_name" value="" required>
+                    </div>
+                    <div class="form-group mb-4">
+                        <p class="font-12 text-muted">ROLE</p>
+                        <div class="btn-group w-100">
+                            {% for value, display in WORKER_ROLE_LIST %}
+                            <label for="edit_worker_role_{{value}}" class="btn btn-outline-info font-12">{{display}}</label>
+                            <input type="radio" name="role" id="edit_worker_role_{{value}}" data-status="{{value}}" value="{{value}}" class="d-none" required>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="form-group mb-4">
+                        <p class="font-12 text-muted">SPECIALITY</p>
+                        {% for value, display in WORKER_SPECIALITY_LIST %}
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="edit_worker_speciality_{{value}}" name="speciality[]" value="{{value}}">
+                            <label class="custom-control-label" for="edit_worker_speciality_{{value}}">{{display}}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="form-group">
+                        <p class="font-12 text-muted">PHONE NUMBER</p>
+                        <input type="text" name="phone" maxlength="15" class="form-control" id="edit_worker_phone" value="">
+                    </div>
+                    <div class="form-group">
+                        <p class="font-12 text-muted">DESCRIPTION</p>
+                        <textarea name="description" id="edit_worker_description" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer" style="justify-content: space-between;">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <input type='submit' class='btn btn-success' value='Save' />
+                </div>
+                {% endautoescape %}
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Worker Delete Modal -->
+<div id="delete_worker_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="worker_delete" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="worker_delete">Delete Worker</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <form method="POST" action="{% url 'construction:worker-delete' %}">
+                {% csrf_token %}
+                <input type="hidden" name="worker_id">
+                <input type="hidden" name="return_url" value="{{request.get_full_path}}">
+                <div class="modal-body text-center">
+                    <p class="font-14 my-3">{% blocktrans %} 해당 인부를 삭제하시겠습니까? {% endblocktrans %}</p>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" value="Delete" class='btn btn-danger'/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function deleteWorkerData(id) {
+        var delete_form = $('#delete_worker_modal form');
+        delete_form.find('input[name="worker_id"]').val(id);
+    };
+
+    function updateWorkerData(id, name, role, speciality, phone, description) {
+        var speciality_split = speciality.split('/');
+        var update_form = $('#edit_worker_modal form');
+        update_form.find('input[name="worker_id"]').val(id);
+        update_form.find('input[name="name"]').val(name);
+        update_form.find('input[name="phone"]').val(phone);
+        update_form.find('textarea[name="description"]').val(description);
+
+        $('input[id^="edit_worker_role_"').prop('checked', false);
+        $('label[for^="edit_worker_role_"]').removeClass('btn-info');
+        $('#edit_worker_role_'+role).prop('checked', true);
+        $('label[for="edit_worker_role_'+role+'"]').addClass('btn-info');
+
+        $('input[name="speciality[]"]').prop('checked', false);
+        for (var i in speciality_split) {
+            $('#edit_worker_speciality_'+speciality_split[i]).prop('checked', true);
+        }
+    };
+
+    $(document).ready(function(){
+        $('#edit_worker_modal').find('input[name="role"]').change(function(){
+            var id = this.id;
+            var form = $('#edit_worker_modal form');
+
+            $('label[for^="edit_worker_role_"]').removeClass('btn-info');
+            $('label[for='+id+']').addClass('btn-info');
+        });
+    });
+</script>

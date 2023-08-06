@@ -1,0 +1,115 @@
+{% extends "management/base.html" %}
+{% load static i18n base_tag management_tag %}
+
+{% block page_title %}
+{% get_management_roles as MANAGEMENT_ROLES %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <div class="btn-group">
+                    <a href="?status=all" class="btn btn-light{% if request.GET.status != 'resolved' and request.GET.status != 'unresolved' %} active{% endif %}">All</a>
+                    <a href="?status=resolved" class="btn btn-light{% if request.GET.status == 'resolved' %} active{% endif %}">Resolved</a>
+                    <a href="?status=unresolved" class="btn btn-light{% if request.GET.status == 'unresolved' %} active{% endif %}">Unresolved</a>
+                </div>
+                {% if request.session.active_role == MANAGEMENT_ROLES.tenant_role and residence %}
+                <a class="btn btn-success ml-2" href="{% url 'management:maintenance-write' %}">WRITE</a>
+                {% endif %}
+            </div>
+
+            <h4 class="page-title">Maintenance</h4>
+
+            <div class="page-title-right-xs">
+                {% if request.session.active_role == MANAGEMENT_ROLES.tenant_role and residence %}
+                <a class="btn btn-success btn_circle mb-lg-2" href="{% url 'management:maintenance-write' %}"><i class="mdi mdi-pencil-plus-outline"></i></a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="maintenance_table table table-hover table-centered mb-0 hidden_sm">
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col width="120">
+                            <col width="105">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>TITLE</th>
+                                <th>HOUSE</th>
+                                <th>WRITER</th>
+                                <th class="text-right pl-0">DATE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for maintenance in maintenances %}
+                            <tr>
+                                <td>
+                                    <span class="badge {% get_maintenance_status_badge_class status=maintenance.status %}">{{ maintenance.get_status_display }}</span>
+                                    {% if not maintenance.is_read %}{% endif %}
+                                    <a href="{% url 'management:maintenance-read' pk=maintenance.id %}" class="text-body {% if not maintenance.is_read %}font-weight-bold{% endif %}">{{maintenance.title}}</a>
+                                </td>
+                                <td class="font-13">
+                                    <a href="{% url 'management:product-info' product_code=maintenance.product.code %}" class="text-body">{{maintenance.product.full_address}}</a>
+                                </td>
+                                <td>{{maintenance.tenant.name}}</td>
+                                <td class="text-right pl-0">{{maintenance.created_at|date:"M. j. Y."}}</td>
+                            </tr>
+                            {% empty %}
+                            <!-- Empty -->
+                            <tr>
+                                <td colspan="4" class="font-12 text-muted text-center py-4">No Posts</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                    <table class="maintenance_list_m visible_sm_table table mb-0">
+                        <tbody>
+                        {% for maintenance in maintenances %}
+                        <tr>
+                            <td>
+                                <div class="clearfix mb-2">
+                                    <div class="float-left">
+                                        <span class="badge {% get_maintenance_status_badge_class status=maintenance.status %}">{{ maintenance.get_status_display }}</span>
+                                    </div>
+                                    <div class="float-right">
+                                        <h3 class="text-muted font-weight-light font-12 mt-1 mb-0">{{maintenance.created_at|date:"M. j. Y."}}</h3>
+                                    </div>
+                                </div>
+                                {% if not maintenance.is_read %}{% endif %}
+                                <a href="{% url 'management:maintenance-read' pk=maintenance.id %}" class="text-body {% if not maintenance.is_read %}font-weight-bold{% endif %}">{{maintenance.title}}</a>
+                                <div class="mt-2 text-right">
+                                    <p class="font-12 mb-0 mt-1 font-weight-bold">{{maintenance.tenant.name}}</p>
+                                    <p class="text-muted font-weight-light font-12 mt-1 mb-0">{{maintenance.product.full_address}}</p>
+                                </div>
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <!-- Empty -->
+                        <tr>
+                            <td class="font-12 text-muted text-center py-4">No Posts</td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include "base/pagination.html" with paginator=paginator %}
+
+{% endblock content %}

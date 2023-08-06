@@ -1,0 +1,40 @@
+{% load static i18n management_tag %}
+
+<!-- ========== Left Sidebar Start ========== -->
+<div class="left-side-menu">
+
+    <div class="slimscroll-menu" id="left-side-menu-container">
+
+        <!-- LOGO -->
+        <a href="{% url 'investment:home' %}" class="logo text-center">
+            <span class="logo-lg">
+                <img src="{% static 'landing/images/logo/logo_w_h36.png' %}" alt="" height="22" id="side-main-logo">
+            </span>
+            <span class="logo-sm">
+                <img src="{% static 'management/images/logo/blogo_w_h32.png' %}" alt="" height="22" id="side-sm-main-logo">
+            </span>
+        </a>
+
+        <!--- Sidemenu -->
+        <ul class="metismenu side-nav">
+            <li class="side-nav-item">
+                <a href="{% url 'investment:list' %}" class="side-nav-link">
+                    <i class="mdi mdi-cash-marker"></i>
+                    <span> Investments </span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="{% url 'investment:document-list'%}" class="side-nav-link">
+                    <i class="mdi mdi-file-document-edit-outline"></i>
+                    <span> Documents </span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="clearfix"></div>
+
+    </div>
+    <!-- Sidebar -left -->
+
+</div>
+<!-- Left Sidebar End -->

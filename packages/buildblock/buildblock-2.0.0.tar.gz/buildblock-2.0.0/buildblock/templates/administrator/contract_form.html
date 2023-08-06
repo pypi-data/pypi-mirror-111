@@ -1,0 +1,77 @@
+{% extends "administrator/base.html" %}
+{% load static i18n crispy_forms_tags %}
+
+{% block title %}{{page_title}}{% endblock %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<form method='POST' enctype="multipart/form-data">
+<div class="row">
+    <div class="col-12 col-lg-4">
+        <div class="card">
+            <div class="card-body">
+                <label class="font-12 text-gray font-weight-light">TITLE</label>
+                <p class="text-white font-16">{{investment.investment_product.title}}</p>
+                <label class="font-12 text-gray font-weight-light">INVESTOR</label>
+                <p class="text-white font-16">{{investment.user.name}} ({{investment.user.name}})</p>
+                <label class="font-12 text-gray font-weight-light">MANAGER</label>
+                <p class="text-white font-16">{{investment.investment_product.manager.name}} ({{investment.investment_product.manager.email}})</p>
+                <label class="font-12 text-gray font-weight-light">AMOUNT</label>
+                <p class="text-white font-16">{{investment.amount}}</p>
+                <label class="font-12 text-gray font-weight-light">DATE</label>
+                <p class="text-white font-16 mb-0">{{investment.investment_product.start_date}} ~ {{investment.investment_product.end_date}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-lg-8">
+        <div class="row">
+            {% if template %}
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <label class="font-12 text-gray font-weight-light">TEMPLATE</label>
+                                <p class="text-white font-16 mb-0">{{template.title}}</p>
+                            </div>
+                            <div class="col-6 border-left border-secondary">
+                                <label class="font-12 text-gray font-weight-light">ID</label>
+                                <p class="text-white font-16 mb-0">{{template.identifier}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <div class="text-right admin_submit_btn">
+                          <input type='submit' class='btn btn-success' value='SAVE' />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+{% endblock content %}
+
+{% block third_party %}
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+{% endblock third_party %}

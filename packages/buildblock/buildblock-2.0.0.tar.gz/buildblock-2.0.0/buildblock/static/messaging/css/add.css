@@ -1,0 +1,25 @@
+select option[disabled="disabled"]{ 
+    display:none;
+}
+.page-title-box .page-title{
+    color: #242424;
+}
+.card.message_template_card{
+    margin-bottom: 15px;
+}
+.card.message_template_card .card-body{
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+.card.message_template_card h4{
+    line-height: 1.5;
+}
+.form-control.template_textarea{
+    min-height: 600px;
+    font-size: 12px;
+}
+#message_preview{
+    min-height: 600px;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+}

@@ -1,0 +1,8 @@
+{% extends "base_error.html" %}
+{% load static %}
+
+{% block title %}Forbidden (403){% endblock title %}
+
+{% block content %}
+<img class="error_img" src="{% static 'management/images/error/403.png' %}" alt="Forbidden (403)">
+{% endblock content %}

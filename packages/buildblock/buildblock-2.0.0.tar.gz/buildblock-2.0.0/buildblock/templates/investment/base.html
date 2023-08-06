@@ -1,0 +1,147 @@
+{% load static i18n %}
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>{% block title %}BuildBlock Investment Service{% endblock title %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="BuildBlock Management Service" />
+        <meta name="author" content="BuildBlock" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="{% static 'base/favi/favicon.ico' %}">
+
+        {% blocktrans asvar og_description %}BuildBlock is a global real estate investment platform for everyone to easily and safely invest in the global market{% endblocktrans %}
+        <meta property="og:description" content="{{og_description}}">
+        <meta property="og:image" content="{% static 'landing/images/link_thumbnail.jpg' %}" >
+
+        <!-- inline style to handle loading of various element-->
+        <style>body.loading {visibility: hidden;}</style>
+
+        <!-- third party css -->
+        <link href="{% static 'management/css/vendor/jquery-jvectormap-1.2.2.css' %}" rel="stylesheet" type="text/css" />
+        <!-- SimpleMDE css -->
+        <link href="{% static 'management/css/vendor/summernote-bs4.css' %}" rel="stylesheet" type="text/css" />
+        <!-- third party css end -->
+
+        <!-- App css -->
+        <link href="{% static 'base/css/icons.min.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'management/css/app.css' %}" rel="stylesheet" type="text/css" id="main-style-container" />
+        <link href="{% static 'management/css/add.css' %}" rel="stylesheet" type="text/css" id="main-style-container" />
+
+        <!-- External JS Top -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+        <!-- Stripe js -->
+        <link rel="stylesheet" href="{% static 'payments/css/elementsModal.css' %}" />
+        <script src="https://js.stripe.com/v3/"></script>
+        <script src="{% static 'payments/js/elementsModal.js' %}?v=0.0.1"></script>
+
+        <!-- Search & Analytics -->
+        {% block analytics_head %}
+        {% include "base/analytics_head.html" %}
+        {% endblock analytics_head %}
+    </head>
+
+    <body class="loading" data-leftbar-compact-mode="condensed">
+        <!-- Search & Analytics -->
+        {% block analytics_body %}
+        {% include "base/analytics_body.html" %}
+        {% endblock analytics_body %}
+
+        <!-- Begin page -->
+        <div class="wrapper leftbar_theme_dark">
+            <div>
+                {% block sidebar %}
+                {% include 'investment/partials/left-sidebar.html' %}
+                {% endblock sidebar %}
+            </div>
+
+            <!-- Start Page Content here -->
+            <div class="content-page">
+                <div class="content">
+                    <div>
+                        {% block topbar %}
+                        {% include 'investment/partials/topbar.html' %}
+                        {% endblock topbar %}
+                    </div>
+
+                    {% if messages %}
+                        {% include "investment/partials/messages.html" with messages=messages %}
+                    {% endif %}
+                    {% if form.errors %}
+                        {% include "base/errors.html" with errors=form.non_field_errors %}
+                        {% for field in form %}
+                            {% include "base/errors.html" with errors=field.errors %}
+                        {% endfor %}
+                    {% endif %}
+
+                    <!-- Start container-->
+                    <div class="container-fluid">
+                        <!-- start page title -->
+                        {% block page_title %}
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <h4 class="page-title">{{page_title}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                        {% endblock page_title %}
+                        <!-- end page title -->
+
+                        {% block content %}{% endblock content %}
+                    </div>
+                    <!-- container -->
+
+                </div>
+                <!-- content -->
+
+                <!-- Footer Start -->
+                {% block footer %}
+                {% include 'investment/partials/footer.html' %}
+                {% endblock footer %}
+                <!-- end Footer -->
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+
+        <!-- Modal -->
+        {% block modal %}{% endblock modal %}
+
+        <!-- Stripe -->
+        {% block stripe %}{% endblock stripe %}
+
+        <!-- bundle -->
+        <script src="{% static 'management/js/app.js' %}"></script>
+        {% block bundle %}{% endblock bundle %}
+
+        <!-- third party js -->
+        <script src="{% static 'management/js/vendor/Chart.bundle.min.js' %}"></script>
+        <script src="{% static 'management/js/vendor/jquery-jvectormap-1.2.2.min.js' %}"></script>
+        <script src="{% static 'management/js/vendor/jquery-jvectormap-world-mill-en.js' %}"></script>
+        {% block third_party %}{% endblock third_party %}
+        <!-- third party js ends -->
+
+        <!-- demo app -->
+        <script src="{% static 'management/js/pages/demo.dashboard.js' %}"></script>
+        <!-- end demo js-->
+    </body>
+</html>
+
+<script>
+setTimeout(function() {
+    $('.alert-success').fadeOut('slow');
+}, 3000); // time in milliseconds
+$('form').submit(function(){
+    $(this).children('input[type=submit]').prop('disabled', true);
+    $(this).find('button[type=submit]').prop('disabled', true);
+});
+</script>

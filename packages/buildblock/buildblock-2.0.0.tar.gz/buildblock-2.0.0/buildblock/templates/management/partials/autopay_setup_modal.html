@@ -1,0 +1,124 @@
+{% load static i18n base_tag %}
+
+<!-- Autopay Setup Modal -->
+<div class="modal fade" id="setup_autopay" tabindex="-1" role="dialog" aria-labelledby="tosModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 385px;">
+        <div class="modal-content">
+            <form method="POST" id="register_autopay" action="{% url 'management:payment-autopay-register' %}">
+                {% csrf_token %}
+                <input type="hidden" name="return_url" value="{{request.get_full_path}}" required>
+                <input type="hidden" name="lease_id" value="{{residence.lease.id}}">
+                <div class="ElementsModal--top-banner">
+                    <div class="ElementsModal--sales-info">
+                        <div class="ElementsModal--top">
+                            <div class="ElementsModal--company">
+                                SETUP AUTO PAYMENT
+                            </div>
+                            <button class="ElementsModal--close" data-dismiss="modal">
+                                <span class="font-18" aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="ElementsModal--product ElementsModal--details mb-1">
+                            Automatically Paid
+                        </div>
+                        <div class="ElementsModal--price ElementsModal--details" style="font-size: 30px;">
+                            {{residence.lease.payment_day|ord}} of every month
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ElementsModal--forms">
+                    <div class="ElementsModal--payment-details py-2">
+                        <div class="form-group">
+                            {% for bank_account in bank_accounts %}
+                            <div class="custom-control custom-radio mb-2">
+                                <input type="radio"
+                                    class="custom-control-input"
+                                    name="bank_id"
+                                    id="autopay_bank_account_{{forloop.counter}}"
+                                    value="{{bank_account.bank_id}}"
+                                    {% if forloop.first %}required{% endif %}
+                                    {% if bank_account.status != 'verified' %}disabled{% else %}checked{% endif %}>
+                                <label class="custom-control-label font-13" for="autopay_bank_account_{{forloop.counter}}" style="padding-top:3px;line-height: 1.6;">
+                                    {{bank_account.bank_name}}
+                                    {% if bank_account.status == 'verified' %}
+                                    <span class="badge badge-success-lighten">Verified</span>
+                                    {% else %}
+                                    <span class="badge badge-warning-lighten">Verification Pending</span>
+                                    <a class="ml-1 font-12" href="#" data-toggle="modal" data-target="#account_verification_{{forloop.counter}}">Verify</a>
+                                    {% endif %}
+                                    <br>
+                                    ******{{bank_account.account_last4}}&nbsp;&nbsp;{{bank_account.account_holder_name}}
+                                </label>
+                            </div>
+                            {% endfor %}
+                            {% if not bank_accounts %}
+                            <div class="text-center">
+                                <p class="text-muted font-12">No accounts registered</p>
+                            </div>
+                            {% endif %}
+                            {% if not has_verified_bank_account %}
+                            <div class="text-center">
+                                <a href="{% url 'management:bank-account-registration' %}" class="btn btn-link">+ Bank Account Registration</a>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% if has_verified_bank_account %}
+                    <div class="ElementsModal--form">
+                        <p class="font-14 text-muted text-center">Would you like to setup an auto payment with the above selected payment method?</p>
+                        <button type="submit" class="ElementsModal--pay-button">YES</button>
+                    </div>
+                    <div class="ElementsModal--form mb-0">
+                        <button type="button" class="btn-block btn btn-light" data-dismiss="modal">NO</button>
+                    </div>
+                    {% endif %}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- Autopay Disable Modal -->
+<div class="modal fade" id="disable_autopay" tabindex="-1" role="dialog" aria-labelledby="tosModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 385px;">
+        <div class="modal-content">
+            <form method="POST" id="unregister_autopay" action="{% url 'management:payment-autopay-unregister' %}">
+                {% csrf_token %}
+                <input type="hidden" name="return_url" value="{{request.get_full_path}}" required>
+                <input type="hidden" name="lease_id" value="{{residence.lease.id}}">
+                <div class="ElementsModal--top-banner">
+                    <div class="ElementsModal--sales-info">
+                        <div class="ElementsModal--top">
+                            <div class="ElementsModal--company">
+                                DISABLE AUTO PAYMENT
+                            </div>
+                            <button class="ElementsModal--close" data-dismiss="modal">
+                                <span class="font-18" aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="ElementsModal--product ElementsModal--details mb-1">
+                            Currently Automatically Paid
+                        </div>
+                        <div class="ElementsModal--price ElementsModal--details">
+                            {{residence.lease.payment_day|ord}} of every month
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ElementsModal--forms">
+                    {% if residence.lease.is_auto_paid %}
+                    <div class="ElementsModal--form">
+                        <p class="font-14 text-muted text-center">Would you like to disable the auto payment you had setup?</p>
+                        <button type="submit" class="ElementsModal--pay-button">YES</button>
+                    </div>
+                    <div class="ElementsModal--form mb-0">
+                        <button type="button" class="btn-block btn btn-light" data-dismiss="modal">NO</button>
+                    </div>
+                    {% endif %}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

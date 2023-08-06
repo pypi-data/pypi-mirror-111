@@ -1,0 +1,64 @@
+{% load static i18n %}
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>{% block title %}BuildBlock Management{% endblock title %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="BuildBlock Management Service" />
+        <meta name="author" content="BuildBlock" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="{% static 'base/favi/favicon.ico' %}">
+
+        <!-- inline style to handle loading of various element-->
+        {% comment %} <style>body.loading {visibility: hidden;}</style> {% endcomment %}
+
+        <!-- third party css -->
+        <link href="{% static 'management/css/vendor/jquery-jvectormap-1.2.2.css' %}" rel="stylesheet" type="text/css" />
+        <!-- SimpleMDE css -->
+        <link href="{% static 'management/css/vendor/summernote-bs4.css' %}" rel="stylesheet" type="text/css" />
+        <!-- third party css end -->
+
+        <!-- App css -->
+        <link href="{% static 'base/css/icons.min.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'management/css/app.css' %}" rel="stylesheet" type="text/css" id="main-style-container" />
+        <link href="{% static 'management/css/add.css' %}" rel="stylesheet" type="text/css" id="main-style-container" />
+
+        <!-- Search & Analytics -->
+        {% block analytics_head %}
+        {% include "base/analytics_head.html" %}
+        {% endblock analytics_head %}
+    </head>
+    <body>
+        <!-- Search & Analytics -->
+        {% block analytics_body %}
+        {% include "base/analytics_body.html" %}
+        {% endblock analytics_body %}
+        <div style="margin: 0 15px;">
+            {% if messages %}
+                {% include "management/messages.html" with messages=messages %}
+            {% endif %}
+        </div>
+
+        <div class="account-pages mt-5 mb-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    {% block content %}
+                    <div class="col-lg-5">
+                    </div>
+                    {% endblock content %}
+                    {% block more_action %}
+                    <div class="col-10 text-center">
+                        <a href="{% url 'home' %}" class="btn btn-primary">{% trans "Return Home" %}</a>
+                    </div>
+                    {% endblock more_action %}
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer footer-alt">
+            Copyright © Build Block Inc. {% now 'Y' %}
+        </footer>
+    </body>
+</html>

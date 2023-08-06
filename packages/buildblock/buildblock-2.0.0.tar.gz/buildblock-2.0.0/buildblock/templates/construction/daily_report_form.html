@@ -1,0 +1,363 @@
+{% extends "construction/base.html" %}
+{% load static i18n humanize base_tag construction_tag mathfilters %}
+
+{% block topbar %}
+{% include 'construction/partials/topbar_only_title.html' %}
+{% endblock topbar %}
+
+{% block page_title %}
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box text-center">
+            <p class="font-12" style="margin-bottom: -1rem;">DAILY REPORT</p>
+            <h4 class="page-title text-center page_title_lg">{{report_date}}</h4>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-12">
+            <!-- summary -->
+            <div class="card report_card">
+                <div class="card-body">
+                    <h3 class="header-title"><div class="category_badge bg-dark"></div> Summary</h3>
+
+                    <div class="row mt-4 report_detail_summary">
+                        <div class="col-12 col-lg-4 text-center">
+                            <div class="card shadow-none m-0">
+                                <div class="card-body text-center text-warning">
+                                    <i class="mdi mdi-progress-wrench"></i>
+                                    <h2>
+                                        {% if works %}
+                                        {{works|length}} {% if works|length == 1 %}work{% else %}works{% endif %}
+                                        {% else %}
+                                        -
+                                        {% endif %}
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4 text-center">
+                            <div class="card shadow-none m-0 border-left">
+                                <div class="card-body text-center text-info">
+                                    <i class="mdi mdi-worker"></i>
+                                    <h2>
+                                        {% if personnel_expenses %}
+                                        {{personnel_expenses|length}} {% if personnel_expenses|length == 1 %}worker{% else %}workers{% endif %}
+                                        {% else %}
+                                        -
+                                        {% endif %}
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4 text-center">
+                            <div class="card shadow-none m-0 border-left">
+                                <div class="card-body text-center text-danger">
+                                    <i class="mdi mdi-cash-multiple"></i>
+                                    {% if personnel_expense_sum|add:expense_sum != 0 %}
+                                    <h2 class="dollar_sign">
+                                        {{personnel_expense_sum|add:expense_sum|filter_safe_money_read_from_db|intcomma}}
+                                    </h2>
+                                    {% else %}
+                                    <h2>
+                                    -
+                                    </h2>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- works -->
+            <div class="card report_card">
+                <div class="card-body">
+                    <i class="float-right mdi mdi-progress-wrench"></i>
+                    <h3 class="header-title"><div class="category_badge bg-warning"></div> Works</h3>
+
+                    <div class="report_daily_works mt-4">
+                        {% if is_editor %}
+                        <a href="#" data-toggle="modal" data-target="#load_works_modal">
+                            <div class="card bg-warning">
+                                <div class="card-body text-center">
+                                    <h4 class="header-title text_black">+ Add today's works</h4>
+                                </div>
+                            </div>
+                        </a>
+                        {% endif %}
+                        {% for work in works %}
+                        <div class="card bg-light-lighten">
+                            <div class="card-body">
+                                <h4 class="header-title text-white"><span class="badge badge-light mr-1" style="vertical-align: top;">{{work.work_date_index}}일차</span> {{work.title}}</h4>
+                                <div class="d-lg-inline-block mt-1 mt-lg-0 pl-lg-2 pr-lg-3 font-13">
+                                    <span class="pr-1">{{work.type.title}} /</span>
+                                    {% for zone in work.zone_list %}
+                                    <span>{{zone.name}}{% if not forloop.last %}, {% endif %}</span>
+                                    {% endfor %}
+                                </div>
+                                {% if is_editor %}
+                                <form action="{% url 'construction:delete-work-date' %}" method="POST" id="delete_work_date_form_{{forloop.counter}}">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="return_url" value="{{request.get_full_path}}">
+                                    <input type="hidden" name="work_id" value="{{work.id}}">
+                                    <input type="hidden" name="work_date" value="{{report_date|date:'Y-m-d'}}">
+                                    <a href="#" class="card_delete_btn text-white" onclick="document.getElementById('delete_work_date_form_{{forloop.counter}}').submit()"><i class="mdi mdi-close"></i></a>
+                                </form>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <!-- workers & personnel expense -->
+            <div class="card report_card">
+                <div class="card-body">
+                    <i class="float-right mdi mdi-worker"></i>
+                    <h3 class="header-title"><div class="category_badge bg-info"></div> Workers</h3>
+
+                    <div class="report_daily_workers">
+                        <div class="table-responsive">
+                            <table class="table table_expense mt-4 mb-0">
+                                <thead>
+                                    <tr>
+                                        <th width="60">#</th>
+                                        <th width="28"></th>
+                                        <th>Name</th>
+                                        <th>Work Hours</th>
+                                        <th>Payment</th>
+                                        {% if is_editor %}
+                                        <th width="120"></th>
+                                        {% endif %}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for personnel_expense in personnel_expenses reversed %}
+                                    <tr>
+                                        <td>{{forloop.counter}}</td>
+                                        <td class="px-0">
+                                            {% if personnel_expense.attachment %}
+                                            <a href="{{personnel_expense.attachment.url}}" target="_blank"><i class="mdi mdi-link-variant text-white font-16"></i></a>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            <b class="text-white mr-2">{{personnel_expense.worker.name}}</b>
+                                            {% for speciality in personnel_expense.worker.speciality %}
+                                            <span class="mr-1 font-12">{% get_worker_speciality_shorttitle speciality=speciality %}</span>
+                                            {% endfor %}
+                                            {% if personnel_expense.description %}
+                                            <a class="text-muted ml-1"
+                                               data-container="body"
+                                               data-trigger="hover"
+                                               data-toggle="popover"
+                                               data-placement="bottom"
+                                               data-content="{{personnel_expense.description}}">
+                                                <i class="mdi mdi-comment-processing"></i>
+                                            </a>
+                                            {% endif %}
+                                        </td>
+                                        <td>{{personnel_expense.work_hours}}</td>
+                                        <td>
+                                            <span class="dollar_sign{% if personnel_expense.payment_date %} text-white{% else %} text-muted{% endif %}">{{personnel_expense.amount|filter_safe_money_read_from_db|intcomma}}</span>
+                                            {% if personnel_expense.payment_date %}
+                                            <i class="mdi mdi-check-circle ml-1 text-info font-16"></i>
+                                            {% endif %}
+                                        </td>
+                                        {% if is_editor %}
+                                        <td class="text-right">
+                                            <a class="btn btn-sm btn-link text-muted" href="#" data-toggle="modal" data-target="#update_expense_modal_1" onclick="updatePersonnelExpenseData('{{personnel_expense.id}}','{{personnel_expense.worker.name}}','{{personnel_expense.worker.id}}','{{report_date|date:'Y-m-d'}}','{{personnel_expense.payment_date}}','{{personnel_expense.work_hours}}','{{personnel_expense.amount}}','{{personnel_expense.attachment}}','{{personnel_expense.description}}');"><i class="dripicons-document-edit"></i></a>
+                                            <a class="btn btn-sm btn-link text-muted" href="#" data-toggle="modal" data-target="#delete_expense_modal" onclick="deleteExpenseData('{{personnel_expense.id}}','personnel_expense');"><i class="dripicons-trash"></i></a>
+                                        </td>
+                                        {% endif %}
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <table class="table">
+                            {% if is_editor %}
+                            <tbody>
+                                <tr>
+                                    <td colspan="100%" class="text-center"><a href="#" data-toggle="modal" data-target="#add_expense_modal_2" class="text-success" onclick="createPersonnelExpenseData('{{report_date|date:'Y-m-d'}}');">+ New line</a></td>
+                                </tr>
+                            </tbody>
+                            {% endif %}
+                            <tfoot>
+                                <tr class="font-18 text-white bg-light-lighten">
+                                    <td>Total</td>
+                                    <td class="text-center" width="150">{{personnel_expenses|length}} {% if personnel_expenses|length == 1 %}worker{% else %}workers{% endif %}</td>
+                                    <td class="dollar_sign text-right" width="150">{{personnel_expense_sum|filter_safe_money_read_from_db|intcomma}}</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- expense -->
+            <div class="card report_card">
+                <div class="card-body">
+                    <i class="float-right mdi mdi-cash-multiple"></i>
+                    <h3 class="header-title"><div class="category_badge bg-danger"></div> Expense</h3>
+
+                    <div class="report_daily_expense">
+                        <div class="table-responsive">
+                            <table class="table table_expense mt-4 mb-0">
+                                <thead>
+                                    <tr>
+                                        <th width="60">#</th>
+                                        <th width="28"></th>
+                                        <th>Item</th>
+                                        <th>Category</th>
+                                        <th>Quantity</th>
+                                        <th>Unit Price</th>
+                                        <th>Amount</th>
+                                        {% if is_editor %}
+                                        <th width="120"></th>
+                                        {% endif %}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for expense in expenses %}
+                                    <tr>
+                                        <td>{{forloop.counter}}</td>
+                                        <td class="px-0">
+                                            {% if expense.attachment %}
+                                            <a href="{{expense.attachment.url}}" target="_blank"><i class="mdi mdi-link-variant text-white font-16"></i></a>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            <b class="text-white mr-1">{{expense.item}}</b>
+                                            {% if expense.description %}
+                                            <a class="text-muted ml-1"
+                                               data-container="body"
+                                               data-trigger="hover"
+                                               data-toggle="popover"
+                                               data-placement="bottom"
+                                               data-content="{{expense.description}}">
+                                                <i class="mdi mdi-comment-processing"></i>
+                                            </a>
+                                            {% endif %}
+                                        </td>
+                                        <td>{{expense.category}}</td>
+                                        <td>{{expense.quantity}}</td>
+                                        <td><span class="dollar_sign">
+                                            {{expense.amount|intdiv:expense.quantity|filter_safe_money_read_from_db|intcomma}}
+                                        </span></td>
+                                        <td><span class="dollar_sign">{{expense.amount|filter_safe_money_read_from_db|intcomma}}</span></td>
+                                        {% if is_editor %}
+                                        <td class="text-right">
+                                            <a class="btn btn-sm btn-link text-muted" href="#" data-toggle="modal" data-target="#update_expense_modal_2" onclick="updateExpenseData('{{expense.id}}','{{expense.item}}','{{expense.category}}','{{report_date|date:'Y-m-d'}}','{{expense.quantity}}','{{expense.amount}}','{{expense.attachment}}','{{expense.description}}');"><i class="dripicons-document-edit"></i></a>
+                                            <a class="btn btn-sm btn-link text-muted" href="#" data-toggle="modal" data-target="#delete_expense_modal" onclick="deleteExpenseData('{{expense.id}}','expense');"><i class="dripicons-trash"></i></a>
+                                        </td>
+                                        {% endif %}
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <table class="table">
+                            {% if is_editor %}
+                            <tbody>
+                                <tr>
+                                    <td colspan="100%" class="text-center"><a href="#" data-toggle="modal" data-target="#add_expense_modal_3" class="text-success"onclick="createExpenseData('{{report_date|date:'Y-m-d'}}');">+ New line</a></td>
+                                </tr>
+                            </tbody>
+                            {% endif %}
+                            <tfoot>
+                                <tr class="font-18 text-white bg-light-lighten">
+                                    <td>Total</td>
+                                    <td class="dollar_sign text-right">{{expense_sum|filter_safe_money_read_from_db|intcomma}}</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- report content -->
+            <div class="card report_card">
+                <div class="card-body">
+                    <h3 class="header-title"><div class="category_badge bg-secondary"></div> Description</h3>
+                    {% if is_editor %}
+                    <form action="." method="POST" class="mt-3">
+                        {% csrf_token %}
+                        <input type="hidden" name="construction" value="{{construction.id}}">
+                        <input type="hidden" name="type" value="DAILY">
+                        <input type="hidden" name="start_date" value="{{report_date|date:'Y-m-d'}}">
+                        <input type="hidden" name="end_date" value="{{report_date|date:'Y-m-d'}}">
+                        <div class="fieldWrapper">
+                            {{form.content}}
+                        </div>
+                        <div class="admin_submit_btn text-center">
+                            <a href="{% url 'construction:daily-report-list' construction_id=construction.id %}" class="btn btn-secondary mr-2 hidden_sm">BACK TO LIST</a>
+                            <input type='submit' class='btn btn-success' value='SAVE' />
+                        </div>
+                    </form>
+                    {% else %}
+                    <div class="mt-4 mb-4">
+                        {{report.content|safe}}
+                    </div>
+                    <div class="admin_submit_btn text-center">
+                        <a href="{% url 'construction:daily-report-list' construction_id=construction.id %}" class="btn btn-secondary mr-2 hidden_sm">BACK TO LIST</a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block modal %}
+{% if is_editor %}
+{% include 'construction/partials/work_create_modal.html' %}
+{% include 'construction/partials/expense_create_modal.html' %}
+{% include 'construction/partials/expense_update_modal.html' %}
+
+<!-- load works modal -->
+<div id="load_works_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="load_works_label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <form action="{% url 'construction:add-work-date' %}" method="POST">
+            {% csrf_token %}
+                <input type="hidden" name="return_url" value="{{request.get_full_path}}">
+                <input type="hidden" name="work_date" value="{{report_date|date:'Y-m-d'}}">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="load_works_label">Add today's works</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group mb-0">
+                        <select class="form-control select2" data-toggle="select2" name="work_id" required>
+                            <option>Select Work</option>
+                            {% for work in all_works %}
+                            <option value="{{work.id}}">{{work.title}} ({{work.type.title}})</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer" style="justify-content: space-between;">
+                    <button type="button" class="btn btn-secondary" data-target="#add_work_modal" data-toggle="modal" data-dismiss="modal">+ New Works</button>
+                    <input type="submit" value="Add" class='btn btn-success'/>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function createPersonnelExpenseData(date) {
+        var update_form = $('#add_expense_modal_2 form');
+        update_form.find('input[name="date"]').val(date);
+    };
+    function createExpenseData(date) {
+        var update_form = $('#add_expense_modal_3 form');
+        update_form.find('input[name="date"]').val(date);
+    };
+</script>
+{% endif %}
+{% endblock modal %}
+

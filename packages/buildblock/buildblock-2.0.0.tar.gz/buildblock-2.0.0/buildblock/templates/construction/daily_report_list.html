@@ -1,0 +1,145 @@
+{% extends "construction/base.html" %}
+{% load static i18n humanize base_tag %}
+
+{% block app_css %}
+<link href="{% static 'management/css/vendor/fullcalendar.min.css' %}" rel="stylesheet" type="text/css"t />
+{% endblock app_css %}
+
+{% block page_title %}
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <!-- 필터 혹은 검색 -->
+            </div>
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<form action="." id="daily_calendar_form" method="GET" class="fc text-right">
+    <input type="hidden" name="year">
+    <input type="hidden" name="month">
+</form>
+<div class="d-none d-lg-block">
+    <div class="row">
+        <div class="col-12 daily_calendar_button">
+            <div class="daily_calendar fc-button-group d-block">
+                <button type="button" class="fc-prev-button fc-button btn-dark fc-corner-left" aria-label="prev"><span class="fc-icon fc-icon-left-single-arrow"></span></button>
+                <button type="button" class="fc-next-button fc-button btn-dark fc-corner-right float-right" aria-label="next"><span class="fc-icon fc-icon-right-single-arrow"></span></button>
+            </div>
+        </div>
+        <div class="col-12">
+            <div id="calendar" class="daily_calendar"></div>
+        </div>
+    </div>
+</div>
+<div class="daily_calendar_m d-block d-lg-none">
+    <div class="row">
+        <div class="col-12 daily_calendar_button" style="padding-top: 25px;">
+            <div class="daily_calendar fc-button-group d-block">
+                <button type="button" class="fc-prev-button fc-button btn-dark fc-corner-left" aria-label="prev"><span class="fc-icon fc-icon-left-single-arrow"></span></button>
+                <button type="button" class="fc-next-button fc-button btn-dark fc-corner-right float-right" aria-label="next"><span class="fc-icon fc-icon-right-single-arrow"></span></button>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="fc-toolbar">
+                <div class="fc-center">
+                    <h2>{{current_year}}. {{current_month}}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+    {% for report in reports %}
+        <div class="col-6">
+            <a {% if report.report_data %}href="{% url 'construction:daily-report-update' construction_id=construction.id pk=report.report_data.first.id report_date=report.date %}"{% else %}href="{% url 'construction:daily-report-create' construction_id=construction.id report_date=report.date %}"{% endif %} class="report_write_btn">
+                <div class="card report_list_unit">
+                    <div class="card-body text-center">
+                        <h4 class="header-title">
+                            <span class="font-16 text-white font-weight-bold">{{report.date|date:'n.j D'}}</span>
+                        </h4>
+                        <div class="row report_list_unit_info">
+                            <div class="col-12">
+                                {% if report.works %}
+                                <h3 class="d-inline-block"><span class="badge badge-secondary text-warning p-1 mr-1"><i class="mdi mdi-progress-wrench"></i> {{report.works|length}}</span></h3>
+                                {% endif %}
+                                {% if report.personnel_expense.count > 0 %}
+                                <h3 class="d-inline-block"><span class="badge badge-secondary text-info p-1"><i class="mdi mdi-worker"></i> {{report.personnel_expense.count}}</span></h3>
+                                {% endif %}
+                                {% if report.personnel_expense.count > 0 or report.expense.count > 0 %}
+                                <h3 class="my-0"><span class="badge badge-secondary text-danger p-1 dollar_sign">{{report.personnel_expense.sum|add:report.expense.sum|filter_safe_money_read_from_db|intcomma}}</span></h3>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+{% block third_party %}
+<script src="{% static 'management/js/vendor/fullcalendar.min.js' %}"></script>
+<script>
+    $('#calendar').fullCalendar({
+        header: {
+            center: 'title',
+            left: '',
+            right: ''
+        },
+        defaultDate: "{{current_year}}-{{current_month}}-1",
+        navLinks: true,
+        eventLimit: true,
+        fixedWeekCount: false,
+        showNonCurrentDates: false,
+        eventDisplay: 'list-item',
+        events: [
+            {% for report in reports %}
+                {
+                    title: '{% if report.works %}<h3 class="d-inline-block"><span class="badge badge-secondary text-warning p-1 mr-1"><i class="mdi mdi-progress-wrench"></i> {{report.works|length}}</span></h3>{% endif %}{% if report.personnel_expense.count > 0 %}<h3 class="d-inline-block"><span class="badge badge-secondary text-info p-1"><i class="mdi mdi-worker"></i> {{report.personnel_expense.count}}</span></h3>{% endif %}{% if report.personnel_expense.count > 0 or report.expense.count > 0 %}<h3 class="my-0"><span class="badge badge-secondary text-danger p-1 dollar_sign">{{report.personnel_expense.sum|add:report.expense.sum|filter_safe_money_read_from_db|intcomma}}</span></h3>{% endif %}',
+                    start: '{{report.date|date:"Y-m-d"}}',
+                    url: '{% if report.report_data %}{% url "construction:daily-report-update" construction_id=construction.id pk=report.report_data.first.id report_date=report.date %}{% else %}{% url "construction:daily-report-create" construction_id=construction.id report_date=report.date %}{% endif %}',
+                    color: 'transparent'
+                },
+            {% endfor %}
+        ]
+        , eventRender:function(event, element) {
+            element.find('.fc-title').html(element.find('.fc-title').text());
+        }
+    });
+
+    $(document).ready(function(){
+        var form = $('#daily_calendar_form');
+        var year = {{current_year}};
+        var month = {{current_month}};
+
+
+        $('.daily_calendar button').click(function(){
+            var buttonClass = $(this).attr('class');
+            if (buttonClass.indexOf('fc-prev-button') != -1) {
+                if (month == 1) {
+                    month = 12;
+                    year -= 1;
+                } else {
+                    month -= 1;
+                }
+            } else {
+                if (month == 12) {
+                    month = 1;
+                    year += 1;
+                } else {
+                    month += 1;
+                }
+            }
+            form.children('input[name="year"]').val(year);
+            form.children('input[name="month"]').val(month);
+            form.submit();
+        });
+    });
+</script>
+{% endblock third_party %}

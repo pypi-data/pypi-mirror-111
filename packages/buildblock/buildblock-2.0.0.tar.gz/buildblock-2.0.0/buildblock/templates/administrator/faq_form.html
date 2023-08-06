@@ -1,0 +1,55 @@
+{% extends "administrator/base_form.html" %}
+{% load static i18n crispy_forms_tags %}
+
+{% block title %}{{page_title}}{% endblock %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<form action='.' method='POST'>
+  <div class="row">
+      <div class="col-12 col-lg-8">
+        <div class="card">
+          <div class="card-body">
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label class="font-12" for="{{ form.num.id_for_label }}">No.</label>
+                  {{form.num}}
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label class="font-12" for="{{ form.language.id_for_label }}">LANGUAGE</label>
+                  {{form.language}}
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="font-12" for="{{ form.question.id_for_label }}">QUESTION</label>
+              {{form.question}}
+            </div>
+            <div class="form-group">
+              <label class="font-12" for="{{ form.answer.id_for_label }}">ANSWER</label>
+              {{form.answer}}
+            </div>
+
+            <div class="text-right admin_submit_btn">
+              <input type='submit' class='btn btn-success' value='Save' />
+            </div>
+          </div>
+        </div>
+    </div>
+</form>
+{% endblock content %}

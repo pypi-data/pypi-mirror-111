@@ -1,0 +1,65 @@
+{% extends "construction/base.html" %}
+{% load static i18n humanize base_tag construction_tag %}
+
+{% block page_title %}
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box search_title_box">
+            <div class="page-title-right d-block">
+                <form class="form-inline" method="get">
+                    <div class="form-group">
+                        <div id="pic_date_range"
+                             class="form-control"
+                             data-toggle="date-picker-range"
+                             data-target-display="#pic_search_datedisplay"
+                             data-target-startdate="#pic_search_start_date"
+                             data-target-enddate="#pic_search_end_date"
+                             data-cancel-class="btn-light">
+                            <i class="mdi mdi-calendar"></i>&nbsp;
+                            <span id="pic_search_datedisplay">{% if request.GET.start_date or request.GET.end_date %}{{request.GET.start_date|parse_date|date:"M j. Y"}} - {{request.GET.end_date|parse_date|date:"M j. Y"}}{% endif %}</span> <i class="mdi mdi-menu-down"></i>
+                            <input type="hidden" id="pic_search_start_date" name="start_date" value="{{request.GET.start_date|parse_date|date:'Y-m-d'}}">
+                            <input type="hidden" id="pic_search_end_date" name="end_date" value="{{request.GET.end_date|parse_date|date:'Y-m-d'}}">
+                        </div>
+                    </div>
+                    <div class="form-group ml-1">
+                        <button class="btn btn-light btn-block" type="submit"><i class="dripicons-search"></i></button>
+                    </div>
+                </form>
+            </div>
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+{% endblock page_title %}
+
+
+{% block content %}
+<div class="row">
+    {% for picture in pictures %}
+        <div class="col-12 col-md-6 col-lg-3 picture_card_col">
+            <div class="card const_card d-block"
+                 onclick="changeModalData(
+                   '{{picture.id}}',
+                   '{{picture.image_url}}',
+                   '{{picture.status}}',
+                   '{{picture.description|safe}}');">
+                <a href="#" data-toggle="modal" data-target="#edit_picture_modal">
+                    <img class="card-img-top" src="{{picture.thumb_url}}" alt="Card image cap">
+                </a>
+                <div class="card-body position-relative">
+                    <div class="clearfix">
+                        <p class="float-right font-12 text-muted mb-0">{{picture.created_at|date:"N j. Y"}}</p>
+                        <h5 class="my-0">{% get_picture_status_badge status=picture.status %} <span class="badge badge-secondary">{{picture.work_title}}</span></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% include "base/pagination.html" with paginator=paginator add_css="page_nav_dark" %}
+{% endblock content %}
+
+
+{% block modal %}
+{% include 'construction/partials/picture_update_modal.html' %}
+{% endblock modal %}

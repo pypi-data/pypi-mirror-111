@@ -1,0 +1,109 @@
+{% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    {% if "p2p." in request.get_host %}
+      {% blocktrans asvar trans_title %}빌드블록-블록체인 P2P 펀드{% endblocktrans %}
+      {% blocktrans asvar trans_description %}블록체인 P2P 펀드 기술신탁 서비스, 빌드블록{% endblocktrans %}
+    {% else %}
+      {% blocktrans asvar trans_title %}빌드블록-해외 부동산 투자 서비스{% endblocktrans %}
+      {% blocktrans asvar trans_description %}쉽고 안전한 해외 부동산 투자 서비스, 빌드블록{% endblocktrans %}
+    {% endif %}
+    <title>{% block title %}{{trans_title}}{% endblock title %}</title>
+    <meta name="description" content="{{trans_description}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keyword" content="빌드블록, 빌드 블록, Buildblock, Build Block, P2P, Fund, 피투피, 부동산 투자, Real Estate, Investment, Blockchain, 블록체인, 기술신탁,  메타서비스">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'base/favi/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'base/favi/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'base/favi/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'base/favi/site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static 'base/favi/safari-pinned-tab.svg' %}" color="#e53d62">
+    <meta name="apple-mobile-web-app-title" content="buildblock">
+    <meta name="application-name" content="buildblock">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <!-- Search & Analytics -->
+    {% block analytics_head %}
+    {% include "base/analytics_head.html" %}
+    {% endblock analytics_head %}
+
+    <!-- External CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900|Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Main CSS -->
+    {% block main_css %}
+    <link href="{% static 'investment/css/bootstrap/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'investment/css/base.css' %}" rel="stylesheet">
+    <link href="{% static 'investment/css/reset.css' %}" rel="stylesheet">
+    <link href="{% static 'investment/css/main.css' %}" rel="stylesheet">
+    {% endblock main_css %}
+
+    <!-- App CSS -->
+    {% block app_css %}{% endblock app_css %}
+
+    <!-- External JS Top -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- Main JS Top -->
+    {% block main_js_top %}
+    {% endblock main_js_top %}
+
+  </head>
+
+  <body {% if LANGUAGE_CODE in 'en' %}class="body_en"{% endif %}>
+    <!-- Search & Analytics -->
+    {% block analytics_body %}
+    {% include "base/analytics_body.html" %}
+    {% endblock analytics_body %}
+
+    <!-- Nav Bar -->
+    {% block nav %}
+    {% include "base/nav.html" %}
+    {% endblock nav %}
+
+    <!-- Messages -->
+    {% if messages %}
+    {% include "base/messages.html" with messages=messages %}
+    {% endif %}
+
+    <!-- Main Contents -->
+    {% block content %}
+    <div class="container">
+      <p>BuildBlock</p>
+    </div>
+    {% endblock content %}
+
+    <!-- Footer -->
+    {% block contact %}{% endblock contact %}
+
+    {% block footer %}
+    {% include "base/footer.html" %}
+    {% endblock footer %}
+
+    <!-- Modal -->
+    {% block modal %}{% endblock modal %}
+
+    <!-- External JS Bottom -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Main JS Bottom -->
+    {% block main_js_bottom %}
+    <script type="text/javascript" src="{% static 'investment/js/bootstrap/bootstrap.min.js' %}?v=0.1.1"></script>
+    {% endblock main_js_bottom %}
+
+    <!-- App JS Bottom -->
+    {% block app_js_bottom %}{% endblock app_js_bottom %}
+  </body>
+</html>

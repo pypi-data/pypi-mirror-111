@@ -1,0 +1,89 @@
+{% extends "administrator/base_form.html" %}
+{% load static i18n crispy_forms_tags base_tag %}
+
+{% block content %}
+<form action='.' method='POST'>
+    <div class="row">
+        <div class="col-12 col-lg-8">
+            <div class="card">
+                <div class="card-body">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-6 fieldWrapper">
+                            <label class="font-12" for="{{form.product.id_for_label}}">
+                                {{form.product.label}}
+                            </label>
+                            {{form.product}}
+                        </div>
+                        <div class="col-6 fieldWrapper">
+                            <label class="font-12" for="{{form.tenant.id_for_label}}">
+                                {{form.tenant.label}}
+                            </label>
+                            {{form.tenant}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 fieldWrapper">
+                            <label class="font-12" for="{{form.amount.id_for_label}}">
+                                {{form.amount.label}} (＄)
+                            </label>
+                            <input type="number"
+                                   name="{{form.amount.name}}"
+                                   value="{{form.amount.value|filter_safe_money_read_from_db}}"
+                                   min="0"
+                                   step="1"
+                                   class="textinput form-control mb-3" style="max-width:100%;"
+                                   required
+                                   id="id_amount">
+                        </div>
+                        <div class="col-6 fieldWrapper">
+                            <label class="font-12" for="{{form.payment_type.id_for_label}}">
+                                {{form.payment_type.label}}
+                            </label>
+                            {{form.payment_type}}
+                        </div>
+                        <div class="col-6 fieldWrapper">
+                            <label class="font-12" for="{{form.status.id_for_label}}">
+                                {{form.status.label}}
+                            </label>
+                            {{form.status}}
+                        </div>
+                        <div class="col-6 fieldWrapper date_field">
+                            <label class="font-12" for="{{form.due_date.id_for_label}}">
+                                {{form.due_date.label}}
+                            </label>
+                            <div class="d-flex">
+                                {{form.due_date}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3 fieldWrapper">
+                            <label class="font-12" for="{{form.payment_method.id_for_label}}">
+                                {{form.payment_method.label}}
+                            </label>
+                            {{form.payment_method}}
+                        </div>
+                        <div class="col-3 fieldWrapper">
+                            <label class="font-12" for="{{form.identifier.id_for_label}}">
+                                {{form.identifier.label}}
+                            </label>
+                            {{form.identifier}}
+                        </div>
+                        <div class="col-6 fieldWrapper">
+                            <label class="font-12" for="{{form.payment_made_datetime.id_for_label}}">
+                                {{form.payment_made_datetime.label}}
+                            </label>
+                            {{form.payment_made_datetime}}
+                        </div>
+                    </div>
+
+                    <div class="text-right admin_submit_btn">
+                        <input type='submit' class='btn btn-success' value='SAVE' />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock content %}

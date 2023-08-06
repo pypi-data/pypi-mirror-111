@@ -1,0 +1,210 @@
+{% extends "landing/base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "BuildBlock |" %} {{page_title}}{% endblock title %}
+
+{% block content %}
+<div class="banner_section contact_banner">
+    <div class="banner_content">
+        <div class="container-fluid">
+            {% blocktrans %}<h1 class="text-center text-white text-shadow mb-0">Contact</h1>{% endblocktrans %}
+        </div>
+    </div>
+</div>
+
+<div class="content_section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <h1 class="h2 mb-3 mb-lg-4" data-aos-once="true" data-aos="fade-up">{% blocktrans %}Ask Us<br>Anything{% endblocktrans %}</h1>
+            </div>
+            <div class="col-12 col-lg-8">
+                <a href="{% for item in information.sns %}{% if item.name == 'kakao' %}{{item.url}}{% endif %}{% endfor %}/chat" target="_blank">
+                    <div class="card contact_card" style="background-color: #FAE100;" data-aos-once="true" data-aos="fade-left">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12 col-lg-3">
+                                    <h4 class="font-weight-medium">{% trans 'Kakao Chat' %}</h4>
+                                </div>
+                                <div class="col-12 col-lg-9 text-right">
+                                    <h3>{% blocktrans %}[BuildBlock] Channel{% endblocktrans %}</h3>
+                                    <h5 class="mb-0 font-weight-medium">{% trans 'Real-Time Chat Available' %}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="card contact_card" data-aos-once="true" data-aos="fade-left">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 col-lg-3">
+                                <h4 class="font-weight-medium">{% trans 'Call Us' %}</h4>
+                            </div>
+                            <div class="col-12 col-lg-9 text-right">
+                                {% for item in information.telephone %}
+                                <{% if information.telephone|length != 1 %}h4{% else %}h3{% endif %} {% if forloop.last %}class="mb-0"{% endif %}>{% if information.telephone|length != 1 %}<span class="font-16 font-weight-normal mr-1">{{item.title}}</span> {% endif %}<a href="tel:{{item.telephone}}" class="text-dark">{{item.telephone}}</a></{% if information.telephone|length != 1 %}h4{% else %}h3{% endif %}>
+                                {% endfor %}
+                                {% if information.telephone|length == 1 %}<h4 class="mb-0 font-weight-bold"><span class="font-16 font-weight-medium">{% trans 'Hours' %}</span> 10:00 ~ 17:00 <span class="hidden_ko">(KST)</span></h4>{% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" data-toggle="modal" data-target="#contact_email_modal">
+                    <div class="card contact_card" data-aos-once="true" data-aos="fade-left">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12 col-lg-3">
+                                    <h4 class="font-weight-medium">{% trans 'Email Us' %}</h4>
+                                </div>
+                                <div class="col-12 col-lg-9 text-right">
+                                    {% for item in information.email %}
+                                    <{% if information.email|length != 1 %}h4{% else %}h3{% endif %} {% if forloop.last %}class="mb-0"{% endif %}>{% if information.email|length != 1 %}<span class="font-16 font-weight-normal mr-1">{{item.category}}</span> {% endif %}{{item.email}}</{% if information.email|length != 1 %}h4{% else %}h3{% endif %}>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="card contact_card" data-aos-once="true" data-aos="fade-left">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 col-lg-3">
+                                <h4 class="font-weight-medium">{% trans 'Visit Us' %}</h4>
+                            </div>
+                            <div class="col-12 col-lg-9 text-right">
+                                <p class="font-16 text-primary mb-2">{% trans 'Please make an appointment with us before your visit.' %}</p>
+                                {% for item in information.address %}
+                                <h5 class="font-weight-bold{% if forloop.last %} mb-0{% endif %}"><span class="font-16 font-weight-normal mr-lg-1">{{item.location}}</span><br class="d-block d-lg-none"> {{item.address}}</h5>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% if landing_document %}
+                {% for item in landing_document %}
+                <div class="card contact_card" data-aos-once="true" data-aos="fade-left">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <h4 class="mb-0 font-weight-medium">{{item.title}}</h4>
+                            </div>
+                            <div class="col-12 col-lg-6 text-right">
+                                <a class="d-inline-block font-18 text-underline mt-1" href="{{item.document.url}}" target="_blank">{% trans 'Download' %}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content_section contact_sns">
+    <div class="container-fluid">
+        <h2 class="h2 mb-3 mb-lg-4" data-aos-once="true" data-aos="fade-up">{% blocktrans %}Don't Miss Out<br>on BuildBlock's News!{% endblocktrans %}</h2>
+        <div class="row">
+            {% for item in information.sns %}
+            {% if item.name != 'kakao' %}
+            <div class="col-12 col-lg-4">
+                <a href="{{item.url}}" target="_blank">
+                    <div class="card contact_card {{item.name}}_card {% if forloop.last %}mb-0 mb-lg-3{% endif %}" data-aos-once="true" data-aos="fade-up">
+                        <div class="card-body">
+                            <img class="position-absolute" src="{% static 'landing/images/sns' %}/{{item.name}}.png" alt="{{item.name}}" width="40">
+                            <h3 class="text-capitalize mb-4">{{item.name}}</h3>
+                            <p class="font-18 text-keep mb-0">
+                                {% if item.name == 'youtube' %}
+                                {% blocktrans %}Check out various US real estate information and investment progress.{% endblocktrans %}
+                                {% elif item.name == 'blog' %}
+                                {% blocktrans %}Don't miss out on the most recent US real estate market trend and interesting real estate stories.{% endblocktrans %}
+                                {% elif item.name == 'kakao' %}
+                                {% blocktrans %}Get a real time consultation on your US real estate investment.{% endblocktrans %}
+                                {% elif item.name == 'facebook' %}
+                                {% blocktrans %}Find out on the US real estate news quick and communicate with the BuildBlock Team.{% endblocktrans %}
+                                {% else %}
+                                {% blocktrans %}BuildBlock's Social Network Channel{% endblocktrans %}
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% if faq_list %}
+<div class="content_section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <h2 class="h2 mb-3 mb-lg-4" data-aos-once="true" data-aos="fade-up">{% trans "FAQ" %}</h2>
+            </div>
+            <div class="col-12 col-lg-8">
+                <div class="accordion custom-accordion" id="faq_accordion">
+                    {% for faq in faq_list %}
+                    <div class="faq_card card mb-0">
+                        <div class="card-header" id="faq_heading_{{forloop.counter}}">
+                            <h5 class="m-0">
+                                <a class="custom-accordion-title d-block collapsed text-dark"
+                                    data-toggle="collapse" data-target="#faq_{{forloop.counter}}"
+                                    aria-expanded="false" aria-controls="faq_{{forloop.counter}}">
+                                    <span class="heading_q">Q</span> {{faq.question}} <i class="mdi mdi-minus accordion-arrow"></i>
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="faq_{{forloop.counter}}" class="collapse"
+                            aria-labelledby="faq_heading_{{forloop.counter}}"
+                            data-parent="#faq_accordion">
+                            <div class="card-body">
+                                <div class="faq_body">{{faq.answer}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% endblock content %}
+
+{% block modal %}
+<div id="contact_email_modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-right w-100">
+        <form method="post">
+            {% csrf_token %}
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h4 class="modal-title">{% trans 'Email Us' %}</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="contact_email_content">
+                        {{form.as_p}}
+                        <div class="form-group mb-0">
+                            <p class="text-muted">{% trans 'Personal Information Collection Statement' %}</p>
+                            <div class="form-control bg-lightgray h-auto font-12 contact_email_agree">
+                                {% blocktrans %}Build Block may collect personal data for seamless customer communication, including individual consultations.<br><br>
+                                Collected information and Data Collection Methods<br>
+                                The personal data BuildBlock may collect includes name, contact address, contact telephone number, and email address.<br><br>
+                                Personal Information Retention Period<br>
+                                According to Build Block’s regulations, the personal information provided by you may be retained for up to five (5) years. However, the information may be destroyed earlier upon request.{% endblocktrans %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary-gradient" value="{% trans 'Agree and Send' %}">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

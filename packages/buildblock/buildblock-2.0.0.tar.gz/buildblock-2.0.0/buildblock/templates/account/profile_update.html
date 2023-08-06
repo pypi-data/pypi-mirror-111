@@ -1,0 +1,69 @@
+{% extends "account/base.html" %}
+{% load static i18n management_tag %}
+
+
+{% block content %}
+<div class="col-lg-5">
+    <div class="card">
+        <div class="card-header pt-4 pb-4 text-center bg-primary">
+            <a href="{% url 'home' %}">
+                <span><img src="{% static 'landing/images/logo/logo_w_h36.png' %}" alt="" height="24" id="side-main-logo"></span>
+            </a>
+        </div>
+        <div class="card-body p-4">
+            <div class="text-center w-75 m-auto">
+                <h4 class="text-dark-50 text-center mt-0 font-weight-bold">{% trans "Change profile" %}</h4>
+            </div>
+
+            <form class="account_form mt-4" id="signup_form" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for hidden_field in form.hidden_fields %}
+                {{ hidden_field }}
+                {% endfor %}
+
+                {% if form.non_field_errors %}
+                <div class="alert alert-danger" role="alert">
+                    {% for error in form.non_field_errors %}
+                    {{ error }}
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        {% include "account/signup_form.html" with field=form.first_name %}
+                    </div>
+                    <div class="form-group col-md-6">
+                        {% include "account/signup_form.html" with field=form.last_name %}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    {% include "account/signup_form.html" with field=form.nationality %}
+                </div>
+
+                <div class="form-group">
+                    {% include "account/signup_form.html" with field=form.phone_number %}
+                </div>
+                <hr>
+                {% for field in form.visible_fields %}
+                    {% if field.name not in 'first_name,last_name,nationality,phone_number' %}
+                        <div class="form-group">
+                            {% include "account/signup_form.html" with field=field %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+
+                <div class="form-group mb-0 text-center">
+                    <a href="#" class="btn btn-light" onclick="javascript:history.go(-1);"> {% trans "Cancel" %} </a>
+                    <button class="btn btn-primary" type="submit"> {% trans "Save" %} </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+
+{% block more_action %}
+{% endblock more_action %}

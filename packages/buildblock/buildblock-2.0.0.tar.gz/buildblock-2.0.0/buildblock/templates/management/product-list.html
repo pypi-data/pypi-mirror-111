@@ -1,0 +1,54 @@
+{% extends "management/base.html" %}
+{% load static i18n humanize mathfilters management_tag %}
+
+{% block page_title %}
+{% get_management_roles as MANAGEMENT_ROLES %}
+<div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                {% if request.session.active_role == MANAGEMENT_ROLES.agent_role %}
+                <div class="page-title-right d-none d-md-inline-block">
+                    <a class="btn btn-success btn-rounded mb-3" href="{% url 'management:product-create' %}"><i class="mdi mdi-plus"></i> Add Product</a>
+                </div>
+                <div class="page-title-right-xs">
+                    <a class="btn btn-success btn_circle mb-3" href="{% url 'management:product-create' %}"><i class="mdi mdi-plus"></i></a>
+                </div>
+                {% endif %}
+                <h4 class="page-title">{{page_title}}</h4>
+            </div>
+        </div>
+    </div>
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+    {% for product in products %}
+      <div class="col-xl-4 col-lg-6">
+          <div class="card product_card d-block">
+              <a href="{% url 'management:product-info' product_code=product.code %}">
+                  <img class="card-img-top" src={{ product.main_image_url }} alt="Card image cap">
+              </a>
+              <div class="card-body">
+                  <h5 class="mt-0 mb-2"><span class="badge badge-dark">{{product.agency.name}}</span> {% get_product_status_badge product=product %}</h5>
+
+                  <h5 class="card-title">
+                      <a href="{% url 'management:product-info' product_code=product.code %}" class="text-title">
+                          {{product.full_address}}
+                      </a>
+                  </h5>
+                  <div class="row">
+                      <div class="col-4">
+                          <h5>Tenants</h5>
+                          <p class="mb-0">{{product.num_people_under_lease}} / {{product.max_num_people}} <small class="text-muted">people</small></p>
+                      </div>
+                      <div class="col-4">
+                          <h5>Rent</h5>
+                          <p class="mb-0"><small class="text-muted">$</small> {{product.rent_under_lease|floatformat:"-2"|intcomma}}</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    {% endfor %}
+</div>
+{% endblock content %}

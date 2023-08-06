@@ -1,0 +1,157 @@
+{% load static i18n mathfilters management_tag %}
+<!-- Index -->
+<div class="text-center text-lg-right invest_stage_index">
+    <div class="bg-success-lighten">DONE</div>
+    <div class="bg-success text-white">IN PROGRESS</div>
+    <div><i class="mdi mdi-circle text-warning"></i> TO DO (INVESTOR)</div>
+</div>
+
+<!-- PC View -->
+<table class="table table-sm table-borderless invest_stage visible_table_lg w-100">
+    <tr>
+        {% for stage in stage_list %}
+        <td class="{% get_class_investment_workflow_status stage.status %}">
+            <div class="stage_progress">
+                <div class="progress progress-md">
+                    <div class="progress-bar
+                                {% if stage.status == 'COMPLETE' %}bg-success-lighten{% else %}bg-success{% endif %}"
+                          role="progressbar"
+                          style="width: {{stage.progress_percentage}}%"
+                          aria-valuenow="{{stage.progress_percentage}}"
+                          aria-valuemin="0"
+                          aria-valuemax="100"></div>
+                </div>
+                {% if stage.status == 'COMPLETE' %}
+                <div class="stage_progress_check shadow-sm"><i class="mdi mdi-check"></i></div>
+                {% endif %}
+            </div>
+            <div class="stage_img">
+                {% if stage.status == 'PENDING' %}
+                <img src="{% static 'management/images/investment/stage_pending_'|add:stage.id|add:'.png' %}">
+                {% else %}
+                <img src="{% static 'management/images/investment/stage_'|add:stage.id|add:'.png' %}">
+                {% endif %}
+            </div>
+            <div class="stage_title">
+                {{forloop.counter}}. {{stage.title}}
+            </div>
+            <div class="stage_steps">
+                <ul class="list-group">
+                    {% for step in stage.steps %}
+                        {% if step.description or step.contract.count > 0 or request.user.is_superuser %}
+                            <a href="#"
+                                data-toggle="modal"
+                                data-target="#invest_step_modal_{{step.id}}"
+                                class="list-group-item list-group-item-action
+                                       {% get_class_investment_user_todo step.actor_role %}
+                                       {% get_class_investment_workflow_status step.status %}">
+                                {{step.title}}
+                                {% get_icon_investment_user_todo step.actor_role %}
+                            </a>
+                        {% else %}
+                            <li class="list-group-item
+                                       {% get_class_investment_user_todo step.actor_role %}
+                                       {% get_class_investment_workflow_status step.status %}">
+                                {{step.title}}
+                                {% get_icon_investment_user_todo step.actor_role %}
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if request.user.is_superuser %}
+                    <a href="{% url 'administrator:investment-step-create' investment_id=investment_id stage_id=stage.id %}"
+                       class="list-group-item list-group-item-action">
+                        + {% trans "Add" %}
+                    </a>
+                    {% endif %}
+                </ul>
+            </div>
+        </td>
+        {% endfor %}
+    </tr>
+</table>
+
+<!-- Mobile View -->
+<div class="invest_stage invest_stage_m hidden_lg">
+    {% get_investment_complete_stage_count stage_list as complete_stage_count %}
+    {% get_one_step_percentage_mobile stage_list as one_step_percentage %}
+    <div class="progress progress-sm">
+        <div class="progress-bar bg-success-lighten"
+              role="progressbar"
+              style="width: {{complete_stage_count|add:"-1"|mul:one_step_percentage}}%"
+              aria-valuenow="{{complete_stage_count|add:"-1"|mul:one_step_percentage}}"
+              aria-valuemin="0"
+              aria-valuemax="100"></div>
+        <div class="progress-bar bg-success"
+              role="progressbar"
+              style="width: {% if complete_stage_count %}{{one_step_percentage}}{% else %}0{% endif %}%"
+              aria-valuenow="{% if complete_stage_count %}{{one_step_percentage}}{% else %}0{% endif %}"
+              aria-valuemin="0"
+              aria-valuemax="100"></div>
+    </div>
+    <div class="d-flex justify-content-between">
+        {% for stage in stage_list %}
+        <div class="stage_progress_m {% get_class_investment_workflow_status stage.status %}">
+            {% get_icon_investment_step_status stage.status forloop.counter %}
+        </div>
+        {% endfor %}
+    </div>
+    <div class="invest_stage_slide">
+        <div id="invest_stage_slide_{{investment_id}}" class="carousel slide" data-ride="carousel" data-interval="false">
+            <div class="carousel-inner" role="listbox">
+                {% for stage in stage_list %}
+                <div class="carousel-item
+                            {% get_class_investment_workflow_status stage.status %}
+                            {% if complete_stage_count == forloop.counter0 or forloop.last and complete_stage_count == stage_list.length %}
+                            active{% endif %}">
+                    <div class="stage_img">
+                        {% if stage.status == 'PENDING' %}
+                        <img src="{% static 'management/images/investment/stage_pending_'|add:stage.id|add:'.png' %}">
+                        {% else %}
+                        <img src="{% static 'management/images/investment/stage_'|add:stage.id|add:'.png' %}">
+                        {% endif %}
+                    </div>
+                    <div class="stage_title">
+                        {{forloop.counter}}. {{stage.title}}
+                    </div>
+                    <div class="stage_steps">
+                        <ul class="list-group">
+                            {% for step in stage.steps %}
+                                {% if step.description or step.contract.count > 0 or request.user.is_superuser %}
+                                    <a href="#"
+                                       data-toggle="modal"
+                                       data-target="#invest_step_modal_{{step.id}}"
+                                       class="list-group-item list-group-item-action
+                                              {% get_class_investment_user_todo step.actor_role %}
+                                              {% get_class_investment_workflow_status step.status %}">
+                                        {{step.title}}
+                                        {% get_icon_investment_user_todo step.actor_role %}
+                                    </a>
+                                {% else %}
+                                    <li class="list-group-item
+                                               {% get_class_investment_user_todo step.actor_role %}
+                                               {% get_class_investment_workflow_status step.status %}">
+                                        {{step.title}}
+                                        {% get_icon_investment_user_todo step.actor_role %}
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                            {% if request.user.is_superuser %}
+                            <a href="{% url 'administrator:investment-step-create' investment_id=investment_id stage_id=stage.id %}"
+                              class="list-group-item list-group-item-action">
+                                + {% trans "Add" %}
+                            </a>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <a class="carousel-control-prev" href="#invest_stage_slide_{{investment_id}}" role="button" data-slide="prev">
+                <i class="mdi mdi-chevron-left" aria-hidden="true"></i>
+            </a>
+            <a class="carousel-control-next" href="#invest_stage_slide_{{investment_id}}" role="button" data-slide="next">
+                <i class="mdi mdi-chevron-right" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+</div>

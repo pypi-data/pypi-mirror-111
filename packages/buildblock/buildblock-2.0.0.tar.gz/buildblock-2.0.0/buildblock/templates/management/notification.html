@@ -1,0 +1,52 @@
+{% extends "management/base.html" %}
+{% load static i18n %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <button type="button" class="btn btn-danger">Clear All</button>
+            </div>
+
+            <h4 class="page-title">Notification</h4>
+
+            <div class="page-title-right-xs">
+                <button type="button" class="btn btn-danger btn_circle"><i class="mdi mdi-trash-can"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card noti_card">
+            <div class="card-body">
+                <div class="card-widgets">
+                    <span class="badge badge-success">NEW</span>
+                </div>
+                <h5 class="card-title mb-0"><i class="mdi mdi-comment-text-outline"></i> Michael Franklin commented on admin</h5>
+            </div>
+        </div>
+        <div class="card noti_card">
+            <div class="card-body">
+                <div class="card-widgets">
+                    <span class="badge badge-success">NEW</span>
+                </div>
+                <h5 class="card-title mb-0"><i class="mdi mdi-comment-text-outline"></i> Michael Franklin commented on admin</h5>
+            </div>
+        </div>
+        <div class="card noti_card">
+            <div class="card-body">
+                <h5 class="card-title mb-0"><i class="mdi mdi-comment-text-outline"></i> Michael Franklin commented on admin</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

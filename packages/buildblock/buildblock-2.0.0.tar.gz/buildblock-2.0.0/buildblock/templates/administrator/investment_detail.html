@@ -1,0 +1,118 @@
+{% extends "administrator/base.html" %}
+{% load static i18n base_tag management_tag %}
+
+{% block title %}{{page_title}}{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-6">
+                <label class="font-12 text-gray font-weight-light">TITLE</label>
+                <a href="{% url 'administrator:investment-product-detail' investment.investment_product.id %}">
+                    <p class="text-white font-16">{{investment.investment_product.title}} <i class="ml-1 mdi mdi-launch"></i></p>
+                </a>
+            </div>
+            <div class="col-3 border-left border-secondary">
+                <label class="font-12 text-gray font-weight-light">INVESTOR</label>
+                <p class="text-white font-16">{{investment.user.name}} ({{investment.user.email}})</p>
+                <label class="font-12 text-gray font-weight-light">MANAGER</label>
+                <p class="text-white font-16 mb-0">{{investment.investment_product.manager.name}} ({{investment.investment_product.manager.email}})</p>
+            </div>
+            <div class="col-3 border-left border-secondary">
+                <label class="font-12 text-gray font-weight-light">AMOUNT</label>
+                <p class="text-white font-16"><span class="dollar_sign">{{investment.amount|filter_safe_money_read_from_db}}</span></p>
+                <label class="font-12 text-gray font-weight-light">DATE</label>
+                <p class="text-white font-16 mb-0">{{investment.investment_product.start_date}} ~ {{investment.investment_product.end_date}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    {% if stage_list %}
+    <div class="col-12">
+        <p class="text-white font-16">
+            INVESTMENT STEPS
+        </p>
+    </div>
+    <div class="col-12 mb-3">
+        <div class="card">
+            <div class="card-body">
+                {% include "investment/partials/investment_step_module.html" with stage_list=stage_list investment_id=investment.id %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="float-right">
+            <a href="{% url 'administrator:investment-contract-template-select' investment_id=investment.id %}" class="btn btn-sm btn-primary font-12">
+                <i class="dripicons-plus mr-1"></i> NEW DOCUMENTS
+            </a>
+        </div>
+        <p class="text-white font-16">
+            DOCUMENTS
+        </p>
+    </div>
+    <div class="col-12 mb-3">
+        <table class="table table-condensed dataTable w-100">
+            <colgroup>
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="200">
+            </colgroup>
+            <thead class="thead-dark">
+                <tr>
+                  <th>ID</th>
+                  <th>Status</th>
+                  <th>Title</th>
+                  <th>Template</th>
+                  <th>Attachment</th>
+                  <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for contract in contracts|dictsort:"id" %}
+                <tr>
+                    <td>{{contract.id}}</td>
+                    <td>{{contract.status|get_contract_status_badge}}</td>
+                    <td>{{contract.title}}</td>
+                    <td>{{contract.template_title}}</td>
+                    <td>
+                        {% if contract.document_name %}
+                        <a class="btn btn-sm btn-link text-primary" href="{% url 'investment:document-download' contract.id %}" target="_blank"><i class="dripicons-blog"></i> View</a>
+                        {% endif %}
+                    </td>
+                    <td>
+                      <a class="btn btn-sm btn-link text-warning" href="{% url 'administrator:investment-contract-update' contract.id %}"><i class="dripicons-document-edit"></i> EDIT</a>
+                      <a class="btn btn-sm btn-link text-danger" href="{% url 'administrator:investment-contract-delete' contract.id %}"><i class="dripicons-trash"></i> DEL</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td class="text-center" colspan="7">No Contracts</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock content %}
+
+{% block modal %}
+<!-- Investment Step Modal -->
+{% for stage in stage_list %}
+    {% for step in stage.steps %}
+        {% include "investment/partials/investment_step_modal.html" with step=step %}
+    {% endfor %}
+{% endfor %}
+{% endblock modal %}
+
+{% block third_party %}
+{% include "base/load_datatable.html" %}
+{% endblock third_party %}

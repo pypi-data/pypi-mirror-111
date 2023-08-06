@@ -1,0 +1,96 @@
+{% extends "construction/base.html" %}
+{% load static i18n humanize construction_tag %}
+
+{% block sidebar %}
+{% endblock %}
+{% block topbar %}
+<div class="navbar-custom" style="left:0;">
+    <div class="topbar_title text-center">
+        <h4>CONSTRUCTION MANAGER</h4>
+    </div>
+</div>
+{% endblock %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            {% if request.user.is_superuser %}
+            <div class="page-title-right mt-0">
+                <a href="{% url 'construction:create' %}" class="btn btn-success mb-3"><i class="mdi mdi-plus"></i> CREATE CONSTRUCTION</a>
+            </div>
+            {% endif %}
+            <h4 class="page-title btn-group const_list_filter mb-2">
+                <a href="?status=all" class="btn btn-secondary{% if request.GET.status != 'PENDING' and request.GET.status != 'IN_PROGRESS' and request.GET.status != 'COMPLETE' %} active{% endif %}">All</a>
+                <a href="?status=PENDING" class="btn btn-secondary{% if request.GET.status == 'PENDING' %} active{% endif %}">Pending</a>
+                <a href="?status=IN_PROGRESS" class="btn btn-secondary{% if request.GET.status == 'IN_PROGRESS' %} active{% endif %}">In Progress</a>
+                <a href="?status=COMPLETE" class="btn btn-secondary{% if request.GET.status == 'COMPLETE' %} active{% endif %}">Complete</a>
+            </h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+    {% if request.user.is_superuser %}
+    <div class="col-12 visible_sm pb-2">
+        <a href="{% url 'construction:create' %}" class="btn btn-success w-100"><i class="dripicons-plus"></i> CREATE CONSTRUCTION</a>
+    </div>
+    {% endif %}
+    {% for construction in constructions %}
+        <div class="col-xl-4 col-lg-6">
+            <div class="card const_card d-block">
+                <a href="{% url 'construction:info' construction_id=construction.id %}">
+                    <img class="card-img-top" src="{{construction.main_image_url}}" alt="Card image cap">
+                </a>
+                <div class="card-body position-relative">
+                    <h5 class="mt-0 mb-2">
+                        {% get_construction_type_badge type=construction.type %}
+                        {% get_construction_status_badge status=construction.status %}
+                    </h5>
+                    <h5 class="card-title text-title font-18">
+                        <a href="{% url 'construction:info' construction_id=construction.id %}" class="text-white">
+                            {{construction.title}}
+                        </a>
+                    </h5>
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <h5 class="font-12 text-muted">PRODUCT</h5>
+                            <p class="font-14">{{construction.full_address}}</p>
+                        </div>
+                        <div class="col-4">
+                            <h5 class="font-12 text-muted">CONSTRUCTOR</h5>
+                            <p class="font-14 mb-0">
+                                {% if construction.constructor.all|length > 2 %}
+                                    {{construction.constructor.first.name}} and others
+                                {% else %}
+                                    {% for constructor in construction.constructor.all %}
+                                        {{constructor.name}}{% if not forloop.last %}, {% endif %}
+                                    {% endfor %}
+                                {% endif %}
+                            </p>
+                        </div>
+                        <div class="col-4">
+                            <h5 class="font-12 text-muted">BUDGET</h5>
+                            <p class="font-14 mb-0 dollar_sign">
+                                {{construction.budget|floatformat:"-2"|intcomma|default:0}}
+                            </p>
+                        </div>
+                        <div class="col-4">
+                            <h5 class="font-12 text-muted">START DATE</h5>
+                            <p class="font-14 mb-0">{{construction.start_date}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% empty %}
+        <div class="col-12 py-5">
+            <p class="text-muted font-14 text-center">No Constructions</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock content %}

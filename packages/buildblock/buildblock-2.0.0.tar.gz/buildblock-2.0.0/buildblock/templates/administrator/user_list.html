@@ -1,0 +1,77 @@
+{% extends "administrator/base.html" %}
+{% load static i18n account_tag management_tag base_tag %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <a class="btn btn-success mb-2" href="{% url 'administrator:user-create' %}">CREATE USER</a>
+            </div>
+
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <table class="table table-condensed dataTable w-100">
+            <colgroup>
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="170">
+            </colgroup>
+            <thead class="thead-dark">
+                <tr>
+                  <th>Name</th>
+                  <th>Role</th>
+                  <th>E-mail</th>
+                  <th>Phone Number</th>
+                  <th>Nationality</th>
+                  <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                <tr>
+                  <td>{{user.name}}</td>
+                  <td>
+                      {% for user_role in user.user_role %}
+                      <span class="badge badge-secondary font-12">{% get_user_role_title role=user_role %}</span>
+                      {% endfor %}
+                  </td>
+                  <td>
+                      {{user|get_email_verified_icon}} {{user.email}}
+                  </td>
+                  <td>{{user.phone_number}}</td>
+                  <td>{{user.get_nationality_display}}</td>
+                  <td>
+                      <!-- TODO: User Detail-->
+                      <a class="btn btn-sm btn-link text-info" href="#"><i class="dripicons-zoom-in"></i></a>
+                      <a class="btn btn-sm btn-link text-warning" href="{% url 'administrator:user-update' pk=user.pk %}"><i class="dripicons-document-edit"></i></a>
+                      <a class="btn btn-sm btn-link text-danger" href="{% url 'administrator:user-delete' pk=user.pk %}"><i class="dripicons-trash"></i></a>
+                  </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td class="text-center" colspan="100%">No Users</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% include "base/pagination.html" with paginator=paginator add_css="page_nav_dark" sign_align="end"%}
+{% endblock content %}
+
+{% block third_party %}
+{% include "base/load_datatable.html" %}
+{% endblock third_party %}

@@ -1,0 +1,178 @@
+{% extends "landing/base.html" %}
+{% load static i18n humanize base_tag management_tag landing_tag %}
+
+{% block title %}{% trans "BuildBlock |" %} {{case_study.title}}{% endblock title %}
+
+{% block content %}
+<div class="content_section pt-0">
+    <div class="container-fluid">
+        <div class="row justify-content-between">
+            <div class="col-12 col-lg-8">
+                <div class="card case_study_read_card mt-4">
+                    <div class="card-body pt-4 pt-lg-3">
+                        {% get_case_study_status_badge status=case_study.status language=LANGUAGE_CODE %}
+                        <h3 class="news_read_title mt-0 mb-3">{{case_study.title}}</h3>
+                        <div class="row">
+                            <div class="col-6 col-lg-4">
+                                <h5 class="font-16 text-muted font-weight-medium mb-1">{% trans "PURCHASED PRICE" %}</h5>
+                                <h4 class="dollar_sign mb-0 font-weight-medium">{{case_study.purchase_price|filter_safe_money_read_from_db|floatformat:0|intcomma}} <span class="hidden_en font-16">({{case_study.purchase_price|filter_change_dollar_to_100_m_won|floatformat:-1}}억 원)</span></h4>
+                            </div>
+                            {% if case_study.selling_price %}
+                            <div class="col-6 col-lg-4">
+                                <h5 class="font-16 text-muted font-weight-medium mb-1">{% trans "SOLD PRICE" %}</h5>
+                                <h4 class="dollar_sign mb-0 font-weight-medium">{{case_study.selling_price|filter_safe_money_read_from_db|floatformat:0|intcomma}} <span class="hidden_en font-16">({{case_study.selling_price|filter_change_dollar_to_100_m_won|floatformat:-1}}억 원)</span></h4>
+                            </div>
+                            {% endif %}
+                        </div>
+                        <div class="news_read_content border-0 mb-0 pb-0">
+                            {{case_study.content|safe}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-4">
+                <div class="card mt-0 mt-lg-4">
+                    <div class="card-body p-0">
+                        <img src="{{case_study.thumbnail.url}}" alt="{{case_study.title}}" class="case_read_thum mb-lg-0 w-100">
+                    </div>
+                </div>
+
+                {% if case_study.map_url %}
+                <div class="card">
+                    <div class="card-body p-0">
+                        <div class="map_frame" style="height:320px;">
+                            <iframe src="{{ case_study.map_url }}" width="100%" height="320" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        {% if videos %}
+        <div class="card">
+            <div class="card-body">
+                <p class="header-title">{% trans "VIDEOS" %}</p>
+                <div class="row case_study_video_list mt-2">
+                    {% for video in videos reversed %}
+                    <div class="col-12 col-lg-6 col-xl-3">
+                        <div class="video-container" style="padding-bottom: 46.15%;">
+                            <iframe src="{{video.url}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if after_photos or before_photos %}
+        <div class="card">
+            <div class="card-body">
+                {% if after_photos %}
+                <p class="header-title">{% trans "AFTER PHOTOS" %}</p>
+                <div class="row case_study_photo_list mt-2">
+                    {% for after_photo in after_photos %}
+                    <div class="col-6 col-lg-3 col-xl-2">
+                        <a href="#"
+                           data-toggle="modal"
+                           data-target="#case_after_photo_modal"
+                           onclick="selectedPhoto('after','{{after_photo.id}}');">
+                            <img src="{{after_photo.thumbnail_image_url}}" alt="" width="100%">
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="divider"></div>
+                {% endif %}
+                {% if before_photos %}
+                <p class="header-title">{% trans "BEFORE PHOTOS" %}</p>
+                <div class="row case_study_photo_list mt-2">
+                    {% for before_photo in before_photos %}
+                    <div class="col-6 col-lg-3 col-xl-2">
+                        <a href="#"
+                        data-toggle="modal"
+                        data-target="#case_before_photo_modal"
+                        onclick="selectedPhoto('before','{{before_photo.id}}');">
+                            <img src="{{before_photo.thumbnail_image_url}}" alt="" width="100%">
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+        <div class="w-100 text-right">
+            <a class="btn btn-light" href="{% url 'case-study' %}">{% trans "BACK TO LIST" %}</a>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block modal %}
+<div id="case_before_photo_modal" class="modal photo_modal fade" tabindex="-1" role="dialog" aria-labelledby="case_before_photo_modal_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title font-weight-medium" id="case_before_photo_modal_label">{{case_study.title}}</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body p-0">
+                <div id="before_photo_slide" class="carousel slide carousel-fade" data-ride="carousel">
+                    <div class="carousel-inner">
+                        {% for item in before_photos %}
+                        <div class="carousel-item" id="photo_{{item.id}}">
+                            <img class="d-block img-fluid w-100" src="{{item.photo.url}}">
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <a class="carousel-control-prev" href="#before_photo_slide" role="button" data-slide="prev">
+                        <i class="mdi mdi-chevron-left"></i>
+                    </a>
+                    <a class="carousel-control-next" href="#before_photo_slide" role="button" data-slide="next">
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="case_after_photo_modal" class="modal photo_modal fade" tabindex="-1" role="dialog" aria-labelledby="case_after_photo_modal_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title font-weight-medium" id="case_after_photo_modal_label">{{case_study.title}}</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body p-0">
+                <div id="after_photo_slide" class="carousel slide carousel-fade" data-ride="carousel">
+                    <div class="carousel-inner">
+                        {% for item in after_photos %}
+                        <div class="carousel-item" id="photo_{{item.id}}">
+                            <img class="d-block img-fluid w-100" src="{{item.photo.url}}">
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <a class="carousel-control-prev" href="#after_photo_slide" role="button" data-slide="prev">
+                        <i class="mdi mdi-chevron-left"></i>
+                    </a>
+                    <a class="carousel-control-next" href="#after_photo_slide" role="button" data-slide="next">
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function selectedPhoto(status, image_id) {
+    var open_modal = $('#case_' + status + '_photo_modal');
+    console.log('#case_' + status + '_photo_modal');
+    open_modal.find('.carousel-item').removeClass('active');
+    open_modal.find('#photo_' + image_id).addClass('active');
+}
+</script>
+{% endblock %}

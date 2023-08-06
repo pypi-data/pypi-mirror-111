@@ -1,0 +1,73 @@
+{% extends "management/base.html" %}
+{% load static i18n humanize base_tag management_tag %}
+
+{% block page_title %}
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+    <div class="col-xl-4 col-lg-12">
+        <h5 class="page-title text-muted">Info</h5>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="header-title mt-0 mb-3 text-dark">{{owner.name}}</h4>
+                <div class="text-left">
+                    <p class="text-muted"><strong>Email</strong> <span class="ml-2">{{owner.email}}</span></p>
+                    <p class="text-muted"><strong>Mobile</strong><span class="ml-2">{{owner.phone_number}}</span></p>
+                    <p class="text-muted"><strong>Nationality</strong> <span class="ml-2">{{owner.nationality}}</span></p>
+                    <p class="text-muted mb-0"><strong>Address</strong> <span class="ml-2">{{owner.profile_owner.full_address}}</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-8 col-lg-12">
+        <h5 class="page-title text-muted">Summary</h5>
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="card tilebox-one">
+                    <div class="card-body">
+                        <h6 class="text-muted text-uppercase mt-0">Total Balance</h6>
+                        <h2 class="m-b-20 mb-0 dollar_sign">{{owner.total_balance_amount|floatformat:"-2"|intcomma|default:0}}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="card tilebox-one">
+                    <div class="card-body">
+                        <h6 class="text-muted text-uppercase mt-0">Payout Available Balance</h6>
+                        <h2 class="m-b-20 mb-0 dollar_sign">{{owner.available_balance_amount|floatformat:"-2"|intcomma|default:0}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h5 class="page-title text-muted">Products</h5>
+        {% for product in owner.products %}
+        <div class="card">
+            <div class="card-body">
+                <p class="mb-1">{% get_product_status_badge product=product %}</p>
+                <a href="{% url 'management:product-info' product_code=product.code %}"><h5 class="card-title text-dark mb-3">{{product.full_address}}</h5></a>
+                <div class="row">
+                    <div class="col-12 col-lg-6 mb-1 mb-lg-0">
+                        <span class="mr-2">{{product.num_bedroom|floatformat:0}} bed{% if not product.num_bedroom.length == 1 %}s{% endif %}</span>
+                        <span class="mr-2">{{product.num_bathroom|floatformat:0}} bath{% if not product.num_bedroom.length == 1 %}s{% endif %}</span>
+                        <span>{{product.sqft|floatformat:"-2"|intcomma}}sqft</span>
+                    </div>
+                    <div class="col-12 col-lg-6 text-lg-right">
+                        <span>{{product.num_people_under_lease}} tenant{% if not product.num_people_under_lease == 1 %}s{% endif %}</span>
+                        <span class="ml-2"><strong>Rent</strong> <span class="ml-1 dollar_sign">{{product.rent_under_lease|floatformat:"-2"|intcomma}}</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,62 @@
+{% extends service_app_name|add:"/base.html" %}
+{% load i18n humanize mathfilters base_tag management_tag investment_tag %}
+
+{% block content %}
+<div class="row">
+    <!-- Investment Product Section -->
+    {% for investment in investments %}
+        <div class="col-12">
+            <div class="card invest_list_card">
+                <div class="card-body">
+                    <div class="row invest_overview_info">
+                        <div class="col-12 col-xl-6">
+                            <h3 class="float-lg-left header-title mb-3 font-18">
+                                <a href="{% url 'investment:detail' investment.id %}" class="text-dark">{{investment.investment_product.title}}</a>
+                            </h3>
+                        </div>
+                        <div class="col-12 col-md-4 col-xl-2">
+                            <h6 class="font-12 mt-0">AMOUNT</h6>
+                            <h4 class="dollar_sign mb-2 mb-md-0">{{investment.amount|filter_safe_money_read_from_db|floatformat:"-2"|intcomma}}</h4>
+                        </div>
+                        <div class="col-6 col-md-4 col-xl-2">
+                            <h6 class="font-12 mt-0">INVESTORS</h6>
+                            <h4 class="mb-0">{{investment.investment_product.investments.count}} <small class="text-muted">people</small></h4>
+                        </div>
+                        <div class="col-6 col-md-4 col-xl-2">
+                            <h6 class="font-12 mt-0">PERIOD</h6>
+                            <h4 class="mb-0">
+                                {% get_period_months investment.investment_product %}
+                                <small class="text-muted">month</small>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <!-- TODO step이 있을때만 보이도록 -->
+                    {% get_investment_stage_list_tag investment=investment as stage_list %}
+                    {% if stage_list %}
+                        <div class="divider"></div>
+                        <div>
+                            <h4 class="float-lg-left header-title mb-2 font-12">Investment Steps</h4>
+                            {% include "investment/partials/investment_step_module.html" with stage_list=stage_list investment_id=investment.id %}
+                        </div>
+                        <!-- Investment Step Modal -->
+                        {% for stage in stage_list %}
+                            {% for step in stage.steps %}
+                                {% include "investment/partials/step_modal.html" with step=step %}
+                            {% endfor %}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}
+
+{% block modal %}
+<!--Payment Policy-->
+{% get_current_language as LANGUAGE_CODE %}
+{% get_agreement_by_type_language service_type='management' agreement_type='pay' language=LANGUAGE_CODE as AGREEMENT_PAY %}
+{% include 'management/partials/base_modal.html' with id="agreement_pay" title=AGREEMENT_PAY.title content=AGREEMENT_PAY.content|safe %}
+{% endblock modal %}

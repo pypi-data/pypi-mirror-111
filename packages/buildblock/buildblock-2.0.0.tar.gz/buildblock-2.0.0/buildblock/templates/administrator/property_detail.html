@@ -1,0 +1,334 @@
+{% extends "administrator/base.html" %}
+{% load static i18n base_tag crispy_forms_tags management_tag humanize %}
+
+{% block title %}{{page_title}}{% endblock %}
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                {% if property.status == 'sold' %}
+                <a class="btn btn-success mb-2" href="{% url 'administrator:property-sold-list' info_origin=info_origin %}">Property Sold List</a>
+                {% else %}
+                <a class="btn btn-success mb-2" href="{% url 'administrator:property-sale-list' info_origin=info_origin %}">Property Sale List</a>
+                {% endif %}
+            </div>
+            <h4 class="page-title">{{property.address.full}}</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card manager_product_detail">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <!-- Product image -->
+                        <div id="carouselExampleIndicators" class="carousel slide product_img_slide" data-ride="carousel">
+                            {% if property.images|length > 1 %}
+                            <ol class="carousel-indicators">
+                                {% for image in property.images %}
+                                <li class="{% if forloop.first %}active{% endif %}"
+                                    data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter}}"></li>
+                                {% endfor %}
+                            </ol>
+                            {% endif %}
+                            <div class="carousel-inner" role="listbox">
+                                {% for image in property.images %}
+                                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                                    <a href="#" data-toggle="modal" data-target="#product_img_modal"
+                                       onclick="changeModalImage('{{forloop.counter}}','{{image}}');">
+                                        <img class="d-block img-fluid" src="{{image}}" alt="{{forloop.counter}}">
+                                    </a>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-6 border-right border-secondary">
+                                <label class="font-12 text-gray font-weight-light">ADDRESS</label>
+                                <p class="text-white font-16">{{property.address.full}}</p>
+                            </div>
+                            <div class="col-6">
+                                <label class="font-12 text-gray font-weight-light">STATUS</label>
+                                <p class="text-white font-16">
+                                    {{property.status}}
+                                </p>
+                            </div>
+                            <div class="col-6 border-right border-secondary">
+                                <label class="font-12 text-gray font-weight-light">LIST PRICE</label>
+                                <p class="text-white font-16">
+                                    <b><span class="dollar_sign">{{property.list_price|floatformat:"-2"|intcomma}}</span></b><br>
+                                    {% if property.list_price_max %}Max: <span class="dollar_sign">{{property.list_price_max|floatformat:"-2"|intcomma}}<br>{% endif %}
+                                    {% if property.list_price_min %}Min: <span class="dollar_sign">{{property.list_price_min|floatformat:"-2"|intcomma}}<br>{% endif %}
+                                </p>
+                            </div>
+                            <div class="col-6">
+                                <label class="font-12 text-gray font-weight-light">LIST DATE</label>
+                                <p class="text-white font-16">{{property.list_date}}</p>
+                            </div>
+                            <div class="col-6 border-right border-secondary">
+                                <label class="font-12 text-gray font-weight-light">Estimate Price</label>
+                                <p class="text-white font-16"><span class="dollar_sign">{{property.estimate_price|floatformat:"-2"|intcomma}}</span></p>
+                            </div>
+                            <div class="col-6">
+                                <label class="font-12 text-gray font-weight-light">LIST ID</label>
+                                <p class="text-white font-16">{{property.listing_id}}</p>
+                            </div>
+                            <div class="col-6 border-right border-secondary">
+                                <label class="mt-3 font-12 text-gray font-weight-light">LINK</label>
+                                <p class="text-white font-16">
+                                    Data Source:<br>
+                                    <a href="{{property.info_origin_link}}" target="_blank">{{property.info_origin}}</a>
+                                </p>
+                                <p class="text-white font-16">
+                                {% for link in property.external_links %}
+                                    {% if forloop.first %}External Link:<br>{% endif %}
+                                    <a href="{{link.href}}" target="_blank">{{link.title}}</a>
+                                    {% if not forloop.last %} | {% endif %}
+                                {% endfor %}
+                                </p>
+                                <p class="text-white font-16">
+                                {% for virtual_tours_url in property.virtual_tours_urls %}
+                                    {% if forloop.first %}Virtual: {% endif %}
+                                    <a href="{{virtual_tours_url}}" target="_blank">Virtual Tour {{forloop.counter}}</a>
+                                    {% if not forloop.last %} | {% endif %}
+                                {% endfor %}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <p class="text-white font-16">DIRECTION FROM OFFICES</p>
+    </div>
+    {% for direction in property.address.direction_from_offices %}
+    <div class="col-12">
+        <div class="card manager_product_detail">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <iframe src="{{direction.embed_src}}"
+                                width="100%"
+                                height="480px"
+                                frameborder="0"
+                                style="border:0"
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <a href="{{direction.map_url}}" target="_blank">
+                            <p class="text-white font-16">
+                                Office: {{direction.origin}}
+                            </p>
+                            <p class="text-white font-16">
+                                Distance: {{direction.distance|filter_convert_feet_to_miles|floatformat:"-1"}} miles
+                            </p>
+                            <p class="text-white font-16">
+                                Duration: {{direction.duration|filter_convert_second_to_minute}} minutes
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+
+    <div class="col-12">
+        <div class="card manager_investment_product_detail">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="row">
+                            <div class="col-3 border-right border-secondary">
+                                <label class="font-12 text-gray font-weight-light">BEDROOMS</label>
+                                <p class="text-white font-16">{{property.beds}}</p>
+                            </div>
+                            <div class="col-3 border-right border-secondary">
+                                <label class="font-12 text-gray font-weight-light">BATHROOMS</label>
+                                <p class="text-white font-16">{{property.baths}}</p>
+                            </div>
+                            <div class="col-3 border-right border-secondary">
+                                <label class="font-12 text-gray font-weight-light">GARAGES</label>
+                                <p class="text-white font-16">{{property.garages|default:0}}</p>
+                            </div>
+                            <div class="col-3">
+                                <label class="font-12 text-gray font-weight-light">STORIES</label>
+                                <p class="text-white font-16">{{property.stories|default:0}}</p>
+                            </div>
+                            <hr>
+                            <div class="col-3 border-right border-secondary">
+                                <label class="font-12 text-gray font-weight-light">HOME SQFT</label>
+                                <p class="text-white font-16">{{property.sqft}} sqft</p>
+                            </div>
+                            <div class="col-3 border-right border-secondary">
+                                <label class="font-12 text-gray font-weight-light">LOT SQFT</label>
+                                <p class="text-white font-16">{{property.lot_sqft}} sqft</p>
+                            </div>
+                            <div class="col-3 border-right border-secondary">
+                                <label class="font-12 text-gray font-weight-light">TYPE</label>
+                                <p class="text-white font-16">{{property.type}}</p>
+                            </div>
+                            <div class="col-3">
+                                <label class="font-12 text-gray font-weight-light">YEAR BUILT</label>
+                                <p class="text-white font-16">{{property.year_built}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <label class="font-12 text-gray font-weight-light">DESCRIPTION</label>
+                        <p class="text-white font-16 mb-0">{{property.description|safe}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="card manager_investment_product_detail">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-4 border-right border-secondary">
+                                <label class="font-12 text-gray font-weight-light">name</label>
+                                <p class="text-white font-16">{{property.data_source.name}}</p>
+                            </div>
+                            <div class="col-4 border-right border-secondary">
+                                <label class="font-12 text-gray font-weight-light">group</label>
+                                <p class="text-white font-16">{{property.data_source.group}}</p>
+                            </div>
+                            <div class="col-4">
+                                <label class="font-12 text-gray font-weight-light">phone</label>
+                                <p class="text-white font-16">{{property.data_source.phone}}</p>
+                            </div>
+                            <div class="col-4 border-right border-secondary">
+                                <label class="font-12 text-gray font-weight-light">disclaimer_href</label>
+                                <p class="text-white font-16">{{property.data_source.url}}</p>
+                            </div>
+                            <div class="col-4 border-right border-secondary">
+                                <label class="font-12 text-gray font-weight-light">disclaimer_text</label>
+                                <p class="text-white font-16">{{property.data_source.description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <p class="text-white font-16">PROPERTY HISTORY</p>
+    </div>
+    <div class="col-12 mb-3">
+        <table class="table table-condensed dataTable w-100">
+            <colgroup>
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="">
+            </colgroup>
+            <thead class="thead-dark">
+                <tr>
+                  <th>event name</th>
+                  <th>date</th>
+                  <th>source name</th>
+                  <th>price</th>
+                  <th>price sqft</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for history in property.property_history %}
+                <tr>
+                  <td>{{history.event_name}}</td>
+                  <td>{{history.date}}</td>
+                  <td>{{history.source_name}}</td>
+                  <td><span class="dollar_sign">{{history.price|floatformat:"-2"|intcomma}}</span></td>
+                  <td><span class="dollar_sign">{{history.price_sqft|floatformat:"-2"|intcomma}}</span></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-12">
+        <p class="text-white font-16">TAX HISTORY</p>
+    </div>
+    <div class="col-12 mb-3">
+        <table class="table table-condensed dataTable w-100">
+            <colgroup>
+                <col width="">
+                <col width="">
+                <col width="">
+            </colgroup>
+            <thead class="thead-dark">
+                <tr>
+                  <th>year</th>
+                  <th>tax</th>
+                  <th>total assessment</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for history in property.tax_history %}
+                <tr>
+                  <td>{{history.year}}</td>
+                  <td><span class="dollar_sign">{{history.tax|floatformat:"-2"|intcomma}}</span></td>
+                  <td><span class="dollar_sign">{{history.assessment_value|floatformat:"-2"|intcomma}}</span></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+{% endblock content %}
+
+{% block modal %}
+<!-- Image Modal -->
+<div class="modal fade" id="product_img_modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal_img_title">Image Title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body modal_inner_img_full">
+                <img id="modal_img_content" class="d-block img-fluid" alt="Image" width="100%">
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+function changeModalImage(title, src) {
+    document.getElementById("modal_img_title").innerHTML = title;
+    document.getElementById("modal_img_content").src = src;
+}
+</script>
+{% endblock modal %}
+
+{% block third_party %}
+{% include "base/load_datatable.html" %}
+{% endblock third_party %}

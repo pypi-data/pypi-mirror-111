@@ -1,0 +1,67 @@
+{% load static i18n %}
+{% if step.description or step.contract.count > 0 or request.user.is_superuser %}
+<div class="modal fade" id="invest_step_modal_{{step.id}}" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal_img_title">{{step.title}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                {% if step.description %}
+                    <div class="invest_step_description">
+                        {{step.description|safe}}
+                    </div>
+                {% endif %}
+                {% if step.contract.count > 0 %}
+                    <div class="invest_step_document mt-4">
+                        <h4>DOCUMENTS</h4>
+                        <ul class="list-group">
+                            {% for contract in step.contract.all %}
+                            <span class="list-group-item
+                                         list-group-item-action
+                                         d-flex
+                                         justify-content-between tooltip_help">
+                                <span>
+                                    {{contract.title}}
+                                    {% if contract.template.description %}
+                                    <a href="#"
+                                       data-toggle="tooltip"
+                                       data-html="true"
+                                       data-placement="top"
+                                       title="{{contract.template.description}}"
+                                       class="ml-1 text-secondary"><i class="mdi mdi-help-circle"></i></a>
+                                    {% endif %}
+                                </span>
+                                <a href="{% url 'investment:document-download' contract.id %}"
+                                   target="_blank">
+                                    <i class="mdi mdi-download"></i>
+                                </a>
+                            </span>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="modal-footer">
+                {% if request.user.is_superuser %}
+                <a href="{% url 'administrator:investment-step-email' step.id %}"
+                   type="button"
+                   class="btn btn-success"> {% trans "Send Email" %} </a>
+                <a href="{% url 'administrator:investment-step-update' step.id %}"
+                   type="button"
+                   class="btn btn-success"> {% trans "Edit" %} </a>
+                <a href="{% url 'administrator:investment-step-delete' step.id %}"
+                   type="button"
+                   class="btn btn-danger"> {% trans "Delete" %} </a>
+                {% endif %}
+                <button type="button"
+                        class="btn btn-primary"
+                        data-dismiss="modal"> {% trans "Close" %} </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}

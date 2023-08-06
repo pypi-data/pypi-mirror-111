@@ -1,0 +1,30 @@
+{% extends "management/base.html" %}
+{% load static i18n humanize management_tag %}
+
+{% block page_title %}
+{% endblock page_title %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-lg-4">
+        <div class="text-center py-4">
+            <h4 class="text-uppercase text-primary mt-4 mb-2">Payment<br>{{ status }}</h4>
+            <table class="complete_table table table-border bg-white my-4">
+                <tr>
+                    <td class="text-muted">Date</td>
+                    <td class="font-weight-bold">{{ date }}</td>
+                </tr>
+                <tr>
+                    <td class="text-muted">Amount</td>
+                    <td class="font-weight-bold">${{ amount }}</td>
+                </tr>
+            </table>
+
+            <a class="btn btn-primary mt-3" href="{% url 'management:home' %}">Return Home</a>&nbsp;
+            <a class="btn btn-primary mt-3" href="{% url 'management:transaction' %}">All Transactions</a>
+        </div> <!-- end /.text-center-->
+    </div> <!-- end col-->
+</div>
+
+{% endblock content %}

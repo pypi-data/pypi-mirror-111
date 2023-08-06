@@ -1,0 +1,28 @@
+{% load account %}
+{% user_display user as user_display %}
+{% load static i18n %}
+
+<table align="center" style="width:100%;background:#e3eaef;">
+    <tr>
+        <td align="center">
+            <div style="margin:50px auto;max-width:600px;">
+                <table style="font-family:'Noto Sans KR',sans-serif;text-align:left;background:#fff;padding:40px;border-top:10px solid #9013fe;box-shadow:0 0 15px rgba(0,0,0,0.1);width:100%;">
+                    <tr>
+                        <td style="padding-bottom:40px;">
+                            <img src="{% static 'landing/images/logo/logo_h36.png' %}" alt="BuildBlock" height="30">
+                        </td>
+                    </tr>
+
+                    {% block email_content %}
+                    {% endblock email_content %}
+
+                    <tr>
+                        <td style="font-size:13px;color:#9013fe;font-weight:700;padding-top:40px;">
+                            {% blocktrans %}Real Estate Management Service by <a href="https://management.buildblock.io" target="_blank" style="color:#9013fe;text-decoration: none;">Buildblock</a>{% endblocktrans %}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>

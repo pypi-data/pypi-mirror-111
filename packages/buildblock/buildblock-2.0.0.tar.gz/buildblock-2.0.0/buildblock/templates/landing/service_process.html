@@ -1,0 +1,112 @@
+{% extends "landing/base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "BuildBlock |" %} {{page_title}}{% endblock title %}
+
+{% block content %}
+<div class="banner_section service_process_banner">
+    <div class="banner_content text-white">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <h1 class="text-shadow mb-0">{% blocktrans %}A Step-by-Step Guide<span class="d-none d-lg-inline"><br>to Investment Process</span>{% endblocktrans %}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="content_section">
+        <div class="row">
+            <div class="col-12 col-lg-10">
+                <div class="card process_card right shadow-none" data-aos="fade-up">
+                    <div class="card-body">
+                        <h2 class="process_num">01</h2>
+                        <h2 class="h1 mb-3">{% blocktrans %}Start Investment{% endblocktrans %}</h2>
+                        <h5 class="h5 mb-3">{% blocktrans %}Through a detailed consultation, BuildBlock analyzes the client’s investment preferences to draft a customized investment strategy. The investment commences with the BuildBlock Service Agreement.{% endblocktrans %}</h5>
+                        <a class="btn btn-outline-black btn-icon-right float-left" href="{% url 'contact' %}">{% blocktrans %}Ask Us Anything <i class="mdi mdi-arrow-right"></i>{% endblocktrans %}</a>
+                    </div>
+                </div>
+                <img class="w-100" src="{% static 'landing/images/service/process_1.jpg' %}" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="content_section">
+        <div class="row">
+            <div class="col-12 col-lg-10 offset-lg-2">
+                <div class="card process_card left shadow-none" data-aos="fade-up">
+                    <div class="card-body">
+                        <h2 class="process_num">02</h2>
+                        <h2 class="h1 mb-3">{% blocktrans %}Open LLC and<br>Wire Money{% endblocktrans %}</h2>
+                        <h5 class="h5">{% blocktrans %}The client will start a <a href="#Redirect" data-toggle="tooltip" data-original-title="A special purpose corporation located in the United States, it is a strategy that maximizes the profit but minimizes any legal risks. The LLC will purchase the property.">Limited Liability Corporation (LLC)</a> in the state where the property is located. Once LLC is established, the client can now open a US bank account under the LLC’s name. Once the client files <a href="#Redirect" data-toggle="tooltip" data-original-title="To wire the money internationally from Korea to the United States, the client must visit one of the commercial banks in Korea and file Foreign Direct Investment Report.">Foreign Direct Investment Report</a> in Korea, he or she can wire the money internationally to the LLC account.{% endblocktrans %}</h5>
+                    </div>
+                </div>
+                <img class="w-100" src="{% static 'landing/images/service/process_2.jpg' %}" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="content_section">
+        <div class="row">
+            <div class="col-12 col-lg-10">
+                <div class="card process_card right shadow-none" data-aos="fade-up">
+                    <div class="card-body">
+                        <h2 class="process_num">03</h2>
+                        <h2 class="h1 mb-3">{% blocktrans %}Purchase Property{% endblocktrans %}</h2>
+                        <h5 class="h5">{% blocktrans %}Once the client finalizes the property, he or she will submit an offer to the property. If the seller accepts the offer, an <a href="#Redirect" data-toggle="tooltip" data-original-title="An escrow account is managed by a third party to hold valuables, such as money, property deeds, and personal finance documents, on behalf of two agreeing parties until specified conditions are met during a financial transaction. (Source: Investopedia)">escrow</a> account will open. Once the title is acquired, the purchase is finalized.{% endblocktrans %}</h5>
+                    </div>
+                </div>
+                <img class="w-100" src="{% static 'landing/images/service/process_3.jpg' %}" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="content_section">
+        <div class="row">
+            <div class="col-12 col-lg-10 offset-lg-2">
+                <div class="card process_card left shadow-none" data-aos="fade-up">
+                    <div class="card-body">
+                        <h2 class="process_num">04</h2>
+                        {% blocktrans %}<h2 class="h1 mb-3">Management</h2>{% endblocktrans %}
+                        <h5 class="h5">{% blocktrans %}The local Build Block Asset Team will directly oversee the remodelling or lease of the property. Depending on the strategy, Build Block may execute <a href="#Redirect" data-toggle="tooltip" data-original-title="A strategy to purchase an undervalued property and resell at the higher price after remodelling">FLIP</a> or <a href="#Redirect" data-toggle="tooltip" data-original-title="A strategy to appreciate the property value by expanding another living unit in the garage or backyard">ADU</a> construction or rent out to tenants.<br><br>Thanks to Build Block’s periodical facility review and construction report, investors in Korea may access the property thousands of miles away.{% endblocktrans %}</h5>
+                    </div>
+                </div>
+                <img class="w-100" src="{% static 'landing/images/service/process_4.jpg' %}" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="content_section">
+        <div class="row">
+            <div class="col-12 col-lg-10">
+                <div class="card process_card right shadow-none" data-aos="fade-up">
+                    <div class="card-body">
+                        <h2 class="process_num">05</h2>
+                        <h2 class="h1 mb-3">{% blocktrans %}Sell Investment{% endblocktrans %}</h2>
+                        <h5 class="h5">{% blocktrans %}Once Build Block and the client agree on the optimal time to sell the property, BuildBlock will list the property online. BuildBlock will host in-person visits and open houses, accept different offers to select the highest priced offers.<br>Once finalized, BuildBlock will open a seller’s escrow account.<br><br>
+                        Just like the purchase process, once the contract is finalized and the remaining money is paid, the title will be transferred to the new owner.{% endblocktrans %}</h5>
+                    </div>
+                </div>
+                <img class="w-100" src="{% static 'landing/images/service/process_5.jpg' %}" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="content_section mb-2 mb-lg-5">
+        <div class="row">
+            <div class="col-12 col-lg-10 offset-lg-2">
+                <div class="card process_card left shadow-none" data-aos="fade-up">
+                    <div class="card-body">
+                        <h2 class="process_num">06</h2>
+                        <h2 class="h1 mb-3">{% blocktrans %}Share Dividend{% endblocktrans %}</h2>
+                        <h5 class="h5">{% blocktrans %}BuildBlock will divide the profit with the client based on the agreed terms and draft Investment Closing Report. Upon closing, BuildBlock will guide you through the remaining paperwork that the client must submit to the Korean banks, such as Annual Business Report and Foreign Securities Acquisition Post-Investment Report. If requested, BuildBlock will also guide the client on filing taxes to IRS.<br><br>Clients who wish to reinvest or increase their investment may be able to do so using the LLC he or she opened in the beginning.{% endblocktrans %}</h5>
+                    </div>
+                </div>
+                <img class="w-100" src="{% static 'landing/images/service/process_6.jpg' %}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

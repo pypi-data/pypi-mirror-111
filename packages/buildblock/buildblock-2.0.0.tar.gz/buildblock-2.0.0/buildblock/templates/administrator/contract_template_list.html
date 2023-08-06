@@ -1,0 +1,51 @@
+{% extends "administrator/base.html" %}
+{% load static i18n base_tag management_tag %}
+
+{% block title %}{{page_title}}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <table class="table table-condensed dataTable w-100">
+            <colgroup>
+                <col width="">
+                <col width="">
+                <col width="">
+                <col width="280">
+            </colgroup>
+            <thead class="thead-dark">
+                <tr>
+                  <th>ID</th>
+                  <th>Title</th>
+                  <th>E-Signature</th>
+                  <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for template in templates|dictsort:"id" %}
+                <tr>
+                    <td>{{template.id}}</td>
+                    <td>{{template.title}} {% get_contract_template_type_badge type=template.type %}</td>
+                    <td>{{template.identifier}}</td>
+                    <td>
+                        <a class="btn btn-sm btn-link text-warning"
+                           href="{% url 'administrator:contract-template-update' template.id %}"><i class="dripicons-document-edit"></i> EDIT</a>
+                        <a class="btn btn-sm btn-link text-danger"
+                           href="{% url 'administrator:contract-template-delete' template.id %}"><i class="dripicons-trash"></i> DEL</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td class="text-center" colspan="4">No Templates</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% include "base/pagination.html" with paginator=paginator add_css="page_nav_dark" %}
+{% endblock content %}
+
+{% block third_party %}
+{% include "base/load_datatable.html" %}
+{% endblock third_party %}

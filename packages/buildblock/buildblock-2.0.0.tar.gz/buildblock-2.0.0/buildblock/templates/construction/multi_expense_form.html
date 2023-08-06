@@ -1,0 +1,140 @@
+{% extends "construction/base.html" %}
+{% load static i18n humanize base_tag construction_tag %}
+
+{% block topbar %}
+{% include 'construction/partials/topbar_only_title.html' %}
+{% endblock topbar %}
+
+{% block page_title %}
+<form method="post"
+action="{% url 'construction:multiple-expense-save' %}">
+{% csrf_token %}
+<input type="hidden" name="return_url" value="{{request.get_full_path}}">
+<input type="hidden" name="construction_id" value="{{construction.id}}"/>
+<input type="hidden" name="date" value="{{request.GET.date}}"/>
+<input type="hidden" name="expense_count" value="1"/>
+<div class="row">
+    <div class="col-12 col-lg-8">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <input type="submit" class="btn btn-success btn-rounded mb-3"  value="Save">
+            </div>
+            <h4 class="page-title">{{request.GET.date}} Expenses</h4>
+        </div>
+    </div>
+</div>
+{% endblock page_title %}
+
+{% block content %}
+{% get_expense_category_list as EXPENSE_CATEGORY_LIST %}
+    <div class="row">
+        <div class="col-12 hidden_lg pb-2">
+            <input type="submit" class="btn btn-success w-100"  value="Save">
+        </div>
+        <div class="col-12 col-lg-8">
+            <p class="font-12 text-danger">※ 기존의 항목을 수정하거나 삭제하는 경우, 해당 페이지는 새로고침 됩니다. 표 안에 입력한 정보를 먼저 저장해주세요.</p>
+            <div class="table-responsive">
+                <table class="table table-condensed table_expense w-100" id="table_expense">
+                    <colgroup>
+                        <col width="">
+                        <col width="220">
+                        <col width="220">
+                        <col width="220">
+                        <col width="80">
+                    </colgroup>
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Item</th>
+                            <th>Category</th>
+                            <th>Quantity</th>
+                            <th>Amount(cent)</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="multi_expense_tbody">
+                        {% for expense in multi_expenses %}
+                        <tr>
+                            <td class="text-white font-weight-bold">{{expense.item}}</td>
+                            <td>{{expense.get_category_display}}</td>
+                            <td>{{expense.quantity}}</td>
+                            <td><span>{{expense.amount}}</span></td>
+                            <td class="pl-0 text-right">
+                                <a class="px-1 text-muted" href="#" data-toggle="modal" data-target="#update_expense_modal_2" onclick="updateExpenseData('{{expense.id}}','{{expense.item}}','{{expense.category}}','{{expense.date|date:'Y-m-d'}}','{{expense.quantity}}','{{expense.amount}}','{{expense.attachment}}','{{expense.description}}');"><i class="dripicons-document-edit"></i></a>
+                                <a class="px-1 text-muted" href="#" data-toggle="modal" data-target="#delete_expense_modal" onclick="deleteExpenseData('{{expense.id}}','expense');"><i class="dripicons-trash"></i></a>
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="expense_0[item]" required>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <select class="form-control" name="expense_0[category]" required>
+                                        {% for value, display in EXPENSE_CATEGORY_LIST %}
+                                        <option value="{{value}}">{{display}}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <input type="number" class="form-control" name="expense_0[quantity]"  step="1" min="1" value="1" required>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <input type="number" class="form-control" name="expense_0[amount]" min="0" required>
+                                </div>
+                            </td>
+                            <td class="pl-0 text-right">
+                                <a class="text-muted px-1" href="#" onclick="deleteMultiExpenseLine(this)"><i class="dripicons-trash"></i></a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="100%" class="text-center">
+                                <a href="#" onclick="addMultiExpenseLine()" class="text-success">+ New Line</a>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock content %}
+
+{% block modal %}
+{% include 'construction/partials/expense_update_modal.html' %}
+{% endblock %}
+
+{% block third_party %}
+{% get_expense_category_list as EXPENSE_CATEGORY_LIST %}
+<script>
+    $(document).ready(function(){
+        $('#select_all_expenses').click(function(){
+            if($("#select_all_expenses").prop("checked")){
+                $('#table_expense').find('input[name="select_expense[]"]').prop('checked', true);
+            } else {
+                $('#table_expense').find('input[name="select_expense[]"]').prop('checked', false);
+            }
+        });
+    });
+
+    var expense_count = 1
+    function addMultiExpenseLine() {
+        $('#multi_expense_tbody').append("<tr><td><div class='form-group'><input type='text' class='form-control' name='expense_"+expense_count+"[item]' required></div></td><td><div class='form-group mb-0'><select class='form-control' name='expense_"+expense_count+"[category]' required>{% for value, display in EXPENSE_CATEGORY_LIST %}<option value='{{value}}'>{{display}}</option>{% endfor %}</select></div></td><td><div class='form-group'><input type='number' class='form-control' name='expense_"+expense_count+"[quantity]' step='1' min='1' value='1' required></div></td><td><div class='form-group'><input type='number' class='form-control' name='expense_"+expense_count+"[amount]' min='0' required></div></td><td class='pl-0 text-right'><a class='text-muted px-1' href='#' onclick='deleteMultiExpenseLine(this)'><i class='dripicons-trash'></i></a></td></tr>");
+        expense_count++;
+        $('input[name="expense_count"]').val(expense_count);
+    };
+    function deleteMultiExpenseLine(elem) {
+        elem.closest('tr').remove();
+    };
+</script>
+{% include "base/load_datatable.html" %}
+{% endblock third_party %}

@@ -1,0 +1,168 @@
+{% extends "construction/base.html" %}
+{% load static i18n crispy_forms_tags base_tag construction_tag humanize %}
+
+
+{% block page_title %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            {% if is_editor %}
+            <div class="page-title-right">
+                <a href="#" data-toggle="modal" data-target="#add_worker_modal" class="btn btn-secondary btn-rounded mb-3"><i class="mdi mdi-plus"></i> ADD WORKER</a>
+            </div>
+            {% endif %}
+            <h4 class="page-title">{{page_title}}</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+{% endblock page_title %}
+
+
+{% block content %}
+<div class="row">
+    <div class="col-12 hidden_lg pb-2">
+        {% if is_editor %}
+        <a href="#" data-toggle="modal" data-target="#add_worker_modal" class="btn btn-success w-100"><i class="dripicons-plus"></i> ADD WORKER</a>
+        {% endif %}
+    </div>
+    <div class="col-12">
+        <!-- web -->
+        <div class="table-reponsive visible_lg">
+            <table class="table table-condensed dataTable w-100">
+                <colgroup>
+                    <col width="">
+                    <col width="">
+                    <col width="">
+                    <col width="">
+                    <col width="">
+                    <col width="">
+                    {% if is_editor %}
+                    <col width="120">
+                    {% endif %}
+                </colgroup>
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Speciality</th>
+                        <th>Contact</th>
+                        <th>Total Working Time</th>
+                        <th>Total Payment</th>
+                        {% if is_editor %}
+                        <th></th>
+                        {% endif %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% autoescape off %}
+                    {% for worker in worker_data %}
+                    <tr>
+                        <td class="text-white">
+                            {{worker.data.name}}
+                            {% if worker.data.description %}
+                            <a class="text-muted ml-1"
+                               data-container="body"
+                               data-trigger="hover"
+                               data-toggle="popover"
+                               data-placement="bottom"
+                               data-content="{{worker.data.description}}">
+                                <i class="mdi mdi-comment-processing"></i>
+                            </a>
+                            {% endif %}
+                        </td>
+                        <td>{% get_worker_role_badge role=worker.data.role %}</td>
+                        <td>
+                            {% for speciality in worker.data.speciality %}
+                            <span class="zone_badge badge badge-secondary">{% get_worker_speciality_shorttitle speciality=speciality %}</span>
+                            {% endfor %}
+                        </td>
+                        <td>{{worker.data.phone_number}}</td>
+                        <td>{{worker.sum.total_times}}</td>
+                        <td class="dollar_sign">{{worker.sum.total_payment|filter_safe_money_read_from_db|intcomma}}</td>
+                        {% if is_editor %}
+                        <td>
+                            <a class="btn btn-sm btn-link text-warning" href="#" data-toggle="modal" data-target="#edit_worker_modal" onclick="updateWorkerData('{{worker.data.id}}','{{worker.data.name}}','{{worker.data.role}}','{{worker.data.speciality|join:'/'}}','{{worker.data.phone_number}}','{{worker.data.description}}');"><i class="dripicons-document-edit"></i></a>
+                            <a class="btn btn-sm btn-link text-danger" href="#" data-toggle="modal" data-target="#delete_worker_modal" onclick="deleteWorkerData('{{worker.data.id}}');"><i class="dripicons-trash"></i></a>
+                        </td>
+                        {% endif %}
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td class="text-center" colspan="100%">No Workers</td>
+                    </tr>
+                    {% endfor %}
+                    {% endautoescape %}
+                </tbody>
+            </table>
+        </div>
+
+        <!-- mobile -->
+        {% autoescape off %}
+        {% for worker in worker_data %}
+            <div class="card work_list_m hidden_lg">
+                <div class="card-body">
+                    <div class="card-widgets">
+                        <a class="font-14 text-warning mr-2" href="#" data-toggle="modal" data-target="#edit_worker_modal" onclick="updateWorkerData('{{worker.data.id}}','{{worker.data.name}}','{{worker.data.role}}','{{worker.data.speciality|join:'/'}}','{{worker.data.phone_number}}','{{worker.data.description}}');"><i class="dripicons-document-edit"></i></a>
+                        <a class="font-14 text-danger" href="#" data-toggle="modal" data-target="#delete_worker_modal" onclick="deleteWorkerData('{{worker.data.id}}');"><i class="dripicons-trash"></i></a>
+                    </div>
+                    <h5 class="card-title mt-1 mb-3 text-white">
+                        {{worker.data.name}}
+                        {% if worker.data.description %}
+                        <a class="text-muted ml-1"
+                           data-container="body"
+                           data-trigger="hover"
+                           data-toggle="popover"
+                           data-placement="bottom"
+                           data-content="{{worker.data.description}}">
+                            <i class="mdi mdi-comment-processing"></i>
+                        </a>
+                        {% endif %}
+                    </h5>
+                    <div class="row mt-3">
+                        <div class="col-12 mb-2">
+                            <p class="font-14 mb-0">
+                                {% get_worker_role_badge role=worker.data.role %}
+                                {% for speciality in worker.data.speciality %}
+                                <span class="zone_badge badge badge-secondary">{% get_worker_speciality_shorttitle speciality=speciality %}</span>
+                                {% endfor %}
+                            </p>
+                        </div>
+                        <div class="col-5">
+                            <h5 class="font-10 text-muted">CONTACT</h5>
+                            <p class="mb-0 font-14">{{worker.data.phone_number}}</p>
+                        </div>
+                        <div class="col-3 p-0">
+                            <h5 class="font-10 text-muted">Working Time</h5>
+                            <p class="mb-0 font-14">{{worker.sum.total_times}}</p>
+                        </div>
+                        <div class="col-4">
+                            <h5 class="font-10 text-muted">Total Payment</h5>
+                            <p class="mb-0 font-14 dollar_sign">{{worker.sum.total_payment|filter_safe_money_read_from_db|intcomma}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <div class="col-12 py-5 hidden_lg">
+                <p class="text-muted font-14 text-center">No Workers</p>
+            </div>
+        {% endfor %}
+        {% endautoescape %}
+    </div>
+</div>
+{% endblock content %}
+
+
+{% block modal %}
+{% if is_editor %}
+{% include 'construction/partials/worker_create_modal.html' %}
+{% include 'construction/partials/worker_update_modal.html' %}
+{% endif %}
+{% endblock modal %}
+
+
+{% block third_party %}
+{% include "base/load_datatable.html" %}
+{% endblock third_party %}

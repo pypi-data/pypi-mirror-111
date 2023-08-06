@@ -1,0 +1,128 @@
+{% extends "management/base.html" %}
+{% load static i18n base_tag humanize management_tag %}
+
+{% block content %}
+{% get_management_roles as MANAGEMENT_ROLES %}
+<div class="row">
+    {% for product in products %}
+    <div class="col-12 hidden_lg">
+        <h4 class="header-title mb-3">{{ product.full_address }}</h4>
+        <div class="row">
+            {% with i=forloop.counter0 %}
+            {% if leases|index:i %}
+            {% for lease in leases|index:i %}
+            <div class="col-12">
+                <div class="card tenant_card {% if lease.status == 'COMPLETE' %}opacity-5{% endif %}">
+                    <a href="{% url 'management:tenant-detail' lease.id %}" class="text-title">
+                        <div class="card-body">
+                            <p class="mb-2">
+                                <span class="badge badge-dark">Room {{ lease.room_num }}</span>
+                                {% get_lease_status_badge status=lease.status %}
+                            </p>
+                            <h5 class="card-title mb-2">{{ lease.tenant_name }}</h5>
+                            <p class="mb-1"><strong>Phone</strong> <span class="ml-1">{{ lease.tenant_phone_number }}</span></p>
+                            <p class="mb-1"><strong>Email</strong> <span class="ml-1">{{ lease.tenant_email }}</span></p>
+                            <p class="mb-0 mr-3 d-inline-block"><strong>Rent</strong> <span class="ml-1 dollar_sign">{{ lease.rent|floatformat:"-2"|intcomma }}</span></p>
+                            <p class="mb-0 d-inline-block"><strong>Deposit</strong> <span class="ml-1 dollar_sign">{{ lease.deposit|floatformat:"-2"|intcomma }}</span></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+            <div class="col-12">
+                <div class="card text-center py-4">
+                    <a class="text-success" href="{% url 'management:lease-create' product_code=product.code %}"><i class="mdi mdi-plus"></i> Create Lease</a>
+                </div>
+            </div>
+            {% endwith %}
+        </div>
+    </div>
+    {% endfor %}
+
+    {% for product in products %}
+    <div class="col-lg-12 visible_lg">
+        <div class="card">
+            <div class="card-body">
+                <span class="float-right badge badge-dark">{{product.agency.name}}</span>
+                <h4 class="header-title mb-3">{{ product.full_address }} </h4>
+                <div class="table-responsive">
+                    <table class="table table-centered table-hover dt-responsive nowrap w-100 mb-0" id="products-datatable">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Room</th>
+                                <th>Status</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                                <th>Credit Score</th>
+                                <th>Rent | Deposit</th>
+                                <th>Rent Count</th>
+                                <th>Register Date</th>
+                                {% if request.session.active_role == MANAGEMENT_ROLES.agent_role %}
+                                <th></th>
+                                {% endif %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% with i=forloop.counter0 %}
+                            {% if leases|index:i %}
+                            {% for lease in leases|index:i %}
+                            <tr {% if lease.status == 'COMPLETE' %}class="opacity-5"{% endif %}>
+                                <td>
+                                    <a href="{% url 'management:tenant-detail' lease.id %}" class="text-title">
+                                      {{ lease.tenant_name }}
+                                    </a>
+                                </td>
+                                <td>
+                                    {{ lease.room_num }}
+                                </td>
+                                <td>
+                                    {% get_lease_status_badge status=lease.status %}
+                                </td>
+                                <td>
+                                    {{ lease.tenant_phone_number }}
+                                </td>
+                                <td>
+                                    {{ lease.tenant_email }}
+                                </td>
+                                <td>
+                                    {{ lease.tenant_credit_score }}
+                                </td>
+                                <td>
+                                    $ {{ lease.rent|floatformat:"-2"|intcomma }} | $ {{ lease.deposit|floatformat:"-2"|intcomma }}
+                                </td>
+                                <td>
+                                    {{ lease.num_paid_rents }}
+                                </td>
+                                <td>
+                                    {{ lease.created_at }}
+                                </td>
+                                {% if request.session.active_role == MANAGEMENT_ROLES.agent_role %}
+                                <td class="text-right">
+                                    <a class="py-0 btn btn-link text-warning" href="{% url 'management:lease-update' lease.id %}"><i class="dripicons-document-edit"></i></a>
+                                </td>
+                                {% endif %}
+                            </tr>
+                            {% endfor %}
+                            {% else %}
+                            <tr>
+                                <td class="text-center text-muted font-11 py-3" colspan="100%">No Tenants</td>
+                            </tr>
+                            {% endif %}
+                            {% endwith %}
+                            <tr>
+                                <td class="text-center font-11" colspan="100%">
+                                    <a class="text-success" href="{% url 'management:lease-create' product_code=product.code %}"><i class="mdi mdi-plus"></i> Create Lease</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}
