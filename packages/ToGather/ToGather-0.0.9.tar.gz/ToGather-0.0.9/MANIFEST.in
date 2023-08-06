@@ -1,0 +1,2 @@
+include bin/*.ui
+include bin/Logo.png
