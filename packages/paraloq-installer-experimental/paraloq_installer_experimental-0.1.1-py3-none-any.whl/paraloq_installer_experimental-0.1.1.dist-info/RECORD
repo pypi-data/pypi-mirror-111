@@ -1,0 +1,12 @@
+HISTORY.md,sha256=2pzP0_9UnyqpwW2t4mNDU1kYuGM5u4Phf9WUmHH1VJw,75
+paraloq/installer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+paraloq/installer/cli.py,sha256=JtD1gH7zPesIXSYt6TU3aWOsGW4b-h2PjTbXFBkdOxk,2808
+paraloq/installer/exceptions.py,sha256=VA9V-zhxQ5KZiWScSuQu89eFiiuz8cIU8Ef7TBacxOc,434
+paraloq/installer/login.py,sha256=QnwVQArCzSC_gXOl-PrX2LtNLfOkUyMoFyv_dfFpTdw,863
+paraloq/installer/prompt.py,sha256=toYX44hK7D4w5WHix48vrCs0FfwqzBIdnyi71LrOpGU,6049
+paraloq/installer/server.py,sha256=sdFV-rs5ycYXAjCg2zojZGUrNAUBNs3a11dvW1-iNEY,392
+paraloq/installer/session.py,sha256=10bzMdq9NBiSf0iYXPYUbogiYbCEyALZaSMj0L9Ls58,6190
+paraloq_installer_experimental-0.1.1.dist-info/entry_points.txt,sha256=lmgyKhg5QsO7pXXGiw3nG6E1GayrGA_wUVNgVaEpVWA,52
+paraloq_installer_experimental-0.1.1.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+paraloq_installer_experimental-0.1.1.dist-info/METADATA,sha256=thTm05FEwdznXRzE_mUt4sPqARVvXZMoJEQSW_To0DI,1102
+paraloq_installer_experimental-0.1.1.dist-info/RECORD,,
