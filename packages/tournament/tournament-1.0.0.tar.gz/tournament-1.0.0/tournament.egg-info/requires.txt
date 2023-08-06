@@ -1,0 +1,7 @@
+aioredis
+
+[dev]
+hupper
+
+[dev-opt]
+watchdog

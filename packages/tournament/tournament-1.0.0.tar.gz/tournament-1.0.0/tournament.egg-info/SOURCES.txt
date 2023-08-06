@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+tournament/__init__.py
+tournament/__main__.py
+tournament/config.py
+tournament/matchmaker.py
+tournament/queue.py
+tournament/redis.py
+tournament/server.py
+tournament.egg-info/PKG-INFO
+tournament.egg-info/SOURCES.txt
+tournament.egg-info/dependency_links.txt
+tournament.egg-info/entry_points.txt
+tournament.egg-info/requires.txt
+tournament.egg-info/top_level.txt
