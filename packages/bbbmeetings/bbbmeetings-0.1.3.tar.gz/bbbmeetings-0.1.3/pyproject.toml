@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "bbbmeetings"
+version = "0.1.3"
+description = "A module for reading bbb meetings from bbb servers"
+authors = ["David Huss <david.huss@hfbk-hamburg.de>"]
+maintainers = ["David Huss <david.huss@hfbk-hamburg.de>"]
+license = "GPL-3.0+"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: Free for non-commercial use",
+    "License :: Free For Educational Use",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.6",
+    "Topic :: System :: Monitoring",
+    "Topic :: Communications :: Conferencing",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[tool.poetry.dependencies]
+python = "^3.5"
+requests = "^2.25.1"
+xmltodict = "^0.12.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
