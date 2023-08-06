@@ -1,0 +1,9 @@
+README.rst
+setup.py
+clickhouse_http_client/__init__.py
+clickhouse_http_client/client.py
+clickhouse_http_client.egg-info/PKG-INFO
+clickhouse_http_client.egg-info/SOURCES.txt
+clickhouse_http_client.egg-info/dependency_links.txt
+clickhouse_http_client.egg-info/requires.txt
+clickhouse_http_client.egg-info/top_level.txt
