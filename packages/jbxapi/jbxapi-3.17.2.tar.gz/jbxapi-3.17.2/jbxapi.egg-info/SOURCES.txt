@@ -1,0 +1,12 @@
+LICENSE
+README.md
+jbxapi.py
+setup.cfg
+setup.py
+jbxapi.egg-info/PKG-INFO
+jbxapi.egg-info/SOURCES.txt
+jbxapi.egg-info/dependency_links.txt
+jbxapi.egg-info/entry_points.txt
+jbxapi.egg-info/not-zip-safe
+jbxapi.egg-info/requires.txt
+jbxapi.egg-info/top_level.txt

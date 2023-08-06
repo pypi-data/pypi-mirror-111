@@ -1,0 +1,4 @@
+requests<3,>=2.18.4
+
+[:python_version >= "3.5"]
+pyzipper>=0.3.1
