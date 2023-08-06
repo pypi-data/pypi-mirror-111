@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pyhiir
+Version: 0.0.4
+Summary: Python wrapper for HIIR library
+Home-page: UNKNOWN
+Author: Diego Asanza
+Author-email: diego.asanza@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: numpy (>=1.19.2)
+Requires-Dist: scipy (>=1.6.3)
+
+UNKNOWN
+
