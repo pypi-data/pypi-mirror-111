@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: alphabhta
+Version: 0.0.0.post0
+Summary: Build utils
+Home-page: https://github.com/tedicreations/alphabhta
+Author: Kanelis Elias
+Author-email: hkanelhs@yahoo.gr
+License: MIT
+Download-URL: https://github.com/TediCreations/alphabhta/archive/0.0.0.post0.tar.gz
+Keywords: build,make,util
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# alphabhta
+
+Utilities for build system
+
+### Installation
+
+```sh
+$ pip install alphabhta
+```
+
+# License
+
+MIT
+
+
