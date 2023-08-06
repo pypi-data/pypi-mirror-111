@@ -1,0 +1,6 @@
+pandas
+tableauhyperapi
+numpy
+
+[dev]
+pytest
