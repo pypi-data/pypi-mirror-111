@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: cowinPY
+Version: 0.1.0
+Summary: A python wrapper for cowin public ais.
+Home-page: UNKNOWN
+Author: techhub
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: requests
+
+UNKNOWN
+
+
