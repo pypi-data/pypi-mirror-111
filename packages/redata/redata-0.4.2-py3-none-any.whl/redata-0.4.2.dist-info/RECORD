@@ -1,0 +1,14 @@
+docs/source/conf.py,sha256=CZZXvpa51cPeuyjvEEqs7OkoIk6GGNR18O3XVOXuyH8,2656
+redata/__init__.py,sha256=T7uAL_uEC2g6T3Jvdlo502vvWrDWRSJ-1wympBRw5_4,45
+redata/commons/__init__.py,sha256=r6ci5P5wC1Y_hTaYkoHzooOSNEJ3DFjj3OtPjouQDS4,72
+redata/commons/git_info.py,sha256=VdIFNohIDyQCojEVpyAdNTrmMJXjrrphIeNHVEKSrEo,2025
+redata/commons/issue_request.py,sha256=0OSWEbPxAWV65dYlDpghN-N8mZRL87AEwPl9J285AsU,2031
+redata/commons/logger.py,sha256=uEm2H717GBraHT_FAzOwfuY7luwaPNy-p_ZQemQXBjE,7206
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_git_info.py,sha256=7a5Tngnk0BSyLctBp4IvGv8Tz2vS9u_4WrwSBRb6qW0,623
+tests/test_logger.py,sha256=HDtGB-y3VB48u7MfrJyO_VjfaWz76KDWcsRr8mt4sB8,1506
+redata-0.4.2.dist-info/LICENSE,sha256=Scos6gNrJANvba3afVbW7HChaKiOIAehChUqPgRAU9g,1113
+redata-0.4.2.dist-info/METADATA,sha256=GVJB5qupVdlbY0DSAQsrGQ1q1PyHt5D0FDl4Nv0AC98,2201
+redata-0.4.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+redata-0.4.2.dist-info/top_level.txt,sha256=fEXI2QglIA4btLK9F5Ccua1UYu6C1AshZGWEmySe8eA,18
+redata-0.4.2.dist-info/RECORD,,
