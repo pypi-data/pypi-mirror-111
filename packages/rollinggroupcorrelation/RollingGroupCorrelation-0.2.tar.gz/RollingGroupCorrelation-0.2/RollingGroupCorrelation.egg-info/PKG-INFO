@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: RollingGroupCorrelation
+Version: 0.2
+Summary: A function that calculates the rolling window mean multi correlation between all columns of a Pandas DataFrame.
+Home-page: https://github.com/johantilli/RollingGroupCorrelation
+Author: Johan Tilli
+Author-email: johan.tilli@gmail.com
+License: OSI Approved :: GNU General Public License v3 (GPLv3)
+Download-URL: https://github.com/johantilli/RollingGroupCorrelation/archive/refs/tags/v0.2.tar.gz
+Description: A function that calculates the rolling group correlation between all columns of a Pandas DataFrame.
+Keywords: correlation,multi,rolling,group,mean
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
