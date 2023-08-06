@@ -1,0 +1,10 @@
+fastlogging-0.9.6.dist-info/RECORD,,
+fastlogging-0.9.6.dist-info/METADATA,sha256=2KaxMAqrnaGm4uF0o4_0nNchG0qoQvGqmEIdujeJABU,6151
+fastlogging-0.9.6.dist-info/WHEEL,sha256=0MSpaUzP5zzwal1dxeHUy0SBa34DZ1IXf7uOC2KAHL4,112
+fastlogging-0.9.6.dist-info/LICENSE.txt,sha256=YVtrH8g1urD56a6z-iA1tXIVqBYgTWW-Ms1SSn-CzkY,1091
+fastlogging-0.9.6.dist-info/top_level.txt,sha256=23kLul9IXaPxZHCn8mptGYqsTbLyNrZscvRg-iDV5jI,12
+fastlogging/__init__.py,sha256=1PMvie-ueMvUh0Sq-cMuJSC0EEr5V8h53HFD7E382mY,1944
+fastlogging/optimize.py,sha256=Ao1fTqZ55wPdB_HGxgYZD-5Nxq_ShHcOeHcN4oHp1CE,9982
+fastlogging/network.cpython-37m-x86_64-linux-gnu.so,sha256=z2UxIO8wTW_z6TAp5q0X7S9gv5hYUisWIeWqWNhOv9Q,1680744
+fastlogging/fastlogging.cpython-37m-x86_64-linux-gnu.so,sha256=WWorHEzi35RQXMD1V7PTNPOdtYy4GY_HKRkE81ge6V0,1857760
+fastlogging/console.py,sha256=1Cr9nieHPCDQlasZ1o3hUY3cfdxhkgp3qn_Xwv91-ec,1347
