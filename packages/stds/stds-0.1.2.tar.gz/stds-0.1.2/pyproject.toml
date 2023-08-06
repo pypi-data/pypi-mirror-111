@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "stds"
+version = "0.1.2"
+description = "A module for interacting with stdin, stdout and stderr."
+authors = ["4thel00z <4thel00z@gmail.com>"]
+license = "GPL-3"
+readme = "README.md"
+homepage = "https://github.com/4thel00z/stds"
+packages = [
+    { include = "stds" }
+]
+
+[tool.poetry.dependencies]
+python = "^3"
+
+[tool.poetry.dev-dependencies]
+black = "^21.6b0"
+pytest = "^6.2.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
