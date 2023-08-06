@@ -1,0 +1,8 @@
+manim_physics/__init__.py,sha256=HgnTwaBpe6WUGfaVhABK9hPHdiUihF1hqJk5x1EwCyQ,394
+manim_physics/electromagnetism.py,sha256=a3C2Q98cqI9aLSyV0AoQZNJNRe4Mjw9caGZbua0Ic-o,7288
+manim_physics/rigid_mechanics.py,sha256=XAKq2fYhtRpDZMOZmryeN8hyRJgrmHVBshcqEyeK49Q,3471
+manim_physics/wave.py,sha256=wpZYbbQQuZ9-oCPC0FhOGWvhU5PIpckA9tIguvgn-Vc,4909
+manim_physics-0.2.1.dist-info/entry_points.txt,sha256=dnLmyGhRjXeJEkDxkhHJg5UP5Go1DlVuUzKL4v5IfOE,45
+manim_physics-0.2.1.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+manim_physics-0.2.1.dist-info/METADATA,sha256=YAQ9f2h56FhJbbN3MGd5ibo0Fh4KIORKnjSqQ45wgQY,3613
+manim_physics-0.2.1.dist-info/RECORD,,
