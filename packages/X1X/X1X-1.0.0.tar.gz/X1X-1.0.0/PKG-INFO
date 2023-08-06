@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: X1X
+Version: 1.0.0
+Summary: Example:X² + 1/X²=1 or Square Root(X) + 1/Square Root(x) = alpha
+Home-page: UNKNOWN
+Author: Frederico Magalhães Sampaio(writer)&Edson Emanoel Starteri Sampaio(Designer)
+Author-email: smfrederico@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: decrypt,encrypt,solve
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
