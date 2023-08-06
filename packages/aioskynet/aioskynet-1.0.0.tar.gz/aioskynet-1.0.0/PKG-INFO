@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: aioskynet
+Version: 1.0.0
+Summary: An async wrapper of the Sia Skynet API.
+License: MIT
+Author: vcokltfre
+Author-email: vcokltfre@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: aiohttp[speedups] (>=3.7.4,<4.0.0)
+Description-Content-Type: text/markdown
+
+# aioskynet
+
+An async wrapper of the Sia Skynet API.
+
+## Basic usage
+
+### Uploading a file
+
+```py
+from asyncio import run
+
+from aioskynet import SkynetClient, File
+
+
+client = SkynetClient()
+
+
+async def main():
+    file = File("test.py", open("test.py"))
+    data = await client.upload_file(file)
+
+    print(data)  # Instance of aioskynet.SkynetResponse
+
+    # Close the client when finished.
+    await client.close()
+
+run(main())
+```
+
