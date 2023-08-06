@@ -1,0 +1,4 @@
+[console_scripts]
+isgitdirty = repeatexec:is_git_dirty
+repeatexec = repeatexec:repeate_exec
+
