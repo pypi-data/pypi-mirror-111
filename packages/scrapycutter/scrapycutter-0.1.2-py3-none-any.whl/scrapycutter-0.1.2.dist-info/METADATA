@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: scrapycutter
+Version: 0.1.2
+Summary: Template para nossos projetos com base no cookiecutter
+Home-page: http://gitlab.internal.b2w.io/team/a-tech/crawler-template
+Author: Diogo Neves
+Author-email: diogooncastro1@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: cookiecutter
+Requires-Dist: scrapy
+Requires-Dist: scrapy-rotated-proxy
+Requires-Dist: bigquery
+
+# Template padrão de crawler para projetos da B2W
+
+## Pré-requisitos
+- Python >= 3.6
+- scrapycutter (`pip install scrapycutter`)
+- Acesso ao nosso Gitlab
+
+## Como usar
+Depois de ter todo o necessário visto acima, então basta apenas executar o comando
+- `scrapycutter revolution` que o comando nos permitirá fazer as configurações básicas para o projeto Revolution
+  - OBS: O template foi criado de forma que seja possível adicionar novas funcionalidades ou templates de projetos facilmente, para nossa comodidade.
+
+Caso prefira, também temos outras duas maneiras de criar o template, a partir do código fonte:
+- Primeiramente lembrando que é necessário estar com a VPN  ativa no momento que realizar o comando acima para que funcione corretamente.
+- Fazer clone para sua máquina permitindo que seja possível executar esse comando localmente:
+  - `git clone git@gitlab.internal.b2w.io:team/a-tech/crawler-template.git`
+  - `cookiecutter crawler-template`
+- Também podemos usar a forma mais prática, que é referenciando esse repositório da seguinte forma:
+  - `cookiecutter git+http://gitlab.internal.b2w.io/team/a-tech/crawler-template.git`
+  - Basta apenas inserir esse comando referenciando esse repositório de template, digitar o usuário e senha do gitlab da empresa (já que funciona como se fosse um `git clone`) que as opções serão mostradas para criar o template do projeto da forma que bem entender;
+
+# OBS:
+Por motivos de segurança o arquivo B2W.json não é gerado junto com o template, é o único arquivo necessário de ser adicionado assim que o template é gerado.
+
+### ToDo
+- ~Investigar como gerar o template diretamente do nosso repositório  privado do Gitlab, atualmente isso ainda não é possível;~ (Resolvido)
+- Melhorar dinamismo de como o template é gerado, talvez adicionando novos campos que possam ser configurados;
+- ~Fazer com que se torne um pacote Python, para que seja ainda mais simples de executar.~ (Feito)
+
+

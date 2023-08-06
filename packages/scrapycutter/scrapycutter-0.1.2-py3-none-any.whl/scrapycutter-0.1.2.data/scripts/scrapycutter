@@ -1,0 +1,27 @@
+#!python
+import click
+import pkg_resources
+
+from cookiecutter.main import cookiecutter
+
+VERSION = pkg_resources.require('scrapycutter')[0].version
+
+
+@click.group()
+@click.version_option(version=VERSION, prog_name='scrapycutter')
+def exec():
+    pass
+
+
+@click.command()
+def revolution():
+    cookiecutter(
+        'git+http://gitlab.internal.b2w.io/team/a-tech/crawler-template.git',
+    )
+
+
+exec.add_command(revolution)
+
+
+if __name__ == '__main__':
+    exec()
