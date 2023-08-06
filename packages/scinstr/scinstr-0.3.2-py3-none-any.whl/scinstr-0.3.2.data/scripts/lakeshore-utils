@@ -1,0 +1,282 @@
+#!python
+# -*- coding: utf-8 -*-
+
+"""packake scinstr
+author    Benoit Dubois
+copyright FEMTO ENGINEERING, 2021
+license   GPL v3.0+
+brief     Small utility for Lakeshore 3x0 device.
+"""
+import time
+import logging
+import argparse
+import textwrap
+import scinstr.tctrl.l350 as l350
+
+
+# TODO: selection du setpoint, des paramètres de PI et de la sortie.
+# TODO: Peut-être aussi configuration des entrées (filtrage...)
+# TODO: Interface USB/Ethernet
+
+# =============================================================================
+def parse_args():
+    """Parse cli argument.
+    """
+    parser = argparse.ArgumentParser(
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        description='''
+        Utilities for Lakeshore temperature controller (330, 350):
+        - load calibration file (.340 file only) to the controller device.
+        - configure input of controller (set calibration file and name).''',
+
+        epilog=textwrap.dedent('''
+   For more details:
+        $ lakeshore-utils {load|confin|} -h
+'''))
+    cmdsubparser = parser.add_subparsers(title='subcommands',
+                                         dest='cmd',
+                                         description='valid sub commands',
+                                         help='Query sub command')
+    #
+    loadparser = cmdsubparser.add_parser(
+        'load',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        help='Load configuration file (.340 file only) to a curve in Lakeshore device.',
+        epilog=textwrap.dedent('''
+   Example:
+      $ lakeshore-utils load 21 X123456.340 192.168.0.113
+   Load X123456.340 calibration file to curve number 21 of device
+   @IP 192.168.0.113
+'''))
+    loadparser.add_argument('curve',
+                            type=int,
+                            choices=range(21, 60),
+                            metavar="{21-59}",
+                            help='Specify which curve to configure')
+    loadparser.add_argument('calibration_file',
+                            help='Calibration file to load (.340 file only)')
+    #
+    inputparser = cmdsubparser.add_parser(
+        'confin',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        help='Configure input of controller',
+        epilog=textwrap.dedent('''
+   Example:
+      $ lakeshore-utils confin B -cn 12 -in 'Sensor 1' 192.168.0.2
+   Connect to Lakeshore device @IP 192.168.0.2, then select the curve number 12
+   and the name 'Sensor 1' for the input B
+'''))
+    inputparser.add_argument('input',
+                             choices=('A', 'B', 'C', 'D'),
+                             help='Specify which input to configure')
+    inputparser.add_argument('-cn', '--curve-number',
+                             type=int,
+                             dest='curve_number',
+                             help='Specify which curve the input uses')
+    inputparser.add_argument('-in', '--input-name',
+                             dest='input_name',
+                             help='Specify the name to associate with the input (Don\'t forget to use quotes if input name contains spaces)')
+    #
+    parser.add_argument('ip', help='IP address of device')
+    #
+    return parser.parse_args()
+
+
+# =============================================================================
+def parse_calib_file(file_name):
+    """Etract header and data from a 340 calibration file.
+    :param file_name: filename of calibration file (str)
+    :returns: extracted header and data (dict, array)
+    """
+    with open(file_name) as fd:
+        model = fd.readline().split()[2]
+        sn = fd.readline().split()[2]
+        format_ = int(fd.readline().split()[2])
+        spl = float(fd.readline().split()[2])
+        tc = int(fd.readline().split()[2])
+        nb_bkp = int(fd.readline().split()[3])
+    header = {'model':model, 'sn':sn, 'format':format_, 'spl':spl, 'tc':tc,
+              'nb_bkp':nb_bkp}
+
+    with open(file_name) as fd:
+        data_raw = fd.readlines()
+    a_nb = []
+    a_unit = []
+    a_temp = []
+    for line in data_raw[9:]:
+        nb, unit, temp = line.split(None, 3)
+        a_nb.append(int(nb))
+        a_unit.append(float(unit))
+        a_temp.append(float(temp))
+    data = [a_nb, a_unit, a_temp]
+
+    return header, data
+
+
+# =============================================================================
+def export_calib_file(dev, file_idx, header, data):
+    """Load a 340 calibration file to device. User calibration files are
+    stored in the device with a specified number index (from 21 to 59 in
+    Lakeshore 350 for example). This index is used to select calibration
+    data for sensors in use.
+    :param dev: Lakeshore device (object)
+    :param file_idx: index of calibration file (int)
+    :param header: header of calibration file (dict)
+    :param data: data of calibration file (array)
+    :returns: None
+    """
+    dev.write("CRVDEL {:2d}\n".format(file_idx))
+    dev.write("CRVHDR {:2d},{},{},{:1d},{:.3f},{:1d}\n".format(file_idx,
+                                                               header['model'],
+                                                               header['sn'],
+                                                               header['format'],
+                                                               header['spl'],
+                                                               header['tc']))
+    logging.info("loading header OK")
+    time.sleep(0.1)
+    for i in range(header['nb_bkp']):
+        dev.write("CRVPT {:2d},{:.0f},{:6g},{:6g}".format(file_idx,
+                                                            data[0][i],
+                                                            data[1][i],
+                                                            data[2][i]))
+
+        logging.debug("load data line %d", i+1)
+        time.sleep(0.1)
+
+
+# =============================================================================
+def import_config_file(dev, file_idx, header, data):
+    """Load a 340 calibration file to device. User calibration files are
+    stored in the device with a specified number index (from 21 to 59 in
+    Lakeshore 350 for example). This index is used to select calibration
+    data for sensors in use.
+    :param dev: Lakeshore device (object)
+    :param file_idx: index of calibration file (int)
+    :param header: header of calibration file (dict)
+    :param data: data of calibration file (array)
+    :returns: None
+    """
+    dev.write("ALARMST?")
+    cfg['alarm'] = dev.read()
+    dev.write("BRIGT?")
+    cfg[''] = dev.read()
+    dev.write("DISPFLD?")
+    cfg[''] = dev.read()
+    dev.write("DISPLAY?")
+    cfg[''] = dev.read()
+    dev.write("FILTER?")
+    cfg[''] = dev.read()
+    dev.write("HTRSET?")
+    cfg[''] = dev.read()
+    dev.write("HTRST?")
+    cfg[''] = dev.read()
+    dev.write("INCRV?")
+    cfg[''] = dev.read()
+    dev.write("INNAME?")
+    cfg[''] = dev.read()
+    dev.write("INTSEL?")
+    cfg[''] = dev.read()
+    dev.write("INTYPE?")
+    cfg[''] = dev.read()
+    dev.write("LEDS?")
+    cfg[''] = dev.read()
+    dev.write("MDAT?")
+    cfg[''] = dev.read()
+        dev.write("MOUT?
+")
+    cfg[''] = dev.read()
+        dev.write("OUTMODE?
+")
+    cfg[''] = dev.read()
+        dev.write("PID?
+")
+    cfg[''] = dev.read()
+        dev.write("RAMP?
+")
+    cfg[''] = dev.read()
+        dev.write("RAMPST?
+")
+    cfg[''] = dev.read()
+        dev.write("RANGE?
+")
+    cfg[''] = dev.read()
+        dev.write("RDGST?
+")
+    cfg[''] = dev.read()
+        dev.write("RELAY?
+")
+    cfg[''] = dev.read()
+        dev.write("RELAYST?
+")
+    cfg[''] = dev.read()
+            dev.write("SETP?
+")
+    cfg[''] = dev.read()
+        dev.write("SRDG?
+")
+    cfg[''] = dev.read()
+            dev.write("TEMP?
+")
+    cfg[''] = dev.read()
+        dev.write("TLIMIT?
+")
+    cfg[''] = dev.read()
+dev.write("TUNEST?
+")
+    cfg[''] = dev.read()
+        dev.write("WARMUP?
+")
+    cfg[''] = dev.read()
+    dev.write("WEBLOG?
+")
+    cfg[''] = dev.read()
+        dev.write("ZONE?
+")
+    cfg[''] = dev.read()
+
+
+# =============================================================================
+def main():
+    """Script entry.
+    """
+    date_fmt = "%d/%m/%Y %H:%M:%S"
+    log_format = "%(asctime)s %(levelname) -8s %(filename)s " + \
+                 " %(funcName)s (%(lineno)d): %(message)s"
+    logging.basicConfig(level=logging.DEBUG,
+                        datefmt=date_fmt,
+                        format=log_format)
+
+    args = parse_args()
+
+    dev = l350.L350Eth(args.ip, timeout=2.5)
+    dev.connect()
+
+    if args.cmd == 'load':
+        logging.info("Load file %s to curve %d",
+                     args.calibration_file,
+                     args.curve)
+        header, data = parse_calib_file(args.calibration_file)
+        export_calib_file(dev, args.curve, header, data)
+        logging.info("-----> OK")
+    elif args.cmd == 'confin':
+        if args.curve_number:
+            logging.info("Set curve %d to input %s",
+                         args.curve_number,
+                         args.input)
+            dev.write("INCRV {}, {}".format(args.input, args.curve_number))
+            logging.info("-----> OK")
+        if args.input_name:
+            logging.info("Set name %s to input %s",
+                         args.input_name,
+                         args.input)
+            dev.write("INNAME {}, \"{}\"\n".format(args.input,
+                                                   args.input_name))
+            logging.info("-----> OK")
+    else:
+        logging.critical("Bad command line (see help)")
+
+    dev.close()
+
+
+# =============================================================================
+main()
