@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: django-update-notifications
+Version: 0.1.5
+Summary: A framework for sending e-mail notifications about model updates.
+Home-page: UNKNOWN
+Author: Kamil Mierzejewski
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# django-update-notifications
+
+django-update-notifications allows users to subscribe for e-mails about updates of model instances.
+
+
