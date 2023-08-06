@@ -1,0 +1,5 @@
+[console_scripts]
+tdmelodic-convert = tdmelodic.nn.convert_dic:main
+tdmelodic-modify-unigram-cost = tdmelodic.script.postprocess_modify_unigram_cost:main
+tdmelodic-neologd-patch = tdmelodic.script.neologd_patch:main
+
