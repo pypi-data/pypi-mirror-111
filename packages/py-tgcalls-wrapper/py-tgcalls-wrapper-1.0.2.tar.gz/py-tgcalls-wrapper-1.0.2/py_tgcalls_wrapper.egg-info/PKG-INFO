@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: py-tgcalls-wrapper
+Version: 1.0.2
+Summary: A library to make using PyTgCalls easier.
+Home-page: https://github.com/callsmusic/pytgcalls-wrapper
+Author: Roj Serbest
+Author-email: rojserbest@icloud.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
