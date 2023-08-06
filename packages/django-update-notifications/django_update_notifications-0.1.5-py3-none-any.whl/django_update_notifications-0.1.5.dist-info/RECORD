@@ -1,0 +1,13 @@
+update_notifications/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+update_notifications/admin.py,sha256=mpjNJ8LCTMj5zpTeUlhttL9rmEo3UE-PXeMlWOzXMxs,219
+update_notifications/apps.py,sha256=c4xg5IibQcdJu6USK6-2gItQhUEwuY9xF4HP5rP9t7c,162
+update_notifications/models.py,sha256=a4nCvsc2-dvqGFFBhLHGFdTPSTMllZPtrHbCymQwdYw,2610
+update_notifications/utils.py,sha256=W9B7P67sp0B-GWAxxWbCvPvLBNfwKB7-9TEhwz2evjA,353
+update_notifications/views.py,sha256=adgI0DePyBN5OQ4c1CketGLRQgwK2GIPQZUP6832aw4,2057
+update_notifications/migrations/0001_initial.py,sha256=jdMBOMFANH_f1ER-IllRmIFx5S8UhhVIlBu89I2pKnA,1075
+update_notifications/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_update_notifications-0.1.5.dist-info/LICENSE,sha256=uV4S_IVwX1ByWjsnl3CRHjrJrDohBgOUQgsqVhsUqtQ,1522
+django_update_notifications-0.1.5.dist-info/METADATA,sha256=q4U8ARvSGEc_8pzTfCcMON-ArYy6GrEB0j97vrjG17I,805
+django_update_notifications-0.1.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+django_update_notifications-0.1.5.dist-info/top_level.txt,sha256=B682XlCRJgJ8ZcQIb_x3tm72u5KCRl-nw7Rp5Ixo5_U,21
+django_update_notifications-0.1.5.dist-info/RECORD,,
