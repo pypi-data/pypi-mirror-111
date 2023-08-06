@@ -1,0 +1,17 @@
+pdftopng-0.2.0.dist-info/RECORD,,
+pdftopng-0.2.0.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+pdftopng-0.2.0.dist-info/WHEEL,sha256=SCcPaD1xriZouD6EXl7AgcYiQmH1NgiskymVTsykSG4,110
+pdftopng-0.2.0.dist-info/entry_points.txt,sha256=7ph8hpO4ePyg7O1KJqPG5r1lObLGB2RVGOuluWD4ars,47
+pdftopng-0.2.0.dist-info/top_level.txt,sha256=OyG62gzN9Vs9doC2b6x4UU48KxPWGNdWUwvs0jNGM-Q,9
+pdftopng-0.2.0.dist-info/METADATA,sha256=Yc511wzaDzqUbnHjZu8rbkTpkxyikbERA9GjX-baAkM,1558
+pdftopng/pdftopng.cpython-36m-darwin.so,sha256=4lyMjyAKhwvDO-nL6zlTZJHJ7ZsMuLanR5MejNpW-tY,158592
+pdftopng/__init__.py,sha256=904RRKd7gwYjHgIRFIDN0RLPRR3q_JCNqO8dy_zZYZg,62
+pdftopng/__version__.py,sha256=jn7u1JQtSZc231z4oFGcar1wzxfDgI6_AzTeNcPwd6E,708
+pdftopng/pdftopng.cpp,sha256=Bs34YyEJAacB6Qgqx69d_G3cA2-wd67b6lNiOaEHoRw,8865
+pdftopng/cli.py,sha256=WQsp3OsatlUrnbBRFZ_XUzM0D4qWJwjdsAvXKiVViVQ,492
+pdftopng/.dylibs/libpng16.16.dylib,sha256=ZWRYS2bphX0-8STVHPaBsBkJIKM2e41VLSQXhdq-JkY,177352
+pdftopng/.dylibs/libfreetype.6.dylib,sha256=oIxAvCEPitzNcPYXB_mwrrDbbed1fCqtIr4HzeLmQRM,647008
+pdftopng/.dylibs/libjpeg.9.dylib,sha256=6rxCkWDyZt4vGMRwvAlLMM_2ykDqipqQjL8EBRvthNU,219172
+pdftopng/.dylibs/libfontconfig.1.dylib,sha256=IhO_uRDUn3HeLhaVq_tLgHHDztjzvr0U0vJ4ANPFggo,247812
+pdftopng/.dylibs/libtiff.5.dylib,sha256=zJpF0gJDkWbWohDmNn1PHYQ7uYqDCPPjt3zzAlNLLUQ,477000
+pdftopng/.dylibs/libpoppler.103.0.0.dylib,sha256=_NWJyo1U-nJHvKPWVRjbfHUoqhqijxR7cOePSUGklWk,3987216
