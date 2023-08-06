@@ -1,0 +1,12 @@
+psygnal-0.1.0rc3.dist-info/LICENSE,sha256=uyX2Y2Q7D-WzOUc6EKZVDuadkWenBWSYTR--BsewGpg,1514
+psygnal-0.1.0rc3.dist-info/METADATA,sha256=y6pGAwt8CrBDGa-IM2FV-aoQ4Y8kaFN_sTtv-E3T9bY,10608
+psygnal-0.1.0rc3.dist-info/top_level.txt,sha256=WYSfWuaSgSarH4remUGlBDSZyIZZqOZhxjWMAGxpCAE,8
+psygnal-0.1.0rc3.dist-info/RECORD,,
+psygnal-0.1.0rc3.dist-info/WHEEL,sha256=8mIGyWWDQye9YoLHY0HK4kOAUuaJRnDvaLJVSXp-uIE,111
+psygnal/_signal.py,sha256=dm7PjJef0-C1kcaSVBz--0pjLIziwDbV4CgvqTSaTHg,22371
+psygnal/_version.py,sha256=pnnksgnOwg9c4rGrO93_Px9s4Ex4PuviQ8BDVXgvSvE,150
+psygnal/__init__.cpython-39-x86_64-linux-gnu.so,sha256=4yrzExENMCzQVkEoRVuqyiPL-8H-qPDHhDEln0qAHW0,104248
+psygnal/__init__.py,sha256=88WtVm7vVOHc8VlMC0XNRWqLW2Sp0iIC14ctpSqYryw,574
+psygnal/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+psygnal/_signal.cpython-39-x86_64-linux-gnu.so,sha256=wZLZjE-_T6PvseWOKl3TEs83bD5_D8tLWQd1emlFHHw,2236384
+psygnal/_version.cpython-39-x86_64-linux-gnu.so,sha256=_AorqQde0jR4xTlOK9NNrpCY1pi0FXcZkP5m32jjHvs,67896
