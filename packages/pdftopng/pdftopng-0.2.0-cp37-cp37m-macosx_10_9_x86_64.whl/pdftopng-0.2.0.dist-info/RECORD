@@ -1,0 +1,17 @@
+pdftopng-0.2.0.dist-info/RECORD,,
+pdftopng-0.2.0.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+pdftopng-0.2.0.dist-info/WHEEL,sha256=WVG6A_oY5zUoNXUyvfLMOSXC-hqC5VZacUL1MeSOz70,110
+pdftopng-0.2.0.dist-info/entry_points.txt,sha256=7ph8hpO4ePyg7O1KJqPG5r1lObLGB2RVGOuluWD4ars,47
+pdftopng-0.2.0.dist-info/top_level.txt,sha256=OyG62gzN9Vs9doC2b6x4UU48KxPWGNdWUwvs0jNGM-Q,9
+pdftopng-0.2.0.dist-info/METADATA,sha256=Yc511wzaDzqUbnHjZu8rbkTpkxyikbERA9GjX-baAkM,1558
+pdftopng/__init__.py,sha256=904RRKd7gwYjHgIRFIDN0RLPRR3q_JCNqO8dy_zZYZg,62
+pdftopng/__version__.py,sha256=jn7u1JQtSZc231z4oFGcar1wzxfDgI6_AzTeNcPwd6E,708
+pdftopng/pdftopng.cpp,sha256=Bs34YyEJAacB6Qgqx69d_G3cA2-wd67b6lNiOaEHoRw,8865
+pdftopng/cli.py,sha256=WQsp3OsatlUrnbBRFZ_XUzM0D4qWJwjdsAvXKiVViVQ,492
+pdftopng/pdftopng.cpython-37m-darwin.so,sha256=GtRthkkB0tAZOU5WNfC5h1laoxDp5_xam4YZ2amwm44,158640
+pdftopng/.dylibs/libpng16.16.dylib,sha256=-0jI2HFn-qow7KFySHhka5wkoYyGxx5g7aephjl-vSg,177352
+pdftopng/.dylibs/libfreetype.6.dylib,sha256=odEp3gbD1E75GiFWfTxP0ccFgknbgfTIJWFgzJwDJMU,647008
+pdftopng/.dylibs/libjpeg.9.dylib,sha256=LyAfF9_MKsBter5dJWymMQW9C8hL99CmWZ55nSaGgRk,219172
+pdftopng/.dylibs/libfontconfig.1.dylib,sha256=dTz0XSbtuQ71DnCf9rS6cQKSMZPvwkTnk7MSCm917uU,247812
+pdftopng/.dylibs/libtiff.5.dylib,sha256=r2c4aSOOoMasTM-Sc_4zyMHDRsWzuWxNXuwGDBs08_U,477000
+pdftopng/.dylibs/libpoppler.103.0.0.dylib,sha256=OBirQc3b_CWJxlgUQxvQbt5-FEkBNcWxyOdJ2loRejE,3987216
