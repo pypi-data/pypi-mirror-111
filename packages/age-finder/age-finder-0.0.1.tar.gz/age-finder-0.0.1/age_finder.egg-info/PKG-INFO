@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: age-finder
+Version: 0.0.1
+Summary: "Takes a str argument for persons name and acquires their age via google search in the background."
+Home-page: UNKNOWN
+Author: chrisp
+Author-email: christopherpearce10@gmail.com
+License: UNKNOWN
+Description: "README.md"
+Platform: UNKNOWN
