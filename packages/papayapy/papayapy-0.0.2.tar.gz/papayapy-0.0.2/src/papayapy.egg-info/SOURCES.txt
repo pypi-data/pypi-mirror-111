@@ -1,0 +1,6 @@
+setup.py
+src/papayapy/__init__.py
+src/papayapy.egg-info/PKG-INFO
+src/papayapy.egg-info/SOURCES.txt
+src/papayapy.egg-info/dependency_links.txt
+src/papayapy.egg-info/top_level.txt
