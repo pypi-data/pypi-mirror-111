@@ -1,0 +1,11 @@
+.gitignore
+README.md
+setup.py
+animus/__init__.py
+animus/__version__.py
+animus.egg-info/PKG-INFO
+animus.egg-info/SOURCES.txt
+animus.egg-info/dependency_links.txt
+animus.egg-info/requires.txt
+animus.egg-info/top_level.txt
+requirements/requirements.txt
