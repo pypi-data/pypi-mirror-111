@@ -1,0 +1,14 @@
+README.md
+setup.py
+TaxoVec/__init__.py
+TaxoVec/calculate_IC.py
+TaxoVec/create_card_cache.py
+TaxoVec/functions.py
+TaxoVec.egg-info/PKG-INFO
+TaxoVec.egg-info/SOURCES.txt
+TaxoVec.egg-info/dependency_links.txt
+TaxoVec.egg-info/requires.txt
+TaxoVec.egg-info/top_level.txt
+TaxoVec/data/card_cache.csv
+TaxoVec/data/card_cache_star.csv
+TaxoVec/data/information_content_default.csv
