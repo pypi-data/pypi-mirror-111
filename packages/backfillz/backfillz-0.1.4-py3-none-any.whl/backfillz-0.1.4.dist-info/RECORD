@@ -1,0 +1,16 @@
+backfillz/__init__.py,sha256=zLnPSw__JAlskxEEyrZcJiSL9U8UmESXaQmLV1145D4,380
+backfillz/backfillz.py,sha256=HrteJiM2bhUpB9g0rrDPZj_AfQIKcUpawTBoS295Evw,2383
+backfillz/data.py,sha256=GZsxp2Z0z8oVTkQpaDppbCH4UFq89tGjyuDRKHNMtHo,1626
+backfillz/example/__init__.py,sha256=vkNFMODhR8Nb4nqy3FCUzU5MjhGzK-1NpN__C708URc,25
+backfillz/example/eight_schools.py,sha256=JtQ8EWz3LfKfWR03s2LnWGZBjzGF1ir-JPIOmDprf-M,1151
+backfillz/plot.py,sha256=xT2zOGhajX8k_UIqWqqlm7Hl0R8_hpOepkxn7kIqfnc,7284
+backfillz/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+backfillz/slice_histograms.py,sha256=xYlkOcYg5QUauOTb7YDIg0Ik5BLvYSiZJmNfg0G5V3k,2609
+backfillz/stan.py,sha256=DS9dM5TqstakduUnDOgWSPStfOzYZyAHr0640PpDnEU,886
+backfillz/theme.py,sha256=A5gXCShknwqXKPCWvrDVS8m9a7fwP3s4E7JcNp6HAOQ,2603
+backfillz/trace_dial.py,sha256=dsL1XJCJtq77SLFaEC3pJFx4uoU7RxgBDOILj-mR1AU,8001
+backfillz/trace_slice_histogram.py,sha256=-r7ZYnJyoLvdkcmdk5J084sgfI6J_kT29W4ikQwz6Jw,6541
+backfillz-0.1.4.dist-info/LICENSE.md,sha256=Gof4vGbBZF2h0Eu0oGsTfDsmxO-uYVHenR28jd33flA,1075
+backfillz-0.1.4.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+backfillz-0.1.4.dist-info/METADATA,sha256=fUtGvBhbN0xMD5NdujKjXqICjJVNWrxvrqmf-4l5hY4,2938
+backfillz-0.1.4.dist-info/RECORD,,
