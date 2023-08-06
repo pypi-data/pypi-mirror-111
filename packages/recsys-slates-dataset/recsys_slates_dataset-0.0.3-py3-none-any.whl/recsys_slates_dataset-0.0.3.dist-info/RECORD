@@ -1,0 +1,11 @@
+recsys_slates_dataset/__init__.py,sha256=QvlVh4JTl3JL7jQAja76yKtT-IvF4631ASjWY1wS6AQ,22
+recsys_slates_dataset/_nbdev.py,sha256=TiaQRmVvCDne2lf_gSfzlxs0HduxUglfcgIVhsIdiu0,497
+recsys_slates_dataset/core.py,sha256=JO9_IwnJH_9uHhuXM_LI-Pieq1CHIKElTZFz7c__Ea8,193
+recsys_slates_dataset/datahelper.py,sha256=nTtSKkbA-dcnG5Ss2QCKcIDuFUzk1elMO_-4o-x4bLw,1617
+recsys_slates_dataset/dataset_torch.py,sha256=zL-zsLV2N9mEYp-yqKN7YWDhmOktbrqgLVF6YVTWbTY,4256
+recsys_slates_dataset-0.0.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+recsys_slates_dataset-0.0.3.dist-info/METADATA,sha256=3fk4YfrrjYLqDxVqdOzEVlYlaOkvJaAAUikelQcoYCk,6326
+recsys_slates_dataset-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+recsys_slates_dataset-0.0.3.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+recsys_slates_dataset-0.0.3.dist-info/top_level.txt,sha256=fB5-ejtilxh3NJyvp8TbA349aWyQKeNA1nP5lqsoNBY,22
+recsys_slates_dataset-0.0.3.dist-info/RECORD,,
