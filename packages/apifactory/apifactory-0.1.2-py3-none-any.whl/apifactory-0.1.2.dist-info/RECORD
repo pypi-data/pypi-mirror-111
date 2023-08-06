@@ -1,0 +1,11 @@
+apifactory/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apifactory/app_factory.py,sha256=5KN3SQQ3RRM7slWtULnpetwCc8PRFs8Ut0-E1j3y2Gs,1450
+apifactory/database.py,sha256=4OyeJd2FUWqb3IB0roDWLiRt9mXDnVdwRKQCT4Icu9M,2500
+apifactory/route_factory.py,sha256=ujkRItEJFY7FVpOxtTQolw0ndL2UQSAYduWFyCL9nuc,3912
+apifactory/router_methods.py,sha256=AZKQXH_P_Oezd5oJ8dEGsLHrk0o1o0-JPxv_pzqOSm8,5767
+apifactory/schemas.py,sha256=puCt17x-Ms_R068RT-k9TbmOrMYrFqE4CJxh_2o3BIA,3330
+apifactory/security.py,sha256=5lGz8WW2G3mbPJTO9FbPd6pesjX4gdsOSOkcUX2pMi8,5069
+apifactory/utils.py,sha256=PicOHeOZgNCQUWo5J9e3-zBBY0wrsMml3ByLyRxL_9A,3168
+apifactory-0.1.2.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+apifactory-0.1.2.dist-info/METADATA,sha256=wPUgSnH-KcfE3WYLoY2pDVHGuFmq9DCljI33ep55TZ4,3771
+apifactory-0.1.2.dist-info/RECORD,,
