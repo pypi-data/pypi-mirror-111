@@ -1,0 +1,1 @@
+(self.webpackChunk_gt_coar_jupyterlab_theme_dark=self.webpackChunk_gt_coar_jupyterlab_theme_dark||[]).push([[568],{568:(e,t,r)=>{"use strict";r.r(t),r.d(t,{NS:()=>a.NS});var a=r(36)},36:(e,t,r)=>{"use strict";r.d(t,{NS:()=>a});const a="@gt-coar/jupyterlab-theme-dark"}}]);
