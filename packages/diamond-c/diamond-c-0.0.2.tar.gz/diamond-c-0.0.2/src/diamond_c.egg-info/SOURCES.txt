@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/diamond/__init__.py
+src/diamond/c.py
+src/diamond_c.egg-info/PKG-INFO
+src/diamond_c.egg-info/SOURCES.txt
+src/diamond_c.egg-info/dependency_links.txt
+src/diamond_c.egg-info/requires.txt
+src/diamond_c.egg-info/top_level.txt
