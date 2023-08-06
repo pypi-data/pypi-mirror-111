@@ -1,0 +1,3 @@
+[console_scripts]
+discord-heater = heater.__main__:main
+
