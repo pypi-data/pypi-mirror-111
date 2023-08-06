@@ -1,0 +1,3 @@
+[console_scripts]
+transkribus-fixer = transkribus_fixer.cli:cli
+
