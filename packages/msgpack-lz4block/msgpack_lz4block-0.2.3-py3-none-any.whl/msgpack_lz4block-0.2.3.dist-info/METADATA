@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: msgpack-lz4block
+Version: 0.2.3
+Summary: Deserialize and decompress messages serialized by the C# lib "MessagePack-CSharp" using lz4block compression.
+Home-page: https://github.com/AlsidOfficial/python-msgpack-lz4block
+Author: Alsid
+License: MIT
+Download-URL: https://github.com/AlsidOfficial/python-msgpack-lz4block/archive/refs/tags/v0.2.3.tar.gz
+Platform: UNKNOWN
+License-File: LICENSE.txt
+Requires-Dist: msgpack
+Requires-Dist: lz4
+
+UNKNOWN
+

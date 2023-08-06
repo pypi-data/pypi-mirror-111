@@ -1,0 +1,8 @@
+msgpack_lz4block/__init__.py,sha256=UxPfsDhlflCd516D-6y58vXsq_56ShxQGxEQtQhQbSM,1488
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_functions.py,sha256=PeBiMt7m-NgFjikb4eW-sIbt6DivGgfS3rBM-dn_4CA,951
+msgpack_lz4block-0.2.3.dist-info/LICENSE.txt,sha256=3d4zQA9gxYPchmTBq27B_jKrsI7Eg2SLPlRhWYtXjiI,1057
+msgpack_lz4block-0.2.3.dist-info/METADATA,sha256=1SR40m21V_ufBvg4b0LXWpRk2F-EhzvwTK9WtNUBi2c,473
+msgpack_lz4block-0.2.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+msgpack_lz4block-0.2.3.dist-info/top_level.txt,sha256=0S1A8ebi43t55f7mc5tc6SJgL4Ry-PbTD0yrhe7bPuw,23
+msgpack_lz4block-0.2.3.dist-info/RECORD,,
