@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: sagesaver-tools
+Version: 0.1.1
+Summary: Utils for SageSaver server scripts
+Home-page: https://github.com/Cozieee/sagesaver/sagesaver-tools
+Author: Victor Lin
+Author-email: vvictor.llin@gmail.com
+License: UNKNOWN
+Project-URL: Project Main, https://github.com/Cozieee/sagesaver
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: boto3
+Requires-Dist: pymongo
+Requires-Dist: pymysql
+Requires-Dist: jmespath
+
+UNKNOWN
+
