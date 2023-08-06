@@ -1,0 +1,10 @@
+HttpClientMultipart.py
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+HttpClientMultipart.egg-info/PKG-INFO
+HttpClientMultipart.egg-info/SOURCES.txt
+HttpClientMultipart.egg-info/dependency_links.txt
+HttpClientMultipart.egg-info/entry_points.txt
+HttpClientMultipart.egg-info/top_level.txt
