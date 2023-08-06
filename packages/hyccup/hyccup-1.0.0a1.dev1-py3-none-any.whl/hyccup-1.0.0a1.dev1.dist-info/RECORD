@@ -1,0 +1,8 @@
+hyccup/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hyccup/compiler.hy,sha256=GMZMgEG478eodKBcDi2bs4Qibhq6IpbmzEJW5LOmm_Q,4888
+hyccup/core.hy,sha256=_XsE8RMaRlE0bXKBFRSBVa5QexIPbBsZwmtrD999LPI,546
+hyccup/util.hy,sha256=pkduSMxz-U9jj0e-85K1xP2SWdTj8UsM_C5-UQVP8Vg,852
+hyccup-1.0.0a1.dev1.dist-info/LICENSE.txt,sha256=4RRwbsgcnVQYZZEgtL_vnlhn8sBVB8B-KXZ4UVRXxYQ,1121
+hyccup-1.0.0a1.dev1.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+hyccup-1.0.0a1.dev1.dist-info/METADATA,sha256=czlWXosXYCqPX3cl6f4BuHXkS2OyHcXwTX2qW4LmrZE,418
+hyccup-1.0.0a1.dev1.dist-info/RECORD,,
