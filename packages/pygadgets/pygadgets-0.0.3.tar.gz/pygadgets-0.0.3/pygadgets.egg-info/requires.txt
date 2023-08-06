@@ -1,0 +1,6 @@
+twine
+python-dotenv
+wheel
+black
+bumpversion
+pytest
