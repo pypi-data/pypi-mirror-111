@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: external-site-parser
+Version: 0.4.1
+Summary: A small package to parse Bigfix external site releases.
+Home-page: https://github.com/cathaldi/external-site-parser
+Author: Cathal A. Dinneen
+Author-email: cathal.a.dinneen@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/cathaldi/external-site-parser/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: BeautifulSoup4
+Requires-Dist: lxml
+Requires-Dist: xlrd
+
+UNKNOWN
+
