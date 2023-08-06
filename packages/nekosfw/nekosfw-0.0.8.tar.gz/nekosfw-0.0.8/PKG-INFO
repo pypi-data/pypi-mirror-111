@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: nekosfw
+Version: 0.0.8
+Summary: Get SFW Neko Images
+Home-page: https://github.com/Neko-SFW/nekosfw-py
+Author: Crain69 (Chirayu Prasai)
+Author-email: <chirayuprasai11@gmail.com>
+License: UNKNOWN
+Description: # NEKOSFW
+        
+        Developed by Crian69 (c) 2021
+        
+        ## Installing The Package
+        
+        ```python
+        pip install nekosfw
+        ```
+        
+        ## Examples of How To Use
+        
+        Initializing the image type to receive
+        
+        ```python
+        from nekosfw import ImageType
+        
+        imagetype = ImageType.Foxgirl
+        
+        # Other Code
+        ```
+        
+        All the currently available image types are:
+        
+        <ol>
+        <li>Waifu</li>
+        <li>Kitsune</li>
+        <li>Neko</li>
+        <li>Kemonomimi</li>
+        <li>Foxgirl</li>
+        </ol>
+        
+        Getting the image link
+        
+        ```python
+        from nekosfw import ImageType
+        from nekosfw import getImage
+        import asyncio
+        
+        async def main():
+            imagetype = ImageType.Foxgirl
+            imageUrl = await getImage(imagetype)
+            return imageUrl
+        
+        if __name__ == "__main__":
+            loop = asyncio.get_event_loop()
+            x = loop.run_until_complete(main())
+        
+        # Return the image url
+        ```
+        
+Keywords: python,neko,sfw,rate limit,handler,images
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown

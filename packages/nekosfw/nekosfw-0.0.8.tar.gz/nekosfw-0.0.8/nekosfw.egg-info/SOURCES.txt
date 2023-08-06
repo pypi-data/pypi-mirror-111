@@ -1,0 +1,9 @@
+README.md
+setup.py
+nekosfw/__init__.py
+nekosfw/main.py
+nekosfw.egg-info/PKG-INFO
+nekosfw.egg-info/SOURCES.txt
+nekosfw.egg-info/dependency_links.txt
+nekosfw.egg-info/requires.txt
+nekosfw.egg-info/top_level.txt
