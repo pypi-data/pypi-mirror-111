@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pypacktut/basic/__init__.py
+pypacktut/basic/add.py
+pypacktut/basic/determinant.py
+pypacktut/extra/__init__.py
+pypacktut/extra/dot.py
+pypacktut/extra/multiply.py
+pypacktut/pypacktut.egg-info/PKG-INFO
+pypacktut/pypacktut.egg-info/SOURCES.txt
+pypacktut/pypacktut.egg-info/dependency_links.txt
+pypacktut/pypacktut.egg-info/requires.txt
+pypacktut/pypacktut.egg-info/top_level.txt
