@@ -1,0 +1,8 @@
+migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+templatetags/__init__.py,sha256=vb5gmpIKRs7rUAT9IgjSUKmiyPHrqdf980VhEqeMUzM,23
+templatetags/jet_rebuild_tags.py,sha256=8SCLWQITOfqHJiIePV0ipDXb2NYRCMgZkLaGKVY8rI8,4699
+jet_sidebar-0.0.2.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+jet_sidebar-0.0.2.dist-info/METADATA,sha256=MZM7g8T0D44aStlCLrErKamSnAX9-Qy-Vh048Le1jHQ,5132
+jet_sidebar-0.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+jet_sidebar-0.0.2.dist-info/top_level.txt,sha256=co5_NQOi1YAAQgSSvIleHzfdP4zHhFKR4D-srtyuzUg,24
+jet_sidebar-0.0.2.dist-info/RECORD,,
