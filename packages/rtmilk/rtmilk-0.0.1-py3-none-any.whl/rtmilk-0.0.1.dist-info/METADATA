@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: rtmilk
+Version: 0.0.1
+Summary: RTM API wrapper
+Author: Rehan Khwaja
+Author-email: rehan@khwaja.name
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: pydantic (>=1.8.1)
+Requires-Dist: requests (>=2.23.0)
