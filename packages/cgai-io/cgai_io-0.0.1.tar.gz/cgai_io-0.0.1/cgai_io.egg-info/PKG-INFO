@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: cgai-io
+Version: 0.0.1
+Summary: A simple, light and fast data stream operation Python Library.
+Home-page: https://github.com/zxzxde/cgai-io
+Author: Master Zhang
+Author-email: 360014296@qq.com
+License: UNKNOWN
+Description: # cgai-io
+        
+        #### 介绍
+        一个简单轻量又快速的数据流操作python库
+        
+        支持跨平台，支持window文件以及目录的快速复制
+        
+        
+        
+        #### 安装教程
+        
+        ```cmd
+        pip install cgai-io
+        ```
+        
+        #### 快速上手
+        
+        ###### 1.复制文件  
+        ```python
+        from cgai_io.Copy import copyfile
+        
+        src1 = r'D:\MZ\bg.jpg'
+        des1 = r'D:\Temp\Test\bg.jpg'
+        
+        copyfile(src1,des1)
+        ```
+        ###### 2.复制文件目录
+        ```python
+        from cgai_io.Copy import copydir
+        
+        src2 = r'D:\MZ'
+        des2 = r'D:\Temp\Test\MZ'
+        
+        copydir(src2,des2)
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
