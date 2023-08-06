@@ -1,0 +1,9 @@
+setup.py
+../src/trysail/__init__.py
+../src/trysail/_version.py
+../src/trysail/trysail.py
+trysail.egg-info/PKG-INFO
+trysail.egg-info/SOURCES.txt
+trysail.egg-info/dependency_links.txt
+trysail.egg-info/entry_points.txt
+trysail.egg-info/top_level.txt

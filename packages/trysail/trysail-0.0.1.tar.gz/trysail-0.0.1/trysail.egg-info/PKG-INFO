@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: trysail
+Version: 0.0.1
+Summary: A subtitle project management tool
+Home-page: https://github.com/jackye1995/trysail
+Author: jackye1995
+Author-email: yezhaoqin@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+
+# trysail
+
+## Installation
+
+```shell
+pip install trysail
+```
+
+## Usage
+
+```shell
+trysail -h
+```
+
+## Example
+
+```shell
+# create a new radio project
+trysail init -p radio
+# enter project
+cd radio-000001
+trysail start
+# write contents-001.txt, then parse
+trysail parse
+# prepare video at main-001.mp4, write main-001.ass, then finalize
+trysail finalize
+```
+
+## Development
+
+```shell
+# install dev dependencies
+pip install -r developer_requirements.txt
+
+# local publish
+cd publish
+./publish_local.sh
+
+# remote publish (first update version)
+cd publish
+./publish_remote.sh
+```
+
