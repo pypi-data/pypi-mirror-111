@@ -1,0 +1,10 @@
+regex-2021.7.5.dist-info/LICENSE.txt,sha256=v_Ve9M3MjBTOJZ-OirYOJkQYRA1jNfTcE4Jz-9UGFE0,11584
+regex-2021.7.5.dist-info/top_level.txt,sha256=aQmiDMhNTF26cCK4_7D-qaVvhbxClG0wyCTnEhkzYBs,6
+regex-2021.7.5.dist-info/RECORD,,
+regex-2021.7.5.dist-info/METADATA,sha256=ERb38jnLzSBy0zF9yMLNUAk_tbKrDRRGt4k2DsheRPE,39231
+regex-2021.7.5.dist-info/WHEEL,sha256=RIeRBYNNiNK3sXfnenIjXDrR2Tzyz05xCMpKF2hJ1iA,111
+regex/_regex.cpython-38-x86_64-linux-gnu.so,sha256=NsDDNenIn2Bj1kRXCwDan_jS8JE1st9p9cyMDLs1-7U,2121496
+regex/_regex_core.py,sha256=-5vM0BuKlu6_xwKvzcaQh9d3zdgRx7AYrpcKYfvtnSE,140218
+regex/test_regex.py,sha256=2B3z4v29xFTo_gCyJQ6fBikUcTmBSVzav2Hhiqr47kA,214691
+regex/__init__.py,sha256=9slNQEb4SCZ9LncNzcQvqmkyxXlcOAF7QwAwigxWjsw,65
+regex/regex.py,sha256=AxWXxkaVE_rh2GjZu-b6oVsPGgEJe1yzuf7wyn4ertM,32543
