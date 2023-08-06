@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: vbind
+Version: 1.0.2
+Summary: sRNA profiler
+Home-page: https://github.com/paviudes/vbind
+Author: Pavithran Iyer and Charith Adkar
+Author-email: pavithran.iyer@uwaterloo.ca,charith.adkar@usherbrooke.ca
+License: BSD Clause 3
+Download-URL: https://github.com/paviudes/vbind/archive/refs/tags/v1.1.tar.gz
+Description: vbind is a userfriedly tool for RNA sequencing. In particular, it can be used to compute and visualize the bindings between a pool of sRNA nuleotides and a genome sequence. Please visit https://paviudes.github.io/vbind/ for more information.
+Keywords: viroids,sequencing,sRNA profiling
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
