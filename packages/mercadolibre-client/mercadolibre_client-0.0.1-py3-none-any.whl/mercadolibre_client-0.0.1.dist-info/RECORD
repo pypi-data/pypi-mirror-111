@@ -1,0 +1,17 @@
+mercadolibre/Client.py,sha256=26jXBRW7W4cfVq0LzXJq8WupemYNJgpEPed04DQaiXQ,1923
+mercadolibre/MercadoLibreAPI.py,sha256=VcvumQaCaHMRqebd_gTuho1uVg7iDihFilRYktfV-ek,661
+mercadolibre/OAuth.py,sha256=aO7Tk7tqTXQUvUnq2v3cPAzeIJ8BqiwDZuP5kbvvo8Q,955
+mercadolibre/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mercadolibre/enums/HttpMethods.py,sha256=c3DM1IPjTb6sWLxAN5rlV1LqoDKHlEKIOi-2UvpN4LQ,146
+mercadolibre/enums/HttpStatusCode.py,sha256=r_6AZuelnqnnlIeH4P-bYHHYmm7hHC06TFg2_NwG3Qc,2207
+mercadolibre/enums/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mercadolibre/enums/paths.py,sha256=OFQTadcEQFz2FnlMrFDZH5zCCrESI2n67cS9NTeRR-w,985
+mercadolibre/resources/Item.py,sha256=8NtE3nmLhHRzr0du3LaIFEqpRt_W7mYlFYLgFU-oV3Q,2486
+mercadolibre/resources/Order.py,sha256=BuyF6pVE6X-HHGZd73mSl2JlccS4aUoFapF530pIU6M,381
+mercadolibre/resources/Question.py,sha256=1IZQg0bV779L8RYa5zas8X_FrcqlKmOt1yu1BhWBjzU,387
+mercadolibre/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mercadolibre_client-0.0.1.dist-info/LICENCE,sha256=Gr4eZLmRZcnHm84V0L-SysgBXR0oi9A2xZ73XSQq52o,1069
+mercadolibre_client-0.0.1.dist-info/METADATA,sha256=LzvaKw7AzHgBs3mvOn4qhL4zWDBCKlEalKyIFYyIPBE,4862
+mercadolibre_client-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mercadolibre_client-0.0.1.dist-info/top_level.txt,sha256=m3RwYAKBfsakB6BZSh3R4AhYtgepVO3XDyNUeJ2c7Oo,13
+mercadolibre_client-0.0.1.dist-info/RECORD,,
