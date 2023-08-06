@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker Usage &#8212; Flower 1.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/celery.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Running behind reverse proxy" href="reverse-proxy.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="reverse-proxy.html" title="Running behind reverse proxy"
+             accesskey="P">previous</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Flower 1.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Docker Usage</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+<div class="deck">
+
+</div>
+    <div class="section" id="docker-usage">
+<h1>Docker Usage<a class="headerlink" href="#docker-usage" title="Permalink to this headline">¶</a></h1>
+<p>To run Flower via Docker, you’ll need a broker running.  If you don’t
+have one, you can fire up a simple Redis instance with Docker from the
+official Redis image.</p>
+<blockquote>
+<div><p>$ docker run –name localredis -p 6379:6379 –rm -d redis</p>
+</div></blockquote>
+<p>Now, clone this repository, build flower from the Dockerfile, start the
+container and open <a class="reference external" href="http://localhost:49555">http://localhost:49555</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ docker build -t &quot;flower&quot; .
+$ docker run -d -p=49555:5555 --rm --name flower -e CELERY_BROKER_URL=redis://0.0.0.0:6379/0 flower flower --port=5555
+</pre></div>
+</div>
+<p>For more information about running with Docker see
+<a class="reference external" href="http://docs.docker.io/en/latest/">http://docs.docker.io/en/latest/</a></p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><p>
+  <iframe src="http://ghbtns.com/github-btn.html?user=mher&repo=flower&type=watch&count=true&size=large"
+    allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="reverse-proxy.html"
+                        title="previous chapter">Running behind reverse proxy</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="reverse-proxy.html" title="Running behind reverse proxy"
+             >previous</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Flower 1.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Docker Usage</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, Mher Movsisyan.
+    </div>
+  </body>
+</html>
