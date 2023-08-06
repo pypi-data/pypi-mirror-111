@@ -1,0 +1,10 @@
+setup.py
+gausbinom_distributions_nraichur/__init__.py
+gausbinom_distributions_nraichur/binomial_distribution.py
+gausbinom_distributions_nraichur/gaussian_distribution.py
+gausbinom_distributions_nraichur/general_distributions.py
+gausbinom_distributions_nraichur.egg-info/PKG-INFO
+gausbinom_distributions_nraichur.egg-info/SOURCES.txt
+gausbinom_distributions_nraichur.egg-info/dependency_links.txt
+gausbinom_distributions_nraichur.egg-info/not-zip-safe
+gausbinom_distributions_nraichur.egg-info/top_level.txt
