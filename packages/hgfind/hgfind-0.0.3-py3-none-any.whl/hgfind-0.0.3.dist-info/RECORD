@@ -1,0 +1,9 @@
+hgfind/__init__.py,sha256=kPvUnyPvA3FrPW-75-CcW_CydhwZtM0-4Y15BRoZ_sg,100
+hgfind/biomart-gene-coordinates.txt,sha256=GguOGUKNY-rIp5yePgJFBovjNaAzNgDiqhJXde1EwZQ,4808379
+hgfind/hgfind.py,sha256=L5xMXXnchutWfjeRWxZctcidIF6-6D9-hscR2HsYV6U,9730
+hgfind-0.0.3.dist-info/LICENSE,sha256=8v8QuPk81zpn5beKWnRgUSKz2LzUHnIsYrlPgeBXLQk,1054
+hgfind-0.0.3.dist-info/METADATA,sha256=q0g9VyUSkKUWTKZl8--teKiynT8St0OdvJb5uaM3-EA,2507
+hgfind-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+hgfind-0.0.3.dist-info/entry_points.txt,sha256=q0HqzqU4amG6V9qXd4rgGwdfC_B8SjfwXVMmcEIjpE0,47
+hgfind-0.0.3.dist-info/top_level.txt,sha256=ZFv09HbnoDp0J5oDua1gKfy-MNE-wGBfVANF5HtX7RM,7
+hgfind-0.0.3.dist-info/RECORD,,
