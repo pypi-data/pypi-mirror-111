@@ -1,0 +1,17 @@
+HISTORY.md
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+src/abcdijklm.py.egg-info/PKG-INFO
+src/abcdijklm.py.egg-info/SOURCES.txt
+src/abcdijklm.py.egg-info/dependency_links.txt
+src/abcdijklm.py.egg-info/not-zip-safe
+src/abcdijklm.py.egg-info/requires.txt
+src/abcdijklm.py.egg-info/top_level.txt
+src/mega/__init__.py
+src/mega/crypto.py
+src/mega/errors.py
+src/mega/mega.py
