@@ -1,0 +1,46 @@
+Metadata-Version: 1.1
+Name: basic-calculator-101
+Version: 1.2
+Summary: Calculator with basic functions: Add, Subtract, Multiply, Divide, Nth-root, ability to reset to 0
+Home-page: https://github.com/Ifyokoh/calculator
+Author: Ifeoma Okoh
+Author-email: odibest1893@gmail.com
+License: MIT
+Description: Basic Calculator
+        -------------------
+        
+        Installation
+        ----------------
+        
+        to use the package in your notebook:
+        
+        ``!pip install pip install basic-calculator-101==1.2``
+        
+        ``from calculator.calculator import Calculator``
+        
+        
+        Usage
+        --------
+        
+        - calculator = Calculator()
+        - calculator.add(6)
+        - calculator.subtract(3)
+        - calculator.multiply(2)
+        - calculator.divide(5)
+        - calculator.reset_memory()
+        
+        
+        Features:
+        ----------------
+        
+        - Addition
+        - Subtraction: 
+        - Multiplication
+        - Division: 
+        - Take (n) root of number:
+        - Memory of last result:
+Keywords: calculator
+Platform: UNKNOWN
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
