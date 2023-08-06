@@ -1,0 +1,12 @@
+confiddler/__init__.py,sha256=6-MmTzUB7AP_iNTsRux5rDcj5S4yG0WG5U1eyXVwvlM,275
+confiddler/_version.py,sha256=J47oq50e-kJblQq6WkGXdKVazVli8mipg-3yOfEGZyo,497
+confiddler/core.py,sha256=DgE8zCsq-esdeJf622J5mclYkhZE98awqyB9-1SXuNY,17672
+confiddler/json.py,sha256=0Xd9d0ZojxCtTlrjRoS7NTf6s8wcxzJy6QnQwUkHDQs,1679
+confiddler/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+confiddler/tests/test_core.py,sha256=3PwCWkfirCjpdmrfAOSY5WGpc07HS4cPf0akhuhkGiY,7980
+confiddler/tests/test_json.py,sha256=YT1fftuoaYU-81-v51Z8UOXsdzssH15oX6J64NRUCzQ,700
+confiddler-0.1.3.dist-info/LICENSE,sha256=PF-nuCoFjWWi6X4dzAX2UI_43e3_IQtg87ELG8TTpcY,1462
+confiddler-0.1.3.dist-info/METADATA,sha256=1faWTPKD0L9D8KyA3hz2F48tuWuGhi8ApcikEv_23Sc,498
+confiddler-0.1.3.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+confiddler-0.1.3.dist-info/top_level.txt,sha256=nWh6BoieIEtVGLzDa_QnKBScAMy2Y4WaByoO3_U9sR4,11
+confiddler-0.1.3.dist-info/RECORD,,
