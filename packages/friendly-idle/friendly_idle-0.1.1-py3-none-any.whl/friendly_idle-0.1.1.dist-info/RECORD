@@ -1,0 +1,11 @@
+friendly_idle/__init__.py,sha256=Ix7DhSUJm6AIOl1BXsA7PifpgLaz3O1ISqbYFsZ7EdQ,103
+friendly_idle/future_work.py,sha256=9rx0Dv4McuoIL-eBj1VxjtF9KItFvSVE7nWSXYsPzfk,1909
+friendly_idle/idle_formatter.py,sha256=e8Vr3Pl6ITqz27cilVSOygRgNJjwuPHGlzR9bNQctd8,5152
+friendly_idle/idle_gettext.py,sha256=vuDT43GN3kW6f_8745ghg6SpvqXsWU269b10-xZj72A,2724
+friendly_idle/main.py,sha256=BJI6XsCzTJLoeLIvPIbqjfzSaEQf3F0TfyFyCNLf30g,7313
+friendly_idle/patch_source_cache.py,sha256=ArrnM8LOjLsfneQ2uIdkTZhDaD2H3exLd1i2PPAOQ8c,1167
+friendly_idle-0.1.1.dist-info/LICENSE,sha256=l30OC3remdYKcyvWe4f5lN0tZ4ABKMZq7vyZUoSTT6o,1092
+friendly_idle-0.1.1.dist-info/METADATA,sha256=jFtolOa-9kR_3B8Bbdg32pHvJLLWocVHF2pAtcf0prg,1086
+friendly_idle-0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+friendly_idle-0.1.1.dist-info/top_level.txt,sha256=MCvN5MbXVKiFqSFZ9dPWdPKCH_eVW7RcbV-HxCivFSc,14
+friendly_idle-0.1.1.dist-info/RECORD,,
