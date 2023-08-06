@@ -1,0 +1,13 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+joshbasiccalculator/__init__.py
+joshbasiccalculator.egg-info/SOURCES.txt
+joshbasiccalculator.egg-info/dependency_links.txt
+joshbasiccalculator.egg-info/top_level.txt
+test_pack_dist_001.egg-info/PKG-INFO
+test_pack_dist_001.egg-info/SOURCES.txt
+test_pack_dist_001.egg-info/dependency_links.txt
+test_pack_dist_001.egg-info/top_level.txt
