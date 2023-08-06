@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: monochromap
+Version: 0.1.0
+Summary: A highly opinionated way to paint and plot black and white map
+Home-page: https://github.com/mitbal/monochromap
+Author: M Iqbal Tawakal
+Author-email: mit.iqi@gmail.com
+License: UNKNOWN
+Keywords: static map image osm
+Platform: UNKNOWN
+License-File: LICENSE.txt
+Requires-Dist: Pillow
+Requires-Dist: requests
+Requires-Dist: futures ; python_version < "3.2"
+
+UNKNOWN
+
