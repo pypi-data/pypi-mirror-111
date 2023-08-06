@@ -1,0 +1,11 @@
+onaws/__init__.py,sha256=QUjU01osFdc1nh6Ec9lpDxYgZkjvLmnhmSwDq01aExg,83
+onaws/__main__.py,sha256=B4hKLlM0ePt1Xg4SKJUEjuE4ePP7RTSqOtZjXt-XhwY,364
+onaws/cli.py,sha256=a8dDYfJh2mMQfLveOxZG4Yo-jPFisAAEvsgCsVb1zJI,1233
+onaws/core.py,sha256=XHm8YVo0NApHCo9FxOXHk4cHbxOUmoB05-Z8x-ezuss,1856
+onaws/ipranges.py,sha256=b0z5OXNtSzhpjz5P5eGomz7mtkK1kxaj8DaenqnEN1s,1098
+onaws-1.0.3.dist-info/LICENSE,sha256=9K8DIDk1PoOh432XU2Z9XNbI5bXtFHzJ5vLGv43zEPM,1068
+onaws-1.0.3.dist-info/METADATA,sha256=JJvRmYUGYEh-S5aH77WH0qKHMXAIm_RiWHQ1UO7Dxt0,4615
+onaws-1.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+onaws-1.0.3.dist-info/entry_points.txt,sha256=UgGwdFFM_JMsgEiBuLjAvDazD0McRAalM0UwNOBXmIc,47
+onaws-1.0.3.dist-info/top_level.txt,sha256=VRBP3hI0Ndbt5LazJs81BgurUCmlvJXuXFkHj2CNC98,6
+onaws-1.0.3.dist-info/RECORD,,
