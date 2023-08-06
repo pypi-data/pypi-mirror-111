@@ -1,0 +1,8 @@
+cppyabm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cppyabm/binds.cpython-37m-darwin.so,sha256=GRMLiHBhmETOly0G8PCv4Lg2VEQWT70pVHmtizL9fOQ,371816
+scripts/batch_runner.py,sha256=eHMxRBm36b0UlBDAAxxZux7OP5cARFUy7jIsRwvXJmY,2033
+cppyabm-1.0.20.dist-info/LICENSE,sha256=iNm062BXnBkew5HKBMFhMFctfu3EqG2qWL8oxuFMm80,1210
+cppyabm-1.0.20.dist-info/METADATA,sha256=Om1-bGx7TTJ7pqYZ7eZ4C1L8PwFLqCwWrFrYjElpbrc,4204
+cppyabm-1.0.20.dist-info/WHEEL,sha256=WVG6A_oY5zUoNXUyvfLMOSXC-hqC5VZacUL1MeSOz70,110
+cppyabm-1.0.20.dist-info/top_level.txt,sha256=-t-UuinTqN2_T7ngsgul24ZaKX165nY550jzApV7bqY,32
+cppyabm-1.0.20.dist-info/RECORD,,
