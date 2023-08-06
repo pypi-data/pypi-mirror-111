@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: pistachio
+Version: 0.0.1
+Summary: Pistachio aims to simplify reoccurring tasks when working with the file system.
+Home-page: https://github.com/mjakinowittering/pistachio
+Author: Matthew Akino-Wittering
+Author-email: matthew.akinowittering@gmail.com
+License: UNKNOWN
+Description: # pistachio
+        Pistachio aims to simplify reoccurring tasks when working with the file system.
+        
+        ## Developing
+        
+        Hello World To install helloworld, along with the tools you need to develop and run tests, run the following in your virtualenv:
+        
+        ```bash
+        $ pip install -e .[dev]
+        ```
+        
+        ## Install
+        
+        You can install pistachio by running the following command.
+        
+        ```bash
+        $ pip install pistachio
+        ```
+        
+        ## Usage
+        
+        To use pistachio you can inport the module by running the following commands.
+        
+        ```python
+        >>> import pistachio
+        ```
+        
+        ### Exists
+        
+        You can confirm if a directory, file or symbolic link exists using the following method.
+        
+        ```python
+        >>> pistachio.exists('README.md')
+        True
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Provides-Extra: dev

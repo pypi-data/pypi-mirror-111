@@ -1,0 +1,6 @@
+
+[dev]
+check-manifest
+flake8
+pytest>=3.7
+twine
