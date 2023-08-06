@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+stockTwitFetchAPI/stockTwitFetchAPI.egg-info/PKG-INFO
+stockTwitFetchAPI/stockTwitFetchAPI.egg-info/SOURCES.txt
+stockTwitFetchAPI/stockTwitFetchAPI.egg-info/dependency_links.txt
+stockTwitFetchAPI/stockTwitFetchAPI.egg-info/top_level.txt
