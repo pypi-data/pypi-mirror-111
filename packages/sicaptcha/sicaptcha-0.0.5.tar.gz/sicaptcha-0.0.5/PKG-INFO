@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: sicaptcha
+Version: 0.0.5
+Summary: Python basic captcha module
+Home-page: https://github.com/siteisleri/sicaptcha
+Author: siteisleri.com
+Author-email: noreply@siteisleri.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/siteisleri/sicaptcha/issues
+Description: # sicaptcha
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
