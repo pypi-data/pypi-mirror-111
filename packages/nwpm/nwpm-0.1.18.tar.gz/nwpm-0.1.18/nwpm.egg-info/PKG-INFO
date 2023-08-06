@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: nwpm
+Version: 0.1.18
+Summary: Navigator Workspace Pack Manager
+Home-page: https://github.com/xkevas24/nwpm
+Author: Alan Hsu
+Author-email: xkevas@qq.com
+License: Apache-2.0 License
+Description: # 安装环境
+        你可以使用nwpm包管理工具自由地创建你想要的环境。目前nwpm支持：
+        | 命令 | 引擎 | 支持的CUDA版本 |
+        | --- | --- | --- |
+        | mx18_cu110 | mxnet 1.8.0 | 11.0 |
+        | mx18_cu102 | mxnet 1.8.0 | 10.2 |
+        | mx17_cu102 | mxnet 1.7.0 | 10.2 |
+        你可以使用类似以下的命令初始化一个工作环境：<br />`nwpm -create mx17_cu102`<br />该命令的格式为：<br />`nwpm -create {Environment Name}`
+        # 移除环境
+        你可以使用以下命令移除你的工作环境：<br />`nwpm -delete mx17_cu102`<br />注意，由于workspace_pack目录下很有可能保留有模型、数据集等重要内容，因此该命令不会删除workspace_pack目录下的文件。如果您需要，请手动删除。<br />​
+        该命令的格式为：<br />`nwpm -delete {Environment Name}`
+        # 安装工作包
+        你可以使用类似下面的命令获取他人发布的工作包：<br />`nwpm -install nvccp`<br />该命令的格式为：<br />`nwpm -install {Package Name}`
+        # 移除工作包
+        你可以使用类似下面的命令移除已下载的工作包：<br />`nwpm -remove nvccp`<br />该命令的格式为：<br />`nwpm -remove {Package Name}`
+        # 开始工作
+        `nwpm -work`
+        
+Keywords: nwpm,navigator,workspace_pack
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
