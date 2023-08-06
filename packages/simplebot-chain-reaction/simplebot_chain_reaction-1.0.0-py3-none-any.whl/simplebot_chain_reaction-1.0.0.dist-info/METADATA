@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: simplebot-chain-reaction
+Version: 1.0.0
+Summary: Chain Reaction game for Delta Chat (SimpleBot plugin)
+Home-page: https://github.com/simplebot-org/simplebot_chain_reaction
+Author: The SimpleBot Contributors
+Author-email: adbenitez@nauta.cu
+License: MPL
+Keywords: simplebot plugin deltachat game
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Plugins
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Description-Content-Type: text/x-rst
+Requires-Dist: simplebot (>=1.1.1)
+Requires-Dist: SQLAlchemy (>=1.4.20)
+Provides-Extra: test
+Requires-Dist: pytest (>=6.2.4) ; extra == 'test'
+Requires-Dist: requests (>=2.25.1) ; extra == 'test'
+
+Chain Reaction
+==============
+
+.. image:: https://img.shields.io/pypi/v/simplebot_chain_reaction.svg
+   :target: https://pypi.org/project/simplebot_chain_reaction
+
+.. image:: https://img.shields.io/pypi/pyversions/simplebot_chain_reaction.svg
+   :target: https://pypi.org/project/simplebot_chain_reaction
+
+.. image:: https://pepy.tech/badge/simplebot_chain_reaction
+   :target: https://pepy.tech/project/simplebot_chain_reaction
+
+.. image:: https://img.shields.io/pypi/l/simplebot_chain_reaction.svg
+   :target: https://pypi.org/project/simplebot_chain_reaction
+
+.. image:: https://github.com/simplebot-org/simplebot_chain_reaction/actions/workflows/python-ci.yml/badge.svg
+   :target: https://github.com/simplebot-org/simplebot_chain_reaction/actions/workflows/python-ci.yml
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :target: https://github.com/psf/black
+
+A Chain Reaction game plugin for `SimpleBot`_.
+To move send messages with coordinates: **a1**, **b3**, etc. to place orbs in the corresponding cell.
+
+The objetive of Chain Reaction is to take control of the board by eliminating your oponents orbs.
+
+Players take it turns to place their orbs in a cell. Once a cell has reached critical mass the orbs explode into the surrounding cells adding an extra orb and claiming the cell for the player. A player may only place their orbs in a blank cell or a cell that contains orbs of their own colour. As soon as player looses all their orbs they are out of the game.
+
+To learn about Chain Reaction and the game rules read: https://brilliant.org/wiki/chain-reaction-game/
+
+Install
+-------
+
+To install run::
+
+  pip install simplebot-chain-reaction
+
+
+.. _SimpleBot: https://github.com/simplebot-org/simplebot
+
+
