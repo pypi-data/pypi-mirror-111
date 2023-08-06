@@ -1,0 +1,8 @@
+
+[tests]
+mypy
+pytest-cov
+pytest-timeout
+pytest-asyncio
+uvloop
+types-pkg-resources

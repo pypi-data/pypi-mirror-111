@@ -1,0 +1,17 @@
+# https://hub.docker.com/r/library/python/tags/
+image: docker.io/python:3.9
+
+test:
+  script:
+  - pip install virtualenv
+  - virtualenv venv
+  - . venv/bin/activate
+  - pip install -U pip
+  - pip install -e .[tests]
+  - mypy atimer
+  - pytest -vv --cov-report=xml
+  - python ./examples/time-show.py
+  - python ./scripts/timer-behaviour
+  artifacts:
+    reports:
+      cobertura: coverage.xml
