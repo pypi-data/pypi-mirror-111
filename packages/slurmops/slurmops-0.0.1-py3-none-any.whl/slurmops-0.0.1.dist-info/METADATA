@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: slurmops
+Version: 0.0.1
+Summary: NVIDIA/DeepOps on AWS EC2
+Home-page: https://github.com/elgalu/slurmops
+License: Apache 2.0
+Keywords: slurm,nvidia,ansible,aws,ec2
+Author: Leo Gallucci
+Author-email: elgalu3@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Testing :: Acceptance
+Classifier: Topic :: Software Development :: Testing :: Mocking
+Classifier: Topic :: System :: Emulators
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Dist: PyYAML (>=5.1,<6.0)
+Requires-Dist: boto3 (>=1.17.99,<2.0.0)
+Requires-Dist: docker (>=5.0.0,<6.0.0)
+Requires-Dist: python_json_logger (>=0.1,<0.2)
+Requires-Dist: requests_mock (>=1.9,<2.0)
+Requires-Dist: sshpubkeys (>=3.3.1,<4.0.0)
+Project-URL: Changelog, https://github.com/elgalu/slurmops/blob/main/CHANGELOG.md
+Project-URL: Issues, https://github.com/elgalu/slurmops/issues
+Project-URL: Repository, https://github.com/elgalu/slurmops
+Description-Content-Type: text/markdown
+
+# SlurmOps
+
+[![Python](docs/img/badges/language.svg)](https://devdocs.io/python/)
+
+NVIDIA/DeepOps on AWS EC2.
+
+## Usage
+
+WIP
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md)
+
