@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "PTON_pgk"
+version = "0.1.2"
+description = "Medieval City"
+authors = ["Tom <tom.thil@epita.fr>", "Marius <marius.pon@epita.fr>"]
+readme = 'README.md'
+
+packages = [ { include = "src", format = "sdist" },
+             { include = "tests", format = "sdist" },
+           ]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Shapely = "^1.7.1"
+numpy = "^1.21.0"
+geopandas = "^0.9.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
