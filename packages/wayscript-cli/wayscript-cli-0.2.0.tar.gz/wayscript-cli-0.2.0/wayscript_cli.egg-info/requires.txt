@@ -1,0 +1,6 @@
+click==7.1.2
+python-engineio==4.1.0
+python-socketio==5.2.1
+requests==2.25.1
+urllib3==1.26.4
+websocket-client==0.58.0
