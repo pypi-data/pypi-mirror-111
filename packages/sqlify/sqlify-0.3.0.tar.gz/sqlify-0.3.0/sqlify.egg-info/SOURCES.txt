@@ -1,0 +1,13 @@
+README.rst
+setup.py
+sqlify/__init__.py
+sqlify/builder.py
+sqlify/dbms.py
+sqlify/pool.py
+sqlify.egg-info/PKG-INFO
+sqlify.egg-info/SOURCES.txt
+sqlify.egg-info/dependency_links.txt
+sqlify.egg-info/requires.txt
+sqlify.egg-info/top_level.txt
+tests/__init__.py
+tests/main.py
