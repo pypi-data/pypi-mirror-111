@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "whale_revenue_projection"
+version = "0.0.2"
+description = "Package using the in-house LTV and Churn data to project revenue depending on the source type (Campaign, Product, Sponsor)"
+repository = "https://test.pypi.org/simple/"
+authors = ["Arnaud Pourchez <arnaud.pourchez@hotmail.fr>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pymysql = "^0.9.3"
+dbapi = "^0.0.14"
+pandas = ">=0.25.3"
+whale_back_bone = "^0.2.0"
+plotly = "^4.14.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^4.6"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
