@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: python-projet
+Version: 0.1.2
+Summary: Projet de generation de ville
+Author: Samy Belbachir
+Author-email: samy.belbachir@epita.fr
+Maintainer: Maridiyath Bachirou 
+Maintainer-email: maridiyath-folake-odeofe.bachirou@epita.fr
+Requires-Python: >=3.9,<3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Fiona (>=1.8.20,<2.0.0)
+Requires-Dist: Geometry (>=0.0.23,<0.0.24)
+Requires-Dist: Shapely (>=1.7.1,<2.0.0)
+Requires-Dist: geopandas (>=0.9.0,<0.10.0)
+Requires-Dist: matplotlib (>=3.4.2,<4.0.0)
+Requires-Dist: numpy (>=1.21.0,<2.0.0)
+Requires-Dist: scipy (>=1.7.0,<2.0.0)
+Requires-Dist: voronoi (>=0.2.0,<0.3.0)
