@@ -1,0 +1,5 @@
+inflect>=5.3.0
+fastavro>=1.4.0
+pytz
+dacite>=1.6.0
+faker>=8.1.1
