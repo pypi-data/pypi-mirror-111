@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+pysql_framework.egg-info/PKG-INFO
+pysql_framework.egg-info/SOURCES.txt
+pysql_framework.egg-info/dependency_links.txt
+pysql_framework.egg-info/top_level.txt
