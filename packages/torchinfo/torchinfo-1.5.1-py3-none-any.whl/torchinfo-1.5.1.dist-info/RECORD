@@ -1,0 +1,11 @@
+torchinfo/__init__.py,sha256=DaLG4Z6Sc_e1stXjyfAwyZS7kRxH1MRLWvA8WFLUCtk,242
+torchinfo/formatting.py,sha256=MEIMQjeauxAve7EXHVuotwsdEPLOlYInLRues7U4H2Q,6406
+torchinfo/layer_info.py,sha256=wWjxO30KoQ79R3PdLTXIue7CKH7jheHZptbSbbwVdrg,7563
+torchinfo/model_statistics.py,sha256=hk3RVgl-s5dY76AF0pi3nenFJJqGcfkkrUHVcgx0YKg,3183
+torchinfo/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+torchinfo/torchinfo.py,sha256=RE9WegXNaqxG8XU8WkvoaR10ui1xiQ_HPorkU6AOxaQ,17360
+torchinfo-1.5.1.dist-info/LICENSE,sha256=yD6Hu4wE4dXjqTX5tH0Hk1ek6osumR-D-xLcjW4gbCQ,1065
+torchinfo-1.5.1.dist-info/METADATA,sha256=qLmi5gteBrQJNMiRR-OnyNWcFn0aHKThoFBGK550eAA,20517
+torchinfo-1.5.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+torchinfo-1.5.1.dist-info/top_level.txt,sha256=R0QQaacQgrZDejQC0vBz7xfG1KT2TJKCQFPb_JTA4m8,10
+torchinfo-1.5.1.dist-info/RECORD,,
