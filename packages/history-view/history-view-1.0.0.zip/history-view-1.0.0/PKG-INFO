@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: history-view
+Version: 1.0.0
+Summary: A tiny python application that abstracts viewing/interacting with your console history.
+Home-page: https://github.com/semick-dev/history-view
+Author: semick-dev
+Author-email: sbeddall@gmail.com
+License: MIT License
+Project-URL: Bug Reports, https://github.com/semick-dev/history-view/issues
+Project-URL: Source, https://github.com/semick-dev/history-view
+Description: # history-view
+        A little tool to visually browse your console history.
+        
+        What it looks like to scan through your history now:
+            
+        ![bug_fixed_working](https://user-images.githubusercontent.com/479566/123533695-5b65c200-d6cc-11eb-90e4-94c588de4d92.gif)
+        
+        ### Arguments
+        
+        | Argument       | Description                                               |
+        |----------------|-----------------------------------------------------------|
+        | `-s, --search` | Filter history by regex.                                  |
+        | `--c`          | Don't invoke selected command, instead copy to clipboard. |
+        
+        ## Known Issues
+        
+        - Still uses `subprocess` to invoke. It should be _mostly_ the same given that environment variables are passed in, but a straightforward return of the command is something that would be better.
+        - Only supports Windows and Powershell.
+        - Only adds to the long-term history. Not the history of the current shell (available via up/down)
+        
+        ### Addendum
+        
+        Yes, I am entirely aware that I could get the same affect in powershell with `Get-History`. Not the point!
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown

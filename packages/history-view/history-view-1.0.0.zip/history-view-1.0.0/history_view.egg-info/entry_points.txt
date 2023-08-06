@@ -1,0 +1,3 @@
+[console_scripts]
+hv = hv:console_entry
+
