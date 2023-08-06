@@ -1,0 +1,15 @@
+renku_sphinx_theme/__init__.py,sha256=x5o03Oj80vV02PEjVNWaQiLIFPLgA1keHPM4QGI7qUQ,1701
+renku_sphinx_theme/about.html,sha256=fjldUIClpRA2OvrIat-7H2JZ7VKARhdHJXAX1anYh54,1644
+renku_sphinx_theme/layout.html,sha256=zLphGQ7zgkbfJiIx2SecG6rdDWDMoixU29jynsp0iCE,235
+renku_sphinx_theme/theme.conf,sha256=hswvEr8bOY-Lya_-inzUCtwPCvLd_Hd88ZUW4jmykpQ,151
+renku_sphinx_theme/version.py,sha256=aUJxTtRVYSPJDmX5Vj0u3gs0wLZicJTxtO57d7grw8s,980
+renku_sphinx_theme/static/custom.css,sha256=o8WaT1s4AXgPyC3QmaKiVCwd4plzoyZNBFPvCDLotpg,4995
+renku_sphinx_theme/static/favicon.png,sha256=JLc6oypgYrNFuVBOHM_duOH4SrZpSo-wQdEie068xBU,5477
+renku_sphinx_theme/static/fonts/fonts.css,sha256=iE5snBiaD-eW226L6YMB-dqZ76jobrbUoU9cMWKmtoQ,1772
+renku_sphinx_theme-0.2.0.dist-info/AUTHORS.rst,sha256=ZtQ8fsOrzSTOzl-duSldyr7QqZSjTo3-jTNgt1Df_fk,874
+renku_sphinx_theme-0.2.0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+renku_sphinx_theme-0.2.0.dist-info/METADATA,sha256=6H0sNDoFlpTzGA-lOvsvhFYGUlDQbVpOZi2IX42AIFU,4171
+renku_sphinx_theme-0.2.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+renku_sphinx_theme-0.2.0.dist-info/entry_points.txt,sha256=50icuyYa46ndPlBZepcMzd2rqj7A7QTtkdZTWQRqMC4,49
+renku_sphinx_theme-0.2.0.dist-info/top_level.txt,sha256=7J9SItphptoToZ4lcmYVdJeCttd-98LaprtsM16uoBw,19
+renku_sphinx_theme-0.2.0.dist-info/RECORD,,
