@@ -1,0 +1,9 @@
+stockgeist/__init__.py,sha256=pPJKXUcsIXzCSujSj3vK8cf65CPRlaXNivX8j6IOe9k,220
+stockgeist/analysis.py,sha256=2ivasRM3PyNqt9TPXiVBvdGLhnCUkPHdcuSq4UZRdc8,111
+stockgeist/client.py,sha256=fIN-DeIQKmtkcU880I1Q_gQmQ3XuYCVh-Sb-6TYMmjk,14512
+stockgeist/responses.py,sha256=aqyDWM4JrBXfvhrQr4313FW1iBCFLfmDQyD8_DH3kqo,27658
+stockgeist_client_python-0.1.0.dist-info/LICENCE,sha256=eI4LFYZef-CAKn9RsWfdb5vsjRhMkI9h9f4a281XJmE,1071
+stockgeist_client_python-0.1.0.dist-info/METADATA,sha256=FGUkPnPd0pfZtjXcAleJWzkhnD81F9OAawwA0pqpTNc,3636
+stockgeist_client_python-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+stockgeist_client_python-0.1.0.dist-info/top_level.txt,sha256=zObZrHE65fExMQkDRyDvoreikXq_dFYek7WdvXWI-ik,11
+stockgeist_client_python-0.1.0.dist-info/RECORD,,
