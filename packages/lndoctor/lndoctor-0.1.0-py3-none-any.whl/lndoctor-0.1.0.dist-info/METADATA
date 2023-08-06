@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: lndoctor
+Version: 0.1.0
+Summary: Detailed information of symbolic links
+Home-page: https://github.com/tdegeus/lndoctor
+Author: Tom de Geus
+Author-email: tom@geus.me
+License: MIT
+Keywords: symlink
+Platform: UNKNOWN
+
+Detailed information of symbolic links
+
+
