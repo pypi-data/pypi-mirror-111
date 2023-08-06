@@ -1,0 +1,10 @@
+setup.py
+leonman_distributions/Binomialdistribution.py
+leonman_distributions/Gaussiandistribution.py
+leonman_distributions/Generaldistribution.py
+leonman_distributions/__init__.py
+leonman_distributions.egg-info/PKG-INFO
+leonman_distributions.egg-info/SOURCES.txt
+leonman_distributions.egg-info/dependency_links.txt
+leonman_distributions.egg-info/not-zip-safe
+leonman_distributions.egg-info/top_level.txt
