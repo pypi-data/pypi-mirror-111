@@ -1,0 +1,17 @@
+polypoly/__init__.py,sha256=zp3ksTCtzfS1CRFT4HSp9lJG6Ns_M5Md75upLXRprM8,11011
+polypoly/data/dict.json,sha256=quaJGgYd43nxuz5Iyf5_sx3JEUN9qxhbGQTtSH0LVPU,4800973
+polypoly/data/high_freq_poly_words.txt,sha256=CBQO8cJm5NtnZ8RTeGu6WCcceJkFzL0Q5TjaoLFzXTU,735
+polypoly/data/proun_dict_tiny.txt,sha256=4CCC38qCrR6DWIYTELMYzMB50DIvxw-iVxIl0T7wmE8,3204946
+polypoly/data/tag.json,sha256=UINtECnR8O9DPTmZLNQqbUO-96FK8CxkVHuRM_XaZf8,7119
+polypoly/data/tag.txt,sha256=P0cqLg0u-evEUnaRCjXCpiSTiBxRz-jGiZ6i9dKOBp8,3655
+polypoly/data/vocab.json,sha256=m1CUUF1zr3XyFm8LZUfFQgC_GcwckTWPkX_LRW0QCtk,94751
+polypoly/data/vocab.txt,sha256=eM7g5cRsCoUnLVKhgjk58doenI_iboXB-oBlgILxAIQ,29959
+polypoly/data/words.txt,sha256=XdOvIvrX_sT7_5GS1et8ZUI018oGuRw3ntZ_9Ah8srY,1211673
+polypoly/savedModel/saved_model.pb,sha256=n0BF_VxGriuMhmychMuJMhR0LYQZUZFdfVEd_WuRdS8,1012996
+polypoly/savedModel/variables/variables.data-00000-of-00001,sha256=mzzyF6Fn2XN65acLOVtYZCheaCOzBL-Mq1oIlHuHpbU,19146512
+polypoly/savedModel/variables/variables.index,sha256=vBut5Pb5xaCVFO8-65cXzdWkvS94fzHCYdqfr4Q34Us,1276
+polypoly-0.0.1.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+polypoly-0.0.1.dist-info/METADATA,sha256=BLf7miTCVWgjOGYHR0zWo_CO7DQo57PEy7VFAYPSgjM,1300
+polypoly-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+polypoly-0.0.1.dist-info/top_level.txt,sha256=Uw8wSVlx0F8JMcfRm0p-3Kn5UAwZgTNku_7NW0wbJ-I,9
+polypoly-0.0.1.dist-info/RECORD,,
