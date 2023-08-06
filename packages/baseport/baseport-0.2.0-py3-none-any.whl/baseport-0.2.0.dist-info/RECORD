@@ -1,0 +1,9 @@
+baseport/__init__.py,sha256=Zn1KFblwuFHiDRdRAiRnDBRkbPttWh44jKa5zG2ov0E,22
+baseport/cli.py,sha256=gWwBynrrFBJ7iHSwoN8gikJ290YBV0c1Tub5XED6hnc,4156
+baseport/comments.py,sha256=MZDGfRIxMtRPfzkiBQIIImfD0jDR2OB2LmlGeJKz3Fw,1088
+baseport/util.py,sha256=cRHR4VOCfMUn46g7B_m5t91W4Ss7Q1NkVf7692PKjjE,3244
+baseport-0.2.0.dist-info/entry_points.txt,sha256=QSZYZDEyaT9N3lcvTaAROZ6nhXaLimtqbM5ZkZ-Ej1s,45
+baseport-0.2.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+baseport-0.2.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+baseport-0.2.0.dist-info/METADATA,sha256=wr3iJ_fqDNa8Lj8cWxx3hWREwBpbBi11zA-BIiCjw7k,2757
+baseport-0.2.0.dist-info/RECORD,,
