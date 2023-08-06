@@ -1,0 +1,3 @@
+[console_scripts]
+opine = opinecli.cli:main
+

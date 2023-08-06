@@ -1,0 +1,14 @@
+README.md
+setup.py
+./opinecli/__init__.py
+./opinecli/auth.py
+./opinecli/cli.py
+./opinecli/config.py
+./opinecli/data.py
+./opinecli/init.py
+./opinecli/projects.py
+opine_cli.egg-info/PKG-INFO
+opine_cli.egg-info/SOURCES.txt
+opine_cli.egg-info/dependency_links.txt
+opine_cli.egg-info/entry_points.txt
+opine_cli.egg-info/top_level.txt
