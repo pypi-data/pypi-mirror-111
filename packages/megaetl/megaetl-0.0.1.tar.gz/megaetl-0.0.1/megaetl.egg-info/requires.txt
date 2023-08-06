@@ -1,0 +1,4 @@
+apache-airflow==1.10.15
+Cython~=0.29.23
+pandas~=1.2.4
+pyrfc~=2.4.1
