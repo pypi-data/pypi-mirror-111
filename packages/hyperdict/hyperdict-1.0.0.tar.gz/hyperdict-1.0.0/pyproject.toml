@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "hyperdict"
+version = "1.0.0"
+description = "Python dictionaries, but on steroids."
+authors = ["Jofin <jofinfab@gmail.com>"]
+license = "Apache 2.0"
+repository = "https://github.com/j0fiN/hyperdict"
+readme = "README.md"
+keywords = ["dictionaries", "utility", "one liners", "hyper", "dict"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+executing = "^0.6.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
