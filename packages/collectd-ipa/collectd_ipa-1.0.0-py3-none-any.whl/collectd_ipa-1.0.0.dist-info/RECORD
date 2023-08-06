@@ -1,0 +1,10 @@
+Makefile,sha256=9JfZXKiZlN9T612TNJ2wnxMHHrNA4ECjfEXdcTEKJiA,455
+collectd.d/ipa-data.conf,sha256=FWP2ceXsDwwjgEw5yg-z6cdhBMWXkvRFQeHwWfVXk38,72
+collectd.d/ipa.conf,sha256=isuDd7g9YLpnrsaF-a--qfXt_xK8zZBRvXVrjuetcdU,1868
+collectd_ipa/__init__.py,sha256=0CR-mCCwc__BgpOuYrnnWdMTaBtJ2VLkg2Kfq1gPphE,5904
+collection.conf,sha256=pY4IATrDIwpYEvI0VHDcatoSSTVt1deTCtojSwi-rbU,978
+types.db,sha256=Ibh5B-5R7kUACxWEFMAxtjv6LUBYHoKop5C0bGuF_5k,137
+collectd_ipa-1.0.0.dist-info/LICENSE,sha256=mNGKsJSd4hdS6Jd6CJpQhbB915Nx1xc3jnRWqKfdaUs,7440
+collectd_ipa-1.0.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+collectd_ipa-1.0.0.dist-info/METADATA,sha256=YLle5bCCxArhj_X2bX0sSj_zrUu2e53drWpAO5DD1I8,2027
+collectd_ipa-1.0.0.dist-info/RECORD,,
