@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+aws_authenticate_inline/__init__.py
+aws_authenticate_inline.egg-info/PKG-INFO
+aws_authenticate_inline.egg-info/SOURCES.txt
+aws_authenticate_inline.egg-info/dependency_links.txt
+aws_authenticate_inline.egg-info/requires.txt
+aws_authenticate_inline.egg-info/top_level.txt

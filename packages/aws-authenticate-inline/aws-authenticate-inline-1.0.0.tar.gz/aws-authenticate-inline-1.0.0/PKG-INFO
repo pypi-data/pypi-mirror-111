@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: aws-authenticate-inline
+Version: 1.0.0
+Summary: Authenticate to AWS inline
+Home-page: https://github.com/nuchi/aws-authenticate-inline
+Author: Haggai Nuchi
+Author-email: haggai@haggainuchi.com
+License: MIT
+Keywords: aws,botocore,boto3,authenticate,jupyter,colab
+Platform: any
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# AWS Authenticate Inline
+
+This module provides a convenient way to authenticate to AWS in a notebooking environment like Jupyter Notebook or Google Colab.
+
+Simply import the module, then proceed as normal with (for example) the `botocore` or `boto3` packages. If `botocore` isn't able to find valid credentials via `~/.aws`, or environment variables, or via the instance's IAM role, then it will prompt you for credentials.
+
+![Example usage](example.png)
+
+
