@@ -1,0 +1,7 @@
+setuptools
+numpy
+scipy
+h5py
+PyYAML
+click
+hdfdict
