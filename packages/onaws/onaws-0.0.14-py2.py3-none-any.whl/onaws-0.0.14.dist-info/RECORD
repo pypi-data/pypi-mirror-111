@@ -1,0 +1,10 @@
+onaws/__init__.py,sha256=fNFARS2TMlY12b3UbcfGKHgRG5ObwWOi_UzwzSxTlDM,93
+onaws/__main__.py,sha256=B4hKLlM0ePt1Xg4SKJUEjuE4ePP7RTSqOtZjXt-XhwY,364
+onaws/cli.py,sha256=a8dDYfJh2mMQfLveOxZG4Yo-jPFisAAEvsgCsVb1zJI,1233
+onaws/core.py,sha256=06r-waBkMqh_xIGn9_rNXYDzeVk9SHjwVxMVSE6tcOg,1705
+onaws/ipranges.py,sha256=eAr8ozC94jW5YN9I1Cj44fmZvcPJgU_uVyb3ypsLmF4,1043
+onaws-0.0.14.dist-info/entry_points.txt,sha256=v7FZT87wFy0viylgVXrh9_GxrJb49YOjXhOvXlJU6kM,45
+onaws-0.0.14.dist-info/LICENSE,sha256=9K8DIDk1PoOh432XU2Z9XNbI5bXtFHzJ5vLGv43zEPM,1068
+onaws-0.0.14.dist-info/WHEEL,sha256=iTBNkFIR26Wnx2cg5455J1IIBEskRg4YJC9DJwgu-js,99
+onaws-0.0.14.dist-info/METADATA,sha256=khRIi4jxR3de4vSjw5THfTn18HjuUxpzAsZ8U4BtBJg,3413
+onaws-0.0.14.dist-info/RECORD,,
