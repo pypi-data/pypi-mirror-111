@@ -1,0 +1,9 @@
+sphinx>=1.8
+
+[code_style]
+pre-commit==2.12.1
+
+[rtd]
+sphinx
+ipython
+sphinx-book-theme
