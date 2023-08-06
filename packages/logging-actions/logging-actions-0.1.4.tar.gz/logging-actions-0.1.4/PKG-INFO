@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: logging-actions
+Version: 0.1.4
+Summary: For easy configuration of `logging.Logger`s with `argparse.Action`s.
+Author: Aatif Syed
+Author-email: aatifsyedyp@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
+# `logging-actions`
+For easy configuration of `logging.Logger`s with `argparse.Action`s.
+
