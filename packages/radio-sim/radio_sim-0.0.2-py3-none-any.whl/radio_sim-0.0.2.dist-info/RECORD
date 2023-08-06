@@ -1,0 +1,16 @@
+radio_sim/__init__.py,sha256=WVV4B_BvCBqS2AiqYlxs1JvdJ7qYPf8Jd9twHenNvCw,86
+radio_sim/array.py,sha256=DC0T9f0BZE_MC86HX_BxxqGfYy1wnGaSPeFowf5s9d4,2351
+radio_sim/beams.py,sha256=63zoCnv48PTHuuK-9rowDgVHMwagWJF8oShJLJe7py4,1857
+radio_sim/radio_sim.py,sha256=uwtloUjzidMkZPPbyhOghdXbbmMZo9RUnhX_2t_PKaU,3327
+radio_sim/sky.py,sha256=ifsl9X5IAMk2jeSgGIxzSDXsIgVdV6CgClNVsKDD5kU,1116
+radio_sim/utils.py,sha256=OdaNYH3c8yEU701FYjUOMZbUqlGUE5GdbAwnRImhwsU,656
+radio_sim/tests/test_array.py,sha256=IqiF4mS5OIZ5TqpeaydzRxIkhEZOnpEajZlrpM9JYLY,249
+radio_sim/tests/test_beams.py,sha256=xCVsH78fYP-kBjE-Hdm64WMiJuUpkI_IiwvX2_2x2Tg,248
+radio_sim/tests/test_radio_sim.py,sha256=h9nRC1GoWotLA1_-yOPIEUYOUhgzN0A_BI8ZtQfM_7w,256
+radio_sim/tests/test_sky.py,sha256=xEP4Tte4aNLH6akhV8IXM8bomGFZ_kOcRF_VJcSpu5o,245
+radio_sim/tests/test_utils.py,sha256=55WWYYHeK8tIKnbQzVGe0u0q5ofksVGNm35cjL9Yo4M,249
+radio_sim-0.0.2.dist-info/LICENSE,sha256=-sTOd6f13zvHPDMHCgM9svpgfVWRe3diuz38Cdt_bVA,1292
+radio_sim-0.0.2.dist-info/METADATA,sha256=lb3nq4Lkso2pSerlO7oF1KDBJ70pGjZDugPu5C9HC28,853
+radio_sim-0.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+radio_sim-0.0.2.dist-info/top_level.txt,sha256=uPPdbnZoqD8suBvFR3rKyCO1uQICykQKrJuBlO7juzc,10
+radio_sim-0.0.2.dist-info/RECORD,,
