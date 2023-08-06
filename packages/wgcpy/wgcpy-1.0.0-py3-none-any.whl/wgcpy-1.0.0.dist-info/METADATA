@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: wgcpy
+Version: 1.0.0
+Summary: Data analysis and PMML model framework!
+Home-page: https://github.com/whyjust/wgcpy
+Author: weiguang
+Author-email: 1677234597@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pandas (>=0.20.3)
+Requires-Dist: numpy (>=1.19.2)
+Requires-Dist: sklearn2pmml (==0.64.0)
+Requires-Dist: sklearn-pandas (==1.8.0)
+Requires-Dist: scikit-learn (==0.23.1)
+Requires-Dist: lightgbm (>=2.2.3)
+Requires-Dist: xgboost (>=0.80)
+Requires-Dist: tqdm (>=4.31.1)
+Requires-Dist: seaborn (>=0.9.0)
+Requires-Dist: matplotlib (>=3.0.3)
+Requires-Dist: scipy (>=1.2.1)
+Requires-Dist: statsmodels (>=0.12.0)
+Requires-Dist: xlwt (>=1.3.0)
+Requires-Dist: xlsxwriter (>=1.1.5)
+Requires-Dist: joblib (>=1.0.1)
+Requires-Dist: setuptools (>=52.0.0)
+
+UNKNOWN
+
+
