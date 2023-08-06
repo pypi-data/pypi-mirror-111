@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: mydemopkg
+Version: 0.1
+Summary: Printing text
+Home-page: https://github.com/gangulymadhura/mydemopkg
+Author: Madhura Ganguly
+Author-email: gangulym23@gmail.com
+License: MIT
+Download-URL: https://github.com/gangulymadhura/mydemopkg/archive/refs/tags/v0.1.tar.gz
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5

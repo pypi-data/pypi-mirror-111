@@ -1,0 +1,10 @@
+LICENCE.txt
+README.md
+setup.py
+mydemopkg/__init__.py
+mydemopkg/my_demo_module.py
+mydemopkg.egg-info/PKG-INFO
+mydemopkg.egg-info/SOURCES.txt
+mydemopkg.egg-info/dependency_links.txt
+mydemopkg.egg-info/not-zip-safe
+mydemopkg.egg-info/top_level.txt
