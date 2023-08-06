@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: yami
+Version: 0.1.4
+Summary: A command handler that complements Hikari, a Discord API wrapper written in Python.
+Home-page: https://github.com/Jonxslays/Yami
+License: GPL-3.0-only
+Author: Jonxslays
+Author-email: jon@jonxslays.com
+Requires-Python: >=3.8,<3.11
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: hikari (==2.0.0.dev100)
+Project-URL: Repository, https://github.com/Jonxslays/Yami
+Description-Content-Type: text/markdown
+
+## Yami
+---
+Please don't use this library yet, it's nowhere near finished.
