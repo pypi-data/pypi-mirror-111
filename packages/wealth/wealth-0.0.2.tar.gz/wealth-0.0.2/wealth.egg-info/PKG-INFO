@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: wealth
+Version: 0.0.2
+Summary: Visualizing financial relations and evolutions
+Home-page: https://github.com/thorwhalen/wealth
+Author: Thor Whalen
+License: apache-2.0
+Description: 
+        # wealth
+        Visualizing financial relations and evolutions
+        
+        
+        To install:	```pip install wealth```
+        
+Platform: any
+Description-Content-Type: text/markdown
