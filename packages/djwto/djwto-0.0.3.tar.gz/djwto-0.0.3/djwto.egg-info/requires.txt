@@ -1,0 +1,3 @@
+Django
+pyjwt[crypto]
+typing_extensions
