@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+./bootstrapi/__init__.py
+./bootstrapi/conversion.py
+./bootstrapi/parser.py
+./bootstrapi/router.py
+./bootstrapi/sqlalchemy.py
+bootstrapi.egg-info/PKG-INFO
+bootstrapi.egg-info/SOURCES.txt
+bootstrapi.egg-info/dependency_links.txt
+bootstrapi.egg-info/requires.txt
+bootstrapi.egg-info/top_level.txt
