@@ -1,0 +1,5 @@
+setup.py
+testPauliBohr.egg-info/PKG-INFO
+testPauliBohr.egg-info/SOURCES.txt
+testPauliBohr.egg-info/dependency_links.txt
+testPauliBohr.egg-info/top_level.txt
