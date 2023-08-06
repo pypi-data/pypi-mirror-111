@@ -1,0 +1,158 @@
+[metadata]
+description-file = "README.md"
+
+[build-system]
+requires = ["poetry>=1.1,<2", "virtualenv==20.0.33", "wheel>=0.36,<1.0"]
+build-backend = "poetry.masonry.api"
+
+
+#########################################################################################
+# Poetry metadata
+#########################################################################################
+
+[tool.poetry]
+
+name = "suretime"
+version = "0.1.1"
+
+description = "Handle IANA timezones and fully resolved timestamps and intervals on all platforms"
+keywords = ["timezone", "zoneinfo", "datetime", "timestamp"]
+authors = ["Douglas Myers-Turnbull"]
+maintainers = ["Douglas Myers-Turnbull"]
+license = "Apache-2.0"
+readme = "README.md"
+homepage = "https://github.com/dmyersturnbull/suretime"
+repository = "https://github.com/dmyersturnbull/suretime"
+documentation = "https://suretime.readthedocs.io"
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+	"Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[tool.poetry.urls]
+CI = "https://github.com/dmyersturnbull/suretime/actions"
+Issues = "https://github.com/dmyersturnbull/suretime/issues"
+Download = "https://pypi.org/project/suretime/"
+
+
+#########################################################################################
+# Poetry build & dependencies
+#########################################################################################
+
+[tool.poetry.dependencies]
+python                   = "^3.9"
+defusedxml               = ">=0.7, <1.0"
+ntplib                   = ">=0.4, <1.0"
+
+[tool.poetry.dev-dependencies]
+black                    = "==21.6b0"
+pre-commit               = "^2.13"
+pre-commit-hooks         = "^4.0"
+bandit                   = "^1.7"
+pytest                   = "^6.2"
+coverage                 = {extras = ["toml"], version = "^5.5"}
+pytest-cov               = "^2.11"
+flake8                   = "^3.9"
+flake8-docstrings        = "^1.5"
+flake8-bugbear           = ">=21"
+sphinx                   = "^4.0"
+sphinx-copybutton        = ">=0.3, <1.0"
+sphinx-autoapi           = "^1.5"
+sphinx-rtd-theme         = ">=0.5, <1.0"
+tomlkit                  = ">=0.7, <1.0"
+
+
+#########################################################################################
+# Tyrannosaurus
+#########################################################################################
+
+[tool.tyrannosaurus.options]
+sort     = true
+align    = true
+
+[tool.tyrannosaurus.sources]
+
+# --- VERSIONS ---
+pycompatversions   = "tool.poetry.dependencies"
+pytoxversions      = "tool.poetry.dependencies"
+pymetaversion      = "'3.9'"
+
+# --- DEVELOPMENT PARAMS ---
+metavm             = "'ubuntu-latest'"
+devdeps            = "tool.poetry.dev-dependencies"
+
+# --- PROJECT INFO ---
+status             = "'Development'"
+date               = "'2021-01-20'"
+copyright          = "'Copyright 2021'"
+version            = "tool.poetry.version"
+release            = "tool.poetry.version"
+long_description   = "tool.poetry.description"
+
+# --- AUTHORS ---
+authors            = [
+    "Douglas Myers-Turnbull <github:dmyersturnbull,orcid:0000-0003-3610-4808>"
+]
+contributors = [ ]
+maintainers = "tool.tyrannosaurus.sources.authors"
+
+# --- CODING STYLE ---
+linelength         = "tool.black.line-length"
+importorderstyle   = "'google'"
+docstringstyle     = "'google'"
+
+
+# --- CODING STYLE IN PEP8 ---
+[tool.tyrannosaurus.sources.flake8skip]
+all    = "'W503,E203,E225,E301,E302,E501,D107,D200,D205,D400,D403,D409,D410,D411,D212,W391,W293'"
+test   = "'D100,D101,D102,D103,D104,S101,W503,E203,E225,E301,E302,E501,D107,D200,D205,D400,D403,D409,D410,D411,D212,W391,W293'"
+
+
+[tool.tyrannosaurus.targets]
+pyproject    = true
+init         = true
+tox          = true
+precommit    = true
+docs         = true
+recipes      = true
+license      = true
+authors      = true
+github       = true
+travis       = true
+readme       = true
+changelog    = true
+environment  = true
+
+
+#########################################################################################
+# Testing
+#########################################################################################
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "INFO"
+log_cli_format = "%(asctime)s [%(levelname)8s] %(name)s: %(message)s (%(filename)s:%(lineno)s)"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+
+
+#########################################################################################
+# Style checking
+#########################################################################################
+
+[tool.coverage.paths]
+source = ["serviceit"]
+
+[tool.coverage.run]
+source = ["serviceit"]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.black]
+line-length = 100
+target-version = ["py38"]
