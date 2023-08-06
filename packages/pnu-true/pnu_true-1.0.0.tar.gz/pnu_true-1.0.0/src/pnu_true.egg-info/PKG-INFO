@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: pnu-true
+Version: 1.0.0
+Summary: return true value
+Home-page: https://github.com/Thomas-Le-Dev/true/
+Author: Thomas Tournier
+Author-email: nobody@nowhere.invalid
+License: BSD 3-Clause License
+Project-URL: Bug Tracker, https://github.com/Thomas-Le-Dev/true/issues
+Keywords: pnu-project
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.0
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX :: BSD :: FreeBSD
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Environment :: Console
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Natural Language :: English
+Classifier: Topic :: System
+Classifier: Topic :: Utilities
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+License-File: License
+
+# Installation
+pip install [pnu-COMMAND](https://pypi.org/project/pnu-COMMAND/)
+
+# COMMAND(1)
+
+## NAME
+COMMAND - ONE LINE DESCRIPTION
+
+## SYNOPSIS
+**COMMAND**
+\[--debug\]
+\[--help|-?\]
+\[--version\]
+\[--\]
+
+## DESCRIPTION
+The **COMMAND** utility
+
+### OPTIONS
+Options | Use
+------- | ---
+--debug|Enable debug mode
+--help\|-?|Print usage and a short help message and exit
+--version|Print version and exit
+--|Options processing terminator
+
+## ENVIRONMENT
+The COMMAND_DEBUG environment variable can also be set to any value to enable debug mode.
+
+## FILES
+
+## EXIT STATUS
+The **COMMAND** utility exits 0 on success, and >0 if an error occurs.
+
+## EXAMPLES
+
+## SEE ALSO
+
+## STANDARDS
+The **COMMAND** utility is a standard UNIX/POSIX command.
+
+It tries to follow the [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide for [Python](https://www.python.org/) code.
+
+## PORTABILITY
+To be tested under Windows.
+
+## HISTORY
+This utility was made for [The PNU project](https://github.com/HubTou/PNU).
+
+## LICENSE
+This utility is available under the [3-clause BSD license](https://opensource.org/licenses/BSD-3-Clause).
+
+## AUTHORS
+[YOU](https://github.com/YOU)
+
+## CAVEATS
+
+## BUGS
+
+## SECURITY CONSIDERATIONS
+
+
+
