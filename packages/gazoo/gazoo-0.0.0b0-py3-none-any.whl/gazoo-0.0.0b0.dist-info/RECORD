@@ -1,0 +1,12 @@
+gazoo/__init__.py,sha256=qh0zOXxK6tmQJMtWvnMbUou_wnc5sOWzDXX8Mj0klTc,1711
+gazoo/backup_file.py,sha256=YpF01CuzRG1qCSt3jiiKfBbspJy_pbs5hp4pUG6-cfU,1383
+gazoo/backup_worker.py,sha256=9SHQp5AACpocgiJgF0IEAgSiY_Pl5EE8WcQvkxg_ckA,3193
+gazoo/cleanup_worker.py,sha256=BI_FjMuTxFIzK7rN-O06rgi_dtGPznNK1aRy_1_AGxA,749
+gazoo/config.py,sha256=8gZT4h0LxySCI_QDmD9YUMjvPAvM5aLm3DnlCziDqFU,2055
+gazoo/util.py,sha256=ueMNVR7quEjaFL0Lr9g1eLTK06-H__QP0LSe6Mav72U,8745
+gazoo/worker_status.py,sha256=kwKxX7bhUCTMiHv74Zg8DVn8ArWJyABIpQnyZT0u7hU,1329
+gazoo/wrapper.py,sha256=TiCcn_lGZq1lfXPqGARrh6noiSX5dd7UTOCAwwmn13I,6265
+gazoo-0.0.0b0.dist-info/entry_points.txt,sha256=H-bju03lwlc3SwpXNfKjoKT6JWsqin8Z-kJziwGZ6PQ,36
+gazoo-0.0.0b0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+gazoo-0.0.0b0.dist-info/METADATA,sha256=AQxc8wmKxpUeoHYWoAm92EPSuQ7Jvn2bH5ZI9PA1zKQ,354
+gazoo-0.0.0b0.dist-info/RECORD,,
