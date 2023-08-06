@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+README.rst
+setup.cfg
+setup.py
+youtea/__init__.py
+youtea.egg-info/PKG-INFO
+youtea.egg-info/SOURCES.txt
+youtea.egg-info/dependency_links.txt
+youtea.egg-info/not-zip-safe
+youtea.egg-info/top_level.txt
