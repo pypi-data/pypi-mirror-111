@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+scriptlocator/__init__.py
+scriptlocator/scriptlocator.py
+scriptlocator.egg-info/PKG-INFO
+scriptlocator.egg-info/SOURCES.txt
+scriptlocator.egg-info/dependency_links.txt
+scriptlocator.egg-info/entry_points.txt
+scriptlocator.egg-info/top_level.txt
