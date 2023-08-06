@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: iglu
+Version: 0.2.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: minerl-patched
+Requires-Dist: gym (>=0.18.3)
+Requires-Dist: opencv-python (>=4.1.0.25)
+Requires-Dist: setuptools (>=49.2.0)
+Requires-Dist: tqdm (>=4.32.2)
+Requires-Dist: numpy (>=1.16.2)
+Requires-Dist: requests (>=2.20.0)
+Requires-Dist: ipython (>=7.5.0)
+Requires-Dist: typing (>=3.6.6)
+Requires-Dist: lxml (>=4.3.3)
+Requires-Dist: psutil (>=5.6.2)
+Requires-Dist: Pyro4 (>=4.76)
+Requires-Dist: coloredlogs (>=10.0)
+Requires-Dist: pillow (>=8.0.0)
+Requires-Dist: matplotlib (>=3.2.2)
+Requires-Dist: dill (>=0.3.1.1)
+Requires-Dist: daemoniker (>=0.2.3)
+Requires-Dist: xmltodict (==0.12.0)
+Requires-Dist: inflection (>=0.3.1)
+Requires-Dist: jinja2 (>=2.11.2)
+Requires-Dist: simple-term-menu
+Requires-Dist: bullet
+Requires-Dist: getch (>=1.0) ; sys_platform != "win32" and sys_platform != "cygwin"
+
+UNKNOWN
+
+
