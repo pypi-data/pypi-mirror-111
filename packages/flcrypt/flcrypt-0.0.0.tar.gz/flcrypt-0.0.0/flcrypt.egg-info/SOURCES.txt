@@ -1,0 +1,6 @@
+README.md
+setup.py
+flcrypt.egg-info/PKG-INFO
+flcrypt.egg-info/SOURCES.txt
+flcrypt.egg-info/dependency_links.txt
+flcrypt.egg-info/top_level.txt
