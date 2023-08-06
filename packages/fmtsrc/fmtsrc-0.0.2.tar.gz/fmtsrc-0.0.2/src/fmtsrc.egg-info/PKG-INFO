@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: fmtsrc
+Version: 0.0.2
+Summary: File or URL formatting
+Home-page: https://github.com/yknaka/fmtsrc
+Author: yuki nakamura
+Author-email: naka_yk@live.jp
+License: UNKNOWN
+Project-URL: Source File Formatting, https://github.com/yknaka/fmtsrc
+Description: # fmtsrc
+        
+        This program outputs the input string as a text file by specifying the format such as normalization of Unicode strings, specification of newline characters, etc.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

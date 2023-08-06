@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/fmtsrc.py
+src/fmtsrc.egg-info/PKG-INFO
+src/fmtsrc.egg-info/SOURCES.txt
+src/fmtsrc.egg-info/dependency_links.txt
+src/fmtsrc.egg-info/entry_points.txt
+src/fmtsrc.egg-info/top_level.txt
