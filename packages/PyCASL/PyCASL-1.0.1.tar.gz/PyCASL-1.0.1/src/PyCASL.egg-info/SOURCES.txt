@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+src/PyCASL.egg-info/PKG-INFO
+src/PyCASL.egg-info/SOURCES.txt
+src/PyCASL.egg-info/dependency_links.txt
+src/PyCASL.egg-info/top_level.txt
+src/casl/__init__.py
+src/casl/ability.py
