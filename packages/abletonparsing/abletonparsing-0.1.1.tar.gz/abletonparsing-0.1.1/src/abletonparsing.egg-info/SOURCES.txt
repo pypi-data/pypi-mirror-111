@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/abletonparsing.egg-info/PKG-INFO
+src/abletonparsing.egg-info/SOURCES.txt
+src/abletonparsing.egg-info/dependency_links.txt
+src/abletonparsing.egg-info/top_level.txt
