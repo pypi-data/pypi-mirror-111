@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/diptanu/Downloads/MAD/model-training/mlruns/0/3177871fc99149c9801c4f69da87e443/artifacts
+end_time: 1625022544457
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 3177871fc99149c9801c4f69da87e443
+run_uuid: 3177871fc99149c9801c4f69da87e443
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1625022535740
+status: 3
+tags: []
+user_id: diptanu
