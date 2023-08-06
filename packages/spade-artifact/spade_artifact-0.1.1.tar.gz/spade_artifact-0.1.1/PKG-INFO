@@ -1,0 +1,73 @@
+Metadata-Version: 1.1
+Name: spade_artifact
+Version: 0.1.1
+Summary: Plugin for SPADE 3 to develop artifacts.
+Home-page: https://github.com/javipalanca/spade_artifact
+Author: Javi Palanca
+Author-email: jpalanca@gmail.com
+License: MIT license
+Description: ==============
+        spade-artifact
+        ==============
+        
+        
+        .. image:: https://img.shields.io/pypi/v/spade_artifact.svg
+                :target: https://pypi.python.org/pypi/spade_artifact
+        
+        .. image:: https://img.shields.io/travis/javipalanca/spade_artifact.svg
+                :target: https://travis-ci.org/javipalanca/spade_artifact
+        
+        .. image:: https://readthedocs.org/projects/spade-artifact/badge/?version=latest
+                :target: https://spade-artifact.readthedocs.io/en/latest/?badge=latest
+                :alt: Documentation Status
+        
+        
+        
+        
+        Plugin for SPADE 3 to develop artifacts.
+        
+        
+        * Free software: MIT license
+        * Documentation: https://spade-artifact.readthedocs.io.
+        
+        
+        Features
+        --------
+        
+        * Focus on observable properties (based on PubSub).
+        * Presence notifiaction support.
+        * Artifact class.
+        * ArtifactMixin for SPADE agents.
+        
+        Credits
+        -------
+        
+        This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.1 (2021-07-05)
+        ------------------
+        
+        * Fixed documentation style.
+        
+        0.1.0 (2021-07-05)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: spade_artifact
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
