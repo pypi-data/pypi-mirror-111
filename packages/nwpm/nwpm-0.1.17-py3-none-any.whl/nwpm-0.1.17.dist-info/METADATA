@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: nwpm
+Version: 0.1.17
+Summary: Navigator Workspace Pack Manager
+Home-page: https://github.com/xkevas24/nwpm
+Author: Alan Hsu
+Author-email: xkevas@qq.com
+License: Apache-2.0 License
+Keywords: nwpm,navigator,workspace_pack
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: pyinstaller
+
+nwpm is a Workspace Pack Manager for Navigator like npm for node.js
+
+
