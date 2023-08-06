@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+onaws/__init__.py
+onaws/__main__.py
+onaws/cli.py
+onaws/core.py
+onaws/ipranges.py
+onaws.egg-info/PKG-INFO
+onaws.egg-info/SOURCES.txt
+onaws.egg-info/dependency_links.txt
+onaws.egg-info/entry_points.txt
+onaws.egg-info/requires.txt
+onaws.egg-info/top_level.txt
