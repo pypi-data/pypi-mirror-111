@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: pyjsx
+Version: 0.0.1
+Summary: Allow communication between python and extendscript
+Home-page: UNKNOWN
+Author: Yahia Bouda
+Author-email: yahiabouda@hotmail.com
+License: MIT
+Keywords: extendscript,python,after effects
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENSE.txt
+
+Python extendscript communication.
+
+Change Log
+===========
+
+0.0.1 (30/06/2021)
+-------------------
+- First Release
+
