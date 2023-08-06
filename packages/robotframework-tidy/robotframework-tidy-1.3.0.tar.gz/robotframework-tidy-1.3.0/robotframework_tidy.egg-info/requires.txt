@@ -1,0 +1,4 @@
+robotframework>=4.0
+Click>=7.0
+toml>=0.10.2
+colorama>=0.4.3
