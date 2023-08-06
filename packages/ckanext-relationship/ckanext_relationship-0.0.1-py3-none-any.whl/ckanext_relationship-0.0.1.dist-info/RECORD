@@ -1,0 +1,13 @@
+ckanext_relationship-0.0.1-py3.8-nspkg.pth,sha256=VaH--vNo0_vzXvZAeqyq-Bg6m47pBBRlxwvBj0KQxe0,544
+ckanext/relationship/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ckanext/relationship/plugin.py,sha256=4JYazc39T7MuFfQR9AS6KKBc32fJMt6idxQljt3skTc,412
+ckanext/relationship/assets/webassets.yml,sha256=Hv62sI-l_Xs53daM3cqWyM61jbAvYwlyixpyBuXPfvY,335
+ckanext/relationship/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ckanext/relationship/tests/test_plugin.py,sha256=1Bpbf6f5pDYVmchk76Prp0SC7oveKj-zd5wX5T5p6vI,1262
+ckanext_relationship-0.0.1.dist-info/LICENSE,sha256=2lWcRAHjsQhqavGNnR30Ymxq3GJ9BaYL_dnfGO_-WFA,34500
+ckanext_relationship-0.0.1.dist-info/METADATA,sha256=NMND5ek8rytVIgTqUZThCr96gJJqq8x8ulE23sCx37U,3805
+ckanext_relationship-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ckanext_relationship-0.0.1.dist-info/entry_points.txt,sha256=lFbqV8qEMlxroldgfiwwuhYlRfVsCISWt3QTtXDhlLk,169
+ckanext_relationship-0.0.1.dist-info/namespace_packages.txt,sha256=5yjNwq-s42weaiMMUuA5lZ45g99ANsfcRBCvac1JMS4,8
+ckanext_relationship-0.0.1.dist-info/top_level.txt,sha256=5yjNwq-s42weaiMMUuA5lZ45g99ANsfcRBCvac1JMS4,8
+ckanext_relationship-0.0.1.dist-info/RECORD,,
