@@ -1,0 +1,13 @@
+typecasts/__init__.py,sha256=bxGGdXijJzrmm9mNqmK0wtQHOMdjaEjHs1S8Qcdf0oA,114
+typecasts/defaults/__init__.py,sha256=SRS0qanhLcm1wnQXtia7mrogcC194jkcwnNtNfQOkI8,237
+typecasts/defaults/base.py,sha256=BLrwGecy7EtonoxF9dnoGtskOYWthlb5M70fjKDULNM,430
+typecasts/defaults/dataclass.py,sha256=FMy9eZVfqaRJTPmPPEjG3zJOzzuTZJu0dYLc5S6OEt8,705
+typecasts/defaults/pydantic.py,sha256=wCR4SdqQ_XKsDjHI389rvYcZ17qyD3WAr55Gsock4k0,718
+typecasts/errors.py,sha256=VnW9HriWCMbUjLU6uy-2z8dhR806V5K_W8lZbwkx53g,3666
+typecasts/identity.py,sha256=FYhybcWA2dbyzCnV-Gl9a6Wn7c72bG0yIvFR7haC2dw,144
+typecasts/main.py,sha256=8ypLsGx4u0mewD2nd3-0PtVxfGsGNjbEGTamGxr23Ww,6696
+typecasts/types.py,sha256=G_sw9ObfY4jCApdg-65VIrG212kkF2XZASNB5nmQClU,945
+typecasts-0.1.9.dist-info/LICENSE,sha256=B9k2R4AKTN2N4gIfQGIVLXL9VK01di61_YTtYTmL4WQ,1103
+typecasts-0.1.9.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+typecasts-0.1.9.dist-info/METADATA,sha256=vJG6ejSIzEs7SQ_rwlr9V-ZIReIEYW-ImnrZfCIJa_A,2359
+typecasts-0.1.9.dist-info/RECORD,,
