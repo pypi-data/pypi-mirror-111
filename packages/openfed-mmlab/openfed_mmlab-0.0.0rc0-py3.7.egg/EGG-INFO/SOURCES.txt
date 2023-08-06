@@ -1,0 +1,8 @@
+README.md
+setup.py
+openfed_mmlab/__init__.py
+openfed_mmlab.egg-info/PKG-INFO
+openfed_mmlab.egg-info/SOURCES.txt
+openfed_mmlab.egg-info/dependency_links.txt
+openfed_mmlab.egg-info/requires.txt
+openfed_mmlab.egg-info/top_level.txt
