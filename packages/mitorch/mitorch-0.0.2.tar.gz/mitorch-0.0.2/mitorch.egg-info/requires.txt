@@ -1,0 +1,9 @@
+albumentations
+mitorch-models
+pymongo
+pytorch_lightning~=1.3.0
+requests
+sklearn
+tenacity
+torchvision>=0.5.0
+torch~=1.9.0
