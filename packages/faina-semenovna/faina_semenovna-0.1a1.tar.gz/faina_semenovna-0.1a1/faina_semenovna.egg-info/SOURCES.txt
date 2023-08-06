@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+faina_semenovna/__init__.py
+faina_semenovna/faina.py
+faina_semenovna.egg-info/PKG-INFO
+faina_semenovna.egg-info/SOURCES.txt
+faina_semenovna.egg-info/dependency_links.txt
+faina_semenovna.egg-info/requires.txt
+faina_semenovna.egg-info/top_level.txt
+faina_semenovna/blanks/__init__.py
+faina_semenovna/blanks/smz_v0_28.py
+faina_semenovna/blanks/smz_v0_28_schema.py

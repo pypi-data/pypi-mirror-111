@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: faina-semenovna
+Version: 0.1a1
+Summary: Simplifies work with XML-API for self-employed partners in Russia
+Home-page: https://gitlab.com/whiteapfel/FainaSemenovna
+Author: WhiteApfel
+Author-email: white@pfel.ru
+License: MPL 2.0
+Project-URL: Дока по API от ФНС, https://npd.nalog.ru/html/sites/www.npd.nalog.ru/pinfexch_0307.docx
+Project-URL: Донатик, https://pfel.cc/donate
+Project-URL: Исходнички, https://gitlab.com/whiteapfel/FainaSemenovna
+Project-URL: Тележка для вопросов, https://t.me/apfel
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Тут когда-то что-то будет
+
