@@ -1,0 +1,16 @@
+README.rst
+setup.cfg
+setup.py
+emapper2gbk/__init__.py
+emapper2gbk/__main__.py
+emapper2gbk/emapper2gbk.py
+emapper2gbk/genes_to_gbk.py
+emapper2gbk/genomes_to_gbk.py
+emapper2gbk/utils.py
+emapper2gbk.egg-info/PKG-INFO
+emapper2gbk.egg-info/SOURCES.txt
+emapper2gbk.egg-info/dependency_links.txt
+emapper2gbk.egg-info/entry_points.txt
+emapper2gbk.egg-info/not-zip-safe
+emapper2gbk.egg-info/requires.txt
+emapper2gbk.egg-info/top_level.txt
