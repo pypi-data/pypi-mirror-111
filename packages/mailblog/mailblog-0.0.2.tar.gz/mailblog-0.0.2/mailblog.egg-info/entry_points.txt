@@ -1,0 +1,3 @@
+[console_scripts]
+mailblog = mailblog.blog:entry_point
+
