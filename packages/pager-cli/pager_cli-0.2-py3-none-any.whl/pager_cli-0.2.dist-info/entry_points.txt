@@ -1,0 +1,3 @@
+[console_scripts]
+pager_cli=pager_cli.cli:main
+
