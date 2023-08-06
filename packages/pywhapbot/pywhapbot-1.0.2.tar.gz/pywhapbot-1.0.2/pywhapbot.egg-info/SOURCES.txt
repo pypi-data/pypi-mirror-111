@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+pywhapbot/__init__.py
+pywhapbot/browsers.py
+pywhapbot/install.py
+pywhapbot/utils.py
+pywhapbot/whapbot.py
+pywhapbot.egg-info/PKG-INFO
+pywhapbot.egg-info/SOURCES.txt
+pywhapbot.egg-info/dependency_links.txt
+pywhapbot.egg-info/requires.txt
+pywhapbot.egg-info/top_level.txt
