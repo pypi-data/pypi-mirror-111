@@ -1,0 +1,13 @@
+luci-fit/LuciBase.py,sha256=CDpoCzwraempe1tQe8tZ5LLXE9H9GS9qtHFa_IOWIRw,24491
+luci-fit/LuciBayesian.py,sha256=idgytH7Xmz5nFv8MvhgxoXWA9qaArdr_qi-tFgzhQvU,2086
+luci-fit/LuciErrors.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+luci-fit/LuciFit.py,sha256=IxcrPKLncT-4C8H9wKd8D-R7oEO4q-hh3mWTJQZyZIc,18474
+luci-fit/LuciPlotting.py,sha256=Ey5Q9SA64wZ6oWOP5hFeM_bAMgBlq0Di_IPjnLbmA5c,3313
+luci-fit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_fit.py,sha256=bIxGAdL7m7ePL3w769EqK1Q-588FqS0wkQJPHOTrcNs,1628
+luci_fit-0.0.1.dist-info/LICENSE,sha256=5aHV0Kcv1n1lAHVvoF24AFQj9x5Q8CFXfzYfEGboRxw,1072
+luci_fit-0.0.1.dist-info/METADATA,sha256=sBvIGOARrMwKIxhwjDj3srWCOpNOPmEVAVF9Zj_nLXo,373
+luci_fit-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+luci_fit-0.0.1.dist-info/top_level.txt,sha256=BH7ItjWKY6OAqX7OMHDRzKAslUE4NxKZ7napz61xkLA,15
+luci_fit-0.0.1.dist-info/RECORD,,
