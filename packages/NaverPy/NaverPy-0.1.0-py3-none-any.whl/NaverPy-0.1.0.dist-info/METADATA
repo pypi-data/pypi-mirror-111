@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: NaverPy
+Version: 0.1.0
+Summary: Naver REST API package
+Home-page: https://github.com/tsfo1489/NaverPy
+Author: Arepo
+Author-email: tsfo1489@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: requests
+Requires-Dist: datetime
+Requires-Dist: xmltodict
+
+UNKNOWN
+
+
