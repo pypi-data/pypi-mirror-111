@@ -1,0 +1,17 @@
+quiffen/__init__.py,sha256=vkFD2pQSFX2IkZFD07K4ExidPmsbhL_2GXOZJIHUThk,522
+quiffen/utils.py,sha256=60MxeUtq8VfzzwuPodna8tuzS1PJwj7svbIIyJUK2NQ,4495
+quiffen/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+quiffen/core/accounts.py,sha256=tNYPSN-BEH0JtE9-l_fXsp8SkrayMdt3ljU4zfDT7ZY,10704
+quiffen/core/categories_classes.py,sha256=s3Cc9AgUo5yP-n0ho3KEsXrWQ2kZYGmGl8rHM_SSTXI,18229
+quiffen/core/qif.py,sha256=_LqtVV04T6lIh3_obj0tvRR7ZoC7GfVjfvD7L6yXW80,34001
+quiffen/core/qif_parser.py,sha256=yIFN5HYhwl8-mSQCTvidTuHOrrNbwSn-dHkEzDF7YJk,4201
+quiffen/core/transactions.py,sha256=ubHGkGbTsxufSHwEzRjqpXCKii9crcFclszRudkvP3c,41321
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_qif.py,sha256=sZC1vQ5IVXDJuVVFR9QOYqBF3zepobINgzy6ZQyRCcs,2575
+tests/test_qif_parser.py,sha256=yCNE2DSh9_rEs8vfBMuqBZaPT1FSyclefNxFRi4DiyM,500
+tests/test_transactions.py,sha256=WHq2o1Cx3g9SGJXdUE96xzkXxdZIOd57inNJ15VV6D8,3161
+quiffen-0.1.1.dist-info/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+quiffen-0.1.1.dist-info/METADATA,sha256=DYzIKa0keGEyUVXXBl4Nr3KI3I6j7hVcQJLlGYeMCyM,4585
+quiffen-0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+quiffen-0.1.1.dist-info/top_level.txt,sha256=kSfkT6dbrqel33Yg4-9avP6BVoWZVEgVE_gPkeryIbg,14
+quiffen-0.1.1.dist-info/RECORD,,
