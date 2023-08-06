@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/sipper/__init__.py
+src/sipper/__main__.py
+src/sipper/getopt.py
+src/sipper.egg-info/PKG-INFO
+src/sipper.egg-info/SOURCES.txt
+src/sipper.egg-info/dependency_links.txt
+src/sipper.egg-info/requires.txt
+src/sipper.egg-info/top_level.txt
+src/sipper/driver/__init__.py
+src/sipper/driver/avs84.py
+src/sipper/driver/csv.py
+src/sipper/driver/excel.py
