@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: nextcloud-deck
+Version: 0.1.0
+Summary: Python wrapper around Nextcloud Deck API
+License: MIT
+Author: Kyle Prestel
+Author-email: kprestel@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: attrs (>=21.2.0,<22.0.0)
+Requires-Dist: cattrs (>=1.7.1,<2.0.0)
+Requires-Dist: dateutils (>=0.6.12,<0.7.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
