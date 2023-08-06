@@ -1,0 +1,12 @@
+drf_nested_forms/__init__.py,sha256=HmmLkyvV2MQDUqgmg6hF-Aa5qruzgNI02CFhO7XN6mc,350
+drf_nested_forms/exceptions.py,sha256=_oE16RiNUSuYFmn2eZRZ06bhgSFAjyYy4Mr1VcH-HEM,91
+drf_nested_forms/helpers.py,sha256=Dl6ETdb7LWLuEOIDPwkZIiqNCKwpCmeab2JiQG6wJYg,217
+drf_nested_forms/mixins.py,sha256=OcTHxJI6WFyH1HDHUgIOUbzNGXujBAt64qqweNECrBQ,4697
+drf_nested_forms/parsers.py,sha256=VyFW8S5MU6T5Lgi5g5Wi4_y6DIasrUqo8r2AEzLxXWA,1264
+drf_nested_forms/settings.py,sha256=6-I2lKCa4r6dji2amqaiCJumIhaOZEtIichsJd6Xyfg,307
+drf_nested_forms/utils.py,sha256=Wm47UFp4YXGUdU8ZRVOuCsLVOHtd3zQJkSa0SblLatk,9250
+drf_nested_forms-1.1.6.dist-info/LICENSE,sha256=clDOvdQmSITo9aBpmQSOpXVzpsgodkjAqepAekcmDuI,1089
+drf_nested_forms-1.1.6.dist-info/METADATA,sha256=COwCNiY6UiJFUwDl-7Ay6rUmzacxLspJQV_U3SwzGHY,6893
+drf_nested_forms-1.1.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+drf_nested_forms-1.1.6.dist-info/top_level.txt,sha256=ov2GvwMjAl7GMSqLWhnMU0gb54JDn-wMmOgKXqBjQls,17
+drf_nested_forms-1.1.6.dist-info/RECORD,,
