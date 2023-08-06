@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: cv-iml
+Version: 0.0.2
+Summary: IML Computer Vision Library
+Home-page: UNKNOWN
+Author: Qazi Ammar Arshad
+Author-email: <qaziammar.g@gmail.com>
+License: UNKNOWN
+Keywords: python,image,confusion matrix,accuracy,image parts
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# cv_iml
+A Computer Vision library for Intelligent Machine Labs, Information Technology University. 
+
+
