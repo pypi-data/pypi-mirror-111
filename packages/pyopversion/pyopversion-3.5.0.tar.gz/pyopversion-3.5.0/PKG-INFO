@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: pyopversion
+Version: 3.5.0
+Summary: Get the latest Open Peer Power version from various sources.
+Home-page: https://github.com/pcaston/pyopversion
+Author: Paul Caston
+Author-email: paul@caston.id.au
+License: MIT license
+Description: # pyopversion
+        [![codecov](https://codecov.io/gh/pcaston/pyopversion/branch/main/graph/badge.svg)](https://codecov.io/gh/pcaston/pyopversion)
+        ![python version](https://img.shields.io/badge/Python-3.8=><=3.10-blue.svg)
+        [![PyPI](https://img.shields.io/pypi/v/pyopversion)](https://pypi.org/project/pyopversion)
+        ![Actions](https://github.com/pcaston/pyopversion/workflows/Actions/badge.svg?branch=main)
+        
+        _Get the latest Open Peer Power version from various sources._
+        
+        ## Installation
+        
+        ```bash
+        pip install pyopversion
+        ```
+        
+        Look at the file `example.py` for a usage example.
+        
+Keywords: openpeerpower,version,update
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown
