@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: flipgenic
+Version: 2.2.1
+Summary: High-speed conversational dialogue engine
+Home-page: https://github.com/danth/flipgenic
+Author: Daniel Thwaites
+Author-email: danthwaites30@btinternet.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/danth/flipgenic/issues
+Project-URL: Source, https://github.com/danth/flipgenic
+Keywords: conversation dialogue engine chat chatbot
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6,<4
+Description-Content-Type: text/markdown
+Provides-Extra: docs
+License-File: LICENSE
+
+<p align="center">
+  <img
+    src="images/header.png"
+    alt="Flipgenic: High-speed conversational dialogue engine"
+  />
+</p>
+
+---
+
+## What is it?
+
+Flipgenic is a library for creating simple chatbots. A Flipgenic bot starts
+with an empty mind and learns how to communicate over time by reusing messages
+it has seen in previous conversations. It does not write anything original.
+
+Here is an example from its use in [Axyn](https://github.com/danth/axyn):
+
+![Screenshot of example conversation](images/Screenshot_20200426_124703.png)
+
+Flipgenic is focused on fast reply times and a simple API.
+[Chatterbot](https://chatterbot.readthedocs.io/en/stable/), a more well-known
+library, has additional features such as custom filters and logic adapters.
+
+## How do I use it?
+
+Here is a basic example:
+
+```python
+# python -m pip install flipgenic
+# python -m spacy download en_core_web_md
+
+from flipgenic import Responder
+
+# Create and connect to database
+# This can take a while to load the spaCy models
+responder = Responder('/path/to/data/folder/')
+
+# Initialize the database with a single response
+responder.learn_response('Hello', 'Hi!')
+
+response = None
+while True:
+    text = input('> ')
+
+    if response:
+        # Learn the input as a response to the previous output
+        responder.learn_response(response, text)
+
+    # Generate a response
+    response, distance = responder.get_response(text)
+    print(response.text, f'({distance})')
+```
+
+**For more, see [ReadTheDocs](https://flipgenic.readthedocs.io/en/latest/quickstart.html).**
+
+## How does it work?
+
+1. Upon calling `get_response`, the input is converted to a 300-dimensional
+   vector. The vector embeddings for each word are provided by
+   [SpaCy](https://spacy.io/api/token#vector); calculating the mean gives a
+   single vector representing the whole text.
+2. A closest match is found by searching the vectors of previously seen
+   messages. An [NGT](https://github.com/yahoojapan/NGT) index improves
+   performance.
+3. The search result corresponds to one or more known responses. These
+   responses are stored in an SQLite database.
+4. We select a matching response at random. The same response might have been
+   learned more than once, giving it a higher chance of selection.
+5. Along with the selected response, the distance between the input vector and
+   the search result is returned as a confidence heuristic.
+
+
