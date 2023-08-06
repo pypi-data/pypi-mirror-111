@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: numcat
+Version: 0.0.1
+Summary: A Package that allows concatenation of numbers.
+Home-page: https://github.com/archiejesty/numcat
+Author: Archie Jesty
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/archiejesty/numcat/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Numcat
+A Package to concatenate floating point numbers under a set of rules.
+
+## Installation
+Run `pip install numcat` in your command prompt.
+
+## Usage
+```python
+from numcat import functions
+
+print(functions.concat(1.1,1.2))
+```
+
+## Rules & Defintion
+Concatenation is the action of appending two or more objects end-to-end
+to result in one singular number.
+
+1. The fractional and integer parts are concatenated independently to one another
+   for example: '1.1' concatenate '1.2' equals '11.12'
+
