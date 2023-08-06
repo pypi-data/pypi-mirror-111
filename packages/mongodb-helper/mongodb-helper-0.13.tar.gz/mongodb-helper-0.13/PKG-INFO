@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: mongodb-helper
+Version: 0.13
+Summary: Methods that simplify MongoDB collection reading and writing.
+Home-page: https://github.com/FlamptX/mongodb-helper
+Author: Flampt
+License: UNKNOWN
+Keywords: mongodb,helper,mongodbhelper
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## mongodb-helper
+### Methods that simplify MongoDB collection reading and writing.
+Method | Description
+--- | --- |
+get_document | Reads a document with the given id
+update_document | Updates a document with the given id
+insert_document | Creates a new document with the given id and data
+delete_document | Deletes a document with the given id
+
+#### Example:
+```python
+from mongodb_helper import Helper
+from pymongo import MongoClient
+
+URI = "CLUSTER URI"
+
+cluster = MongoClient(URI)
+db = cluster["database name"]
+collection = db["collection name"]
+
+helper = Helper("_id", collection)
+
+document = helper.get_document(1122334455667788)
+```
+
+
