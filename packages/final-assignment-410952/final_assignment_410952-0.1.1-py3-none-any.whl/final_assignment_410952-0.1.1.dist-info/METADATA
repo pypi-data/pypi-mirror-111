@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: final-assignment-410952
+Version: 0.1.1
+Summary: NYPD final assignment
+Home-page: UNKNOWN
+Author: Weronika Skibicka
+Author-email: w.skibicka2@student.uw.edu.pl
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: pandas
+
+UNKNOWN
+
+
