@@ -1,0 +1,12 @@
+README.md
+setup.py
+urge/__init__.py
+urge/_actions.py
+urge/_core.py
+urge/_deprecated.py
+urge/_funny.py
+urge.egg-info/PKG-INFO
+urge.egg-info/SOURCES.txt
+urge.egg-info/dependency_links.txt
+urge.egg-info/requires.txt
+urge.egg-info/top_level.txt
