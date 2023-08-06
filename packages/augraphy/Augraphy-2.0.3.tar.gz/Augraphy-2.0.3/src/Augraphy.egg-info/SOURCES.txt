@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/Augraphy/Augmentations.py
+src/Augraphy/AugraphyPipeline.py
+src/Augraphy/__init__.py
+src/Augraphy.egg-info/PKG-INFO
+src/Augraphy.egg-info/SOURCES.txt
+src/Augraphy.egg-info/dependency_links.txt
+src/Augraphy.egg-info/requires.txt
+src/Augraphy.egg-info/top_level.txt
