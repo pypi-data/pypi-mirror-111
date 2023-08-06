@@ -1,0 +1,6 @@
+fastsearch
+pyssdeep
+six
+numpy
+pandas
+dask
