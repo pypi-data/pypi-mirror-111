@@ -1,0 +1,4 @@
+[console_scripts]
+ncCreate = ncOrtho.coreset.coreset:main
+ncSearch = ncOrtho.ncortho:main
+
