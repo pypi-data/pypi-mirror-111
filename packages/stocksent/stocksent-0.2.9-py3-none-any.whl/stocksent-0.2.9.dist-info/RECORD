@@ -1,0 +1,9 @@
+stocksent/__init__.py,sha256=2X4yek7xnk1I-WhGas-0axYJu02T6cCUmdbHg6RhV2M,91
+stocksent/get_sentiment_data.py,sha256=jlRx_pmoHy3UXgbI8XdXvIyQcdJiNOswoYago3NRfIk,4616
+stocksent/sentiment.py,sha256=H1PRa7kkZlJclVXw29VO10RNN2rzBIiCbv1jPvQg3ck,4885
+stocksent/stock_list.txt,sha256=WL1UWUKnZAqk1EIHd4ThlFET3H__7_o36ZGObNlS6fw,45234
+stocksent-0.2.9.dist-info/LICENSE,sha256=kwPqHPvwSZRWUmaAiddT-xp-Hy5SxoBhXD0s6nUVwRg,17100
+stocksent-0.2.9.dist-info/METADATA,sha256=J9xDPQ5Kstt0sS-hKajbxf7WR6PX2wqGVmdDVjpgdCk,5632
+stocksent-0.2.9.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+stocksent-0.2.9.dist-info/top_level.txt,sha256=nfE7zegJs1B_xAhMDz1RoG2XIliNj8qP6n5iGKhF_48,10
+stocksent-0.2.9.dist-info/RECORD,,
