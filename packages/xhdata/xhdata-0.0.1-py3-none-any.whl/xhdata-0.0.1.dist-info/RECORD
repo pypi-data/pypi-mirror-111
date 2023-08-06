@@ -1,0 +1,10 @@
+xhdata/__init__.py,sha256=o017MLdqS0bnMUMkhphtra-0VpLRJMMPZlxjRWQYYGk,309
+xhdata/__main__.py,sha256=OPgzT_sZ2xYuwlAUkdFf4pornhEAAJ9YZ4rw4YyS4Uo,125
+xhdata/Command/__init__.py,sha256=tU8DiVffeI2WswbTil_BjUkrx0xMgVO2B_DarB8h6pQ,4376
+xhdata/Command/save_akshare.py,sha256=wCCRTXs3xyaDmiun3v8JSRNQaEnp4z4GOMv-SlC3B6A,11263
+xhdata/Command/save_tdx.py,sha256=G0IXEU2qtysGLMG1GUOEBVm0crNjCViTLOnTSeSB608,19266
+xhdata-0.0.1.dist-info/METADATA,sha256=gED6I9JlT__oZ_UXqSEJ8plDmeiGI60U0ErtucT9dmc,14198
+xhdata-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+xhdata-0.0.1.dist-info/entry_points.txt,sha256=eZX7OLm1RDFW6pSM9Fbicw_7iW8wYpCdrwt4O6fM6oc,163
+xhdata-0.0.1.dist-info/top_level.txt,sha256=Ug2uWvxNtAtbQq8GeDSXfqMjO9KjdFlekFl01U0Cc3w,7
+xhdata-0.0.1.dist-info/RECORD,,
