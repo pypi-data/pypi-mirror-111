@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/zycelium.dataconfig.egg-info/PKG-INFO
+src/zycelium.dataconfig.egg-info/SOURCES.txt
+src/zycelium.dataconfig.egg-info/dependency_links.txt
+src/zycelium.dataconfig.egg-info/not-zip-safe
+src/zycelium.dataconfig.egg-info/requires.txt
+src/zycelium.dataconfig.egg-info/top_level.txt
+src/zycelium/dataconfig/__init__.py
