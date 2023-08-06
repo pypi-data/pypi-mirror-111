@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ppcd
+Version: 0.2.1
+Summary: SDK about pdrscd
+Home-page: https://github.com/geoyee/PdRSCD
+Author: geoyee
+Author-email: geoyee@yeah.net
+License: UNKNOWN
+Description: PdRSCD（PaddlePaddle Remote Sensing Change Detection）                    是一个基于飞桨PaddlePaddle的一个用于遥感变化检测的工具。                    详细说明和使用方法请参照github。
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
