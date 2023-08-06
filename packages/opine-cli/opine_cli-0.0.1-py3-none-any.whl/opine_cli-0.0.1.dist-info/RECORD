@@ -1,0 +1,12 @@
+opinecli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+opinecli/auth.py,sha256=IopT0J6FHk0IQc2kNyWQ4Bfy6MzxdxqJxaxcF8zUEOI,926
+opinecli/cli.py,sha256=2l7fP_J1fQaADS93uw8N2sTjhxPjtLu4XbhYQ5H2WX4,609
+opinecli/config.py,sha256=yp3F6WtO-Vxt9PVcMbnCgFrkrehLl6ElUj7UiIkzTqs,2241
+opinecli/data.py,sha256=GSlYI1NsUxFbdQ4UajrBs7KN6oeKBX3VHhkNWtHH1i0,2961
+opinecli/init.py,sha256=X6EOji0L3aTRAQMnRsuUff54_59k8plsBlwkT9m0b34,289
+opinecli/projects.py,sha256=P--_gFamAyjZ_UQkvixzQCCnJ7RknHJYSaRZBoPkKiE,3294
+opine_cli-0.0.1.dist-info/METADATA,sha256=DhuL3rP-0fWAgwEL3A59izVidgCf5xoDLwb2nHU8F5Q,2522
+opine_cli-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+opine_cli-0.0.1.dist-info/entry_points.txt,sha256=lPabbw1jxPpwnJQNJhkqlDfTFhSuuWmj7Q_rfpmLHYQ,45
+opine_cli-0.0.1.dist-info/top_level.txt,sha256=RIzHBtipTh5IwNrmVP1oy2U8VWb5YDc41toQ7tOGuOE,9
+opine_cli-0.0.1.dist-info/RECORD,,
