@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+openEEG.egg-info/PKG-INFO
+openEEG.egg-info/SOURCES.txt
+openEEG.egg-info/dependency_links.txt
+openEEG.egg-info/requires.txt
+openEEG.egg-info/top_level.txt
