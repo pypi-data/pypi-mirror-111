@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: dash_selectable
+Version: 0.0.1
+Summary: Wrapper for common HTML elements for connecting select event data to Dash callbacks
+Home-page: UNKNOWN
+Author: Bas van der Linden <bvanderlinden1@gmail.com>
+License: GPL-3.0
+Platform: UNKNOWN
+Classifier: Framework :: Dash
+License-File: LICENSE
+
+UNKNOWN
+
