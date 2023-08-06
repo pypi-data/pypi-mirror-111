@@ -1,0 +1,7 @@
+README.md
+setup.py
+layz_import.egg-info/PKG-INFO
+layz_import.egg-info/SOURCES.txt
+layz_import.egg-info/dependency_links.txt
+layz_import.egg-info/requires.txt
+layz_import.egg-info/top_level.txt
