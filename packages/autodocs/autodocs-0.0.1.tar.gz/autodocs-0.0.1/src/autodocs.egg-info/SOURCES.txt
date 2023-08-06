@@ -1,0 +1,5 @@
+setup.py
+src/autodocs.egg-info/PKG-INFO
+src/autodocs.egg-info/SOURCES.txt
+src/autodocs.egg-info/dependency_links.txt
+src/autodocs.egg-info/top_level.txt
