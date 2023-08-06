@@ -1,0 +1,4 @@
+requirements
+tests
+vmklib
+vmklib-stubs
