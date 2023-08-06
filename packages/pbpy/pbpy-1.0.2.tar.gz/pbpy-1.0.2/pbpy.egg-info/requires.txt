@@ -1,0 +1,4 @@
+requests
+discord.py
+asyncio
+python-socketio[asyncio_client]
