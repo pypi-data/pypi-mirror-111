@@ -1,0 +1,3 @@
+[console_scripts]
+quote-maker=quote_maker.main:main
+
