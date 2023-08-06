@@ -1,0 +1,61 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ehforwarderbot\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-22 10:05+1100\n"
+"PO-Revision-Date: 2020-01-11 18:05\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Romanian\n"
+"Language: ro_RO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100>0 && n%100<20)) ? 1 : 2);\n"
+"X-Crowdin-Project: ehforwarderbot\n"
+"X-Crowdin-Language: ro\n"
+"X-Crowdin-File: /EFBChannels/efb-gpg-middleware/efb_gpg_middleware/locale/efb_gpg_middleware.pot\n"
+
+#: efb_gpg_middleware/__init__.py:60
+msgid "GnuPG middleware is not configured."
+msgstr "GnuPG middleware nu este configurată."
+
+#: efb_gpg_middleware/__init__.py:95
+#, python-brace-format
+msgid "This chat has GPG key: {0}"
+msgstr "Acest chat are GPG-cheie: {0}"
+
+#: efb_gpg_middleware/__init__.py:97
+msgid "This chat has no GPG key."
+msgstr "Acest chat are nu GPG-cheie."
+
+#: efb_gpg_middleware/__init__.py:104
+msgid "This chat now has no GPG key."
+msgstr "Acest chat are acum nu GPG-cheie."
+
+#: efb_gpg_middleware/__init__.py:112
+msgid "Found the following keys: "
+msgstr "Constatat următoarele taste: "
+
+#: efb_gpg_middleware/__init__.py:118
+msgid "Usage: gpg`search query"
+msgstr "De utilizare: interogare de gpg'search"
+
+#: efb_gpg_middleware/__init__.py:130
+#, python-brace-format
+msgid "Key {0} not found."
+msgstr "{0} cheie negăsit."
+
+#: efb_gpg_middleware/__init__.py:134 efb_gpg_middleware/__init__.py:138
+#, python-brace-format
+msgid "Key {0} is now for this chat."
+msgstr "{0} cheie este acum pentru aceasta discutie."
+
+#: efb_gpg_middleware/__init__.py:140
+#, python-brace-format
+msgid "{0} is not a valid key."
+msgstr "{0} nu este o cheie validă."
+
+#: efb_gpg_middleware/__init__.py:142
+msgid "Usage: gpg`bind FingerPrintHex"
+msgstr "Utilizare: gpg'bind FingerPrintHex"
+
