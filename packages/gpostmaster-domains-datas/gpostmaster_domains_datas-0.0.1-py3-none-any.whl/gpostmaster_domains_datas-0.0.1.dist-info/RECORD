@@ -1,0 +1,14 @@
+entry_points_googlepostmasterapi/__init__.py,sha256=glrKAXHca7BryNbw5kQnP4kqdVbqcjJUWymSO0PJbL0,714
+entry_points_googlepostmasterapi/gpt_dl_all_datas.py,sha256=ULnu3xZUpYYw8yP0sVZO9o683z6CjMCi0GgnnZQ8Mfs,3861
+entry_points_googlepostmasterapi/gpt_dl_domain_datas.py,sha256=JXEO_Ij23CuqO1rfVTsFIhj6w4UqH-Djza9x9rP_N0M,3780
+googlepostmasterapi/__init__.py,sha256=DLvGeHe7Bs-HhF9iR7e38_KULrvgJ0NmFSrTlSIaIuI,737
+googlepostmasterapi/datas.py,sha256=0vG1MuTG7tA7f-aYCS1Z-ht30cnWRwDWTfqd-X4lXaw,8988
+googlepostmasterapi/gpt.py,sha256=fMS3ZoGpSGXG4iYRZvShRYP88_FlxJ4tjp8a52i1ixY,10428
+googlepostmasterapi/stats.py,sha256=HhXwBeCoSLoDp6QiZy2eH9ly4kTPwDGOIpaggHoxfzs,4067
+googlepostmasterapi/utils.py,sha256=_Fc9QGA8HVxOOgiiaJoHWfsYkz6DCsoD637Fg67jzLI,957
+gpostmaster_domains_datas-0.0.1.dist-info/LICENCE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+gpostmaster_domains_datas-0.0.1.dist-info/METADATA,sha256=Y3_siKtj2p5PE6kv1bhAz1w6H4nrhKgK2wNWFDaCq_s,2213
+gpostmaster_domains_datas-0.0.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+gpostmaster_domains_datas-0.0.1.dist-info/entry_points.txt,sha256=zOhMSODL7YutDq1xT942OxGjiLpX0pPjRH8F5FRSixY,171
+gpostmaster_domains_datas-0.0.1.dist-info/top_level.txt,sha256=ZuMicgz2CrOEs4B8WZ4WwjO6ZDcxWhXmlMIDl-d7Y3M,53
+gpostmaster_domains_datas-0.0.1.dist-info/RECORD,,
