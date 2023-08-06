@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: emojigg
+Version: 0.0.2
+Summary: Async wrapper for the EmojiGG api.
+Home-page: https://github.com/NextChai/Emojigg
+Author: Iced Chai
+License: MIT
+Project-URL: Documentation, https://github.com/NextChai/Emojigg/wiki
+Project-URL: Report a Bug, https://github.com/NextChai/Emojigg/issues
+Project-URL: Contribute, https://github.com/NextChai/Emojigg/pulls
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiofiles (==0.7.0)
+
+# Emojipy
+An Async API wrapper for emoji.gg. Useful for Discord Bots, or just trying to get some fun information
+
+
+# Installation
+`pip install emojipy`
+
+# Docs?
+I'm still working on docs, but in the mean time I've setup the wiki -> https://github.com/NextChai/Emojigg/wiki
+
+
+
