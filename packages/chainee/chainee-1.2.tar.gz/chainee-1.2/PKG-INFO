@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: chainee
+Version: 1.2
+Summary: Chain your predicates, easy way.
+Home-page: https://github.com/ypankovych/chainee
+Author: Yaroslav Pankovych
+Author-email: flower.moor@gmail.com
+License: MIT
+Download-URL: https://github.com/ypankovych/chainee/archive/refs/tags/1.2.tar.gz
+Description: UNKNOWN
+Keywords: chain,easy,predicate
+Platform: UNKNOWN
+Classifier: Topic :: Utilities
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
