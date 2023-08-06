@@ -1,0 +1,11 @@
+parkr/__init__.py,sha256=bxb4oJoHjL0ckzXap7nldeEt08b_5a-_qhmcqJ-Y9UM,147
+parkr/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+parkr/activation.py,sha256=HWldiKqTRLRxbfh3mL9hFCXm4RSiajh4D3OBmURC320,2605
+parkr/network.py,sha256=6jOr85iVltRBex7ZRMNVkuRRXFJ56CAq5weQ2YfLMxM,16112
+parkr/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+parkr/tests/back_prop_test.py,sha256=hufTtVnSOMOFVtlEUbpgjVPAarBPxa-sXexss-OKrUg,1425
+parkr-1.0.2.dist-info/LICENSE.md,sha256=T43p2iHhl9Mc7JybZL42aA-cUtCga7OGABEGdZJr6sU,1056
+parkr-1.0.2.dist-info/METADATA,sha256=afrvMe93HYgsk-00PZz6uP_A2SKwDJAIy0GK1pFRtcM,3195
+parkr-1.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+parkr-1.0.2.dist-info/top_level.txt,sha256=rAE0fKxf-NMATIoS71jb5rNFLOmWGqD0NbwiiQ60lNA,6
+parkr-1.0.2.dist-info/RECORD,,
