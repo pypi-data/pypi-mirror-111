@@ -1,0 +1,4 @@
+flask
+vicore
+sqlalchemy
+python-magic
