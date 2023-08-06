@@ -1,0 +1,10 @@
+drfp/__init__.py,sha256=JGgrtl3ENeaGMzkZhPUYOZUl0Y2bUwIJpdZnsmwx3L8,614
+drfp/cli.py,sha256=yVAm0Apdy_bDQvgfLWfiOZ1mOC0l8SFpYdY7xNUKi28,2057
+drfp/fingerprint.py,sha256=Os9bVoPsh0pol3wxNahYeknyUk2xI4zISDmhSNIpCeg,7830
+drfp-0.2.2.dist-info/AUTHORS.rst,sha256=OH7DpRawijUwheqEbm-Ba1bXxxpg0c5hIvhcGk0O2AY,80
+drfp-0.2.2.dist-info/LICENSE.txt,sha256=Mo2v1XABfWYNSo-_FOCQSPDPNFujpPu4W-p3ZdbQ6K4,1080
+drfp-0.2.2.dist-info/METADATA,sha256=15k5DpqN_jzZoR3_u8vcc-RNrXXbtNOxbA7Hlloti6E,3021
+drfp-0.2.2.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+drfp-0.2.2.dist-info/entry_points.txt,sha256=5y3g65YckAijftsxtOzdFSO4x15afu_P6LBW5lfTZLs,40
+drfp-0.2.2.dist-info/top_level.txt,sha256=nsbRq5kcHULhmCpLv05SacZ5mO23Nww__My6IiYPVig,5
+drfp-0.2.2.dist-info/RECORD,,
