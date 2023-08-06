@@ -1,0 +1,11 @@
+channels:
+  - conda-forge
+dependencies:
+  # dependencies
+  - python
+  - click
+  - tqdm
+  - ghostscript
+
+  # for testing
+  - matplotlib

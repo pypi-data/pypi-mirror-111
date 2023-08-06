@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: gsbatch
+Version: 0.1.0
+Summary: Apply GhostScript to a batch of files
+Home-page: https://github.com/tdegeus/gsbatch
+Author: Tom de Geus
+Author-email: tom@geus.me
+License: MIT
+Description: Apply GhostScript to a batch of files
+Keywords: YAML,Bash
+Platform: UNKNOWN
