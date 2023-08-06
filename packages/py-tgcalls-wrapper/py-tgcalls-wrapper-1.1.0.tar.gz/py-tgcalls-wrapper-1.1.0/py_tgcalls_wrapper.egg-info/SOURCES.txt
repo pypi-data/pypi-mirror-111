@@ -1,0 +1,17 @@
+README.md
+setup.py
+py_tgcalls_wrapper.egg-info/PKG-INFO
+py_tgcalls_wrapper.egg-info/SOURCES.txt
+py_tgcalls_wrapper.egg-info/dependency_links.txt
+py_tgcalls_wrapper.egg-info/requires.txt
+py_tgcalls_wrapper.egg-info/top_level.txt
+pytgcalls_wrapper/__init__.py
+pytgcalls_wrapper/controllers.py
+pytgcalls_wrapper/converters.py
+pytgcalls_wrapper/exceptions.py
+pytgcalls_wrapper/streamers.py
+pytgcalls_wrapper/wrapper_base.py
+pytgcalls_wrapper/wrappers.py
+pytgcalls_wrapper/utils/__init__.py
+pytgcalls_wrapper/utils/cmd.py
+pytgcalls_wrapper/utils/re.py
