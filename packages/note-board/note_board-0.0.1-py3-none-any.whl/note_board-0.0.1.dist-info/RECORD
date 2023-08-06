@@ -1,0 +1,12 @@
+note/__init__.py,sha256=07NzQXBgNlnw5kSN6ZYxE9By-_RuH3Jyy58Z74sIio0,21
+note/noted.py,sha256=eh_fdM4zPAHxIWh9lkcTEZ7xpwmS0KxdwDVakv3djzs,100
+note/schema.sql,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+note_board/__init__.py,sha256=07NzQXBgNlnw5kSN6ZYxE9By-_RuH3Jyy58Z74sIio0,21
+note_board/noted.py,sha256=ANdW9rGc7-PUatndTsi1EZGJo-cLesnsts68ojRzfpE,112
+note_board/schema.sql,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+note_board-0.0.1.dist-info/LICENSE,sha256=BjUZLakkTNghAyo3DbnB9tJGdVOBs9-SOmhF5Kb8-Dg,1063
+note_board-0.0.1.dist-info/METADATA,sha256=2pY3nxQN39urTQVOqXcPYQ3vw0P4frvCje315KEDot8,314
+note_board-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+note_board-0.0.1.dist-info/entry_points.txt,sha256=P2yK_yKHEOoKnaA0HmOgF6SD4gOELT_H_rCGMtqd6V4,49
+note_board-0.0.1.dist-info/top_level.txt,sha256=GAa1phsU1ezRjB4YEPI-QGnvknO6hKW5s2Xx6BDsH1M,11
+note_board-0.0.1.dist-info/RECORD,,

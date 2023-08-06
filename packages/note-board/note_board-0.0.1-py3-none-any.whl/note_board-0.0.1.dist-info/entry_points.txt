@@ -1,0 +1,3 @@
+[console_scripts]
+noted = note_board.noted:main
+

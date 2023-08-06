@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: note-board
+Version: 0.0.1
+Summary: 打算做一个个人的 笔记/看板 工具。。免得周末白天都用来睡觉
+Home-page: UNKNOWN
+Author: chenyan
+Author-email: chenyan@feling.net
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: flask (==2.0.1)
+
+UNKNOWN
+
