@@ -1,0 +1,2 @@
+kamocli
+kamosdk

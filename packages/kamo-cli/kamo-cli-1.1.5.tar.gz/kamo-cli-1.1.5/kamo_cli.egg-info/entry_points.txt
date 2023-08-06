@@ -1,0 +1,3 @@
+[console_scripts]
+kamo = kamocli.__main__:app
+
