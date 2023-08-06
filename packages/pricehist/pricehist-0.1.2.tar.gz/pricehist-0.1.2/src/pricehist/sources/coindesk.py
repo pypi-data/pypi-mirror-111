@@ -1,0 +1,77 @@
+import dataclasses
+import json
+import logging
+import sys
+from decimal import Decimal
+
+import requests
+
+from pricehist.price import Price
+
+from .basesource import BaseSource
+
+
+class CoinDesk(BaseSource):
+    def id(self):
+        return "coindesk"
+
+    def name(self):
+        return "CoinDesk Bitcoin Price Index"
+
+    def description(self):
+        return (
+            "An average of Bitcoin prices across leading global exchanges. \n"
+            "Powered by CoinDesk, https://www.coindesk.com/price/bitcoin"
+        )
+
+    def source_url(self):
+        return "https://www.coindesk.com/coindesk-api"
+
+    def start(self):
+        return "2010-07-17"
+
+    def types(self):
+        return ["close"]
+
+    def notes(self):
+        return ""
+
+    def symbols(self):
+        url = "https://api.coindesk.com/v1/bpi/supported-currencies.json"
+        response = self.log_curl(requests.get(url))
+        # TODO handle non-200
+        # TODO handle can't parse JSON
+        data = json.loads(response.content)
+        # TODO handle no data
+        relevant = [i for i in data if i["currency"] not in ["XBT", "BTC"]]
+        return [
+            (f"BTC/{i['currency']}", f"Bitcoin against {i['country']}")
+            for i in sorted(relevant, key=lambda i: i["currency"])
+        ]
+
+    def fetch(self, series):
+        if series.base != "BTC" or series.quote == "BTC":
+            # BTC is the only valid base. BTC as the quote will return BTC/USD.
+            logging.critical(
+                f"Invalid pair '{'/'.join([series.base, series.quote])}'. "
+                f"Run 'pricehist source {self.id()} --symbols' to list valid pairs."
+            )
+            sys.exit(1)
+        data = self._data(series)
+        prices = []
+        for (d, v) in data["bpi"].items():
+            prices.append(Price(d, Decimal(str(v))))
+        return dataclasses.replace(series, prices=prices)
+
+    def _data(self, series):
+        url = "https://api.coindesk.com/v1/bpi/historical/close.json"
+        params = {
+            "currency": series.quote,
+            "start": series.start,
+            "end": series.end,
+        }
+        response = self.log_curl(requests.get(url, params=params))
+        # TODO handle 404: can be 1) quote not found 2) date range invalid 3) no data(?)
+        # TODO handle non-200 response (500 can be due to quote=XBT)
+        # TODO handle can't parse JSON
+        return json.loads(response.content)
