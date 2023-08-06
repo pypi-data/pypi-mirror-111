@@ -1,0 +1,7 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_bigquery_adapter.py,sha256=8INYzASQdtfvjtbbFXRHq7J_kGqLZhi3neOgwT2_NA8,5796
+tests/utils.py,sha256=862qw8HSy4mkA7zB-OTK2qNFBlsmAhZHs88RWmNE61o,10740
+marquez_dbt_bigquery-0.16.0.dist-info/METADATA,sha256=EsDb0fAbAC3E1zhzR5_4pOpoZR8-Rkb6s-jL9udG7zs,1881
+marquez_dbt_bigquery-0.16.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+marquez_dbt_bigquery-0.16.0.dist-info/top_level.txt,sha256=EdW7283x-lr_cbuivW8Ij7ANAP-ZJ9sLtILQseEPxXg,6
+marquez_dbt_bigquery-0.16.0.dist-info/RECORD,,
