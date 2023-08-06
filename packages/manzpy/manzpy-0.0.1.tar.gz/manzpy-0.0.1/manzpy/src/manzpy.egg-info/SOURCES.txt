@@ -1,0 +1,11 @@
+README.md
+setup.py
+manzpy/src/manzpy.egg-info/PKG-INFO
+manzpy/src/manzpy.egg-info/SOURCES.txt
+manzpy/src/manzpy.egg-info/dependency_links.txt
+manzpy/src/manzpy.egg-info/top_level.txt
+manzpy/src/manzpy.py
+manzpy/src/manzpy.egg-info/PKG-INFO
+manzpy/src/manzpy.egg-info/SOURCES.txt
+manzpy/src/manzpy.egg-info/dependency_links.txt
+manzpy/src/manzpy.egg-info/top_level.txt
