@@ -1,0 +1,3 @@
+from annotation.pilot_topic_relevance_annotation_task import *
+
+#generate_topic_relevance_annotation_task()
