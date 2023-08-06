@@ -1,0 +1,32 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+urnparse = "*"
+semver = "*"
+coloredlogs = "*"
+contextvars = "*"
+
+[packages.kafka]
+confluent-kafka = "~=1.7.0"
+
+[packages.celery]
+celery = "*"
+
+[dev-packages]
+mypy = "*"
+coverage = "*"
+flake8 = "*"
+sphinx = "*"
+sphinxcontrib-plantuml = "*"
+build = "*"
+twine = "*"
+setuptools = "*"
+tox = "*"
+pipfile = "*"
+toml = "*"
+
+[requires]
+python_version = "3.9"
