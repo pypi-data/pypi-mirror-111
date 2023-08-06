@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: celtis
+Version: 0.1.0
+Summary: Modern scriptable Vulnerability Scanner
+Home-page: http://github.com/0xcrypto/celtis
+Author: Vikrant Singh Chauhan
+Author-email: vi@hackberry.xyz
+License: MIT
+Keywords: penetration testing,hacking,vulnerability scanner
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Topic :: Security
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE.md
+
+Celtis - Modern scriptable Vulnerability Scanner
+================================================
+
+In development
+
+
