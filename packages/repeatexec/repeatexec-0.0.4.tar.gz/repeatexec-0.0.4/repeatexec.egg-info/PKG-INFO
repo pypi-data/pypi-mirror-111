@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: repeatexec
+Version: 0.0.4
+Summary: A command line tool for running a command repeatedly
+Home-page: https://gitee.com/dingbo8128/repeatexec
+Author: dingbo
+Author-email: dingbo8128@163.com
+License: UNKNOWN
+Keywords: repeat run
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Description-Content-Type: text/markdown
+
+# repeatexec
+
+#### Description
+run a command repeatedly.
+```
+repeatexec -n 10 -e ls
+```
+run `ls` every 10 seconds
+
