@@ -1,0 +1,12 @@
+numpy
+networkx
+torchvision
+torch
+dwave-qbsolv
+qubovert
+matplotlib
+scipy
+tensorflow
+sklearn
+tensorboard
+ml-pyxis@ git+https://github.com/vicolab/ml-pyxis@master
