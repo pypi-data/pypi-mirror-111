@@ -1,0 +1,9 @@
+LICENCE
+README.md
+setup.py
+jsonrpcx/__init__.py
+jsonrpcx.egg-info/PKG-INFO
+jsonrpcx.egg-info/SOURCES.txt
+jsonrpcx.egg-info/dependency_links.txt
+jsonrpcx.egg-info/requires.txt
+jsonrpcx.egg-info/top_level.txt
