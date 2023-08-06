@@ -1,0 +1,7 @@
+Click
+boto3
+keyring
+requests
+tenacity
+urllib3
+keyrings.cryptfile
