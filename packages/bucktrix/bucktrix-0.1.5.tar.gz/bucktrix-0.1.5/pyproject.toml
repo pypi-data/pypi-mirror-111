@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "bucktrix"
+version = "0.1.5"
+homepage = "https://github.com/finzzz/bucktrix"
+description = "Matrix bot"
+authors = ["Vincent Carlos <git@finzzz.net>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+matrix-nio = {extras = ["e2e"], version = "^0.16.0"}
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
