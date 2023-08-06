@@ -1,0 +1,11 @@
+.DS_Store,sha256=BK1BCBCc7DO3YSosD_4Lkzg4ItsrpV_qzwojyJyeaAw,6148
+mogp/__init__.py,sha256=LouAt4yc74Va0hMpVfZQTUrTHub1aZOXL8fzG9S-T3Y,51
+mogp/allocmodel.py,sha256=CCbUOtZr8U2kZd3kp02efRkA7vS-jbXdmHdaecQtMcI,1392
+mogp/mogp_constrained.py,sha256=1sEZvXu2Rfai_c6TDlsK8liPdtVSwXW9Ey-ZcwB92I4,18549
+mogp/neg_linear.py,sha256=UP5abIQRY5VT345Elio0MAc7-thbtfW93r-fG1XEi-Y,709
+mogp/obsmodel.py,sha256=UosOaKSbn08DSLRjseT_MMpVNnmm_lSvS3PvQzk-L8Q,4147
+mogp/utils.py,sha256=gcdg1Frxz232OjRlIH4u5uSGV8r10wT-j3nHQP4maxA,3175
+mogp-0.1.1.dist-info/METADATA,sha256=pDqbrZ8dYaZmSA1v4qWIdr2dw9ylvxCtNQCpYjR4mjg,500
+mogp-0.1.1.dist-info/RECORD,,
+mogp-0.1.1.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+mogp-0.1.1.dist-info/top_level.txt,sha256=cz_M2Z4p1vJkPNBqRFo7UG9DjqFdCqwghQIgCtxaIeY,5
