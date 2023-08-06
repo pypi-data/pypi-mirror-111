@@ -1,0 +1,13 @@
+ml_simple_gui/__init__.py,sha256=rRGI4Z589f0xNSUPDmmZ-mOoxVfbY3V6cYWagDRBgfo,5443
+ml_simple_gui/utils.py,sha256=NLQqKMLvz-gyZPcc5mD3kp6kqHq_7xxKFsoxaigT5lg,1040
+ml_simple_gui/frontend/dist/favicon.ico,sha256=23SrC3gzjB93j4OYxF9BA8ma6g6EWjEYp3ULTur9NEU,4286
+ml_simple_gui/frontend/dist/index.html,sha256=Jq8K_iw4QWLuPQfYl8EURC9L3XDPqfNsHzAQYzkiiuA,1012
+ml_simple_gui/frontend/dist/css/chunk-vendors.6a84c9a3.css,sha256=RPGa29bYVt6xGDV2HRBTlFR43kPB7XWJl6N5uk57E_A,381783
+ml_simple_gui/frontend/dist/js/app.b230bd4f.js,sha256=561qUrTx7j-NUVUtEYzM3uLX_BcdD1b_NjCD1cyXExQ,14104
+ml_simple_gui/frontend/dist/js/app.b230bd4f.js.map,sha256=jvzUaZJeOh34hAPm0lkLPJJd0dWBDau8tFCCySZwNqw,50073
+ml_simple_gui/frontend/dist/js/chunk-vendors.4d341bce.js,sha256=a_z-VXzzsTt7Fa5mPtdHwRBtlzScN6Q_wgcAkolIyaE,446202
+ml_simple_gui/frontend/dist/js/chunk-vendors.4d341bce.js.map,sha256=hs9KMbR1aWNBu0tLMWUumWQV_Q-FInMxLRXJc8QUDdY,2154539
+ml_simple_gui-1.0.6.dist-info/METADATA,sha256=ltx3mFXbkngHnslLMDKzE9EhGVnrok0LbtdoAyDz1Lk,2058
+ml_simple_gui-1.0.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ml_simple_gui-1.0.6.dist-info/top_level.txt,sha256=o54YsUeNjgPFYq_yrb9xHCcIwF-lOl92VuuWxMIg8wI,14
+ml_simple_gui-1.0.6.dist-info/RECORD,,

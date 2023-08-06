@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: ml-simple-gui
+Version: 1.0.6
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: click (==8.0.1)
+Requires-Dist: colorama (==0.4.4)
+Requires-Dist: Flask (==2.0.1)
+Requires-Dist: Flask-Cors (==3.0.10)
+Requires-Dist: importlib-metadata (==4.3.0)
+Requires-Dist: itsdangerous (==2.0.1)
+Requires-Dist: Jinja2 (==3.0.1)
+Requires-Dist: joblib (==1.0.1)
+Requires-Dist: MarkupSafe (==2.0.1)
+Requires-Dist: numpy (==1.21.0)
+Requires-Dist: pandas (==1.2.5)
+Requires-Dist: python-dateutil (==2.8.1)
+Requires-Dist: pytz (==2021.1)
+Requires-Dist: scikit-learn (==0.24.2)
+Requires-Dist: scipy (==1.7.0)
+Requires-Dist: six (==1.16.0)
+Requires-Dist: threadpoolctl (==2.1.0)
+Requires-Dist: typing-extensions (==3.10.0.0)
+Requires-Dist: Werkzeug (==2.0.1)
+Requires-Dist: zipp (==3.4.1)
+
+# ml_simple_gui
+
+Простой графический интерфейс для задач машинного обучения.
+
+## Установка
+```
+# pip install ml_simple_gui
+```
+
+## Пример использования:
+```
+from ml_simple_gui import Application
+import os
+from sklearn.svm import SVC
+
+
+def model(**args):
+    return SVC(**args)
+
+
+app = Application(
+    model=model,
+    upload_path=os.path.join('upload'),
+    csv_delimiter=',',
+    model_params=[
+        {
+            'code': 'gamma',
+            'name': 'gamma',
+            'defaultValue': 'scale',
+        }
+    ],
+    server_port=5000
+)
+
+app.run()
+```
+
+Аргумент `model_params` принимает список параметров, которые будут отображаться в интерфейсе и пробрасываться в модель.
+
+Аргумент `upload_path` принимает путь до папки, где будут хранится загруженные файлы. Поддерживаются тольо CSV-файлы.
+
+После инициализации приложения, оно будет доступно по адресу http://127.0.0.1:5000
+
+
