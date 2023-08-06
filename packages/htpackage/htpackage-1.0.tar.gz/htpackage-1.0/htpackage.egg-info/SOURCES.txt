@@ -1,0 +1,12 @@
+setup.cfg
+setup.py
+htpackage/NeighboringPoints.py
+htpackage/OriginalHough.py
+htpackage/RotaryHistograms.py
+htpackage/__init__.py
+htpackage.egg-info/PKG-INFO
+htpackage.egg-info/SOURCES.txt
+htpackage.egg-info/dependency_links.txt
+htpackage.egg-info/not-zip-safe
+htpackage.egg-info/requires.txt
+htpackage.egg-info/top_level.txt
