@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+emmapdf/__init__.py
+emmapdf/pdf2image.py
+emmapdf/pdf2text.py
+emmapdf.egg-info/PKG-INFO
+emmapdf.egg-info/SOURCES.txt
+emmapdf.egg-info/dependency_links.txt
+emmapdf.egg-info/top_level.txt
