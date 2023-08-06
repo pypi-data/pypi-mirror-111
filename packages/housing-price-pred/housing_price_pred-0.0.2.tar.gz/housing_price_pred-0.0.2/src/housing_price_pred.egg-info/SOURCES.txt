@@ -1,0 +1,17 @@
+LICENSE
+README.md
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+src/housing_price_pred/__init__.py
+src/housing_price_pred/ingest_data.py
+src/housing_price_pred/logger.py
+src/housing_price_pred/main.py
+src/housing_price_pred/main_1.py
+src/housing_price_pred/score.py
+src/housing_price_pred/train.py
+src/housing_price_pred.egg-info/PKG-INFO
+src/housing_price_pred.egg-info/SOURCES.txt
+src/housing_price_pred.egg-info/dependency_links.txt
+src/housing_price_pred.egg-info/top_level.txt
