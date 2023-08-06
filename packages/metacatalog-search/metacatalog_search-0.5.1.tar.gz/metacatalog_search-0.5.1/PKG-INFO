@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: metacatalog_search
+Version: 0.5.1
+Summary: Full-Text Search extenstion for Metacatalog
+Home-page: UNKNOWN
+Author: Mirko Mälicke
+Author-email: mirko.maelicke@kit.edu
+License: GPL v3
+Description: # metacatalog_search
+        Full-Text search for MetaCatalog
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

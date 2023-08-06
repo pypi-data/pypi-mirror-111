@@ -1,0 +1,17 @@
+.gitignore
+LICENSE
+README.md
+VERSION
+requirements.txt
+setup.py
+metacatalog_search/__init__.py
+metacatalog_search/api.py
+metacatalog_search/extension.py
+metacatalog_search/manage.py
+metacatalog_search/models.py
+metacatalog_search/util.py
+metacatalog_search.egg-info/PKG-INFO
+metacatalog_search.egg-info/SOURCES.txt
+metacatalog_search.egg-info/dependency_links.txt
+metacatalog_search.egg-info/requires.txt
+metacatalog_search.egg-info/top_level.txt
