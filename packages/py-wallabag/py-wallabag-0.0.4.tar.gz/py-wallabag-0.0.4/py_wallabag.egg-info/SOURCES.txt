@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+py_wallabag.egg-info/PKG-INFO
+py_wallabag.egg-info/SOURCES.txt
+py_wallabag.egg-info/dependency_links.txt
+py_wallabag.egg-info/requires.txt
+py_wallabag.egg-info/top_level.txt
+src/py_wallabag.egg-info/PKG-INFO
+src/py_wallabag.egg-info/SOURCES.txt
+src/py_wallabag.egg-info/dependency_links.txt
+src/py_wallabag.egg-info/requires.txt
+src/py_wallabag.egg-info/top_level.txt
+src/wallabag/__init__.py
+wallabag/__init__.py
+wallabag/datetime_helpers.py
+wallabag/wallabag.py
