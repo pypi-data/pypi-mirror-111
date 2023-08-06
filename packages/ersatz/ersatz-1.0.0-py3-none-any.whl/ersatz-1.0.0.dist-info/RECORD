@@ -1,0 +1,16 @@
+ersatz/__init__.py,sha256=6HGWb19sAgUNd4lfGJ4t_PG7W9hLaAa9VBFLk4VbOJI,897
+ersatz/candidates.py,sha256=U3ULgWvN9il6GWlhnAPSvQCKhszRB0c-8cmWUDHjg7I,3201
+ersatz/dataset.py,sha256=2hRxPQuBOy9G_rtRgKG1nrG8BajgwXAZMLvuB2msur0,11368
+ersatz/determiner.py,sha256=EnUbxmJKzuOk5x3wrF1u95e23GQASsQNaAq_RxQCnSI,3205
+ersatz/model.py,sha256=caOl5xbyawbgBk1o8W1yl_Y7elJZiHu7MeVoL0DppR8,4678
+ersatz/score.py,sha256=i381kt4TDtsYK-ZkH0PectBxKGKr1u4LOdXHJ34vQU8,7183
+ersatz/split.py,sha256=t-DpnqDwE8ADP7cq_SqN0Lab9LiVaQnqR4cghygDi40,12778
+ersatz/subword.py,sha256=x1b_BTu7xL1r2A__cCOA9-bEEuyFW1RCb_hPXW-Uxlc,4026
+ersatz/trainer.py,sha256=_wFHaQIIYp5Y1ZMowzEESukta2E4Z1Cfy8OJQIDt0nQ,18361
+ersatz/utils.py,sha256=ENRx2mQE6vnob1TMI8ILZ3tXM2q5cJJlTVK6WJbHWxw,13107
+ersatz-1.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ersatz-1.0.0.dist-info/METADATA,sha256=IW1HVv2lDc4iGeq7809cRK7lxutVHE3C9gznoFJOd0M,1265
+ersatz-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ersatz-1.0.0.dist-info/entry_points.txt,sha256=rh7EATpN32LRQb4Y8Y9mh_9nZ9Ar9B7E_-3GlM1xVvI,154
+ersatz-1.0.0.dist-info/top_level.txt,sha256=rJOB287mNA2p-nN_ICCCTB5zV2NyRVLCwb9mruw7h4s,7
+ersatz-1.0.0.dist-info/RECORD,,
