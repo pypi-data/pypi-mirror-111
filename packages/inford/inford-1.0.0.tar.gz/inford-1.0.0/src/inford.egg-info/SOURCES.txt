@@ -1,0 +1,12 @@
+LICENCE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+src/inford/__init__.py
+src/inford/module.py
+src/inford.egg-info/PKG-INFO
+src/inford.egg-info/SOURCES.txt
+src/inford.egg-info/dependency_links.txt
+src/inford.egg-info/requires.txt
+src/inford.egg-info/top_level.txt
