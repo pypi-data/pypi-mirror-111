@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: discord-lib
+Version: 0.0.2
+Summary: Create discord.py clients from XML, JSON, yaml etc
+Home-page: https://github.com/CodeWithSwastik/discord-lib
+Author: Swas.py
+License: MIT
+Description: # discord-lib 0.0.2
+        
+        discord-lib currently supports discord bots written in JSON, XML and yaml. It will soon support toml, etc
+        
+        ## Installation
+        
+        ```
+        pip install git+https://github.com/CodeWithSwastik/discord-lib
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: xml
+Provides-Extra: yaml
