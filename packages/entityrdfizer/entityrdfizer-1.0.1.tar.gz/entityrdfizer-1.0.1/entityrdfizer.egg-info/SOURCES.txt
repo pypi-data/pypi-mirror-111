@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+entityrdfizer/ABoxGeneration.py
+entityrdfizer/ABoxTemplateCSVFileToRDF.py
+entityrdfizer/ABoxTemplateCSVFilesToRDF.py
+entityrdfizer/PropertyReader.py
+entityrdfizer/__init__.py
+entityrdfizer/driver.py
+entityrdfizer.egg-info/PKG-INFO
+entityrdfizer.egg-info/SOURCES.txt
+entityrdfizer.egg-info/dependency_links.txt
+entityrdfizer.egg-info/entry_points.txt
+entityrdfizer.egg-info/requires.txt
+entityrdfizer.egg-info/top_level.txt
+entityrdfizer/conf/EntityRDFizer.properties
