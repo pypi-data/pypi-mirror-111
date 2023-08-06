@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: air-drf-relation
+Version: 0.0.13
+Summary: Improved interaction with DRF relations.
+Home-page: https://github.com/bubaley/air-drf-relation
+Author: bubaley
+Author-email: bubaley.fu@gmail.com
+License: MIT
+Keywords: django rest relation nested pk primary object
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# DRF Improved Relations
+
+## Documentation in development
+
