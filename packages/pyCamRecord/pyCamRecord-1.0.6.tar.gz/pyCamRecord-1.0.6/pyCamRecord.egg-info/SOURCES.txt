@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+pyCamRecord/__init__.py
+pyCamRecord.egg-info/PKG-INFO
+pyCamRecord.egg-info/SOURCES.txt
+pyCamRecord.egg-info/dependency_links.txt
+pyCamRecord.egg-info/requires.txt
+pyCamRecord.egg-info/top_level.txt
