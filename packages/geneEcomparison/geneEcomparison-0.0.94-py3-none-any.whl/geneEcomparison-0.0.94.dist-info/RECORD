@@ -1,0 +1,16 @@
+geneEcomparison/App.py,sha256=qC-VzSs_Pwv70vzeH5gaF9Ro1rGg9Yhm7sUQ3AoznTw,966
+geneEcomparison/Comparison.py,sha256=LnuIoqygGDxQnxLb7omHykgXWBOJK1WaQR90EfWWu60,7548
+geneEcomparison/Constants.py,sha256=dWh6Ev2HycbdE5YwD-e6EWp15n7Qmyu-rwZJIyVIwYM,4371
+geneEcomparison/HumanMicroarrayData.py,sha256=28U3rDJJLi5b7kOQ67ZYwVDa_hwJzJ5JUl9Zzy-6L4U,7899
+geneEcomparison/HumanRnaSeq.py,sha256=uTeAEMf_I3QepQbvGysgoxCGYWOVQvAqXvxMB1LdGuE,1352
+geneEcomparison/MouseISHData.py,sha256=E2NhuSpFPi95ylTSUprsluXAmxB5smDXde-09vV9mwE,7339
+geneEcomparison/StructureMap.py,sha256=IG03j8x-vJfAeTCuu01aDEZHP3pDyP-tuBDAnvKJjfE,3080
+geneEcomparison/Utils.py,sha256=fgyh7z0NOr-rutaNIRuvUyFbwDbnWOLR78wVS3Zpnis,7481
+geneEcomparison/Visualisation.py,sha256=sxJq2-Z3vCdCuzemgbfACDMv-_XxkDTfRRsglPf5HRc,22782
+geneEcomparison/__init__.py,sha256=1r6CYwQ8R6wRKpqP0jackMf7Mw5oBXnoXVR6cDPH2r8,213
+geneEcomparison/__main__.py,sha256=jhgbEVRx2BTrMMyg7PsISDDcLWT4pPEfFn5O02ZvX9Q,514
+geneEcomparison-0.0.94.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+geneEcomparison-0.0.94.dist-info/METADATA,sha256=jUwKEFwbBa0kUVz3u1DcuqmWDv_VbiXxlpHRv7LfVIM,8048
+geneEcomparison-0.0.94.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+geneEcomparison-0.0.94.dist-info/top_level.txt,sha256=7DOCYkO-VnesdOWet_62_kFafpd-al29WkeLbhacRWs,16
+geneEcomparison-0.0.94.dist-info/RECORD,,
