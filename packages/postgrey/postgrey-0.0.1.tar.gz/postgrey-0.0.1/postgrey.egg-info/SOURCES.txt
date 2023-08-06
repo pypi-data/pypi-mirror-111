@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+postgrey/__init__.py
+postgrey/connection.py
+postgrey/utils.py
+postgrey.egg-info/PKG-INFO
+postgrey.egg-info/SOURCES.txt
+postgrey.egg-info/dependency_links.txt
+postgrey.egg-info/requires.txt
+postgrey.egg-info/top_level.txt
