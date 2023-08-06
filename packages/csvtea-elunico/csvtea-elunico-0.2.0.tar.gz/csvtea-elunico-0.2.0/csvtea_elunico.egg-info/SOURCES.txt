@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+csvtea/__init__.py
+csvtea/cells.py
+csvtea/csvparser.py
+csvtea/format.py
+csvtea_elunico.egg-info/PKG-INFO
+csvtea_elunico.egg-info/SOURCES.txt
+csvtea_elunico.egg-info/dependency_links.txt
+csvtea_elunico.egg-info/top_level.txt
