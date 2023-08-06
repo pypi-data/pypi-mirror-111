@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: dst-annotations
+Version: 2021.1a0
+Summary: Features for dynamic inspection, interpretation and transformation of python's type annotations.
+Home-page: https://gitlab.com/dst-owl/annotations
+Author: DST Owl
+Author-email: owl.dst@gmail.com
+Maintainer: DST Owl
+Maintainer-email: owl.dst@gmail.com
+License: MIT
+Keywords: typing,annotations,inspect,type hints
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typing-extensions
+Provides-Extra: dev
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: pylint-json2html ; extra == 'dev'
+Requires-Dist: pycodestyle ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: yapf ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: types-pkg-resources ; extra == 'dev'
+
+# DST Annotations
+
+**`dst_annotations`** provides features for dynamic inspection, interpretation and transformation of python's type annotations.
+
+
