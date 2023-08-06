@@ -1,0 +1,1 @@
+from .pyfinidash import InfinidashClient
