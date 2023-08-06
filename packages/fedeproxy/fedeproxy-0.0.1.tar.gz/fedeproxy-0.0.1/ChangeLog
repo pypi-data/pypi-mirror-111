@@ -1,0 +1,45 @@
+CHANGES
+=======
+
+0.0.1
+-----
+
+* version 0.0.1
+* do not commit AUTHORS
+* release instructions
+* tests: run gitlab & gitea tests
+* architecture: add support for gitea
+* tests: simplify gitlab setup
+* interface: add user to forge interface
+* tests: gitea internal URL port
+* tests: setup two gitea instances
+* tests: rework the gitlab main function
+* s/FEDEPROXY\_IP/MY\_IP/
+* reorganize the codebase
+* create the dvcs interface
+* create the forge interface
+* implement class for high level git operations
+* black: normalize strings
+* batch pre-commit run
+* add pre-commit configuration
+* bootstrap direnv
+* upgrade gitlab to 13.12.3
+* setup-gitlab needs IP
+* run two gitlab servers for testing
+* test ci
+* test ci
+* gitlab: issue create/get/delete
+* gitlab: set the user for a project
+* gitlab: create/get/delete user
+* gitlab: it's a tar.gz not a zip
+* gitlab: skip another race condition in project creation
+* gitlab: implement project export
+* get retry from fedeproxy
+* implement gitlab project get/create/delete
+* test gitlab
+* not enough RAM
+* reduce the memory requirements by running a single worker
+* run only one GitLab
+* localhost does not exist in the CI
+* create two GitLab instances for testing purposes
+* initial
