@@ -1,0 +1,10 @@
+fast_logging/__init__.py,sha256=XgVJdUd3pXyUyxMTylTeIKiLHgHO_ixz2wBqHnuaJYM,1946
+fast_logging/console.py,sha256=1Cr9nieHPCDQlasZ1o3hUY3cfdxhkgp3qn_Xwv91-ec,1347
+fast_logging/fastlogging.py,sha256=yfUl-wMqlqf-tLQ_PLx4tgo79KNubwgmBXnGnTvTNHQ,19972
+fast_logging/network.py,sha256=RT9iyT_MrHw2NpprYXVntY_QZKI1JSQikb-NG5Kfhdo,11270
+fast_logging/optimize.py,sha256=1Ut-uvEK4BoNhTZZ2GkJQiyBUckg-5eqgoRvyJMM9U4,9983
+fast_logging-1.0.2.dist-info/LICENSE.txt,sha256=YVtrH8g1urD56a6z-iA1tXIVqBYgTWW-Ms1SSn-CzkY,1091
+fast_logging-1.0.2.dist-info/METADATA,sha256=i39fyeZB9HaqNFvSpVnSz58ragyVZiLve4su__6ekIA,6136
+fast_logging-1.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+fast_logging-1.0.2.dist-info/top_level.txt,sha256=YJhZc6uF_Wj0Ps8xQXjaboy7eiFk1rBbT9nz9Lp1eq8,13
+fast_logging-1.0.2.dist-info/RECORD,,
