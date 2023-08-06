@@ -1,0 +1,72 @@
+---
+event: on_error
+question: |
+  Sorry, we have encountered an error.
+buttons:
+  - Exit: exit
+    url: https://docassemble.org
+---
+event: call_number
+question: |
+  Please call (215) 686-7027 for assistance.
+buttons:
+  - Exit: exit
+    url: https://docassemble.org
+---
+mandatory: true
+code: |
+  welcome
+  if welcome == False:
+    call_number
+---
+mandatory: true
+field: welcome
+question: |
+  Document Assembly Services for the Office of Judicial Records
+subquestion: |
+  Welcome to the Office of Judicial Records. This website is designed to help   Philadelphians who are representing themselves in court fill out necessary documents. 
+
+  You cannot use our forms unless you accept our Terms of Use.
+
+  * This site does not give legal advice. Talk to a lawyer if you need legal advice.
+  * You must not use this site for any commercial purpose.
+  * This site is for people who meet any of the following criteria:
+      1. You live in the City of Philadelphia.
+      2. You are planning to represent yourself in court in a civil matter.
+    
+  This website will not file your documents for you. To do so, you will need to You     must first file  in the Office of Judicial Records which is located in City Hall room 296. The cost is $333.23 + $17.00 per defendant.
+
+  Please review [our website](https://www.courts.phila.gov/ejc/) for more information.
+  
+choices:
+  - I understand: True
+  - I do not understand: False
+---
+mandatory: true
+need: 
+  welcome
+field: account
+question: |
+   Create an account (optional)
+subquestion: |
+  Please create an account if you want to save your answers. You can use this website without signing up, but you will not be able to save your answers after you leave the website. 
+  
+  An account requires an you to have an email address. You can create an account at any time by clicking the "Sign In" button on the upper left hand of this page.
+  
+  ${ action_button_html("https://ejcrc.ecernea.com/user/register", label="Create an account", color="primary", size="md") }
+continue button label: Continue without an account
+---
+mandatory: true
+question: |
+  Why are you using this website?
+subquestion: |
+  - [Someone is trying to kick me out of where I live]
+  - [I have received notice that my property is being put up for sheriff sale]
+  - [I am trying to remove someone from a place I own]
+  - [I have already used this website and I am looking for a specific form]
+  
+  [Someone is trying to kick me out of where I live]: ${ interview_url(i='docassemble.EJCRC:data/questions/LLT_or_ejectment.yml') }
+  [I have received notice that my property is being put up for sheriff sale]: ${ interview_url(i='docassemble.EJCRC:data/questions/sheriff_sale.yml') }
+  [I am trying to remove someone from a place I own]: ${ interview_url(i='docassemble.EJCRC:data/questions/LLT_or_ejectment.yml') }
+  [I have already used this website and I am looking for a specific form]: ${ interview_url(i='docassemble.EJCRC:data/questions/form_list.yml') }
+
