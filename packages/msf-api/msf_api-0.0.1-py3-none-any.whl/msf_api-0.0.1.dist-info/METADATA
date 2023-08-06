@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: msf-api
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: requests-cache
+Requires-Dist: pydantic
+Requires-Dist: importlib ; python_version == "3.8"
+
+UNKNOWN
+
