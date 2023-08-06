@@ -1,0 +1,7 @@
+[console_scripts]
+hint = dofast.sli_entry:_hint_wubi
+pxy = dofast.sli_entry:pxy
+secoss = dofast.sli_entry:secure_oss
+sli = dofast.sli_entry:main
+snc = dofast.sli_entry:_sync
+
