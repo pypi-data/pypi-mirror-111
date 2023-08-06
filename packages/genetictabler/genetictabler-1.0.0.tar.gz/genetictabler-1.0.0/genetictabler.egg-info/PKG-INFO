@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: genetictabler
+Version: 1.0.0
+Summary: Time Table scheduling using genetic algorithm.
+Home-page: UNKNOWN
+Author: Dipan Nanda and Ashish Shah
+Author-email: d19cyber@gmail.com
+License: UNKNOWN
+Keywords: python,geneticalgorithm,genes,chromosomes,timetable
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# GeneticTabler
+Time Table scheduling using genetic algorithm.
+
+Developed by [Dipan Nanda](https://github.com/themagicalmammal) and [Ashish Shah](https://github.com/ash-R2D2) (c) 2021
+
+## Example of Usage
+
+```python
+from genetic import fill_timetable
+
+total_classes = 4
+no_courses = 8
+slots = 6
+total_days = 7
+daily_repetition = 3
+
+table = fill_timetable(
+    total_classes,
+    no_courses,
+    slots,
+    total_days,
+    daily_repetition,
+)
+
+for i in table:
+    for j in i:
+        print(j)
+    print("-----------------------------------")
+```
+
+
