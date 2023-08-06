@@ -1,0 +1,3 @@
+[console_scripts]
+craftslicer = craftslicer.__main__:main
+
