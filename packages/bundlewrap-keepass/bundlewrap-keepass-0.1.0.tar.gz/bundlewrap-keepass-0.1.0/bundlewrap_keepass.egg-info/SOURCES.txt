@@ -1,0 +1,9 @@
+LICENSE
+README.md
+bwkeepass.py
+setup.py
+bundlewrap_keepass.egg-info/PKG-INFO
+bundlewrap_keepass.egg-info/SOURCES.txt
+bundlewrap_keepass.egg-info/dependency_links.txt
+bundlewrap_keepass.egg-info/requires.txt
+bundlewrap_keepass.egg-info/top_level.txt
