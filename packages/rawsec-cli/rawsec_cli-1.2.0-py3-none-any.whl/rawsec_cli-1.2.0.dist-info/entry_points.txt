@@ -1,0 +1,3 @@
+[console_scripts]
+rawsec-cli = rawsec_cli.cli.cli:cli
+
