@@ -1,0 +1,13 @@
+exportroi.py,sha256=BnryiQUPA2XnJ0heTZ9wprFVvQlmd4gUtXoo8PmkPZQ,7041
+imgprofiler.py,sha256=CLa-qEmtm9v41d3WO_UCw7WjmvjTWTI4JOdwVIplhpo,7016
+importpw.py,sha256=koemFy51M53jVkJLPMMzF5Prpnvxt7ifgJ4CS49HmDY,19164
+importroi.py,sha256=MB8b6OxAJYE2ozoiUko-yZcHRVjzuDi1eamhHQknO0Q,15669
+napari_jroireader.py,sha256=NiRidg1a-1xF1TbI4gqeRkXjFS1WYzsftaTFoYCYqoY,1277
+napari_jroiwriter.py,sha256=o11RCR4YFBqlHjDw7rIQl-YSL0u6GxyKF9w9NZoifL4,1076
+writepw.py,sha256=nlEpPdUunbMSoktN50s3BJi8HtGOqgspOid5Te6jX7A,7481
+napari_jroitools-0.0.19.dist-info/METADATA,sha256=c0HSqZh6MjMkEOWEAXFgYZZ47olxhpd9uFxxiFEyvbQ,410
+napari_jroitools-0.0.19.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+napari_jroitools-0.0.19.dist-info/entry_points.txt,sha256=oTfO7muTd6-K350ykWmvTPSCDfrZUD25eKWPHxJawWA,93
+napari_jroitools-0.0.19.dist-info/license.txt,sha256=3-2JWQ3mhQuKJgdN1ZbbeEvPNs3W43Abv5jmDaMBbMU,18831
+napari_jroitools-0.0.19.dist-info/top_level.txt,sha256=5wWgl5jsUVtlcaQX2IfBZ3iNNWEC6OjVzU2MHD32hKs,85
+napari_jroitools-0.0.19.dist-info/RECORD,,
