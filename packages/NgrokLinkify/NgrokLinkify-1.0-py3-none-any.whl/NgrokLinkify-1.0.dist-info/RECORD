@@ -1,0 +1,10 @@
+NgrokLinkify/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+NgrokLinkify/__main__.py,sha256=8VvbYYjg64MwEddr9G6VJda4_qFOePzMFNTnRGMAxkw,64
+NgrokLinkify/base.py,sha256=IIeG1aZzwhnwBTb5jJzOOfXTfFxwlypzyLywkWl2Pcg,6043
+NgrokLinkify/linkify.py,sha256=A2RQE9OJJsh3LetPl6gv8suellH1pycQ-RMAhv88y9c,6328
+NgrokLinkify-1.0.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+NgrokLinkify-1.0.dist-info/METADATA,sha256=gfBNifa0tLR9R9jF9EfnmVgyQz6Y_IB8SWOWdrgfqu8,8591
+NgrokLinkify-1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+NgrokLinkify-1.0.dist-info/entry_points.txt,sha256=gjWCIaXlW3-gkgbd1s6f_FBSsB21_qLzHkdDRIdURWo,55
+NgrokLinkify-1.0.dist-info/top_level.txt,sha256=ClbwV8Fk5pmSXL5uprPUQCc2d2OznA48W4ELn1reDsQ,13
+NgrokLinkify-1.0.dist-info/RECORD,,
