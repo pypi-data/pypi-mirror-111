@@ -1,0 +1,7 @@
+README.md
+setup.py
+plagchecker/__init__.py
+plagchecker.egg-info/PKG-INFO
+plagchecker.egg-info/SOURCES.txt
+plagchecker.egg-info/dependency_links.txt
+plagchecker.egg-info/top_level.txt
