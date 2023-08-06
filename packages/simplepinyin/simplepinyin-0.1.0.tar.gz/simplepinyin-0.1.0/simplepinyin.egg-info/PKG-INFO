@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: simplepinyin
+Version: 0.1.0
+Summary: This package integrates the basic Pinyin to Chinese functions, making Python-based Pinyin-Chinese conversion simple and convenient.
+Home-page: https://github.com/chenmingxiang110/SimpleChinese2
+Author: Chen, Mingxiang
+Author-email: chenmingxiang110@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
