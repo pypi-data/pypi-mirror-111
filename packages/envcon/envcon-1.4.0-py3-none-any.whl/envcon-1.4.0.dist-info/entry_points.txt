@@ -1,0 +1,8 @@
+[console_scripts]
+deploy=poetry_scripts:deploy
+fmt=poetry_scripts:black
+increment_minor=poetry_scripts:increment_minor
+lint=poetry_scripts:flake8
+mypy=poetry_scripts:mypy
+mypy-all=poetry_scripts:mypy_all
+
