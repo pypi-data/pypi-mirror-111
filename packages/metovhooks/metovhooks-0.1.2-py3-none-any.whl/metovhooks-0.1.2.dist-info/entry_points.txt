@@ -1,0 +1,3 @@
+[console_scripts]
+require_version_bump = metovhooks.require_version_bump:main
+
