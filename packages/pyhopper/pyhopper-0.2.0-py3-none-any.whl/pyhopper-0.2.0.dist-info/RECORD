@@ -1,0 +1,17 @@
+pyhopper/__init__.py,sha256=Us0uDrMIyglbcJMaYJWsU4WWGFbPCrvrRLZK_F0c-zI,1215
+pyhopper/cache.py,sha256=HomvpsJ80FEMZ8A4E4QWQZNyNJNJDbenPRuBoHrjRqo,1586
+pyhopper/parallel.py,sha256=7B_-jIr3Jj3r--pyXbRVewcCC3vuL-5ULtxgsPtzhqY,15193
+pyhopper/parameters.py,sha256=PQZSLu5C3Fu522Erq0BrgfRbp8T5k3Jxtr_ZD4AGQTM,12093
+pyhopper/search.py,sha256=rkpmO7tsiDNr8B5-5klGuqbu4bFjvM349Wxgk2sO_BU,45107
+pyhopper/utils.py,sha256=1cirm3ROSSyOAGh3tHPz-RxF8dCQ6Pn415y1EFU4l-M,7942
+pyhopper/callbacks/__init__.py,sha256=yDoUZqrrCFrZvF93viemPCJYLhzSQWLEi7yOhk6NU14,693
+pyhopper/callbacks/callbacks.py,sha256=Cdej4I8TRSX3sn_t-Oam_9EndXSQAx4mvxeeY1N5iT8,2154
+pyhopper/callbacks/mlflow.py,sha256=GMxxh4r67kHu7C8nVwzP0nzakmrw2r9ktN9bVQeGsxc,1080
+pyhopper/callbacks/wandb.py,sha256=f21InbrSylcQenK88JMFW0NRVNVG_tAWstgGZboHN24,1423
+pyhopper/cancellers/__init__.py,sha256=e_WqbtEpnYZDuFSwoqim_Xss-TNJfd0QhZwdszU-egg,875
+pyhopper/cancellers/early_cancellers.py,sha256=Ex4yU_Yel6fM1_ttDljq5pKJ6sHj-EYEeZEsmsKXbGg,5900
+pyhopper-0.2.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pyhopper-0.2.0.dist-info/METADATA,sha256=cvk6Jrw6eTN3NSZr85gvd-amzF2Tie2Ju8nnASWtHBo,759
+pyhopper-0.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pyhopper-0.2.0.dist-info/top_level.txt,sha256=_jccS1QJgvI_H_0NWpgcrjrxnkSw2SASNdfloLZcjHk,9
+pyhopper-0.2.0.dist-info/RECORD,,
