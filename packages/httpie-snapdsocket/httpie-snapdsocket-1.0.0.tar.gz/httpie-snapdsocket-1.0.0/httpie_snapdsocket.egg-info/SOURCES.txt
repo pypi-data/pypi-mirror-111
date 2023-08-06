@@ -1,0 +1,11 @@
+LICENSE
+README.rst
+httpie_snapdsocket.py
+setup.py
+httpie_snapdsocket.egg-info/PKG-INFO
+httpie_snapdsocket.egg-info/SOURCES.txt
+httpie_snapdsocket.egg-info/dependency_links.txt
+httpie_snapdsocket.egg-info/entry_points.txt
+httpie_snapdsocket.egg-info/not-zip-safe
+httpie_snapdsocket.egg-info/requires.txt
+httpie_snapdsocket.egg-info/top_level.txt

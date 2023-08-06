@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: httpie-snapdsocket
+Version: 1.0.0
+Summary: Snapd socket transport plugin for HTTPie.
+Home-page: https://github.com/httpie/httpie-snapdsocket
+Author: Mickaël Schoentgen
+Author-email: mickael@apible.io
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Environment :: Plugins
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Utilities
+License-File: LICENSE
+
+Snapd socket transport plugin for `HTTPie <https://httpie.io>`_
+===============================================================
+
+`Snap <https://snapcraft.io/>`_ is an app store for Linux.
+Snapd is the custom URL protocol used to talk to that store using their `REST API <https://snapcraft.io/docs/snapd-api>`_.
+
+
+Installation
+------------
+
+.. code-block:: bash
+
+    $ python -m pip install --upgrade httpie-snapdsocket
+
+
+Example usage
+-------------
+
+To query ``httpie`` Snap package details:
+
+.. code-block:: bash
+
+    $ http 'snapd:///v2/find?name=httpie'
+
+Have a look at the `Snapd REST API documentation <https://snapcraft.io/docs/snapd-api>`_ for more information.
+
+
+Requirements
+------------
+
+- `requests-unixsocket <https://github.com/msabramo/requests-unixsocket/>`_
+
+Credits
+-------
+
+Based on the original code from @chipaca (`chipaca/httpie-snap <https://github.com/chipaca/httpie-snap>`_).
+
