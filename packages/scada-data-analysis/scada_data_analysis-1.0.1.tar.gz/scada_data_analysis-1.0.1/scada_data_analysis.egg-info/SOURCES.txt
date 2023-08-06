@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+scada_data_analysis.egg-info/PKG-INFO
+scada_data_analysis.egg-info/SOURCES.txt
+scada_data_analysis.egg-info/dependency_links.txt
+scada_data_analysis.egg-info/top_level.txt
+test/test_power_curve_filtering.py
