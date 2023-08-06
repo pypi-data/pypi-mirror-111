@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: smart_choice
+Version: 0.0.0
+Summary: Decision Making Analysis
+Home-page: http://github.com/jdvelasq/smart-choice
+Author: Juan D. Velasquez
+Author-email: jdvelasq@unal.edu.co
+License: MIT
+Keywords: analytics
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Provides: smart_choice
+License-File: LICENSE
+
+Decision Analysis using Decision Trees for Prescriptive Analytics
+

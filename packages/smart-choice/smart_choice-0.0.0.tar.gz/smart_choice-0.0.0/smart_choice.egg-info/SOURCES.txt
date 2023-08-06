@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+smart_choice/__init__.py
+smart_choice.egg-info/PKG-INFO
+smart_choice.egg-info/SOURCES.txt
+smart_choice.egg-info/dependency_links.txt
+smart_choice.egg-info/requires.txt
+smart_choice.egg-info/top_level.txt
+tests/__init__.py
+tests/_test_decisiontree.py
+tests/test_nodes.py
+tests/test_oilexample.py
+tests/test_stbook.py
+tests/test_stguide.py
