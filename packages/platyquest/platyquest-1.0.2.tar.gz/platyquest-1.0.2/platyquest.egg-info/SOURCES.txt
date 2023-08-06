@@ -1,0 +1,8 @@
+README.md
+setup.py
+platyquest/__init__.py
+platyquest/platyquest.py
+platyquest.egg-info/PKG-INFO
+platyquest.egg-info/SOURCES.txt
+platyquest.egg-info/dependency_links.txt
+platyquest.egg-info/top_level.txt
