@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+src/flask_sample/__init__.py
+src/flask_sample/__main__.py
+src/flask_sample/app.py
+src/flask_sample/wsgi.py
+src/flask_sample.egg-info/PKG-INFO
+src/flask_sample.egg-info/SOURCES.txt
+src/flask_sample.egg-info/dependency_links.txt
+src/flask_sample.egg-info/entry_points.txt
+src/flask_sample.egg-info/requires.txt
+src/flask_sample.egg-info/top_level.txt
+src/flask_sample/static/bootstrap/4.4.1/css/bootstrap.css
+src/flask_sample/static/bootstrap/4.4.1/js/bootstrap.js
+src/flask_sample/static/custom/1.0/style.css
+src/flask_sample/templates/index.html

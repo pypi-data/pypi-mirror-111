@@ -1,0 +1,22 @@
+<!-- Starter Template Bootstrap 4 --->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/4.4.1/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='custom/1.0/style.css') }}">
+
+    <title>Sample flask app</title>
+  </head>
+  <body>
+
+    <div class="container h-100">
+      <div class="row h-100 justify-content-center align-items-center">
+          Sample flask app
+          <br>Flask version {{ flask_ver }}
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='bootstrap/4.4.1/js/bootstrap.js') }}"></script>
+  </body>
+</html>
