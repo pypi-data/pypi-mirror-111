@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: conscript
+Version: 0.1.0
+Summary: Conscript console scripts in your own Swiss Army Knife.
+Home-page: https://github.com/jsirois/conscript
+Author: John Sirois
+Author-email: john.sirois@gmail.com
