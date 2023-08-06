@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: pydiggs
+Version: 0.1.2
+Summary: A Python package for Data Interchange for Geotechnical and Geoenvironmental Specialists (DIGGS).
+Home-page: https://github.com/xinp-hub/pydiggs
+Author: Xin Peng
+Author-email: xin_peng@outlook.com
+License: GNU General Public License v3
+Keywords: pydiggs
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+License-File: LICENSE
+License-File: AUTHORS.rst
+
+=======
+pydiggs
+=======
+
+
+.. image:: https://img.shields.io/pypi/v/pydiggs.svg
+        :target: https://pypi.python.org/pypi/pydiggs
+
+.. image:: https://travis-ci.com/xinp-hub/pydiggs.svg?branch=master
+        :target: https://travis-ci.com/github/xinp-hub/pydiggs
+        :alt: Build Status
+
+.. image:: https://readthedocs.org/projects/pydiggs/badge/?version=latest
+        :target: https://pydiggs.readthedocs.io/en/latest/?version=latest
+        :alt: Documentation Status
+
+
+.. image:: https://pyup.io/repos/github/xinp-hub/pydiggs/shield.svg
+     :target: https://pyup.io/account/repos/github/xinp-hub/pydiggs/
+     :alt: Updates
+
+
+
+A Python package for Data Interchange for Geotechnical and Geoenvironmental Specialists (DIGGS).
+
+
+* Free software: GNU General Public License v3
+* Documentation: https://pydiggs.readthedocs.io.
+* GitHub: https://github.com/xinp-hub/pydiggs.
+
+
+Features
+--------
+
+* Validate DIGGS instance files against DIGGS XSD and Schematron schemas.
+
+
+=======
+History
+=======
+  
+0.1.0 (2021-06-14)
+------------------
+
+* First release on PyPI.
+* Added DIGGS Schema validation features.
+
+0.1.2 (2021-06-30)
+------------------
+
+* Created a "validator" Class is  to incorperate all the validation-related methods.
+* Added an argument to allow users specifiying a specific DIGGS Schema version for validation.
+* Added a Schematron validation method.
+* updated Documentation.
+
