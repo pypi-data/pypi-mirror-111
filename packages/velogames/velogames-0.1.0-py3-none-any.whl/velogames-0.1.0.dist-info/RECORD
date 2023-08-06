@@ -1,0 +1,9 @@
+velogames/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+velogames/cli.py,sha256=-BFNrvzM_zz-Wu7unPzHyPnlkUP5cMWkEaLRyng3lmE,2108
+velogames/commands.py,sha256=CEVo1k9wIV1BEBA4lJU9NDIu3yN_Sxf8DmThtec7n-k,2023
+velogames/containers.py,sha256=PZPoAiRAGRIT-nrpyq8CsH3hEbMw0xRUNjsjCNIajlk,1263
+velogames/parser.py,sha256=pW8DYo1_SFWh0SE_75QS0EXPkqG7wlJkpegQPob-NcE,4952
+velogames-0.1.0.dist-info/entry_points.txt,sha256=5CrkT9Tjud1KFj5TVqTftWAUT9_wfFW_Zyv-niPJWyM,48
+velogames-0.1.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+velogames-0.1.0.dist-info/METADATA,sha256=suWRX9DL0dfGCqCqU7ILey8VkFewtiefUYRjxo5IEQI,545
+velogames-0.1.0.dist-info/RECORD,,
