@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: weworkapi-cfomp
+Version: 1.1.4
+Summary: wework server side api
+Home-page: UNKNOWN
+Author: chenhp
+Author-email: chenhp@shchinafortune.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: requests
+Requires-Dist: pycryptodome
+Requires-Dist: PyYAML
+Requires-Dist: flatten-dict
+Requires-Dist: dict-recursive-update
+
+# 简介
+  企业微信服务端API，运管平台依据 https://github.com/sbzhu/weworkapi_python.git 改写成python3版本
+  企业微信服务端API文档地址 https://work.weixin.qq.com/api/doc/90000/90135/90664
+
+
+  运管平台目前和企业微信的集成主机在以下两个应用场景：
+  1. 发送应用消息， https://work.weixin.qq.com/api/doc/90000/90135/90236
+  2. 接收消息与事件， https://work.weixin.qq.com/api/doc/90000/90135/90237
+

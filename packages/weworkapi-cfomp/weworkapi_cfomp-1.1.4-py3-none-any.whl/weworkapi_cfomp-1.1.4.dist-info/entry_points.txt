@@ -1,0 +1,3 @@
+[console_scripts]
+wework-sendmsg = wework_sendmsg.sendmsg:main
+
