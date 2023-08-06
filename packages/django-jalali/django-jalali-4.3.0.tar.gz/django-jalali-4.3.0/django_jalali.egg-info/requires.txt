@@ -1,0 +1,5 @@
+jdatetime>=2.0
+django>=2.2
+
+[drf]
+djangorestframework>=3.12
