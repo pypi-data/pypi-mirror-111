@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+redman/__init__.py
+redman/__main__.py
+redman/cli.py
+redman/redman.py
+redman/redmanrc.py
+redman/redmine_api.py
+redman.egg-info/PKG-INFO
+redman.egg-info/SOURCES.txt
+redman.egg-info/dependency_links.txt
+redman.egg-info/requires.txt
+redman.egg-info/top_level.txt
