@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: quant-data-sdk
+Version: 0.2.3
+Summary: quant-data-sdk - sdk for quant data project
+Home-page: UNKNOWN
+Author: Rafał Niewiński
+Author-email: rafalniewinski95@gmail.com
+License: Apache 2.0
+Description: # QuantData sdk
+        
+        # auth token
+        
+            for access write to support@quantdata.science
+        
+        # simple usage:
+        
+            get companies:
+        
+                api = QuantumDataApi(API_TOKEN)
+                response = api.get_companies()
+        
+        
+            get quotations:
+            
+                api = QuantumDataApi(API_TOKEN)
+                response = api.get_quotations_as_df("KGHM", date_from="2015-01-01", date_to="2021-01-01", stock="GPW")
+        
+            get reports:
+        
+                api = QuantumDataApi(API_TOKEN)
+                response = api.get_reports("KGHM")
+        
+Keywords: quantdata sdk
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7.*
+Description-Content-Type: text/markdown
