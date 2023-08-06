@@ -1,0 +1,46 @@
+{
+  "editor": "two_lines",
+  "reviewer": "two_lines",
+  "scheduler": "base",
+  "tags": [
+    "general",
+    "green",
+    "green"
+  ],
+  "history": [
+    [
+      "2021-06-28",
+      2,
+      "create"
+    ],
+    [
+      "2021-06-28",
+      1,
+      "create"
+    ],
+    [
+      "2021-06-28",
+      2,
+      "create"
+    ],
+    [
+      "2021-06-28",
+      1,
+      "exit"
+    ],
+    [
+      "2021-06-28",
+      0,
+      "again"
+    ],
+    [
+      "2021-06-29",
+      0,
+      "good"
+    ]
+  ],
+  "deleted": false,
+  "due_date": "2021-07-02",
+  "siblings": [],
+  "string": "this | also"
+}
