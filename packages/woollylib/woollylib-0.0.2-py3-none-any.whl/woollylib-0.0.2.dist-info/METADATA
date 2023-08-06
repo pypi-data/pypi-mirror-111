@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: woollylib
+Version: 0.0.2
+Summary: This Library for pytorch based utilities which will be used for training and visualizing cv models
+Home-page: https://github.com/woolly-of-cv/pytorch-lib
+Author: Team Woolly
+Author-email: teamwoolly.in@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: torchsummary (==1.5.1)
+Requires-Dist: torchvision (==0.10.0)
+Requires-Dist: opencv-python-headless (==4.5.2.54)
+Requires-Dist: albumentations (==1.0.0)
+Requires-Dist: matplotlib (==3.4.2)
+Requires-Dist: torch (==1.9.0)
+Requires-Dist: numpy (==1.21.0)
+
+# Woolly-of-CV
+This repo contains the Machine Learning and Computer Vision Library for Pytorch built by Team_Woolly
+
+## Contributers
+* [Ammar Adil](https://github.com/adilsammar)
+* [Krithiga](https://github.com/BottleSpink)
+* [Shashwat Dhanraaj](https://github.com/sdhanraaj12)
+* [Srikanth Kandarp](https://github.com/Srikanth-Kandarp)
+
+## Installation 
+
+```
+pip install woollylib==0.1.0
+```
+* URL : https://pypi.org/project/woollylib/0.1.0/
+
+
