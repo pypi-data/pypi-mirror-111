@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: dolead-entry-points
+Version: 0.0.7
+Summary: Multi transport client/server solution
+License: GPLv2
+Author: François Schmidts
+Author-email: francois@schmidts.fr
+Requires-Python: >=3.7,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: celery (>=3.1.17)
+Requires-Dist: requests (>=2.13.0)
