@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: DiscordBotImportPackage
+Version: 0.0.1
+Summary: Just import this package and import all important packages for a Discord Bot with it!
+Home-page: https://github.com/WorldaDev
+Author: WorldaDev
+Author-email: worldadev@so-gehts.tk
+License: MIT
+Description: Just import this package and import all important packages for a Discord Bot with it!
+        
+        Required package:
+        discord.py
+        datetime
+        datetime2
+        asyncio
+        os
+        shutil
+        configparser
+        
+        
+Keywords: discord,bot,dc
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
