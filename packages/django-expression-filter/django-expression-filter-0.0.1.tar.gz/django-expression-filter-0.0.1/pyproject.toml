@@ -1,0 +1,55 @@
+[tool.black]
+skip-string-normalization = true
+
+[tool.isort]
+profile = "black"
+
+[tool.poetry]
+name = "django-expression-filter"
+version = "0.0.1"
+description = "A class for Django filters to allow direct filtering on expressions, as you would normally do with annotations, so the annotation does not need to happen."
+license = "ISC"
+authors = ["Hameed Gifford <giff.h92@gmail.com>"]
+readme = "README.rst"
+repository = "https://github.com/hamstap85/django-expression-filter/"
+keywords = ["django", "filter", "annotation", "bypass", "performance"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Framework :: Django",
+    "Framework :: Django :: 2.2",
+    "Framework :: Django :: 3.0",
+    "Framework :: Django :: 3.1",
+    "Framework :: Django :: 3.2",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: ISC License (ISCL)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+packages = [
+    { include = "expression_filter" },
+]
+include = [
+    "CHANGELOG.rst",
+    "LICENSE",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.6.2,<4"
+Django = ">=2.2,<4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+black = "^21.6b0"
+isort = "^5.9.1"
+Pygments = "^2.9.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

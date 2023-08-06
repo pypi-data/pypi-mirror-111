@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: django-expression-filter
+Version: 0.0.1
+Summary: A class for Django filters to allow direct filtering on expressions, as you would normally do with annotations, so the annotation does not need to happen.
+Home-page: https://github.com/hamstap85/django-expression-filter/
+License: ISC
+Keywords: django,filter,annotation,bypass,performance
+Author: Hameed Gifford
+Author-email: giff.h92@gmail.com
+Requires-Python: >=3.6.2,<4
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.2
+Classifier: Framework :: Django :: 3.0
+Classifier: Framework :: Django :: 3.1
+Classifier: Framework :: Django :: 3.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: Django (>=2.2,<4)
+Project-URL: Repository, https://github.com/hamstap85/django-expression-filter/
+Description-Content-Type: text/x-rst
+
+About
+=====
+
+(WIP)
+
+This package provides a class that enables direct filtering on an expression that you'd usually use as an annotation.
+
+Usage
+=====
+
+The class ``AnnotationBypass`` takes 3 arguments. The first is any valid annotation value, the second is the lookup string you'd use in the filter kwarg name, the third is the value you'd use for the filter.
+
+.. code-block:: python
+
+    from expression_filter import AnnotationBypass
+
+    filter = AnnotationBypass(Sum('book__page_count'), 'gte', 1000)
+
+But why
+=======
+
+Consider the following:
+
+.. code-block:: python
+
+    Book.objects.annotate(words_per_page=F('word_count') / F('page_count')).filter(words_per_page__gte=100)
+
+This executes the following query:
+
+.. code-block:: sql
+
+    SELECT `books_book`.`id`,
+           `books_book`.`word_count`,
+           `books_book`.`page_count`,
+           `books_book`.`word_count` / `books_book`.`page_count` AS `words_per_page`
+    FROM `books_book`
+    WHERE `books_book`.`word_count` / `books_book`.`page_count` >= 100
+
+Notice that the expression is duplicated, as using the ``words_per_page`` annotation by name in the ``WHERE`` clause is not allowed. Usually the annotated value is not needed in the response, and depending on how complex the annotation is or how many objects are returned, this could have a performance impact.
+
+This is better:
+
+.. code-block:: python
+
+    from expression_filter import AnnotationBypass
+
+    Book.objects.filter(AnnotationBypass(F('word_count') / F('page_count'), 'gte', 100))
+
+.. code-block:: sql
+
+    SELECT `books_book`.`id`,
+           `books_book`.`word_count`,
+           `books_book`.`page_count`
+    FROM `books_book`
+    WHERE `books_book`.`word_count` / `books_book`.`page_count` >= 100
+
