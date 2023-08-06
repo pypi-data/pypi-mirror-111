@@ -1,0 +1,16 @@
+.hgignore
+LICENSE
+MANIFEST.in
+README.md
+coil.png
+rb_chip_coils.png
+setup.py
+torc/__init__.py
+torc/__version__.py
+torc/example.py
+torc/torc.py
+torc.egg-info/PKG-INFO
+torc.egg-info/SOURCES.txt
+torc.egg-info/dependency_links.txt
+torc.egg-info/requires.txt
+torc.egg-info/top_level.txt
