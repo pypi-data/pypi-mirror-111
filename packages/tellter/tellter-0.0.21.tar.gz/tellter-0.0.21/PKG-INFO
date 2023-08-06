@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: tellter
+Version: 0.0.21
+Summary: A library that connects to the Tellter API
+Home-page: https://github.com/CastelRune/tellter
+Author: Nathan Lourenco
+Author-email: nathan@tellter.com
+License: MIT
+Download-URL: https://github.com/CastelRune/tellter/archive/v_0013.tar.gz
+Description: UNKNOWN
+Keywords: bad word censoring
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
