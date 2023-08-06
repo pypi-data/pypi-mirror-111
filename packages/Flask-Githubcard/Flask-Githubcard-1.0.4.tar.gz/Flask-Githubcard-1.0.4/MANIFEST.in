@@ -1,0 +1,2 @@
+graft flask_githubcard/static
+include LICENSE
