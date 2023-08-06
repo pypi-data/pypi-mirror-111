@@ -1,0 +1,45 @@
+Metadata-Version: 1.1
+Name: mad_fw
+Version: 0.1.10
+Summary: Multitask Aggression Detection (MAD)
+Home-page: https://github.com/imdiptanu/MAD
+Author: Diptanu Sarkar
+Author-email: diptanusarkar@hotmail.com
+License: MIT
+Download-URL: https://github.com/imdiptanu/MAD/archive/refs/tags/0.1.4.tar.gz
+Description: # MAD: Multi-task Aggression Detection Framework
+        
+        ### A Multi-Task Learning Framework for Aggression Detection using Transformers
+        
+        
+        Create a Pyhton 3.7 virtual environment
+        ```
+        virtualenv --python=python3.7 .
+        source bin/activate
+        pip install --upgrade pip
+        pip install -r requirements.txt
+        ```
+        
+        ## Language Modeler
+        ```cd language-modeler```
+        
+        Change the language modeling parameters in ```example_config.yaml``` file.
+        
+        Run the language modeler ```python language_modeler.py --config_yaml example_config.yaml```
+        
+        To be updated!
+        
+        ## Model Training
+        ```cd model-training```
+        
+        Change the transformer modeling parameters in ```example_config.yaml``` file.
+        
+        Training and test transformer modeles ```python model_training.py --config_yaml example_config.yaml```
+        
+        ### Requirement Notes: TBU
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
