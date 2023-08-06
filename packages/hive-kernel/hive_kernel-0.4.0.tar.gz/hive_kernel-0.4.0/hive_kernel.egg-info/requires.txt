@@ -1,0 +1,4 @@
+pyhive
+sqlalchemy
+pandas
+jupyter
