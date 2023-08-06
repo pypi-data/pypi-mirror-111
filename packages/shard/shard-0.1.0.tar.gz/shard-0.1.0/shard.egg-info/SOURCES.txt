@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+shard/__init__.py
+shard.egg-info/PKG-INFO
+shard.egg-info/SOURCES.txt
+shard.egg-info/dependency_links.txt
+shard.egg-info/top_level.txt
