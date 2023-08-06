@@ -1,0 +1,11 @@
+WhaleWisdom/Common/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+WhaleWisdom/Common/npd_data.py,sha256=YP80n_lw8C4nEn8zTRIOd4c4dSiG3JxjpwDTPXql6mM,3976
+WhaleWisdom/Common/py_whale_wisdom.py,sha256=hELQf_p1AUvpom_YjbRY3GsDdC7c2Tv07inL98oJaL8,1372
+WhaleWisdom/FundHoldings/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+WhaleWisdom/FundHoldings/report_builder.py,sha256=uIoGckJTP2k5lYVV3jbIDNAPbG14ZhGiA6Qf15tuFzY,8069
+WhaleWisdom/FundHoldings/report_data.py,sha256=FWMgErCdNWYC9AXpf3twA48fEjHBgS4KNxXpoHrSjMw,2310
+npd_whale_wisdom-0.1.3.dist-info/LICENSE,sha256=q-SZyS491wQXEZ8yCIoQ-KG0oAs71dEhz-N1chhzzYY,1087
+npd_whale_wisdom-0.1.3.dist-info/METADATA,sha256=JNYBXlPhYpQrQY1OkN6VShqetmFHr64iGoT-2SQRtME,1727
+npd_whale_wisdom-0.1.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+npd_whale_wisdom-0.1.3.dist-info/top_level.txt,sha256=5eiF0NUb0ViY-PomfPth_fr2o1XaB7go_UFVep7CH9w,12
+npd_whale_wisdom-0.1.3.dist-info/RECORD,,
