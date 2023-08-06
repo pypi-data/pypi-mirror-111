@@ -1,0 +1,8 @@
+README.md
+setup.py
+dlops/__init__.py
+dlops/version.py
+dlops.egg-info/PKG-INFO
+dlops.egg-info/SOURCES.txt
+dlops.egg-info/dependency_links.txt
+dlops.egg-info/top_level.txt
