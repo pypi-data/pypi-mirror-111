@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: raylib-py-flat
+Version: 3.7.0
+Summary: Bring all of raylibpy into a single import
+Home-page: https://github.com/adamlwgriffiths/raylibpy-flat/
+Author: Adam Griffiths
+Author-email: adam.lw.griffiths@gmail.com
+License: BSD 3-Clause License
+Description: # Raylib-py Flat
+        
+        Wraps [Raylib-py](https://github.com/overdev/raylib-py/) and flattens the modules to a single import.
+        
+        ## Installation
+        
+        `pip install raylib-py-flat`
+        
+        
+        ## Dependencies
+        
+        * [raylib-py](https://github.com/overdev/raylib-py) (using the `raylibpy-3.7` branch)
+        
+        
+        ## Demo
+        
+        ```
+        import raylib as rl
+        
+        def main():
+            rl.init_window(800, 450, "raylib [core] example - basic window")
+            rl.set_target_fps(60)
+        
+            while not rl.window_should_close():
+                rl.begin_drawing()
+                rl.clear_background(rl.RAYWHITE)
+                rl.draw_text("Congrats! You created your first window!", 190, 200, 20, rl.LIGHTGRAY)
+                rl.end_drawing()
+        
+            rl.close_window()
+        
+        if __name__ == '__main__':
+            main()
+        
+        ```
+        
+        BSD 3-Clause License
+        
+        Copyright (c) 2021, Adam Griffiths
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown

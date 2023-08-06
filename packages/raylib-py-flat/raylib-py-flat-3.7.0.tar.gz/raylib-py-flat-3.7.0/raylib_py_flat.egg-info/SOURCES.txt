@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+raylib/__init__.py
+raylib_py_flat.egg-info/PKG-INFO
+raylib_py_flat.egg-info/SOURCES.txt
+raylib_py_flat.egg-info/dependency_links.txt
+raylib_py_flat.egg-info/top_level.txt
