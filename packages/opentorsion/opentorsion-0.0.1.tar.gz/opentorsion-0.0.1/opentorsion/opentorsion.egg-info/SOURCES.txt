@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+opentorsion/opentorsion.egg-info/PKG-INFO
+opentorsion/opentorsion.egg-info/SOURCES.txt
+opentorsion/opentorsion.egg-info/dependency_links.txt
+opentorsion/opentorsion.egg-info/top_level.txt
