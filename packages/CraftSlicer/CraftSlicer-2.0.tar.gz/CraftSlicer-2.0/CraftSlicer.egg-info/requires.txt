@@ -1,0 +1,10 @@
+numpy
+numpy-stl
+pyrr
+PyQt5
+Pillow
+nbt
+trimesh
+qdarkstyle
+setuptools
+PyOpenGl
