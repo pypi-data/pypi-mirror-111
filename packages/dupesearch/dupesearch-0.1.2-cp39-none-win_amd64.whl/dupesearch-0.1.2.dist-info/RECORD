@@ -1,0 +1,12 @@
+dupesearch-0.1.2.dist-info/METADATA,sha256=CCKQ9MjoPfbcllcDilDJrsFXSgn_cIJ1kAiKAYSx0jg,72
+dupesearch-0.1.2.dist-info/WHEEL,sha256=ZZmDXras_fX7sC2w5RXnbSKBS7xaFRohJvoJx7jeQlw,95
+dupesearch/cli.py,sha256=3oUI6hGhgWvl3s9aZfGo42_6kZUfCvHAvC7AdH6ae54,3153
+dupesearch/dupesearch.cp39-win_amd64.pyd,sha256=Lrdi6reGqXV4uVLxqs5Zb8529pMRkVIJpc3yNgv2_tc,442368
+dupesearch/gui.py,sha256=eKlN0GfSoSQNzkgsyX7zuKvzglHBkyFhrZiqvZNctdY,5477
+dupesearch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dupesearch/__main__.py,sha256=DcQWO6WCVBH5sc5MKiO4MkOnQhX9Lg4z75vfbmUbK70,23
+dupesearch/__pycache__/cli.cpython-39.pyc,sha256=ByA020WWLwn5f38U47yctbDSLvycqp7ul8U0gW9TdXI,2721
+dupesearch/__pycache__/__init__.cpython-39.pyc,sha256=9FBp2lBuLAl_jVPKljEUJn700STHJNgE-k1vvQlBw94,144
+dupesearch/__pycache__/__main__.cpython-39.pyc,sha256=_NKlyCdnim4La8gW8laDF3j893YSgMFrwN_l3IUG54U,188
+dupesearch/dupesearch.cp39-win_amd64.pyd,sha256=2pq4mUYb-Lm-LjDtZljghtbD93qqYI3_QlDUWnJhGPE,470016
+dupesearch-0.1.2.dist-info/RECORD,,
