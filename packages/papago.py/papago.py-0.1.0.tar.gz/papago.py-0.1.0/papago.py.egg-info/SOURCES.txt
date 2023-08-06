@@ -1,0 +1,11 @@
+README.md
+setup.py
+papago/__init__.py
+papago/langcode.py
+papago/papago.py
+papago.py.egg-info/PKG-INFO
+papago.py.egg-info/SOURCES.txt
+papago.py.egg-info/dependency_links.txt
+papago.py.egg-info/not-zip-safe
+papago.py.egg-info/requires.txt
+papago.py.egg-info/top_level.txt
