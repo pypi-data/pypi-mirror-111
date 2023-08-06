@@ -1,0 +1,12 @@
+mplus/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mplus/imported/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mplus/imported/bs4_dammit.py,sha256=kk9PNPHPf1TBmKNHnAoudrA-jqtNpQCDX1UBQVB_WEA,27279
+mplus/moduls/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mplus/moduls/requests.py,sha256=cxWAXzqE8NcxIafkCdecA1TvTg7HpAQoq51vyRmYyIM,4084
+mplus/moduls/response.py,sha256=6Pz1-mHHf4LpJMq09TN4vVfWnje_NYcswbdA2gjBCuA,19159
+mplus/utils/__init__.py,sha256=6ukRrGS7KOymmHwV3eBMNXu1cDUqVzmdmIl29sIGOKA,10416
+mplus/utils/request.py,sha256=U44C4VA9qpKhe_ax176bW1Yv7LzZla1ln1GCn5zltxs,2078
+mplus-0.1.2.dist-info/METADATA,sha256=S_I6Sdkk4AsKRas7ERjcC2ClCpbMN4TiQ-3C6z_Irkk,710
+mplus-0.1.2.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+mplus-0.1.2.dist-info/top_level.txt,sha256=x5FbpEN_93WB3OmmyeVi3a0-5hbQeWi-1rlgmAr_mkA,6
+mplus-0.1.2.dist-info/RECORD,,
