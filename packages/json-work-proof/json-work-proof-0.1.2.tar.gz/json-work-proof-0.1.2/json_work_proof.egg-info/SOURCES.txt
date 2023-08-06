@@ -1,0 +1,10 @@
+README.md
+setup.py
+json_work_proof/__init__.py
+json_work_proof/base64url.py
+json_work_proof/classproperty.py
+json_work_proof/json_encoder.py
+json_work_proof.egg-info/PKG-INFO
+json_work_proof.egg-info/SOURCES.txt
+json_work_proof.egg-info/dependency_links.txt
+json_work_proof.egg-info/top_level.txt
