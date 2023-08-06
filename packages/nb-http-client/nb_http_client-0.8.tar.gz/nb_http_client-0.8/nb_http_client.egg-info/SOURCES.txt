@@ -1,0 +1,7 @@
+setup.py
+nb_http_client/__init__.py
+nb_http_client.egg-info/PKG-INFO
+nb_http_client.egg-info/SOURCES.txt
+nb_http_client.egg-info/dependency_links.txt
+nb_http_client.egg-info/requires.txt
+nb_http_client.egg-info/top_level.txt
