@@ -1,0 +1,12 @@
+sipper/__init__.py,sha256=6OND8XZ1pcyHJx8c0EvQhMzuYgzZoTSwT3_Jc_6ZTpE,1024
+sipper/__main__.py,sha256=t51IZPQLi9la0E47JWdJlj0nA6F_sThpYJynD7eKfc0,12638
+sipper/getopt.py,sha256=lTt_EiKjHT13KOskAbGD6Cv9VYT8ChvtcrdBab-dHsY,2386
+sipper/driver/__init__.py,sha256=YUopH8VHuUgmxzeU4ZFQRQvklMPpwkBd5qlAH1OSqNI,1627
+sipper/driver/avs84.py,sha256=g-EotkvVauMXDnpdHeLgTbq7HtvmK0dPA1XfINqkBeM,2744
+sipper/driver/csv.py,sha256=WVIY-MDn4FiQsM3yvZ7je2Yvc9F5h3yd13lVVlnDAp8,412
+sipper/driver/excel.py,sha256=_CgDU4WiqjJS53awm5K2iYTuWxoK3_dL8pRaRfIPsEI,414
+sipper-0.0.3.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+sipper-0.0.3.dist-info/METADATA,sha256=9lGfoemqalmT1fQzii5oX22-1AyrFKndlWC9IUwfdU4,4713
+sipper-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sipper-0.0.3.dist-info/top_level.txt,sha256=0KHY0cUJmvSdBmwd1SPV2PSCgkmLc9zAF-qCL6Id0Lc,7
+sipper-0.0.3.dist-info/RECORD,,
