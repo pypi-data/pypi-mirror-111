@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: qoqo
+Version: 0.4.0
+Requires-Dist: numpy
+Summary: Quantum computing circuit toolkit. Python interface of roqoq
+Author: HQS Quantum Simulations <info@quantumsimulations.de>
+Author-email: HQS Quantum Simulations <info@quantumsimulations.de>
+Maintainer: HQS Quantum Simulations GmbH
+Maintainer-email: info@quantumsimulations.de
+License: Apache-2.0
+Requires-Python: >=3.6
