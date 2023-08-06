@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+headers_converter/__init__.py
+headers_converter/headers_converter.py
+headers_converter.egg-info/PKG-INFO
+headers_converter.egg-info/SOURCES.txt
+headers_converter.egg-info/dependency_links.txt
+headers_converter.egg-info/not-zip-safe
+headers_converter.egg-info/top_level.txt
