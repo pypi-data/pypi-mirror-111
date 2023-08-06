@@ -1,0 +1,3 @@
+[console_scripts]
+asapp=asapp.main:asapp
+
