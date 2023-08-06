@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: smlearn
+Version: 0.1.dev0
+Summary: Machine Learning Algorithms
+Home-page: UNKNOWN
+Author: Ajith
+Author-email: ajithar204@gmail.com
+License: new BSD
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: numpy (>=1.21.0)
+
+.. -*- mode: rst -*-
+
+.. |PythonMinVersion| replace:: 3.8
+.. |NumPyMinVersion| replace:: 1.21.0
+
+smlearn
+-------
+
+**smlearn** is a python implementation of machine learning algorithms.
+
+*Currently in the developing phase and therefore highly unstable.*
+
+dependencies
+------------
+
+scikit-learn requires:
+
+- Python (>= |PythonMinVersion|)
+- NumPy (>= |NumPyMinVersion|)
+
+
+
