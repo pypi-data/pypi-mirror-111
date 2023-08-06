@@ -1,0 +1,13 @@
+client/dist/bundle.6163499e1a44827d08de.css,sha256=TnlmC2UIKg2P1CZj13amBXqUeOU12AQUpfaOMMNd6q8,146981
+client/dist/bundle.efb8d30ea9608ea860c7.js,sha256=JNP12qH4JkRbzwPDXdp8jPZA8GB9IpOB2D0gDOqJ4yE,3805837
+client/dist/bundle.efb8d30ea9608ea860c7.js.LICENSE.txt,sha256=oh7rB1JuO0vDkjIuRmmB4LmTUHreX8xGDyvduVwyCEw,2128
+client/dist/images/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+client/dist/index.html,sha256=hY8_6Ii_4Q_MjFoiI5b02jyF_UFZV4wv0UsXYMMYRAI,413
+plsexplain/cli.py,sha256=x_1uSMfgjTQKVTYjLgGwn_xAYKNgq__lbitnU5XTufA,1947
+plsexplain/dashboard.py,sha256=LpCxoLd9e4J8dIQvmbiCj4IbfM3B6yBdJ2PyUb18PKs,3050
+plsexplain/server.py,sha256=-KJiIBqK1gTjRyA-BTEenr5vC1QgZpHtjVEAcWhzz64,4838
+plsexplain-0.1.0.dist-info/entry_points.txt,sha256=Gutq0ligJIlaFZA-6pKg8bxytHWC2mTm2OVv4YMN0lA,50
+plsexplain-0.1.0.dist-info/LICENSE,sha256=tA353svR5PlWDUg-jS3kycP041xej7Be2qeCjnL8L4c,1091
+plsexplain-0.1.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+plsexplain-0.1.0.dist-info/METADATA,sha256=4NtWoCWuuOoEb6m716OmRqmSOMIPrxhG1NQVVP6dWHY,2251
+plsexplain-0.1.0.dist-info/RECORD,,
