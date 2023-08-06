@@ -1,0 +1,75 @@
+:mod:`city`
+===========
+
+.. py:module:: city
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   city.City
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   city.city
+
+
+.. class:: City(population, density=10000, has_walls=False, has_castle=False, has_river=False)
+
+
+   .. method:: generate_city(self)
+
+      Generate the city with its number of districts, its radius, and its regions.
+
+      Args:
+        self (City): the city to build
+
+      Returns:
+        regions (list of Polygons): a list containing all the districts of the city
+        city_radius (int): the ray of the zone inside which the city will be built
+
+
+   .. method:: construct_city(self)
+
+      Construct our city depending on the characteristics of the class City.
+      Calls the function `generate_city` to set regions (districts) of the city.
+      Calls the function `adjust_city_size` to change the size of the city depending on the expected size with the given density.
+      Sets a river as a moat and walls all around the city or not.
+      Calls the function `generate_buildings` to generate all the houses, mansions, markets, churches, a cathedral...
+      Constructs the streets with the function `construct_streets`.
+
+      Args:
+        self (City): the city to build
+
+      Returns:
+        void
+
+
+   .. method:: components(self)
+
+      Function components, to call the class with the viewer.py.
+
+      Args:
+        self (City): the city to build
+
+      Returns:
+        list: empty or self.areas
+
+
+
+.. data:: city
+   
+
+   
+

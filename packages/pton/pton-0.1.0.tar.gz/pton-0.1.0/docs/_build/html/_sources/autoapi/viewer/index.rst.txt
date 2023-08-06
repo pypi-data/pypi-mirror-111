@@ -1,0 +1,44 @@
+:mod:`viewer`
+=============
+
+.. py:module:: viewer
+
+
+Module Contents
+---------------
+
+.. data:: filename
+   
+
+   
+
+.. data:: colors_dic
+   
+
+   
+
+.. data:: colors
+   
+
+   
+
+.. data:: color_map
+   
+
+   
+
+.. data:: shapes
+   
+
+   
+
+.. data:: s
+   
+
+   
+
+.. data:: walls
+   
+
+   
+

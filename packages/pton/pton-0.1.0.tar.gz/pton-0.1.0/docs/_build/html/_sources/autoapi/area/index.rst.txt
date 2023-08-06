@@ -1,0 +1,219 @@
+:mod:`area`
+===========
+
+.. py:module:: area
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   area.Category
+   area.Area
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   area.zone
+
+
+.. class:: Category
+
+
+   Bases: :py:obj:`enum.IntEnum`
+
+   Enum where members are also (and must be) ints
+
+   .. attribute:: UNDEFINED
+      :annotation: = 0
+
+      
+
+   .. attribute:: LAND
+      :annotation: = 1
+
+      
+
+   .. attribute:: FIELD
+      :annotation: = 2
+
+      
+
+   .. attribute:: FOREST
+      :annotation: = 3
+
+      
+
+   .. attribute:: RIVER
+      :annotation: = 4
+
+      
+
+   .. attribute:: LAKE
+      :annotation: = 5
+
+      
+
+   .. attribute:: SEA
+      :annotation: = 6
+
+      
+
+   .. attribute:: PARK
+      :annotation: = 7
+
+      
+
+   .. attribute:: GARDEN
+      :annotation: = 8
+
+      
+
+   .. attribute:: HOUSE
+      :annotation: = 10
+
+      
+
+   .. attribute:: MANSION
+      :annotation: = 11
+
+      
+
+   .. attribute:: MARKET
+      :annotation: = 12
+
+      
+
+   .. attribute:: TOWNHALL
+      :annotation: = 13
+
+      
+
+   .. attribute:: UNIVERSITY
+      :annotation: = 14
+
+      
+
+   .. attribute:: FARM
+      :annotation: = 15
+
+      
+
+   .. attribute:: CHURCH
+      :annotation: = 20
+
+      
+
+   .. attribute:: CATHEDRAL
+      :annotation: = 21
+
+      
+
+   .. attribute:: MONASTRY
+      :annotation: = 22
+
+      
+
+   .. attribute:: FORT
+      :annotation: = 31
+
+      
+
+   .. attribute:: CASTLE
+      :annotation: = 32
+
+      
+
+   .. attribute:: WALL
+      :annotation: = 33
+
+      
+
+   .. attribute:: STREET
+      :annotation: = 50
+
+      
+
+   .. attribute:: BRIDGE
+      :annotation: = 51
+
+      
+
+   .. attribute:: COMPOSITE
+      :annotation: = 90
+
+      
+
+
+.. class:: Area(polygon, category, sub_areas=[])
+
+
+   .. attribute:: _last_id
+      :annotation: = 0
+
+      
+
+   .. attribute:: members
+      :annotation: = []
+
+      
+
+   .. method:: get_id()
+      :staticmethod:
+
+
+   .. method:: __del__(self)
+
+
+   .. method:: __repr__(self)
+
+      Return repr(self).
+
+
+   .. method:: identity(self)
+      :property:
+
+
+   .. method:: polygon(self)
+      :property:
+
+
+   .. method:: split(self, percentage, direction, inplace=True, new_category=Category.GARDEN)
+
+      Split an area in two areas. Store result in self.sub_areas if inplace == True.
+
+      Args:
+          percentage: float - percentage of surface for first area, between 0 and 1
+          direction: int - side for first area (from center to 0 = North, 90 = East...)
+          new_category: Category - category of the second area
+
+      Returns: if inplace == False
+          area1: Area
+          area2: Area
+
+      Tests:
+          >>> surf = Area(Polygon([(0,0), (20,0), (20,40), (0,40)]), Category.HOUSE)
+          >>> res = surf.split(0.25, 0, False)  # house takes 1/4 of surface and is north
+          >>> res0 = Polygon([(0, 30), (0, 40), (20, 40), (20, 30), (0, 30)])
+          >>> res0.symmetric_difference(res[0].polygon).area < 1
+          True
+
+
+   .. method:: components(self)
+
+
+
+.. data:: zone
+   
+
+   
+

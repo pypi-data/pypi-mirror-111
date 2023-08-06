@@ -1,0 +1,18 @@
+API Reference
+=============
+
+This page contains auto-generated API reference documentation [#f1]_.
+
+.. toctree::
+   :titlesonly:
+
+   /autoapi/viewer/index
+   /autoapi/city/index
+   /autoapi/area/index
+   /autoapi/street/index
+   /autoapi/district/index
+   /autoapi/buildings/index
+   /autoapi/tools/index
+   /autoapi/test/index
+
+.. [#f1] Created with `sphinx-autoapi <https://github.com/readthedocs/sphinx-autoapi>`_

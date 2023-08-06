@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>city &#8212; PTON v1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="area" href="../area/index.html" />
+    <link rel="prev" title="viewer" href="../viewer/index.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-city">
+<span id="city"></span><h1><a class="reference internal" href="#module-city" title="city"><code class="xref py py-mod docutils literal notranslate"><span class="pre">city</span></code></a><a class="headerlink" href="#module-city" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#city.City" title="city.City"><code class="xref py py-obj docutils literal notranslate"><span class="pre">City</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#city.city" title="city.city"><code class="xref py py-obj docutils literal notranslate"><span class="pre">city</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="city.City">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">city.</span></span><span class="sig-name descname"><span class="pre">City</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">population</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">has_walls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">has_castle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">has_river</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#city.City" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="city.City.generate_city">
+<span class="sig-name descname"><span class="pre">generate_city</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#city.City.generate_city" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the city with its number of districts, its radius, and its regions.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>self (City): the city to build</p>
+</dd>
+<dt>Returns:</dt><dd><p>regions (list of Polygons): a list containing all the districts of the city
+city_radius (int): the ray of the zone inside which the city will be built</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="city.City.construct_city">
+<span class="sig-name descname"><span class="pre">construct_city</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#city.City.construct_city" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct our city depending on the characteristics of the class City.
+Calls the function <cite>generate_city</cite> to set regions (districts) of the city.
+Calls the function <cite>adjust_city_size</cite> to change the size of the city depending on the expected size with the given density.
+Sets a river as a moat and walls all around the city or not.
+Calls the function <cite>generate_buildings</cite> to generate all the houses, mansions, markets, churches, a cathedral…
+Constructs the streets with the function <cite>construct_streets</cite>.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>self (City): the city to build</p>
+</dd>
+<dt>Returns:</dt><dd><p>void</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="city.City.components">
+<span class="sig-name descname"><span class="pre">components</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#city.City.components" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function components, to call the class with the viewer.py.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>self (City): the city to build</p>
+</dd>
+<dt>Returns:</dt><dd><p>list: empty or self.areas</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="city.city">
+<span class="sig-prename descclassname"><span class="pre">city.</span></span><span class="sig-name descname"><span class="pre">city</span></span><a class="headerlink" href="#city.city" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">PTON</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../viewer/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">viewer</span></code></a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">city</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../area/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">area</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../street/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">street</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../district/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">district</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../buildings/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">buildings</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tools</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../test/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">API Reference</a><ul>
+      <li>Previous: <a href="../viewer/index.html" title="previous chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">viewer</span></code></a></li>
+      <li>Next: <a href="../area/index.html" title="next chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">area</span></code></a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Emma Rachlin, Maxence Ramos-Pariente.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../../_sources/autoapi/city/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

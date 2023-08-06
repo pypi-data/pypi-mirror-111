@@ -1,0 +1,31 @@
+:mod:`street`
+=============
+
+.. py:module:: street
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   street.construct_streets
+
+
+
+.. function:: construct_streets(districts, areas)
+
+   Generate a rectangle polygon as a street of a city at each intersection between two districts.
+
+   Args:
+       districts (list(Polygons)): the lists of regions(districts) to put in the city
+       areas (list(Area)): the list of areas to show at the end of the program
+
+   Returns:
+       void
+
+

@@ -1,0 +1,61 @@
+:mod:`district`
+===============
+
+.. py:module:: district
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   district.divide_polygon
+   district.divide_districts
+   district.adjust_city_size
+
+
+
+.. function:: divide_polygon(height, width, bounds)
+
+   Split randomly a Polygon into two parts depending on the width or the height of the polygon.
+
+   Args:
+       height (int): the height of the polygon
+       width (int): the width of the polygon
+       bounds (list(points)): list of points representing the approximate shape of the polygon
+
+   Returns:
+       couple of polygons as the result of the split of the initial one
+
+
+.. function:: divide_districts(geometry, maximum_size, count=0)
+
+   Split all districts of the city into polygons with a maximum_size as threshold, calling on each the function `divide_polygon`.
+
+   Args:
+       geometry (Polygon): the district to divide
+       maximum_size (int): the maximum_size of the polygon, it can not have a bigger area
+       count (int): counter for the recursion in the function, default value to 0
+
+   Returns:
+       list, containing all divided Polygons of the district
+
+
+.. function:: adjust_city_size(city, regions, city_radius)
+
+   Search the best size for the city, with the expected area found with the density.
+   Set the zone to a category Land or Forest, all around the city.
+
+   Args:
+       city (City): the city to resize
+       regions (list(Polygons)): the lists of regions(districts) to put in the city
+       city_radius (int): the ray of the zone inside which the city will be built
+
+   Returns:
+       list, containing all divided Polygons of the district
+
+

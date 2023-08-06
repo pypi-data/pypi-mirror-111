@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pton
+Version: 0.1.0
+Summary: 
+Author: Emma Rachlin
+Author-email: emma.rachlin@epita.fr
+Maintainer: Maxence Ramos-Pariente
+Maintainer-email: maxence.ramos-pariente@epita.fr
+Requires-Python: >=3.8,<3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Fiona (>=1.8.20,<2.0.0)
+Requires-Dist: Shapely (>=1.7.1,<2.0.0)
+Requires-Dist: geopandas (>=0.9.0,<0.10.0)
+Requires-Dist: matplotlib (>=3.4.2,<4.0.0)
+Requires-Dist: numpy (>=1.21.0,<2.0.0)
+Requires-Dist: scipy (>=1.7.0,<2.0.0)
+Requires-Dist: voronoi (>=0.2.0,<0.3.0)

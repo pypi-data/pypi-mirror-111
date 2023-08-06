@@ -1,0 +1,35 @@
+:mod:`buildings`
+================
+
+.. py:module:: buildings
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   buildings.generate_buildings
+
+
+
+.. function:: generate_buildings(city)
+
+   Generate the buildings in the city.
+   Creates mainly houses (90%), but also mansions (10%).
+   The biggest polygons become lakes, and one (or zero) cathedral.
+   The smallest ones are parks.
+   There are one church and between 0 and 2 markets in each district.
+   If the city has to have a castle, one district becomes the castle and will not be split.
+
+   Args:
+     city (City): the city where we generate the buildings in
+
+   Returns:
+     void
+
+
