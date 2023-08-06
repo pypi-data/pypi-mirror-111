@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+discord_select_menus.egg-info/PKG-INFO
+discord_select_menus.egg-info/SOURCES.txt
+discord_select_menus.egg-info/dependency_links.txt
+discord_select_menus.egg-info/top_level.txt
