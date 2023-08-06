@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: django-pycharm
+Version: 0.1.2
+Summary: App for Django to run any Python script within Django context
+Home-page: https://github.com/nouseforacode/django-pycharm
+License: MIT
+Author: nouseforacode
+Author-email: 10090277+nouseforacode@users.noreply.github.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Django (>=3.2.4,<4.0.0)
+Requires-Dist: xmltodict (>=0.12.0,<0.13.0)
+Project-URL: Repository, https://github.com/nouseforacode/django-pycharm
+Description-Content-Type: text/markdown
+
+# django-pycharm
+
+App for Django to run any Python script within Django context
+
+
+## Installation
+
+You can install the plugin by running
+
+```shell
+pip install django-pycharm
+```
+
+In ``settings.py`` add  ``django-pycharm`` to your ``INSTALLED_APPS``
+```python
+INSTALLED_APPS += ['django_pycharm']
+```
+
+## Usage
+
+```shell
+python manage.py runscript <your_script.py>
+```
+
+```shell
+python manage.py install_pycharm_commands
+```
+
