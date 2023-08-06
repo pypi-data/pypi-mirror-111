@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: AnkiIn
+Version: 0.0.2
+Summary: Import markdown to Anki
+Home-page: https://github.com/clouder0/AnkiIn
+Author: Clouder
+Author-email: clouder0@outlook.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/Clouder0/AnkiIn/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# AnkiIn
+
+See [AnkiLink](https://github.com/Clouder0/AnkiLink).
+
+
