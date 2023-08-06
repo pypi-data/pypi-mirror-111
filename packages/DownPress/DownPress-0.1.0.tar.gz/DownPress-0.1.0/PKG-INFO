@@ -1,0 +1,14 @@
+Metadata-Version: 1.0
+Name: DownPress
+Version: 0.1.0
+Summary: Exctract Markdwon posts and pages from WordPress export
+Home-page: UNKNOWN
+Author: Daniel Terhorst-North
+Author-email: daniel@dannorth.net
+License: BSD-3-Clause
+Description: # DownPress
+        
+        DownPress extracts posts and pages from a WordPress export v1.2.
+        
+Keywords: wordpress markdown convert
+Platform: UNKNOWN
