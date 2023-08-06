@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: retroachievements
+Version: 1.1.1
+Summary: A simple API wrapper for Retroachievements.
+Home-page: https://github.com/Mattlau04/retroachievements-python
+Author: Mattlau04
+Author-email: Mattlau04@noemail.com
+License: UNKNOWN
+Keywords: api,retroachievements
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+[![PyPI version fury.io](https://badge.fury.io/py/retroachievements.svg)](https://pypi.python.org/pypi/retroachievements/)
+# retroachievements-api
+### A python api wrapper for the retroachievements api  
+
+Getting a client:
+~~~python
+from retroachievements import RAclient
+
+c = RAclient("MyUsername", "MyApiKey")
+~~~  
+
+
