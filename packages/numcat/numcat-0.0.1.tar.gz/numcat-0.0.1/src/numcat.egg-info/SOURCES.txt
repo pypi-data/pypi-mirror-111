@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/numcat/__init__.py
+src/numcat/functions.py
+src/numcat.egg-info/PKG-INFO
+src/numcat.egg-info/SOURCES.txt
+src/numcat.egg-info/dependency_links.txt
+src/numcat.egg-info/top_level.txt
