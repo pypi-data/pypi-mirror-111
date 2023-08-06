@@ -1,0 +1,9 @@
+setup.py
+simplepinyin/__init__.py
+simplepinyin/input_dict_nt_max.pickle
+simplepinyin/lm.py
+simplepinyin.egg-info/PKG-INFO
+simplepinyin.egg-info/SOURCES.txt
+simplepinyin.egg-info/dependency_links.txt
+simplepinyin.egg-info/requires.txt
+simplepinyin.egg-info/top_level.txt
