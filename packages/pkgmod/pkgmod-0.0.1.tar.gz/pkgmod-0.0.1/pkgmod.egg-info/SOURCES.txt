@@ -1,0 +1,8 @@
+README.md
+setup.py
+pkgmod/__init__.py
+pkgmod.egg-info/PKG-INFO
+pkgmod.egg-info/SOURCES.txt
+pkgmod.egg-info/dependency_links.txt
+pkgmod.egg-info/requires.txt
+pkgmod.egg-info/top_level.txt
