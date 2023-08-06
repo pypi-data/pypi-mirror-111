@@ -1,0 +1,11 @@
+README.md
+setup.py
+stockgeist/__init__.py
+stockgeist/analysis.py
+stockgeist/client.py
+stockgeist/responses.py
+stockgeist_client_python.egg-info/PKG-INFO
+stockgeist_client_python.egg-info/SOURCES.txt
+stockgeist_client_python.egg-info/dependency_links.txt
+stockgeist_client_python.egg-info/requires.txt
+stockgeist_client_python.egg-info/top_level.txt
