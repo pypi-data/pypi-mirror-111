@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: py-wallabag
+Version: 0.0.1
+Summary: Python wrapper for the Wallabag Rest API
+Home-page: https://github.com/zeroone2numeral2/py-wallabag
+Author: zeroone2numeral2
+Author-email: numeralzeroone@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+
+WIP
+
+
