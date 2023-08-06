@@ -1,0 +1,2 @@
+from analysis.topic_relevance_analysis import *
+show_final_results_statistics()
