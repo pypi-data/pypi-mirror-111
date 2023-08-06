@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: py-dbx
+Version: 1.0.0
+Summary: make jdbc calls in command line
+Home-page: https://github.com/laowangv5/py-dbx
+Author: Yonghang Wang
+Author-email: wyhang@gmail.com
+License: Apache 2
+Keywords: jdbc,dbx
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# py-dbx
+JDBC command line client tool supporting connection reuse/sharing, query by alias, etc.
+
+
