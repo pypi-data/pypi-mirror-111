@@ -1,0 +1,3 @@
+[console_scripts]
+ArabicNames = ArabicNames.main:main
+
