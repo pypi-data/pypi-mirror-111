@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: shell-scripter
+Version: 0.0.1
+Summary: A shell scripting library for Python
+Home-page: https://github.com/ZacJW/shell-scripter
+Author: Zac Wilson
+Author-email: zac@zacjw.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/ZacJW/shell-scripter/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Shell-scripter, a shell scripting library for Python
+
+**Shell-scripter is still a work-in-progress. API may change at any time.**
+
+## Installation
+
+Shell-scripter is on the Python Package Index and can be installed with `pip install shell-scripter`
+
+## Example Usage
+
+```python
+from shell_scripter import run
+
+run("cat", "logfile").pipe("grep", "error")().show()
+```
+
+

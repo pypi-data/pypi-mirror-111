@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/shell_scripter/__init__.py
+src/shell_scripter.egg-info/PKG-INFO
+src/shell_scripter.egg-info/SOURCES.txt
+src/shell_scripter.egg-info/dependency_links.txt
+src/shell_scripter.egg-info/top_level.txt
