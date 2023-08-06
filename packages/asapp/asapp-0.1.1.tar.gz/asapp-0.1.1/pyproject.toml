@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "asapp"
+version = "0.1.1"
+description = "Create desktop entries for running websites in app mode."
+authors = ["Blake Smith <blakeinvictoria@gmail.com>"]
+license = "GPL"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+click = "^8.0.1"
+Jinja2 = "^3.0.1"
+
+[tool.poetry.dev-dependencies]
+
+
+[tool.poetry.scripts]
+asapp = "asapp.main:asapp"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

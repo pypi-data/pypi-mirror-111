@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: asapp
+Version: 0.1.1
+Summary: Create desktop entries for running websites in app mode.
+License: GPL
+Author: Blake Smith
+Author-email: blakeinvictoria@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Jinja2 (>=3.0.1,<4.0.0)
+Requires-Dist: click (>=8.0.1,<9.0.0)
+Description-Content-Type: text/markdown
+
+# asapp
+
+Open websites in Chromium's app mode.
+
+## Motivation
+
+I use several GSuite apps such as Google Sheets and Google Docs, but there are not suitible 
+linux clients available for these apps. Running them in [app](https://superuser.com/questions/33548/starting-google-chrome-in-application-mode) mode using the `--app` CLI option
+is a good substitute for this. 
+
+## Installation
+
+### PyPi
+
+```shell script
+pip install asapp
+```
+
+### Git Clone
+
+```shell script
+git clone https://github.com/BlakeASmith/as_app.git
+pip install . 
+```
+
+## Usage
+
+### Open Websites
+
+Launch a website in it's own window, without any borders or browser options. 
+
+```shell script
+asapp open https://duckduckgo.com
+```
+
+### Create a Desktop Entry
+
+```shell script
+asapp shortcut --name DuckDuckGo https://duckduckgo.com
+```
+
+This will add a `.desktop` file to the `~/.local/share/applications/` folder, causing
+`DuckDuckGo` to appear in your app launcher of choice!
+
