@@ -1,0 +1,3 @@
+[console_scripts]
+pcr_utils_evaluate = pcrglobwb_utils.scripts.evaluate:cli
+
