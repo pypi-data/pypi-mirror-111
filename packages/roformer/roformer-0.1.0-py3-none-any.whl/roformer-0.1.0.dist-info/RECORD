@@ -1,0 +1,12 @@
+roformer/__init__.py,sha256=Ltrj3LRS3vclfVWP4pG82YPhl6Ds7TK8cPupKrrfU4U,3935
+roformer/configuration_roformer.py,sha256=9oB9Jx_rO5ynt2yoVJGW-4Zmi3msYcf9f3VI-oayKwE,7710
+roformer/convert_roformer_original_tf_checkpoint_to_pytorch.py,sha256=aNb9xSivw6Oja5TX9HdF8hLAVYfu_F6y4ROoNjRTwag,2589
+roformer/modeling_roformer.py,sha256=gBwPvePYRTOGuJ_FQ4gYMcoOc-5gLT3mPPkSZu2pJ2U,71441
+roformer/modeling_tf_roformer.py,sha256=5JtOkYF5DA9GlIK8o4yvuADY4taKmOubf0ZPmVdgR9Q,73901
+roformer/tokenization_roformer.py,sha256=jhlgNEzKjuUJSUMRmmmNtrng0KfaDDi4l9Ipsqknxw4,15500
+roformer/tokenization_roformer_fast.py,sha256=rEtkb7NMlc0j4VfZUcv4szatTY04dv9zgesrJ0xqXqU,8762
+roformer/tokenization_utils.py,sha256=fE0ndACfhwLSnSzUGVJ1D1ehE-zYh0x-TKALqqXnPjQ,2651
+roformer-0.1.0.dist-info/METADATA,sha256=sLscPERCilZwQdk9qKBpL-Rs8ga-sLiAgVQqGJsq0kU,319
+roformer-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+roformer-0.1.0.dist-info/top_level.txt,sha256=bBdyU-iR8LnKFZeBcjcyGdbvySiNondlNtCxPtff0Cc,9
+roformer-0.1.0.dist-info/RECORD,,
