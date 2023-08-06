@@ -1,0 +1,3 @@
+[console_scripts]
+yamlpyowl = yamlpyowl.script:main
+
