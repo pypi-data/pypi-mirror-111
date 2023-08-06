@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: i3-workflow
+Version: 1.0
+Summary: An application to group different application together in i3wm and start them together to fasten your workflow.
+Home-page: https://github.com/lukasvdberk/i3-workflow
+Author: Lukas van den Berk
+Author-email: lukasvdberk@gmail.com
+License: MIT
+Download-URL: https://github.com/lukasvdberk/i3-workflow/archive/refs/tags/1.0.tar.gz
+Description: UNKNOWN
+Keywords: tool,window-manager,i3,i3wm
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
