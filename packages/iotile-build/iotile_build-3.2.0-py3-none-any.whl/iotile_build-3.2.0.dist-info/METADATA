@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: iotile-build
+Version: 3.2.0
+Summary: IOTile Build Support
+Home-page: http://github.com/iotile/lib_iotilecore
+Author: Arch
+Author-email: info@arch-iot.com
+License: LGPLv3
+Keywords: iotile,arch,embedded,hardware,firmware
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7,<4
+Requires-Dist: breathe (>=4.30)
+Requires-Dist: crcmod (>=1.7)
+Requires-Dist: iotile-core (>=5.2)
+Requires-Dist: jinja2 (>=3)
+Requires-Dist: pygtrie (>=2)
+Requires-Dist: setuptools (>=57)
+Requires-Dist: sphinx (>=4)
+Requires-Dist: toposort (>=1.6)
+Requires-Dist: pycparser (>=2.20)
+Requires-Dist: pyparsing (~=2.2.0)
+Requires-Dist: scons (>=4.1)
+Requires-Dist: wheel (>=0.33)
+
+IOTileBuild
+-----------
+
+A python package for building embedded firmware on IOTile based devices.  See https://www.arch-iot.com.
+
+
