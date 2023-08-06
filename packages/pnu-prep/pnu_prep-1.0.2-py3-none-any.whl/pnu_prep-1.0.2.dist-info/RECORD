@@ -1,0 +1,10 @@
+pnu_prep-1.0.2.data/data/etc/eign,sha256=SZH5cEKIkR-WCber_ZpNDs4ybPjtfuHLS7hnqmwdXgA,2287
+pnu_prep-1.0.2.data/data/man/man1/prep.1.gz,sha256=YANg6x0Z8PqzRIGZxnlyAZGf9WLS7D9q0UlaNB10ywQ,1588
+prep/__init__.py,sha256=OIUvQK6yxVB8AiXXHt83ZFQSsZMxRVNxkf2BJMND5v0,60
+prep/main.py,sha256=aI5oAu60bFBDWsvAMtpEV_TwZvnfnzcZfS--ZTNrxJg,8973
+pnu_prep-1.0.2.dist-info/License,sha256=SHqxxjecm04XlsqqzOKBTX-UKSCtgJHZmVybnYrS9yI,1460
+pnu_prep-1.0.2.dist-info/METADATA,sha256=RTB065IS2AIRjZ4s0t7IagYErZkRKmujQoQgJsRXfZA,4735
+pnu_prep-1.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pnu_prep-1.0.2.dist-info/entry_points.txt,sha256=XSNhKJ5oAzWamiqpiqFD4JVqZWJSGn40l0w5Vuq-4Y0,36
+pnu_prep-1.0.2.dist-info/top_level.txt,sha256=sKPML1uH-dbE2QTsR5VvZQ5ydWu0f1_Aiw3fo0my3iQ,5
+pnu_prep-1.0.2.dist-info/RECORD,,
