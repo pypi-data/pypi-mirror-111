@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: jupyterhub-entrypoint
+Version: 0.0.2
+Summary: JupyterHub Custom Entrypoint Service
+Home-page: https://github.com/Josh0823/jupyterhub-entrypoint
+Author: Josh Geden
+Author-email: jgeden@lbl.gov
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
