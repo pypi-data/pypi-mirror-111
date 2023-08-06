@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+quadroots/__init__.py
+quadroots/quadroots.py
+quadroots.egg-info/PKG-INFO
+quadroots.egg-info/SOURCES.txt
+quadroots.egg-info/dependency_links.txt
+quadroots.egg-info/requires.txt
+quadroots.egg-info/top_level.txt
