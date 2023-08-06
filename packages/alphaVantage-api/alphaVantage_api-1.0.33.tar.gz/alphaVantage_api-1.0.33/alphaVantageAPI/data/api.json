@@ -1,0 +1,464 @@
+{
+    "datatype": ["json", "csv"],
+    "outputsize": ["compact", "full"],
+    "series_interval": ["1min", "5min", "15min", "30min", "60min"],
+    "series_type": ["open", "high", "low", "close"],
+    "indicator_interval": ["1min", "5min", "15min", "30min", "60min", "daily", "weekly", "monthly"],
+    "matype": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+    "horizon": ["3month", "6month", "12month"],
+    "listing_state": ["active", "delisted"],
+    "slice": ["year1month1", "year1month2", "year1month3", "year1month4", "year1month5", "year1month6", "year1month7", "year1month8", "year1month9", "year1month10", "year1month11", "year1month12", "year2month1", "year2month2", "year2month3", "year2month4", "year2month5", "year2month6", "year2month7", "year2month8", "year2month9", "year2month10", "year2month11", "year2month12"],
+    "series":[
+    {
+        "function": "TIME_SERIES_INTRADAY",
+        "alias": "I",
+        "description": "This API returns intraday time series of the equity specified, covering extended trading hours where applicable (e.g., 4:00am to 8:00pm Eastern Time for the US market). The intraday data (open, high, low, close, volume) is computed directly from the Securities Information Processor (SIP) market-aggregated data feed.",
+        "required": ["symbol", "interval"],
+        "optional": ["outputsize", "datatype", "adjusted"]
+    },
+    {
+        "function": "TIME_SERIES_INTRADAY_EXTENDED",
+        "alias": "IE",
+        "description": "This API returns historical intraday time series for the trailing 2 years, covering over 2 million data points per ticker. The intraday data is derived from the Securities Information Processor (SIP) market-aggregated data. You can query both raw (as-traded) and split/dividend-adjusted intraday data from this endpoint. Common use cases for this API include data visualization, trading simulation/backtesting, and machine learning and deep learning applications with a longer horizon.",
+        "required": ["symbol", "interval", "slice"],
+        "optional": ["adjusted"]
+    },
+    {
+        "function": "TIME_SERIES_DAILY",
+        "alias": "D",
+        "description": "This API returns daily time series (date, daily open, daily high, daily low, daily close, daily volume) of the global equity specified, covering 20+ years of historical data.",
+        "required": ["symbol"],
+        "optional": ["outputsize", "datatype"]
+    },
+    {
+        "function": "TIME_SERIES_DAILY_ADJUSTED",
+        "alias": "DA",
+        "description": "This API returns daily time series (date, daily open, daily high, daily low, daily close, daily volume, daily adjusted close, and split/dividend events) of the global equity specified, covering 20+ years of historical data.",
+        "required": ["symbol"],
+        "optional": ["outputsize", "datatype"]
+    },
+    {
+        "function": "TIME_SERIES_WEEKLY",
+        "alias": "W",
+        "description": "This API returns weekly time series (last trading day of each week, weekly open, weekly high, weekly low, weekly close, weekly volume) of the global equity specified, covering 20+ years of historical data.",
+        "required": ["symbol"],
+        "optional": ["datatype"]
+    },
+    {
+        "function": "TIME_SERIES_WEEKLY_ADJUSTED",
+        "alias": "WA",
+        "description": "This API returns weekly adjusted time series (last trading day of each week, weekly open, weekly high, weekly low, weekly close, weekly adjusted close, weekly volume, weekly dividend) of the global equity specified, covering 20+ years of historical data.",
+        "required": ["symbol"],
+        "optional": ["datatype"]
+    },
+    {
+        "function": "TIME_SERIES_MONTHLY",
+        "alias": "M",
+        "description": "This API returns monthly time series (last trading day of each month, monthly open, monthly high, monthly low, monthly close, monthly volume) of the global equity specified, covering 20+ years of historical data. ",
+        "required": ["symbol"],
+        "optional": ["datatype"]
+    },
+    {
+        "function": "TIME_SERIES_MONTHLY_ADJUSTED",
+        "alias": "MA",
+        "description": "This API returns monthly adjusted time series (last trading day of each month, monthly open, monthly high, monthly low, monthly close, monthly adjusted close, monthly volume, monthly dividend) of the equity specified, covering 20+ years of historical data.",
+        "required": ["symbol"],
+        "optional": ["datatype"]
+    },
+    {
+        "function": "CURRENCY_EXCHANGE_RATE",
+        "alias": "FX",
+        "description": "This API returns the realtime exchange rate for a pair of digital currency (e.g., Bitcoin) and physical currency (e.g., USD).",
+        "required": ["from_currency", "to_currency"]
+    },
+    {
+        "function": "FX_DAILY",
+        "alias": "FXD",
+        "description": "This API returns the daily time series (timestamp, open, high, low, close) of the FX currency pair specified, updated realtime.",
+        "required": ["from_symbol", "to_symbol"],
+        "optional": ["outputsize", "datatype"]
+    },
+    {
+        "function": "FX_INTRADAY",
+        "alias": "FXI",
+        "description": "This API returns intraday time series (timestamp, open, high, low, close) of the FX currency pair specified, updated realtime.",
+        "required": ["from_symbol", "to_symbol", "interval"],
+        "optional": ["outputsize", "datatype"]
+    },
+    {
+        "function": "FX_MONTHLY",
+        "alias": "FXM",
+        "description": "This API returns the monthly time series (timestamp, open, high, low, close) of the FX currency pair specified, updated realtime. The latest data point is the prices information for the month (or partial month) containing the current trading day, updated realtime.",
+        "required": ["from_symbol", "to_symbol"],
+        "optional": ["datatype"]
+    },
+    {
+        "function": "FX_WEEKLY",
+        "alias": "FXW",
+        "description": "This API returns the weekly time series (timestamp, open, high, low, close) of the FX currency pair specified, updated realtime. The latest data point is the price information for the week (or partial week) containing the current trading day, updated realtime.",
+        "required": ["from_symbol", "to_symbol"],
+        "optional": ["datatype"]
+    },
+    {
+        "function": "CRYPTO_RATING",
+        "alias": "CR",
+        "description": "Fundamental Crypto Asset Score (FCAS) is a comparative metric used to assess the fundamental health of crypto projects. The score is derived from the interactivity between primary project life-cycle factors: User Activity/Utility, Developer Behavior, and Market Maturity. Each crypto asset is given a composite numerical score, 0-1000, and an associated rating. Powered by Flipside Crypto, the inventor of the FCAS system and an industry-leading \"rating agency\" for cryptocurrencies. For more information, please visit https://flipsidecrypto.com/fcas/.",
+        "required": ["symbol"]
+    },
+    {
+        "function": "DIGITAL_CURRENCY_DAILY",
+        "alias": "CD",
+        "description": "This API returns the daily historical time series for a digital currency (e.g., BTC) traded on a specific market (e.g., CNY/Chinese Yuan), refreshed daily at midnight (UTC). Prices and volumes are quoted in both the market-specific currency and USD.",
+        "required": ["symbol", "market"]
+    },
+    {
+        "function": "DIGITAL_CURRENCY_WEEKLY",
+        "alias": "CW",
+        "description": "This API returns the weekly historical time series for a digital currency (e.g., BTC) traded on a specific market (e.g., CNY/Chinese Yuan), refreshed daily at midnight (UTC). Prices and volumes are quoted in both the market-specific currency and USD.",
+        "required": ["symbol", "market"]
+    },
+    {
+        "function": "DIGITAL_CURRENCY_MONTHLY",
+        "alias": "CM",
+        "description": "This API returns the monthly historical time series for a digital currency (e.g., BTC) traded on a specific market (e.g., CNY/Chinese Yuan), refreshed daily at midnight (UTC). Prices and volumes are quoted in both the market-specific currency and USD.",
+        "required": ["symbol", "market"]
+    },
+    {
+        "function": "SYMBOL_SEARCH",
+        "alias": "SS",
+        "description": "The Search Endpoint returns the best-matching symbols and market information based on keywords of your choice. The search results also contain match scores that provide you with the full flexibility to develop your own search and filtering logic.",
+        "required": ["keywords"],
+        "optional": ["datatype"]
+    },
+    {
+        "function": "GLOBAL_QUOTE",
+        "alias": "Q",
+        "description": "A lightweight alternative to the time series APIs, this service returns the price and volume information for a security of your choice.",
+        "required": ["symbol"],
+        "optional": ["datatype"]
+    },
+    {
+        "function": "OVERVIEW",
+        "alias": "OVER",
+        "description": "This API returns the company information, financial ratios, and other key metrics for the equity specified. Data is generally refreshed on the same day a company reports its latest earnings and financials.",
+        "required": ["symbol"],
+        "optional": ["datatype"]
+    },
+    {
+        "function": "INCOME_STATEMENT",
+        "alias": "IS",
+        "description": "This API returns the annual and quarterly income statements for the company of interest. Data is generally refreshed on the same day a company reports its latest earnings and financials.",
+        "required": ["symbol"],
+        "optional": ["datatype"]
+    },
+    {
+        "function": "BALANCE_SHEET",
+        "alias": "BS",
+        "description": "This API returns the annual and quarterly balance sheets for the company of interest. Data is generally refreshed on the same day a company reports its latest earnings and financials.",
+        "required": ["symbol"],
+        "optional": ["datatype"]
+    },
+    {
+        "function": "CASH_FLOW",
+        "alias": "CF",
+        "description": "This API returns the annual and quarterly cash flows for the company of interest. Data is generally refreshed on the same day a company reports its latest earnings and financials.",
+        "required": ["symbol"],
+        "optional": ["datatype"]
+    },
+    {
+        "function": "LISTING_STATUS",
+        "alias": "LS",
+        "description": "This API returns a list of active or delisted US stocks and ETFs, either as of the latest trading day or at a specific time in history. The endpoint is positioned to facilitate equity research on asset lifecycle and survivorship.",
+        "optional": ["date", "state"]
+    },
+    {
+        "function": "EARNINGS_CALENDAR",
+        "alias": "EC",
+        "description": "This API returns a list of company earnings expected in the next 3, 6, or 12 months. Available Horizons: '3month', '6month', '12month'. Default: '3month'",
+        "optional": ["symbol", "horizon"]
+    },
+    {
+        "function": "IPO_CALENDAR",
+        "alias": "IC",
+        "description": "This API returns a list of IPOs expected in the next 3 months."
+    }],
+"indicator":[
+    {
+        "function": "SMA",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=SimpleMA.htm",
+        "required": ["symbol", "interval", "series_type", "time_period"]
+    },
+    {
+        "function": "EMA",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=ExpMA.htm",
+        "required": ["symbol", "interval", "series_type", "time_period"]
+    },
+    {
+        "function": "WMA",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=WeightedMA.htm",
+        "required": ["symbol", "interval", "series_type", "time_period"]
+    },
+    {
+        "function": "DEMA",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=DEMA.htm",
+        "required": ["symbol", "interval", "series_type", "time_period"]
+    },
+    {
+        "function": "TEMA",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=TEMA.htm",
+        "required": ["symbol", "interval", "series_type", "time_period"]
+    },
+    {
+        "function": "TRIMA",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=TriangularMA.htm",
+        "required": ["symbol", "interval", "series_type", "time_period"]
+    },
+    {
+        "function": "KAMA",
+        "description": "Kaufman Adaptive Moving Average",
+        "required": ["symbol", "interval", "series_type", "time_period"]
+    },
+    {
+        "function": "MAMA",
+        "description": "MESA Adaptive Moving Average",
+        "required": ["symbol", "interval", "series_type"],
+        "optional": ["fastlimit", "slowlimit"]
+    },
+    {
+        "function": "VWAP",
+        "description": "Volume Weighted Moving Average",
+        "required": ["symbol", "interval"],
+        "optional": ["datatype"]
+    },
+    {
+        "function": "T3",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=T3.htm",
+        "required": ["symbol", "interval", "series_type", "time_period"]
+    },
+    {
+        "function": "MACD",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=MACD.htm",
+        "required": ["symbol", "interval", "series_type"],
+        "optional": ["fastperiod", "slowperiod", "signalperiod"]
+    },
+    {
+        "function": "MACDEXT",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=MACD.htm",
+        "required": ["symbol", "interval", "series_type"],
+        "optional": ["fastperiod", "slowperiod", "signalperiod", "fastmatype", "slowmatype", "signalmatype"]
+    },
+    {
+        "function": "STOCH",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=StochasticOscillator.htm",
+        "required": ["symbol", "interval", "series_type"],
+        "optional": ["fastkperiod", "slowkperiod", "slowdperiod", "slowkmatype", "slowdmatype"]
+    },
+    {
+        "function": "STOCHF",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=StochasticOscillator.htm",
+        "required": ["symbol", "interval", "series_type"],
+        "optional": ["fastkperiod", "fastdperiod", "fastdmatype"]
+    },
+    {
+        "function": "RSI",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=RSI.htm",
+        "required": ["symbol", "interval", "series_type", "time_period"]
+    },
+    {
+        "function": "STOCHRSI",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=StochRSI.htm",
+        "required": ["symbol", "interval", "series_type", "time_period"],
+        "optional": ["fastkperiod", "fastdperiod", "fastdmatype"]
+    },
+    {
+        "function": "WILLR",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=WilliamsR.htm",
+        "required": ["symbol", "interval", "time_period"]
+    },
+    {
+        "function": "ADX",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=ADX.htm",
+        "required": ["symbol", "interval", "time_period"]
+    },
+    {
+        "function": "ADXR",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=ADXR.htm",
+        "required": ["symbol", "interval", "time_period"]
+    },
+    {
+        "function": "APO",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=PriceOscillator.htm",
+        "required": ["symbol", "interval", "series_type"],
+        "optional": ["fastperiod", "slowperiod", "matype"]
+    },
+    {
+        "function": "PPO",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=PriceOscillatorPct.htm",
+        "required": ["symbol", "interval", "series_type"],
+        "optional": ["fastperiod", "slowperiod", "matype"]
+    },
+    {
+        "function": "MOM",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=Momentum.htm",
+        "required": ["symbol", "interval", "series_type", "time_period"]
+    },
+    {
+        "function": "BOP",
+        "description": "Balance of Power",
+        "required": ["symbol", "interval"]
+    },
+    {
+        "function": "CCI",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=CCI.htm",
+        "required": ["symbol", "interval", "time_period"]
+    },
+    {
+        "function": "CMO",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=CMO.htm",
+        "required": ["symbol", "interval", "series_type", "time_period"]
+    },
+    {
+        "function": "ROC",
+        "description": "Rate of Change",
+        "required": ["symbol", "interval", "series_type", "time_period"]
+    },
+    {
+        "function": "ROCR",
+        "description": "Rate of Change Ratio",
+        "required": ["symbol", "interval", "series_type", "time_period"]
+    },
+    {
+        "function": "AROON",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=Aroon.htm",
+        "required": ["symbol", "interval", "time_period"]
+    },
+    {
+        "function": "AROONOSC",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=AroonOscillator.htm",
+        "required": ["symbol", "interval", "time_period"]
+    },
+    {
+        "function": "MFI",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=MoneyFlowIndex.htm",
+        "required": ["symbol", "interval", "time_period"]
+    },
+    {
+        "function": "TRIX",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=TRIX.htm",
+        "required": ["symbol", "interval", "series_type", "time_period"]
+    },
+    {
+        "function": "ULTOSC",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=UltimateOsc.htm",
+        "required": ["symbol", "interval", "series_type"],
+        "optional": ["timeperiod1", "timeperiod2", "timeperiod3"]
+    },
+    {
+        "function": "DX",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=DX.htm",
+        "required": ["symbol", "interval", "time_period"]
+    },
+    {
+        "function": "MINUS_DI",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=DI.htm",
+        "required": ["symbol", "interval", "time_period"]
+    },
+    {
+        "function": "PLUS_DI",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=DI.htm",
+        "required": ["symbol", "interval", "time_period"]
+    },
+    {
+        "function": "MINUS_DM",
+        "description": "https://www.investopedia.com/articles/technical/02/050602.asp",
+        "required": ["symbol", "interval", "time_period"]
+    },
+    {
+        "function": "PLUS_DM",
+        "description": "https://www.investopedia.com/articles/technical/02/050602.asp",
+        "required": ["symbol", "interval", "time_period"]
+    },
+    {
+        "function": "BBANDS",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=Bollinger.htm",
+        "required": ["symbol", "interval", "series_type", "time_period"],
+        "optional": ["nbdevup", "nbdevdn", "matype"]
+    },
+    {
+        "function": "MIDPOINT",
+        "description": "(high + low) / 2",
+        "required": ["symbol", "interval", "series_type", "time_period"]
+    },
+    {
+        "function": "MIDPRICE",
+        "description": "(highest high + lowest low) / 2",
+        "required": ["symbol", "interval", "time_period"]
+    },
+    {
+        "function": "SAR",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=SAR.htm",
+        "required": ["symbol", "interval"],
+        "optional": ["acceleration", "maximum"]
+    },
+    {
+        "function": "TRANGE",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=TR.htm",
+        "required": ["symbol", "interval"]
+    },
+    {
+        "function": "ATR",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=ATR.htm",
+        "required": ["symbol", "interval", "time_period"]
+    },
+    {
+        "function": "NATR",
+        "description": "Normalized Average True Range",
+        "required": ["symbol", "interval", "time_period"]
+    },
+    {
+        "function": "AD",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=AccumDist.htm",
+        "required": ["symbol", "interval"]
+    },
+    {
+        "function": "ADOSC",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=AccumDist.htm",
+        "required": ["symbol", "interval"],
+        "optional": ["fastperiod", "slowperiod"]
+    },
+    {
+        "function": "OBV",
+        "description": "https://www.fmlabs.com/reference/default.htm?url=OBV.htm",
+        "required": ["symbol", "interval"]
+    },
+    {
+        "function": "HT_TRENDLINE",
+        "description": "Hilbert Transform, instantaneous trendline",
+        "required": ["symbol", "interval", "series_type"]
+    },
+    {
+        "function": "HT_SINE",
+        "description": "Hilbert Transform, Sine Wave",
+        "required": ["symbol", "interval", "series_type"]
+    },
+    {
+        "function": "HT_TRENDMODE",
+        "description": "Hilbert Transform, Trend vs Cycle Mode",
+        "required": ["symbol", "interval", "series_type"]
+    },
+    {
+        "function": "HT_DCPERIOD",
+        "description": "Hilbert Transform, Dominant Cycle Period",
+        "required": ["symbol", "interval", "series_type"]
+    },
+    {
+        "function": "HT_DCPHASE",
+        "description": "Hilbert Transform, Dominant Cycle Phase",
+        "required": ["symbol", "interval", "series_type"]
+    },
+    {
+        "function": "HT_PHASOR",
+        "description": "Hilbert Transform, Dominant Cycle Phasor Components",
+        "required": ["symbol", "interval", "series_type"]
+    }]
+}

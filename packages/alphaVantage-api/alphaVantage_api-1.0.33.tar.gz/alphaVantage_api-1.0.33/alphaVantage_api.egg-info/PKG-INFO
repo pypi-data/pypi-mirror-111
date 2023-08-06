@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: alphaVantage-api
+Version: 1.0.33
+Summary: An Opinionated AlphaVantage API Wrapper in Python 3.9 and compatible with Pandas TA
+Home-page: https://github.com/twopirllc/AlphaVantageAPI
+Author: Kevin Johnson
+Author-email: appliedmathkj@gmail.com
+License: MIT
+Description: An Opinionated AlphaVantage API Wrapper in Python 3.9 and compatible with Pandas TA
+Keywords: AlphaVantage,API,Equities,FOREX,Digital/Crypto,Technical Analysis,Technicals,Fundamentals,Earnings Calendar,IPO Calendar,Listing Status
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: Topic :: Utilities
