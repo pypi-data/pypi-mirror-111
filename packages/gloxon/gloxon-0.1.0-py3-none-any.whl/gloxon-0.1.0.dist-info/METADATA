@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: gloxon
+Version: 0.1.0
+Summary: Python bindings to Gloxon LLC services. This package contains no code at the moment.
+Home-page: https://gloxoninc.com
+Author: Gloxon LLC
+Author-email: gloxongp@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: requests
+
+UNKNOWN
+
+
