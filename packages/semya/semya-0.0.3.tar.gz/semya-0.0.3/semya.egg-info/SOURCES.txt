@@ -1,0 +1,8 @@
+README.md
+setup.py
+semya.egg-info/PKG-INFO
+semya.egg-info/SOURCES.txt
+semya.egg-info/dependency_links.txt
+semya.egg-info/not-zip-safe
+semya.egg-info/requires.txt
+semya.egg-info/top_level.txt
