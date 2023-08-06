@@ -1,0 +1,9 @@
+gatt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gatt/characteristic.py,sha256=WQ4abyrane5IVza-52wBWBc1ukq5w8dtKKW8k3Y1iFk,13465
+gatt/descriptor.py,sha256=6o9oHA_XCdGTdBLTXIa66sgfcKCIVAxPJVPo9erD8I8,7220
+gatt/service.py,sha256=s_RLrA9erc5POFcIgN09c3c3zIGnfD3nMtQ8UujWl2c,9292
+bluez_peripheral-0.1.0.dist-info/LICENSE,sha256=8NpQCNp0NFi_xCvaBFPbFs9YK3jCk5RtsxZEhZeMWQU,1068
+bluez_peripheral-0.1.0.dist-info/METADATA,sha256=DbzZnlTBU0zsz7Jwub6BgQy5y8LzjQ2ZpgMOI46yUwg,5332
+bluez_peripheral-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+bluez_peripheral-0.1.0.dist-info/top_level.txt,sha256=o9vaa9sdWQmdlcW6K_LJfju6hYpdt0tnoYO5CoHLmqg,5
+bluez_peripheral-0.1.0.dist-info/RECORD,,
