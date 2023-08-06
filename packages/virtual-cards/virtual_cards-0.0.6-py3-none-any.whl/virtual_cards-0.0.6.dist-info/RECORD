@@ -1,0 +1,17 @@
+vc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vc/init_vc.py,sha256=5S5v2lsa9ymM7QBcV_16LOn6ZrV_xiKrZ_OjyR6-S5E,505
+vc/settings.py,sha256=xqhVwxoUiwX_h6Fgc0YUpIif6a5HHwz04pVHUVe4aaE,710
+vc/db/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vc/db/base_class.py,sha256=8T2dg98orIrMzUhrZjMm-V7LHfkFqFWvg8lA7Njw6RU,1007
+vc/db/models.py,sha256=4d74HfpmrmjDyaGvsiatoLq8gh-Qh4U2GHtyX2LrgV8,3467
+vc/libs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vc/libs/decoratos.py,sha256=AZ7e_CJuJ-8YbNXatTvD8G0uFVOXr0-9P8ZjNWY9Fzw,1249
+vc/libs/utils.py,sha256=RxdR74KfhdURAbTaG6w33WF57zuNnMjrlkU7LzOGx7Q,442
+vc/manager/__init__.py,sha256=Mu5Tc82hc3POLILqBTq7MOyV50ahDkGRlM6wHcVo2oU,24
+vc/manager/base.py,sha256=qRG3HKPUmHqwTTjZn6vv-smyGx_OT1HjmvRnJb2didM,3005
+vc/manager/soldo.py,sha256=Zu7kzkQUuHqmCrCHxVoopVRryuyP5q9Al0YL72BPor4,4555
+vc/manager/soldo_event.py,sha256=LPK4C4dVNsk0j6OvdOjZoHBVN9XtKWYgxPVzCgxb-4c,2255
+virtual_cards-0.0.6.dist-info/METADATA,sha256=rde-J1uFjyEBW1ELUpSj8IkuMcBmbqXfjEvOEONHYGY,685
+virtual_cards-0.0.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+virtual_cards-0.0.6.dist-info/top_level.txt,sha256=av3tbOW8CNN7EzKjALgUeyhkGtF2eEncaaUND2vRyxM,3
+virtual_cards-0.0.6.dist-info/RECORD,,
