@@ -1,0 +1,18 @@
+ewokscore@ git+https://git@gitlab.esrf.fr/workflow/ewoks/ewokscore.git@main
+Orange3
+
+[dev]
+black
+flake8
+pytest
+ewokscore[test]@ git+https://git@gitlab.esrf.fr/workflow/ewoks/ewokscore.git@main
+
+[dev:python_version < "3.7"]
+importlib_resources
+
+[test]
+pytest
+ewokscore[test]@ git+https://git@gitlab.esrf.fr/workflow/ewoks/ewokscore.git@main
+
+[test:python_version < "3.7"]
+importlib_resources
