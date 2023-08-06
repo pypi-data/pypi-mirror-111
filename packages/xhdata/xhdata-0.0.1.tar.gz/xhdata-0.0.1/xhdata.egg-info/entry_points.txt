@@ -1,0 +1,6 @@
+[console_scripts]
+xhdata = xhdata.Command:command
+xhdata-akshare = xhdata.Command:AKShare
+xhdata-tdx = xhdata.Command:Tdx
+xhdata-tushare = xhdata.Command:Tushare
+
