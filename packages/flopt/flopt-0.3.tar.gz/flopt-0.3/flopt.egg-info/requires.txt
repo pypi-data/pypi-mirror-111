@@ -1,0 +1,11 @@
+numpy
+sympy
+matplotlib
+pulp
+optuna
+hyperopt
+sphinx
+sphinx-autobuild
+sphinx_rtd_theme
+recommonmark
+pytest
