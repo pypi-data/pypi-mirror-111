@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: damealgorithms
+Version: 0.0.13
+Summary: A library to store simple algorithms
+Home-page: http://github.com/davidam/damealgorithms
+Author: David Arroyo Menéndez
+Author-email: davidam@gmail.com
+License: GPLv3
+Description: UNKNOWN
+Keywords: maths,algorithms
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Mathematics
