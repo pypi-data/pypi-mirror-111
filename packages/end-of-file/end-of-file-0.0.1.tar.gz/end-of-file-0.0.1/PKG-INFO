@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: end-of-file
+Version: 0.0.1
+Summary: Small utility to ensure files end with one newline.
+Home-page: https://github.com/Keeo/end-of-file
+Author: Martin Moravek
+Author-email: moravek.martin@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/Keeo/end-of-file/issues
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+UNKNOWN
+
