@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/sicaptcha/__init__.py
+src/sicaptcha/sicaptcha.py
+src/sicaptcha.egg-info/PKG-INFO
+src/sicaptcha.egg-info/SOURCES.txt
+src/sicaptcha.egg-info/dependency_links.txt
+src/sicaptcha.egg-info/requires.txt
+src/sicaptcha.egg-info/top_level.txt
