@@ -1,0 +1,3 @@
+include dst_annotations/py.typed
+recursive-include dst_annotations/ *.pyi
+recursive-exclude dst_annotations/tests/ *.py

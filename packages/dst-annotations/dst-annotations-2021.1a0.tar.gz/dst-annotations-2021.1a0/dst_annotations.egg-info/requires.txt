@@ -1,0 +1,11 @@
+typing-extensions
+
+[dev]
+pylint
+pylint-json2html
+pycodestyle
+flake8
+isort
+yapf
+mypy
+types-pkg_resources
