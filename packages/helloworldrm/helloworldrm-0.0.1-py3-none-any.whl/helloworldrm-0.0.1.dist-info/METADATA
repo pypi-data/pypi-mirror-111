@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: helloworldrm
+Version: 0.0.1
+Summary: Say Hello
+Home-page: https://github.com/joseignaciorm/python_package_example
+Author: Nacho
+Author-email: joseignaciorm13@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: dev
+Requires-Dist: streamlit
+Requires-Dist: check-manifest
+Provides-Extra: dev
+Requires-Dist: pytest (>=3.7); extra == 'dev'
+Requires-Dist: tox; extra == 'dev'
+Requires-Dist: twine; extra == 'dev'
+Requires-Dist: wheel (==0.30.0); extra == 'dev'
+
+UNKNOWN
+
+
