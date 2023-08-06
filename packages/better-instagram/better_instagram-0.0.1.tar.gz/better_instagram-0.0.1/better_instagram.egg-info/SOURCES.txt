@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+better_instagram/__init__.py
+better_instagram/better_instagram.py
+better_instagram.egg-info/PKG-INFO
+better_instagram.egg-info/SOURCES.txt
+better_instagram.egg-info/dependency_links.txt
+better_instagram.egg-info/top_level.txt
