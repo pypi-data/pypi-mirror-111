@@ -1,0 +1,9 @@
+xmltodict
+requests
+BeautifulSoup4
+Django
+scrapy_redis
+pymysql
+dbutils
+elogger
+DBService
