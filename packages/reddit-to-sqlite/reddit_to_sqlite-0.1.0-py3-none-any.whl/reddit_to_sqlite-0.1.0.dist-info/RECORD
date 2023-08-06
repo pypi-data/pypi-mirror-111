@@ -1,0 +1,9 @@
+reddit_to_sqlite/__init__.py,sha256=C4rePmI2D2SxLlMGOjjTmZNZRTkgJsHuiMLSjesvn5I,120
+reddit_to_sqlite/main.py,sha256=TvL6d1RxfU2Zuv7jdCiHaJ2Bzv_l48Ju-VFlwRToFxU,6960
+reddit_to_sqlite/reddit_instance.py,sha256=ABTMLelI-Tx6YNFRLbOEVbSf5pCVEmWfYQ3EHC77Y9M,1136
+reddit_to_sqlite/view_def.sql,sha256=drVQiHJSMIyhYZ4ZzLg3q-5nOvW79x6x26AB4JZTakM,974
+reddit_to_sqlite-0.1.0.dist-info/entry_points.txt,sha256=Ep7y-1VfIEvFfwVTNyylAc_2DvC_aSmf3m2tLz5ckU4,62
+reddit_to_sqlite-0.1.0.dist-info/LICENSE,sha256=21n5Rs4NC94QaKzya0XY9U8Bx6-p8tPRh9ZUrrV1uPA,1073
+reddit_to_sqlite-0.1.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+reddit_to_sqlite-0.1.0.dist-info/METADATA,sha256=dWrv8fDRhWvyeY8AOjenCidAIrrb09o16rqsEStlrtA,2884
+reddit_to_sqlite-0.1.0.dist-info/RECORD,,

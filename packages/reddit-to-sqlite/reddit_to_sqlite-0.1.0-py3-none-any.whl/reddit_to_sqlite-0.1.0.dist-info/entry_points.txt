@@ -1,0 +1,3 @@
+[console_scripts]
+reddit-to-sqlite=reddit_to_sqlite.main:app
+
