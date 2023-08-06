@@ -1,0 +1,15 @@
+README.md
+setup.py
+halfling/__init__.py
+halfling/_runner.py
+halfling/exceptions.py
+halfling/main.py
+halfling/shortcuts.py
+halfling/tasks.py
+halfling/utils.py
+halfling.egg-info/PKG-INFO
+halfling.egg-info/SOURCES.txt
+halfling.egg-info/dependency_links.txt
+halfling.egg-info/entry_points.txt
+halfling.egg-info/top_level.txt
+test/test_build.py
