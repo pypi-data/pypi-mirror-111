@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.py
+src/GenergyGBox.egg-info/PKG-INFO
+src/GenergyGBox.egg-info/SOURCES.txt
+src/GenergyGBox.egg-info/dependency_links.txt
+src/GenergyGBox.egg-info/top_level.txt
+src/gbox/__init__.py
+src/gbox/gboxmanager.py
+src/gbox/data/__init__.py
+src/gbox/data/dataaccessor.py
+src/gbox/gpio/__init__.py
+src/gbox/gpio/gpiomanager.py
