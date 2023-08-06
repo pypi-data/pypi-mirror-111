@@ -1,0 +1,11 @@
+lwsspy.ml-0.0.1-py3.9-nspkg.pth,sha256=GFNF3n__RUtSagJ_L4PyQMAUQLSpc2w-Eq0iluN5WiY,539
+lwsspy/ml/__init__.py,sha256=bCDetU_YoVQ2V7JkbWmwwS2McTDx7bRQsRNx3SQvTzw,293
+lwsspy/ml/labeling/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lwsspy/ml/labeling/segmentlabeler.py,sha256=p28O3n-c0QWkB7NsT9LDlNRBOVPVabp-PD_uGPxvC-s,14467
+lwsspy/ml/labeling/volumelabeler.py,sha256=cL363lmVeco9rj_AfFG04uUxe8H9V0bj03yVd-tKtgQ,7908
+lwsspy.ml-0.0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+lwsspy.ml-0.0.1.dist-info/METADATA,sha256=JDGbEP8ViteXwA0GS4915cew6L8KokDC5o--8MojP4A,1746
+lwsspy.ml-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+lwsspy.ml-0.0.1.dist-info/namespace_packages.txt,sha256=2ib7IHqAzYDmoYjDrKEbC3-oRGh4toKQYEfdm1yIaRs,7
+lwsspy.ml-0.0.1.dist-info/top_level.txt,sha256=2ib7IHqAzYDmoYjDrKEbC3-oRGh4toKQYEfdm1yIaRs,7
+lwsspy.ml-0.0.1.dist-info/RECORD,,
