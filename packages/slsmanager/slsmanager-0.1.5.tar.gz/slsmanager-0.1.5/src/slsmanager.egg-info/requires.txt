@@ -1,0 +1,5 @@
+click
+pathlib
+colorama
+boto3
+progress
