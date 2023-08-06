@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: reutils
+Version: 0.1.0
+Summary: Just another miscellaneous python utility library.
+Home-page: https://github.com/ysenarath/reutils
+Author: Yasas Senarath
+Author-email: ysenarath.93@gmail.com
+License: UNKNOWN
+Description: # Re:Utils
+        Just another miscellaneous python utility library.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
