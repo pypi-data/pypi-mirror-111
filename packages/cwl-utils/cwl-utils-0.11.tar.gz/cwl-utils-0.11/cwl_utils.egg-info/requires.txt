@@ -1,0 +1,6 @@
+requests
+schema-salad<9,>=7
+typing_extensions
+cwltool>=3.0.20201113183607
+cwlformat
+cwl-upgrader>=1.2
