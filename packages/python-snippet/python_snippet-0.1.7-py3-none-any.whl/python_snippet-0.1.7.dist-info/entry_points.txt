@@ -1,0 +1,3 @@
+[console_scripts]
+python-snippet=python_snippet.main:app
+
