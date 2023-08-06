@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: scriptlocator
+Version: 0.0.2
+Summary: For getting called script's direction
+Home-page: UNKNOWN
+Author: Yoshi
+Author-email: yoshi4868686@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# scriptlocator
+Return Script's absolut direction path.
+
+## Installation
+python setup.py install
+
+## Quickstart
+locator = scriptlocator.Locator()  
+scriptpath = locator.getlocation()  
+filepath = locator.getfilelocation("EXAMPLE.txt")  
+
+
