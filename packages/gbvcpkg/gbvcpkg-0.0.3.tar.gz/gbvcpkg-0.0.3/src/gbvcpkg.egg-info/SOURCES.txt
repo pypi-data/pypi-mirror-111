@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/gbvcpkg/__init__.py
+src/gbvcpkg/video_player_class.py
+src/gbvcpkg.egg-info/PKG-INFO
+src/gbvcpkg.egg-info/SOURCES.txt
+src/gbvcpkg.egg-info/dependency_links.txt
+src/gbvcpkg.egg-info/requires.txt
+src/gbvcpkg.egg-info/top_level.txt
