@@ -1,0 +1,652 @@
+Metadata-Version: 2.1
+Name: easierSDK
+Version: 0.1.16
+Summary: This library contains code for interacting with EASIER.AI platform.
+Home-page: https://scm.atosresearch.eu/ari/easier/easier-sdk
+Author: AIDR Unit
+Author-email: adrian.arroyo@atos.net
+License: ATOS
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: minio (==6.0.0)
+Requires-Dist: tensorflow (==2.4.0)
+Requires-Dist: joblib (>=0.17.0)
+Requires-Dist: scikit-learn (==0.23.2)
+Requires-Dist: seaborn (>=0.11.0)
+Requires-Dist: pandas (>=1.1.4)
+Requires-Dist: h5py (<3.0.0)
+Requires-Dist: Pillow (==8.1.0)
+Requires-Dist: matplotlib (==3.3.4)
+Requires-Dist: kubernetes (==12.0.1)
+Requires-Dist: tqdm (==4.59.0)
+Requires-Dist: sweetviz (==2.1.0)
+Requires-Dist: pydash (==5.0.0)
+
+# Quickstart with EasierSDK
+
+This first tutorial will cover some basic functionalities about interacting with EASIER in oder to "start playing" with the available Models and Datasets in the platform, with these key topics:
+
+*   How to connect the platform
+*   Search for Models and Datasets
+*   Get information from Models and Datastes
+*   Download and play with an image classifier Model
+*   Create and upload your first Model
+
+An advanced tutorial is also available in [README_Advanced.md](README_Advanced.md) covering things such as:
+
+*   Model versioning
+*   Model serving in the platform
+*   Model training in the platform
+
+
+## Getting the library and connecting to the platform
+
+So, lets start downloading the library and login with your EASIER's user. EasierSDK library allows you to interact, donwload, execute these Models and Datasets. 
+
+
+
+```
+%pip install -U easierSDK
+```
+
+
+```
+from easierSDK.easier import EasierSDK
+from easierSDK.classes.categories import Categories  
+import easierSDK.classes.constants as Constants 
+```
+
+
+```
+#- Initializations
+easier_user = ""
+easier_password = ""
+easier = EasierSDK(easier_user=easier_user, easier_password=easier_password)
+
+```
+
+## Taking a look to the available Models and Datasets
+
+The first thing you can do is to take a look into the Easier catalogue composed by Models and Datasets. These are organized in different available repositories. Some of them are provided (public) by other users of the platform and also, you will find others officially provided by the Easier provider. Getting the information would take a little bit of time depending on the size of the Repository.
+
+
+```
+repositories = easier.get_repositories_metadata(category=None) # Returns dict of Repo objects
+```
+
+    Getting repositories information...: 100%|[31m██████████[0m| 5/5 [00:03<00:00,  1.29it/s, repository=juan.carrasco-public]
+
+
+
+```
+for repo_name in repositories.keys():
+  print(repo_name)
+```
+
+    adrian.arroyo-private
+    adrian.arroyo-public
+    easier-public
+    jose.gato-public
+    juan.carrasco-public
+
+
+We can see the public/private repository of our user, but also, other available ones. Lets dig into the one from "easier-public". In order to do this, you can use the dictionary-like python syntax. There are some built-in functions that print the content of the repository for you.
+
+
+
+
+```
+repositories["easier-public"].print_models()
+print("-----------------------------------------------------------------------------------------------------------------------")
+repositories["easier-public"].print_datasets()
+```
+
+    MODELS:
+    Name                          Category                      Last Modification             Num Experiments               
+    seriot_anomaly_detection      Categories.MISC               11:50:00 - 10/12/2015         0                             
+    dummy_weather                 Categories.MISC               11:50:00 - 01/02/2021         17                            
+    resnet50_v2                   Categories.MISC               11:50:00 - 10/12/2015         2                             
+    -----------------------------------------------------------------------------------------------------------------------
+    DATASETS:
+    Name                          Category                      Last Modification             
+    kaggle-pokemon-data           Categories.MISC               2021/01/18 12:41:59           
+    kaggle_flowers_recognition    Categories.MISC               2021/01/14 14:26:24           
+    robot_sim_decenter_4          Categories.MISC               2020-12-12 12:00:00           
+
+
+This repository contains a set of Models and Datasets, and you can see these are organized by **categories**. So you can use these categories to refine your search finding out your desired Model or Dataset.
+
+
+
+```
+repositories["easier-public"].print_categories()
+print("-----------------------------------------------------------------------------------------------------------------------")
+repositories["easier-public"].categories["misc"].pretty_print()
+```
+
+    Category                      Num Models                    Num Datasets                  
+    health                        0                             0                             
+    transport                     0                             0                             
+    security                      0                             0                             
+    airspace                      0                             0                             
+    education                     0                             0                             
+    misc                          3                             3                             
+    -----------------------------------------------------------------------------------------------------------------------
+    MODELS:
+    Name                          Category                      Last Modification             Num Experiments               
+    seriot_anomaly_detection      Categories.MISC               11:50:00 - 10/12/2015         0                             
+    dummy_weather                 Categories.MISC               11:50:00 - 01/02/2021         17                            
+    resnet50_v2                   Categories.MISC               11:50:00 - 10/12/2015         2                             
+    
+    DATASETS:
+    Name                          Category                      Last Modification             
+    kaggle-pokemon-data           Categories.MISC               2021/01/18 12:41:59           
+    kaggle_flowers_recognition    Categories.MISC               2021/01/14 14:26:24           
+    robot_sim_decenter_4          Categories.MISC               2020-12-12 12:00:00           
+
+
+Or you can print Models and Datasets separatly per category.
+
+
+
+```
+repositories["easier-public"].categories["misc"].print_models()
+print("-----------------------------------------------------------------------------------------------------------------------")
+repositories["easier-public"].categories["misc"].print_datasets()
+```
+
+    MODELS:
+    Name                          Category                      Last Modification             Num Experiments               
+    seriot_anomaly_detection      Categories.MISC               11:50:00 - 10/12/2015         0                             
+    dummy_weather                 Categories.MISC               11:50:00 - 01/02/2021         17                            
+    resnet50_v2                   Categories.MISC               11:50:00 - 10/12/2015         2                             
+    -----------------------------------------------------------------------------------------------------------------------
+    DATASETS:
+    Name                          Category                      Last Modification             
+    kaggle-pokemon-data           Categories.MISC               2021/01/18 12:41:59           
+    kaggle_flowers_recognition    Categories.MISC               2021/01/14 14:26:24           
+    robot_sim_decenter_4          Categories.MISC               2020-12-12 12:00:00           
+
+
+You can go more in details with each dataset or model using the same syntax.
+
+
+```
+repositories["easier-public"].categories['misc'].datasets["robot_sim_decenter_4"].pretty_print()
+```
+
+    Category:                     misc                          
+    Name:                         robot_sim_decenter_4          
+    Size:                         100                           
+    Description:                  DECENTER UC2 simulation images of person and robot
+    Last modified:                2020-12-12 12:00:00           
+    Version:                      0                             
+    Row number:                   0                             
+    Features:                     {}                            
+    Dataset type:                 images                        
+    File extension:               jpeg                          
+
+
+
+```
+repositories["easier-public"].categories['misc'].models["resnet50_v2"].pretty_print()
+```
+
+    Category:                     misc                          
+    Name:                         resnet50_v2                   
+    Description:                  Pre-trained Keras model, processing functions in: 'tensorflow.keras.applications.resnet50'. Some .jpg are stored as examples.
+    Last modified:                11:50:00 - 10/12/2015         
+    Version:                      0                             
+    Features:                     N/A                           
+
+
+Great, this one seems pretty interesting, resnet50 models are used to clasify images. Thanks to the respository owner for providing us with such an interesting model. Actualy, it has been already trained, so, it should work out of the box. We could use it to clasify our images. 
+
+## Playing with an existing Model
+
+In our previous search for a cool model, we found a resnet50 trained one. Now we will download it to start clasifying images.
+
+We will use the method get_model from the **Models API** to load the model into an object of type **EasierModel**. 
+
+
+```
+# Returns an object of type EasierModel
+easier_resnet_model = easier.models.get_model(repo_name=repositories["easier-public"].name, 
+                                              category= Categories.MISC, 
+                                              model_name=repositories["easier-public"].categories['misc'].models["resnet50_v2"].name,
+                                              experimentID=0)                                            
+                                              
+```
+
+    Downloading model resnet50_v2...: 100%|[31m██████████[0m| 3/3 [00:02<00:00,  1.12it/s, file=models/misc/resnet50_v2/0/resnet50_v2.tflite]
+
+
+    WARNING:tensorflow:No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+
+
+Each model is available in multiple Experiments (or versions). This time we will take the first one (experimentID=0). By default, if you do not provide the experimentID, it takes the most recent version.
+Others versions would work better (or not), would use different algorithms, features, etc. This is up to the provider and it could give your more details with metadata info. For example, for the experimentID=1:
+
+
+
+```
+# Returns an object of type ModelMetadata
+model_metadata = easier.models.show_model_info(repo_name="easier-public", 
+                               category=Categories.MISC, 
+                               model_name="resnet50_v2", 
+                               experimentID=1)
+```
+
+    Category:                     misc                          
+    Name:                         resnet50_v2                   
+    Description:                  resnet50v2 re-trained for simulated images by PCs
+    Last modified:                11:50:00 - 10/12/2020         
+    Version:                      1                             
+    Features:                     N/A                           
+    previous_experimentID:        0                             
+
+
+In order to play with the original resnet50 model, we will need to use some libraries. In this case we will use the framework Keras. This will require a minimum knowledge about using this framework for preprocessing the images for the model, but not too deep. 
+
+
+
+```
+import PIL 
+from tensorflow.keras.preprocessing.image import load_img 
+from tensorflow.keras.preprocessing.image import img_to_array 
+from tensorflow.keras.applications.imagenet_utils import decode_predictions 
+import matplotlib.pyplot as plt 
+import numpy as np 
+from tensorflow.keras.applications import resnet50
+
+import matplotlib.pyplot as plt  
+```
+
+Well, as an image classifier Model, we will need some images. 
+
+Lets download and prepare the image accordingly to the Model's input. Basically, transform the image into an array. The EasierSDK provides you with a method to turn an image into an array.
+
+
+
+```
+!wget https://upload.wikimedia.org/wikipedia/commons/a/ac/NewTux.png
+```
+
+    --2021-05-28 12:27:35--  https://upload.wikimedia.org/wikipedia/commons/a/ac/NewTux.png
+    Resolving upload.wikimedia.org (upload.wikimedia.org)... 91.198.174.208, 2620:0:862:ed1a::2:b
+    Connecting to upload.wikimedia.org (upload.wikimedia.org)|91.198.174.208|:443... connected.
+    HTTP request sent, awaiting response... 200 OK
+    Length: 120545 (118K) [image/png]
+    Saving to: ‘NewTux.png’
+    
+    NewTux.png          100%[===================>] 117.72K  --.-KB/s    in 0.01s   
+    
+    2021-05-28 12:27:35 (8.99 MB/s) - ‘NewTux.png’ saved [120545/120545]
+    
+
+
+
+```
+filename = './NewTux.png'
+
+original = load_img(filename, target_size = (224, 224)) 
+plt.imshow(original) 
+plt.show()
+
+# Transform image into an array to use as input for models
+image_batch= easier.datasets.codify_image(filename, target_size = (224, 224))
+
+```
+
+
+    
+![png](EASIER_SDK_files/EASIER_SDK_26_0.png)
+    
+
+
+So ths is a nice Tux, let see what our classifier says about it, easily with:
+
+
+```
+processed_image = resnet50.preprocess_input(image_batch.copy())
+
+predictions = easier_resnet_model.get_model().predict(processed_image) 
+# convert the probabilities to class labels 
+label = decode_predictions(predictions) 
+
+print(label)
+```
+
+    Downloading data from https://storage.googleapis.com/download.tensorflow.org/data/imagenet_class_index.json
+    40960/35363 [==================================] - 0s 0us/step
+    [[('n04286575', 'spotlight', 0.24322341), ('n04557648', 'water_bottle', 0.083833046), ('n04380533', 'table_lamp', 0.058811646), ('n04328186', 'stopwatch', 0.048403583), ('n03793489', 'mouse', 0.03951452)]]
+
+
+It seems the model is not very sure about what this image is about ;). As you can see, accessing the model is very easy with the **get_model()** method of the object.
+
+Now we will try again with other images. But this time, instead of dowloading from internet, we will use an available dataset in EASIER (containing images). We have previously seen one about flowers inside the EASIER Repository:
+
+
+```
+repositories["easier-public"].categories['misc'].datasets["kaggle_flowers_recognition"].pretty_print()
+```
+
+    Category:                     misc                          
+    Name:                         kaggle_flowers_recognition    
+    Size:                         228.29                        
+    Description:                  Kaggle Flowers Recognition Dataset from: https://www.kaggle.com/alxmamaev/flowers-recognition
+    Last modified:                2021/01/14 14:26:24           
+    Version:                      0                             
+    Row number:                   0                             
+    Features:                     []                            
+    Dataset type:                 images                        
+    File extension:               zip                           
+
+
+EasierSDK provides a method to donwload a selected DataSet locally.
+
+
+```
+success = easier.datasets.download(repo_name="easier-public", 
+                         category=Categories.MISC, 
+                         dataset_name="kaggle_flowers_recognition", 
+                         path_to_download="./")
+```
+
+    Downloading kaggle_flowers_recognition...:  50%|[31m█████     [0m| 1/2 [00:09<00:09,  9.40s/it, file=datasets/misc/kaggle_flowers_recognition/metadata.json]             
+
+Let's unzip the content of the dataset.
+
+
+```
+!unzip -q  ./datasets/misc/kaggle_flowers_recognition/flowers_kaggle_dataset.zip -d datasets/misc/kaggle_flowers_recognition/
+```
+
+Now, let's plot an image of this dataset.
+
+
+```
+filename = './datasets/misc/kaggle_flowers_recognition/flowers/sunflower/1022552002_2b93faf9e7_n.jpg'
+
+image_batch = easier.datasets.codify_image(filename)
+
+original = load_img(filename, target_size = (224, 224)) 
+plt.imshow(original) 
+plt.show()
+```
+
+    Downloading kaggle_flowers_recognition...: 100%|[31m██████████[0m| 2/2 [00:28<00:00, 14.41s/it, file=datasets/misc/kaggle_flowers_recognition/metadata.json]
+
+
+
+    
+![png](EASIER_SDK_files/EASIER_SDK_36_1.png)
+    
+
+
+This image is ok and shows a nice flower. Could the classifier  detect it correctly?
+
+
+```
+processed_image = resnet50.preprocess_input(image_batch.copy())
+
+predictions = easier_resnet_model.get_model().predict(processed_image) 
+# convert the probabilities to class labels 
+label = decode_predictions(predictions) 
+
+print(label)
+```
+
+    [[('n11939491', 'daisy', 0.9527277), ('n04522168', 'vase', 0.016297266), ('n11879895', 'rapeseed', 0.008985951), ('n02190166', 'fly', 0.0033212467), ('n02206856', 'bee', 0.002354509)]]
+
+
+Great job, it detects it is a flower. Actually, **it detects it is a daisy flower. With a probability of 95%.**
+
+In summary, in this tutorial we have learnt how to play with the different models, make predictions and download existing datasets.
+
+## Create your very first simple Model
+
+This is a very simple example to create an Model in EASIER. The model will not be trained but, instead, we will focus on how to interact with EASIER in order to save your model. 
+
+Let's first use Tensorflow to create and compile a simple sequential model for binary classification:
+
+
+```
+import tensorflow as tf
+
+# - Create model from scratch
+my_tf_model = tf.keras.models.Sequential([
+    tf.keras.layers.Dense(128, activation='relu', input_shape=(224,)),
+    tf.keras.layers.Dropout(0.2),
+    tf.keras.layers.Dense(64, activation='relu'),
+    tf.keras.layers.Dropout(0.1),
+    tf.keras.layers.Dense(1, activation="sigmoid")
+  ])
+
+my_tf_model.compile(optimizer='adam',
+            loss=tf.keras.losses.categorical_crossentropy,
+            metrics=[tf.keras.metrics.mean_squared_error])
+
+my_tf_model.summary()
+```
+
+    Model: "sequential"
+    _________________________________________________________________
+    Layer (type)                 Output Shape              Param #   
+    =================================================================
+    dense (Dense)                (None, 128)               28800     
+    _________________________________________________________________
+    dropout (Dropout)            (None, 128)               0         
+    _________________________________________________________________
+    dense_1 (Dense)              (None, 64)                8256      
+    _________________________________________________________________
+    dropout_1 (Dropout)          (None, 64)                0         
+    _________________________________________________________________
+    dense_2 (Dense)              (None, 1)                 65        
+    =================================================================
+    Total params: 37,121
+    Trainable params: 37,121
+    Non-trainable params: 0
+    _________________________________________________________________
+
+
+Now that we have our tensorflow model, let's create an **EasierModel** object that will be the placeholder for it, as long as some other model-related objects like the scaler or the label encoder.
+
+
+```
+from easierSDK.classes.easier_model import EasierModel
+
+# Create Easier Model
+my_easier_model = EasierModel()
+
+# Set the tensorflow model 
+my_easier_model.set_model(my_tf_model)
+```
+
+Now that we have our model in our EASIER placeholder, we need to create some metadata for it, before being allowed to upload the model to the platform. 
+
+You can use the ModelMetadata class for that:
+
+
+```
+from easierSDK.classes.model_metadata import ModelMetadata
+from datetime import datetime
+
+# # - Create ModelMetadata
+mymodel_metadata = ModelMetadata()
+mymodel_metadata.category = Categories.HEALTH
+mymodel_metadata.name = 'my-simple-classifier'
+mymodel_metadata.last_modified = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
+mymodel_metadata.description = 'My Simple Clasifier'
+mymodel_metadata.version = 0
+mymodel_metadata.features = []
+
+my_easier_model.set_metadata(mymodel_metadata)
+```
+
+Now that our model has some metadata information, let's upload it to our private repository. We can download later on this model to continue working with it. 
+
+
+```
+success = easier.models.upload(easier_model=my_easier_model)
+```
+
+    Uploading my-simple-classifier...: 100%|[32m██████████[0m| 4/4 [00:00<00:00, 32.26it/s, file=my-simple-classifier.w.h5]
+
+    Uploaded model: 
+    
+    Category:                     health                        
+    Name:                         my-simple-classifier          
+    Description:                  My Simple Clasifier           
+    Last modified:                2021/05/28 12:30:30           
+    Version:                      1                             
+    Features:                     []                            
+    previous_experimentID:        0                             
+
+
+    
+
+
+## Create a new Dataset
+
+You can create an EASIER Dataset from any kind of data: images, csv, files, whatever. Here as an example, we will use the [Columbia University Image Library](https://www1.cs.columbia.edu/CAVE/software/softlib/coil-100.php)
+
+
+```
+!wget http://www.cs.columbia.edu/CAVE/databases/SLAM_coil-20_coil-100/coil-100/coil-100.tar.gz 
+!mkdir -p ./datasets/misc/coil-100-objects/
+!tar -xf ./coil-100.tar.gz -C ./datasets/misc/coil-100-objects/
+```
+
+    --2021-05-28 12:30:37--  http://www.cs.columbia.edu/CAVE/databases/SLAM_coil-20_coil-100/coil-100/coil-100.tar.gz
+    Resolving www.cs.columbia.edu (www.cs.columbia.edu)... 128.59.11.206
+    Connecting to www.cs.columbia.edu (www.cs.columbia.edu)|128.59.11.206|:80... connected.
+    HTTP request sent, awaiting response... 301 Moved Permanently
+    Location: https://www.cs.columbia.edu/CAVE/databases/SLAM_coil-20_coil-100/coil-100/coil-100.tar.gz [following]
+    --2021-05-28 12:30:37--  https://www.cs.columbia.edu/CAVE/databases/SLAM_coil-20_coil-100/coil-100/coil-100.tar.gz
+    Connecting to www.cs.columbia.edu (www.cs.columbia.edu)|128.59.11.206|:443... connected.
+    HTTP request sent, awaiting response... 200 OK
+    Length: 261973331 (250M) [application/x-gzip]
+    Saving to: ‘coil-100.tar.gz’
+    
+    coil-100.tar.gz     100%[===================>] 249.84M  32.1MB/s    in 8.4s    
+    
+    2021-05-28 12:30:46 (29.9 MB/s) - ‘coil-100.tar.gz’ saved [261973331/261973331]
+    
+
+
+Now, like the previous example, we will use the Datasets API to create a new **EasierDataset**. First, let's fill the proper Metadata and, then, we can upload it to our repository.
+
+
+```
+from datetime import datetime
+from easierSDK.classes.dataset_metadata import DatasetMetadata
+
+
+metadata = DatasetMetadata()
+metadata.category = Categories.MISC
+metadata.name = 'coil-100'
+metadata.last_modified = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
+metadata.description = "Columbia University Image Library - Objects in ppm format"
+metadata.size = 125
+metadata.dataset_type = "images"
+metadata.file_extension = ".tar.gz"
+
+```
+
+With your Dataset downloaded and the DatasetMetadata completed, you can invoke the method upload. This method will take a directory as parameter and make a compressed file with all the content inside it. When uploading the data, it will also attach the filled metadata. We will make it available in our public repository under Misc category.
+
+
+```
+easier.datasets.upload(category=metadata.category,
+                       dataset_name=metadata.name, 
+                       local_path="./datasets/misc/coil-100-objects", 
+                       metadata=metadata, 
+                       public=True) 
+```
+
+    Uploading coil-100...: 100%|[32m██████████[0m| 2/2 [00:11<00:00,  5.94s/it, file=metadata.json]
+
+    Finished uploading dataset with no errors.
+
+
+    True
+
+
+
+FInally, we will take a last look to **our repository** to check if our Dataset is available.  The easier object contains information about the name of your public and private repo. You can use it as index to search for the Dataset we have just upload with your user. First, It is needed to refresh our repositories variable
+
+
+
+```
+repositories = easier.get_repositories_metadata(category=None) # Returns dict of Repo objects
+repositories[easier.my_public_repo].print_datasets()
+```
+
+    Getting repositories information...: 100%|[31m██████████[0m| 5/5 [00:04<00:00,  1.10it/s, repository=juan.carrasco-public]
+
+    DATASETS:
+    Name                          Category                      Last Modification             
+    coil-100                      Categories.MISC               2021/05/28 12:31:06           
+
+
+    
+
+
+
+```
+repositories[easier.my_public_repo].categories['misc'].datasets["coil-100"].pretty_print()
+```
+
+    Category:                     misc                          
+    Name:                         coil-100                      
+    Size:                         125                           
+    Description:                  Columbia University Image Library - Objects in ppm format
+    Last modified:                2021/05/28 12:31:06           
+    Version:                      0                             
+    Row number:                   0                             
+    Features:                     {}                            
+    Dataset type:                 images                        
+    File extension:               .tar.gz                       
+
+
+## Dataset analysis and visualization
+
+EasierSDK has integrated the [Sweetviz](https://github.com/fbdesignpro/sweetviz) python library. According to its doc: _"Sweetviz is an open-source Python library that generates beautiful, high-density visualizations to kickstart EDA (Exploratory Data Analysis) with just two lines of code. Output is a fully self-contained HTML application."_ We recommend reading [this article](https://towardsdatascience.com/powerful-eda-exploratory-data-analysis-in-just-two-lines-of-code-using-sweetviz-6c943d32f34) to get an in-depth description of all the features that the resulting report (the HTML application) can do. 
+
+In order to do this initial analysis,  you may use the function `analyze` within the `datasetsAPI` just as this example. It has similar parameters as the original `analyze` function in Sweetviz, but also does the show call automatically. Use parameters `window`and `html` to show the generated report in a window or as an html webpage, respectively. 
+
+
+```
+easier.datasets.download(repo_name="easier-public", category=Categories.MISC, dataset_name="kaggle-pokemon-data", path_to_download="./")
+!tar -xvf  ./datasets/misc/kaggle-pokemon-data/kaggle-pokemon-data.tar.gz -C  ./datasets/misc/kaggle-pokemon-data/
+pokemon_df = easier.datasets.load_csv(local_path="./datasets/misc/kaggle-pokemon-data/pokemon/Pokemon.csv", separator=',')
+pokemon_df = pokemon_df.drop(columns=["#", "Name"])
+pokemon_df = pokemon_df.dropna()
+
+report = easier.datasets.analyze(pokemon_df, "pokemon_dataset", window=True)
+```
+
+    Downloading kaggle-pokemon-data...:  50%|[31m█████     [0m| 1/2 [00:00<00:00, 15.31it/s, file=datasets/misc/kaggle-pokemon-data/metadata.json]     
+
+    pokemon/
+    pokemon/pokemon_data/
+    pokemon/pokemon_data/data.txt
+    pokemon/Pokemon.csv
+
+
+    Downloading kaggle-pokemon-data...: 100%|[31m██████████[0m| 2/2 [00:00<00:00,  9.11it/s, file=datasets/misc/kaggle-pokemon-data/metadata.json]
+
+
+As you can see, the function also returns the generated report of type `sweetviz.DataframeReport`. 
+
+
+```
+report.show_html()
+```
+
+    Report SWEETVIZ_REPORT.html was generated! NOTEBOOK/COLAB USERS: the web browser MAY not pop up, regardless, the report IS saved in your notebook/colab files.
+
+
+
