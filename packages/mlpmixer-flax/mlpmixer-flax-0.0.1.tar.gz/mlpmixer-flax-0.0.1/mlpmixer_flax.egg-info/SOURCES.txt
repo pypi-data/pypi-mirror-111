@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+mlpmixer_flax/__init__.py
+mlpmixer_flax/checkpoint.py
+mlpmixer_flax/config.py
+mlpmixer_flax/dataloader.py
+mlpmixer_flax/models.py
+mlpmixer_flax/train.py
+mlpmixer_flax/train_utils.py
+mlpmixer_flax.egg-info/PKG-INFO
+mlpmixer_flax.egg-info/SOURCES.txt
+mlpmixer_flax.egg-info/dependency_links.txt
+mlpmixer_flax.egg-info/requires.txt
+mlpmixer_flax.egg-info/top_level.txt
+mlpmixer_flax.egg-info/zip-safe
