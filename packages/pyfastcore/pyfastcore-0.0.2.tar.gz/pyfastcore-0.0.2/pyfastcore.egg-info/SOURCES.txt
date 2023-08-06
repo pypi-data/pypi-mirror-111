@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+pyfastcore/__init__.py
+pyfastcore/pyfastcore.py
+pyfastcore/utils.py
+pyfastcore.egg-info/PKG-INFO
+pyfastcore.egg-info/SOURCES.txt
+pyfastcore.egg-info/dependency_links.txt
+pyfastcore.egg-info/requires.txt
+pyfastcore.egg-info/top_level.txt
