@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: optiontools
+Version: 0.1.2
+Summary: Tools for valuating financial derivatives
+Home-page: https://github.com/lf-gomez/optiontools
+Author: Luis Felipe Gomez Estrada
+Author-email: luisfelipegomezestrada@gmail.com
+License: MIT
+Download-URL: https://github.com/lf-gomez/optiontools/archive/refs/tags/v0.1.2-alpha.tar.gz
+Description: # Optiontools
+        ## Tools for valuating financial derivatives
+        
+        Option Tools contains methods for valuating different types of financial derivatives, such as American, European, and Binary Options (Asset-or-Nothing, Cash-or-Nothing).
+        
+        ## License
+        
+        MIT
+Keywords: FINANCE,OPTIONS,DERIVATIVES
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/markdown
