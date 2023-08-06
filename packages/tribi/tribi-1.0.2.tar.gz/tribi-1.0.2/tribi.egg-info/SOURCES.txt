@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+./tri/__init__.py
+./tri/bi.py
+./tri/tri.py
+tribi.egg-info/PKG-INFO
+tribi.egg-info/SOURCES.txt
+tribi.egg-info/dependency_links.txt
+tribi.egg-info/top_level.txt
