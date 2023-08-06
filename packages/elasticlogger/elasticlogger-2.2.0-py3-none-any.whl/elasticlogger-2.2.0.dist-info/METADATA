@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: elasticlogger
+Version: 2.2.0
+Summary: Standardized logger compatible with ElasticSearch
+Home-page: https://github.com/danteay/elasticlogger
+License: MIT
+Keywords: logger,elasticsearch,json
+Author: Eduardo Aguilar
+Author-email: dante.aguilar41@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: certifi (>=2021.5.30,<2021.6.0)
+Requires-Dist: elasticsearch (>=7.13.2,<7.14.0)
+Requires-Dist: python-json-logger (>=2.0.1,<2.1.0)
+Requires-Dist: setuptools (>=53.0.0,<53.1.0)
+Requires-Dist: urllib3 (>=1.26.3,<1.27.0)
+Project-URL: Documentation, https://elasticlogger.readthedocs.io
+Project-URL: Repository, https://github.com/danteay/elasticlogger
+Description-Content-Type: text/markdown
+
+# ElasticLogger
+
+Simple standardized logger tool that implements python-json-logger formatter and a simple
+elastic search integration.
+
+## Requirements
+
+- Python >= 3.6
+
+## Documentation
+
+[Readthedocs](https://elasticsearch.readthedocs.io)
+
