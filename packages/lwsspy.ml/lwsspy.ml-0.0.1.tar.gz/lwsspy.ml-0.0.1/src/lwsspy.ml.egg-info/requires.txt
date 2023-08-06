@@ -1,0 +1,11 @@
+numpy
+matplotlib
+scikit-image
+
+[docs]
+sphinx
+numpydoc
+sphinx-book-theme
+
+[tests]
+pytest
