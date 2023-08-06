@@ -1,0 +1,8 @@
+fnnlsEigen.cpython-38-x86_64-linux-gnu.so,sha256=WwHeUmsOVnu5yOEbVv3aDbgWQIzzSzt_hmThCRqEspQ,22039312
+fnnlsEigen-1.0.1.dist-info/LICENSE,sha256=RUUq3BCuitasXMnBGCA3Nx8SlUD7KSk5mActLTyMAEU,1074
+fnnlsEigen-1.0.1.dist-info/RECORD,,
+fnnlsEigen-1.0.1.dist-info/METADATA,sha256=9MzQiFby-mb62CgRyH-0YSEA-2Sf-G170Xdd_CLIVdA,3860
+fnnlsEigen-1.0.1.dist-info/top_level.txt,sha256=C84CsNXV3_wlFSPqc0lST7bUWvXbwajt_0fuq4ERrwE,16
+fnnlsEigen-1.0.1.dist-info/WHEEL,sha256=0JwWs3tXifk1tcSk427Oai8KtIOhSgRl9Pv9JxaeP8s,112
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_fnnls.py,sha256=Hy5G328GKtw0hDpWXs1cofFueeQGmN6cjV0wNX3RrA8,11032
