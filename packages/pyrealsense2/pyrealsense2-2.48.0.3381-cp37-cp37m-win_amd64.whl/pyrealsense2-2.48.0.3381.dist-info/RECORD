@@ -1,0 +1,15 @@
+pyrealsense2/__init__.py,sha256=SeoZvFkDht3bh2sBGDNIMPFXuGXVOXB5HQaCnqxgU3E,87
+pyrealsense2/_version.py,sha256=hTlOlXTDDN_49wHwSHR6ZJzKa37yKuucMN4kvLUl5fQ,28
+pyrealsense2/pybackend2.cp37-win_amd64.pyd,sha256=fuLWnOr0C68mMf-XREFJ1KRKiYUdXJAy6tP7JGYZgHY,3623424
+pyrealsense2/pyrealsense2-net.cp37-win_amd64.pyd,sha256=5nvrJ7wk2cuZwBjxKKHCybweAhsZLw9Gq28kBq-H9Aw,31182336
+pyrealsense2/pyrealsense2.cp37-win_amd64.pyd,sha256=RFhKBHQVCfidcdTSCSJ2_3q0pYnG1lJZeypfwasergs,32266240
+pyrealsense2-2.48.0.3381.data/scripts/align-depth2color.py,sha256=lqxy3pq0SPaVSAPWt4EiQXGNQH4FCcPI4i6AGSTwQis,3847
+pyrealsense2-2.48.0.3381.data/scripts/export_ply_example.py,sha256=ywPGWDi06vDP_7HhhYWwbdaQqOocc6bmhYHymfWKx4U,1671
+pyrealsense2-2.48.0.3381.data/scripts/opencv_viewer_example.py,sha256=KRailQxYqO7yZQsjZC123Nupx1XKSOI8CoJEOrAdTz4,2682
+pyrealsense2-2.48.0.3381.data/scripts/python-rs400-advanced-mode-example.py,sha256=0LxeLjpOB-_nNA3QUOGBXEfc_nejsGOOtG5Jl_Zr7Q8,4419
+pyrealsense2-2.48.0.3381.data/scripts/python-tutorial-1-depth.py,sha256=H4bqA-d_LdKxlxgGb0l4QtsXp28YL_625ewnCOgjvUs,1980
+pyrealsense2-2.48.0.3381.dist-info/LICENSE,sha256=BlaAPA9hA2tz7Cw1vUc8saCV3u1ackeoefP1HjKYrSQ,11554
+pyrealsense2-2.48.0.3381.dist-info/METADATA,sha256=SvdXhS4GhajkbUacH42feV19UEkibVp21UxGDfhpEKM,1890
+pyrealsense2-2.48.0.3381.dist-info/WHEEL,sha256=zMRqF9ZfHGxBPfvcWwE-LxcVkdB1hhr8hy4cOfZGPZU,101
+pyrealsense2-2.48.0.3381.dist-info/top_level.txt,sha256=6AUtUZKkFkozv9rqIW14CnjxoZn4dM1cYBxOQG6kEcI,13
+pyrealsense2-2.48.0.3381.dist-info/RECORD,,
