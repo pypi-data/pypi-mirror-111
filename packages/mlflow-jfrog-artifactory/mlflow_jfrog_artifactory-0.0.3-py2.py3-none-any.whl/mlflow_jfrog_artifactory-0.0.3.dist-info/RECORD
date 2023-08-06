@@ -1,0 +1,10 @@
+mlflow_artifactory/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mlflow_artifactory/store/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mlflow_artifactory/store/artifact/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mlflow_artifactory/store/artifact/jfrog_artifact_repository.py,sha256=-7L4g6BW9Q_Ak0aHSQQsa797JUoYO9rjOszieNuMGyY,5869
+mlflow_jfrog_artifactory-0.0.3.dist-info/LICENSE.md,sha256=0G7J327gOi38Q_zNuI3yy3JMAjFCdmQpWA26GvQN7Uk,1087
+mlflow_jfrog_artifactory-0.0.3.dist-info/METADATA,sha256=RgcTXjXbAPtge13jVv8l4HX9Enaqw4EV9hRPJmQWIyU,3041
+mlflow_jfrog_artifactory-0.0.3.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+mlflow_jfrog_artifactory-0.0.3.dist-info/entry_points.txt,sha256=lL5C8I9x5Di9F0GlpY9YjM9_MGYKw0GJucSzhOl-gBk,126
+mlflow_jfrog_artifactory-0.0.3.dist-info/top_level.txt,sha256=eKo44BfZh-qKXTT7ewiH9I8kXV6rJoc6Jo89uSSQV00,19
+mlflow_jfrog_artifactory-0.0.3.dist-info/RECORD,,
