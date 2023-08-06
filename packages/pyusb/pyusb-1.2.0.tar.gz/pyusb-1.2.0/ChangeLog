@@ -1,0 +1,70 @@
+Author: Jonas Malaco
+    libusb0: implement is_kernel_driver_active() for Mac OS
+    
+    Assumes the libusb0 implementation in use is libusb-compat, and depends
+    on libusb_kernel_driver_active() support for that platform (expected in
+    libusb 1.0.25).
+    
+    Fixes: #374
+
+Author: Jonas Malaco
+    tests: fix legacy/hardware tests for Python 3.9
+    
+    Authored-by: @mcuee
+    Related: #373
+
+Author: Jonas Malaco
+    libusb0: differentiate when usb_get_driver_np is missing
+    
+    Fixes: #365
+    Closes: #366
+
+Author: Jonas Malaco
+    libusb0: enable is_kernel_driver_active() to run on DragonFly BSD
+
+Author: Jonas Malaco
+    libusb0: implement is_kernel_driver_active() for FreeBSD
+
+Author: Jonas Malaco
+    libusb0: isolate Linux-specific bits of is_kernel_driver_active()
+
+Author: Jonas Malaco
+    control: fix undefined USBError
+    
+    Fixes: #372
+
+Author: Jonas Malaco
+    docs: document branches, tags and the rolling release cycle
+    
+    Related: #371
+
+Author: Shun Hasegawa
+    Prevent installation on unsupported Python versions (#364)
+    
+    As of January 2021 PyUSB no longer supports Python 2.7 or 3.5.
+    
+    Renamed from: "Stop further releasing to Python 2"
+Author: Jonas Malaco
+    core: require other to be instance of Device for __eq__
+
+Author: Jonas Malaco
+    core: implement Device.__eq__
+    
+    Essentially defines equality based on the OS's view of the USB tree, but
+    also takes into account the different possible backends.
+    
+    Closes: #147 ("Implement Device.__eq__()")
+
+Author: Jonas Malaco
+    github: use VS2019 build of libusb
+
+Author: Jonas Malaco
+    github: upgrade workflow to use libusb 1.0.24
+    
+    Closes: #354
+
+Author: Jonas Malaco
+    setup: update author/contact metadata
+
+Author: Jonas Malaco
+    docs: update minimum supported Python version
