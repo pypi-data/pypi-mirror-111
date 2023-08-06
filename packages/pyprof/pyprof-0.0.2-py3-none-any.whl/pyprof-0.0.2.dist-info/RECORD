@@ -1,0 +1,12 @@
+pyprof/__init__.py,sha256=xIHiIJw48KC75Mavf10z6CwQJhcLn8JtRJ0nmiPcQIM,71
+pyprof/prof_proxy.py,sha256=lV_YAMFaqRaBxLG1IzWhBr3PE-R8AYG06zAiTrCAhk4,1776
+pyprof/pyprof.py,sha256=9a8eL8p_CPlRhqK3n34zTxs6QAJ2EJjkxJaevM8LQQI,8267
+tests/__init__.py,sha256=VTPXBKR4u5Vs-7Bso6wjbDNFlunr1U-tu4ZVC7_mwNQ,29
+tests/test_profile_proxy.py,sha256=M7X-J9-GO2s9JwxXyyK0kJT_Rev1k699H1e2p2LFaps,1295
+tests/test_profiler.py,sha256=x0fbhR5QAW4jBpZIT-lyCxw5mNkuR10EZYV_WTGrTnM,3301
+tests/test_utils.py,sha256=m2zOg9pD0YtXVLxpa7wDqk9qF9UTVEbzldvjAjMIZ5o,114
+pyprof-0.0.2.dist-info/LICENSE,sha256=t3ujKfn5GJ4JtjDIIQJhFjzeLa0weySjg-DEb3SeTm4,1075
+pyprof-0.0.2.dist-info/METADATA,sha256=2nute-s4mBPktAarK5WH2s2be-xe-SEeweE5WclPP0I,955
+pyprof-0.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pyprof-0.0.2.dist-info/top_level.txt,sha256=p1cJJrMTwZLRR7JqYaWA8YkzxlxxzSh9OTgN3w_-az4,13
+pyprof-0.0.2.dist-info/RECORD,,
