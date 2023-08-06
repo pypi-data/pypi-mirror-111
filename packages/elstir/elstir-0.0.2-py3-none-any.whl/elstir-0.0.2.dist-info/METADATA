@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: elstir
+Version: 0.0.2
+Summary: Project documentation with Markdown.
+Home-page: https://claudioperez.github.io/elstir
+Author: Claudio Perez
+Author-email: claudio_perez@berkeley.edu
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Documentation
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Markup
+Classifier: Topic :: Text Processing :: Markup :: HTML
+Classifier: Topic :: Text Processing :: Markup :: LaTeX
+Classifier: Topic :: Text Processing :: Markup :: Markdown
+Requires-Python: >=3.6
+Requires-Dist: click (>=3.3)
+Requires-Dist: Jinja2 (>=2.10.1)
+Requires-Dist: livereload (>=2.5.1)
+Requires-Dist: lunr[languages] (==0.5.8)
+Requires-Dist: Markdown (>=3.2.1)
+Requires-Dist: PyYAML (>=3.10)
+Requires-Dist: tornado (>=5.0)
+
+`elstir` is a fork of `mkdocs`. `mkdocs` is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file.
+
+
