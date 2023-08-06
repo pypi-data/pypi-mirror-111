@@ -1,0 +1,15 @@
+README.md
+setup.py
+input_checker/__init__.py
+input_checker/_version.py
+input_checker/checker.py
+input_checker/exceptions.py
+input_checker.egg-info/PKG-INFO
+input_checker.egg-info/SOURCES.txt
+input_checker.egg-info/dependency_links.txt
+input_checker.egg-info/requires.txt
+input_checker.egg-info/top_level.txt
+tests/__init__.py
+tests/conftest.py
+tests/test_Exceptions.py
+tests/test_InputChecker.py
