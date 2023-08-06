@@ -1,0 +1,15 @@
+__init__.py,sha256=NAheKL6hB4Oww3FeNSKTFS5RPLxNAaeOj0Lia01rZTY,443
+classversioning/__init__.py,sha256=6Q_BU1ohSBBN_Y0L8ab8uUz7IJUqsIJFLZFMO03Lv5o,1279
+classversioning/version.py,sha256=BcQ3fmroNgwz__13yx0St6vozLl_CPqmZ-Vste4PXYI,7450
+classversioning/versionedclass.py,sha256=u40SYRoyjFh2AvklAbmijgAnf7mZSvjZPNnRkRXqb9E,9637
+classversioning/versionregistry.py,sha256=HnbJVTmW6T9JyQtJ51L2omIaZB5Cb9wY413DO-lCMp4,3658
+classversioning/versiontype.py,sha256=r2vfwSqCnIPRbagsyb5UyAzQeh6pjYyDCGKH1QZc8Zo,2789
+classversioning/versions/__init__.py,sha256=WxAVFKwwBDvC3tK1y-7rohx0Tl2sJla025OAPa4Vd6A,436
+classversioning/versions/trinumberversion.py,sha256=NmlgoSodUjusD0w7QEzFwLFlICTzjPK7x1EUYweICyk,9075
+classversioning-0.2.0.dist-info/AUTHORS.rst,sha256=6MdILGkAGl7y9bvC8HSokaukVtQzLHy4rbBLFqnlpwY,45
+classversioning-0.2.0.dist-info/LICENSE,sha256=Dj4X4Tukj2iKikaLW__QoqZKBAH-rM98Lt9bO2BF9Os,1329
+classversioning-0.2.0.dist-info/METADATA,sha256=v0fXa-YvCpld-QY5GCfOY3OBS5nJHpkfkrG4ZIneq54,2364
+classversioning-0.2.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+classversioning-0.2.0.dist-info/entry_points.txt,sha256=uIA7EqFzYmkRX3HAJq_g3LkQ2ODjY3Isqi0PU08yASc,62
+classversioning-0.2.0.dist-info/top_level.txt,sha256=rC2yRYjVqBu-w8GERrqzJ_I4gHT3yZ3I6IZVXrdTyT8,25
+classversioning-0.2.0.dist-info/RECORD,,
