@@ -1,0 +1,9 @@
+LICENSE
+pyproject.toml
+setup.py
+src/newsletter.py
+src/slackbot_newsletter_deschamps.egg-info/PKG-INFO
+src/slackbot_newsletter_deschamps.egg-info/SOURCES.txt
+src/slackbot_newsletter_deschamps.egg-info/dependency_links.txt
+src/slackbot_newsletter_deschamps.egg-info/requires.txt
+src/slackbot_newsletter_deschamps.egg-info/top_level.txt
