@@ -1,0 +1,11 @@
+# Cara penulisannya lihat aturan PEP 440: https://www.python.org/dev/peps/pep-0440/#compatible-release
+# File ini mengatur agar proses deployment bisa berjalan lancar selama memenuhi semua versi library di bawah ini.
+# Penulisan versi mengikuti kaidah semantic versioning: https://en.wikipedia.org/wiki/Software_versioning
+numpy>=1.20.0,<1.21.0
+pandas>=1.2.0,<1.3.0
+pydantic>=1.8.1,<1.9.0
+scikit-learn>=0.24.0,<0.25.0
+strictyaml>=1.3.2,<1.4.0
+ruamel.yaml==0.16.12
+feature-engine>=1.0.2,<1.1.0
+joblib>=1.0.1,<1.1.0
