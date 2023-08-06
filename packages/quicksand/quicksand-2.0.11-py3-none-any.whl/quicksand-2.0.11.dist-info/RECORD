@@ -1,0 +1,11 @@
+quicksand/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+quicksand/quicksand.py,sha256=809O6dDIif55qOM8S7P0zjoK2gOzVTQlDThQNGNaz1k,43913
+quicksand/quicksand_exe.yara,sha256=rGGZblAuHG31rZBoDAbbNNPRdj8TI954pzR0Im6buzg,4761
+quicksand/quicksand_exploits.yara,sha256=zmtyqS-Xt8V2yhHq2ghLkIRg3nDIn-TnnqPS5dh1UOA,59724
+quicksand/quicksand_pdf.yara,sha256=kF8evTOBb_BbbAJ95lcja-QrLjY9dDAzKJZRefHofgI,58717
+quicksand-2.0.11.data/scripts/quicksand,sha256=FO5EjrFZ-lzl1v1ITftxp2h0B7z0PIzof0R3HhLNkwA,6841
+quicksand-2.0.11.dist-info/LICENSE,sha256=feime9W3Aqw44AOtf9MpCe5hsQSJmjjqlKiEvthVSrg,1063
+quicksand-2.0.11.dist-info/METADATA,sha256=FX62pvRw8EbOnX3HUtT97JlwDx0-qclLdlQOwweSy2g,5152
+quicksand-2.0.11.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+quicksand-2.0.11.dist-info/top_level.txt,sha256=2Ee1nm6dXgYcVGH5JTZQeuQgUkiK32FO62tD9n37WrE,10
+quicksand-2.0.11.dist-info/RECORD,,
