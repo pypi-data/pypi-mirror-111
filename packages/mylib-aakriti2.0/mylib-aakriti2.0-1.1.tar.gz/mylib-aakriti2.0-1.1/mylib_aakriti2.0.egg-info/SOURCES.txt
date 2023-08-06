@@ -1,0 +1,14 @@
+CHANGELOG.txt
+MANIFEST.in
+license.txt
+setup.py
+mylib-aakriti2.0/__init__.py
+mylib_aakriti.egg-info/SOURCES.txt
+mylib_aakriti.egg-info/dependency_links.txt
+mylib_aakriti.egg-info/requires.txt
+mylib_aakriti.egg-info/top_level.txt
+mylib_aakriti2.0.egg-info/PKG-INFO
+mylib_aakriti2.0.egg-info/SOURCES.txt
+mylib_aakriti2.0.egg-info/dependency_links.txt
+mylib_aakriti2.0.egg-info/requires.txt
+mylib_aakriti2.0.egg-info/top_level.txt
