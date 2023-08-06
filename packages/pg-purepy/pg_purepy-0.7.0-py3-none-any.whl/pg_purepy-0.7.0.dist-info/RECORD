@@ -1,0 +1,11 @@
+pg_purepy/__init__.py,sha256=q3C2gk9BU8t4RB_gWFle_WivU-WXDpdbjuv_9FbDzLo,288
+pg_purepy/connection.py,sha256=WrNYs-x05oy72ckqNIon3AtMjVIlxInaNY5Ee0aguek,14400
+pg_purepy/converters.py,sha256=Gfjk66VUxx55JScFzeBkuoyPmdDMNLeX5sY9DFljSvw,2962
+pg_purepy/dbapi.py,sha256=Q01_oA6GPkYN-3GW1IwgI5h6OuY68sGcxLSD5OqcAvk,4753
+pg_purepy/exc.py,sha256=zmBDvn6iuRkF6EslGpwD_cJSZB_oAgVjMDYRb2nqRf0,635
+pg_purepy/messages.py,sha256=XPoFAYgbzE_2dcFljC9NxQk_unn637WiFoMTNqZXvUk,10019
+pg_purepy/protocol.py,sha256=meMpm5yfMEmCOZ8n5Rk6qfkKWESnHsFFaGeC6kETNJU,43037
+pg_purepy/util.py,sha256=lEbA9x2l9HQXyM2cFQoOYJyHP-b0ILlLViKUKZIsEKU,1850
+pg_purepy-0.7.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+pg_purepy-0.7.0.dist-info/METADATA,sha256=K63sHLG1THJqOia_VjlTa2QKo3S60mY0WONm47GiTIs,1668
+pg_purepy-0.7.0.dist-info/RECORD,,
