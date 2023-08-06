@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/tex_untag/__init__.py
+src/tex_untag/_version.py
+src/tex_untag/tex_untag.py
+src/tex_untag.egg-info/PKG-INFO
+src/tex_untag.egg-info/SOURCES.txt
+src/tex_untag.egg-info/dependency_links.txt
+src/tex_untag.egg-info/top_level.txt
