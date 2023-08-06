@@ -1,0 +1,10 @@
+LICENCE.txt
+MANIFEST.in
+README.md
+setup.py
+epath/__init__.py
+epath/epath.py
+epath.egg-info/PKG-INFO
+epath.egg-info/SOURCES.txt
+epath.egg-info/dependency_links.txt
+epath.egg-info/top_level.txt
