@@ -1,0 +1,4 @@
+COMPAS==1.6.2
+nlopt
+trimesh
+autograd
