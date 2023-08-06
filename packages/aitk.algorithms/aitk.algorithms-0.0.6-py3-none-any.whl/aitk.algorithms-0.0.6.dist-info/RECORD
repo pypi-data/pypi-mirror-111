@@ -1,0 +1,8 @@
+aitk/algorithms/__init__.py,sha256=jINJMj2Aq8WXaLv7c-MSlgKJqgfGzeGy1zXbz2c8Uyw,430
+aitk/algorithms/_version.py,sha256=gk-cNz0p-BgVO3-6prAsEoAL0u21g73KROAebP51HUw,378
+aitk/algorithms/ga.py,sha256=YLKwVhxeM0ezVTSv4ETez9xr_TUt8oX9S-F6cHiWE1Q,10520
+aitk/algorithms/novelty.py,sha256=wDvFxsIpvrvK38TIsFG6INU_NwKO_56rn3OvdSCnZLU,5046
+aitk.algorithms-0.0.6.dist-info/METADATA,sha256=_qiG3frh0WX6fedztivbB9TtcnJXd6wAwiNtBwPmAB8,845
+aitk.algorithms-0.0.6.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+aitk.algorithms-0.0.6.dist-info/top_level.txt,sha256=Nd1TXMWwE1VIGABpa4lX9EdmidaqlayqBFLVnVNuCvM,5
+aitk.algorithms-0.0.6.dist-info/RECORD,,
