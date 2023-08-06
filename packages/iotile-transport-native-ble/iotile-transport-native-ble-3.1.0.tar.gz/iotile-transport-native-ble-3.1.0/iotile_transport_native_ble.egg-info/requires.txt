@@ -1,0 +1,2 @@
+iotile-core>=5.2
+bable-interface<2,>=1.2.0
