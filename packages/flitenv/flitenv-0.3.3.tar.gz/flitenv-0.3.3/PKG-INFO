@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: flitenv
+Version: 0.3.3
+Summary: Manage venvs for a flit project
+Home-page: https://github.com/orsinium-labs/flitenv
+Author: Gram
+Author-email: gram@orsinium.dev
