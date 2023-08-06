@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: xlearning
+Version: 0.0.1
+Summary: X Learning
+Home-page: https://github.com/Rongtingting/XLearning
+Author: Authors
+Author-email: rthuang@connect.hku.hk
+License: Apache-2.0
+Description: # XLearning
+        X Learning.
+        
+Keywords: Copy Number Variation,allelic expression,single-cell RNA-seq,variantional inference
+Platform: UNKNOWN
+Provides-Extra: docs
