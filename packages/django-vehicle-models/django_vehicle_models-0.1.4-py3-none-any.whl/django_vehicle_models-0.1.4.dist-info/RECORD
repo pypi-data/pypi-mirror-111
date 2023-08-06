@@ -1,0 +1,10 @@
+models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+models/Avto.py,sha256=RDJo5s9oK-lLCxecMu-5xItqSI0hALvdRRcPuwIuvKc,6578
+models/Information.py,sha256=WBOlc3tqOZMRmsmEo9QAMsDPDS57jXkLsjCGV3JnwMI,1946
+models/VinAirBags.py,sha256=XFRp2lve_yQIPbvi0kfMY3qk2K27Wc0biL5luvldBpM,1041
+models/VinComfort.py,sha256=DFUYD3xsyxALaSy46nKaUA1HRNeVx8DfVZ6svuBvFis,1632
+models/VinSafety.py,sha256=nN-mg0hjknXKEHS124hsmZclwv4z-DP8N4ajMaLMJgQ,2834
+models/VinSpec.py,sha256=aNsxwwgCHBYKEUo9zblcDrCFyyOt2kvxOZC42MrMcF0,3157
+django_vehicle_models-0.1.4.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+django_vehicle_models-0.1.4.dist-info/METADATA,sha256=iPr103Z5rtlN5YpPHml8ZoWq-48KjsYkSI721ejNS8Q,283
+django_vehicle_models-0.1.4.dist-info/RECORD,,
