@@ -1,0 +1,14 @@
+xhdata/__init__.py,sha256=CJcKgMCCHtWmXicC3CPhsvwNXQk08wqoCOlIE02fMeg,309
+xhdata/__main__.py,sha256=OPgzT_sZ2xYuwlAUkdFf4pornhEAAJ9YZ4rw4YyS4Uo,125
+xhdata/Command/__init__.py,sha256=tU8DiVffeI2WswbTil_BjUkrx0xMgVO2B_DarB8h6pQ,4376
+xhdata/Command/save_akshare.py,sha256=wCCRTXs3xyaDmiun3v8JSRNQaEnp4z4GOMv-SlC3B6A,11263
+xhdata/Command/save_tdx.py,sha256=G0IXEU2qtysGLMG1GUOEBVm0crNjCViTLOnTSeSB608,19266
+xhdata/Data/__init__.py,sha256=W2cF1-FmuRS0SzCprrIr08UDrTvf93puoiTyDFZ2dP4,44
+xhdata/Data/stock.py,sha256=4Biga-QCPkhzDYvBQY-gmSlBjXaxXXRbJL3t5YmPnc0,1807
+xhdata/Util/MongoClient.py,sha256=Yv0n0Pss3JmF016lwPA5FRgB3aSAxvW_ZWLq6en1q-4,1808
+xhdata/Util/__init__.py,sha256=W2cF1-FmuRS0SzCprrIr08UDrTvf93puoiTyDFZ2dP4,44
+xhdata-0.0.2.dist-info/METADATA,sha256=nBoysQBoqgXaDi0ltDL_la0K7plU0jOz8hTE2Ao7Awk,908
+xhdata-0.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+xhdata-0.0.2.dist-info/entry_points.txt,sha256=eZX7OLm1RDFW6pSM9Fbicw_7iW8wYpCdrwt4O6fM6oc,163
+xhdata-0.0.2.dist-info/top_level.txt,sha256=Ug2uWvxNtAtbQq8GeDSXfqMjO9KjdFlekFl01U0Cc3w,7
+xhdata-0.0.2.dist-info/RECORD,,
