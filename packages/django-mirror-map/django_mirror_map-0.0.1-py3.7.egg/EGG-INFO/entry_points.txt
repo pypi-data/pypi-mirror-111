@@ -1,0 +1,3 @@
+[console_scripts]
+attr2map = django_mirror:attr2map
+
