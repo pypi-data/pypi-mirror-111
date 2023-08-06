@@ -1,0 +1,8 @@
+setup.py
+zytestpip/__init__.py
+zytestpip/main.py
+zytestpip.egg-info/PKG-INFO
+zytestpip.egg-info/SOURCES.txt
+zytestpip.egg-info/dependency_links.txt
+zytestpip.egg-info/requires.txt
+zytestpip.egg-info/top_level.txt
