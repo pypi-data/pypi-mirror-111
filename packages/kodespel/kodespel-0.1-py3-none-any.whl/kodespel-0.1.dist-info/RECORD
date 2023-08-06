@@ -1,0 +1,14 @@
+kodespel/__main__.py,sha256=AAyi0vPitp8sfrZ-vlPQsV--Pvpoq2JWe-TaUkWQtr0,3885
+kodespel/kodespel.py,sha256=AL_EXZK_F7FW6mRRdyberQhQWxb5ngylymkfFxEk7H0,14496
+kodespel-0.1.data/data/share/kodespel/base.dict,sha256=dPVjX2gEreo31L0z2B2bMuKInMHzmneuw_fyf7aPhOA,241
+kodespel-0.1.data/data/share/kodespel/go.dict,sha256=n86c64VbLrfE2TPVMmgz0w61o4toryN4AzHwNoYCwuA,61
+kodespel-0.1.data/data/share/kodespel/java.dict,sha256=ys2w3bS93DWZMUKOlfMcdbZS9gw3p1Oib5t2xqePIgU,41
+kodespel-0.1.data/data/share/kodespel/libc.dict,sha256=Bb50p1hiHl8MuPo1ncQq7dWuiVjEciihIaKLsdheXbg,21
+kodespel-0.1.data/data/share/kodespel/python.dict,sha256=XXj3W9FX8pq6q9vnAVttebnN27K0OGgYddb49AOsFCA,249
+kodespel-0.1.data/data/share/kodespel/unix.dict,sha256=IQzzlZmJKq_w-DnGG5XjyepPcBuYsOOO-8J8m7IP-hw,179
+kodespel-0.1.dist-info/LICENSE.txt,sha256=ZEuBiq90TMEWDBFLO_3Z7wdB4eA76_3PFgqXnOYTBU8,1317
+kodespel-0.1.dist-info/METADATA,sha256=3vgk8yIiL5c825f8_zF126c2yjiOUqcMoo8Qa3Z8vok,769
+kodespel-0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+kodespel-0.1.dist-info/entry_points.txt,sha256=WRb8q484OTnfS-qn-RxfRG4q624fK9qLTk7V-6D0cxk,53
+kodespel-0.1.dist-info/top_level.txt,sha256=4ROGX6zPM2BPpxngzQ_ZIqS0iMlAWizyXcG1AJCO3Zk,9
+kodespel-0.1.dist-info/RECORD,,
