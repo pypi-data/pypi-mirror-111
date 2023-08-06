@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+pyproject.toml
+setup.cfg
+../dist/css/app.7dfe7e3e.css
+../dist/css/chunk-vendors.454776ae.css
+../dist/js/app.33668346.js
+../dist/js/app.33668346.js.map
+../dist/js/chunk-vendors.32985598.js
+../dist/js/chunk-vendors.32985598.js.map
+src/ioform/__init__.py
+src/ioform/ioform.py
+src/ioform.egg-info/PKG-INFO
+src/ioform.egg-info/SOURCES.txt
+src/ioform.egg-info/dependency_links.txt
+src/ioform.egg-info/requires.txt
+src/ioform.egg-info/top_level.txt
