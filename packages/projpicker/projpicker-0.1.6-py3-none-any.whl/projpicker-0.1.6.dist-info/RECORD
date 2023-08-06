@@ -1,0 +1,14 @@
+projpicker/VERSION,sha256=HyEQVoYnMHvsrnE_i4CPPZ2RLUsqJO1qeGBfA_dDfTw,6
+projpicker/__init__.py,sha256=-wONJusnqMSf93qsyYSsOIX-nb7e6LAgS6e4I00Lvvk,26
+projpicker/common.py,sha256=bzmdKwWePvT2NRRBzZWqI3tL8oFJDMndZuzn_rWjXNQ,2226
+projpicker/coor_latlon.py,sha256=tK9zFnQ9TRsws4SzYniP_NCdD1lrNI2CRFCtwwMsAEc,14763
+projpicker/coor_xy.py,sha256=pALkHeqCOPN5i-0tsezJgUh3-Gy9xGkKoJnjZRAx6mc,8144
+projpicker/gui.py,sha256=kJda-e2REnR_Hpe4wEOI3d_SM01N_8Y3tw7qI69p6ko,7797
+projpicker/projpicker.db,sha256=NQJAYy2xMNMllwkCfP2OLMM_YkzAGxWaGyT8M9vP3gA,2134016
+projpicker/projpicker.py,sha256=j_dz68yrgWjs0UaQk2i9JejU9QvhMIovDYUFTRSCLrs,90220
+projpicker-0.1.6.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+projpicker-0.1.6.dist-info/METADATA,sha256=K4SII7mHBPpKbazNnZ7PVFhF7oxB2fZVez7awzs24us,4171
+projpicker-0.1.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+projpicker-0.1.6.dist-info/entry_points.txt,sha256=4sAstCxc_JDbuWhZ-uuV_FuJT8jcNoIkUwR2-dumQIk,59
+projpicker-0.1.6.dist-info/top_level.txt,sha256=sU2zEU4JQ88Pcy91sfwM-Yq1I0SX5kvMO3J2fnScK_I,11
+projpicker-0.1.6.dist-info/RECORD,,
