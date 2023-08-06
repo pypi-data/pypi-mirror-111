@@ -1,0 +1,14 @@
+setup.py
+localci/__init__.py
+localci/__main__.py
+localci/cli_utils.py
+localci/git_utils.py
+localci/platform_interface.py
+localci/platform_mvn.py
+localci/platform_python.py
+localci.egg-info/PKG-INFO
+localci.egg-info/SOURCES.txt
+localci.egg-info/dependency_links.txt
+localci.egg-info/entry_points.txt
+localci.egg-info/requires.txt
+localci.egg-info/top_level.txt

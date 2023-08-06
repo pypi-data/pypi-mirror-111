@@ -1,0 +1,9 @@
+Metadata-Version: 1.2
+Name: localci
+Version: 0.0.1
+Summary: Makes local CI with Python, npm, and Java easy. Integrated with custom docker registry.
+Home-page: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8
