@@ -1,0 +1,10 @@
+borg/__init__.py,sha256=ttPSUv6Ncxxpna11-rt_Hu51zFUyZ5DzUj1mYJT_Hr8,219
+borg/beatmap.py,sha256=MM0cH_rkiIFfdDmP9z-qu1qyso6K4PNaBQBnWRnUQvY,14827
+borg/osuapi.py,sha256=bnPxSI9XQ5IhvQ6Ox0kJx_9plBQKVnRlVgOFAPdzgx0,3316
+borg/osuapiv2.py,sha256=C9rfMqrxJM-YaKMTHpcLn1I4AL9jS8VeXMQkazSH2c0,8383
+borg/replay.py,sha256=FYqShgeDd7UVwCi85RcGJDmaWsWPvr5wkSpt6w7X00k,5975
+borg/utils.py,sha256=tpexjjZpFguUH0xhAqiRioXEBsYGkJoqWyQm4PZz97o,834
+borgor-0.1.0.dist-info/METADATA,sha256=G49lGadHvx80j3ZpmM-k08UCJ_X6JSv_ljg7fiXHxPg,434
+borgor-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+borgor-0.1.0.dist-info/top_level.txt,sha256=zWLgyLvKPxVfWb9PKSUXKUjvCM3jEU0Jm_Dy8rBHmVA,5
+borgor-0.1.0.dist-info/RECORD,,
