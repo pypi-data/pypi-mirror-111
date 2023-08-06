@@ -1,0 +1,10 @@
+prng_algorithms_package/LCG64_32_ext_module.py,sha256=P16_P_ZOQ-2HGlTd4Amm12s_okMjb0ZTIA5Hjacl49o,3648
+prng_algorithms_package/XSM64_module.py,sha256=g-j5bp7edb7rlNn_2DYv4JR6QxjEvtvOFfrBGkKOCWI,2728
+prng_algorithms_package/__init__.py,sha256=B8o361GkpAwbWdztMCnbx3uhr3aGdBbjQ602auR_wrI,846
+pure_prng_package/__init__.py,sha256=t5IFdQEOVLR9q--VksltPBoozKb1bLL5rvZlF557A20,805
+pure_prng_package/pure_prng_module.py,sha256=bCSV7xrj7it9VC61g3vwz10aEgJhU1zyD4aLZMN1JnM,45139
+pure_prng-2.1.0.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+pure_prng-2.1.0.dist-info/METADATA,sha256=IGfZlXLCRdvdg06AkkkxRPxxAZnrxTNLsbBHDFBtuYA,4579
+pure_prng-2.1.0.dist-info/WHEEL,sha256=D1Wh14kWDxPnrM-5t_6UCB-UuQNrEODtRa3vF4OsvQY,97
+pure_prng-2.1.0.dist-info/top_level.txt,sha256=spRgwpSt0UD7Cnc6RE1QXN5kPg9wcNEJZlkdujTNgkY,42
+pure_prng-2.1.0.dist-info/RECORD,,
