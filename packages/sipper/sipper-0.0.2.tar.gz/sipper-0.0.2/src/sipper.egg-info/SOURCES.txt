@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/sipper.egg-info/PKG-INFO
+src/sipper.egg-info/SOURCES.txt
+src/sipper.egg-info/dependency_links.txt
+src/sipper.egg-info/requires.txt
+src/sipper.egg-info/top_level.txt
+src/whipper/__init__.py
+src/whipper/__main__.py
