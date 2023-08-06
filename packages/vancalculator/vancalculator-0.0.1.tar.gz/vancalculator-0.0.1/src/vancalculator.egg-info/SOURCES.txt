@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/vancalculator.egg-info/PKG-INFO
+src/vancalculator.egg-info/SOURCES.txt
+src/vancalculator.egg-info/dependency_links.txt
+src/vancalculator.egg-info/top_level.txt
+src/vandyck_pycalculator/Binomialdistribution.py
+src/vandyck_pycalculator/Distribution.py
+src/vandyck_pycalculator/Gaussiandistribution.py
+src/vandyck_pycalculator/Generaldistribution.py
+src/vandyck_pycalculator/__init__.py
