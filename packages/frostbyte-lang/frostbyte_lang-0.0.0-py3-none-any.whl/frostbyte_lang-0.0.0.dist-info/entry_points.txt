@@ -1,0 +1,5 @@
+[console_scripts]
+frostbyte-config = frostbyte.node:config
+frostbyte-run = frostbyte.node:run
+frostbyte-setup = frostbyte.node:setup
+
