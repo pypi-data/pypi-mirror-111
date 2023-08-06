@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: Turbulence
+Version: 1.0.1
+Summary: Code for Turbulence Analyze
+Home-page: https://github.com/AdwardAllan
+Author: Li XinJUN
+Author-email: lxjproductivity@gmail.com
+License: GNU License
+Platform: all
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries
+License-File: LICENSE
+
+# Introduction
+
+Environment
+
+- linux : ubuntu18.04
+- GPU : Cupy CUDA
+- python3.8
+
+Calculating package for channel1000 and Channel5200(JHTDB)
+
+- calculate gradient  (4,6,8-centered finite difference)
+
+- dissipation
+
+- basic statistics
+
+# CONTACT
+
+lxjproductivity@outlook.com
+
+View at:
+https://pypi.org/project/Turbulence/1.0.0/
+
