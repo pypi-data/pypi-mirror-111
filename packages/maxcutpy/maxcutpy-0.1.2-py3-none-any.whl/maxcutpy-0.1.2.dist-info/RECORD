@@ -1,0 +1,16 @@
+maxcutpy/__init__.py,sha256=3obd63XR1e9oWcrNEFlnfp_wu4SbAjIZu9C2azTiSyo,230
+maxcutpy/mcmanager.py,sha256=15OFcz1k6JSezK5D_3GQCRqh7XVGUqB1k3UfCtVMnf4,8746
+maxcutpy/rtr/__init__.py,sha256=x6Re6acwRVGdEZcTw34oTVKWHn8zQiVCESS_1_pOt-4,353
+maxcutpy/rtr/_rtr.py,sha256=YnKv8LR5XdtkLZc50KtgKyj7T7-K3O3UT0nX2ICsdMg,9234
+maxcutpy/rtr/_tcg.py,sha256=_rmeqnj9V3UYrtlg9aHT7yPPedYF4lmPbz_vOxid4Fs,7499
+maxcutpy/rtr/stiefel/__init__.py,sha256=q3A1c5p2RT1GqURATAIss5o5lmiVsxFe7N3UoRVD358,808
+maxcutpy/rtr/stiefel/_stiefel.py,sha256=NZ6ajaXnKNEHpPNthsYIbZxCjw60PPIG612ALrOkrjc,2954
+maxcutpy/solvers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+maxcutpy/solvers/abstractmaxcut.py,sha256=pvea7X3XRdq35h9_MMaatSXcXwdXJExdEa9YvSRlZSo,6473
+maxcutpy/solvers/bmmaxcut.py,sha256=-BWzO1AGBrOkJiyXgXZRdnhjhzay-A6Q5NXmXPOSbWA,1788
+maxcutpy/solvers/cemaxcut.py,sha256=dsI-v7EZPsqQA14Eor6yHdlOtUjLdcBWdaOPA5E5RuY,2242
+maxcutpy/solvers/randommaxcut.py,sha256=DJqWKXvBekxm5_vRNEFDvnCfneRpWRe_4W03abLlg5E,652
+maxcutpy-0.1.2.dist-info/LICENSE,sha256=nsxBEjIeaxDJQZ7MTeEJFVDKKCn4AyXHcXbThmZeMic,1071
+maxcutpy-0.1.2.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+maxcutpy-0.1.2.dist-info/METADATA,sha256=jhbamvsMzc33ryEAK-oC_urGmVYxFeD_IzLlnLVSkHU,669
+maxcutpy-0.1.2.dist-info/RECORD,,
