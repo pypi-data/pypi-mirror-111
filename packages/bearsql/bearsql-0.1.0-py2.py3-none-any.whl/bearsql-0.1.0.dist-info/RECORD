@@ -1,0 +1,11 @@
+bearsql/__init__.py,sha256=vUHiXZficxc-knJfGpz6UkeZ_QFf_UjP2X4UygMiJLQ,335
+bearsql/bearsql.py,sha256=GfAJL5eRJ9RbH8MuNmeF-1tfnbmUU7SIhSqlP1rI3to,6447
+bearsql/cli.py,sha256=V8CJYZhZVElIpR0VXA9sGXZJgFUvSNA2N_ke_zBbhcE,436
+bearsql/log_source.py,sha256=tYKm36JODobKQbPO3G-DoRdBHHRWdgQ_NsFH2gDiCts,359
+bearsql-0.1.0.dist-info/AUTHORS.rst,sha256=mhjdYLUk-HyHVsvknM2AkGr63n4rFdIUW13QsbzhNkk,180
+bearsql-0.1.0.dist-info/LICENSE,sha256=PtxxH_C1bMUoyHJPtsTrwPm78CMl5Ws6ulKM-CwE3Us,1083
+bearsql-0.1.0.dist-info/METADATA,sha256=if-vnTlaGyOP565-HXI4gyLHfpMVyP0-4BXnul8Jvr0,3623
+bearsql-0.1.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+bearsql-0.1.0.dist-info/entry_points.txt,sha256=803zs9Ic1paZ0eSJ3HJbh268VBB0Sx5ESDt56aGVw98,46
+bearsql-0.1.0.dist-info/top_level.txt,sha256=fZlqy1IJWMo5DiJK1gPoxYB06ZZKVC14jPk_WaSFvD0,8
+bearsql-0.1.0.dist-info/RECORD,,

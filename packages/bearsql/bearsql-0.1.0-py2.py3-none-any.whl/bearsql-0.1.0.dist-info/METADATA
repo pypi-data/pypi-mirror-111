@@ -1,0 +1,128 @@
+Metadata-Version: 2.1
+Name: bearsql
+Version: 0.1.0
+Summary: Bearsql aadds sql syntax on pandas dataframe. It uses duckdb to speedup the pandas processing and as the sql engine
+Home-page: https://github.com/shrinivdeshmukh/bearsql
+Author: Shrinivas Vijay Deshmukh
+Author-email: shrinivas.deshmukh11@gmail.com
+License: MIT license
+Keywords: bearsql
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Requires-Dist: coverage (==5.5)
+Requires-Dist: duckdb (==0.2.7)
+Requires-Dist: numpy (==1.21.0)
+Requires-Dist: pandas (==1.2.5)
+Requires-Dist: pyarrow (==4.0.1)
+Requires-Dist: python-dateutil (==2.8.1)
+Requires-Dist: pytz (==2021.1)
+Requires-Dist: six (==1.16.0)
+
+=======
+bearsql
+=======
+
+
+.. image:: https://img.shields.io/pypi/v/bearsql.svg
+        :target: https://pypi.python.org/pypi/bearsql
+
+.. image:: https://readthedocs.org/projects/bearsql/badge/?version=latest
+        :target: https://bearsql.readthedocs.io/en/latest/?version=latest
+        :alt: Documentation Status
+
+
+
+
+Bearsql adds sql syntax on pandas dataframe. It uses duckdb to speedup the pandas processing and as the sql engine
+
+
+* Free software: MIT license
+* Documentation: https://bearsql.readthedocs.io.
+
+
+Basic Usage
+-----------
+
+To use bearsql in a project::
+
+    from bearsql import SqlContext
+    import pandas as pd
+
+    sc = SqlContext()
+    # The above statement will create duckdb instance in memory. Once the session ends, the database will be erased and not be persisted
+    # To persist the database, you can instantiate sqlcontext like:
+    # sc = SqlContext(database='<YOUR_DATABASE_NAME>.db'
+
+    df = pd.DataFrame([{'name': 'John Doe', 'city': 'New York', 'age': 24}, {'name': 'Jane Doe', 'city': 'Chicago', 'age': 27}])
+
+    # Create table from pandas dataframe
+    sc.register_table(df, 'testable') # <YOUR_TABLENAME> instead of 'testable'
+
+    # Query table and output to pandas dataframe
+    results = sc.sql('select * from testable', output='df')
+    output_df = next(results)
+    print(output_df)
+
+    # Query table and output to pyarrow table
+    results = sc.sql('select * from testable', output='arrow')
+    output_arrow_table = next(results)
+    print(output_arrow_table)
+
+    # Query table and output raw tuples
+    results = sc.sql('select * from testable', output='any')
+    output_rows = next(results)
+    print(output_rows)
+
+Create a relational table from dataframe and apply some operations::
+
+    rel = sc.relation(df, 'new_relation') # <YOUR_RELATION_NAME> instead of new_relation
+
+    print(rel.filter('age > 24'))
+
+    # OR convert to df:
+
+    rel.filter('age > 24').df()
+
+Export the data to filesystem::
+
+    result = sc.sql('EXPORT DATABASE \'<OUTPUT_FOLDER>\' (FORMAT PARQUET);') # format can either be PARQUET or CSV
+    list(result)
+
+For more examples, please visit https://github.com/duckdb/duckdb/blob/master/examples/python/duckdb-python.py 
+
+
+
+
+
+Features
+--------
+
+* TODO
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.1.0 (2021-06-30)
+------------------
+
+* First release on PyPI.
+
+
