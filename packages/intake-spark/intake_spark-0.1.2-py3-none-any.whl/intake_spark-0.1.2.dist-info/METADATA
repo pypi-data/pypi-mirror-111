@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: intake-spark
+Version: 0.1.2
+Summary: Apache Spark plugin for Intake
+Home-page: https://github.com/ContinuumIO/intake-spark
+Maintainer: Martin Durant
+Maintainer-email: mdurant@anaconda.com
+License: BSD
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: intake
+Requires-Dist: pyspark
+Requires-Dist: dask
+
+# intake-spark
+
+[![Documentation Status](https://readthedocs.org/projects/intake-spark/badge/?version=latest)](http://intake-spark.readthedocs.io/en/latest/?badge=latest)
+
+Intake-spark: Apache Spark Plugin for Intake
+
+

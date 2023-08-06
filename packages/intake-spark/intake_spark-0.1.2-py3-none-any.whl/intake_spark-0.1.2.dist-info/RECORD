@@ -1,0 +1,17 @@
+intake_spark/__init__.py,sha256=9ya4Q1rudDpqUuIOw36nuQCoyN0NCK_O0MWiaQmAnQg,278
+intake_spark/_version.py,sha256=f7VU18r8EWqpYtJSxWErVq5zeMgATupqDYC4EqWmq4Q,497
+intake_spark/base.py,sha256=Et-Ddl-u8SPqmmqNRZ3fgNH5pVydyiTTJMrQX1q-XqU,4992
+intake_spark/spark_cat.py,sha256=oM4-7vpXEvnO0ZwRQcu8sAUMc2MMt4Q5AfreyQn0NKY,2378
+intake_spark/spark_sources.py,sha256=paaTkzs7MMNbg8ugGBafDXNsNwcWm64ynzcmRhZoUgQ,5878
+tests/__init__.py,sha256=JqAl5qR7sn6Gq_RVetdmQAFI5ePjnBMCGK_Ln3Ucsyg,67
+tests/sample1.csv,sha256=rwa27asE39BIT13geEzmyAy0AkI-VMBPd0idSc3g_t0,63
+tests/test_discovery.py,sha256=Ybsm4HGjlvDKkikVsvuqlazxaUQ1IeCS4hMn18CYLMc,355
+tests/test_spark.py,sha256=gmxt5TAblY_zqVCT5pCKLRX2EmjlO_sncDUYjXeEdZE,1352
+tests/util.py,sha256=OFxxi_onZ5DBI1LopXHY1oUMAuYHu2OE4df1We1eWDg,630
+intake_spark-0.1.2.dist-info/LICENSE,sha256=fUH-19QZWQKsVH2vOE1QVACzdzwVgvkNBOePhR9d7AU,1330
+intake_spark-0.1.2.dist-info/METADATA,sha256=ja-qmEtdT2eWccJ3DDBho0YPfEj3LuPsHMtyWAO3aNw,572
+intake_spark-0.1.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+intake_spark-0.1.2.dist-info/entry_points.txt,sha256=rxrQKxmQetjJo_ZRYHwB5Btxkj9BFa5Polt5Zzfz_U4,180
+intake_spark-0.1.2.dist-info/pbr.json,sha256=Y9ePSyxDM5YGdP4vBZMe4YC_0kdUgQqK74E1fp9YX-0,46
+intake_spark-0.1.2.dist-info/top_level.txt,sha256=OfXWhnnlQzaXz2l92BiLGPcNfi58VJQ2yc0dK2z5Mkk,19
+intake_spark-0.1.2.dist-info/RECORD,,
