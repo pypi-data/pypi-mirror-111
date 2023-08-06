@@ -1,0 +1,17 @@
+addict
+descartes
+gdspy>=1.5.2
+ipython
+matplotlib
+numpy
+pandas
+pint
+pyEPR-quantum>=0.8.4.6
+pygments
+pyside2
+qutip
+scipy
+shapely
+
+[:platform_system != "Windows"]
+geopandas
