@@ -1,0 +1,12 @@
+coscine/FormFlags.py,sha256=Qq5a6hOkx1LIjgo-69idZ5_QbxVf2iZAM48WN2-_nLQ,872
+coscine/MetadataForm.py,sha256=hL_tQiy2liLsMo8mLLIpdLLoyBx9s7O70oc07z0y0FA,6863
+coscine/ProjectForm.py,sha256=ihj3DKJl5oIY3eEZZhM7GLfzEVFZu7kVd8sJVbhA6do,7533
+coscine/ResourceForm.py,sha256=h8I67xSV3RCQy9C05AxkgFrIlrD06tuw3Foe6EBQzC8,7525
+coscine/__init__.py,sha256=o2Z6NAkGD7UB8l2laPJj7wK8SYOcIZsPfFBbC9zGkMc,34
+coscine/coscine.py,sha256=vvhWZOAyVti8fQ0Ahp8858Mu2btg9KcO8jqoarmAqL8,21961
+coscine/exceptions.py,sha256=rqbXas6YT-x5fzfImNWBX7EvelN6ajEVSPUDeXPXWNw,2509
+coscine-0.4.1.dist-info/LICENSE,sha256=6LX68hDbHJu1Rl9aRoR1sUNJNbDwB6Qzytv2frSFrwg,1072
+coscine-0.4.1.dist-info/METADATA,sha256=1ZLcdFMUxFMALpWrIufj8odqAh8NRSXp8Y7ji2g5P-c,2890
+coscine-0.4.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+coscine-0.4.1.dist-info/top_level.txt,sha256=QLNIni4zqMAj39wvnLZEyZmu8GhYRuSFRv2h3061jeA,8
+coscine-0.4.1.dist-info/RECORD,,
