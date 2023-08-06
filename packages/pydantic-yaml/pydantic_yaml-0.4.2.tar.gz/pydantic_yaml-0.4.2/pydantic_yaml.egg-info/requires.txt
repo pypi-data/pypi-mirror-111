@@ -1,0 +1,16 @@
+pydantic
+semver
+
+[dev]
+black
+flake8
+bump2version
+pytest
+mypy
+
+[pyyaml]
+pyyaml
+types-PyYAML
+
+[ruamel]
+ruamel.yaml<0.18,>=0.15
