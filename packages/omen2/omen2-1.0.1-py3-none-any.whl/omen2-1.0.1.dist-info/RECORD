@@ -1,0 +1,15 @@
+omen2/__init__.py,sha256=YG1We8qBIbiDSuD1ilBwz73VhFo-8cCimKKQ9_CZcSQ,139
+omen2/codegen.py,sha256=L0k0Jn9oCUgrvGGxCKxtAuaDb1H8w1xKxfrT_4z-VKQ,5998
+omen2/errors.py,sha256=597bhUygYMQbFBT3E2LfYihsVXOHWLeNf4YJy7sH4AA,372
+omen2/m2mhelper.py,sha256=NWh1z7OA2w8jYX15KKppF1cZiY_SAP2g04DCRdUwcCQ,8313
+omen2/object.py,sha256=srE7hDtJ8ZuE3HrJsI6w94VuEF5yrg7KyAar86Xt36Q,11259
+omen2/omen.py,sha256=CeQ2hJC1dhOOdSZddAMIVbf26AaCA287TXGoip3HwM0,5922
+omen2/relation.py,sha256=CzBanjKaaLnJ1zCoxKoxrCHeu0h_OCe5AD1qz7Ubtfw,2613
+omen2/selectable.py,sha256=5Zqz1nfYJ8OnrHLfExvx0QYElht1ddpRD3oRDx5wcyc,2144
+omen2/table.py,sha256=FZZ861epg_aIzYcK_J5IveoBAhU4zd5jS14VIt9cf2o,4704
+omen2-1.0.1.dist-info/LICENSE,sha256=bkVNQdsXkFoCxMqeOri1_rddCGfbKM-Rv5VmOPuKrCc,8015
+omen2-1.0.1.dist-info/METADATA,sha256=e3NnRU9PrFFsOoIcMOiTfycy0rqpIZ79JbFaFhiqkQY,3639
+omen2-1.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+omen2-1.0.1.dist-info/entry_points.txt,sha256=_0msBH4ZZObB7a0WcD6Pe-Jk-Z-J2UvhEzlTY2qozxo,54
+omen2-1.0.1.dist-info/top_level.txt,sha256=CGUrUAfwAkze2YNi3hYKnIP-ZPBd2_Fe3jzQT1yAtzU,6
+omen2-1.0.1.dist-info/RECORD,,
