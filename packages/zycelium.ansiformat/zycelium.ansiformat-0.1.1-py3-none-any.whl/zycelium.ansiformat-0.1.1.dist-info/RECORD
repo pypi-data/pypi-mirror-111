@@ -1,0 +1,11 @@
+zycelium/ansiformat/__init__.py,sha256=JkyE1JNrbwmU5xMG1LgO7TgUaqUi0Ef7nQwQdsTsVUk,435
+zycelium/ansiformat/color.py,sha256=qgCuBYEvYjjUR3fX7dfhTAuf6it-sib9p--eE096U-0,5261
+zycelium/ansiformat/format.py,sha256=MnOALF9nbPMmNO3QAXEewqwt6wTjvLg9Y4nLq2HH_xw,558
+zycelium/ansiformat/markup.py,sha256=asuLsaMZBrXElP-_4lakXofyAjtHqPFumPAp1K-vCIk,1776
+zycelium/ansiformat/palette.py,sha256=tk_pD021O5zyEPLTiG3EDvA7qMc5Otzbb5Q0tBaKH4s,5389
+zycelium/ansiformat/string.py,sha256=0cnUTxf4-eW3Gwa5m43Q6oHrUfKZRi4VNeiLLn7JKRc,3794
+zycelium.ansiformat-0.1.1.dist-info/LICENSE,sha256=aICDl1_7Sfp5vqUFbw2xKt5Hq1AfIZOAQY494ywHfcs,1516
+zycelium.ansiformat-0.1.1.dist-info/METADATA,sha256=yqLRYj2_DSy3O_boDZo7uGzd_3vwvK2_dhX42h_42gU,2963
+zycelium.ansiformat-0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+zycelium.ansiformat-0.1.1.dist-info/top_level.txt,sha256=DpFffFehJXeDUvBSXL2lpIJ8cYj_J_z6-DcRsJRjzxM,9
+zycelium.ansiformat-0.1.1.dist-info/RECORD,,
