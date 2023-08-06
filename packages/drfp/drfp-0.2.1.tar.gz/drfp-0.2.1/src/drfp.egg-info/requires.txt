@@ -1,0 +1,13 @@
+numpy>=1.21.0
+click>=8.0.1
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[testing]
+tox
+setuptools
+setuptools-scm
+pytest
+pytest-cov
+black
