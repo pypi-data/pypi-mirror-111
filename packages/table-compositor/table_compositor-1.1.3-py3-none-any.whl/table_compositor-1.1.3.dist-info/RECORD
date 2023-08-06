@@ -1,0 +1,14 @@
+table_compositor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+table_compositor/grid.py,sha256=b-sIVcfRmyINaVtB7hJXFTBTrfM0r5_DjHKKXoQXSbg,5262
+table_compositor/html_styles.py,sha256=Zb5nOA49dilFTQ4AmtbVOqWgoGVFvDssdNNjDcCdNbY,5599
+table_compositor/html_writer.py,sha256=dfemYyE79SROnPfb5f4dCbUvklZha_vEYZb_KWi2aNs,5588
+table_compositor/presentation_model.py,sha256=TZxsuw-8y_uHvV7dXlXumtB4HBkn_kaBG5bU-UrZyV0,24123
+table_compositor/table_compositor.py,sha256=lHDKSGjnXt0qRf19fW50zriHAw9rFt5LZAyRbTwMqzo,14625
+table_compositor/util.py,sha256=_KqqQDN0gAZh_lidpiaLWDjsEEzRRZTsPgJqN2_IaaY,739
+table_compositor/xlsx_styles.py,sha256=H_n-tQYNhbIx8TFWRweTFW4yKUfSfnJGPHTZZonqzvA,13602
+table_compositor/xlsx_writer.py,sha256=MhpCZkeXIfnL6iDL2cPjMYZlMG9bpYZ8g6YquUA4lCs,15555
+table_compositor-1.1.3.dist-info/LICENSE,sha256=jG0YyrQaRcOxSMU2QLXeHQd_SyjaYgnl0Y2qAFoCHvY,1716
+table_compositor-1.1.3.dist-info/METADATA,sha256=yPadHe0h4qL2yByiaSqNuben0L_3Cbyffbd-tBo6xcs,2062
+table_compositor-1.1.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+table_compositor-1.1.3.dist-info/top_level.txt,sha256=rjQ08WkUB1RJuaZHLBwG0-PpijeoawhhVM8Fe1pZwGY,17
+table_compositor-1.1.3.dist-info/RECORD,,
