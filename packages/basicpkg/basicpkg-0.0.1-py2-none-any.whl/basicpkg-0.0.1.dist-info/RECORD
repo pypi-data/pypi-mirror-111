@@ -1,0 +1,6 @@
+basicpkg/__init__.py,sha256=bpJ_5f6c5I9dXj7rELMJoW3XiOpvbeCGPZrdKsCpoR4,44
+basicpkg/pkg_check.py,sha256=gKKusMmbgjYLVzcKLONwo4c3DTkyIXETKVxOpJLFk1M,54
+basicpkg-0.0.1.dist-info/METADATA,sha256=WqqnFqpWTyWDT94gbNNA-THxPQfsPVlMwFWAt_MHSLs,221
+basicpkg-0.0.1.dist-info/WHEEL,sha256=bK8TJl-oUKFDa18qkB68zwTZhIBCifqi4qjS_NS4aFQ,92
+basicpkg-0.0.1.dist-info/top_level.txt,sha256=hH-XujcIpNvB6LwxHoZGZafls37WodjRdGmY6AOTOw0,9
+basicpkg-0.0.1.dist-info/RECORD,,
