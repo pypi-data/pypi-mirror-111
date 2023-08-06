@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "dope3"
+version = "3.1.0"
+description = "Python3 Implementation of DOPE Encryption"
+authors = [
+	"Anubhav Mattoo <anubhavmattoo@outlook.com>",
+	"Shubham Patil <shubhampatil428@gmail.com>",
+	"Nikhil Samleti <nikhilsamleti99@gmail.com>"
+]
+license = "GPL-3.0-or-later"
+readme = './README.md'
+
+[tool.poetry.dependencies]
+python = "^3.6"
+pycryptodome = "^3.9"
+bchlib = "^0.14.0"
+dill = "^0.3.3"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
