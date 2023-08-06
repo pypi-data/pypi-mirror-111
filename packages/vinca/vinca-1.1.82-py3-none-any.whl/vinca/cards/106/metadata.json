@@ -1,0 +1,21 @@
+{
+  "editor": "two_lines",
+  "reviewer": "two_lines",
+  "scheduler": "base",
+  "tags": [
+    "general",
+    "green",
+    "green"
+  ],
+  "history": [
+    [
+      "2021-06-29",
+      4,
+      "create"
+    ]
+  ],
+  "deleted": false,
+  "due_date": "2021-06-29",
+  "siblings": [],
+  "string": "new card | card new"
+}
