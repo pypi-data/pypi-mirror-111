@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/lwsspy.ml.egg-info/PKG-INFO
+src/lwsspy.ml.egg-info/SOURCES.txt
+src/lwsspy.ml.egg-info/dependency_links.txt
+src/lwsspy.ml.egg-info/namespace_packages.txt
+src/lwsspy.ml.egg-info/not-zip-safe
+src/lwsspy.ml.egg-info/requires.txt
+src/lwsspy.ml.egg-info/top_level.txt
+src/lwsspy/ml/__init__.py
+src/lwsspy/ml/labeling/__init__.py
+src/lwsspy/ml/labeling/segmentlabeler.py
+src/lwsspy/ml/labeling/volumelabeler.py
