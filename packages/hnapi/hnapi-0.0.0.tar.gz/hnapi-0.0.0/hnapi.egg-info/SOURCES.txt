@@ -1,0 +1,8 @@
+README.rst
+setup.py
+hnapi/__init__.py
+hnapi.egg-info/PKG-INFO
+hnapi.egg-info/SOURCES.txt
+hnapi.egg-info/dependency_links.txt
+hnapi.egg-info/requires.txt
+hnapi.egg-info/top_level.txt

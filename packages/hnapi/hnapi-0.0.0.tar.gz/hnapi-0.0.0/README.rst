@@ -1,0 +1,113 @@
+=====
+hnapi
+=====
+
+**Python Hacker News API Wrapper**
+
+*A minimalistic wrapper for the Hacker News API*
+
+Installation
+============
+
+Via PIP:
+--------
+
+.. code-block:: bash
+
+    pip install hnapi
+
+To install the latest development version:
+------------------------------------------
+
+.. code-block:: bash
+
+    git clone https://github.com/IThinkImOKAY/hnapi
+    cd hnapi
+    pip install .
+
+Usage
+=====
+
+Import the wrapper:
+-------------------
+
+.. code-block:: pycon
+
+    >>> from hnapi import hackernews
+
+Set your user agent:
+--------------------
+
+.. code-block:: pycon
+
+    >>> hn = hackernews(user_agent='[description]:[version] by @[username]')
+
+Get an item:
+------------
+
+*Returns a dictionary*
+
+.. code-block:: pycon
+
+    >>> hn.item('1')
+    {'by': 'pg', 'descendants': 15, 'id': 1, 'kids': [15, 234509, 487171, 454426, 454424, 454410, 82729], 'score': 57, 'time': 1160418111, 'title': 'Y Combinator', 'type': 'story', 'url': 'http://ycombinator.com'}
+
+Get a user:
+-----------
+
+*Returns a dictionary*
+
+.. code-block:: pycon
+
+    >>> hn.user('test')
+    {'about': '', 'created': 1175289467, 'delay': 0, 'id': 'test', 'karma': 1, 'submitted': [1043201, 1029445, 1026445, 586568, 418362, 418361, 11780]}
+
+Get the max item:
+-----------------
+
+*Returns an integer*
+
+.. code-block:: pycon
+
+    >>> hn.max_item()
+    27743784
+
+Get stories by type:
+--------------------
+
+*Returns a list of integers*
+
+The ``get_stories()`` function takes a required ``kind`` argument.
+It must be one of the following:
+
+* 'new'
+* 'top'
+* 'best'
+* 'ask'
+* 'show'
+* 'job'
+
+.. code-block:: pycon
+
+    >>> hn.get_stories(kind='ask')
+    [27743303, 27742459, 27743368, 27742048, 27739960, 27739957, 27743011, 27719928, 27741278, 27740921, 27740599, 27729059, 27737668, 27722254, 27739126, 27738779, 27733316, 27737402, 27736487, 27736404, 27736293, 27710539, 27729202, 27710097, 27740763, 27725805, 27730349, 27727072, 27710270, 27734110, 27730677, 27736526, 27740141, 27727802, 27720970, 27731873, 27735679, 27728069, 27718990, 27718806, 27727403, 27722579, 27722321, 27714299, 27729577, 27721200, 27720447, 27715246, 27711355, 27710263, 27717304, 27716627, 27725274, 27742922, 27742599, 27741124, 27740932, 27740744, 27740658, 27740465, 27740187, 27739064, 27738847, 27738710, 27738663, 27738404, 27738247]
+
+Get changed items:
+------------------
+
+*Returns a list of integers*
+
+.. code-block:: pycon
+
+    >>> hn.changed_items()
+    [27743787, 27743786, 27743217, 27742092, 27740163, 27743304, 27741560, 27743687, 27742448, 27740617, 27742512, 27743782, 27740550, 27741551, 27743573, 27743454, 27741466, 27743468, 27743603, 27743751, 27743412, 27743649, 27742124, 27743632, 27743773, 27739665, 27742073, 27742149, 27734473, 27743427, 27743665, 27740936, 27741910, 27743303, 27739596, 27734676, 27737064, 27738312, 27743788, 27741026, 27742824, 27740204, 27737718]
+    
+Get changed profiles:
+---------------------
+
+*Returns a list of strings*
+
+.. code-block:: pycon
+
+    >>> hn.changed_profiles()
+    ['floatingatoll', 'asd3rz', 'nrmitchi', 'plorkyeran', 'shivekkhurana', 'danudey', 'billyharris', 'Lammy', 'reaperducer', 'BugWatch', 'trdtaylor1', 'kennywinker']
