@@ -1,0 +1,3 @@
+[console_scripts]
+random-mitype = random_mitype.random_mitype:cli
+
