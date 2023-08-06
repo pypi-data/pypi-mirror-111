@@ -1,0 +1,8 @@
+nwpm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nwpm/nwpm.py,sha256=Z54vmAjgdAOHRo4jb0jVFfzf9XDzgnsqAz3MhAIxMCA,13946
+nwpm/nwpm_exec.py,sha256=yVsciDAHXPEIZkY2UNIHiQcR9o2mZbJZXQhH2ZmYZIM,13931
+nwpm-0.1.19.dist-info/METADATA,sha256=IjMsmckjMsNYuK9yVWZBH98Q7r7X4mtTXcGTvaKGUeo,1561
+nwpm-0.1.19.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+nwpm-0.1.19.dist-info/entry_points.txt,sha256=vIV5AgMDN8axZ9d52kQy_4wNZKW1R1qswLx8wBRb8qU,46
+nwpm-0.1.19.dist-info/top_level.txt,sha256=ZsQ7f5FW3JNRzrLCsEeTYO4N1qdQ8p2PVyT5OjG23OM,5
+nwpm-0.1.19.dist-info/RECORD,,
