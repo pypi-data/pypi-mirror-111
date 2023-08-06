@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: django-translate_po
+Version: 0.2.0
+Summary: Automatic PO file translator
+Home-page: https://github.com/KidoThunder/translate-po
+Author: Kido Zhao
+Author-email: zgdisgod@hotmail.com
+License: UNKNOWN
+Project-URL: Source, https://github.com/KidoThunder/translate-po
+Project-URL: Documentation, https://github.com/KidoThunder/translate-po/docs/main.html
+Project-URL: Author, http://blog.zkido.cc
+Keywords: Django po translate automatic google & AWS
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Internationalization
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# translate-po
+
+Simple quick script for automatically translating .po files using Google. It speeds up internationalization by giving
+translators machine translated base version to correct.
+
+## Usage
+
+Installation
+
+```cmd
+pip install django-translate_po
+```
+
+Usage with translate function
+
+```python
+from translate_po.translator_functions import select_translator_function
+
+# Can use AWS or Google translate service,
+# but if want use AWS service, you must add some settings into django's settings.py file, like this:
+AWS_TRANSLATE_SERVICE = {
+    "service_name": "translate",
+    "service_region": "us-west-2",
+    "access_key": "your-access-key",
+    "access_secret": "your-access_secret"
+}
+translator_function = select_translator_function("AWS")
+# translator_function = select_translator_function("Google")
+res_text = translator_function("your-text", source_code="us", target_code="de")
+```
+
+Usage with translate po file
+
+```python
+from translate_po.translate import PoTranslator
+
+po_translator = PoTranslator("./a.po", translator_service="AWS", source_code="en", target_code="zh")
+po_translator.generate_text_for_untranslated()
+
+```
+
+### Changelog
+
+0.1.0
+
+- Release Django-translate_po
+
