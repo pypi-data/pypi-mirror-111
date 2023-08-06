@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: python_add_3_library
+Version: 0.3
+Summary: gain ability to operate with number 3
+Home-page: https://duckduckgo.com
+Author: name here
+Author-email: test@example.com
+License: MIT
+Download-URL: https://github.com/cibawa6266/python_add_3_library/archive/v_03.tar.gz
+Description: UNKNOWN
+Keywords: add,subtract,three
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
