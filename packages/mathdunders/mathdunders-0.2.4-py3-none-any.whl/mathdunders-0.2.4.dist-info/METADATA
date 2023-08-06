@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: mathdunders
+Version: 0.2.4
+Summary: Decorator that adds math dunders to a class derived from a numeric type.
+Home-page: https://github.com/discretegames/mathdunders
+Author: discretegames
+Author-email: discretizedgames@gmail.com
+License: MIT License
+Keywords: python,math,mathematics,dunder,double under,underscore,magic method,number
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+
+mathdunders provides a Python 3 decorator that automatically adds 23 math-related dunder methods to a class derived from a numeric type.
+
+Installation:
+
+pip install mathdunders
+
+Usage:
+
+from mathdunders import mathdunders
+
+@mathdunders()
+class RealNumber(float):
+    pass
+
+x = RealNumber(1) + RealNumber(2)
+print(x, type(x))  # -> 3 <class '__main__.RealNumber'>
+
+
