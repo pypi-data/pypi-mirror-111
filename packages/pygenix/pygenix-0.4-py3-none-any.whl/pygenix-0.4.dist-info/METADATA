@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pygenix
+Version: 0.4
+Summary: A Python Package That Contains Text Aimations And Some Useful Utils
+Home-page: https://github.com/lightning283/pygenix
+Author: lightning283
+Author-email: deadtarget283@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >3.7
+Description-Content-Type: text/markdown
+
+# Pygenix
+-  Its A Collection Of Small Animations And Other Stuff Like Getting Username And Platform.
+
