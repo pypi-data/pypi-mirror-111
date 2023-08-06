@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/quicksand/__init__.py
+src/quicksand/quicksand.py
+src/quicksand.egg-info/PKG-INFO
+src/quicksand.egg-info/SOURCES.txt
+src/quicksand.egg-info/dependency_links.txt
+src/quicksand.egg-info/requires.txt
+src/quicksand.egg-info/top_level.txt
