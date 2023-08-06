@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+secyan_python.egg-info/PKG-INFO
+secyan_python.egg-info/SOURCES.txt
+secyan_python.egg-info/dependency_links.txt
+secyan_python.egg-info/not-zip-safe
+secyan_python.egg-info/requires.txt
+secyan_python.egg-info/top_level.txt
