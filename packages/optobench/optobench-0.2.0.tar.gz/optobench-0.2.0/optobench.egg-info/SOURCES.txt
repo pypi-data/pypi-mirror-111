@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+bss.cc
+bss.h
+cbench.cc
+requirements.txt
+sanity-test-golden.log
+setup.py
+testit.sh
+optobench.egg-info/PKG-INFO
+optobench.egg-info/SOURCES.txt
+optobench.egg-info/dependency_links.txt
+optobench.egg-info/requires.txt
+optobench.egg-info/top_level.txt
