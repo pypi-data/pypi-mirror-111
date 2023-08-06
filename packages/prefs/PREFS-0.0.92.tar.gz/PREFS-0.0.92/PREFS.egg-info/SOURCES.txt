@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+setup.py
+Docs/CHANGELOG.md
+Docs/README.md
+PREFS/__init__.py
+PREFS/example.py
+PREFS/test.py
+PREFS.egg-info/PKG-INFO
+PREFS.egg-info/SOURCES.txt
+PREFS.egg-info/dependency_links.txt
+PREFS.egg-info/top_level.txt
+PREFS/Prefs/prefs.txt

@@ -1,0 +1,3 @@
+global-include *.txt *.py
+include Docs/*.md
+include Docs/LICENSE
