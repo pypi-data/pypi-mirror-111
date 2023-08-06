@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: radio-sim
+Version: 0.0.1
+Summary: collection of calibration routines to run on the HERA instrument.
+Home-page: https://github.com/tyler-a-cox/radio_sim
+Author: Tyler Cox
+Author-email: tyler.a.cox@berkeley.edu
+License: BSD
+Project-URL: Bug Tracker, https://github.com/tyler-a-cox/radio_sim/issues
+Description: # radio_sim
+        Simple package for simulating radio interferometric visibilities using the radio interferometry measurement equation (RIME)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: all
