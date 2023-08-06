@@ -1,0 +1,7 @@
+README.md
+setup.py
+pastebinapi.egg-info/PKG-INFO
+pastebinapi.egg-info/SOURCES.txt
+pastebinapi.egg-info/dependency_links.txt
+pastebinapi.egg-info/requires.txt
+pastebinapi.egg-info/top_level.txt

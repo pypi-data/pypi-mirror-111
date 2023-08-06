@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: pastebinapi
+Version: 0.0.1
+Summary: This module allows to use Pastebin API very easily.
+Home-page: https://github.com/venaxyt/pastebinapi
+Author: Venax
+Author-email: venaxumofficial@gmail.com
+License: MIT
+Keywords: pastebin
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
+> # pastebinapi
+
+```
+# Module made by @venaxyt on Github
+import pastebinapi
+
+username = "pastebin account username"
+password = "pastebin account password"
+api_key = "account api_key findable here https://pastebin.com/doc_api
+
+# Check an account
+pastebinapi.check(username, password, api_key)
+>>> Output : [username] Valid account
+
+# Get the token of an account
+pastebinapi.token(username, password, api_key)
+>>> Output : [username] Token : account token
+
+# Upload a paste on an account
+privacity = "2"  # 0 : public | 1 : unlisted | 2 : private
+content = "That's my text"
+title = "Venax paste"
+pastebinapi.paste(username, password, api_key, privacity, title, content)
+>>> Output : [>] Successfully uploaded :
+>>> Output : [>] Pastebin text page : https://pastebin.com/pasteid
+>>> Output : [>] Pastebin text /raw : https://pastebin.com/raw/pasteid
+```
+
+> **Download** : ``pip install pastebinapi``
+
