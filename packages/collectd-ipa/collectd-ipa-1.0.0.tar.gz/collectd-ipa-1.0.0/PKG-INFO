@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: collectd-ipa
+Version: 1.0.0
+Summary: A CollectD plugin to get metrics from IPA
+Home-page: https://github.com/fedora-infra/collectd-ipa
+License: LGPL-3.0-or-later
+Keywords: monitoring
+Author: Fedora Infrastructure
+Author-email: infrastructure@lists.fedoraproject.org
+Requires-Python: >=3.6.2,<4.0.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: python-ldap (>=3.3.1,<4.0.0)
+Project-URL: Repository, https://github.com/fedora-infra/collectd-ipa
+Description-Content-Type: text/markdown
+
+# Collectd plugin for IPA
+
+A Collectd plugin to extract metrics from IPA
+
+Currently supported metrics:
+
+- `groups`: the number of groups
+- `users`: the number of users, active or disabled
+- `users_rate`: the rate at which the number of users is changing (registered
+  users and deletions)
+- `staged_users`: the number of staged users (users in the process of
+  registering for an account), split by their spam detection status.
+
+
+## Installation
+
+On the IPA host:
+
+- install the python module where Collectd's python plugin can see it
+- run `make install`
+
+On the host where the collectd server is running:
+
+- run `make install-data`
+- append the content of `collection.conf` to your `/etc/collection.conf`
+
+
+## Configuration
+
+The `collectd.d/ipa.conf` file has an example of the available configuration
+values that you can adjust, in the `Module collectd_ipa` block.
+
+It contains descriptions of what the configuration variables mean and their
+default values.
+
+
+## License
+
+Licensed under [lgpl-3.0](./LICENSE)
+
