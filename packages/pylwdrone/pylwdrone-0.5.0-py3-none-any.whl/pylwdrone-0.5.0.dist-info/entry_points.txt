@@ -1,0 +1,3 @@
+[console_scripts]
+pylwdrone = pylwdrone.__main__:main
+
