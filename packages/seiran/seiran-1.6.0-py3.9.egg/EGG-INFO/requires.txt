@@ -1,0 +1,5 @@
+appdirs
+
+[docs]
+sphinx>=3.4.1
+numpydoc
