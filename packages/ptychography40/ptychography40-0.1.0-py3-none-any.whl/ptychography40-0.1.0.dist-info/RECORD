@@ -1,0 +1,14 @@
+ptychography40/__init__.py,sha256=kGm1x5M-XtOUje0dzlC2G9ZOov-TaPdstin8Wxb-l68,323
+ptychography40/__version__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+ptychography40/_baked_revision.py,sha256=a1NE5njjHvQ3pdFHpFP33qGnQjibhIduPwy_T6A-0_c,53
+ptychography40/versioning.py,sha256=0LZXWWC6may4K0LDfgXTEbgGQBeNWGY7sOU2pnhP_1Q,351
+ptychography40/reconstruction/common.py,sha256=_pKtlWoAlOV-40p1JC9-fv9TNsjuNXKGV474cDDbttE,3432
+ptychography40/reconstruction/ssb/__init__.py,sha256=MLkjcsNd3L2Dj0xN1sGebvY_VsITp19tvYhOMV5F0L4,170
+ptychography40/reconstruction/ssb/trotters.py,sha256=ToJYNQHrRMrJH35bQSBWZ_9ZghAVyAHKVdhxVwDNj7c,13225
+ptychography40/reconstruction/ssb/udf.py,sha256=MeCR9ibIsLGvH9Ig84dADRjj5p3W4Lpzb_GKv3FZdz0,18639
+ptychography40/stitching/stitching.py,sha256=V4wuUMmxInp7Y9rXmb8GZswph7t4NwpdrjwTos-BQDk,3674
+ptychography40-0.1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+ptychography40-0.1.0.dist-info/METADATA,sha256=SUcGA49SyalDyZ2571sXXCdNQ2sZi4WwjgubtytPCX8,3055
+ptychography40-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ptychography40-0.1.0.dist-info/top_level.txt,sha256=mIPjz5l2i1mUzH7mYFAZUPBPo6MeMg3Tb9qKWAMryXI,15
+ptychography40-0.1.0.dist-info/RECORD,,
