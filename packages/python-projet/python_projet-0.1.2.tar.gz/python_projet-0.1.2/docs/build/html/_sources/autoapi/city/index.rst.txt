@@ -1,0 +1,50 @@
+:mod:`city`
+===========
+
+.. py:module:: city
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   city.City
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   city.city
+
+
+.. class:: City(population, density=10000, has_walls=False, has_castle=False, has_river=False)
+
+
+   .. method:: components(self)
+
+      Returns the list of areas that constitute the city's areas
+
+
+   .. method:: cityBuild(self)
+
+      Generates the city randomly based on the voronoi algorithm
+      algorithm which is used to randomly generate points and to keep the regions delimited by these points.
+      by these points. Then it cuts each region into sub-regions and then into houses.
+      Then finally it creates the boulevard(street) by making an intersection between the regions.
+      Depending on the has_wall parameter, it builds or not the walls around the city.
+
+
+
+.. data:: city
+   
+
+   
+

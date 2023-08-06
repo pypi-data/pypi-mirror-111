@@ -1,0 +1,47 @@
+:mod:`generate_points`
+======================
+
+.. py:module:: generate_points
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   generate_points.takeFirst
+   generate_points.takeSecond
+   generate_points.generate_random_around
+
+
+
+.. function:: takeFirst(elem)
+
+   Return the first coordinate (x) of a point.
+   Args:
+       elem (int): a shapely point
+   Retuns: the first coordinate (x) of a point
+
+
+.. function:: takeSecond(elem)
+
+   Return the second coordinate (y) of a point.
+   Args:
+       elem (int): a shapely point
+   Returns: the second coordinate (y) of a point
+
+
+.. function:: generate_random_around(number, polygon)
+
+   Generates random points around a polygon
+   Args:
+       number (int): number of points to generate per side
+       polygon (Polygon): the polygon around which you want to generate the points
+
+   Returns: 4 lists of points generated for each side
+
+

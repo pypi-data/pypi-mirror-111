@@ -1,0 +1,14 @@
+:mod:`python_projet`
+====================
+
+.. py:module:: python_projet
+
+
+Package Contents
+----------------
+
+.. data:: __version__
+   :annotation: = 0.1.0
+
+   
+
