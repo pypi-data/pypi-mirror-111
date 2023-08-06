@@ -1,0 +1,20 @@
+name: cf-xarray-doc
+channels:
+  - conda-forge
+dependencies:
+  - pip
+  - python=3.8
+  - matplotlib-base
+  - netcdf4
+  - pooch
+  - xarray
+  - sphinx
+  - nbsphinx
+  - numpydoc
+  - sphinx-autosummary-accessors
+  - ipython
+  - ipykernel
+  - pandas
+  - pydata-sphinx-theme
+  - pip:
+      - git+https://github.com/xarray-contrib/cf-xarray
