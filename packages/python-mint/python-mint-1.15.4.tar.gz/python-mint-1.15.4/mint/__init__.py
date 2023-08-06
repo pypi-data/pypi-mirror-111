@@ -1,0 +1,26 @@
+# -*- python -*- 
+
+"""
+__init__.py is automatically generated from __init__.py.in, DO NOT EDIT __init__.py
+"""
+
+from ctypes import CDLL
+from pathlib import Path
+import glob
+
+__version__ = "1.15.4"
+
+# open shared library
+LIB = None
+for libfile in Path(__path__[0] + '/..').glob('libmint.cpython*'):
+    LIB = CDLL(libfile)
+    if LIB:
+        break
+
+__all__ = [LIB, 'regrid_edges', 'grid', 'polyline_integral', 'vector_interp',]
+
+from .regrid_edges import RegridEdges
+from .grid import Grid
+from .polyline_integral import PolylineIntegral
+from .vector_interp import VectorInterp
+

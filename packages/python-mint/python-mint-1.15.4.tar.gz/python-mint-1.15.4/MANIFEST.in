@@ -1,0 +1,1 @@
+include version.txt mint/__init__.py.in src/*.h
