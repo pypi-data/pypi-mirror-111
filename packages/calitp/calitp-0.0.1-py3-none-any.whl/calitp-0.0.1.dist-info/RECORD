@@ -1,0 +1,15 @@
+calitp/__init__.py,sha256=jQwnvs6Ii3_a0KR-UWuBRleyF6e1gZJxJAhZPF5gI10,161
+calitp/config.py,sha256=Pkwhtovky18F6ICF9MNtueRbQ5jL_2ngohvQo7fYe1Q,2733
+calitp/sql.py,sha256=ZwElFQQWyGd6M9KnhmeZ6m7H-jj6FN7DdJ10YFfABWQ,4906
+calitp/storage.py,sha256=5SWUJyvK-BgjYfuCQu9S69CVgGXNX73L3PAEsbVWkeo,1757
+calitp/tables.py,sha256=rRiZCb0pzzDO_efUfvkAHP7ercdf2MkL0sAwnft0bNI,2310
+calitp/templates.py,sha256=DP7sSc03TrxV0iDJlcqScV7kHOFjWEukGTzGJwz5ZN0,336
+calitp/tests/conftest.py,sha256=ZgmMGHJqkWR42PKkRWJuZLxg0gf4KXQFF44cRpue-68,274
+calitp/tests/helpers.py,sha256=WYJUbQN9h-r3L3KOvx6mKd88LehinHcj5ljOG0qbDB0,29
+calitp/tests/test_sql.py,sha256=XGFcJQV8Gni0R8srGWUuGp-nok3BULLIy-vj4zOvhQ8,2377
+calitp/tests/test_tables.py,sha256=4AXDdcz-25PlpG8qPFPxxpw678TCs-l9C6pbjHqy8ag,1425
+calitp-0.0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+calitp-0.0.1.dist-info/METADATA,sha256=nEBwLR2b7Kfjy5KcpM3ItK6HPuhk3WfnI_34yPaFZVA,331
+calitp-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+calitp-0.0.1.dist-info/top_level.txt,sha256=cZAWV-35wNuFlzfaxo_7IuAEL5-YnbtM-zwXy5o7nl8,20
+calitp-0.0.1.dist-info/RECORD,,
