@@ -1,0 +1,2 @@
+python-igraph
+networkx>=2.4
