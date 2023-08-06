@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: mead-audio8
+Version: 0.0.6
+Summary: MEAD Audio
+Home-page: UNKNOWN
+Author: dpressel
+Author-email: dpressel@gmail.com
+License: Apache 2.0
+Keywords: deep-learning,audio,pytorch
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: editdistance
+Requires-Dist: mead-baseline
+Requires-Dist: six
+Requires-Dist: soundfile
+Provides-Extra: ctcdecode
+Requires-Dist: ctcdecode ; extra == 'ctcdecode'
+Provides-Extra: scipy
+Requires-Dist: scipy ; extra == 'scipy'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: mock ; extra == 'test'
+Requires-Dist: contextdecorator ; extra == 'test'
+Requires-Dist: pytest-forked ; extra == 'test'
+
+# audio8
+API examples using [8-mile](https://github.com/dpressel/mead-baseline) for audio
+
+## Implementation
+
+The codebase relies primarily on `8-mile` (`mead-layers`) for its modeling and optimization code.
+Whats left is pretty much just training and inference code
+
+## Dependencies
+
+The code depends on:
+  - `editdistance` (for error evaluation)
+  - `numpy`
+  - `six`
+  - `soundfile`
+  - `mead-baseline`
+  - `pytorch`
+
+There are a few optional dependencies
+  - `scipy` (for on-the-fly resampling of wav files)
+  - `ctcdecode` (for prefix beam decoding with optional LM)
+
+
