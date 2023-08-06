@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+src/testlib3add.egg-info/PKG-INFO
+src/testlib3add.egg-info/SOURCES.txt
+src/testlib3add.egg-info/dependency_links.txt
+src/testlib3add.egg-info/requires.txt
+src/testlib3add.egg-info/top_level.txt
