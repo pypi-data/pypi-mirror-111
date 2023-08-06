@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+__init__.py
+myshit.py
+readme.txt
+setup.py
+pyjsx.egg-info/PKG-INFO
+pyjsx.egg-info/SOURCES.txt
+pyjsx.egg-info/dependency_links.txt
+pyjsx.egg-info/top_level.txt
