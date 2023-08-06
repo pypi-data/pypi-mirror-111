@@ -1,0 +1,86 @@
+[tool.poetry]
+name = "pycharmers"
+version = "0.2.0"
+description = "A collection of useful python programs."
+authors = ["iwasakishuto <cabernet.rock@gmail.com>"]
+license = "MIT"
+repository = "https://github.com/iwasakishuto/Python-Charmers"
+homepage = "https://iwasakishuto.github.io/Python-Charmers/"
+readme = "README.md"
+classifiers=[
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Environment :: Console",
+    "Environment :: MacOS X",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/iwasakishuto/PythonUtils/issues"
+"Source Code" = "https://github.com/iwasakishuto/PythonUtils"
+"Say Thanks!" = "https://twitter.com/cabernet_rock"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+numpy = "^1.20.3"
+matplotlib = "^3.4.2"
+requests = "^2.25.1"
+Pillow = "^8.2.0"
+beautifulsoup4 = "^4.9.3"
+numpy-stl = "^2.16.0"
+PyMuPDF = "^1.18.13"
+wcwidth = "^0.2.5"
+camelot-py = "^0.8.2"
+python-xlib = "^0.29"
+scipy = "1.4.1"
+selenium = "^3.141.0"
+Jinja2 = "^2.11.3"
+moviepy = "^1.0.3"
+lxml = "^4.6.3"
+html5lib = "^1.1"
+PyDrive = "^1.3.1"
+python-dotenv = "^0.17.1"
+mysqlclient = "^2.0.3"
+python-docx = "^0.8.11"
+paramiko = "^2.7.2"
+scp = "^0.13.3"
+opencv-contrib-python = "^4.5.2"
+nptyping = "^1.4.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+flake8 = "^3.9.2"
+isort = "^5.8.0"
+mypy = "^0.812"
+black = "^21.5b1"
+pylint = "^2.8.2"
+"sphinxcontrib.twitter" = "^0.5.0"
+PyAutoGUI = "^0.9.52"
+pytest-github-actions-annotate-failures = "^0.1.2"
+
+[tool.poetry.scripts]
+book2img            = "pycharmers.cli.book2img:book2img"
+cv-cascades         = "pycharmers.cli.cvCascades:cvCascades"
+cv-paper-scanner    = "pycharmers.cli.cvPaperScanner:cvPaperScanner"
+cv-pencil-sketch    = "pycharmers.cli.cvPencilSketch:cvPencilSketch"
+cv-window           = "pycharmers.cli.cvWindow:cvWindow"
+form-auto-fill-in   = "pycharmers.cli.form_auto_fill_in:form_auto_fill_in"
+jupyter-arrange     = "pycharmers.cli.jupyter_arrange:jupyter_arrange"
+openBrowser         = "pycharmers.cli.openBrowser:openBrowser"
+pdfmine             = "pycharmers.cli.pdfmine:pdfmine"
+regexp-replacement  = "pycharmers.cli.regexp_replacement:regexp_replacement"
+render-template     = "pycharmers.cli.render_template:render_template"
+requirements-create = "pycharmers.cli.requirements:requirements_create"
+revise_text         = "pycharmers.cli.revise_text:revise_text"
+pycharmers-show     = "pycharmers.cli.show:show_command_line_programs"
+tweetile            = "pycharmers.cli.tweetile:tweetile"
+video_of_lyric      = "pycharmers.cli.video_of_lyric:video_of_lyric"
+video_of_typing     = "pycharmers.cli.video_of_typing:video_of_typing"
+video2gif           = "pycharmers.cli.video2gif:video2gif"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
