@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: piggycli
+Version: 0.0.15
+Summary: A command line tool that provides the functionality to use AWS CloudHSM services as a bitcoin wallet.
+Home-page: UNKNOWN
+Author: Altmirai LLC
+Author-email: kyle.stewart@altmirai.com
+License: MIT license
+Keywords: altpiggybank
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: paramiko
+Requires-Dist: scp
+Requires-Dist: boto3
+Requires-Dist: base58
+Requires-Dist: ecdsa
+Requires-Dist: requests
+Requires-Dist: blockcyper
+
+# piggy-cli
+
+
+
