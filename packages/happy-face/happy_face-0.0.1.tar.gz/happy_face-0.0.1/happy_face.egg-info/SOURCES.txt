@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+happy_face/__init__.py
+happy_face/happy_face.py
+happy_face.egg-info/PKG-INFO
+happy_face.egg-info/SOURCES.txt
+happy_face.egg-info/dependency_links.txt
+happy_face.egg-info/top_level.txt

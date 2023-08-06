@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: happy_face
+Version: 0.0.1
+Summary: Recognize and detect faces in an extremely easy way
+Home-page: https://github.com/rodrigoherrerai/happy_face
+Author: Rodrigo Herrera Itie
+Author-email: rheitie@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# happy_face
+
+### Terminal install:
+```
+pip install happy_face
+```
+
+### Import:
+
+```python
+from happy_face.happy_face import HappyFace
+
+```
+## Introduction:
+#### happy_face was built on many different amazing libraries, mainly face_recognition from Adam Geitgey, dlib and many more. I do not take any accomplishment in doing this, it is just an easy way of implementing face_recognition for people that are starting.
+#### The main purpose of happy_face is to show the magic of deep learning to people that are just starting with programming.
+#### It has few functions, but it is extremely easy to use, this motivates people that are just starting because in python you do not see visual results until later in the journey, this can sometimes kill the creative energy.
+
+
+
+### Brief Explanation: 
+#### You just need to create a variable, instantiate it with HappyFace and fill three params:
+* known_person_path_file: is the path to the SINGLE image of the face that you want to be recognized. 
+* unknown_images_path_file: here is the path to the FOLDER where you have all the other images that you want to recognize.
+* known_name : The name of the known_person_path_file, this will display Found U! If left empty.
+
+#### IMPORTANT!!! Make sure your files (folders or pictures) DO NOT START WITH A DOT --> . <---, if they do, the application will have troubles to execute, this is because sometimes there are hidden files and they start with a dot. This was taken into consideration so the application runs smoothly, just make sure that your folders and files (images) do NOT start with a dot ---> . <---
+
+### Sample Code:
+```python
+tiger_woods = HappyFace(known_person_path_file= '/Users/Desktop/tiger.png', 
+                    unknown_images_path_file = '/Users/Desktop/unknown_pictures', 
+                        known_name= 'Tiger Woods')
+```
+
+#### Functions:
+* display_known_im() -- will display the known_person_path_file image
+* detects_known_face() -- will detect the face of the known person
+* detects_unknown_faces() -- will detect all the faces of the images provided in the unknown_images_path_file folder
+* recognize_faces() -- Will recognize either the person is you (or whoever you provided) or a stranger
+### Sample Code:
+```python
+tiger_woods.display_known_im() #Will display the image
+
+tiger_woods.detects_known_face() #Will detect the face of (in this case) Tiger Woods
+
+tiger_woods.detects_unknown_faces() #Will detect all the faces provided of the unknown people
+
+tiger_woods.recognize_faces() -- # Will recognize either the person is tiger woods or a stranger
+
+```
+
+
+### EXAMPLE:
+<img src ="https://github.com/rodrigoherrerai/FaceRec/blob/main/images/picandfolder.png" width="450" height="300"><img src ="https://github.com/rodrigoherrerai/FaceRec/blob/main/images/inside.png">
+```python
+from happy_face.happy_face import HappyFace
+
+# Instantiate a variable to HappyFace and provide YOUR path file to the image and folder
+tiger_woods = HappyFace(known_person_path_file='/Users/Desktop/tiger.png', 
+                        unknown_images_path_file='/Users/Desktop/unknown_pictures', 
+                        known_name='Tiger Woods')
+
+# Execute
+tiger_woods.recognize_faces()
+```
+
+
+### OUTPUT:
+
+<img src="https://github.com/rodrigoherrerai/FaceRec/blob/main/images/output1.png">
+<img src="https://github.com/rodrigoherrerai/FaceRec/blob/main/images/output2.png">
+<img src = "https://github.com/rodrigoherrerai/FaceRec/blob/main/images/output.png">
+
+
+
+
+
+
+
+
+
+
+
+
