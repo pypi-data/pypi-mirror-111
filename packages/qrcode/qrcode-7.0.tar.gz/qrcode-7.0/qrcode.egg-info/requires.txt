@@ -1,0 +1,17 @@
+
+[:platform_system == "Windows"]
+colorama
+
+[dev]
+pytest
+tox
+
+[maintainer]
+zest.releaser[recommended]
+
+[pil]
+pillow
+
+[test]
+pytest
+pytest-cov
