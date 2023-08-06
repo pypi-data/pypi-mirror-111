@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "robot-rock"
+version = "0.1.0"
+description = ""
+authors = ["Oliver Josem <omjosem@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+typer = {extras = ["all"], version = "^0.3.2"}
+tinydb = "^4.5.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+black = "^21.6b0"
+ipython = "^7.25.0"
+
+[tool.poetry.scripts]
+robot-rock = "robot_rock:app"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
