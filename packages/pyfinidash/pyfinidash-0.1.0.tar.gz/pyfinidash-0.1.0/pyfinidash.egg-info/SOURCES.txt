@@ -1,0 +1,10 @@
+README.md
+setup.py
+pyfinidash/__init__.py
+pyfinidash/__main__.py
+pyfinidash/pyfinidash.py
+pyfinidash.egg-info/PKG-INFO
+pyfinidash.egg-info/SOURCES.txt
+pyfinidash.egg-info/dependency_links.txt
+pyfinidash.egg-info/entry_points.txt
+pyfinidash.egg-info/top_level.txt

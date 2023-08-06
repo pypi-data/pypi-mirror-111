@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: pyfinidash
+Version: 0.1.0
+Summary: A simple-to-use wrapper over the AWS Infinidash API
+Home-page: https://github.com/cmstead/pyfinidash#readme
+Author: Chris Stead
+Author-email: cmstead@gmail.com
+License: MIT
+Description: # Pyfinidash #
+        
+        Pyfinidash is a simple-to-use wrapper over the AWS Infinidash API. Infinidash allows users to quickly rescale applications across availability zones, programmatically. This rescaling is managed with identifier tokens generated from a key provided by an authenticated AWS user in any single given availability zone. The real magic is the cross-availability zone authentication engine which has been added that brings together the ability for applications to be auto-scaled within a single availability zone, and the ability to replicate across availability zones. The replication/rescaling process is enhanced by the ability to programmatically execute a fully recursive replication/rescaling of the application throughout all availability zones across the globe.
+        
+        Pyfinidash is designed to take this entire process and make it user friendly.
+        
+        ## Setup ##
+        
+        To install Pyfinidash, make sure you have Python 3.x installed. Simply run this command to get started:
+        
+        `pip3 install pyfinidash`
+        
+        ## Using Pyfinidash ##
+        
+        ### Generating an Infinidash Configuration ###
+        
+        Pyfinidash reads the `aws-infinidash.json` file at the root of your project. In case you don't know how to format one, that's just fine. Until the `aws-cli` is updated with a full auto-generation of the configuration file, Pyfinidash can do it for you. From the command line run the following:
+        
+        `pyfinidash init`
+        
+        That's it! A brand new config file will be written to your project.
+        
+        ### Using Pyfinidash in a Rescaling Script ###
+        
+        Pyfinidash makes it easy to both encrypt and publish hashes for handing cross-availability-zone authentication, as well as scaling containerized applications across availability zones without needing much of the normal setup required for availability zone replication.
+        
+        Here's the demo built into the CLI:
+        
+        ```python
+        client = InfinidashClient()
+        
+        client.encrypt(key).publish()
+        
+        print(client.encrypted_key)
+        
+        application = client.application("Hello")
+        
+        print(application.get_app_arn())
+        print("")
+        
+        application.scale_to(10)
+        
+        rescaled_instances = application.get_rescaled_instances()
+        
+        for instance in rescaled_instances:
+            print(instance.get_app_arn())
+        ```
+        
+        You can see, with just a few lines of code, we get rescaling to 10 instances with minimal code, and we can quickly and easily capture the arns for each of the deployed application container instances. The wonderful bit of news is, each rescaled instance is, itself, a full application container instance which can be rescaled again.
+        
+        This recursive rescaling technology is what makes Infinidash the perfect tool to quickly bring your application containers up and get them running in web scale!
+        
+        Happy hacking!
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
