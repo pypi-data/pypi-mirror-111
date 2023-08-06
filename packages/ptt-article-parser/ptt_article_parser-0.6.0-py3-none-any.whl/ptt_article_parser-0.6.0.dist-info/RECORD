@@ -1,0 +1,12 @@
+ptt_article_parser/__init__.py,sha256=TOCPu9oz-NbXSnyqDVBvk_085ip3RBkzH3b5kFSKPKs,5320
+ptt_article_parser/__main__.py,sha256=DH2ZtYzC0I4_PYR-NDeGN9hT0acQ-kZF6jA2wlXK7PQ,1912
+ptt_article_parser/dir.py,sha256=Bvg8FFB_H_-kd-nLsChgCv2GvKlmFeAAfsygeI_xpbw,1697
+ptt_article_parser/helper.py,sha256=NXIoO7LzFmQy9IgbQNQIvQdN8tYikDikIcglhIPfXcQ,547
+ptt_article_parser/rename.py,sha256=-5qn1Hx5II0bpDd1jzZVMf1561hIUCIembKuBTaViBk,1448
+ptt_article_parser-0.6.0.dist-info/LICENSE,sha256=XEKklh0yil9BI5cSKXC_7XyNPIt5fZz3w23PKXFYxi0,1095
+ptt_article_parser-0.6.0.dist-info/METADATA,sha256=HD9uNPHVOcT1qKanFN96Hdh1hMBthuV7M-xF8YVCCXw,2997
+ptt_article_parser-0.6.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ptt_article_parser-0.6.0.dist-info/entry_points.txt,sha256=5f4h-40JCMFpECibfxV7Ad3SLDKP8weINz-UXqmmvlo,58
+ptt_article_parser-0.6.0.dist-info/top_level.txt,sha256=aJfr6aXnoXt4ZfPLBmZhOtaMDNz1sXPfkdkKWQFLXVo,19
+ptt_article_parser-0.6.0.dist-info/zip-safe,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+ptt_article_parser-0.6.0.dist-info/RECORD,,
