@@ -1,0 +1,9 @@
+astropy>=3.0
+scipy
+Pillow
+
+[docs]
+sphinx-astropy
+
+[test]
+pytest-astropy
