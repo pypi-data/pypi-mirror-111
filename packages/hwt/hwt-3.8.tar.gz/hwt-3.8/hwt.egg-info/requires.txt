@@ -1,0 +1,4 @@
+hdlConvertorAst>=1.0
+ipCorePackager>=0.6
+hwtSimApi>=1.3
+pyDigitalWaveTools>=1.1
