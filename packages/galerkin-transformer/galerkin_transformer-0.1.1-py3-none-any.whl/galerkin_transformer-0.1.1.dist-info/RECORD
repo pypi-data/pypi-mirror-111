@@ -1,0 +1,11 @@
+galerkin_transformer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+galerkin_transformer/ft.py,sha256=mFp-wQFnjPOnguIGIE759SOEgxmw_mHFrOvZpksNdAw,43863
+galerkin_transformer/layers.py,sha256=T0r5l0to1B8o9fSLeNWtLIbPpCuyHlpkZdrQlKwP4ss,44037
+galerkin_transformer/model.py,sha256=1V8ooYdCEnoHLIb0C2_kbYducunkFpdnUAqEWf7zDbE,47303
+galerkin_transformer/utils.py,sha256=jgM7ni6RLvmWmsEoluQR8f-i-NjEFUmL9OfQ8edq45A,10458
+galerkin_transformer/utils_ft.py,sha256=oDMSFUGDigoGXx8W9TojEk17BxZ-O3MLb1ztdlCizMI,37209
+galerkin_transformer-0.1.1.dist-info/LICENSE,sha256=6isP2WA516etouxNFgkmNiv1utX25aWiv-GXA4rfyDQ,1067
+galerkin_transformer-0.1.1.dist-info/METADATA,sha256=G-OpR4znuZ9kulLSobiFl_hljSOdKNnAYgzd3GVAivA,606
+galerkin_transformer-0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+galerkin_transformer-0.1.1.dist-info/top_level.txt,sha256=xr9tEmIYPgtFV4STIpcHuciALH8-KeN3ueJB5-LxKeY,21
+galerkin_transformer-0.1.1.dist-info/RECORD,,
