@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/owlwatch.egg-info/PKG-INFO
+src/owlwatch.egg-info/SOURCES.txt
+src/owlwatch.egg-info/dependency_links.txt
+src/owlwatch.egg-info/top_level.txt
