@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pypacktut
+Version: 0.4.7
+Summary: Python package tutorial
+Home-page: https://github.com/pypacktut
+Author: Nitin Singh
+Author-email: singh.nitin512@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/pypacktut/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy (>=1.14.5)
+Provides-Extra: interactive
+Requires-Dist: matplotlib (>=2.2.0) ; extra == 'interactive'
+
+Package package tutorial with a slightly longer description
+
