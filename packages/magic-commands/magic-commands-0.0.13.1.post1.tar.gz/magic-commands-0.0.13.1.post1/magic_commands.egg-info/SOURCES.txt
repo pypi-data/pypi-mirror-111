@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+magic_commands.egg-info/PKG-INFO
+magic_commands.egg-info/SOURCES.txt
+magic_commands.egg-info/dependency_links.txt
+magic_commands.egg-info/top_level.txt
+magiccmds/__init__.py
+magiccmds/implementations.py
