@@ -1,0 +1,2 @@
+dsframework==0.1.45
+dvc[s3,gs]==1.11.10
