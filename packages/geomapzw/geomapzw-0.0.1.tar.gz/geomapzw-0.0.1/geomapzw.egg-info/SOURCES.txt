@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+geomapzw/__init__.py
+geomapzw/geomapzw.py
+geomapzw.egg-info/PKG-INFO
+geomapzw.egg-info/SOURCES.txt
+geomapzw.egg-info/dependency_links.txt
+geomapzw.egg-info/not-zip-safe
+geomapzw.egg-info/top_level.txt
