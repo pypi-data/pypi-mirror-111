@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: shappack
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Hirofumi Tsuruta
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: sklearn
+Requires-Dist: scipy
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: shap ; extra == 'dev'
+
+UNKNOWN
+
+
