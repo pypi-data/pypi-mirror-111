@@ -1,0 +1,13 @@
+odoo/addons/sm_partago_user_rest_api/__init__.py,sha256=fmNDuSmKXU2B7ssTnclmt5tVMzqS8R7Nc9fGp-xDto0,67
+odoo/addons/sm_partago_user_rest_api/__manifest__.py,sha256=5UKpaQ7GhEhzNTNfkY9g9ETYepfTbVZGgj8qdHgG69g,685
+odoo/addons/sm_partago_user_rest_api/models/__init__.py,sha256=qgBGH6W2ijfQ2kjPbuFHNDhwx3p0vJ_wAmVmuZGHOok,100
+odoo/addons/sm_partago_user_rest_api/models/models_carsharing_update_data.py,sha256=Cgi7P8tBo57v8D-L36RzaYgXeBY6nBSTo9LtJgkWcL0,200
+odoo/addons/sm_partago_user_rest_api/models/models_smp_carsharing_registration_request.py,sha256=kv7Zr5UxdQHU1ImXRgT4vPLOtkcfQMT_UlRyeF9f7Sk,227
+odoo/addons/sm_partago_user_rest_api/services/__init__.py,sha256=AlHejh-A3mllwvPmv7TO8oiDU9P_M5lWfFn1bcAb62U,84
+odoo/addons/sm_partago_user_rest_api/services/schemas.py,sha256=5tII3TqFys7NcZdGz3F12wE_p2rNA8RvRWglN6z2Y5U,4541
+odoo/addons/sm_partago_user_rest_api/services/services_cs_registration_request.py,sha256=IrhxwmXPNUlHSmltshEOr-pduavToTeFJQJhlbr8454,3465
+odoo/addons/sm_partago_user_rest_api/services/services_cs_update_data.py,sha256=AuwQke3YoTo6dv1FZk1Y3kH5ZFKe3oIoXXyTkg1KzB4,3792
+odoo12_addon_sm_partago_user_rest_api-12.0.0.0.4.dist-info/METADATA,sha256=tI0cVkPTYSrkxvfILJjpEXO4PCL9XuA7MNULuhWdipI,482
+odoo12_addon_sm_partago_user_rest_api-12.0.0.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+odoo12_addon_sm_partago_user_rest_api-12.0.0.0.4.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo12_addon_sm_partago_user_rest_api-12.0.0.0.4.dist-info/RECORD,,
