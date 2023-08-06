@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: GANerAid
+Version: 1.1
+Summary: Gan library to create and validate synthetic tabular data
+Home-page: https://github.com/TeamGenerAid/GANerAid
+Author: TeamGenerAid
+Author-email: generaid.thu@gmail.com
+License: MIT License
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
