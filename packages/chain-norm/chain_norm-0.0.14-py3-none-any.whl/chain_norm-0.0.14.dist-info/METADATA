@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: chain-norm
+Version: 0.0.14
+Summary: chain-norm is python library for suquential text normalization
+Home-page: https://github.com/roy29fuku/chain-norm
+Author: Ryota Yamada
+Author-email: roy29fuku@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: appnope (==0.1.2)
+Requires-Dist: argon2-cffi (==20.1.0)
+Requires-Dist: async-generator (==1.10)
+Requires-Dist: attrs (==21.2.0)
+Requires-Dist: backcall (==0.2.0)
+Requires-Dist: bleach (==3.3.0)
+Requires-Dist: certifi (==2021.5.30)
+Requires-Dist: cffi (==1.14.5)
+Requires-Dist: chain-norm (==0.0.2)
+Requires-Dist: chardet (==4.0.0)
+Requires-Dist: colorama (==0.4.4)
+Requires-Dist: debugpy (==1.3.0)
+Requires-Dist: decorator (==5.0.9)
+Requires-Dist: defusedxml (==0.7.1)
+Requires-Dist: docutils (==0.17.1)
+Requires-Dist: entrypoints (==0.3)
+Requires-Dist: idna (==2.10)
+Requires-Dist: importlib-metadata (==4.6.0)
+Requires-Dist: ipykernel (==6.0.0)
+Requires-Dist: ipython (==7.25.0)
+Requires-Dist: ipython-genutils (==0.2.0)
+Requires-Dist: ipywidgets (==7.5.1)
+Requires-Dist: jaconv (==0.3)
+Requires-Dist: jedi (==0.18.0)
+Requires-Dist: Jinja2 (==3.0.1)
+Requires-Dist: jsonschema (==3.2.0)
+Requires-Dist: jupyter (==1.0.0)
+Requires-Dist: jupyter-client (==6.1.12)
+Requires-Dist: jupyter-console (==6.1.0)
+Requires-Dist: jupyter-core (==4.7.1)
+Requires-Dist: jupyterlab-pygments (==0.1.2)
+Requires-Dist: keyring (==23.0.1)
+Requires-Dist: MarkupSafe (==2.0.1)
+Requires-Dist: matplotlib-inline (==0.1.2)
+Requires-Dist: mistune (==0.8.4)
+Requires-Dist: nbclient (==0.5.3)
+Requires-Dist: nbconvert (==6.1.0)
+Requires-Dist: nbformat (==5.1.3)
+Requires-Dist: nest-asyncio (==1.5.1)
+Requires-Dist: notebook (==6.4.0)
+Requires-Dist: packaging (==20.9)
+Requires-Dist: pandocfilters (==1.4.3)
+Requires-Dist: parso (==0.8.2)
+Requires-Dist: pexpect (==4.8.0)
+Requires-Dist: pickleshare (==0.7.5)
+Requires-Dist: pipdeptree (==0.13.2)
+Requires-Dist: pkginfo (==1.7.0)
+Requires-Dist: prometheus-client (==0.11.0)
+Requires-Dist: prompt-toolkit (==3.0.19)
+Requires-Dist: ptyprocess (==0.7.0)
+Requires-Dist: pycparser (==2.20)
+Requires-Dist: Pygments (==2.9.0)
+Requires-Dist: pyparsing (==2.4.7)
+Requires-Dist: pyrsistent (==0.18.0)
+Requires-Dist: python-dateutil (==2.8.1)
+Requires-Dist: pyzmq (==22.1.0)
+Requires-Dist: qtconsole (==4.6.0)
+Requires-Dist: readme-renderer (==29.0)
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: requests-toolbelt (==0.9.1)
+Requires-Dist: rfc3986 (==1.5.0)
+Requires-Dist: Send2Trash (==1.7.1)
+Requires-Dist: six (==1.16.0)
+Requires-Dist: terminado (==0.10.1)
+Requires-Dist: testpath (==0.5.0)
+Requires-Dist: tornado (==6.1)
+Requires-Dist: tqdm (==4.61.1)
+Requires-Dist: traitlets (==5.0.5)
+Requires-Dist: twine (==3.4.1)
+Requires-Dist: urllib3 (==1.26.6)
+Requires-Dist: wcwidth (==0.2.5)
+Requires-Dist: webencodings (==0.5.1)
+Requires-Dist: widgetsnbextension (==3.5.1)
+Requires-Dist: word2number (==1.1)
+Requires-Dist: zipp (==3.4.1)
+
+chain-norm is python library for suquential text normalization
+
+
