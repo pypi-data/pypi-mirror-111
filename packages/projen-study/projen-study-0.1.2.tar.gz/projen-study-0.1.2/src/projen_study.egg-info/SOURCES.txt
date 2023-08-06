@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/projen_study/__init__.py
+src/projen_study/py.typed
+src/projen_study.egg-info/PKG-INFO
+src/projen_study.egg-info/SOURCES.txt
+src/projen_study.egg-info/dependency_links.txt
+src/projen_study.egg-info/requires.txt
+src/projen_study.egg-info/top_level.txt
+src/projen_study/_jsii/__init__.py
+src/projen_study/_jsii/projen-study@0.1.2.jsii.tgz

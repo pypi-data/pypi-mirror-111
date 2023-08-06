@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: projen-study
+Version: 0.1.2
+Summary: projen-study
+Home-page: https://github.com/rzamana/projen-study.git
+Author: Rafael Z. Kineippe<rafael@zamana.com.br>
+License: Apache-2.0
+Project-URL: Source, https://github.com/rzamana/projen-study.git
+Description: # Projen Study
+        
+        Main project for testing things and check the latest of Projen
+        
+        Forcing the major version
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: JavaScript
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Typing :: Typed
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
