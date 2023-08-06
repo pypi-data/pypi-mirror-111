@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+magic_flux_led/__init__.py
+magic_flux_led/__main__.py
+magic_flux_led.egg-info/PKG-INFO
+magic_flux_led.egg-info/SOURCES.txt
+magic_flux_led.egg-info/dependency_links.txt
+magic_flux_led.egg-info/entry_points.txt
+magic_flux_led.egg-info/top_level.txt
