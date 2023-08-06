@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: conscript
+Version: 0.1.1
+Summary: Conscript console scripts in your own Swiss Army Knife.
+Home-page: https://github.com/jsirois/conscript
+Author: John Sirois
+Author-email: john.sirois@gmail.com
+Requires-Python: >=2.7,<3.10,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Utilities
+Requires-Dist: setuptools; python_version <= '3.5'
+Requires-Dist: importlib-metadata; python_version == '3.6' or python_version == '3.7'
+Project-URL: Changelog, https://github.com/jsirois/conscript/blob/main/CHANGES.md
+Project-URL: Documentation, https://github.com/jsirois/conscript/blob/main/README.md
+
+# Conscript
+
+[![PyPI Version](https://shields.io/pypi/v/conscript.svg)](https://pypi.org/project/conscript/)
+[![License](https://shields.io/pypi/l/conscript.svg)](LICENSE)
+[![Supported Pythons](https://shields.io/pypi/pyversions/conscript.svg)](pyproject.toml)
+[![CI](https://github.com/jsirois/conscript/actions/workflows/ci.yml/badge.svg)](https://github.com/jsirois/conscript/actions/workflows/ci.yml)
+
+Conscript console scripts in your own Swiss Army Knife.
+
