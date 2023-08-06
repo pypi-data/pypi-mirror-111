@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+friendly_idle/__init__.py
+friendly_idle/future_work.py
+friendly_idle/idle_formatter.py
+friendly_idle/idle_gettext.py
+friendly_idle/main.py
+friendly_idle/patch_source_cache.py
+friendly_idle.egg-info/PKG-INFO
+friendly_idle.egg-info/SOURCES.txt
+friendly_idle.egg-info/dependency_links.txt
+friendly_idle.egg-info/not-zip-safe
+friendly_idle.egg-info/requires.txt
+friendly_idle.egg-info/top_level.txt
