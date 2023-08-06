@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+vscoscrape/__init__.py
+vscoscrape/constants.py
+vscoscrape/vscoscrape.py
+yjb_scraper.egg-info/PKG-INFO
+yjb_scraper.egg-info/SOURCES.txt
+yjb_scraper.egg-info/dependency_links.txt
+yjb_scraper.egg-info/entry_points.txt
+yjb_scraper.egg-info/requires.txt
+yjb_scraper.egg-info/top_level.txt

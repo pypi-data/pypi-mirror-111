@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        yjb-scraper=vscoscrape:main
+    
