@@ -1,0 +1,10 @@
+vidyo/__init__.py,sha256=qQ3duIB5Az3H78_Q3l9OgL_k34rP01wBU3XlhPs3pqQ,390
+vidyo/channel.py,sha256=JLNlIjLAQhrk4Z_JAMktM9IEW5C4W-m-X-9gdXlnxHY,686
+vidyo/client.py,sha256=0pDDLTzUsRAhHqwtBrjkvADNi7cfK2bzlZMp-UhozXY,1244
+vidyo/errors.py,sha256=wiZos73Syyo4rPSTjMz7O4Z8JZ75xgpYLAgFspYFsUE,193
+vidyo/video.py,sha256=3m5obsq2wwB18OPmQ6ZMrxNqfadt3t-7a72jLYA49Pw,5492
+vidyo-0.1.0.dist-info/LICENSE,sha256=lY6LNJwofm-LKatvLczs9v_W9hcmfzL7ZEoD8U77BlI,1523
+vidyo-0.1.0.dist-info/METADATA,sha256=50GihID4UZwX70JJoc_QomPQMd92Z4l-yHmQ6GLu-80,3918
+vidyo-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+vidyo-0.1.0.dist-info/top_level.txt,sha256=hJizRQVa88o1vfGmCAW2MjTd3XHPkYWDi5WnUjMt4XE,6
+vidyo-0.1.0.dist-info/RECORD,,
