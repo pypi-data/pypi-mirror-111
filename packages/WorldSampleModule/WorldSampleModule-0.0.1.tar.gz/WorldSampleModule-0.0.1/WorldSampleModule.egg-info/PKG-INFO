@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: WorldSampleModule
+Version: 0.0.1
+Summary: This is a sample Python modul!
+Home-page: https://github.com/WorldaDev
+Author: WorldaDev
+Author-email: worldadev@so-gehts.tk
+License: MIT
+Description: This is a sample Python module!
+        
+        
+Keywords: sample,world,modul
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+WorldSampleModule.egg-info/PKG-INFO
+WorldSampleModule.egg-info/SOURCES.txt
+WorldSampleModule.egg-info/dependency_links.txt
+WorldSampleModule.egg-info/top_level.txt
+worldsamplemodule/__init__.py
