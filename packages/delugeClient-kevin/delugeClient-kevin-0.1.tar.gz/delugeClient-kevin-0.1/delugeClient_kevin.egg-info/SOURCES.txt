@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+setup.py
+delugeClient/__init__.py
+delugeClient/__main__.py
+delugeClient/default_config.ini
+delugeClient/deluge.py
+delugeClient/delugeUtils.py
+delugeClient/deluge_socket.py
+delugeClient/torrent.py
+delugeClient_kevin.egg-info/PKG-INFO
+delugeClient_kevin.egg-info/SOURCES.txt
+delugeClient_kevin.egg-info/dependency_links.txt
+delugeClient_kevin.egg-info/entry_points.txt
+delugeClient_kevin.egg-info/requires.txt
+delugeClient_kevin.egg-info/top_level.txt
