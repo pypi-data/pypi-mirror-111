@@ -1,0 +1,3 @@
+[console_scripts]
+tex-untag = tex_untag:main
+
