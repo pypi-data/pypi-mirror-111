@@ -1,0 +1,3 @@
+[console_scripts]
+at-finder = atFinder.atFinder:cli
+
