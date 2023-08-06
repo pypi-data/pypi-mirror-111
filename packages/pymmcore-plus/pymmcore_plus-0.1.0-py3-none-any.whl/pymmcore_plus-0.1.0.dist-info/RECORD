@@ -1,0 +1,15 @@
+pymmcore_plus/__init__.py,sha256=Onpc4Tn80ILkyPy_yTdQfks0f4X19C6N2swjZmg80G4,218
+pymmcore_plus/_client.py,sha256=FxOp-dTc57Jvf3FmHqgGkymDF0_1B50rpIfAsSWTHIM,4543
+pymmcore_plus/_mmcore_plus.py,sha256=WKR2D49gfzNDrEbanONXajzQdKXQv4hySxJrakCymF8,6935
+pymmcore_plus/_pyrocore.py,sha256=ixiyK6Edjg9ltlpnFhy_EC36eHnXIjcgItgxS-qZTcA,2123
+pymmcore_plus/_serialize.py,sha256=fhiriY1CdQucrrU15jld8dGsFo2_CaNUwgkTtY6cx7E,3652
+pymmcore_plus/_server.py,sha256=N5LDjBHg18dZQyMOIkTEJ08dkCYqBZeLcBJNcXJxb2U,935
+pymmcore_plus/_util.py,sha256=GNCmyWcIShQvzrd85fFuT5uwiYWQi_ihTWDPQm6SzIA,1414
+pymmcore_plus/_version.py,sha256=xwUxqNB1me5mfO6PXPXd-gWwNTAl_-Idf0ktsITBEpU,142
+pymmcore_plus/install.py,sha256=Lq4Sk2tz76jJGG2FcYr3cksfl9uX6c7VGBqJtYFJDe8,2858
+pymmcore_plus/qcallbacks.py,sha256=xC1Vk_8C8EL__srVllq6ySP3DwEnrOzrOGu6ENBWNIQ,1076
+pymmcore_plus-0.1.0.dist-info/LICENSE,sha256=OHJjRpOPKKRc7FEnpehNWdR5LRBdBhUtIFG-ZI0dCEA,1522
+pymmcore_plus-0.1.0.dist-info/METADATA,sha256=B6y4BK52rGqLvp-JC--GbHjOnZn2jpDa29X-FBFKu5A,8852
+pymmcore_plus-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pymmcore_plus-0.1.0.dist-info/top_level.txt,sha256=jC-5g_lzOp0qr5flBX9FSfc-sHDonoakGG4QTFxATVM,14
+pymmcore_plus-0.1.0.dist-info/RECORD,,
