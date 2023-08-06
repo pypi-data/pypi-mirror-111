@@ -1,0 +1,10 @@
+revizor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+revizor/model/char-bpe-model.pt,sha256=ct6outX4PCddnT1v1RAsCgavTKAge3g9yMD65VeUwsE,31561978
+revizor/tagger.py,sha256=H4PJDSNhUaTzTSfUTzXHsAjsfj0MO7Qr6fjRgUhE6Lg,809
+revizor/tokenizer.py,sha256=gf6S-np1ClH-TkpPGl0LIdxbowYsrU8zIQavn77EjNE,371
+revizor/types.py,sha256=yzcUS1eCasBMpuwJqIDcHww8-nbdKFKCltBOCOc5XxI,889
+revizor/utils.py,sha256=0qiqOADTckuTJwKunz1Pdfs2l00KhCLTmD_4lyw0qzk,576
+revizor-0.2.0.dist-info/LICENSE,sha256=C5JmP2QpGeDLnsczkNvK_lHG4JDrkI8qp5C7ynGTOis,1074
+revizor-0.2.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+revizor-0.2.0.dist-info/METADATA,sha256=kbnd7sOk1SlPj1x3bNM0zNgpvGOPnfWPVcV37u-rxRA,3494
+revizor-0.2.0.dist-info/RECORD,,
