@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: nb-http-client
+Version: 0.6
+Summary: nb_http_client
+Home-page: UNKNOWN
+Author: bfzs
+Author-email: ydf0509@sohu.com
+Maintainer: ydf
+Maintainer-email: ydf0509@sohu.com
+License: BSD License
+Description: # nb_http_client 是 python 史上性能最强的http客户端
+        
+        ## 测试比较环境为 win10 + python3.7 + 2.5ghz主频
+        
+        ```
+        e5 2678v3 主频很差，cpu架构很落后，如果用最新的13代i9，测试指标有可能可以提高100%。
+        但是不同的请求客户端都是跑在同一个2.5ghz主频上，所以是公平的比较。
+        ```
+        
+        
+        ## 不同的请求客户端，请求同一个server服务端，测试结果
+        ```
+        线程池 + requests  390次每秒
+        线程池 + requests 同一个session 420次每秒
+        线程池 + urllib3    1070次每秒
+        线程池 + nb_http_client  2200次每秒
+        asyncio + aiohttp    1480次每秒
+        线程池 + pycurl 600次每秒
+        ```
+Keywords: this most fast http clent,500% fast than requets,also fast than aiohttp and urllib,powered by  universal_object_pool
+Platform: all
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/markdown
