@@ -1,0 +1,22 @@
+ewokscore@ git+https://git@gitlab.esrf.fr/workflow/ewoks/ewokscore.git@main
+
+[dask]
+ewoksdask@ git+https://git@gitlab.esrf.fr/workflow/ewoks/ewoksdask.git@main
+
+[dev]
+ewokscore[dev]@ git+https://git@gitlab.esrf.fr/workflow/ewoks/ewokscore.git@main
+ewoksdask[dev]@ git+https://git@gitlab.esrf.fr/workflow/ewoks/ewoksdask.git@main
+ewoksppf[dev]@ git+https://git@gitlab.esrf.fr/workflow/ewoks/ewoksppf.git@main
+ewoksorange[dev]@ git+https://git@gitlab.esrf.fr/workflow/ewoks/ewoksorange.git@main
+
+[orange]
+ewoksorange@ git+https://git@gitlab.esrf.fr/workflow/ewoks/ewoksorange.git@main
+
+[ppf]
+ewoksppf@ git+https://git@gitlab.esrf.fr/workflow/ewoks/ewoksppf.git@main
+
+[test]
+ewokscore[test]@ git+https://git@gitlab.esrf.fr/workflow/ewoks/ewokscore.git@main
+ewoksdask[test]@ git+https://git@gitlab.esrf.fr/workflow/ewoks/ewoksdask.git@main
+ewoksppf[test]@ git+https://git@gitlab.esrf.fr/workflow/ewoks/ewoksppf.git@main
+ewoksorange[test]@ git+https://git@gitlab.esrf.fr/workflow/ewoks/ewoksorange.git@main
