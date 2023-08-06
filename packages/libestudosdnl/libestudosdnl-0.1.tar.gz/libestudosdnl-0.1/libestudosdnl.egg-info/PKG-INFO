@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: libestudosdnl
+Version: 0.1
+Summary: Módulo para exemplificar construção de projetos Python no curso PyTools
+Home-page: https://github.com/danielngd/libestudos
+Author: Daniel Lima Oliveira
+Author-email: daniel.ngd@gmail.com
+License: GNU AFFERO GENERAL PUBLIC LICENSE
+Description: Modulo para exemplificar construcao de projetos python...
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Framework :: Pytest
+Description-Content-Type: text/markdown

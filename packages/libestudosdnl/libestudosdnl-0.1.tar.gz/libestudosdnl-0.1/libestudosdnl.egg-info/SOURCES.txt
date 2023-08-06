@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+libestudos/__init__.py
+libestudos/github_api.py
+libestudosdnl.egg-info/PKG-INFO
+libestudosdnl.egg-info/SOURCES.txt
+libestudosdnl.egg-info/dependency_links.txt
+libestudosdnl.egg-info/not-zip-safe
+libestudosdnl.egg-info/requires.txt
+libestudosdnl.egg-info/top_level.txt
