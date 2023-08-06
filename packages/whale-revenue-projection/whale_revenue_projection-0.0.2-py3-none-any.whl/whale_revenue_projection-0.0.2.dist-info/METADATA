@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: whale-revenue-projection
+Version: 0.0.2
+Summary: Package using the in-house LTV and Churn data to project revenue depending on the source type (Campaign, Product, Sponsor)
+Home-page: https://test.pypi.org/simple/
+Author: Arnaud Pourchez
+Author-email: arnaud.pourchez@hotmail.fr
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: dbapi (>=0.0.14,<0.0.15)
+Requires-Dist: pandas (>=0.25.3)
+Requires-Dist: plotly (>=4.14.2,<5.0.0)
+Requires-Dist: pymysql (>=0.9.3,<0.10.0)
+Requires-Dist: whale_back_bone (>=0.2.0,<0.3.0)
+Project-URL: Repository, https://test.pypi.org/simple/
