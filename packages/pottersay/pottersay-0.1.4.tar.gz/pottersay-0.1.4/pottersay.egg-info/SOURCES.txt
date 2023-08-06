@@ -1,0 +1,10 @@
+README.md
+setup.py
+pottersay.egg-info/PKG-INFO
+pottersay.egg-info/SOURCES.txt
+pottersay.egg-info/dependency_links.txt
+pottersay.egg-info/entry_points.txt
+pottersay.egg-info/top_level.txt
+src/__init__.py
+src/main.py
+src/quote_list.py
