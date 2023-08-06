@@ -1,0 +1,14 @@
+LICENSE.md
+README.md
+setup.py
+random_mitype/__init__.py
+random_mitype/random_mitype.py
+random_mitype/version.py
+random_mitype.egg-info/PKG-INFO
+random_mitype.egg-info/SOURCES.txt
+random_mitype.egg-info/dependency_links.txt
+random_mitype.egg-info/entry_points.txt
+random_mitype.egg-info/requires.txt
+random_mitype.egg-info/top_level.txt
+random_mitype/words/__init__.py
+random_mitype/words/english.py
