@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: optiontools
+Version: 0.1.1
+Summary: Tools for valuating financial derivatives
+Home-page: https://github.com/lf-gomez/optiontools
+Author: Luis Felipe Gomez Estrada
+Author-email: luisfelipegomezestrada@gmail.com
+License: MIT
+Download-URL: https://github.com/lf-gomez/optiontools/archive/refs/tags/v0.1.1-alpha.tar.gz
+Description: UNKNOWN
+Keywords: FINANCE,OPTIONS,DERIVATIVES
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
