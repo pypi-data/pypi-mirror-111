@@ -1,0 +1,13 @@
+html2image/__init__.py,sha256=HdKFdva6xKjpjG0kGRLh9kIWaxxUWhu5_xmzijIm2Ow,141
+html2image/browsers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+html2image/browsers/browser.py,sha256=ADUrAnrKQv-6a1nHRmknMRcAvYwa_cMqx50M6WI4a_4,434
+html2image/browsers/chrome.py,sha256=biSi31-gP7nNSo9Ta1-d5kpzIr1mZLJ6Q6MuWYywXDA,5793
+html2image/browsers/firefox.py,sha256=SK_oW38teGx4LAGefvaMupL5_QPgjadlf7-OpGkB4Pk,485
+html2image/cli.py,sha256=3kXHBnjKTQCMTsSGb5KcJDPbdTsZdFZxw4ca_emb3S0,2242
+html2image/html2image.py,sha256=VozD9wD9mQTzHkXj3DZ69CkHuTdysoc-GtWXSWuNHUY,16241
+LICENSE,sha256=Nw77PKJEDeuZHPxZSKNIx6Sd4mzpgVYlhmrXFM804t4,1082
+html2image-2.0.0.dist-info/entry_points.txt,sha256=lGb4KtNIZvl78Sip9yXn8UsJciIO4eO1WpNxntciE8o,66
+html2image-2.0.0.dist-info/LICENSE,sha256=Nw77PKJEDeuZHPxZSKNIx6Sd4mzpgVYlhmrXFM804t4,1082
+html2image-2.0.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+html2image-2.0.0.dist-info/METADATA,sha256=tGcvYWvvXKmbiiA-BoD4CVGkTu0bVh493WxtQJBWNtU,13783
+html2image-2.0.0.dist-info/RECORD,,
