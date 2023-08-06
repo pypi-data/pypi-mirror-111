@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/pastebin_uploader/__init__.py
+src/pastebin_uploader/pastebin.py
+src/pastebin_uploader_SockYeh.egg-info/PKG-INFO
+src/pastebin_uploader_SockYeh.egg-info/SOURCES.txt
+src/pastebin_uploader_SockYeh.egg-info/dependency_links.txt
+src/pastebin_uploader_SockYeh.egg-info/top_level.txt
