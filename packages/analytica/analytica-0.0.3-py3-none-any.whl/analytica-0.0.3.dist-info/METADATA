@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: analytica
+Version: 0.0.3
+Summary: Auto Data Analysis
+Home-page: UNKNOWN
+Author: Pawan Trivedi
+Author-email: UNKNOWN
+License: MIT
+Keywords: Data Analysis
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: seaborn
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+
+Analytica is a Automative Exploratory data analysis library build on Python. 
+
+
