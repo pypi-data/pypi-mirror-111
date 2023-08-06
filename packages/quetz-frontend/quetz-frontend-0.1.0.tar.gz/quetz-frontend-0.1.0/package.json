@@ -1,0 +1,45 @@
+{
+  "name": "quetz-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "quetz_frontend/app",
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "install": "lerna bootstrap",
+    "build": "lerna run build",
+    "build:core": "cd quetz_frontend/app && yarn && yarn run build",
+    "build:packages": "lerna run build",
+    "build:prod": "yarn run build && cd quetz_frontend/app && yarn run build",
+    "clean": "yarn run clean:core && yarn run clean:packages",
+    "clean:core": "cd quetz_frontend/app && yarn run clean",
+    "clean:packages": "lerna run clean",
+    "clean:all": "lerna run clean:all && rimraf yarn.lock && rimraf node_modules",
+    "eslint": "eslint . --ext .ts,.tsx --fix",
+    "eslint:check": "eslint . --ext .ts,.tsx",
+    "prettier": "prettier --write \"**/*{.ts,.tsx,.js,.jsx,.css,.json,.md}\"",
+    "prettier:check": "prettier --list-different \"**/*{.ts,.tsx,.js,.jsx,.css,.json,.md}\"",
+    "watch": "run-p watch:lib watch:app",
+    "watch:app": "lerna exec --stream --scope \"@quetz-frontend/app\" yarn watch",
+    "watch:lib": "lerna exec --stream --scope @quetz-frontend/metapackage yarn watch"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-jest": "^24.3.2",
+    "eslint-plugin-jsdoc": "^32.3.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.23.1",
+    "lerna": "^3.19.0",
+    "lint-staged": "^10.2.13",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
+    "shell-quote": "^1.7.2",
+    "yarn": "1.22.0"
+  }
+}
