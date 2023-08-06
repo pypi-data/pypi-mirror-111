@@ -1,0 +1,17 @@
+simple_ddl_parser/__init__.py,sha256=PlZ02DBlFxZqGA3ombcknwuAF94hedCpYQqqtrYMFX0,113
+simple_ddl_parser/cli.py,sha256=txBg1H3OdsAq9r0PZIANOxFESk9uYaHehKBRMRTqY0Y,2265
+simple_ddl_parser/ddl_parser.py,sha256=9MzCtNtZOl9CU19Z7g3LzHokEB3EkuaKDLH67_IGvCg,4130
+simple_ddl_parser/dialects/hql.py,sha256=xfLDMupPfjBwo36LEBHVvEbQDL37I0IrNewA2AZRuc4,2541
+simple_ddl_parser/dialects/oracle.py,sha256=gB0Jy_C0BPOyrzqZpi8BBvwX2o4P9S1A35RcU86wcUU,1438
+simple_ddl_parser/dialects/sql.py,sha256=rVXnngpEIQzVlnXxcleCTKQc1z3-G3ge4DS3iR_khBQ,30149
+simple_ddl_parser/output/common.py,sha256=xy-S4Aza6EcDvRi_QkUZh_pQ_OhOVAiF_1YLvgvbSfM,9841
+simple_ddl_parser/output/dialects.py,sha256=Muxx5Y9DnAEneog2fR4kJniNReHS-3HJhk_BxSVp3T0,2548
+simple_ddl_parser/parser.py,sha256=Y3J8oUsUsZ6-iUI52P-k6vLCyYcjeNzb9DN4QVK0jKM,6101
+simple_ddl_parser/test.py,sha256=JGXj2scYRvRH2Jf6ChOTPPQ1N-r62A6vO35d4w2Kghw,177
+simple_ddl_parser/tokens.py,sha256=efdtR1OEUbdNbaHwM0G-wxxYbLDZsK10wXfYztKLVpM,2193
+simple_ddl_parser/utils.py,sha256=xhboJVNPtlmP3nUi77n5Hu9Cde84kbZc_CgFZi4RKJQ,968
+simple_ddl_parser-0.17.0.dist-info/entry_points.txt,sha256=BVUrH1edSC-ZdCGef7tDrovA_5NO4Q2UOk51zBXlK4A,50
+simple_ddl_parser-0.17.0.dist-info/LICENSE,sha256=F7Lnfq5TMUS5ic1Ax7_kRc5hB23kqM61CV6ueLQkkW4,1093
+simple_ddl_parser-0.17.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+simple_ddl_parser-0.17.0.dist-info/METADATA,sha256=fttGOD6C7ApHIGxqeYPTuVjk19aGpLtfqw69HIwvPbM,19177
+simple_ddl_parser-0.17.0.dist-info/RECORD,,
