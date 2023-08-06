@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+elementz_querify/__init__.py
+elementz_querify/querify.py
+elementz_querify.egg-info/PKG-INFO
+elementz_querify.egg-info/SOURCES.txt
+elementz_querify.egg-info/dependency_links.txt
+elementz_querify.egg-info/not-zip-safe
+elementz_querify.egg-info/requires.txt
+elementz_querify.egg-info/top_level.txt
