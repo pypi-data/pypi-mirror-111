@@ -1,0 +1,15 @@
+ascii_designer/__init__.py,sha256=emSgvZl-_3-PWNpXmYVEp74w8RKy16jouXaQ5M_rRzA,1076
+ascii_designer/ascii_slice.py,sha256=o3W4YUDadvGU8QudgbgbKfWynMI6-sCbOxhuUWsIp1g,6592
+ascii_designer/autoframe.py,sha256=kGblVY8twbKYXgNeHQAN6hIYNsQONve4r4fptCY0KNk,6410
+ascii_designer/event.py,sha256=ACAf2jUYlQlcESUb5e4_94wXz1lnjtyXM4act5H8gWk,938
+ascii_designer/list_model.py,sha256=B0ywT-T4dlTJkuoW40TQzUkql9r7jpQngKT3tsx7UmM,13194
+ascii_designer/tk_treeedit.py,sha256=6EeuYHRGTR4z8AQiqodbLB7-3Fyel-qvx_XU3v6E8w8,11126
+ascii_designer/toolkit.py,sha256=fOUn7qqvJiC2SzAmXJ7k0LpizhM0QhvyVYfj3_ov1aA,10737
+ascii_designer/toolkit_qt.py,sha256=m7cWVkOccTf7go0OLgB8VC2rrgfqPKMiOJiKjehFlpE,18440
+ascii_designer/toolkit_tk.py,sha256=dEReW7teKZc5US8AwIt2K8OLMKNRQ2Bw72NuAed8G6I,23453
+ascii_designer-0.3.4.dist-info/LICENSE,sha256=mOQm7JiXwc1CyX3fxmHKV8D8c2KCEzEpsIWk0hS1nTk,1051
+ascii_designer-0.3.4.dist-info/METADATA,sha256=oSq-Nvpu8OwxMqa79ljUdQi7HOXO_M5tHaxty1Zx-8E,4696
+ascii_designer-0.3.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+ascii_designer-0.3.4.dist-info/top_level.txt,sha256=87YjZaNp_J4d7iMs975ghlO0L0BuRPhHc_9DlklnUrQ,15
+ascii_designer-0.3.4.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ascii_designer-0.3.4.dist-info/RECORD,,
