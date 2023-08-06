@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/mathsup.egg-info/PKG-INFO
+src/mathsup.egg-info/SOURCES.txt
+src/mathsup.egg-info/dependency_links.txt
+src/mathsup.egg-info/top_level.txt
