@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+3d_connectX_env.egg-info/PKG-INFO
+3d_connectX_env.egg-info/SOURCES.txt
+3d_connectX_env.egg-info/dependency_links.txt
+3d_connectX_env.egg-info/requires.txt
+3d_connectX_env.egg-info/top_level.txt
+gym_3d_connectX/__init__.py
+test/test.py
