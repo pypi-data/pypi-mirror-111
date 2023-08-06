@@ -1,0 +1,7 @@
+PyGithub
+gpxpy
+stravalib
+svgwrite
+pendulum
+colour
+twint@ git+https://github.com/twintproject/twint.git@origin/master
