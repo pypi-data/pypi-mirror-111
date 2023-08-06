@@ -1,0 +1,11 @@
+pandas
+numpy
+matplotlib
+scipy
+xlrd
+openpyxl
+
+[test]
+pytest
+opencv-python
+imageio
