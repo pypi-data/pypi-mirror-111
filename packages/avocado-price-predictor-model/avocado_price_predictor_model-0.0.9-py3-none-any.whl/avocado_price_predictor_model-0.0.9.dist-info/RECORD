@@ -1,0 +1,11 @@
+avocado_price_predictor_model/__init__.py,sha256=ehis3-bz49mlrbWHDwhMEBcSdJIaP1VqNyWiKcnoqXk,241
+avocado_price_predictor_model/load.py,sha256=kVZ1uD62SVwmLvehSfwuTOGjRO1QP5Y5yVbKzjalW_k,972
+avocado_price_predictor_model/predict.py,sha256=DJcymPLxCaKSht1GAkFBKK1UhOZeMwkZGPDKYlGKhb0,836
+avocado_price_predictor_model/preprocess.py,sha256=7fz7QDGlP6erdSPIlqIu25Vbe0RvhzuMyKdDTPUvztM,806
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/tests.py,sha256=wJCqCrKmECP3BMXcJE8Z3wAKlIluMyCDGpMXqrlHLGA,2018
+avocado_price_predictor_model-0.0.9.dist-info/LICENSE,sha256=XKtgnJUkFLV9U-gxHn2_wI_L4pSFm-oWbI-w0zyLyl4,1067
+avocado_price_predictor_model-0.0.9.dist-info/METADATA,sha256=KEuCOUgmCii4Eu_5ikv1Sr4jc36hCo5sNLBKNg4Vz7M,1110
+avocado_price_predictor_model-0.0.9.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+avocado_price_predictor_model-0.0.9.dist-info/top_level.txt,sha256=KM-red262TkKdkZY4wJkarAUCxYVJ4vHSPsYAgMFGrA,36
+avocado_price_predictor_model-0.0.9.dist-info/RECORD,,
