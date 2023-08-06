@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: pdf_wrangler
+Version: 0.0.2
+Summary: PDFMiner Wrapper & Other PDF utilities
+Home-page: https://github.com/happilyeverafter95/pdf-wrangler
+Author: happilyeverafter95
+Author-email: author@example.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/happilyeverafter95/pdf-wrangler/issues
+Description: # pdf-wrangler
+        
+        PDFMiner wrapper used to simplify PDF extraction. More functionalities to come to make it a more general purpose PDF utility tool.
+        
+        ## Document Module
+        
+        The `Document` module provides a class with the same name used to represent a PDF document. The primary `pages` attribute contains extracted text and images compatible with [Pillow Images](https://pillow.readthedocs.io/en/stable/reference/Image.html).
+        
+        PDF metadata can also be accessed through the `metadata` attribute.
+        
+        ## Example Usage
+        
+        ```
+        from pdf_wrangler import Document
+        
+        pdf_document = Document('path/to/pdf', password='optional password')
+        
+        # to access pdf metadata
+        pdf_document.metadata
+        
+        # to access pdf text & images by pages (iterable)
+        pdf_document.pages
+        
+        # text on the first page
+        pdf_document.pages[0].text
+        ```
+        
+        ## Installation
+        
+        To install, run:
+        ```
+        pip install pdf-wrangler
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
