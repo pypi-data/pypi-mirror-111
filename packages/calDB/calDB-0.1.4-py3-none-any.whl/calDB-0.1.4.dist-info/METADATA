@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: calDB
+Version: 0.1.4
+Summary: Makes it easy for users to interact with cal++ in python.
+Home-page: UNKNOWN
+Author: Jaden Ong
+Author-email: jadenweong@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# CalDB Documentation
+
+## Cal ++
+
+Cal++ is a key/value data storaging system. 
+
+	variable = "a string"
+	anotherVariable = 22
+## CalDB
+
+Have this code at the top:
+
+	from calDB import CalDB, array
+	db = CalDB(__name_)
+	db.start("<Database Name>")
+To get data:
+
+	data = db.read()
+To add data:
+
+	db.write("<key>","<value>")
+To delete data:
+
+	db.kill("<key>")
+
+
+
+
