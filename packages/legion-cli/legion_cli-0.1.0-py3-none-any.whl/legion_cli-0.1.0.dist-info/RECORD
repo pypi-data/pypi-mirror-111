@@ -1,0 +1,8 @@
+legion_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+legion_cli/cli.py,sha256=VRq6SmxHe05jGTEfYWh9d1fD6dzjoc_LwaQTkzNfcEc,3450
+legion_cli/config.py,sha256=XBGv-SyWCt-e5tEULjPhBqVlaLgY1fDCBTfVUKAaxec,214
+legion_cli-0.1.0.dist-info/entry_points.txt,sha256=lrYNBt8nPK0V1kGUssGGSb0D2Rc886gwkEf5d8OYMlU,45
+legion_cli-0.1.0.dist-info/LICENSE,sha256=fFDNm4Xit-666itWGLQChisB1aZr7_-OQUAe8_FORxo,34500
+legion_cli-0.1.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+legion_cli-0.1.0.dist-info/METADATA,sha256=hDtZboRXSs3nFu6MFjcXn1Sx5CjuyhTFPDa1f9vsY60,3556
+legion_cli-0.1.0.dist-info/RECORD,,
