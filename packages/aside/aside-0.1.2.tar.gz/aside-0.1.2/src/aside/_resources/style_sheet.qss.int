@@ -1,0 +1,92 @@
+QMainWindow, QWidget {
+    background-color: {{theme.background_color}}
+}
+
+QLineEdit {
+    background-color: {{theme.background_color}};
+    border: none;
+    color: {{theme.text_color}};
+    font-family: "DejaVu Sans";
+}
+
+QWidget > QToolButton {
+    qproperty-iconSize: 50px;
+}
+
+QWidget > QToolButton:pressed {
+    border: 2px solid {{theme.icon_content_color}};
+    border-radius: 25px;
+}
+
+QWidget > QToolButton:hover:!pressed, QWidget > QToolButton:focus {
+    border: 1px solid {{theme.icon_content_color}};
+    border-radius: 25px;
+}
+
+QFrame, QToolButton {
+    border: none;
+}
+
+QueueHeader > QLineEdit:!focus {
+    font-size: 22pt;
+    font-weight: bold;
+    qproperty-placeholderText: "Queue";
+}
+
+QueueHeader > QLineEdit:focus {
+    border-bottom: 1px solid {{theme.text_color}};
+    font-size: 22pt;
+    font-weight: bold;
+    qproperty-placeholderText: "Queue";
+}
+
+QLineEdit[class="TaskText"]:!focus {
+    font-size: 16pt;
+    qproperty-placeholderText: "Task";
+}
+
+QLineEdit[class="TaskText"]:focus {
+    border-bottom: 1px solid {{theme.text_color}};
+    font-size: 16pt;
+    qproperty-placeholderText: "Task";
+}
+
+QLineEdit[class="TaskTime"]:!focus {
+    font-size: 15pt;
+    font-style: italic;
+    qproperty-placeholderText: "Time";
+}
+
+QLineEdit[class="TaskTime"]:focus {
+    border-bottom: 1px solid {{theme.text_color}};
+    font-size: 15pt;
+    font-style: italic;
+    qproperty-placeholderText: "Time";
+}
+
+QToolButton[class="CollapseQueue"]:pressed {
+    border: 2px solid {{theme.icon_accent_content_color}};
+}
+
+QToolButton[class="CollapseQueue"]:hover:!pressed, QToolButton[class="CollapseQueue"]:focus {
+    border: 1px solid {{theme.icon_accent_content_color}};
+}
+
+
+Task > QToolButton {
+    qproperty-iconSize: 30px;
+}
+
+Task > QToolButton:pressed {
+    border: 2px solid {{theme.icon_content_color}};
+    border-radius: 15px;
+}
+
+Task > QToolButton:hover:!pressed, Task > QToolButton:focus {
+    border: 1px solid {{theme.icon_content_color}};
+    border-radius: 15px;
+}
+
+#Logo {
+    margin-left: 60px;
+}
