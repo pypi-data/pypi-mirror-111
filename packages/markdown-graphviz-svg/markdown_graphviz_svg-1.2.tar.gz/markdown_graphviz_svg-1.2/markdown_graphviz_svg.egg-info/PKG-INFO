@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: markdown-graphviz-svg
+Version: 1.2
+Summary: Embeds Graphviz's SVG output into Markdown.
+Home-page: https://github.com/Tanami/markdown-graphviz-svg
+Author: Tanami Muller
+Author-email: weitzeug@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Documentation
+Classifier: Topic :: Text Processing
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENSE
+
+This is a rewrite of python-markdown-graphviz with a different processing method, it is meant for use with ReText.
+
